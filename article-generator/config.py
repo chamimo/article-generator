@@ -22,6 +22,9 @@ MIN_SEARCH_VOLUME = int(os.getenv("MIN_SEARCH_VOLUME", "50"))
 WP_CATEGORY_ID = int(os.getenv("WP_CATEGORY_ID", "1"))
 WP_STATUS = os.getenv("WP_STATUS", "draft")
 
+# Hugging Face
+HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY", "")
+
 # Site info
 SITE_NAME = "AIVice"
 SITE_THEME = "AIツール・生成AI活用情報メディア"

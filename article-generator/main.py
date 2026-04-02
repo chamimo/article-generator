@@ -33,6 +33,7 @@ from modules.sheets_fetcher import get_aim_keywords
 from modules.article_generator import generate_article, generate_article_from_cluster
 from modules.cannibal_checker import check_cannibalization
 from modules.wordpress_poster import post_article_with_image
+from modules.image_generator import generate_image_for_article
 from config import MIN_SEARCH_VOLUME
 
 KEYWORD_CLUSTERS_PATH = os.path.join(os.path.dirname(__file__), "output", "keyword_clusters.json")
@@ -74,7 +75,17 @@ def run_clusters_pipeline(
                     "status": "dry-run",
                 })
             else:
-                post_result = post_article_with_image(article, image_bytes=None)
+                # 画像生成（失敗しても投稿は続行）
+                image_bytes = None
+                try:
+                    image_bytes = generate_image_for_article(
+                        keyword=main_kw,
+                        article_theme=cluster.get("article_theme", ""),
+                    )
+                except Exception as img_err:
+                    print(f"[image_generator] 画像生成スキップ（続行）: {img_err}")
+
+                post_result = post_article_with_image(article, image_bytes=image_bytes)
                 results.append({
                     "keyword": main_kw,
                     "title": article["title"],
@@ -144,8 +155,14 @@ def run_pipeline(
                     "status": "dry-run",
                 })
             else:
-                # --- Step 5: 画像なし → Step 6: WordPress投稿 ---
-                post_result = post_article_with_image(article, image_bytes=None)
+                # --- Step 5: 画像生成 → Step 6: WordPress投稿 ---
+                image_bytes = None
+                try:
+                    image_bytes = generate_image_for_article(keyword=keyword)
+                except Exception as img_err:
+                    print(f"[image_generator] 画像生成スキップ（続行）: {img_err}")
+
+                post_result = post_article_with_image(article, image_bytes=image_bytes)
                 results.append({
                     "keyword": keyword,
                     "title": article["title"],

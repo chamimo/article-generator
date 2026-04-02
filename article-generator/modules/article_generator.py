@@ -4,6 +4,7 @@ Step 4: Claude APIで記事構成を生成（WordPress SWELL形式）
 import json
 import anthropic
 from config import ANTHROPIC_API_KEY
+from modules.image_generator import generate_imagefx_prompt
 
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
@@ -59,6 +60,7 @@ AI特有の不自然さを排除し、読者にとって読みやすく、検索
 - FAQは8〜10問（各回答200字以上）
 - 結論ファーストな構成
 - タグは最大5個（重要度の高いものを厳選）
+- まとめチェックリストの直後に締めの文章（100〜150字）を1段落追加する。記事の要点を一言でまとめ＋読者への行動促進。キーワードに関連するアフィリリンク登録済みツールがあれば1つだけ自然に挿入すること（登録済みツール以外の公式リンクは不可）
 
 # リンク挿入ルール（厳守）
 
@@ -215,6 +217,10 @@ AI特有の不自然さを排除し、読者にとって読みやすく、検索
 </ul>
 <!-- /wp:list -->
 
+<!-- wp:paragraph -->
+<p>{{締めの文章（100〜150字）。記事の要点を一言でまとめ＋読者への行動促進。キーワードに関連するアフィリリンク登録済みツールがあれば1つだけ自然に挿入すること。該当ツールがない場合はリンクなしでOK。}}</p>
+<!-- /wp:paragraph -->
+
 """
 
 # ============================================================
@@ -351,6 +357,13 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
 
     data["keyword"] = keyword
     data["volume"] = volume
+
+    # ImageFX プロンプトを生成してdictに追加
+    try:
+        data["imagefx_prompt"] = generate_imagefx_prompt(keyword, data["title"])
+    except Exception as e:
+        print(f"[article_generator] ImageFXプロンプト生成スキップ: {e}")
+        data["imagefx_prompt"] = ""
 
     print(
         f"[article_generator] 完了: 「{data['title']}」"
