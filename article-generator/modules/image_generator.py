@@ -23,10 +23,13 @@ H_EYECATCH = 832
 # 固定プロファイル（アイキャッチ用人物）
 # ─────────────────────────────────────────────
 _PERSON_PROFILE = (
-    "A single photorealistic Japanese woman, light-brown hair with see-through bangs, "
-    "large clear eyes, translucent skin, natural pink-toned makeup, soft gentle smile, "
-    "positioned on the right or left side of frame, holding a smartphone, "
-    "no shadows, no reflections, photorealistic only, no anime, no illustration"
+    "A single photorealistic Japanese woman in her 20s, clean office lady style. "
+    "Dark black or deep dark brown hair, straight and neat. "
+    "Natural minimal makeup, clear porcelain skin, gentle calm smile. "
+    "Wearing a simple white or light-colored blouse. "
+    "Positioned clearly on the RIGHT side of the image, leaving the LEFT side open for text overlay. "
+    "No smartphone. No props. No shadows. No reflections. "
+    "Photorealistic only. No anime. Ultra high quality."
 )
 
 # ─────────────────────────────────────────────
@@ -124,50 +127,94 @@ def _theme_hint(text: str) -> str:
 # 公開API
 # ─────────────────────────────────────────────
 
+def _build_eyecatch_prompt(keyword: str, article_theme: str) -> str:
+    """
+    キーワード・記事テーマから人物なしのアイキャッチ用FLUXプロンプトをClaude Haikuで生成する。
+    フラットイラスト・モダンデザイン風、テキストなし。
+    """
+    topic = article_theme or keyword
+    msg = _claude.messages.create(
+        model="claude-haiku-4-5-20251001",
+        max_tokens=120,
+        messages=[{
+            "role": "user",
+            "content": (
+                f"Create a short English image prompt (20-30 words) for a blog header illustration "
+                f"about: '{topic}'. "
+                "Style: flat illustration, modern tech design, vibrant colors, wide horizontal format. "
+                "Focus on visual objects/icons representing the topic (no people, no text, no watermark). "
+                "Examples: "
+                "'smartphone with colorful sound wave icons and AI nodes, flat illustration, blue and white color palette' "
+                "'microphone with flowing text lines and digital circuit patterns, modern flat design, teal and purple' "
+                "Output the prompt only."
+            ),
+        }],
+    )
+    raw = msg.content[0].text.strip().splitlines()[0]
+    return re.sub(r'[#*`"\']+', '', raw).strip()
+
+
 def generate_eyecatch_image(keyword: str, article_theme: str = "") -> bytes:
     """
-    アイキャッチ画像を生成する（人物あり）。
+    アイキャッチ画像を生成する（人物なし・テーマ反映フラットイラスト）。
 
-    - 人物: 固定の日本人女性プロファイル
-    - 背景: A/B/C からランダム、キーワード・テーマを反映
+    - プロンプト: キーワード・記事テーマからClaude Haikuで自動生成
+    - スタイル: フラットイラスト・モダンデザイン風
     - サイズ: 1216×832
     """
-    bg_style = random.choice(_BG_OPTIONS)
-    bg_label = _BG_LABELS[_BG_OPTIONS.index(bg_style)]
-
-    topic = article_theme or keyword
-    theme = _theme_hint(topic)
-
-    prompt = (
-        f"{_PERSON_PROFILE}, "
-        f"{bg_style}, theme: {theme}, "
-        "no text, no title overlay, photorealistic, ultra high quality"
+    prompt = _build_eyecatch_prompt(keyword, article_theme)
+    suffix = (
+        "no people, no human, no face, no silhouette, "
+        "no text, no watermark, high quality digital art, professional blog header"
     )
+    full_prompt = f"{prompt}, {suffix}"
 
-    print(f"[image_generator] アイキャッチ生成 (背景:{bg_label}, テーマ:{theme})")
-    return _call_flux(prompt, W_EYECATCH, H_EYECATCH)
+    print(f"[image_generator] アイキャッチ生成 (人物なし): {prompt[:60]}...")
+    return _call_flux(full_prompt, W_EYECATCH, H_EYECATCH)
+
+
+def _build_h2_image_prompt(h2_title: str, keyword: str) -> str:
+    """
+    H2タイトル・キーワードから記事テーマに合ったFLUXプロンプトをClaude Haikuで生成する。
+    フラットイラスト・モダンデザイン風、人物なし・テキストなし。
+    """
+    msg = _claude.messages.create(
+        model="claude-haiku-4-5-20251001",
+        max_tokens=120,
+        messages=[{
+            "role": "user",
+            "content": (
+                f"Create a short English image prompt (20-30 words) for a blog illustration "
+                f"about: keyword='{keyword}', section='{h2_title}'. "
+                "Style: flat illustration, modern design, vibrant colors, no people, no text, no watermark. "
+                "Focus on visual objects/icons that represent the topic. "
+                "Examples: 'smartphone with sound wave icons and microphone, flat illustration style, modern tech design, blue and white color palette' "
+                "Output the prompt only."
+            ),
+        }],
+    )
+    raw = msg.content[0].text.strip().splitlines()[0]
+    return re.sub(r'[#*`"\']+', '', raw).strip()
 
 
 def generate_h2_image(h2_title: str, keyword: str = "") -> bytes:
     """
-    H2記事内画像を生成する（人物なし・抽象背景）。
+    H2記事内画像を生成する（人物なし・テーマ反映フラットイラスト）。
 
-    - 背景: A/B/C からランダム、H2タイトルを反映
+    - プロンプト: H2タイトル・キーワードからClaude Haikuで自動生成
+    - スタイル: フラットイラスト・モダンデザイン風
     - サイズ: 1216×832
     """
-    bg_style = random.choice(_BG_OPTIONS)
-    bg_label = _BG_LABELS[_BG_OPTIONS.index(bg_style)]
-
     topic = h2_title or keyword
-    theme = _theme_hint(topic)
-
-    prompt = (
-        f"{bg_style}, theme: {theme}, "
-        f"{_ABSTRACT_SUFFIX}"
+    prompt = _build_h2_image_prompt(topic, keyword)
+    suffix = (
+        "flat illustration style, modern design, no people, no human, no face, "
+        "no text, no watermark, high quality digital art, clean background"
     )
+    full_prompt = f"{prompt}, {suffix}"
 
-    print(f"[image_generator] H2画像生成 (背景:{bg_label}, テーマ:{theme})")
-    return _call_flux(prompt, W_EYECATCH, H_EYECATCH)
+    print(f"[image_generator] H2画像生成 (テーマ反映): {prompt[:60]}...")
+    return _call_flux(full_prompt, W_EYECATCH, H_EYECATCH)
 
 
 def generate_image_for_article(keyword: str, article_theme: str = "") -> bytes:
@@ -210,11 +257,11 @@ _IMAGEFX_BG_OPTIONS = [
 
 def generate_imagefx_prompt(keyword: str, title: str) -> str:
     """
-    ImageFX 用アイキャッチプロンプトを生成する（人物なし・純粋抽象背景）。
+    ImageFX 用アイキャッチプロンプトを生成する（人物なし・テーマ反映フラットイラスト）。
 
     - 人物: 完全禁止
-    - 背景タイプ: A/B/C からランダム選択
-    - 背景の色・雰囲気: 記事テーマから Claude Haiku で生成
+    - ビジュアル: 記事テーマに合ったフラットイラスト・モダンデザイン
+    - 背景スタイル: A/B/C からランダム選択
     - ウォーターマーク・タイトルテキスト: 固定ルールで追記
 
     Returns:
@@ -222,17 +269,20 @@ def generate_imagefx_prompt(keyword: str, title: str) -> str:
     """
     bg_label, bg_base = random.choice(_IMAGEFX_BG_OPTIONS)
 
-    # 背景の色・雰囲気をテーマから生成
+    # テーマに合ったビジュアル説明をClaude Haikuで生成
     theme_resp = _claude.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=60,
+        max_tokens=80,
         messages=[{
             "role": "user",
             "content": (
-                f"For an article about '{keyword}' titled '{title}', "
-                "describe the background color and atmosphere in English (10-15 words). "
-                "Start with colors. No explanation. Only the description.\n"
-                "Example: 'teal and blue tones with flowing sound wave patterns and soft glow'"
+                f"For a blog header image about '{keyword}' titled '{title}', "
+                "describe specific visual objects/icons (15-20 words) for a flat illustration style. "
+                "No people. Focus on objects, icons, devices, and abstract elements. "
+                "No explanation. Only the description.\n"
+                "Examples: "
+                "'smartphone with sound wave icons and microphone, AI nodes, teal and blue color scheme' "
+                "'chat bubbles with AI circuit patterns, glowing nodes and digital grid, dark blue and purple'"
             ),
         }],
     )
@@ -254,14 +304,15 @@ def generate_imagefx_prompt(keyword: str, title: str) -> str:
     en_title = re.sub(r'[#*`]+', '', en_title).strip()
 
     prompt = (
-        f"{bg_base}\n"
-        f"Background color and atmosphere: {theme_desc}\n\n"
-        f"{_IMAGEFX_NO_PERSON}\n\n"
+        f"{theme_desc}\n"
+        f"{bg_base}\n\n"
+        f"{_IMAGEFX_NO_PERSON}\n"
+        "flat illustration style, modern design, no text, no watermark, high quality\n\n"
         f'Place one large "AIVice" watermark in the empty area, opacity 8–12%.\n\n'
         f'Add the text "{en_title}" in white or soft white, '
         f"blending naturally with the background."
     )
 
-    print(f"[imagefx] 背景:{bg_label} / テーマ:{theme_desc[:50]}")
+    print(f"[imagefx] 背景:{bg_label} / ビジュアル:{theme_desc[:50]}")
     print(f"[imagefx] タイトル(英): {en_title}")
     return prompt

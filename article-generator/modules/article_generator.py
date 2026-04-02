@@ -49,7 +49,9 @@ AI特有の不自然さを排除し、読者にとって読みやすく、検索
 
 # 出力ルール
 - WordPress SWELLの構造に完全準拠（独自CSSやstyle禁止）
+- タイトルは30〜40字程度。キーワードを自然に含め、数字・メリット・疑問形などでクリックを促す（例：「AIボイスレコーダーアプリiPhoneおすすめ7選！文字起こし・要約まで自動化」）
 - H2は最大3つ（すべてにキーフレーズを含める）
+- H2見出しは疑問形だけでなく「断言・メリット提示・比較・方法提示」など自然に使い分ける。毎回「〜とは？」「〜できる？」にしないこと（例：✅「iPhoneで使えるAIボイスレコーダーアプリの選び方」✅「おすすめアプリ7選を徹底比較」❌「AIボイスレコーダーアプリとは？」）
 - H3は合計14〜18本（抽象語禁止、質問形・行動導線を中心に）
 - 各H2直下に、そのH2に属するH3タイトルをis-style-num_circleのリスト形式で列挙してから、各H3見出し＋本文のセットを続ける
 - 各H3の直下に本文（300〜400字）を追加（SWELLのparagraphブロック）
@@ -60,7 +62,7 @@ AI特有の不自然さを排除し、読者にとって読みやすく、検索
 - FAQは8〜10問（各回答200字以上）
 - 結論ファーストな構成
 - タグは最大5個（重要度の高いものを厳選）
-- まとめチェックリストの直後に締めの文章（100〜150字）を1段落追加する。記事の要点を一言でまとめ＋読者への行動促進。キーワードに関連するアフィリリンク登録済みツールがあれば1つだけ自然に挿入すること（登録済みツール以外の公式リンクは不可）
+- まとめチェックリストの直後に締めの訴求文（100〜150字）を1段落追加する。読者への行動促進（「まずは無料で試してみてください」など）を含める。キーワードに関連するアフィリリンク登録済みツールがあれば1つだけ自然に挿入すること。該当ツールがない場合はリンクなしでシンプルにまとめる（登録済みツール以外の公式リンクは不可）
 
 # リンク挿入ルール（厳守）
 
@@ -218,7 +220,7 @@ AI特有の不自然さを排除し、読者にとって読みやすく、検索
 <!-- /wp:list -->
 
 <!-- wp:paragraph -->
-<p>{{締めの文章（100〜150字）。記事の要点を一言でまとめ＋読者への行動促進。キーワードに関連するアフィリリンク登録済みツールがあれば1つだけ自然に挿入すること。該当ツールがない場合はリンクなしでOK。}}</p>
+<p>{{締めの訴求文（100〜150字）。読者への行動促進（「まずは無料で試してみてください」など）。キーワードに関連するアフィリリンク登録済みツールがあれば1つだけ自然に挿入すること。該当ツールがない場合はリンクなしでシンプルにまとめる。}}</p>
 <!-- /wp:paragraph -->
 
 """
@@ -255,6 +257,30 @@ _PLAUD_NOTTA_INSTRUCTION = """\
 """
 
 
+def _get_lsi_keywords(keyword: str) -> str:
+    """
+    Claude Haiku でキーワードの共起語・LSIキーワードを生成する。
+
+    Returns:
+        「用語1、用語2、...」形式の文字列（プロンプトに直接埋め込む用）
+    """
+    msg = client.messages.create(
+        model="claude-haiku-4-5-20251001",
+        max_tokens=200,
+        messages=[{
+            "role": "user",
+            "content": (
+                f"「{keyword}」というキーワードの記事でSEO的に重要な共起語・LSIキーワードを"
+                f"15個生成してください。"
+                f"読者が同時に検索・気にするであろう関連語句を中心に。"
+                f"出力は「語句1、語句2、語句3、...」の形式のみ。説明不要。"
+            ),
+        }],
+    )
+    raw = msg.content[0].text.strip()
+    return raw.splitlines()[0] if raw else ""
+
+
 def _needs_plaud_notta(keyword: str) -> bool:
     """キーワードがPLAUD NOTE/Notta優先紹介の対象かどうかを判定する。"""
     kw = keyword.lower()
@@ -266,14 +292,14 @@ USER_PROMPT_TEMPLATE = """\
 
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{related_section}{theme_section}{differentiation_section}{plaud_notta_section}
+{related_section}{theme_section}{lsi_section}{differentiation_section}{plaud_notta_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
 以下のJSONのみ返してください。前後に説明文・コードブロック記号は不要です。
 
 {{
-  "title": "SEOタイトル（32文字以内、キーフレーズを含む）",
+  "title": "SEOタイトル（30〜40字程度・キーワードを自然に含む・数字やメリット・疑問形でクリックを促す。例：「AIボイスレコーダーアプリiPhoneおすすめ7選！文字起こし・要約まで自動化」）",
   "meta_description": "メタディスクリプション（150字以上）",
   "slug": "url-slug-in-english-kebab-case",
   "image_prompt": "アイキャッチ用英語プロンプト（記事テーマを表す画像、no text, professional blog header, high quality）",
@@ -310,6 +336,17 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     # 記事テーマ指示
     theme_section = f"記事テーマ: {article_theme}\n" if article_theme else ""
 
+    # 共起語・LSIキーワード（Haiku で生成）
+    try:
+        lsi_words = _get_lsi_keywords(keyword)
+        lsi_section = (
+            f"共起語・LSIキーワード（H3本文・FAQ・まとめに自然に散りばめること）: {lsi_words}\n"
+        ) if lsi_words else ""
+        if lsi_words:
+            print(f"[article_generator] 共起語: {lsi_words[:60]}...")
+    except Exception:
+        lsi_section = ""
+
     message = client.messages.create(
         model="claude-opus-4-6",
         max_tokens=16000,
@@ -321,6 +358,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                 volume=volume,
                 related_section=related_section,
                 theme_section=theme_section,
+                lsi_section=lsi_section,
                 differentiation_section=diff_section,
                 plaud_notta_section=plaud_notta_section,
             ),

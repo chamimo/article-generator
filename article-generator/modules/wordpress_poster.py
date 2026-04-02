@@ -67,8 +67,8 @@ def _extract_h2_title(block_text: str) -> str:
 def _build_wp_image_block(src_url: str, alt: str) -> str:
     """wp:image ブロック文字列を生成する。"""
     return (
-        '\n\n<!-- wp:image {"sizeSlug":"large","align":"wide"} -->\n'
-        f'<figure class="wp-block-image size-large alignwide">\n'
+        '\n\n<!-- wp:image {"sizeSlug":"medium","align":"center"} -->\n'
+        f'<figure class="wp-block-image size-medium aligncenter">\n'
         f'<img src="{src_url}" alt="{alt}"/>\n'
         '</figure>\n'
         '<!-- /wp:image -->'
@@ -153,9 +153,15 @@ def create_post(article: dict, featured_media_id: int | None = None) -> dict:
         print(f"[wordpress] タグ設定: {article['tags']}")
         tag_ids = get_or_create_tags(article["tags"])
 
+    # imagefx_prompt を本文末尾にHTMLコメントとして挿入（下書き確認用）
+    content = article["content"]
+    imagefx_prompt = article.get("imagefx_prompt", "")
+    if imagefx_prompt:
+        content = content.rstrip() + f"\n\n<!-- imagefx_prompt\n{imagefx_prompt}\n-->"
+
     payload: dict = {
         "title": article["title"],
-        "content": article["content"],
+        "content": content,
         "status": WP_STATUS,
         "slug": article.get("slug", ""),
         "categories": [category_id],
