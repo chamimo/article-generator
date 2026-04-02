@@ -1,0 +1,413 @@
+"""
+Step 4: Claude APIで記事構成を生成（WordPress SWELL形式）
+"""
+import json
+import anthropic
+from config import ANTHROPIC_API_KEY
+
+client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+
+# ============================================================
+# アフィリエイトリンク一覧（ツール名 → Pretty Links URL）
+# ============================================================
+AFFILIATE_LINKS = {
+    "PLAUD NOTE": "https://workup-ai.com/plaud",
+    "Notta": "https://workup-ai.com/notta",
+    "Notta（メモ機能）": "https://workup-ai.com/nottamemo",
+    "Udemy AI": "https://workup-ai.com/udemy-ai",
+    "ConoHa AI Canvas": "https://workup-ai.com/conoha_ai_canvas",
+    "Filmora": "https://workup-ai.com/filmora",
+    "バイテック": "https://workup-ai.com/bytech",
+    "すらら": "https://workup-ai.com/surara",
+    "Neuro Dive": "https://workup-ai.com/neurodive",
+    "buzz-school": "https://workup-ai.com/buzz-school",
+    "winスクール": "https://workup-ai.com/win-school",
+    "PhotoDirector": "https://workup-ai.com/photodirector",
+    "MyEdit": "https://workup-ai.com/myedit",
+    "イラストAC": "https://workup-ai.com/illust-ac",
+    "デザインAC": "https://workup-ai.com/design_ac",
+    "freenance": "https://workup-ai.com/freenance",
+    "ペライチ": "https://workup-ai.com/peraichi",
+    "picsoroban": "https://workup-ai.com/picsoroban",
+    "NoLang": "https://workup-ai.com/nolang",
+    "TechStock": "https://workup-ai.com/techstock",
+}
+
+_affiliate_lines = "\n".join(f"- {name}: {url}" for name, url in AFFILIATE_LINKS.items())
+
+SYSTEM_PROMPT = f"""\
+# 役割
+あなたは、SEOに最適化された自然な日本語で文章構造（H2・H3の設計）を行う専門ライターです。
+AI特有の不自然さを排除し、読者にとって読みやすく、検索意図に沿った構成を作成します。
+
+# サイト情報
+- サイト名: AIVice（https://workup-ai.com）
+- テーマ: AIツール・生成AI活用情報メディア
+- 対象読者: AI初心者・検索初心者
+- テーマカラー: やさしく・安心感
+
+# 出力ルール
+- WordPress SWELLの構造に完全準拠（独自CSSやstyle禁止）
+- H2は最大3つ（すべてにキーフレーズを含める）
+- H3は合計14〜18本（抽象語禁止、質問形・行動導線を中心に）
+- 各H2直下に、そのH2に属するH3タイトルをis-style-num_circleのリスト形式で列挙してから、各H3見出し＋本文のセットを続ける
+- 各H3の直下に本文（300〜400字）を追加（SWELLのparagraphブロック）
+- 本文トーン: 読者に寄り添うやさしい表現、専門語はカッコで補足
+- 各H3の本文は合計400〜500字・段落2〜3つ（1段落120〜150字）に分け、「結論→詳細→具体例」の流れで書く
+- 各段落はそれぞれ個別の<!-- wp:paragraph -->ブロックで囲む
+- 本文内で①②③のような番号付き列挙が必要な場合は、テキスト内に書かずWordPressの番号付きリストブロックで出力する（段落ブロックとリストブロックを分けて出力）
+- FAQは8〜10問（各回答200字以上）
+- 結論ファーストな構成
+- タグは最大5個（重要度の高いものを厳選）
+
+# リンク挿入ルール（厳守）
+
+## アフィリリンク登録済みツール → アフィリリンクのみ・公式リンク不要
+以下のツールが記事に登場する場合は、**アフィリリンクのみ**を挿入すること。
+公式サイトへのリンクは絶対に追加しないこと。同じツールに2つ以上リンクを貼らないこと。
+リンク形式: <a href="{{URL}}" target="_blank" rel="noopener noreferrer">{{ツール名}}</a>
+
+{_affiliate_lines}
+
+## アフィリリンク未登録ツール → 公式サイトリンクのみ
+上記リスト以外のAIツールを紹介する場合のみ、公式サイトへのリンクを貼ること。
+形式: <a href="{{公式URL}}" target="_blank" rel="noopener noreferrer">{{ツール名}}公式サイト</a>
+
+## リンク共通ルール
+- 同じツールへのリンクは記事全体で1回のみ（初出時に貼り、以降は通常テキスト）
+- アフィリ登録済みツールに公式リンクを重ねて貼ることは禁止
+
+# カテゴリー（WordPressのID）
+- 生成AI・チャット・仕事術: 1397
+- クリエイティブ・デザイン: 1396
+- AI学習・スクール・キャリア: 1398
+- 文字起こし・議事録・ボイスメモ: 1375
+- ChatGPT活用・設定: 1371
+- プロンプト・呪文: 1366
+- Midjourney・にじジャーニー: 1367
+- AI画像生成・イラスト: 1365
+- AI動画生成・編集: 1376
+- Canva・デザインツール: 1369
+- PLAUD NOTE: 1399
+- Notta: 1400
+- AIスクール・資格: 1385
+- AIライティング: 1373
+- Stable Diffusion: 1368
+- プログラミング・開発: 1382
+- 資料作成・タスク管理: 1383
+- SNS運用（YouTube/インスタ）: 1378
+- AI英会話・語学: 1384
+- AI販売・商用利用: 1379
+- 音声合成・音楽生成: 1386
+- iPhone・スマホ録音・アプリ: 1401
+- ICレコーダー・機材: 1402
+- SMARTスピーカー・AIデバイス: 1407
+- Grok（AIアシスタント）: 1406
+- Gemini・Google AI: 1372
+- クラウドワークス・案件: 1380
+
+# 出力フォーマット（必ずこの順番で contentフィールドに格納）
+
+## 1. 冒頭文（250〜300字）
+<!-- wp:paragraph -->
+<p>{{冒頭文（キーフレーズ1回）}}</p>
+<!-- /wp:paragraph -->
+
+## 2. この記事のポイント
+<!-- wp:loos/cap-block {{"className":"is-style-onborder_ttl2"}} -->
+<div class="swell-block-capbox cap_box is-style-onborder_ttl2"><div class="cap_box_ttl"><span>この記事のポイント</span></div><div class="cap_box_content">
+<ul class="wp-block-list is-style-check_list">
+<li>{{ポイント1}}</li>
+<li>{{ポイント2}}</li>
+<li>{{ポイント3}}</li>
+<li>{{キーフレーズを含むポイント4}}</li>
+</ul>
+</div></div>
+<!-- /wp:loos/cap-block -->
+
+## 3. H2・H3構成（H2を最大3回繰り返す）
+各H2の直下に、そのH2配下のH3タイトルをis-style-num_circleリストで列挙する。
+その後、各H3を「見出しブロック＋paragraphブロック（300〜400字）」のセットで出力する。
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">{{H2（キーフレーズ含む）}}</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list {{"ordered":true,"className":"is-style-num_circle"}} -->
+<ol class="wp-block-list is-style-num_circle">
+<li>{{H3見出し1}}</li>
+<li>{{H3見出し2}}</li>
+<li>{{H3見出し3}}</li>
+<li>{{H3見出し4}}</li>
+<li>{{H3見出し5}}</li>
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:heading {{"level":3}} -->
+<h3 class="wp-block-heading">{{H3見出し1}}</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>{{結論・まとめ（120〜150字）。リンクルールに従いアフィリリンクまたは公式リンクを適切に挿入。}}</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>{{詳細説明（120〜150字）}}</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>{{具体例・補足（120〜150字）。番号付き列挙が必要な場合は段落の後にリストブロックを追加。}}</p>
+<!-- /wp:paragraph -->
+
+{{番号付き列挙が必要な場合のみ追加。不要なら省略。}}
+<!-- wp:list {{"ordered":true}} -->
+<ol class="wp-block-list">
+<li>{{項目1}}</li>
+<li>{{項目2}}</li>
+<li>{{項目3}}</li>
+</ol>
+<!-- /wp:list -->
+
+<!-- wp:heading {{"level":3}} -->
+<h3 class="wp-block-heading">{{H3見出し2}}</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>{{結論（120〜150字）}}</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>{{詳細（120〜150字）}}</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>{{具体例（120〜150字）}}</p>
+<!-- /wp:paragraph -->
+
+（H3を4〜6本繰り返す）
+（H2を最大3回繰り返す）
+
+## 4. よくある質問（8〜10問、各回答200字以上）
+<!-- wp:heading {{"level":3}} -->
+<h3 class="wp-block-heading">よくある質問</h3>
+<!-- /wp:heading -->
+
+<!-- wp:loos/faq {{"iconRadius":"rounded","qIconStyle":"fill-custom","aIconStyle":"fill-custom","outputJsonLd":true,"titleTag":"h4","className":"is-style-faq-stripe"}} -->
+<div class="swell-block-faq -icon-rounded is-style-faq-stripe" data-q="fill-custom" data-a="fill-custom">
+<div class="swell-block-faq__item">
+<h4 class="faq_q">{{質問文}}</h4>
+<div class="faq_a">
+<p>{{回答文（200字以上）}}</p>
+</div>
+</div>
+{{8〜10問繰り返し}}
+</div>
+<!-- /wp:loos/faq -->
+
+## 5. まとめ
+<!-- wp:heading {{"level":3}} -->
+<h3 class="wp-block-heading">まとめ｜{{まとめタイトル}}</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list {{"className":"is-style-check_list"}} -->
+<ul class="wp-block-list is-style-check_list">
+<li>{{まとめ項目1〜10}}</li>
+</ul>
+<!-- /wp:list -->
+
+"""
+
+# ============================================================
+# PLAUD NOTE / Notta 優先紹介 — 対象キーワード分類
+# ============================================================
+_PLAUD_NOTTA_TERMS = [
+    # ボイスレコーダー系
+    "ボイスレコーダー", "録音", "音声録音", "icレコーダー", "ic レコーダー",
+    # 文字起こし系
+    "文字起こし", "テキスト化", "書き起こし",
+    # 議事録系
+    "議事録", "会議録", "ミーティングメモ",
+    # 録音ツール系
+    "録音アプリ", "録音ツール",
+    # メモ系
+    "ボイスメモ", "音声メモ",
+    # 要約系
+    "ai要約", "自動要約",
+]
+
+_PLAUD_NOTTA_INSTRUCTION = """\
+
+## PLAUD NOTE・Notta 優先紹介ルール（このキーワードには必須）
+このキーワードはボイスレコーダー／文字起こし／議事録／録音系に該当します。
+以下のルールを厳守してください。
+
+1. 記事の最初のH2またはH3（冒頭のセクション）で必ずPLAUD NOTEを1位・最初に紹介する
+2. PLAUD NOTEのアフィリリンク（https://workup-ai.com/plaud）を自然な文脈で挿入する
+3. PLAUD NOTEを紹介した同じセクション内、またはすぐ後のH3でNottaも紹介する
+4. Nottaのアフィリリンク（https://workup-ai.com/notta）も挿入する
+5. 両ツールの紹介は「押しつけ感」がなく読者に有益な形で自然に組み込むこと
+"""
+
+
+def _needs_plaud_notta(keyword: str) -> bool:
+    """キーワードがPLAUD NOTE/Notta優先紹介の対象かどうかを判定する。"""
+    kw = keyword.lower()
+    return any(term in kw for term in _PLAUD_NOTTA_TERMS)
+
+
+USER_PROMPT_TEMPLATE = """\
+以下のキーワードで記事構成を生成してください。
+
+メインキーワード: {keyword}
+月間検索ボリューム: {volume}
+{related_section}{theme_section}{differentiation_section}{plaud_notta_section}
+このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
+
+## 出力フォーマット（JSON）
+以下のJSONのみ返してください。前後に説明文・コードブロック記号は不要です。
+
+{{
+  "title": "SEOタイトル（32文字以内、キーフレーズを含む）",
+  "meta_description": "メタディスクリプション（150字以上）",
+  "slug": "url-slug-in-english-kebab-case",
+  "image_prompt": "アイキャッチ用英語プロンプト（記事テーマを表す画像、no text, professional blog header, high quality）",
+  "category_id": カテゴリーIDの整数,
+  "category_name": "カテゴリー名",
+  "tags": ["タグ1", "タグ2", "タグ3", "タグ4", "タグ5"],
+  "content": "WordPress SWELL形式の完全なHTML（セクション1〜5をすべて含む。記事データセクションは不要）"
+}}
+"""
+
+
+def _build_article(keyword: str, volume: int, differentiation_note: str = "",
+                   related_keywords: list[str] | None = None,
+                   article_theme: str = "") -> dict:
+    """
+    記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
+    """
+    use_plaud_notta = _needs_plaud_notta(keyword)
+    print(f"[article_generator] 記事構成生成中: 「{keyword}」(vol:{volume})"
+          + (" ※差別化モード" if differentiation_note else "")
+          + (" ※PLAUD/Notta優先" if use_plaud_notta else ""))
+
+    diff_section = f"差別化の方針: {differentiation_note}\n" if differentiation_note else ""
+    plaud_notta_section = _PLAUD_NOTTA_INSTRUCTION if use_plaud_notta else ""
+
+    # 関連キーワード指示
+    related_section = ""
+    if related_keywords:
+        kw_list = "・".join(related_keywords)
+        related_section = (
+            f"関連キーワード（記事内のH2・H3見出しや本文に自然に含めること）: {kw_list}\n"
+        )
+
+    # 記事テーマ指示
+    theme_section = f"記事テーマ: {article_theme}\n" if article_theme else ""
+
+    message = client.messages.create(
+        model="claude-opus-4-6",
+        max_tokens=16000,
+        system=SYSTEM_PROMPT,
+        messages=[{
+            "role": "user",
+            "content": USER_PROMPT_TEMPLATE.format(
+                keyword=keyword,
+                volume=volume,
+                related_section=related_section,
+                theme_section=theme_section,
+                differentiation_section=diff_section,
+                plaud_notta_section=plaud_notta_section,
+            ),
+        }],
+    )
+
+    raw = message.content[0].text.strip()
+
+    # ```json ... ``` ブロックへの対応
+    if raw.startswith("```"):
+        lines = raw.split("\n")
+        raw = "\n".join(lines[1:-1] if lines[-1].strip() == "```" else lines[1:])
+
+    try:
+        data = json.loads(raw)
+    except json.JSONDecodeError as e:
+        raise ValueError(f"Claude APIからのJSON解析エラー: {e}\n---\n{raw[:500]}") from e
+
+    for key in ("title", "meta_description", "slug", "image_prompt", "content"):
+        if key not in data:
+            raise ValueError(f"レスポンスに必須キー '{key}' がありません")
+
+    if "category_id" in data:
+        try:
+            data["category_id"] = int(data["category_id"])
+        except (ValueError, TypeError):
+            data.pop("category_id", None)
+
+    # タグを最大5個に制限
+    if isinstance(data.get("tags"), list):
+        data["tags"] = data["tags"][:5]
+    else:
+        data["tags"] = []
+
+    data["keyword"] = keyword
+    data["volume"] = volume
+
+    print(
+        f"[article_generator] 完了: 「{data['title']}」"
+        f" カテゴリ: {data.get('category_name','未設定')}({data.get('category_id','-')})"
+        f" タグ: {data['tags']}"
+    )
+    return data
+
+
+def generate_article(keyword: str, volume: int, differentiation_note: str = "") -> dict:
+    """
+    指定キーワードでSEO記事構成を生成し、辞書で返す。
+
+    Args:
+        keyword: メインキーワード
+        volume: 月間検索ボリューム
+        differentiation_note: カニバリ対策の差別化ヒント（空文字列なら通常生成）
+
+    Returns:
+        {title, meta_description, slug, image_prompt, category_id, category_name,
+         content, keyword, volume}
+    """
+    return _build_article(keyword, volume, differentiation_note)
+
+
+def generate_article_from_cluster(cluster: dict) -> dict:
+    """
+    keyword_clusters.json の1グループから記事を生成する。
+
+    Args:
+        cluster: {
+            "group_id": int,
+            "main_keyword": str,
+            "related_keywords": list[str],
+            "article_theme": str,
+            "skip": bool,
+            "note": str,
+        }
+
+    Returns:
+        generate_article と同じ形式の dict（cluster情報を追加）
+    """
+    main_kw = cluster["main_keyword"]
+    related = cluster.get("related_keywords", [])
+    theme = cluster.get("article_theme", "")
+    note = cluster.get("note", "")
+
+    # 関連KWのボリュームは未知なので0
+    volume = cluster.get("volume", 0)
+
+    data = _build_article(
+        keyword=main_kw,
+        volume=volume,
+        differentiation_note=note,
+        related_keywords=related,
+        article_theme=theme,
+    )
+    data["group_id"] = cluster.get("group_id")
+    data["related_keywords"] = related
+    return data
