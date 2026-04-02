@@ -72,6 +72,41 @@ def _ensure_headers(ws: gspread.Worksheet) -> dict[str, int]:
     return col_map
 
 
+def _highlight_row(ws: gspread.Worksheet, row: int) -> None:
+    """
+    指定行全体の背景色を薄いグレー (RGB: 211, 211, 211) に変更する。
+    Sheets API の batchUpdate / repeatCell リクエストを使用。
+    """
+    # Sheets API は RGB を 0.0〜1.0 の小数で指定
+    gray = 211 / 255  # ≈ 0.8274
+
+    body = {
+        "requests": [
+            {
+                "repeatCell": {
+                    "range": {
+                        "sheetId": ws.id,
+                        "startRowIndex": row - 1,   # 0始まり
+                        "endRowIndex": row,          # exclusive
+                        # startColumnIndex / endColumnIndex を省略 → 行全体
+                    },
+                    "cell": {
+                        "userEnteredFormat": {
+                            "backgroundColor": {
+                                "red": gray,
+                                "green": gray,
+                                "blue": gray,
+                            }
+                        }
+                    },
+                    "fields": "userEnteredFormat.backgroundColor",
+                }
+            }
+        ]
+    }
+    ws.spreadsheet.batch_update(body)
+
+
 def _find_keyword_row(ws: gspread.Worksheet, keyword: str) -> int | None:
     """
     キーワード列（A列）からキーワードを検索し、行番号（1始まり）を返す。
@@ -127,7 +162,10 @@ def mark_posted(
         ]
         ws.update_cells(updates, value_input_option="USER_ENTERED")
 
-        print(f"[sheets_updater] 書き込み完了: 行{row} 「{keyword}」→ 投稿済み ({date_str}, ID:{post_id})")
+        # 行全体をグレーに着色
+        _highlight_row(ws, row)
+
+        print(f"[sheets_updater] 書き込み完了: 行{row} 「{keyword}」→ 投稿済み ({date_str}, ID:{post_id}) [背景色適用]")
         return True
 
     except Exception as e:
