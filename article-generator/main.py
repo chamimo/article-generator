@@ -29,7 +29,7 @@ import sys
 import time
 
 from modules.keyword_filter import load_and_filter
-from modules.sheets_fetcher import get_aim_keywords
+from modules.sheets_fetcher import get_aim_keywords, get_non_aim_keywords
 from modules.article_generator import generate_article, generate_article_from_cluster
 from modules.cannibal_checker import check_cannibalization
 from modules.wordpress_poster import post_article_with_image
@@ -42,6 +42,7 @@ KEYWORD_CLUSTERS_PATH = os.path.join(os.path.dirname(__file__), "output", "keywo
 def run_clusters_pipeline(
     clusters: list[dict],
     dry_run: bool = False,
+    sub_keywords: list[str] | None = None,
 ) -> list[dict]:
     """
     keyword_clusters.json のクラスターリストから記事を生成・投稿する。
@@ -65,7 +66,7 @@ def run_clusters_pipeline(
         print("=" * 60)
 
         try:
-            article = generate_article_from_cluster(cluster)
+            article = generate_article_from_cluster(cluster, sub_keywords=sub_keywords)
 
             if dry_run:
                 print(f"[dry-run] 投稿スキップ: 「{article['title']}」")
@@ -115,6 +116,7 @@ def run_pipeline(
     keywords: list[dict],
     dry_run: bool = False,
     skip_cannibal: bool = False,
+    sub_keywords: list[str] | None = None,
 ) -> list[dict]:
     results = []
     total = len(keywords)
@@ -145,7 +147,7 @@ def run_pipeline(
                     print(f"[カニバリ] 差別化モードで生成: {differentiation_note}")
 
             # --- Step 4: 記事生成 ---
-            article = generate_article(keyword, volume, differentiation_note)
+            article = generate_article(keyword, volume, differentiation_note, sub_keywords=sub_keywords)
 
             if dry_run:
                 print(f"[dry-run] 投稿スキップ: 「{article['title']}」")
@@ -212,6 +214,13 @@ def main():
                         help="output/keyword_clusters.json を使ってクラスターベースで記事生成")
     args = parser.parse_args()
 
+    # ── サブキーワード（AIM未判定）を一度だけ取得 ──
+    sub_keywords: list[str] = []
+    try:
+        sub_keywords = get_non_aim_keywords()
+    except Exception as e:
+        print(f"[警告] サブキーワード取得失敗（続行）: {e}")
+
     # ── クラスターモード ──────────────────────
     if args.clusters:
         if not os.path.exists(KEYWORD_CLUSTERS_PATH):
@@ -224,7 +233,7 @@ def main():
             skip_list = [c for c in clusters if c.get("skip")]
             clusters = active[: args.limit] + skip_list
         print(f"\n[clusters] {KEYWORD_CLUSTERS_PATH} からクラスターを読み込み: {len(clusters)}件")
-        results = run_clusters_pipeline(clusters, dry_run=args.dry_run)
+        results = run_clusters_pipeline(clusters, dry_run=args.dry_run, sub_keywords=sub_keywords)
         print_summary(results)
         return
 
@@ -277,6 +286,7 @@ def main():
         keywords,
         dry_run=args.dry_run,
         skip_cannibal=args.no_cannibal_check,
+        sub_keywords=sub_keywords,
     )
     print_summary(results)
 

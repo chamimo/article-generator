@@ -99,3 +99,53 @@ def get_aim_keywords(sheet_name: str | None = None, worksheet_index: int = 0) ->
 
     print(f"[sheets_fetcher] AIM判定キーワード: {len(aim_keywords)}件 (ボリューム条件: AIMありは無条件採用)")
     return aim_keywords
+
+
+def get_non_aim_keywords(sheet_name: str | None = None, worksheet_index: int = 0) -> list[str]:
+    """
+    AIM列が空（未判定）のキーワードをサブキーワード候補として返す。
+
+    Returns:
+        ["キーワード1", "キーワード2", ...]  ※重複除去・最大300件
+    """
+    creds = Credentials.from_service_account_file(GOOGLE_CREDENTIALS_PATH, scopes=SCOPES)
+    gc = gspread.authorize(creds)
+    spreadsheet = gc.open_by_key(GOOGLE_SHEETS_ID)
+
+    ws = spreadsheet.worksheet(sheet_name) if sheet_name else spreadsheet.get_worksheet(worksheet_index)
+    all_values = ws.get_all_values()
+    if not all_values:
+        return []
+
+    header = all_values[0]
+    rows = all_values[1:]
+
+    kw_idx  = _find_col_index(header, ["キーワード", "Keyword", "keyword"])
+    aim_idx = _find_col_index(header, ["aim", "AIM", "AIM判定", "aim判定"])
+    if kw_idx is None:
+        kw_idx = 2
+    if aim_idx is None:
+        aim_idx = 22
+
+    non_aim: list[str] = []
+    seen: set[str] = set()
+    for row in rows:
+        def cell(idx: int) -> str:
+            return row[idx].strip() if idx < len(row) else ""
+
+        keyword = cell(kw_idx)
+        aim_val = cell(aim_idx)
+
+        if not keyword:
+            continue
+        if aim_val:  # AIM列に何か入っていれば対象外
+            continue
+        if keyword in seen:
+            continue
+        seen.add(keyword)
+        non_aim.append(keyword)
+        if len(non_aim) >= 300:
+            break
+
+    print(f"[sheets_fetcher] サブキーワード候補（AIM未判定）: {len(non_aim)}件")
+    return non_aim

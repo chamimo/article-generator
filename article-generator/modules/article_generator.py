@@ -340,7 +340,7 @@ USER_PROMPT_TEMPLATE = """\
 
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{related_section}{theme_section}{lsi_section}{keyword_research_section}{differentiation_section}{plaud_notta_section}
+{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{plaud_notta_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
@@ -361,7 +361,8 @@ USER_PROMPT_TEMPLATE = """\
 
 def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    related_keywords: list[str] | None = None,
-                   article_theme: str = "") -> dict:
+                   article_theme: str = "",
+                   sub_keywords: list[str] | None = None) -> dict:
     """
     記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
     """
@@ -395,6 +396,20 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     except Exception:
         lsi_section = ""
 
+    # スプレッドシートのAIM未判定サブキーワード
+    sub_keywords_section = ""
+    if sub_keywords:
+        # メインKW・関連KWと重複するものを除く
+        existing = {keyword.lower()} | {k.lower() for k in (related_keywords or [])}
+        candidates = [k for k in sub_keywords if k.lower() not in existing][:50]
+        if candidates:
+            sub_keywords_section = (
+                "スプレッドシートのサブキーワード候補（関連性が高いものだけH3見出し・本文・FAQに自然に活用。"
+                "無理に全部入れる必要はなく、関連性が低いものはスキップでOK。不自然な詰め込み禁止）:\n"
+                + "・".join(candidates) + "\n"
+            )
+            print(f"[article_generator] サブKW候補: {len(candidates)}件 ({candidates[0]}〜)")
+
     # サジェスト・PAA・ロングテールキーワード（Haiku で生成）
     keyword_research_section = ""
     try:
@@ -426,6 +441,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                 theme_section=theme_section,
                 lsi_section=lsi_section,
                 keyword_research_section=keyword_research_section,
+                sub_keywords_section=sub_keywords_section,
                 differentiation_section=diff_section,
                 plaud_notta_section=plaud_notta_section,
             ),
@@ -478,7 +494,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     return data
 
 
-def generate_article(keyword: str, volume: int, differentiation_note: str = "") -> dict:
+def generate_article(keyword: str, volume: int, differentiation_note: str = "",
+                     sub_keywords: list[str] | None = None) -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
@@ -486,15 +503,16 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "") 
         keyword: メインキーワード
         volume: 月間検索ボリューム
         differentiation_note: カニバリ対策の差別化ヒント（空文字列なら通常生成）
+        sub_keywords: スプレッドシートのAIM未判定キーワード（任意活用）
 
     Returns:
         {title, meta_description, slug, image_prompt, category_id, category_name,
          content, keyword, volume}
     """
-    return _build_article(keyword, volume, differentiation_note)
+    return _build_article(keyword, volume, differentiation_note, sub_keywords=sub_keywords)
 
 
-def generate_article_from_cluster(cluster: dict) -> dict:
+def generate_article_from_cluster(cluster: dict, sub_keywords: list[str] | None = None) -> dict:
     """
     keyword_clusters.json の1グループから記事を生成する。
 
@@ -525,6 +543,7 @@ def generate_article_from_cluster(cluster: dict) -> dict:
         differentiation_note=note,
         related_keywords=related,
         article_theme=theme,
+        sub_keywords=sub_keywords,
     )
     data["group_id"] = cluster.get("group_id")
     data["related_keywords"] = related
