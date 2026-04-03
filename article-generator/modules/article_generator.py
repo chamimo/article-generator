@@ -265,6 +265,46 @@ _PLAUD_NOTTA_INSTRUCTION = """\
 """
 
 
+def _get_keyword_research(keyword: str) -> dict:
+    """
+    Claude Haiku でキーワードリサーチを一括生成する。
+
+    Returns:
+        {
+            "suggest":  ["サジェスト候補", ...],   # 8〜10個
+            "paa":      ["PAA質問文", ...],         # 5〜8個
+            "longtail": ["ロングテール複合KW", ...] # 8〜10個
+        }
+    """
+    msg = client.messages.create(
+        model="claude-haiku-4-5-20251001",
+        max_tokens=800,
+        messages=[{
+            "role": "user",
+            "content": (
+                f"「{keyword}」のSEO記事向けにキーワードリサーチを行ってください。\n"
+                "以下のJSONのみ出力してください（```json などのコードブロック記号は不要）：\n"
+                '{"suggest":["サジェスト候補8〜10個（Googleサジェスト想定）"],'
+                '"paa":["PAA形式の質問文5〜8個（〜とは・〜やり方・〜比較・〜おすすめなど）"],'
+                '"longtail":["3〜5語のロングテール複合キーワード8〜10個"]}'
+            ),
+        }],
+    )
+    raw = msg.content[0].text.strip()
+    if raw.startswith("```"):
+        lines = raw.split("\n")
+        raw = "\n".join(lines[1:-1] if lines[-1].strip() == "```" else lines[1:])
+    try:
+        result = json.loads(raw)
+        return {
+            "suggest":  result.get("suggest", [])[:10],
+            "paa":      result.get("paa", [])[:8],
+            "longtail": result.get("longtail", [])[:10],
+        }
+    except Exception:
+        return {"suggest": [], "paa": [], "longtail": []}
+
+
 def _get_lsi_keywords(keyword: str) -> str:
     """
     Claude Haiku でキーワードの共起語・LSIキーワードを生成する。
@@ -300,7 +340,7 @@ USER_PROMPT_TEMPLATE = """\
 
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{related_section}{theme_section}{lsi_section}{differentiation_section}{plaud_notta_section}
+{related_section}{theme_section}{lsi_section}{keyword_research_section}{differentiation_section}{plaud_notta_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
@@ -355,6 +395,24 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     except Exception:
         lsi_section = ""
 
+    # サジェスト・PAA・ロングテールキーワード（Haiku で生成）
+    keyword_research_section = ""
+    try:
+        kw_research = _get_keyword_research(keyword)
+        parts = []
+        if kw_research["suggest"]:
+            parts.append("サジェストキーワード（H3見出しや本文に自然に使う）: " + "・".join(kw_research["suggest"]))
+        if kw_research["paa"]:
+            parts.append("関連質問PAA（FAQの質問文やH3見出しに活用する）: " + "・".join(kw_research["paa"]))
+        if kw_research["longtail"]:
+            parts.append("ロングテールキーワード（本文中に自然に散りばめる）: " + "・".join(kw_research["longtail"]))
+        if parts:
+            keyword_research_section = "\n".join(parts) + "\n"
+            suggest_preview = "・".join(kw_research["suggest"][:3])
+            print(f"[article_generator] サジェスト: {suggest_preview}...")
+    except Exception:
+        pass
+
     message = client.messages.create(
         model="claude-opus-4-6",
         max_tokens=16000,
@@ -367,6 +425,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                 related_section=related_section,
                 theme_section=theme_section,
                 lsi_section=lsi_section,
+                keyword_research_section=keyword_research_section,
                 differentiation_section=diff_section,
                 plaud_notta_section=plaud_notta_section,
             ),
