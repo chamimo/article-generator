@@ -35,6 +35,7 @@ _LIST_HEADERS = [
 ]
 
 _ARTICLE_LIST_SHEET_NAME = "投稿記事一覧"
+_LEGEND_SHEET_NAME = "凡例"
 
 _ws_cache: gspread.Worksheet | None = None
 _ss_cache: gspread.Spreadsheet | None = None
@@ -94,6 +95,125 @@ def _get_or_create_article_list_sheet() -> gspread.Worksheet:
         print(f"[sheets_updater] 「{_ARTICLE_LIST_SHEET_NAME}」ヘッダーを設定")
 
     return ws
+
+
+def setup_legend_sheet() -> None:
+    """「凡例」シートを作成または更新し、背景色・説明を書き込む。"""
+    ss = _get_spreadsheet()
+    try:
+        ws = ss.worksheet(_LEGEND_SHEET_NAME)
+        ws.clear()
+        print(f"[sheets_updater] シート「{_LEGEND_SHEET_NAME}」をクリアして更新")
+    except gspread.WorksheetNotFound:
+        ws = ss.add_worksheet(title=_LEGEND_SHEET_NAME, rows=30, cols=5)
+        print(f"[sheets_updater] シート「{_LEGEND_SHEET_NAME}」を新規作成")
+
+    # ヘッダー行とデータ行
+    rows = [
+        ["背景色", "ステータス", "説明"],
+        ["白（デフォルト）", "未処理", "まだAIM判定されていないキーワード"],
+        ["薄いイエロー", "生成待ち", "AIM判定済み・記事生成待ち"],
+        ["薄いグレー", "投稿済み", "記事生成・WP投稿完了"],
+        ["薄いオレンジ", "カニバリスキップ", "既存記事と内容が重複するためスキップ"],
+        [],
+        ["追加情報"],
+        ["キーワード列", "メインキーワード"],
+        ["AIM列", "「aim」と入力するとシステムが処理対象として認識"],
+        ["メモ列", "カニバリ理由・差別化メモが自動記入される"],
+        ["投稿日・URL・ID", "投稿後に自動記入される"],
+    ]
+    ws.update("A1", rows, value_input_option="USER_ENTERED")
+
+    # 列幅調整 & スタイル一括設定
+    sheet_id = ws.id
+    color_map = [
+        # (row_index 0-based, red, green, blue)
+        (0, 0.27, 0.51, 0.71),   # ヘッダー: 青
+        (1, 1.0,  1.0,  1.0),    # 白（デフォルト）
+        (2, 1.0,  1.0,  0.6),    # 薄いイエロー
+        (3, 211/255, 211/255, 211/255),  # 薄いグレー
+        (4, 1.0,  0.8,  0.6),    # 薄いオレンジ
+        (6, 0.9,  0.9,  0.9),    # 追加情報ヘッダー: 薄いグレー
+    ]
+
+    requests = []
+
+    # 背景色
+    for row_idx, r, g, b in color_map:
+        requests.append({
+            "repeatCell": {
+                "range": {
+                    "sheetId": sheet_id,
+                    "startRowIndex": row_idx,
+                    "endRowIndex": row_idx + 1,
+                    "startColumnIndex": 0,
+                    "endColumnIndex": 3,
+                },
+                "cell": {
+                    "userEnteredFormat": {
+                        "backgroundColor": {"red": r, "green": g, "blue": b},
+                    }
+                },
+                "fields": "userEnteredFormat.backgroundColor",
+            }
+        })
+
+    # ヘッダー行を太字
+    for row_idx in (0, 6):
+        requests.append({
+            "repeatCell": {
+                "range": {
+                    "sheetId": sheet_id,
+                    "startRowIndex": row_idx,
+                    "endRowIndex": row_idx + 1,
+                    "startColumnIndex": 0,
+                    "endColumnIndex": 3,
+                },
+                "cell": {
+                    "userEnteredFormat": {
+                        "textFormat": {"bold": True},
+                    }
+                },
+                "fields": "userEnteredFormat.textFormat.bold",
+            }
+        })
+
+    # ヘッダー行の文字色を白（row 0 のみ）
+    requests.append({
+        "repeatCell": {
+            "range": {
+                "sheetId": sheet_id,
+                "startRowIndex": 0,
+                "endRowIndex": 1,
+                "startColumnIndex": 0,
+                "endColumnIndex": 3,
+            },
+            "cell": {
+                "userEnteredFormat": {
+                    "textFormat": {"foregroundColor": {"red": 1.0, "green": 1.0, "blue": 1.0}},
+                }
+            },
+            "fields": "userEnteredFormat.textFormat.foregroundColor",
+        }
+    })
+
+    # 列幅 (A=160, B=160, C=360)
+    for col_idx, px in enumerate([160, 160, 360]):
+        requests.append({
+            "updateDimensionProperties": {
+                "range": {
+                    "sheetId": sheet_id,
+                    "dimension": "COLUMNS",
+                    "startIndex": col_idx,
+                    "endIndex": col_idx + 1,
+                },
+                "properties": {"pixelSize": px},
+                "fields": "pixelSize",
+            }
+        })
+
+    ss.batch_update({"requests": requests})
+    print(f"[sheets_updater] 「{_LEGEND_SHEET_NAME}」シート作成・スタイル設定完了")
 
 
 def _ensure_headers(ws: gspread.Worksheet) -> dict[str, int]:

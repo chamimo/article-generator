@@ -14,7 +14,7 @@ from requests.auth import HTTPBasicAuth
 import anthropic
 from config import WP_URL, WP_USERNAME, WP_APP_PASSWORD, ANTHROPIC_API_KEY
 from modules.sheets_fetcher import get_aim_keywords
-from modules.sheets_updater import mark_cannibal_results_bulk
+from modules.sheets_updater import mark_cannibal_results_bulk, setup_legend_sheet
 
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "output")
 EXISTING_ARTICLES_PATH = os.path.join(OUTPUT_DIR, "existing_articles.json")
@@ -178,6 +178,11 @@ def main() -> None:
     print("\n[STEP 3] スプレッドシートにカニバリ判定結果を書き込み中...")
     mark_cannibal_results_bulk(clusters)
     print("[STEP 3] 完了")
+
+    # ── 凡例シートを作成・更新 ──
+    print("\n[STEP 4] 凡例シートを作成・更新中...")
+    setup_legend_sheet()
+    print("[STEP 4] 完了")
 
 
 if __name__ == "__main__":
