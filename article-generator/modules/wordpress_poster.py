@@ -70,14 +70,14 @@ def _inject_cta(content: str, keyword: str) -> str:
 
     cta_label = "PLAUD" if cta is _CTA_PLAUD else "Notta"
 
-    # ── 挿入箇所1: pochipp ブロック直後 ──
-    pochipp_end = re.search(r'<!-- /wp:pochipp/linkbox -->', content)
-    if pochipp_end:
-        pos = pochipp_end.end()
+    # ── 挿入箇所1: 「この記事のポイント」cap-block 直後 ──
+    capblock_end = re.search(r'<!-- /wp:loos/cap-block -->', content)
+    if capblock_end:
+        pos = capblock_end.end()
         content = content[:pos] + "\n\n" + cta + content[pos:]
-        print(f"[wordpress] CTA挿入[1/2]: {cta_label}用CTAをpochipp直後に挿入")
+        print(f"[wordpress] CTA挿入[1/2]: {cta_label}用CTAをこの記事のポイント直後に挿入")
     else:
-        print(f"[wordpress] CTA挿入[1/2]: pochippブロックが見つからないためスキップ")
+        print(f"[wordpress] CTA挿入[1/2]: cap-blockが見つからないためスキップ")
 
     # ── 挿入箇所2: まとめ H3 直前 ──
     matome_pat = re.compile(
