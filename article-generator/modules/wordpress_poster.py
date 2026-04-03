@@ -1,6 +1,7 @@
 """
 Step 6: WordPress REST APIで下書き投稿
 """
+import random
 import re
 import requests
 from requests.auth import HTTPBasicAuth
@@ -81,9 +82,16 @@ def _inject_cta(content: str, keyword: str) -> str:
 # メディアアップロード
 # ─────────────────────────────────────────────
 
-def upload_media(image_bytes: bytes, filename: str, mime_type: str = "image/jpeg") -> tuple[int, str]:
+def upload_media(
+    image_bytes: bytes,
+    filename: str,
+    mime_type: str = "image/jpeg",
+    alt_text: str = "",
+    title: str = "",
+) -> tuple[int, str]:
     """
     WordPress メディアライブラリに画像をアップロードする。
+    alt_text / title を指定すると PATCH で自動設定する。
 
     Returns:
         (media_id, source_url)
@@ -100,8 +108,57 @@ def upload_media(image_bytes: bytes, filename: str, mime_type: str = "image/jpeg
     )
     resp.raise_for_status()
     data = resp.json()
-    print(f"[wordpress] メディアアップロード完了 (ID: {data['id']})")
-    return data["id"], data.get("source_url", "")
+    media_id = data["id"]
+
+    if alt_text or title:
+        patch: dict = {}
+        if alt_text:
+            patch["alt_text"] = alt_text
+        if title:
+            patch["title"] = title
+        requests.post(
+            f"{WP_URL}/wp-json/wp/v2/media/{media_id}",
+            auth=_auth(),
+            json=patch,
+            timeout=10,
+        )
+
+    print(f"[wordpress] メディアアップロード完了 (ID: {media_id})")
+    return media_id, data.get("source_url", "")
+
+
+def _get_category_search_terms(keyword: str) -> list[str]:
+    """キーワードからメディアライブラリ検索用キャプションタグを返す。"""
+    kw = keyword.lower()
+    terms: list[str] = []
+    if any(k in kw for k in _PLAUD_KEYWORDS):
+        terms += ["PLAUD", "ボイスレコーダー", "録音"]
+    if any(k in kw for k in _NOTTA_KEYWORDS):
+        terms += ["Notta", "文字起こし", "議事録"]
+    if not terms:
+        terms.append(keyword.split()[0] if keyword else "AI")
+    return terms
+
+
+def _fetch_media_by_tag(search_term: str) -> list[dict]:
+    """キャプション中の #タグ でメディアライブラリを検索しランダム1件を返す。"""
+    try:
+        resp = requests.get(
+            f"{WP_URL}/wp-json/wp/v2/media",
+            auth=_auth(),
+            params={
+                "media_type": "image",
+                "search": f"#{search_term}",
+                "per_page": 50,
+                "_fields": "id,source_url,alt_text,caption",
+            },
+            timeout=10,
+        )
+        if resp.status_code != 200:
+            return []
+        return resp.json()
+    except Exception:
+        return []
 
 
 # ─────────────────────────────────────────────
@@ -286,59 +343,93 @@ def create_post(article: dict, featured_media_id: int | None = None) -> dict:
 def post_article_with_image(article: dict, image_bytes: bytes | None = None) -> dict:
     """
     ① カテゴリ自動選択
-    ② アイキャッチ画像アップロード（人物あり）
-    ③ H2記事内画像を生成・アップロード・コンテンツに挿入
-    ④ WordPress に下書き投稿
-    ⑤ スプレッドシートに投稿済みフラグを書き込む
+    ② アイキャッチ画像アップロード（FLUX生成・{slug}-eyecatch.jpg）
+    ③ H2記事内画像: 1枚目FLUX / 2枚目以降メディアライブラリ優先（なければFLUX）
+    ④ CTA挿入（まとめH3直前）
+    ⑤ WordPress に下書き投稿
+    ⑥ スプレッドシートに投稿済みフラグを書き込む
     """
     from modules.image_generator import generate_h2_image  # 循環import回避
+
+    keyword = article.get("keyword", article["title"])
+    slug = re.sub(r"[^a-z0-9\-]", "", article.get("slug", "article").lower()) or "article"
 
     # ① カテゴリ
     if not article.get("category_id"):
         article["category_id"] = select_category(
-            keyword=article.get("keyword", article["title"]),
+            keyword=keyword,
             article_title=article["title"],
         )
 
-    # ② アイキャッチ（人物あり）
+    # ② アイキャッチ
     featured_media_id = None
     if image_bytes:
-        slug = re.sub(r"[^a-z0-9\-]", "", article.get("slug", "article").lower())
-        media_id, eyecatch_url = upload_media(image_bytes, f"{slug or 'featured'}.jpg")
+        eyecatch_alt = f"{keyword}のイメージ画像"
+        media_id, eyecatch_url = upload_media(
+            image_bytes,
+            f"{slug}-eyecatch.jpg",
+            alt_text=eyecatch_alt,
+            title=eyecatch_alt,
+        )
         featured_media_id = media_id
         if eyecatch_url:
             article["eyecatch_url"] = eyecatch_url
 
-    # ③ H2記事内画像を生成・挿入
+    # ③ H2記事内画像
     h2_matches = _extract_h2_blocks(article.get("content", ""))
     if h2_matches:
-        print(f"[wordpress] H2画像生成: {len(h2_matches)}枚")
+        print(f"[wordpress] H2画像処理: {len(h2_matches)}枚")
         h2_image_data: list[tuple[str, str]] = []
-        keyword = article.get("keyword", article["title"])
+        search_terms = _get_category_search_terms(keyword)
+
         for i, match in enumerate(h2_matches, 1):
             h2_title = _extract_h2_title(match.group(0))
-            try:
-                img_bytes = generate_h2_image(h2_title, keyword)
-                slug_base = re.sub(r"[^a-z0-9\-]", "", article.get("slug", "article").lower())
-                _, src_url = upload_media(img_bytes, f"{slug_base or 'article'}-h2-{i}.jpg")
-                h2_image_data.append((h2_title, src_url))
-                print(f"[wordpress] H2画像[{i}] アップロード完了: {h2_title[:30]}")
-            except Exception as e:
-                print(f"[wordpress] H2画像[{i}] スキップ（続行）: {e}")
+            img_alt = f"{h2_title}のイメージ画像" if h2_title else f"{keyword}のイメージ画像"
+            filename = f"{slug}-{i:02d}.jpg"
+
+            if i == 1:
+                # 1枚目: 必ずFLUXで生成
+                try:
+                    img_bytes = generate_h2_image(h2_title, keyword)
+                    _, src_url = upload_media(img_bytes, filename, alt_text=img_alt, title=img_alt)
+                    h2_image_data.append((img_alt, src_url))
+                    print(f"[wordpress] H2画像[{i}] FLUX生成: {h2_title[:30]}")
+                except Exception as e:
+                    print(f"[wordpress] H2画像[{i}] スキップ（続行）: {e}")
+            else:
+                # 2枚目以降: メディアライブラリから #タグ検索 → なければFLUX
+                src_url = ""
+                for term in search_terms:
+                    candidates = _fetch_media_by_tag(term)
+                    if candidates:
+                        chosen = random.choice(candidates)
+                        src_url = chosen.get("source_url", "")
+                        if src_url:
+                            print(f"[wordpress] H2画像[{i}] ライブラリ選択 (#{term}): {src_url.split('/')[-1]}")
+                            break
+
+                if not src_url:
+                    try:
+                        img_bytes = generate_h2_image(h2_title, keyword)
+                        _, src_url = upload_media(img_bytes, filename, alt_text=img_alt, title=img_alt)
+                        print(f"[wordpress] H2画像[{i}] FLUX生成（ライブラリ該当なし）: {h2_title[:30]}")
+                    except Exception as e:
+                        print(f"[wordpress] H2画像[{i}] スキップ（続行）: {e}")
+
+                if src_url:
+                    h2_image_data.append((img_alt, src_url))
 
         if h2_image_data:
             article["content"] = _inject_h2_images(article["content"], h2_image_data)
             print(f"[wordpress] H2画像 {len(h2_image_data)}枚 をコンテンツに挿入しました")
 
-    # ③-2 CTA挿入（まとめH3直前）
-    keyword = article.get("keyword", article["title"])
+    # ④ CTA挿入（まとめH3直前）
     article["content"] = _inject_cta(article["content"], keyword)
 
-    # ④ 投稿
+    # ⑤ 投稿
     result = create_post(article, featured_media_id=featured_media_id)
 
-    # ⑤ スプレッドシート書き込み
-    keyword = article.get("keyword", "")
+    # ⑥ スプレッドシート書き込み
     if keyword:
         mark_posted(
             keyword=keyword,
