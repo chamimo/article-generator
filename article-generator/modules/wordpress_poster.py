@@ -14,6 +14,70 @@ def _auth() -> HTTPBasicAuth:
 
 
 # ─────────────────────────────────────────────
+# CTA挿入
+# ─────────────────────────────────────────────
+
+_CTA_PLAUD = """\
+<!-- wp:group {"metadata":{"categories":["call-to-action"],"patternName":"core/block/7009","name":"【テンプレート】マイクロコピーmc"},"className":"has-border -border02 is-style-bg_stripe","layout":{"type":"constrained"}} -->
+<div class="wp-block-group has-border -border02 is-style-bg_stripe"><!-- wp:paragraph {"className":"has-text-align-center u-mb-0 u-mb-ctrl"} -->
+<p class="has-text-align-center u-mb-0 u-mb-ctrl"><span class="swl-inline-color has-swl-main-color"><strong><span style="font-size:16px" class="swl-fz"><strong><strong>＼ 必要だと感じたら今すぐ確認がお得 ／ </strong></strong></span></strong></span></p>
+<!-- /wp:paragraph -->
+<!-- wp:loos/button {"hrefUrl":"/plaud","isNewTab":true,"className":"is-style-btn_shiny"} -->
+<div class="swell-block-button is-style-btn_shiny"><a href="/plaud" target="_blank" rel="noopener noreferrer" class="swell-block-button__link"><span>＞＞ PLAUD NOTE公式サイトをチェックしてみる</span></a></div>
+<!-- /wp:loos/button --></div>
+<!-- /wp:group -->"""
+
+_CTA_NOTTA = """\
+<!-- wp:group {"className":"is-style-bg_stripe has-border -border02","layout":{"type":"constrained"}} -->
+<div class="wp-block-group is-style-bg_stripe has-border -border02"><!-- wp:paragraph {"className":"has-text-align-center u-mb-0 u-mb-ctrl"} -->
+<p class="has-text-align-center u-mb-0 u-mb-ctrl"><span class="swl-inline-color has-swl-main-color"><strong><span style="font-size:17px" class="swl-fz">＼ </span>今なら無料トライアル＆自動参加ボットがすぐ使える！<span style="font-size:17px" class="swl-fz">／</span></strong><br></span><span class="swl-fz u-fz-s">🎉 会議のムダをゼロに！AI議事録で生産性アップ 🎉</span></p>
+<!-- /wp:paragraph -->
+<!-- wp:loos/button {"hrefUrl":"/notta","isNewTab":true,"iconName":"LsChevronRight","color":"red","fontSize":"1.1em","btnSize":"l","className":"is-style-btn_shiny u-mb-ctrl u-mb-10"} -->
+<div class="swell-block-button red_ -size-l is-style-btn_shiny u-mb-ctrl u-mb-10" style="--the-fz:1.1em"><a href="/notta" target="_blank" rel="noopener noreferrer" class="swell-block-button__link" data-has-icon="1"><svg class="__icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 48 48"><path d="m33 25.1-13.1 13c-.8.8-2 .8-2.8 0-.8-.8-.8-2 0-2.8L28.4 24 17.1 12.7c-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0l13.1 13c.6.6.6 1.6 0 2.2z"></path></svg><span><strong>Notta（ノッタ）公式サイトをみる</strong></span></a></div>
+<!-- /wp:loos/button -->
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center"><span style="font-size:18px" class="swl-fz"><strong><span class="swl-bg-color has-swl-pale-04-background-color"><span class="swl-inline-color has-swl-deep-03-color">🎁 <strong>初回利用者限定：チーム全員で使える無料トライアル実施中！</strong><br></span></span></strong></span><span class="swl-bg-color has-swl-pale-04-background-color"><span class="swl-inline-color has-swl-main-color"><span class="swl-fz u-fz-s">AI要約・話者分離・自動参加のフル機能を今すぐ体験できま</span>す🏃‍♀️</span></span></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->"""
+
+_PLAUD_KEYWORDS = ("ボイスレコーダー", "録音", "icレコーダー", "ＩＣレコーダー", "plaud", "プラウド")
+_NOTTA_KEYWORDS = ("文字起こし", "議事録", "ボイスメモ", "要約", "会議", "notta", "ノッタ")
+
+
+def _select_cta(keyword: str) -> str | None:
+    """キーワードから挿入すべき CTA ブロックを返す。該当なしは None。"""
+    kw = keyword.lower()
+    is_plaud = any(k in kw for k in _PLAUD_KEYWORDS)
+    is_notta = any(k in kw for k in _NOTTA_KEYWORDS)
+    if is_plaud or (is_plaud and is_notta):
+        return _CTA_PLAUD
+    if is_notta:
+        return _CTA_NOTTA
+    return None
+
+
+def _inject_cta(content: str, keyword: str) -> str:
+    """まとめ H3 ブロックの直前に CTA を 1 回だけ挿入する。"""
+    cta = _select_cta(keyword)
+    if not cta:
+        return content
+
+    pattern = re.compile(
+        r'(<!-- wp:heading \{"level":3\} -->\s*<h3[^>]*>[^<]*まとめ[^<]*</h3>\s*<!-- /wp:heading -->)',
+        re.DOTALL,
+    )
+    m = pattern.search(content)
+    if not m:
+        print(f"[wordpress] CTA挿入: まとめH3が見つからないためスキップ")
+        return content
+
+    insert_pos = m.start()
+    cta_label = "PLAUD" if cta is _CTA_PLAUD else "Notta"
+    print(f"[wordpress] CTA挿入: {cta_label}用CTAをまとめH3直前に挿入")
+    return content[:insert_pos] + cta + "\n\n" + content[insert_pos:]
+
+
+# ─────────────────────────────────────────────
 # メディアアップロード
 # ─────────────────────────────────────────────
 
@@ -265,6 +329,10 @@ def post_article_with_image(article: dict, image_bytes: bytes | None = None) -> 
         if h2_image_data:
             article["content"] = _inject_h2_images(article["content"], h2_image_data)
             print(f"[wordpress] H2画像 {len(h2_image_data)}枚 をコンテンツに挿入しました")
+
+    # ③-2 CTA挿入（まとめH3直前）
+    keyword = article.get("keyword", article["title"])
+    article["content"] = _inject_cta(article["content"], keyword)
 
     # ④ 投稿
     result = create_post(article, featured_media_id=featured_media_id)
