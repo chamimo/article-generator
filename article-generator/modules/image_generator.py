@@ -91,7 +91,9 @@ def _call_flux(prompt: str, width: int, height: int) -> bytes:
 
         except Exception as e:
             err = str(e)
-            if "loading" in err.lower() or "503" in err:
+            if "402" in err:
+                raise RuntimeError(f"FLUX画像生成失敗（クレジット不足）: {e}") from e
+            elif "loading" in err.lower() or "503" in err:
                 wait = min(30, 10 * (attempt + 1))
                 print(f"[image_generator] モデル起動待機 ({wait}秒)...")
                 time.sleep(wait)

@@ -168,6 +168,7 @@ def create_post(article: dict, featured_media_id: int | None = None) -> dict:
         "meta": {
             "ssp_meta_title":        article.get("title", ""),
             "ssp_meta_description":  article.get("meta_description", ""),
+            "ssp_meta_ogimage_url":  article.get("eyecatch_url", ""),
             "_yoast_wpseo_metadesc": article.get("meta_description", ""),
             "rank_math_description": article.get("meta_description", ""),
             "imagefx_prompt":        article.get("imagefx_prompt", ""),
@@ -239,8 +240,10 @@ def post_article_with_image(article: dict, image_bytes: bytes | None = None) -> 
     featured_media_id = None
     if image_bytes:
         slug = re.sub(r"[^a-z0-9\-]", "", article.get("slug", "article").lower())
-        media_id, _ = upload_media(image_bytes, f"{slug or 'featured'}.jpg")
+        media_id, eyecatch_url = upload_media(image_bytes, f"{slug or 'featured'}.jpg")
         featured_media_id = media_id
+        if eyecatch_url:
+            article["eyecatch_url"] = eyecatch_url
 
     # ③ H2記事内画像を生成・挿入
     h2_matches = _extract_h2_blocks(article.get("content", ""))
