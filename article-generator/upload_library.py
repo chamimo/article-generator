@@ -93,9 +93,40 @@ def _image_to_base64(path: Path) -> tuple[str, str]:
     return data, media_type
 
 
+def _fallback_from_filename(path: Path) -> dict:
+    """Haiku 分析失敗時にファイル名からカテゴリーを推測するフォールバック。"""
+    name_lower = path.stem.lower()
+    for keywords, slug, tag_list in _CATEGORIES:
+        if any(k in name_lower for k in keywords):
+            return {
+                "category_slug":  slug,
+                "tags":           tag_list,
+                "alt_text":       "AIツール関連のイメージ画像",
+                "description":    slug,
+                "category_label": "フォールバック",
+            }
+    # ImageFX 由来ファイルはAI画像生成扱い
+    if "image_fx" in name_lower or "imagefx" in name_lower:
+        return {
+            "category_slug":  "ai-image",
+            "tags":           ["#AI画像生成", "#Midjourney"],
+            "alt_text":       "AI生成イメージ画像",
+            "description":    "ai-generated-image",
+            "category_label": "AI画像生成系（自動）",
+        }
+    return {
+        "category_slug":  _DEFAULT_CATEGORY[0],
+        "tags":           _DEFAULT_CATEGORY[1],
+        "alt_text":       "AIツール関連のイメージ画像",
+        "description":    "ai-tool",
+        "category_label": "その他AI系（自動）",
+    }
+
+
 def _analyze_image(path: Path) -> dict:
     """
     Claude Haiku で画像を分析し、カテゴリー・ALT・タグを返す。
+    Haiku 呼び出し失敗時はファイル名ベースのフォールバックを使用する。
 
     Returns:
         {
@@ -107,65 +138,65 @@ def _analyze_image(path: Path) -> dict:
     """
     img_data, media_type = _image_to_base64(path)
 
-    msg = _claude.messages.create(
-        model="claude-haiku-4-5-20251001",
-        max_tokens=300,
-        messages=[{
-            "role": "user",
-            "content": [
-                {
-                    "type": "image",
-                    "source": {
-                        "type": "base64",
-                        "media_type": media_type,
-                        "data": img_data,
-                    },
-                },
-                {
-                    "type": "text",
-                    "content": (
-                        "この画像を分析して以下のJSONのみ返してください（```json などのコードブロック記号は不要）:\n"
-                        '{"category":"AI・ChatGPT系"|"文字起こし・議事録系"|"AI画像生成系"|"AIスクール・学習系"|"動画生成・編集系"|"その他AI系",'
-                        '"alt_text":"画像の内容を日本語で30字以内で説明",'
-                        '"description":"3-5 words English noun phrase describing the image content"}'
-                    ),
-                },
-            ],
-        }],
-    )
-
-    raw = msg.content[0].text.strip()
-    if raw.startswith("```"):
-        lines = raw.split("\n")
-        raw = "\n".join(lines[1:-1] if lines[-1].strip() == "```" else lines[1:])
-
     try:
+        msg = _claude.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=300,
+            messages=[{
+                "role": "user",
+                "content": [
+                    {
+                        "type": "image",
+                        "source": {
+                            "type": "base64",
+                            "media_type": media_type,
+                            "data": img_data,
+                        },
+                    },
+                    {
+                        "type": "text",
+                        "content": (
+                            "この画像を分析して以下のJSONのみ返してください（```json などのコードブロック記号は不要）:\n"
+                            '{"category":"AI・ChatGPT系"|"文字起こし・議事録系"|"AI画像生成系"|"AIスクール・学習系"|"動画生成・編集系"|"その他AI系",'
+                            '"alt_text":"画像の内容を日本語で30字以内で説明",'
+                            '"description":"3-5 words English noun phrase describing the image content"}'
+                        ),
+                    },
+                ],
+            }],
+        )
+
+        raw = msg.content[0].text.strip()
+        if raw.startswith("```"):
+            lines = raw.split("\n")
+            raw = "\n".join(lines[1:-1] if lines[-1].strip() == "```" else lines[1:])
+
         result = json.loads(raw)
-    except Exception:
-        result = {}
+        category_label = result.get("category", "その他AI系")
+        alt_text       = result.get("alt_text", path.stem)
+        description    = result.get("description", path.stem)
 
-    category_label = result.get("category", "その他AI系")
-    alt_text       = result.get("alt_text", path.stem)
-    description    = result.get("description", path.stem)
+        # カテゴリーラベル → スラッグ・タグに変換
+        label_lower   = category_label.lower()
+        category_slug = _DEFAULT_CATEGORY[0]
+        tags          = _DEFAULT_CATEGORY[1]
+        for keywords, slug, tag_list in _CATEGORIES:
+            if any(k in label_lower for k in keywords):
+                category_slug = slug
+                tags = tag_list
+                break
 
-    # カテゴリーラベル → スラッグ・タグに変換
-    label_lower = category_label.lower()
-    category_slug = _DEFAULT_CATEGORY[0]
-    tags          = _DEFAULT_CATEGORY[1]
+        return {
+            "category_slug":  category_slug,
+            "tags":           tags,
+            "alt_text":       alt_text,
+            "description":    description,
+            "category_label": category_label,
+        }
 
-    for keywords, slug, tag_list in _CATEGORIES:
-        if any(k in label_lower for k in keywords):
-            category_slug = slug
-            tags = tag_list
-            break
-
-    return {
-        "category_slug": category_slug,
-        "tags":          tags,
-        "alt_text":      alt_text,
-        "description":   description,
-        "category_label": category_label,
-    }
+    except Exception as e:
+        print(f"  [WARN] Haiku分析失敗、ファイル名フォールバック使用: {e}")
+        return _fallback_from_filename(path)
 
 
 def _build_filename(category_slug: str, description: str, counter: int) -> str:
