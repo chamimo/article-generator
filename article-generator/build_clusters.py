@@ -14,6 +14,7 @@ from requests.auth import HTTPBasicAuth
 import anthropic
 from config import WP_URL, WP_USERNAME, WP_APP_PASSWORD, ANTHROPIC_API_KEY
 from modules.sheets_fetcher import get_aim_keywords
+from modules.sheets_updater import mark_cannibal_results_bulk
 
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "output")
 EXISTING_ARTICLES_PATH = os.path.join(OUTPUT_DIR, "existing_articles.json")
@@ -172,6 +173,11 @@ def main() -> None:
         note = c.get("note", "")[:40]
         print(f"{status} G{c['group_id']:02d}  {c['main_keyword']:<30}  {n_rel:>4}  {note}")
     print("─" * 60)
+
+    # ── スプレッドシートにカニバリ判定結果を一括書き込む ──
+    print("\n[STEP 3] スプレッドシートにカニバリ判定結果を書き込み中...")
+    mark_cannibal_results_bulk(clusters)
+    print("[STEP 3] 完了")
 
 
 if __name__ == "__main__":

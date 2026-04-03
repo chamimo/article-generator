@@ -25,7 +25,7 @@ _SCOPES = [
 ]
 
 # メインシートに追加する列ヘッダー
-_NEW_HEADERS = ["投稿ステータス", "投稿日", "記事URL", "投稿ID", "使用サブKW"]
+_NEW_HEADERS = ["投稿ステータス", "投稿日", "記事URL", "投稿ID", "使用サブKW", "メモ"]
 
 # 投稿記事一覧シートの列定義
 _LIST_HEADERS = [
@@ -121,9 +121,9 @@ def _ensure_headers(ws: gspread.Worksheet) -> dict[str, int]:
     return col_map
 
 
-def _highlight_row(ws: gspread.Worksheet, row: int) -> None:
-    """指定行全体の背景色を薄いグレーに変更する。"""
-    gray = 211 / 255
+def _highlight_row(ws: gspread.Worksheet, row: int,
+                   red: float = 211/255, green: float = 211/255, blue: float = 211/255) -> None:
+    """指定行全体の背景色を変更する。デフォルトは薄いグレー。"""
     body = {
         "requests": [{
             "repeatCell": {
@@ -134,7 +134,7 @@ def _highlight_row(ws: gspread.Worksheet, row: int) -> None:
                 },
                 "cell": {
                     "userEnteredFormat": {
-                        "backgroundColor": {"red": gray, "green": gray, "blue": gray}
+                        "backgroundColor": {"red": red, "green": green, "blue": blue}
                     }
                 },
                 "fields": "userEnteredFormat.backgroundColor",
@@ -142,6 +142,20 @@ def _highlight_row(ws: gspread.Worksheet, row: int) -> None:
         }]
     }
     ws.spreadsheet.batch_update(body)
+
+
+# 背景色プリセット
+def _highlight_gray(ws: gspread.Worksheet, row: int) -> None:
+    """薄いグレー（投稿済み）"""
+    _highlight_row(ws, row, 211/255, 211/255, 211/255)
+
+def _highlight_orange(ws: gspread.Worksheet, row: int) -> None:
+    """薄いオレンジ（カニバリスキップ）"""
+    _highlight_row(ws, row, 1.0, 0.8, 0.6)
+
+def _highlight_yellow(ws: gspread.Worksheet, row: int) -> None:
+    """薄いイエロー（生成待ち）"""
+    _highlight_row(ws, row, 1.0, 1.0, 0.6)
 
 
 def _find_keyword_row(ws: gspread.Worksheet, keyword: str) -> int | None:
@@ -190,6 +204,89 @@ def _append_to_article_list(
         print(f"[sheets_updater] 投稿記事一覧への追記エラー（続行）: {e}")
 
 
+def mark_cannibal_results_bulk(
+    clusters: list[dict],
+) -> None:
+    """
+    クラスター一覧を受け取り、スプレッドシートに一括書き込みする。
+    API呼び出しを最小化するため:
+      - ヘッダー取得 × 1回
+      - キーワード列（A列）読み込み × 1回
+      - セル書き込み × 1回（update_cells でバッチ）
+      - 背景色変更 × 1回（batch_update でまとめる）
+
+    clusters の各要素:
+      {"main_keyword": str, "related_keywords": [str, ...],
+       "skip": bool, "note": str}
+    """
+    import time
+
+    try:
+        ws = _get_worksheet()
+        col_map = _ensure_headers(ws)
+        col_a = ws.col_values(1)  # A列を一括取得
+
+        # keyword → row番号 のマップを構築
+        kw_to_row: dict[str, int] = {}
+        for i, cell in enumerate(col_a):
+            kw_to_row[cell.strip()] = i + 1
+
+        cell_updates: list[gspread.Cell] = []
+        color_requests: list[dict] = []
+
+        for c in clusters:
+            all_kws = [c["main_keyword"]] + c.get("related_keywords", [])
+            is_skip = c.get("skip", False)
+            note = c.get("note", "")
+
+            for kw in all_kws:
+                row = kw_to_row.get(kw.strip())
+                if row is None:
+                    continue
+
+                if is_skip:
+                    cell_updates.append(gspread.Cell(row, col_map["投稿ステータス"], "カニバリスキップ"))
+                    if "メモ" in col_map and note:
+                        cell_updates.append(gspread.Cell(row, col_map["メモ"], note))
+                    r, g, b = 1.0, 0.8, 0.6   # 薄いオレンジ
+                    label = "カニバリスキップ"
+                else:
+                    cell_updates.append(gspread.Cell(row, col_map["投稿ステータス"], "生成待ち"))
+                    r, g, b = 1.0, 1.0, 0.6   # 薄いイエロー
+                    label = "生成待ち"
+
+                color_requests.append({
+                    "repeatCell": {
+                        "range": {
+                            "sheetId": ws.id,
+                            "startRowIndex": row - 1,
+                            "endRowIndex": row,
+                        },
+                        "cell": {
+                            "userEnteredFormat": {
+                                "backgroundColor": {"red": r, "green": g, "blue": b}
+                            }
+                        },
+                        "fields": "userEnteredFormat.backgroundColor",
+                    }
+                })
+                print(f"[sheets_updater] {label}: 行{row} 「{kw}」")
+
+        # セル値を一括書き込み
+        if cell_updates:
+            ws.update_cells(cell_updates, value_input_option="USER_ENTERED")
+            time.sleep(1)
+
+        # 背景色を一括変更
+        if color_requests:
+            ws.spreadsheet.batch_update({"requests": color_requests})
+
+        print(f"[sheets_updater] 一括書き込み完了: {len(cell_updates)}セル / {len(color_requests)}行に背景色適用")
+
+    except Exception as e:
+        print(f"[sheets_updater] 一括書き込みエラー（続行）: {e}")
+
+
 def mark_posted(
     keyword: str,
     post_id: int,
@@ -232,7 +329,7 @@ def mark_posted(
             gspread.Cell(row, col_map["使用サブKW"],     sub_kw_str),
         ]
         ws.update_cells(updates, value_input_option="USER_ENTERED")
-        _highlight_row(ws, row)
+        _highlight_gray(ws, row)
 
         print(f"[sheets_updater] 書き込み完了: 行{row} 「{keyword}」→ 投稿済み ({date_str}, ID:{post_id}) [背景色適用]")
 
