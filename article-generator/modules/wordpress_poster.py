@@ -201,6 +201,23 @@ def _extract_h2_title(block_text: str) -> str:
     return re.sub(r'<[^>]+>', '', m.group(1)).strip()
 
 
+def _extract_h3_titles(content: str) -> list[str]:
+    """コンテンツ内の全 H3 見出しテキストをリストで返す。"""
+    titles = []
+    for m in re.finditer(r'<h3[^>]*>(.*?)</h3>', content, re.DOTALL):
+        text = re.sub(r'<[^>]+>', '', m.group(1)).strip()
+        if text:
+            titles.append(text)
+    return titles
+
+
+def _estimate_char_count(content: str) -> int:
+    """HTML タグを除いたテキストの文字数を返す（目安）。"""
+    text = re.sub(r'<!--.*?-->', '', content, flags=re.DOTALL)
+    text = re.sub(r'<[^>]+>', '', text)
+    return len(text.replace('\n', '').replace(' ', ''))
+
+
 def _build_wp_image_block(src_url: str, alt: str) -> str:
     """wp:image ブロック文字列を生成する。"""
     return (
@@ -447,10 +464,19 @@ def post_article_with_image(article: dict, image_bytes: bytes | None = None) -> 
 
     # ⑥ スプレッドシート書き込み
     if keyword:
+        sub_kws = _extract_h3_titles(article.get("content", ""))
+        char_count = _estimate_char_count(article.get("content", ""))
         mark_posted(
             keyword=keyword,
             post_id=result["id"],
             post_url=result.get("url", ""),
+            sub_keywords=sub_kws,
+            article_title=article.get("title", ""),
+            related_keywords=article.get("related_keywords", []),
+            category_name=article.get("category_name", ""),
+            tags=article.get("tags", []),
+            char_count=char_count,
+            eyecatch_url=article.get("eyecatch_url", ""),
         )
 
     return result
