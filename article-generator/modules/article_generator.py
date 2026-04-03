@@ -429,7 +429,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
         pass
 
     message = client.messages.create(
-        model="claude-opus-4-6",
+        model="claude-sonnet-4-6",
         max_tokens=16000,
         system=SYSTEM_PROMPT,
         messages=[{

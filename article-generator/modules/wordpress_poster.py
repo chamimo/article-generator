@@ -398,8 +398,10 @@ def post_article_with_image(article: dict, image_bytes: bytes | None = None) -> 
             article_title=article["title"],
         )
 
-    # ② アイキャッチ
+    # ② アイキャッチ（渡された image_bytes 優先 → なければライブラリ検索）
     featured_media_id = None
+    search_terms = _get_category_search_terms(keyword)
+
     if image_bytes:
         eyecatch_alt = f"{keyword}のイメージ画像"
         media_id, eyecatch_url = upload_media(
@@ -411,50 +413,55 @@ def post_article_with_image(article: dict, image_bytes: bytes | None = None) -> 
         featured_media_id = media_id
         if eyecatch_url:
             article["eyecatch_url"] = eyecatch_url
+    else:
+        # ライブラリからアイキャッチを選択
+        for term in search_terms:
+            candidates = _fetch_media_by_tag(term)
+            if candidates:
+                chosen = random.choice(candidates)
+                src_url = chosen.get("source_url", "")
+                media_id_str = chosen.get("id")
+                if src_url and media_id_str:
+                    featured_media_id = int(media_id_str)
+                    article["eyecatch_url"] = src_url
+                    print(f"[wordpress] アイキャッチ ライブラリ選択 (#{term}): {src_url.split('/')[-1]}")
+                    break
+        if not featured_media_id:
+            print("[wordpress] アイキャッチ: ライブラリ該当なし・スキップ")
 
-    # ③ H2記事内画像
+    # ③ H2記事内画像（全枚: ライブラリ優先 → FLUXフォールバック）
     h2_matches = _extract_h2_blocks(article.get("content", ""))
     if h2_matches:
         print(f"[wordpress] H2画像処理: {len(h2_matches)}枚")
         h2_image_data: list[tuple[str, str]] = []
-        search_terms = _get_category_search_terms(keyword)
 
         for i, match in enumerate(h2_matches, 1):
             h2_title = _extract_h2_title(match.group(0))
             img_alt = f"{h2_title}のイメージ画像" if h2_title else f"{keyword}のイメージ画像"
             filename = f"{slug}-{i:02d}.jpg"
+            src_url = ""
 
-            if i == 1:
-                # 1枚目: 必ずFLUXで生成
+            # ライブラリから検索（全枚共通）
+            for term in search_terms:
+                candidates = _fetch_media_by_tag(term)
+                if candidates:
+                    chosen = random.choice(candidates)
+                    src_url = chosen.get("source_url", "")
+                    if src_url:
+                        print(f"[wordpress] H2画像[{i}] ライブラリ選択 (#{term}): {src_url.split('/')[-1]}")
+                        break
+
+            # ライブラリになければFLUXフォールバック
+            if not src_url:
                 try:
                     img_bytes = generate_h2_image(h2_title, keyword)
                     _, src_url = upload_media(img_bytes, filename, alt_text=img_alt, title=img_alt)
-                    h2_image_data.append((img_alt, src_url))
-                    print(f"[wordpress] H2画像[{i}] FLUX生成: {h2_title[:30]}")
+                    print(f"[wordpress] H2画像[{i}] FLUX生成（ライブラリ該当なし）: {h2_title[:30]}")
                 except Exception as e:
                     print(f"[wordpress] H2画像[{i}] スキップ（続行）: {e}")
-            else:
-                # 2枚目以降: メディアライブラリから #タグ検索 → なければFLUX
-                src_url = ""
-                for term in search_terms:
-                    candidates = _fetch_media_by_tag(term)
-                    if candidates:
-                        chosen = random.choice(candidates)
-                        src_url = chosen.get("source_url", "")
-                        if src_url:
-                            print(f"[wordpress] H2画像[{i}] ライブラリ選択 (#{term}): {src_url.split('/')[-1]}")
-                            break
 
-                if not src_url:
-                    try:
-                        img_bytes = generate_h2_image(h2_title, keyword)
-                        _, src_url = upload_media(img_bytes, filename, alt_text=img_alt, title=img_alt)
-                        print(f"[wordpress] H2画像[{i}] FLUX生成（ライブラリ該当なし）: {h2_title[:30]}")
-                    except Exception as e:
-                        print(f"[wordpress] H2画像[{i}] スキップ（続行）: {e}")
-
-                if src_url:
-                    h2_image_data.append((img_alt, src_url))
+            if src_url:
+                h2_image_data.append((img_alt, src_url))
 
         if h2_image_data:
             article["content"] = _inject_h2_images(article["content"], h2_image_data)
