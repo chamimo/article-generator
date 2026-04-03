@@ -58,24 +58,40 @@ def _select_cta(keyword: str) -> str | None:
 
 
 def _inject_cta(content: str, keyword: str) -> str:
-    """まとめ H3 ブロックの直前に CTA を 1 回だけ挿入する。"""
+    """
+    PLAUD/Notta関連記事に CTA を最大2箇所挿入する。
+      1. 冒頭 pochipp ブロック（<!-- /wp:pochipp/linkbox -->）の直後
+      2. まとめ H3 ブロックの直前
+    どちらも同じ CTA を使用。非対象キーワードは何もしない。
+    """
     cta = _select_cta(keyword)
     if not cta:
         return content
 
-    pattern = re.compile(
-        r'(<!-- wp:heading \{"level":3\} -->\s*<h3[^>]*>[^<]*まとめ[^<]*</h3>\s*<!-- /wp:heading -->)',
+    cta_label = "PLAUD" if cta is _CTA_PLAUD else "Notta"
+
+    # ── 挿入箇所1: pochipp ブロック直後 ──
+    pochipp_end = re.search(r'<!-- /wp:pochipp/linkbox -->', content)
+    if pochipp_end:
+        pos = pochipp_end.end()
+        content = content[:pos] + "\n\n" + cta + content[pos:]
+        print(f"[wordpress] CTA挿入[1/2]: {cta_label}用CTAをpochipp直後に挿入")
+    else:
+        print(f"[wordpress] CTA挿入[1/2]: pochippブロックが見つからないためスキップ")
+
+    # ── 挿入箇所2: まとめ H3 直前 ──
+    matome_pat = re.compile(
+        r'<!-- wp:heading \{"level":3\} -->\s*<h3[^>]*>[^<]*まとめ[^<]*</h3>\s*<!-- /wp:heading -->',
         re.DOTALL,
     )
-    m = pattern.search(content)
-    if not m:
-        print(f"[wordpress] CTA挿入: まとめH3が見つからないためスキップ")
-        return content
+    m = matome_pat.search(content)
+    if m:
+        content = content[:m.start()] + cta + "\n\n" + content[m.start():]
+        print(f"[wordpress] CTA挿入[2/2]: {cta_label}用CTAをまとめH3直前に挿入")
+    else:
+        print(f"[wordpress] CTA挿入[2/2]: まとめH3が見つからないためスキップ")
 
-    insert_pos = m.start()
-    cta_label = "PLAUD" if cta is _CTA_PLAUD else "Notta"
-    print(f"[wordpress] CTA挿入: {cta_label}用CTAをまとめH3直前に挿入")
-    return content[:insert_pos] + cta + "\n\n" + content[insert_pos:]
+    return content
 
 
 # ─────────────────────────────────────────────
