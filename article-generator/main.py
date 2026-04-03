@@ -39,6 +39,62 @@ from config import MIN_SEARCH_VOLUME
 KEYWORD_CLUSTERS_PATH = os.path.join(os.path.dirname(__file__), "output", "keyword_clusters.json")
 
 
+def _detect_cluster_category(cluster: dict) -> str:
+    """
+    クラスターのメインキーワードからサブカテゴリーを推測する。
+    同じカテゴリーが連続しないよう並び替えに使用する。
+    """
+    kw = cluster.get("main_keyword", "").lower()
+    theme = cluster.get("article_theme", "").lower()
+    text = kw + " " + theme
+
+    if any(k in text for k in ["pro 充電", "pro 通話", "pro 議事録", "pro ヨドバシ", "pro デメリット", "pro セキュリティ", "pro cdt"]):
+        return "plaud_pro"
+    if any(k in text for k in ["plaud note", "plaud_note"]):
+        return "plaud_note"
+    if any(k in text for k in ["automemo", "brooke", "ヤマダ", "国産", "メーカー"]):
+        return "product_compare"
+    if any(k in text for k in ["腕時計", "ウェアラブル", "apple watch"]):
+        return "wearable"
+    if any(k in text for k in ["iphone", "アプリ", "スマホ"]):
+        return "smartphone_app"
+    if any(k in text for k in ["勘定科目", "経費", "仕訳", "減価償却"]):
+        return "business"
+    if any(k in text for k in ["クラウド", "連携", "web会議", "zoom", "teams"]):
+        return "cloud_web"
+    if any(k in text for k in ["安全", "セキュリティ", "情報漏洩"]):
+        return "security"
+    if any(k in text for k in ["自作", "diy", "作り方"]):
+        return "diy"
+    if any(k in text for k in ["って何", "とは", "仕組み", "初心者"]):
+        return "basics"
+    return "general"
+
+
+def _interleave_clusters(active: list[dict]) -> list[dict]:
+    """
+    カテゴリーが偏らないよう、異なるカテゴリーを交互に並び替える（ラウンドロビン）。
+    """
+    from collections import defaultdict
+    groups: dict[str, list[dict]] = defaultdict(list)
+    for c in active:
+        cat = _detect_cluster_category(c)
+        c["_category"] = cat
+        groups[cat].append(c)
+
+    # カテゴリー数の多い順に並べてラウンドロビン
+    sorted_groups = sorted(groups.values(), key=len, reverse=True)
+    interleaved: list[dict] = []
+    i = 0
+    while any(sorted_groups):
+        idx = i % len(sorted_groups)
+        if sorted_groups[idx]:
+            interleaved.append(sorted_groups[idx].pop(0))
+        i += 1
+
+    return interleaved
+
+
 def run_clusters_pipeline(
     clusters: list[dict],
     dry_run: bool = False,
@@ -47,12 +103,19 @@ def run_clusters_pipeline(
     """
     keyword_clusters.json のクラスターリストから記事を生成・投稿する。
     skip=True のグループは自動的にスキップ。
+    カテゴリーが偏らないようラウンドロビンで並び替えてから処理する。
     """
     results = []
     active = [c for c in clusters if not c.get("skip")]
     skipped = [c for c in clusters if c.get("skip")]
 
+    # カテゴリー分散：ラウンドロビンで並び替え
+    active = _interleave_clusters(active)
     print(f"[clusters] 対象: {len(active)}件 / スキップ: {len(skipped)}件")
+    cats = [c.get('_category','?') for c in active]
+    from collections import Counter
+    cat_count = Counter(cats)
+    print(f"[clusters] カテゴリー分布: {dict(cat_count)}")
 
     for i, cluster in enumerate(active, 1):
         main_kw = cluster["main_keyword"]
