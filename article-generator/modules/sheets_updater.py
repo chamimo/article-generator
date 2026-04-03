@@ -17,7 +17,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 from datetime import date
 
-from config import GOOGLE_SHEETS_ID, GOOGLE_CREDENTIALS_PATH
+from config import GOOGLE_SHEETS_ID, GOOGLE_CREDENTIALS_PATH, SHEETS_ARTICLE_LIST_NAME, SHEETS_LEGEND_NAME, SHEETS_MAIN_SHEET_NAME
 
 _SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -34,8 +34,8 @@ _LIST_HEADERS = [
     "文字数（目安）", "アイキャッチURL", "ステータス",
 ]
 
-_ARTICLE_LIST_SHEET_NAME = "投稿記事一覧"
-_LEGEND_SHEET_NAME = "凡例"
+_ARTICLE_LIST_SHEET_NAME = SHEETS_ARTICLE_LIST_NAME
+_LEGEND_SHEET_NAME = SHEETS_LEGEND_NAME
 
 _ws_cache: gspread.Worksheet | None = None
 _ss_cache: gspread.Spreadsheet | None = None
@@ -55,7 +55,11 @@ def _get_worksheet() -> gspread.Worksheet:
     global _ws_cache
     if _ws_cache is not None:
         return _ws_cache
-    _ws_cache = _get_spreadsheet().get_worksheet(0)
+    ss = _get_spreadsheet()
+    if SHEETS_MAIN_SHEET_NAME:
+        _ws_cache = ss.worksheet(SHEETS_MAIN_SHEET_NAME)
+    else:
+        _ws_cache = ss.get_worksheet(0)
     return _ws_cache
 
 

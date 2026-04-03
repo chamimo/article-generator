@@ -13,7 +13,7 @@ import requests
 from requests.auth import HTTPBasicAuth
 import anthropic
 from config import WP_URL, WP_USERNAME, WP_APP_PASSWORD, ANTHROPIC_API_KEY
-from modules.sheets_fetcher import get_aim_keywords
+from modules.sheets_fetcher import get_aim_keywords, get_excluded_keywords
 from modules.sheets_updater import mark_cannibal_results_bulk, setup_legend_sheet
 
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "output")
@@ -149,6 +149,17 @@ def main() -> None:
     aim_keywords = get_aim_keywords()
     if not aim_keywords:
         print("[ERROR] AIMキーワードが0件です。終了します。")
+        return
+
+    # 投稿済み・カニバリスキップ済みのキーワードを除外
+    excluded = get_excluded_keywords()
+    if excluded:
+        before = len(aim_keywords)
+        aim_keywords = [kw for kw in aim_keywords if kw["キーワード"] not in excluded]
+        print(f"[STEP 2] 除外後: {len(aim_keywords)}件（除外: {before - len(aim_keywords)}件）")
+
+    if not aim_keywords:
+        print("[STEP 2] 処理対象キーワードが0件です。終了します。")
         return
 
     print(f"[STEP 2] Claude APIでグループ化・カニバリ判定中（{len(aim_keywords)}件）...")

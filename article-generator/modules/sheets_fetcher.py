@@ -13,6 +13,7 @@ from config import (
     GOOGLE_CREDENTIALS_PATH,
     AIM_POSITIVE_VALUES,
     MIN_SEARCH_VOLUME,
+    SHEETS_MAIN_SHEET_NAME,
 )
 
 SCOPES = [
@@ -30,6 +31,17 @@ def _find_col_index(header_row: list[str], candidates: list[str]) -> int | None:
     return None
 
 
+def _open_main_worksheet(sheet_name: str | None = None, worksheet_index: int = 0) -> "gspread.Worksheet":
+    """config.SHEETS_MAIN_SHEET_NAME → 引数 sheet_name → インデックスの順で優先してシートを開く。"""
+    creds = Credentials.from_service_account_file(GOOGLE_CREDENTIALS_PATH, scopes=SCOPES)
+    gc = gspread.authorize(creds)
+    ss = gc.open_by_key(GOOGLE_SHEETS_ID)
+    name = sheet_name or SHEETS_MAIN_SHEET_NAME
+    if name:
+        return ss.worksheet(name)
+    return ss.get_worksheet(worksheet_index)
+
+
 def get_aim_keywords(sheet_name: str | None = None, worksheet_index: int = 0) -> list[dict]:
     """
     スプレッドシートからAIM判定あり かつ 検索ボリューム≥MIN_SEARCH_VOLUME のキーワードを返す。
@@ -37,11 +49,7 @@ def get_aim_keywords(sheet_name: str | None = None, worksheet_index: int = 0) ->
     Returns:
         [{"キーワード": "xxx", "検索ボリューム": 100}, ...]
     """
-    creds = Credentials.from_service_account_file(GOOGLE_CREDENTIALS_PATH, scopes=SCOPES)
-    gc = gspread.authorize(creds)
-    spreadsheet = gc.open_by_key(GOOGLE_SHEETS_ID)
-
-    ws = spreadsheet.worksheet(sheet_name) if sheet_name else spreadsheet.get_worksheet(worksheet_index)
+    ws = _open_main_worksheet(sheet_name, worksheet_index)
 
     # ヘッダー重複があるため get_all_values() で生データ取得
     all_values = ws.get_all_values()
@@ -101,6 +109,41 @@ def get_aim_keywords(sheet_name: str | None = None, worksheet_index: int = 0) ->
     return aim_keywords
 
 
+def get_excluded_keywords(sheet_name: str | None = None, worksheet_index: int = 0) -> set[str]:
+    """
+    「投稿ステータス」列が「投稿済み」または「カニバリスキップ」のキーワードをセットで返す。
+    build_clusters.py で処理対象から除外するために使用する。
+    """
+    ws = _open_main_worksheet(sheet_name, worksheet_index)
+    all_values = ws.get_all_values()
+    if not all_values:
+        return set()
+
+    header = all_values[0]
+    rows = all_values[1:]
+
+    kw_idx     = _find_col_index(header, ["キーワード", "Keyword", "keyword"])
+    status_idx = _find_col_index(header, ["投稿ステータス", "ステータス", "status"])
+    if kw_idx is None:
+        kw_idx = 2
+
+    _EXCLUDE_STATUSES = {"投稿済み", "カニバリスキップ"}
+    excluded: set[str] = set()
+
+    for row in rows:
+        def cell(idx: int) -> str:
+            return row[idx].strip() if idx is not None and idx < len(row) else ""
+
+        keyword = cell(kw_idx)
+        status  = cell(status_idx) if status_idx is not None else ""
+
+        if keyword and status in _EXCLUDE_STATUSES:
+            excluded.add(keyword)
+
+    print(f"[sheets_fetcher] 除外キーワード（投稿済み/カニバリスキップ）: {len(excluded)}件")
+    return excluded
+
+
 def get_non_aim_keywords(sheet_name: str | None = None, worksheet_index: int = 0) -> list[str]:
     """
     AIM列が空（未判定）のキーワードをサブキーワード候補として返す。
@@ -108,11 +151,7 @@ def get_non_aim_keywords(sheet_name: str | None = None, worksheet_index: int = 0
     Returns:
         ["キーワード1", "キーワード2", ...]  ※重複除去・最大300件
     """
-    creds = Credentials.from_service_account_file(GOOGLE_CREDENTIALS_PATH, scopes=SCOPES)
-    gc = gspread.authorize(creds)
-    spreadsheet = gc.open_by_key(GOOGLE_SHEETS_ID)
-
-    ws = spreadsheet.worksheet(sheet_name) if sheet_name else spreadsheet.get_worksheet(worksheet_index)
+    ws = _open_main_worksheet(sheet_name, worksheet_index)
     all_values = ws.get_all_values()
     if not all_values:
         return []

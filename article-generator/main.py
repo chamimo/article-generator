@@ -31,7 +31,7 @@ import time
 from modules.keyword_filter import load_and_filter
 from modules.sheets_fetcher import get_aim_keywords, get_non_aim_keywords
 from modules.article_generator import generate_article, generate_article_from_cluster
-from modules.cannibal_checker import check_cannibalization
+from modules.cannibal_checker import check_cannibalization, add_session_title
 from modules.wordpress_poster import post_article_with_image
 from modules.image_generator import generate_image_for_article
 from config import MIN_SEARCH_VOLUME
@@ -67,6 +67,7 @@ def run_clusters_pipeline(
 
         try:
             article = generate_article_from_cluster(cluster, sub_keywords=sub_keywords)
+            add_session_title(article.get("title", ""))
 
             if dry_run:
                 print(f"[dry-run] 投稿スキップ: 「{article['title']}」")
@@ -148,6 +149,8 @@ def run_pipeline(
 
             # --- Step 4: 記事生成 ---
             article = generate_article(keyword, volume, differentiation_note, sub_keywords=sub_keywords)
+            # 生成したタイトルをセッションキャッシュに登録（同一セッション内カニバリ防止）
+            add_session_title(article.get("title", ""))
 
             if dry_run:
                 print(f"[dry-run] 投稿スキップ: 「{article['title']}」")

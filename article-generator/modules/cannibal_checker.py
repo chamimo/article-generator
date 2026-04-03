@@ -12,6 +12,21 @@ client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 # 実行中に全記事タイトルをキャッシュ（何度もAPIを叩かないため）
 _all_titles_cache: list[str] | None = None
 
+# 同一セッション内で生成済み・生成予定の記事タイトルを追跡
+_session_titles: list[str] = []
+
+
+def add_session_title(title: str) -> None:
+    """生成した記事タイトルをセッションキャッシュに追加する。"""
+    if title and title not in _session_titles:
+        _session_titles.append(title)
+
+
+def clear_session_titles() -> None:
+    """セッションキャッシュをリセットする（テスト用）。"""
+    global _session_titles
+    _session_titles = []
+
 
 def _fetch_all_titles() -> list[str]:
     """WP REST API で全記事タイトルを取得してキャッシュする（最大1000件）。"""
@@ -61,29 +76,44 @@ def check_cannibalization(keyword: str) -> dict:
 
     # キーワードの主要語で事前フィルタ（Claude呼び出しを最小化）
     kw_terms = set(keyword.lower().split())
+
+    # WP既存記事 + セッション内生成済みタイトルをまとめて候補に
+    all_check_titles = all_titles + _session_titles
     candidates = [
-        t for t in all_titles
+        t for t in all_check_titles
         if any(term in t.lower() for term in kw_terms if len(term) >= 3)
     ]
+
+    # セッション内タイトルは常にチェック対象に含める（キーワードフィルタなし）
+    for st in _session_titles:
+        if st not in candidates:
+            candidates.append(st)
 
     if not candidates:
         print(f"[cannibal] 「{keyword}」→ ok（類似記事なし）")
         return {"status": "ok", "similar_titles": [], "differentiation_note": ""}
 
-    # 候補が多い場合は先頭15件に絞る
-    candidates = candidates[:15]
-    titles_text = "\n".join(f"- {t}" for t in candidates)
+    # 候補が多い場合は先頭20件に絞る（セッション内タイトルは末尾に付くので保持）
+    candidates = candidates[:20]
+    session_set = set(_session_titles)
+    titles_text = "\n".join(
+        f"- {t}{'（※今回セッション生成予定）' if t in session_set else ''}"
+        for t in candidates
+    )
 
-    prompt = f"""SEO専門家として判定してください。
+    prompt = f"""あなたはSEOカニバリゼーション判定の専門家です。厳格に判定してください。
 新規キーワード: 「{keyword}」
 
-既存記事タイトル（候補）:
+既存・生成予定の記事タイトル（候補）:
 {titles_text}
 
-以下の3択で判定してください：
-- ok: 既存記事と重複しない（別テーマ・別角度）
-- skip: 既存記事とほぼ同じ内容になる（スキップ推奨）
-- differentiate: 近いテーマだが切り口を変えれば書ける
+【判定基準（厳格版）】
+- skip: 主要キーワードが同じ、検索意図が同じ、内容の50%以上が重複する → スキップ
+- differentiate: 関連テーマだが読者層・切り口・深度が異なれば書ける → 差別化
+- ok: テーマが明確に異なる、または検索意図が完全に別 → 問題なし
+
+「似ているかも」程度なら differentiate にしてください。
+「ほぼ同一コンテンツになる」場合のみ skip にしてください。
 
 JSONのみ返してください（説明不要）:
 {{"status":"ok"|"skip"|"differentiate","similar_titles":["類似タイトル..."],"differentiation_note":"差別化案（differentiateのみ）"}}"""

@@ -39,3 +39,11 @@ SHEETS_AIM_COL = "AIM判定"
 SHEETS_VOLUME_COL = "検索ボリューム"
 # Values that count as AIM-positive in the AIM判定 column
 AIM_POSITIVE_VALUES = {"○", "◯", "AIM", "aim", "あり", "YES", "yes", "true", "True", "1"}
+
+# Google Sheets sheet names
+# メインシート（空文字の場合はインデックス0を使用）
+SHEETS_MAIN_SHEET_NAME: str = os.getenv("SHEETS_MAIN_SHEET_NAME", "")
+# 投稿記事一覧シート名
+SHEETS_ARTICLE_LIST_NAME: str = os.getenv("SHEETS_ARTICLE_LIST_NAME", "投稿記事一覧")
+# 凡例シート名
+SHEETS_LEGEND_NAME: str = os.getenv("SHEETS_LEGEND_NAME", "凡例")
