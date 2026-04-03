@@ -133,27 +133,34 @@ def _build_eyecatch_prompt(keyword: str, article_theme: str) -> str:
     """
     キーワード・記事テーマから人物なしのアイキャッチ用FLUXプロンプトをClaude Haikuで生成する。
     フラットイラスト・モダンデザイン風、テキストなし。
+    Haiku呼び出し失敗時はキーワードから直接フォールバックプロンプトを生成する。
     """
     topic = article_theme or keyword
-    msg = _claude.messages.create(
-        model="claude-haiku-4-5-20251001",
-        max_tokens=120,
-        messages=[{
-            "role": "user",
-            "content": (
-                f"Create a short English image prompt (20-30 words) for a blog header illustration "
-                f"about: '{topic}'. "
-                "Style: flat illustration, modern tech design, vibrant colors, wide horizontal format. "
-                "Focus on visual objects/icons representing the topic (no people, no text, no watermark). "
-                "Examples: "
-                "'smartphone with colorful sound wave icons and AI nodes, flat illustration, blue and white color palette' "
-                "'microphone with flowing text lines and digital circuit patterns, modern flat design, teal and purple' "
-                "Output the prompt only."
-            ),
-        }],
-    )
-    raw = msg.content[0].text.strip().splitlines()[0]
-    return re.sub(r'[#*`"\']+', '', raw).strip()
+    try:
+        msg = _claude.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=120,
+            messages=[{
+                "role": "user",
+                "content": (
+                    f"Create a short English image prompt (20-30 words) for a blog header illustration "
+                    f"about: '{topic}'. "
+                    "Style: flat illustration, modern tech design, vibrant colors, wide horizontal format. "
+                    "Focus on visual objects/icons representing the topic (no people, no text, no watermark). "
+                    "Examples: "
+                    "'smartphone with colorful sound wave icons and AI nodes, flat illustration, blue and white color palette' "
+                    "'microphone with flowing text lines and digital circuit patterns, modern flat design, teal and purple' "
+                    "Output the prompt only."
+                ),
+            }],
+        )
+        raw = msg.content[0].text.strip().splitlines()[0]
+        return re.sub(r'[#*`"\']+', '', raw).strip()
+    except Exception as e:
+        print(f"[image_generator] Haikuプロンプト生成失敗、フォールバック使用: {e}")
+        # キーワードをそのまま英語プロンプトに変換して返す
+        safe_topic = re.sub(r'[^\w\s]', ' ', topic).strip()
+        return f"{safe_topic} concept icons, flat illustration style, modern tech design, blue and teal color palette"
 
 
 def generate_eyecatch_image(keyword: str, article_theme: str = "") -> bytes:
@@ -179,24 +186,31 @@ def _build_h2_image_prompt(h2_title: str, keyword: str) -> str:
     """
     H2タイトル・キーワードから記事テーマに合ったFLUXプロンプトをClaude Haikuで生成する。
     フラットイラスト・モダンデザイン風、人物なし・テキストなし。
+    Haiku呼び出し失敗時はフォールバックプロンプトを使用する。
     """
-    msg = _claude.messages.create(
-        model="claude-haiku-4-5-20251001",
-        max_tokens=120,
-        messages=[{
-            "role": "user",
-            "content": (
-                f"Create a short English image prompt (20-30 words) for a blog illustration "
-                f"about: keyword='{keyword}', section='{h2_title}'. "
-                "Style: flat illustration, modern design, vibrant colors, no people, no text, no watermark. "
-                "Focus on visual objects/icons that represent the topic. "
-                "Examples: 'smartphone with sound wave icons and microphone, flat illustration style, modern tech design, blue and white color palette' "
-                "Output the prompt only."
-            ),
-        }],
-    )
-    raw = msg.content[0].text.strip().splitlines()[0]
-    return re.sub(r'[#*`"\']+', '', raw).strip()
+    try:
+        msg = _claude.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=120,
+            messages=[{
+                "role": "user",
+                "content": (
+                    f"Create a short English image prompt (20-30 words) for a blog illustration "
+                    f"about: keyword='{keyword}', section='{h2_title}'. "
+                    "Style: flat illustration, modern design, vibrant colors, no people, no text, no watermark. "
+                    "Focus on visual objects/icons that represent the topic. "
+                    "Examples: 'smartphone with sound wave icons and microphone, flat illustration style, modern tech design, blue and white color palette' "
+                    "Output the prompt only."
+                ),
+            }],
+        )
+        raw = msg.content[0].text.strip().splitlines()[0]
+        return re.sub(r'[#*`"\']+', '', raw).strip()
+    except Exception as e:
+        print(f"[image_generator] H2プロンプト生成失敗、フォールバック使用: {e}")
+        topic = h2_title or keyword
+        safe_topic = re.sub(r'[^\w\s]', ' ', topic).strip()
+        return f"{safe_topic} concept icons, flat illustration style, modern design, vibrant colors"
 
 
 def generate_h2_image(h2_title: str, keyword: str = "") -> bytes:

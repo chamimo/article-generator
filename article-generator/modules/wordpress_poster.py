@@ -20,17 +20,20 @@ def _auth() -> HTTPBasicAuth:
 
 _CTA_PLAUD = """\
 <!-- wp:group {"metadata":{"categories":["call-to-action"],"patternName":"core/block/7009","name":"【テンプレート】マイクロコピーmc"},"className":"has-border -border02 is-style-bg_stripe","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-border -border02 is-style-bg_stripe"><!-- wp:paragraph {"className":"has-text-align-center u-mb-0 u-mb-ctrl"} -->
+<div class="wp-block-group has-border -border02 is-style-bg_stripe">
+<!-- wp:paragraph {"className":"has-text-align-center u-mb-0 u-mb-ctrl"} -->
 <p class="has-text-align-center u-mb-0 u-mb-ctrl"><span class="swl-inline-color has-swl-main-color"><strong><span style="font-size:16px" class="swl-fz"><strong><strong>＼ 必要だと感じたら今すぐ確認がお得 ／ </strong></strong></span></strong></span></p>
 <!-- /wp:paragraph -->
 <!-- wp:loos/button {"hrefUrl":"/plaud","isNewTab":true,"className":"is-style-btn_shiny"} -->
 <div class="swell-block-button is-style-btn_shiny"><a href="/plaud" target="_blank" rel="noopener noreferrer" class="swell-block-button__link"><span>＞＞ PLAUD NOTE公式サイトをチェックしてみる</span></a></div>
-<!-- /wp:loos/button --></div>
+<!-- /wp:loos/button -->
+</div>
 <!-- /wp:group -->"""
 
 _CTA_NOTTA = """\
 <!-- wp:group {"className":"is-style-bg_stripe has-border -border02","layout":{"type":"constrained"}} -->
-<div class="wp-block-group is-style-bg_stripe has-border -border02"><!-- wp:paragraph {"className":"has-text-align-center u-mb-0 u-mb-ctrl"} -->
+<div class="wp-block-group is-style-bg_stripe has-border -border02">
+<!-- wp:paragraph {"className":"has-text-align-center u-mb-0 u-mb-ctrl"} -->
 <p class="has-text-align-center u-mb-0 u-mb-ctrl"><span class="swl-inline-color has-swl-main-color"><strong><span style="font-size:17px" class="swl-fz">＼ </span>今なら無料トライアル＆自動参加ボットがすぐ使える！<span style="font-size:17px" class="swl-fz">／</span></strong><br></span><span class="swl-fz u-fz-s">🎉 会議のムダをゼロに！AI議事録で生産性アップ 🎉</span></p>
 <!-- /wp:paragraph -->
 <!-- wp:loos/button {"hrefUrl":"/notta","isNewTab":true,"iconName":"LsChevronRight","color":"red","fontSize":"1.1em","btnSize":"l","className":"is-style-btn_shiny u-mb-ctrl u-mb-10"} -->
@@ -38,7 +41,8 @@ _CTA_NOTTA = """\
 <!-- /wp:loos/button -->
 <!-- wp:paragraph {"align":"center"} -->
 <p class="has-text-align-center"><span style="font-size:18px" class="swl-fz"><strong><span class="swl-bg-color has-swl-pale-04-background-color"><span class="swl-inline-color has-swl-deep-03-color">🎁 <strong>初回利用者限定：チーム全員で使える無料トライアル実施中！</strong><br></span></span></strong></span><span class="swl-bg-color has-swl-pale-04-background-color"><span class="swl-inline-color has-swl-main-color"><span class="swl-fz u-fz-s">AI要約・話者分離・自動参加のフル機能を今すぐ体験できま</span>す🏃‍♀️</span></span></p>
-<!-- /wp:paragraph --></div>
+<!-- /wp:paragraph -->
+</div>
 <!-- /wp:group -->"""
 
 _PLAUD_KEYWORDS = ("ボイスレコーダー", "録音", "icレコーダー", "ＩＣレコーダー", "plaud", "プラウド")
