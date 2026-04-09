@@ -5,7 +5,8 @@ import random
 import re
 import requests
 from requests.auth import HTTPBasicAuth
-from config import WP_URL, WP_USERNAME, WP_APP_PASSWORD, WP_CATEGORY_ID, WP_STATUS
+from config import WP_URL, WP_USERNAME, WP_APP_PASSWORD, WP_CATEGORY_ID, WP_STATUS, CTA_CONFIG
+from modules.keyword_utils import detect_parent_keyword
 from modules.category_selector import select_category
 from modules.sheets_updater import mark_posted
 
@@ -16,84 +17,88 @@ def _auth() -> HTTPBasicAuth:
 
 # ─────────────────────────────────────────────
 # CTA挿入
+# CTA設定は config.py の CTA_CONFIG で一元管理。
+# 新しい案件の追加は config.py のみ編集すればよい。
 # ─────────────────────────────────────────────
 
-_CTA_PLAUD = """\
-<!-- wp:group {"metadata":{"categories":["call-to-action"],"patternName":"core/block/7009","name":"【テンプレート】マイクロコピーmc"},"className":"has-border -border02 is-style-bg_stripe","layout":{"type":"constrained"}} -->
-<div class="wp-block-group has-border -border02 is-style-bg_stripe">
-<!-- wp:paragraph {"className":"has-text-align-center u-mb-0 u-mb-ctrl"} -->
-<p class="has-text-align-center u-mb-0 u-mb-ctrl"><span class="swl-inline-color has-swl-main-color"><strong><span style="font-size:16px" class="swl-fz"><strong><strong>＼ 必要だと感じたら今すぐ確認がお得 ／ </strong></strong></span></strong></span></p>
-<!-- /wp:paragraph -->
-<!-- wp:loos/button {"hrefUrl":"/plaud","isNewTab":true,"className":"is-style-btn_shiny"} -->
-<div class="swell-block-button is-style-btn_shiny"><a href="/plaud" target="_blank" rel="noopener noreferrer" class="swell-block-button__link"><span>＞＞ PLAUD NOTE公式サイトをチェックしてみる</span></a></div>
-<!-- /wp:loos/button -->
-</div>
-<!-- /wp:group -->"""
-
-_CTA_NOTTA = """\
-<!-- wp:group {"className":"is-style-bg_stripe has-border -border02","layout":{"type":"constrained"}} -->
-<div class="wp-block-group is-style-bg_stripe has-border -border02">
-<!-- wp:paragraph {"className":"has-text-align-center u-mb-0 u-mb-ctrl"} -->
-<p class="has-text-align-center u-mb-0 u-mb-ctrl"><span class="swl-inline-color has-swl-main-color"><strong><span style="font-size:17px" class="swl-fz">＼ </span>今なら無料トライアル＆自動参加ボットがすぐ使える！<span style="font-size:17px" class="swl-fz">／</span></strong><br></span><span class="swl-fz u-fz-s">🎉 会議のムダをゼロに！AI議事録で生産性アップ 🎉</span></p>
-<!-- /wp:paragraph -->
-<!-- wp:loos/button {"hrefUrl":"/notta","isNewTab":true,"iconName":"LsChevronRight","color":"red","fontSize":"1.1em","btnSize":"l","className":"is-style-btn_shiny u-mb-ctrl u-mb-10"} -->
-<div class="swell-block-button red_ -size-l is-style-btn_shiny u-mb-ctrl u-mb-10" style="--the-fz:1.1em"><a href="/notta" target="_blank" rel="noopener noreferrer" class="swell-block-button__link" data-has-icon="1"><svg class="__icon" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 48 48"><path d="m33 25.1-13.1 13c-.8.8-2 .8-2.8 0-.8-.8-.8-2 0-2.8L28.4 24 17.1 12.7c-.8-.8-.8-2 0-2.8.8-.8 2-.8 2.8 0l13.1 13c.6.6.6 1.6 0 2.2z"></path></svg><span><strong>Notta（ノッタ）公式サイトをみる</strong></span></a></div>
-<!-- /wp:loos/button -->
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center"><span style="font-size:18px" class="swl-fz"><strong><span class="swl-bg-color has-swl-pale-04-background-color"><span class="swl-inline-color has-swl-deep-03-color">🎁 <strong>初回利用者限定：チーム全員で使える無料トライアル実施中！</strong><br></span></span></strong></span><span class="swl-bg-color has-swl-pale-04-background-color"><span class="swl-inline-color has-swl-main-color"><span class="swl-fz u-fz-s">AI要約・話者分離・自動参加のフル機能を今すぐ体験できま</span>す🏃‍♀️</span></span></p>
-<!-- /wp:paragraph -->
-</div>
-<!-- /wp:group -->"""
-
+# メディアライブラリ検索・カテゴリ判定用（CTA設定とは独立して管理）
 _PLAUD_KEYWORDS = ("ボイスレコーダー", "録音", "icレコーダー", "ＩＣレコーダー", "plaud", "プラウド")
 _NOTTA_KEYWORDS = ("文字起こし", "議事録", "ボイスメモ", "要約", "会議", "notta", "ノッタ")
 
 
-def _select_cta(keyword: str) -> str | None:
-    """キーワードから挿入すべき CTA ブロックを返す。該当なしは None。"""
+def _select_cta_entry(keyword: str) -> dict | None:
+    """
+    CTA_CONFIG からキーワードにマッチする最初のエントリを返す。
+    マッチしない場合は None。
+    """
     kw = keyword.lower()
-    is_plaud = any(k in kw for k in _PLAUD_KEYWORDS)
-    is_notta = any(k in kw for k in _NOTTA_KEYWORDS)
-    if is_plaud or (is_plaud and is_notta):
-        return _CTA_PLAUD
-    if is_notta:
-        return _CTA_NOTTA
+    for entry in CTA_CONFIG:
+        if any(k in kw for k in entry.get("keywords", [])):
+            return entry
     return None
 
 
 def _inject_cta(content: str, keyword: str) -> str:
     """
-    PLAUD/Notta関連記事に CTA を最大2箇所挿入する。
-      1. 冒頭 pochipp ブロック（<!-- /wp:pochipp/linkbox -->）の直後
-      2. まとめ H3 ブロックの直前
-    どちらも同じ CTA を使用。非対象キーワードは何もしない。
+    CTA_CONFIG の設定に基づき、記事コンテンツに CTA ブロックを挿入する。
+
+    挿入位置（config.py の positions リストで指定）:
+      "top"    → 「この記事のポイント」cap-block の直後
+      "middle" → H2[2] と H2[3] の間（2番目のH2ブロック直後）
+      "bottom" → 「まとめ」H3 の直前
+
+    全挿入点を先に収集してから後ろ→前の順で挿入し、オフセットずれを防ぐ。
     """
-    cta = _select_cta(keyword)
-    if not cta:
+    entry = _select_cta_entry(keyword)
+    if not entry:
         return content
 
-    cta_label = "PLAUD" if cta is _CTA_PLAUD else "Notta"
+    cta   = entry["block"]
+    name  = entry.get("name", "")
+    positions = entry.get("positions", ["top", "bottom"])
 
-    # ── 挿入箇所1: 「この記事のポイント」cap-block 直後 ──
-    capblock_end = re.search(r'<!-- /wp:loos/cap-block -->', content)
-    if capblock_end:
-        pos = capblock_end.end()
-        content = content[:pos] + "\n\n" + cta + content[pos:]
-        print(f"[wordpress] CTA挿入[1/2]: {cta_label}用CTAをこの記事のポイント直後に挿入")
-    else:
-        print(f"[wordpress] CTA挿入[1/2]: cap-blockが見つからないためスキップ")
+    # ── 挿入点を収集（元コンテンツに対して検索）──
+    # (offset, insert_before: bool, label)
+    #   insert_before=True  → content[:offset] + cta + "\n\n" + content[offset:]
+    #   insert_before=False → content[:offset] + "\n\n" + cta + content[offset:]
+    insertion_points: list[tuple[int, bool, str]] = []
 
-    # ── 挿入箇所2: まとめ H3 直前 ──
-    matome_pat = re.compile(
-        r'<!-- wp:heading \{"level":3\} -->\s*<h3[^>]*>[^<]*まとめ[^<]*</h3>\s*<!-- /wp:heading -->',
-        re.DOTALL,
-    )
-    m = matome_pat.search(content)
-    if m:
-        content = content[:m.start()] + cta + "\n\n" + content[m.start():]
-        print(f"[wordpress] CTA挿入[2/2]: {cta_label}用CTAをまとめH3直前に挿入")
-    else:
-        print(f"[wordpress] CTA挿入[2/2]: まとめH3が見つからないためスキップ")
+    if "bottom" in positions:
+        matome_pat = re.compile(
+            r'<!-- wp:heading \{"level":3\} -->\s*<h3[^>]*>[^<]*まとめ[^<]*</h3>\s*<!-- /wp:heading -->',
+            re.DOTALL,
+        )
+        m = matome_pat.search(content)
+        if m:
+            insertion_points.append((m.start(), True, "bottom"))
+        else:
+            print(f"[wordpress] CTA[bottom] スキップ: まとめH3が見つからない ({name})")
+
+    if "middle" in positions:
+        h2_matches = _extract_h2_blocks(content)
+        if len(h2_matches) >= 3:
+            insertion_points.append((h2_matches[1].end(), False, "middle"))
+        else:
+            print(f"[wordpress] CTA[middle] スキップ: H2が{len(h2_matches)}個（3個必要）({name})")
+
+    if "top" in positions:
+        capblock_m = re.search(r'<!-- /wp:loos/cap-block -->', content)
+        if capblock_m:
+            insertion_points.append((capblock_m.end(), False, "top"))
+        else:
+            print(f"[wordpress] CTA[top] スキップ: cap-blockが見つからない ({name})")
+
+    if not insertion_points:
+        return content
+
+    # ── オフセット降順（後ろ→前）で挿入 ──
+    insertion_points.sort(key=lambda x: x[0], reverse=True)
+    for offset, insert_before, label in insertion_points:
+        if insert_before:
+            content = content[:offset] + cta + "\n\n" + content[offset:]
+        else:
+            content = content[:offset] + "\n\n" + cta + content[offset:]
+        print(f"[wordpress] CTA挿入[{label}]: {name}")
 
     return content
 
@@ -108,10 +113,11 @@ def upload_media(
     mime_type: str = "image/jpeg",
     alt_text: str = "",
     title: str = "",
+    caption: str = "",
 ) -> tuple[int, str]:
     """
     WordPress メディアライブラリに画像をアップロードする。
-    alt_text / title を指定すると PATCH で自動設定する。
+    alt_text / title / caption を指定すると PATCH で自動設定する。
 
     Returns:
         (media_id, source_url)
@@ -130,12 +136,14 @@ def upload_media(
     data = resp.json()
     media_id = data["id"]
 
-    if alt_text or title:
+    if alt_text or title or caption:
         patch: dict = {}
         if alt_text:
             patch["alt_text"] = alt_text
         if title:
             patch["title"] = title
+        if caption:
+            patch["caption"] = caption
         requests.post(
             f"{WP_URL}/wp-json/wp/v2/media/{media_id}",
             auth=_auth(),
@@ -145,6 +153,20 @@ def upload_media(
 
     print(f"[wordpress] メディアアップロード完了 (ID: {media_id})")
     return media_id, data.get("source_url", "")
+
+
+def _get_eyecatch_caption_tags(keyword: str) -> str:
+    """
+    キーワードから親グループ名を動的に検出し、
+    WPキャプションに書き込む「#タグ」文字列を返す。
+
+    detect_parent_keyword() で検出した親グループ名をそのままタグとして使用する。
+    例: "文字起こしツール 比較" → "#文字起こしツール"
+        "photodirector 使い方" → "#photodirector"
+        "aiボイスレコーダー アプリ" → "#aiボイスレコーダー"
+    """
+    parent = detect_parent_keyword(keyword)
+    return f"#{parent}"
 
 
 def _get_category_search_terms(keyword: str) -> list[str]:
@@ -404,12 +426,15 @@ def post_article_with_image(article: dict, image_bytes: bytes | None = None) -> 
 
     if image_bytes:
         eyecatch_alt = f"{keyword}のイメージ画像"
+        eyecatch_caption = _get_eyecatch_caption_tags(keyword)
         media_id, eyecatch_url = upload_media(
             image_bytes,
             f"{slug}-eyecatch.jpg",
             alt_text=eyecatch_alt,
             title=eyecatch_alt,
+            caption=eyecatch_caption,
         )
+        print(f"[wordpress] アイキャッチ キャプションタグ付与: {eyecatch_caption}")
         featured_media_id = media_id
         if eyecatch_url:
             article["eyecatch_url"] = eyecatch_url
@@ -440,6 +465,7 @@ def post_article_with_image(article: dict, image_bytes: bytes | None = None) -> 
             img_alt = f"{h2_title}のイメージ画像" if h2_title else f"{keyword}のイメージ画像"
             filename = f"{slug}-{i:02d}.jpg"
             src_url = ""
+            chosen_id = None
 
             # ライブラリから検索（全枚共通）
             for term in search_terms:
@@ -448,8 +474,22 @@ def post_article_with_image(article: dict, image_bytes: bytes | None = None) -> 
                     chosen = random.choice(candidates)
                     src_url = chosen.get("source_url", "")
                     if src_url:
+                        chosen_id = chosen.get("id")
                         print(f"[wordpress] H2画像[{i}] ライブラリ選択 (#{term}): {src_url.split('/')[-1]}")
                         break
+
+            # ライブラリ画像のALTを使用するたびに上書き（同一画像が複数記事で使われるため）
+            if chosen_id:
+                try:
+                    requests.post(
+                        f"{WP_URL}/wp-json/wp/v2/media/{chosen_id}",
+                        auth=_auth(),
+                        json={"alt_text": img_alt},
+                        timeout=10,
+                    )
+                    print(f"[wordpress] H2画像[{i}] ライブラリALT更新: {img_alt}")
+                except Exception as alt_err:
+                    print(f"[wordpress] H2画像[{i}] ALT更新失敗（続行）: {alt_err}")
 
             # ライブラリになければFLUXフォールバック
             if not src_url:
@@ -467,13 +507,34 @@ def post_article_with_image(article: dict, image_bytes: bytes | None = None) -> 
             article["content"] = _inject_h2_images(article["content"], h2_image_data)
             print(f"[wordpress] H2画像 {len(h2_image_data)}枚 をコンテンツに挿入しました")
 
-    # ④ CTA挿入（まとめH3直前）
+    # ④ 内部リンク挿入（H3セクション末尾に分散）
+    try:
+        from modules.internal_linker import (
+            get_published_articles, select_related_articles, inject_internal_links
+        )
+        published = get_published_articles()
+        if published:
+            related = select_related_articles(
+                keyword=keyword,
+                article_title=article.get("title", ""),
+                published_articles=published,
+            )
+            if related:
+                article["content"] = inject_internal_links(article["content"], related)
+                titles = [a["title"][:30] for a in related]
+                print(f"[internal_linker] 内部リンク {len(related)}件 挿入: {titles}")
+            else:
+                print("[internal_linker] 関連記事なし・内部リンクなし")
+    except Exception as _il_err:
+        print(f"[internal_linker] スキップ（続行）: {_il_err}")
+
+    # ⑤ CTA挿入（まとめH3直前）
     article["content"] = _inject_cta(article["content"], keyword)
 
-    # ⑤ 投稿
+    # ⑥ 投稿
     result = create_post(article, featured_media_id=featured_media_id)
 
-    # ⑥ スプレッドシート書き込み
+    # ⑦ スプレッドシート書き込み
     if keyword:
         sub_kws = _extract_h3_titles(article.get("content", ""))
         char_count = _estimate_char_count(article.get("content", ""))
@@ -489,5 +550,6 @@ def post_article_with_image(article: dict, image_bytes: bytes | None = None) -> 
             char_count=char_count,
             eyecatch_url=article.get("eyecatch_url", ""),
         )
+
 
     return result

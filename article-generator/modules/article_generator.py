@@ -5,6 +5,7 @@ import json
 import anthropic
 from config import ANTHROPIC_API_KEY
 from modules.image_generator import generate_imagefx_prompt
+from modules.fact_checker import needs_fact_check, check_facts
 
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
@@ -340,7 +341,7 @@ USER_PROMPT_TEMPLATE = """\
 
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{plaud_notta_section}
+{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{plaud_notta_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
@@ -362,7 +363,8 @@ USER_PROMPT_TEMPLATE = """\
 def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    related_keywords: list[str] | None = None,
                    article_theme: str = "",
-                   sub_keywords: list[str] | None = None) -> dict:
+                   sub_keywords: list[str] | None = None,
+                   enable_fact_check: bool = True) -> dict:
     """
     記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
     """
@@ -370,6 +372,24 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     print(f"[article_generator] 記事構成生成中: 「{keyword}」(vol:{volume})"
           + (" ※差別化モード" if differentiation_note else "")
           + (" ※PLAUD/Notta優先" if use_plaud_notta else ""))
+
+    # ── 事実確認ステップ（製品・企業情報を含む記事のみ）──
+    fact_check_section = ""
+    if enable_fact_check and needs_fact_check(keyword):
+        print(f"[article_generator] 事実確認中: 「{keyword}」")
+        fc = check_facts(keyword, article_theme)
+        if fc["verified"] or fc["uncertain"] or fc["warnings"]:
+            fact_check_section = fc["prompt_block"] + "\n"
+            verified_count  = len(fc["verified"])
+            uncertain_count = len(fc["uncertain"])
+            warnings_count  = len(fc["warnings"])
+            print(f"[article_generator] 事実確認完了: "
+                  f"確認済み{verified_count}件 / 不確か{uncertain_count}件 / 注意{warnings_count}件")
+            if fc["warnings"]:
+                for w in fc["warnings"]:
+                    print(f"  ⚠️  {w}")
+        else:
+            print("[article_generator] 事実確認: 確認情報なし（スキップ）")
 
     diff_section = f"差別化の方針: {differentiation_note}\n" if differentiation_note else ""
     plaud_notta_section = _PLAUD_NOTTA_INSTRUCTION if use_plaud_notta else ""
@@ -443,6 +463,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                 keyword_research_section=keyword_research_section,
                 sub_keywords_section=sub_keywords_section,
                 differentiation_section=diff_section,
+                fact_check_section=fact_check_section,
                 plaud_notta_section=plaud_notta_section,
             ),
         }],
@@ -495,7 +516,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
 
 
 def generate_article(keyword: str, volume: int, differentiation_note: str = "",
-                     sub_keywords: list[str] | None = None) -> dict:
+                     sub_keywords: list[str] | None = None,
+                     enable_fact_check: bool = True) -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
@@ -504,12 +526,14 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
         volume: 月間検索ボリューム
         differentiation_note: カニバリ対策の差別化ヒント（空文字列なら通常生成）
         sub_keywords: スプレッドシートのAIM未判定キーワード（任意活用）
+        enable_fact_check: 事実確認ステップを実行するか（デフォルト: True）
 
     Returns:
         {title, meta_description, slug, image_prompt, category_id, category_name,
          content, keyword, volume}
     """
-    return _build_article(keyword, volume, differentiation_note, sub_keywords=sub_keywords)
+    return _build_article(keyword, volume, differentiation_note,
+                          sub_keywords=sub_keywords, enable_fact_check=enable_fact_check)
 
 
 def generate_article_from_cluster(cluster: dict, sub_keywords: list[str] | None = None) -> dict:

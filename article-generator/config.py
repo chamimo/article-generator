@@ -1,49 +1,58 @@
+"""
+サイト設定プロキシ
+
+ARTICLE_SITE 環境変数で指定されたサイトの設定を読み込み、
+全モジュールに透過的に公開する。
+
+環境変数:
+  ARTICLE_SITE=workup-ai  （デフォルト）
+
+設定ファイルの場所:
+  sites/<ARTICLE_SITE>/config.py
+
+全モジュールは引き続き "from config import X" でインポートできる。
+"""
+import importlib.util
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
+_SITE     = os.environ.get("ARTICLE_SITE", "workup-ai")
+_CFG_PATH = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "sites", _SITE, "config.py",
+)
 
-# Anthropic
-ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
+if not os.path.exists(_CFG_PATH):
+    raise FileNotFoundError(
+        f"[config] サイト設定が見つかりません: {_CFG_PATH}\n"
+        f"  sites/{_SITE}/config.py を作成してください。\n"
+        f"  テンプレート: sites/new-blog/config.py.sample"
+    )
 
-# WordPress
-WP_URL = os.getenv("WP_URL", "https://workup-ai.com").rstrip("/")
-WP_USERNAME = os.getenv("WP_USERNAME", "")
-WP_APP_PASSWORD = os.getenv("WP_APP_PASSWORD", "")
+_spec = importlib.util.spec_from_file_location("_site_config", _CFG_PATH)
+_m    = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_m)
 
-# Google Sheets
-GOOGLE_SHEETS_ID = os.getenv("GOOGLE_SHEETS_ID", "")
-GOOGLE_CREDENTIALS_PATH = os.getenv("GOOGLE_CREDENTIALS_PATH", "./credentials.json")
-
-# Filter settings
-MIN_SEARCH_VOLUME = int(os.getenv("MIN_SEARCH_VOLUME", "50"))
-
-# WordPress post settings
-WP_CATEGORY_ID = int(os.getenv("WP_CATEGORY_ID", "1"))
-WP_STATUS = os.getenv("WP_STATUS", "draft")
-
-# Hugging Face
-HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY", "")
-
-# Site info
-SITE_NAME = "AIVice"
-SITE_THEME = "AIツール・生成AI活用情報メディア"
-
-# Paths
-DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
-FILTERED_KEYWORDS_CSV = os.path.join(DATA_DIR, "filtered_keywords.csv")
-
-# Google Sheets column names (adjust to match your sheet)
-SHEETS_KEYWORD_COL = "キーワード"
-SHEETS_AIM_COL = "AIM判定"
-SHEETS_VOLUME_COL = "検索ボリューム"
-# Values that count as AIM-positive in the AIM判定 column
-AIM_POSITIVE_VALUES = {"○", "◯", "AIM", "aim", "あり", "YES", "yes", "true", "True", "1"}
-
-# Google Sheets sheet names
-# メインシート（空文字の場合はインデックス0を使用）
-SHEETS_MAIN_SHEET_NAME: str = os.getenv("SHEETS_MAIN_SHEET_NAME", "")
-# 投稿記事一覧シート名
-SHEETS_ARTICLE_LIST_NAME: str = os.getenv("SHEETS_ARTICLE_LIST_NAME", "投稿記事一覧")
-# 凡例シート名
-SHEETS_LEGEND_NAME: str = os.getenv("SHEETS_LEGEND_NAME", "凡例")
+# ── 全設定変数を再エクスポート ──────────────────────────────────────────
+ANTHROPIC_API_KEY      = _m.ANTHROPIC_API_KEY
+WP_URL                 = _m.WP_URL
+WP_USERNAME            = _m.WP_USERNAME
+WP_APP_PASSWORD        = _m.WP_APP_PASSWORD
+GOOGLE_SHEETS_ID       = _m.GOOGLE_SHEETS_ID
+GOOGLE_CREDENTIALS_PATH = _m.GOOGLE_CREDENTIALS_PATH
+HUGGINGFACE_API_KEY    = _m.HUGGINGFACE_API_KEY
+GSC_SITE_URL           = _m.GSC_SITE_URL
+SITE_NAME              = _m.SITE_NAME
+SITE_THEME             = _m.SITE_THEME
+WP_CATEGORY_ID         = _m.WP_CATEGORY_ID
+WP_STATUS              = _m.WP_STATUS
+MIN_SEARCH_VOLUME      = _m.MIN_SEARCH_VOLUME
+DATA_DIR               = _m.DATA_DIR
+FILTERED_KEYWORDS_CSV  = _m.FILTERED_KEYWORDS_CSV
+SHEETS_KEYWORD_COL     = _m.SHEETS_KEYWORD_COL
+SHEETS_AIM_COL         = _m.SHEETS_AIM_COL
+SHEETS_VOLUME_COL      = _m.SHEETS_VOLUME_COL
+AIM_POSITIVE_VALUES    = _m.AIM_POSITIVE_VALUES
+CTA_CONFIG             = _m.CTA_CONFIG
+SHEETS_MAIN_SHEET_NAME   = _m.SHEETS_MAIN_SHEET_NAME
+SHEETS_ARTICLE_LIST_NAME = _m.SHEETS_ARTICLE_LIST_NAME
+SHEETS_LEGEND_NAME       = _m.SHEETS_LEGEND_NAME

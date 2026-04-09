@@ -1,26 +1,25 @@
 """
-AIVice 記事自動生成システム
-https://workup-ai.com
+記事自動生成システム（マルチサイト対応）
 
 Usage:
+    # サイト指定（省略時は workup-ai）
+    python main.py --site workup-ai --clusters --limit 5
+
     # フルフロー（ラッコCSV → フィルター → Sheets AIM → 記事生成 → WP投稿）
-    python main.py --csv path/to/rakko_keywords.csv
+    python main.py --site workup-ai --csv path/to/rakko_keywords.csv
 
     # Sheetsのみ（CSVスキップ）
-    python main.py --sheets-only
+    python main.py --site workup-ai --sheets-only
 
     # キーワードを直接指定
-    python main.py --keyword "ChatGPT 使い方" --volume 8100
+    python main.py --site workup-ai --keyword "ChatGPT 使い方" --volume 8100
 
     # ドライラン（WP投稿しない）
-    python main.py --csv keywords.csv --dry-run
-
-    # カニバリチェックをスキップ
-    python main.py --keyword "xxx" --no-cannibal-check
+    python main.py --site workup-ai --csv keywords.csv --dry-run
 
     # クラスターファイルから記事生成（build_clusters.py 実行後）
-    python main.py --clusters
-    python main.py --clusters --limit 1 --dry-run
+    python main.py --site workup-ai --clusters
+    python main.py --site workup-ai --clusters --limit 1 --dry-run
 """
 import argparse
 import json
@@ -28,65 +27,45 @@ import os
 import sys
 import time
 
+# ── --site を最初に解析し、config インポート前に ARTICLE_SITE を設定 ──────
+# config.py は import 時点で ARTICLE_SITE を参照するため、
+# argparse の本解析より前に parse_known_args で先行取得する。
+_pre = argparse.ArgumentParser(add_help=False)
+_pre.add_argument("--site", default="workup-ai")
+_pre_args, _ = _pre.parse_known_args()
+os.environ["ARTICLE_SITE"] = _pre_args.site
+
+# ── 以降のインポートは ARTICLE_SITE 設定後 ──────────────────────────────
 from modules.keyword_filter import load_and_filter
-from modules.sheets_fetcher import get_aim_keywords, get_non_aim_keywords
+from modules.sheets_fetcher import get_aim_keywords, get_non_aim_keywords, get_excluded_keywords
 from modules.article_generator import generate_article, generate_article_from_cluster
 from modules.cannibal_checker import check_cannibalization, add_session_title
 from modules.wordpress_poster import post_article_with_image
 from modules.image_generator import generate_image_for_article
+from modules.keyword_utils import detect_parent_keyword
 from config import MIN_SEARCH_VOLUME
 
+_SITE = os.environ["ARTICLE_SITE"]
 KEYWORD_CLUSTERS_PATH = os.path.join(os.path.dirname(__file__), "output", "keyword_clusters.json")
-
-
-def _detect_cluster_category(cluster: dict) -> str:
-    """
-    クラスターのメインキーワードからサブカテゴリーを推測する。
-    同じカテゴリーが連続しないよう並び替えに使用する。
-    """
-    kw = cluster.get("main_keyword", "").lower()
-    theme = cluster.get("article_theme", "").lower()
-    text = kw + " " + theme
-
-    if any(k in text for k in ["pro 充電", "pro 通話", "pro 議事録", "pro ヨドバシ", "pro デメリット", "pro セキュリティ", "pro cdt"]):
-        return "plaud_pro"
-    if any(k in text for k in ["plaud note", "plaud_note"]):
-        return "plaud_note"
-    if any(k in text for k in ["automemo", "brooke", "ヤマダ", "国産", "メーカー"]):
-        return "product_compare"
-    if any(k in text for k in ["腕時計", "ウェアラブル", "apple watch"]):
-        return "wearable"
-    if any(k in text for k in ["iphone", "アプリ", "スマホ"]):
-        return "smartphone_app"
-    if any(k in text for k in ["勘定科目", "経費", "仕訳", "減価償却"]):
-        return "business"
-    if any(k in text for k in ["クラウド", "連携", "web会議", "zoom", "teams"]):
-        return "cloud_web"
-    if any(k in text for k in ["安全", "セキュリティ", "情報漏洩"]):
-        return "security"
-    if any(k in text for k in ["自作", "diy", "作り方"]):
-        return "diy"
-    if any(k in text for k in ["って何", "とは", "仕組み", "初心者"]):
-        return "basics"
-    return "general"
 
 
 def _interleave_clusters(active: list[dict]) -> list[dict]:
     """
-    カテゴリーが偏らないよう、異なるカテゴリーを交互に並び替える（ラウンドロビン）。
+    親キーワードが偏らないよう、異なる親グループを交互に並び替える（ラウンドロビン）。
+    親キーワードは _detect_parent_keyword() で動的に検出するためハードコード不要。
     """
     from collections import defaultdict
     groups: dict[str, list[dict]] = defaultdict(list)
     for c in active:
-        cat = _detect_cluster_category(c)
-        c["_category"] = cat
-        groups[cat].append(c)
+        parent = detect_parent_keyword(c.get("main_keyword", ""))
+        c["_category"] = parent
+        groups[parent].append(c)
 
-    # カテゴリー数の多い順に並べてラウンドロビン
+    # グループ件数の多い順に並べてラウンドロビン
     sorted_groups = sorted(groups.values(), key=len, reverse=True)
     interleaved: list[dict] = []
     i = 0
-    while any(sorted_groups):
+    while any(g for g in sorted_groups):
         idx = i % len(sorted_groups)
         if sorted_groups[idx]:
             interleaved.append(sorted_groups[idx].pop(0))
@@ -99,23 +78,40 @@ def run_clusters_pipeline(
     clusters: list[dict],
     dry_run: bool = False,
     sub_keywords: list[str] | None = None,
+    limit: int | None = None,
 ) -> list[dict]:
     """
     keyword_clusters.json のクラスターリストから記事を生成・投稿する。
     skip=True のグループは自動的にスキップ。
-    カテゴリーが偏らないようラウンドロビンで並び替えてから処理する。
+    親キーワードが偏らないようラウンドロビンで並び替えた後に limit を適用する。
     """
     results = []
     active = [c for c in clusters if not c.get("skip")]
     skipped = [c for c in clusters if c.get("skip")]
 
-    # カテゴリー分散：ラウンドロビンで並び替え
+    # ── 投稿済み・カニバリスキップ済みをシートから取得して除外 ──
+    try:
+        excluded = get_excluded_keywords()
+        excluded_lower = {k.lower() for k in excluded}
+        before = len(active)
+        active = [c for c in active if c["main_keyword"].lower() not in excluded_lower]
+        posted_skip = before - len(active)
+        if posted_skip:
+            print(f"[clusters] 投稿済みスキップ: {posted_skip}件（シート照合）")
+    except Exception as e:
+        print(f"[警告] 投稿済みキーワード取得失敗（スキップチェックなし）: {e}")
+
+    # 親キーワード分散：ラウンドロビンで並び替え（limit適用前）
     active = _interleave_clusters(active)
-    print(f"[clusters] 対象: {len(active)}件 / スキップ: {len(skipped)}件")
-    cats = [c.get('_category','?') for c in active]
+
+    # limit はインターリーブ後に適用することで多様性を保証
+    if limit:
+        active = active[:limit]
+
     from collections import Counter
-    cat_count = Counter(cats)
-    print(f"[clusters] カテゴリー分布: {dict(cat_count)}")
+    parent_count = Counter(c.get("_category", "?") for c in active)
+    print(f"[clusters] 対象: {len(active)}件 / スキップ: {len(skipped)}件")
+    print(f"[clusters] 親KWグループ: {dict(parent_count)}")
 
     for i, cluster in enumerate(active, 1):
         main_kw = cluster["main_keyword"]
@@ -269,6 +265,8 @@ def print_summary(results: list[dict]) -> None:
 
 def main():
     parser = argparse.ArgumentParser(description="AIVice 記事自動生成システム")
+    parser.add_argument("--site", default=os.environ.get("ARTICLE_SITE", "workup-ai"),
+                        help="対象サイト名 (sites/<site>/config.py を使用)")
     parser.add_argument("--csv", help="ラッコキーワードCSVのパス")
     parser.add_argument("--sheets-only", action="store_true")
     parser.add_argument("--keyword", help="単一キーワードを直接指定")
@@ -294,12 +292,13 @@ def main():
             sys.exit(1)
         with open(KEYWORD_CLUSTERS_PATH, encoding="utf-8") as f:
             clusters = json.load(f)
-        if args.limit:
-            active = [c for c in clusters if not c.get("skip")]
-            skip_list = [c for c in clusters if c.get("skip")]
-            clusters = active[: args.limit] + skip_list
         print(f"\n[clusters] {KEYWORD_CLUSTERS_PATH} からクラスターを読み込み: {len(clusters)}件")
-        results = run_clusters_pipeline(clusters, dry_run=args.dry_run, sub_keywords=sub_keywords)
+        results = run_clusters_pipeline(
+            clusters,
+            dry_run=args.dry_run,
+            sub_keywords=sub_keywords,
+            limit=args.limit,
+        )
         print_summary(results)
         return
 

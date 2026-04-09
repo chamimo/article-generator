@@ -348,7 +348,14 @@ def mark_cannibal_results_bulk(
     try:
         ws = _get_worksheet()
         col_map = _ensure_headers(ws)
-        col_a = ws.col_values(1)  # A列を一括取得
+        col_a = ws.col_values(1)  # A列（キーワード）を一括取得
+
+        # 投稿ステータス列も一括取得して「投稿済み」行の上書きを防ぐ
+        status_col_idx = col_map.get("投稿ステータス")
+        if status_col_idx:
+            col_status = ws.col_values(status_col_idx)
+        else:
+            col_status = []
 
         # keyword → row番号 のマップを構築
         kw_to_row: dict[str, int] = {}
@@ -366,6 +373,12 @@ def mark_cannibal_results_bulk(
             for kw in all_kws:
                 row = kw_to_row.get(kw.strip())
                 if row is None:
+                    continue
+
+                # 投稿済み行はステータス・色ともに上書きしない
+                current_status = col_status[row - 1].strip() if row - 1 < len(col_status) else ""
+                if current_status == "投稿済み":
+                    print(f"[sheets_updater] スキップ（投稿済み行は保護）: 行{row} 「{kw}」")
                     continue
 
                 if is_skip:
