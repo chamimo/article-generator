@@ -287,6 +287,7 @@ def _inject_h2_images(content: str, h2_image_data: list[tuple[str, str]]) -> str
 def get_or_create_tags(tag_names: list[str]) -> list[int]:
     """
     タグ名のリストからWP tag IDを返す。存在しないタグは新規作成する。
+    スラッグ重複(term_exists)の場合は既存IDを使用する。
     """
     tag_ids: list[int] = []
     for name in tag_names[:5]:
@@ -310,8 +311,18 @@ def get_or_create_tags(tag_names: list[str]) -> list[int]:
                 json={"name": name},
                 timeout=10,
             )
-            r.raise_for_status()
-            tag_ids.append(r.json()["id"])
+            if r.status_code == 400:
+                # term_exists: スラッグ重複 → レスポンスの term_id を使用
+                body = r.json()
+                term_id = body.get("data", {}).get("term_id")
+                if term_id:
+                    tag_ids.append(int(term_id))
+                    print(f"[wordpress] タグ既存(term_exists)使用: {name} (id={term_id})")
+                else:
+                    print(f"[wordpress] タグ作成スキップ(400): {name}")
+            else:
+                r.raise_for_status()
+                tag_ids.append(r.json()["id"])
     return tag_ids
 
 
@@ -399,7 +410,11 @@ def create_post(article: dict, featured_media_id: int | None = None) -> dict:
 # メインエントリ
 # ─────────────────────────────────────────────
 
-def post_article_with_image(article: dict, image_bytes: bytes | None = None) -> dict:
+def post_article_with_image(
+    article: dict,
+    image_bytes: bytes | None = None,
+    asp_links: dict | None = None,
+) -> dict:
     """
     ① カテゴリ自動選択
     ② アイキャッチ画像アップロード（FLUX生成・{slug}-eyecatch.jpg）
@@ -518,9 +533,15 @@ def post_article_with_image(article: dict, image_bytes: bytes | None = None) -> 
                 keyword=keyword,
                 article_title=article.get("title", ""),
                 published_articles=published,
+                asp_links=asp_links or {},
+                article_content=article.get("content", ""),
             )
             if related:
-                article["content"] = inject_internal_links(article["content"], related)
+                article["content"] = inject_internal_links(
+                    article["content"], related,
+                    keyword=keyword,
+                    article_title=article.get("title", ""),
+                )
                 titles = [a["title"][:30] for a in related]
                 print(f"[internal_linker] 内部リンク {len(related)}件 挿入: {titles}")
             else:

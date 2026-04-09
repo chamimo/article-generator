@@ -116,7 +116,10 @@ class BlogConfig:
     wp_app_password:  str
     article_type_weights: dict = field(default_factory=lambda: dict(ARTICLE_TYPE_WEIGHTS))
     stop_words: list = field(default_factory=list)  # コアKW正規化用除外ワード
-    aliases: list = field(default_factory=list)      # --blog で使える別名リスト
+    aliases: list = field(default_factory=list)         # --blog で使える別名リスト
+    allowed_themes: list = field(default_factory=list)  # テーマホワイトリスト（空=無制限）
+    ng_keywords: list = field(default_factory=list)     # NGワードブラックリスト
+    asp_links: dict = field(default_factory=dict)       # ASP案件リンク {名称: URL}
     # 追加設定はここに列追加するだけで OK
     extra: dict = field(default_factory=dict)
 
@@ -158,12 +161,16 @@ def load_blog_config(blog_name: str) -> BlogConfig:
         article_type_weights = data.get("article_type_weights", ARTICLE_TYPE_WEIGHTS),
         stop_words      = [str(w) for w in data.get("stop_words", [])],
         aliases         = [str(a) for a in data.get("aliases", [])],
+        allowed_themes  = [str(t) for t in data.get("allowed_themes", [])],
+        ng_keywords     = [str(k) for k in data.get("ng_keywords", [])],
+        asp_links       = {str(k): str(v) for k, v in data.get("asp_links", {}).items()},
         extra           = {k: v for k, v in data.items()
                            if k not in ("name", "display_name", "genre", "target_length",
                                         "fact_check", "candidate_ss_id", "candidate_sheet",
                                         "article_count", "min_volume", "wp_url", "wp_username",
                                         "wp_app_password", "article_type_weights",
-                                        "stop_words", "aliases", "_comment")
+                                        "stop_words", "aliases", "allowed_themes",
+                                        "ng_keywords", "asp_links", "_comment")
                            and not k.endswith("_env")},
     )
 
@@ -350,6 +357,9 @@ def fetch_candidates(
     comp_idx = col(["競合性", "competition"])
     aim_idx  = col(["aim", "AIM", "Aim"])
 
+    # aim列の値 → 優先度レベル（高いほど先に評価）
+    _AIM_PRIORITY = {"now": 4, "future": 3, "monetize": 2, "aim": 1, "add": 1}
+
     def to_int(v: str) -> int | None:
         if not v or v.upper() in ("N/A", "NULL", "-", ""):
             return None
@@ -358,34 +368,83 @@ def fetch_candidates(
         except ValueError:
             return None
 
-    candidates = []
+    MAIN_VOL_THRESHOLD = 30  # これ以上（またはN/A）→ 記事生成対象
+
+    candidates: list[dict] = []   # メインKW（vol>=30 or N/A）
+    sub_keywords: list[str] = []  # サブKW（vol<30）→ 記事本文に盛り込む
+
     for row in rows[1:]:
         def cell(i: int) -> str:
             return row[i].strip() if 0 <= i < len(row) else ""
 
         kw   = cell(kw_idx)
-        vol  = to_int(cell(vol_idx)) or 0
+        vol_raw = cell(vol_idx)
+        vol  = to_int(vol_raw)      # None = N/A
         seo  = to_int(cell(seo_idx))
         comp = to_int(cell(comp_idx))
-        aim  = cell(aim_idx).lower() if aim_idx >= 0 else ""
+        aim  = cell(aim_idx).lower().strip() if aim_idx >= 0 else ""
 
-        if not kw or vol < min_vol:
+        if not kw:
+            continue
+
+        # vol=N/A（None）はメイン扱い、明示的な数値は30以上のみメイン
+        is_main = (vol is None) or (vol >= MAIN_VOL_THRESHOLD)
+        vol_int = vol if vol is not None else 0
+
+        if not is_main:
+            # vol<30 → サブKWとして収集（min_vol チェック不要）
+            sub_keywords.append(kw)
+            continue
+
+        if vol_int < min_vol:
             continue
 
         candidates.append({
-            "keyword":        kw,
-            "volume":         vol,
-            "seo_difficulty": seo,
-            "competition":    comp,
-            "priority":       aim == "now",   # aim列に "now" → 最優先選定
+            "keyword":         kw,
+            "volume":          vol_int,
+            "seo_difficulty":  seo,
+            "competition":     comp,
+            "priority":        aim == "now",                    # 後方互換
+            "_aim":            aim,                              # aim列の生値
+            "_priority_level": _AIM_PRIORITY.get(aim, 0),      # 優先度スコア
         })
 
-    n_priority = sum(1 for c in candidates if c.get("priority"))
-    log.info(
-        f"[fetch] [{sheet}] 候補: {len(candidates)}件（月間検索数 ≥ {min_vol}）"
-        + (f"  ★now優先: {n_priority}件" if n_priority else "")
+    # aim優先度の内訳をログに出す
+    aim_counts: dict[str, int] = {}
+    for c in candidates:
+        lv = c.get("_aim") or "—"
+        aim_counts[lv] = aim_counts.get(lv, 0) + 1
+    aim_summary = ", ".join(
+        f"{k}:{v}" for k, v in sorted(aim_counts.items(),
+            key=lambda kv: -_AIM_PRIORITY.get(kv[0], 0))
+        if k != "—"
     )
-    return candidates
+    # ── テーマフィルタ（ホワイトリスト + ブラックリスト）──────────
+    allowed_themes = blog_cfg.allowed_themes if blog_cfg else []
+    ng_keywords    = blog_cfg.ng_keywords    if blog_cfg else []
+
+    def _passes_theme(kw: str) -> bool:
+        kw_l = kw.lower()
+        # NGワードチェック（ブラックリスト）
+        if ng_keywords and any(ng.lower() in kw_l for ng in ng_keywords):
+            return False
+        # テーマチェック（ホワイトリスト）
+        if not allowed_themes:
+            return True  # リストなし = 全件OK
+        return any(theme.lower() in kw_l for theme in allowed_themes)
+
+    before_filter = len(candidates)
+    candidates  = [c for c in candidates  if _passes_theme(c["keyword"])]
+    sub_keywords = [k for k in sub_keywords if _passes_theme(k)]
+    filtered_out = before_filter - len(candidates)
+
+    log.info(
+        f"[fetch] [{sheet}] メインKW: {len(candidates)}件（vol≥{MAIN_VOL_THRESHOLD} or N/A）"
+        f"  サブKW: {len(sub_keywords)}件（vol<{MAIN_VOL_THRESHOLD}）"
+        + (f"  テーマ外除外: {filtered_out}件" if filtered_out else "")
+        + (f"  aim内訳: [{aim_summary}]" if aim_summary else "")
+    )
+    return candidates, sub_keywords
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -683,11 +742,63 @@ def _distribute_articles(n: int, weights: dict[str, float]) -> dict[str, int]:
     return floors
 
 
+def _group_balanced_pool(
+    candidates: list[dict],
+    stop_words: list[str] | None,
+    top_n: int = TOP_N_CANDIDATES,
+) -> list[dict]:
+    """
+    候補をコアKWでグループ化し、各グループから均等にラウンドロビン抽出する。
+    グループ内は volume 降順→ランダムシャッフル。
+    特定グループへの偏り（AIボイスレコーダー系など）を解消する。
+    """
+    import random
+    from collections import defaultdict
+
+    sw = stop_words or []
+    groups: dict[str, list[dict]] = defaultdict(list)
+    for c in candidates:
+        core = _extract_core_keyword(c["keyword"].lower(), sw)
+        # コアKWが短すぎる場合はキーワード先頭1語をグループキーにする
+        if len(core) < 4:
+            core = c["keyword"].split()[0].lower() if c["keyword"].split() else core
+        groups[core].append(c)
+
+    # 各グループ内をvol降順にして、上位から選ぶ（一定のランダム性を保つ）
+    for g in groups.values():
+        g.sort(key=lambda x: -x["volume"])
+
+    # ラウンドロビン：グループを1件ずつ循環して top_n 件になるまで取り出す
+    pool: list[dict] = []
+    group_iters = {k: iter(v) for k, v in groups.items()}
+    group_keys  = list(groups.keys())
+    random.shuffle(group_keys)  # グループ順序もランダム化
+    while len(pool) < top_n:
+        advanced = False
+        for key in group_keys:
+            if len(pool) >= top_n:
+                break
+            it = group_iters.get(key)
+            if it is None:
+                continue
+            try:
+                pool.append(next(it))
+                advanced = True
+            except StopIteration:
+                group_iters.pop(key)
+        if not advanced:
+            break  # 全グループ枯渇
+
+    log.debug(f"[group_pool] グループ数: {len(groups)}件 → pool: {len(pool)}件")
+    return pool
+
+
 def filter_duplicates(
     candidates: list[dict],
     wp_posts: list[dict],
     n: int,
     stop_words: list[str] | None = None,
+    group_balanced: bool = True,
 ) -> list[dict]:
     """
     重複を除外して n 件のキーワードを返す。
@@ -700,18 +811,28 @@ def filter_duplicates(
     import random
     from datetime import timedelta
 
-    # "now" 優先候補は必ずプール先頭に置く（volume順・シャッフル対象外）
-    priority_pool = [c for c in candidates if c.get("priority")]
-    normal_sorted = sorted(
-        [c for c in candidates if not c.get("priority")],
-        key=lambda x: x["volume"], reverse=True,
+    # aim優先度 (_priority_level) 降順 → volume 降順でソートして先頭評価
+    # now=4 > future=3 > monetize=2 > aim/add=1 > 未指定=0
+    high_pool = sorted(
+        [c for c in candidates if c.get("_priority_level", 0) > 0],
+        key=lambda x: (-x.get("_priority_level", 0), -x["volume"]),
     )
-    normal_pool = normal_sorted[:TOP_N_CANDIDATES]
-    random.shuffle(normal_pool)
-    pool = priority_pool + normal_pool  # priority が先に評価される
+    low_priority = [c for c in candidates if c.get("_priority_level", 0) == 0]
+    if group_balanced:
+        # グループ均等選定（AIボイスレコーダー系への偏りを解消）
+        normal_pool = _group_balanced_pool(low_priority, stop_words, top_n=TOP_N_CANDIDATES)
+    else:
+        normal_sorted = sorted(low_priority, key=lambda x: x["volume"], reverse=True)
+        normal_pool   = normal_sorted[:TOP_N_CANDIDATES]
+        random.shuffle(normal_pool)
+    pool = high_pool + normal_pool
 
-    if priority_pool:
-        log.info(f"[dup_check] ★now優先候補: {len(priority_pool)}件を先頭処理")
+    if high_pool:
+        by_aim: dict[str, int] = {}
+        for c in high_pool:
+            lv = c.get("_aim", "?")
+            by_aim[lv] = by_aim.get(lv, 0) + 1
+        log.info(f"[dup_check] 優先候補: {len(high_pool)}件 {by_aim} を先頭評価")
 
     recent_cutoff = datetime.now() - timedelta(days=WP_RECENT_DAYS)
 
@@ -825,16 +946,24 @@ def select_keywords(
 # STEP 3: 記事生成
 # 既存の generate_article() をそのまま利用
 # ═══════════════════════════════════════════════════════════════
-def generate(keyword: str, volume: int, blog_cfg: BlogConfig | None = None) -> dict:
+def generate(
+    keyword: str,
+    volume: int,
+    blog_cfg: BlogConfig | None = None,
+    sub_keywords: list[str] | None = None,
+) -> dict:
     """
     記事を生成して dict で返す。
     blog_cfg が指定された場合はそのブログの設定（fact_check）を反映する。
-
-    Phase 2: article_type に応じてプロンプトのトーン・構成を切り替え予定。
+    sub_keywords が指定された場合は記事本文に自然に盛り込む。
     """
     fact_check = blog_cfg.fact_check if blog_cfg is not None else True
-    log.info(f"[generate] 生成開始: 「{keyword}」(vol:{volume:,}) fact_check={fact_check}")
-    article = generate_article(keyword, volume, enable_fact_check=fact_check)
+    log.info(
+        f"[generate] 生成開始: 「{keyword}」(vol:{volume:,}) fact_check={fact_check}"
+        + (f"  サブKW:{len(sub_keywords)}件" if sub_keywords else "")
+    )
+    article = generate_article(keyword, volume, sub_keywords=sub_keywords,
+                               enable_fact_check=fact_check)
     log.info(f"[generate] 完了: 「{article['title']}」")
     return article
 
@@ -866,7 +995,9 @@ def post(article: dict, dry_run: bool = False,
         except Exception as img_err:
             log.warning(f"[post] 画像生成スキップ（続行）: {img_err}")
 
-        result = post_article_with_image(article, image_bytes=image_bytes)
+        asp_links = blog_cfg.asp_links if blog_cfg else {}
+        result = post_article_with_image(article, image_bytes=image_bytes,
+                                         asp_links=asp_links)
     else:
         result = create_post(article, featured_media_id=None)
 
@@ -912,10 +1043,11 @@ def run_blog(
     log.info(f"  article_count    : {n_articles}  dry_run: {dry_run}")
 
     # ── Step 1: キーワード選定 ──────────────────────────
+    sub_keywords: list[str] = []  # vol<30のサブKW（記事本文に盛り込む）
     if keyword:
         targets = [{"keyword": keyword, "volume": volume,
                     "seo_difficulty": None, "competition": None,
-                    "priority": False, "_type": "longtail"}]
+                    "priority": False, "_type": "longtail", "_aim": ""}]
         log.info(f"[{blog_cfg.name}] キーワード直接指定: 「{keyword}」")
         n_candidates = 1
     else:
@@ -933,7 +1065,7 @@ def run_blog(
             dist       = _distribute_articles(n_articles, weights)
             log.info(f"[{blog_cfg.name}] 記事タイプ配分: {dist}  (weights={weights})")
 
-            sheet_candidates = fetch_candidates(ArticleType.LONGTAIL, blog_cfg=blog_cfg)
+            sheet_candidates, sub_keywords = fetch_candidates(ArticleType.LONGTAIL, blog_cfg=blog_cfg)
             n_candidates     = len(sheet_candidates)
             targets: list[dict] = []
             used_kws: set[str] = set()
@@ -992,10 +1124,10 @@ def run_blog(
 
         else:
             # ── LONGTAIL 固定モード（従来動作）────────────
-            candidates   = fetch_candidates(ArticleType.LONGTAIL, blog_cfg=blog_cfg)
-            n_candidates = len(candidates)
+            sheet_candidates, sub_keywords = fetch_candidates(ArticleType.LONGTAIL, blog_cfg=blog_cfg)
+            n_candidates = len(sheet_candidates)
             targets = select_keywords(
-                candidates, n=n_articles, article_type=ArticleType.LONGTAIL,
+                sheet_candidates, n=n_articles, article_type=ArticleType.LONGTAIL,
                 wp_posts=wp_posts, stop_words=stop_words
             )
             for kw in targets:
@@ -1014,7 +1146,7 @@ def run_blog(
         log.info(
             f"[{blog_cfg.name}] [{i}/{len(targets)}]"
             f" [{article_type_label.upper()}] 「{chosen['keyword']}」 vol={chosen['volume']:,}"
-            + (" ★NOW優先" if chosen.get("priority") else "")
+            + (f" ★{chosen['_aim'].upper()}" if chosen.get("_aim") else "")
         )
         log.info(f"{'─' * 60}")
 
@@ -1029,7 +1161,15 @@ def run_blog(
         }
 
         try:
-            article     = generate(chosen["keyword"], chosen["volume"], blog_cfg=blog_cfg)
+            # メインKWに関連するサブKWを抽出して記事本文に盛り込む
+            kw_core = _extract_core_keyword(chosen["keyword"].lower(), stop_words)
+            related_sub = [
+                s for s in sub_keywords
+                if kw_core and kw_core in s.lower()
+            ][:20]  # 最大20件まで渡す
+
+            article     = generate(chosen["keyword"], chosen["volume"],
+                                   blog_cfg=blog_cfg, sub_keywords=related_sub or None)
             post_result = post(article, dry_run=dry_run, blog_cfg=blog_cfg)
 
             item.update({
@@ -1109,15 +1249,16 @@ def main() -> None:
     # ── ブログごとに順次実行 ──────────────────────────────
     all_results: list[dict] = []
     for blog_name in blog_names:
-        log.info(f"\n{'═' * 60}")
-        log.info(f"ブログ: {blog_name}")
-        log.info(f"{'═' * 60}")
-
         try:
             blog_cfg = load_blog_config(blog_name)
         except FileNotFoundError as e:
             log.error(f"[{blog_name}] 設定ファイルが見つかりません（スキップ）: {e}")
             continue
+
+        domain = blog_cfg.wp_url.replace("https://", "").replace("http://", "").rstrip("/")
+        log.info(f"\n{'═' * 60}")
+        log.info(f"=== {blog_cfg.display_name} ({domain}) 処理開始 ===")
+        log.info(f"{'═' * 60}")
 
         # ── 実行前確認（--blog 指定時のみ、TTY かつ --yes なし）──
         if args.blog is not None and not args.yes:

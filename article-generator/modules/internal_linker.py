@@ -2,13 +2,10 @@
 内部リンク自動挿入モジュール
 
 ## 選定優先順位
-1. ASP案件記事（最優先）
-   config.py の CTA_CONFIG に登録されたキーワードにマッチする記事。
-   成約率向上のため積極的にリンクする。
-2. 同じ親キーワードの記事（次点）
-   detect_parent_keyword() で検出した同じ親KWを持つ記事から Claude が選ぶ。
-3. その他の関連記事（補完）
-   上記2カテゴリで5件に満たない場合に Claude が補完。
+1. ASP成約記事（URL一致）: 言及があれば必ず1本
+2. ASP名を含む関連記事（タイトルマッチ）
+3. 同じ親キーワードの記事（Jaccard bigram スコアリング）
+4. 親KW絞り込み済みその他関連記事（Jaccard bigram スコアリング）
 
 ## 挿入位置
 - H3セクション末尾に SWELL「あわせて読みたい」カード形式で分散挿入
@@ -19,14 +16,11 @@ from __future__ import annotations
 import json
 import re
 import requests
-import anthropic
 from html import unescape
 from requests.auth import HTTPBasicAuth
 
-from config import WP_URL, WP_USERNAME, WP_APP_PASSWORD, ANTHROPIC_API_KEY, CTA_CONFIG
+from config import WP_URL, WP_USERNAME, WP_APP_PASSWORD, CTA_CONFIG
 from modules.keyword_utils import detect_parent_keyword
-
-_claude = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
 # セッション内キャッシュ（プロセス再起動でリセット）
 _published_articles_cache: list[dict] | None = None
@@ -53,13 +47,22 @@ def _card_block(article: dict) -> str:
     return f'\n<!-- wp:loos/post-link {{"linkData":{link_data},"icon":"link"}} /-->'
 
 
-def _text_link_block(article: dict) -> str:
-    """👉 テキストリンクの wp:paragraph ブロックを生成する。"""
-    title_plain = unescape(article["title"])
+def _lead_in_block(text: str) -> str:
+    """誘導文の wp:paragraph ブロックを生成する。"""
     return (
         "\n<!-- wp:paragraph -->\n"
-        f'<p>👉 こちらの記事もおすすめ：'
-        f'<a href="{article["link"]}">{title_plain}</a></p>\n'
+        f"<p>{text}</p>\n"
+        "<!-- /wp:paragraph -->"
+    )
+
+
+def _text_link_block(article: dict, lead_in: str = "") -> str:
+    """テキストリンクの wp:paragraph ブロックを生成する。誘導文があれば文中に組み込む。"""
+    title_plain = unescape(article["title"])
+    prefix = lead_in if lead_in else "こちらの記事もおすすめです。"
+    return (
+        "\n<!-- wp:paragraph -->\n"
+        f'<p>{prefix}→ <a href="{article["link"]}">{title_plain}</a></p>\n'
         "<!-- /wp:paragraph -->"
     )
 
@@ -142,10 +145,26 @@ def _find_asp_articles(published_articles: list[dict]) -> list[dict]:
 
 
 # ─────────────────────────────────────────────
-# Claude による関連記事選定（サブ関数）
+# ルールベース関連記事選定（Jaccard bigram スコアリング）
 # ─────────────────────────────────────────────
 
-def _claude_select(
+def _bigrams(s: str) -> set[str]:
+    """文字バイグラムセットを返す（小文字・記号除去後）。"""
+    s = re.sub(r'[^\w\u3040-\u9fff]', ' ', s.lower()).strip()
+    return {s[i:i+2] for i in range(len(s) - 1)} if len(s) >= 2 else set(s)
+
+
+def _jaccard(a: str, b: str) -> float:
+    bg_a = _bigrams(a)
+    bg_b = _bigrams(b)
+    if not bg_a and not bg_b:
+        return 1.0
+    if not bg_a or not bg_b:
+        return 0.0
+    return len(bg_a & bg_b) / len(bg_a | bg_b)
+
+
+def _rule_select(
     keyword: str,
     article_title: str,
     candidates: list[dict],
@@ -153,56 +172,22 @@ def _claude_select(
     label: str = "",
 ) -> list[dict]:
     """
-    Claude Haiku で candidates から関連性の高い記事を最大 max_count 件選ぶ。
-    label はログ表示用。
+    Jaccard bigram スコアリングで candidates から関連記事を最大 max_count 件選ぶ。
+    API不使用のルールベース実装。
     """
     if not candidates or max_count <= 0:
         return []
 
-    # トークン削減のため最大200件
-    candidates = candidates[:200]
-
-    articles_text = "\n".join(
-        f"[{i}] {a['title']}"
-        for i, a in enumerate(candidates)
+    query = f"{keyword} {article_title}"
+    scored = sorted(
+        candidates,
+        key=lambda a: _jaccard(query, unescape(a["title"])),
+        reverse=True,
     )
-
-    prompt = (
-        f"内部リンク候補を選んでください。\n\n"
-        f"## 新規記事\n"
-        f"- キーワード: {keyword}\n"
-        f"- タイトル: {article_title}\n\n"
-        f"## 候補記事（番号付き）\n"
-        f"{articles_text}\n\n"
-        f"## ルール\n"
-        f"1. 新規記事と関連し、読者が次に読みたいと思える記事を選ぶ\n"
-        f"2. 内容が同一・類似しすぎてカニバリになる記事は除外する\n"
-        f"3. 最大{max_count}件を選ぶ\n\n"
-        f"選んだ番号だけをJSON配列で出力してください。説明不要。例: [0, 3, 7]"
-    )
-
-    try:
-        msg = _claude.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=120,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        raw = msg.content[0].text.strip()
-        raw = re.sub(r'```[a-z]*\n?', '', raw).strip().strip('`').strip()
-        indices: list[int] = json.loads(raw)
-
-        selected = [
-            candidates[idx]
-            for idx in indices
-            if isinstance(idx, int) and 0 <= idx < len(candidates)
-        ]
-        if label:
-            print(f"[internal_linker] {label}: {len(selected)}件選定")
-        return selected[:max_count]
-
-    except Exception as e:
-        print(f"[internal_linker] Claude選定失敗（{label}）: {e}")
-        return []
+    selected = scored[:max_count]
+    if label:
+        print(f"[internal_linker] {label}: {len(selected)}件選定（ルールベース）")
+    return selected
 
 
 # ─────────────────────────────────────────────
@@ -214,14 +199,17 @@ def select_related_articles(
     article_title: str,
     published_articles: list[dict],
     max_count: int = 5,
+    asp_links: dict | None = None,
+    article_content: str = "",
 ) -> list[dict]:
     """
     公開済み記事から内部リンク候補を優先順位に従って選ぶ。
 
-    優先順位:
-      1. ASP案件記事   (CTA_CONFIG のキーワードにマッチする記事)
-      2. 同親KW記事    (detect_parent_keyword で検出した同グループ)
-      3. その他関連記事 (Claude が残り枠を補完)
+    優先順位（全ASP案件共通）:
+      1. 成約記事（asp_links のURLと一致する記事）        ← 言及があれば必ず1本
+      2. ASP案件名を含む関連記事（タイトルにプロダクト名）
+      3. 同じ親キーワードの記事（Claude選定）
+      4. 親KW絞り込み済みのその他関連記事（Claude選定）
 
     Returns:
         最大 max_count 件のリスト（優先順位順）
@@ -230,71 +218,189 @@ def select_related_articles(
         return []
 
     parent = detect_parent_keyword(keyword)
-
-    # ── 1. ASP案件記事（最優先）──
-    asp_articles = _find_asp_articles(published_articles)
-    # 現在の記事自身は除外（title完全一致で判断）
-    asp_articles = [a for a in asp_articles if unescape(a["title"]) != article_title]
+    text_to_check = f"{keyword} {article_title} {article_content}".lower()
 
     selected:     list[dict] = []
     selected_ids: set[int]   = set()
+    asp_links     = asp_links or {}
 
-    for a in asp_articles:
-        if len(selected) >= max_count:
-            break
-        selected.append(a)
-        selected_ids.add(a["id"])
+    # 記事内で言及されているASP案件を検出
+    mentioned_products = [
+        (name, url) for name, url in asp_links.items()
+        if name.lower() in text_to_check
+    ]
 
-    asp_count = len(selected)
-    if asp_count:
-        print(f"[internal_linker] ASP案件記事: {asp_count}件追加")
+    # ── 優先1: 成約記事（asp_links URL一致）──────────────────────
+    # 言及があれば必ず1本以上リンクを確保する
+    conv_count = 0
+    for product_name, review_url in mentioned_products:
+        review_url_norm = review_url.rstrip("/")
+        for a in published_articles:
+            if a["id"] in selected_ids:
+                continue
+            if unescape(a["title"]) == article_title:
+                continue
+            if a.get("link", "").rstrip("/") == review_url_norm:
+                selected.append({**a, "_link_type": "asp_conversion"})
+                selected_ids.add(a["id"])
+                conv_count += 1
+                print(f"[internal_linker] 成約記事「{product_name}」→ {a['title'][:40]}")
+                break
+
+    # ── 優先2: ASP案件名を含む関連記事（タイトルマッチ）──────────
+    kw_match_count = 0
+    for product_name, _ in mentioned_products:
+        pname_lower = product_name.lower()
+        kw_pool = [
+            a for a in published_articles
+            if a["id"] not in selected_ids
+            and unescape(a["title"]) != article_title
+            and pname_lower in unescape(a["title"]).lower()
+        ]
+        for a in kw_pool[:2]:          # 1案件あたり最大2件
+            if len(selected) >= max_count:
+                break
+            selected.append({**a, "_link_type": "asp_related"})
+            selected_ids.add(a["id"])
+            kw_match_count += 1
+        if kw_match_count:
+            print(f"[internal_linker] 「{product_name}」関連記事: {kw_match_count}件追加")
 
     remaining = max_count - len(selected)
     if remaining <= 0:
-        return selected
+        return selected[:max_count]
 
-    # ── 2. 同じ親キーワードの記事（次点）──
+    # ── 優先3: 同じ親キーワードの記事（Claude選定）──────────────
     same_parent_pool = [
         a for a in published_articles
         if a["id"] not in selected_ids
         and parent
         and parent in unescape(a["title"]).lower()
     ]
-
     if same_parent_pool:
-        same_parent_selected = _claude_select(
-            keyword, article_title, same_parent_pool, remaining,
-            label=f"同親KW「{parent}」"
-        )
-        for a in same_parent_selected:
+        for a in _claude_select(keyword, article_title, same_parent_pool, remaining,
+                                label=f"同親KW「{parent}」"):
             if a["id"] not in selected_ids and len(selected) < max_count:
-                selected.append(a)
+                selected.append({**a, "_link_type": "same_parent"})
                 selected_ids.add(a["id"])
 
     remaining = max_count - len(selected)
     if remaining <= 0:
-        return selected
+        return selected[:max_count]
 
-    # ── 3. その他の関連記事（補完）──
-    others_pool = [
-        a for a in published_articles
-        if a["id"] not in selected_ids
-    ]
+    # ── 優先4: 親KW絞り込み済みその他関連記事（Claude選定）────────
+    parent_terms = [t for t in re.split(r'[\s・]+', parent or "") if len(t) >= 2]
+    if parent_terms:
+        others_pool = [
+            a for a in published_articles
+            if a["id"] not in selected_ids
+            and any(t in unescape(a["title"]).lower() for t in parent_terms)
+        ]
+        if others_pool:
+            for a in _claude_select(keyword, article_title, others_pool, remaining,
+                                    label="関連補完（親KW絞り込み）"):
+                if a["id"] not in selected_ids and len(selected) < max_count:
+                    selected.append({**a, "_link_type": "related"})
+                    selected_ids.add(a["id"])
 
-    if others_pool:
-        others_selected = _claude_select(
-            keyword, article_title, others_pool, remaining,
-            label="その他補完"
-        )
-        for a in others_selected:
-            if a["id"] not in selected_ids and len(selected) < max_count:
-                selected.append(a)
-                selected_ids.add(a["id"])
-
-    print(f"[internal_linker] 内部リンク選定完了: 計{len(selected)}件 "
-          f"(ASP:{asp_count} / 同親KW:{len(selected)-asp_count-(max_count-remaining-asp_count)} / その他:{max_count-remaining-asp_count if remaining < max_count else 0})")
-
+    print(
+        f"[internal_linker] 内部リンク選定完了: 計{len(selected)}件 "
+        f"(成約:{conv_count} / 案件関連:{kw_match_count} "
+        f"/ 同親KW+補完:{len(selected) - conv_count - kw_match_count})"
+    )
     return selected[:max_count]
+
+
+# ─────────────────────────────────────────────
+# 誘導文の一括生成
+# ─────────────────────────────────────────────
+
+_FALLBACKS_ASP = [
+    "実際の価格や詳しい情報はこちらで解説しています。",
+    "導入を検討している方はこちらも参考にしてください。",
+    "購入前に確認しておきたいポイントをまとめています。",
+    "詳細なスペックや購入方法はこちらをご覧ください。",
+]
+_FALLBACKS_REL = [
+    "この点についてはこちらの記事で詳しく解説しています。",
+    "合わせて読むとより理解が深まります。",
+    "関連する内容はこちらの記事もご覧ください。",
+    "さらに詳しく知りたい方はこちらも参考にどうぞ。",
+    "気になる方はこちらの記事もチェックしてみてください。",
+]
+
+
+def _generate_lead_ins(
+    main_keyword: str,
+    main_title: str,
+    articles: list[dict],
+) -> list[str]:
+    """
+    内部リンク挿入前の誘導文を全記事分まとめてClaude Haikuで生成する。
+    API失敗時はフォールバック定型文を使用する。
+    """
+    if not articles:
+        return []
+
+    type_labels = {
+        "asp_conversion": "ASP成約記事（商品の価格・購入案内ページ）",
+        "asp_related":    "ASP関連記事（同じ商品に関連する記事）",
+        "same_parent":    "関連記事（同テーマ）",
+        "related":        "関連記事",
+    }
+
+    items_text = "\n".join(
+        f"[{i}] {type_labels.get(a.get('_link_type', 'related'), '関連記事')}: {unescape(a['title'])}"
+        for i, a in enumerate(articles)
+    )
+
+    prompt = (
+        f"ブログ記事の内部リンク直前に置く「誘導文」を生成してください。\n\n"
+        f"## 元記事\n"
+        f"- キーワード: {main_keyword}\n"
+        f"- タイトル: {main_title}\n\n"
+        f"## リンク先一覧\n"
+        f"{items_text}\n\n"
+        f"## ルール\n"
+        f"1. 各リンクの直前に置く自然な1文を生成する\n"
+        f"2. 同じ文言の繰り返しを避け、バリエーションを持たせる\n"
+        f"3. ASP成約記事: 価格・購入・導入を促す文言\n"
+        f"   例: 「実際の価格や購入方法はこちらで詳しく解説しています。」\n"
+        f"4. 関連記事: 内容を補完する文言\n"
+        f"   例: 「この点についてはこちらの記事で詳しく解説しています。」\n"
+        f"5. 語尾は「〜です。」「〜ください。」「〜ます。」など丁寧語で統一\n"
+        f"6. 30文字以内でシンプルに\n\n"
+        f"番号ごとの誘導文をJSON配列で出力してください。説明不要。例: [\"誘導文0\", \"誘導文1\"]"
+    )
+
+    try:
+        msg = _claude.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=400,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        raw = msg.content[0].text.strip()
+        raw = re.sub(r'```[a-z]*\n?', '', raw).strip().strip('`').strip()
+        lead_ins: list[str] = json.loads(raw)
+
+        result = []
+        for i, a in enumerate(articles):
+            is_asp = a.get("_link_type") == "asp_conversion"
+            if i < len(lead_ins) and isinstance(lead_ins[i], str) and lead_ins[i].strip():
+                result.append(lead_ins[i].strip())
+            else:
+                pool = _FALLBACKS_ASP if is_asp else _FALLBACKS_REL
+                result.append(pool[i % len(pool)])
+        return result
+
+    except Exception as e:
+        print(f"[internal_linker] 誘導文生成失敗（フォールバック使用）: {e}")
+        result = []
+        for i, a in enumerate(articles):
+            is_asp = a.get("_link_type") == "asp_conversion"
+            pool = _FALLBACKS_ASP if is_asp else _FALLBACKS_REL
+            result.append(pool[i % len(pool)])
+        return result
 
 
 # ─────────────────────────────────────────────
@@ -338,9 +444,12 @@ def _find_h3_section_ends(content: str) -> list[int]:
 def inject_internal_links(
     content: str,
     related_articles: list[dict],
+    keyword: str = "",
+    article_title: str = "",
 ) -> str:
     """
     H3セクション末尾に内部リンクを分散挿入する。
+    各リンクの直前にClaude生成の誘導文（wp:paragraph）を挿入する。
 
     - H3スロット数 ≥ リンク数: 各H3に1件ずつ均等配置
     - H3スロット数 < リンク数: H3に1件ずつ配置、余剰はまとめH3直前に追加
@@ -355,9 +464,18 @@ def inject_internal_links(
     slot_links  = related_articles[:n_slots]
     extra_links = related_articles[n_slots:]
 
-    # 余剰リンク → テキストリンクでまとめH3直前 or 末尾
+    # 誘導文を一括生成（slot + extra まとめて1回のAPI呼び出し）
+    all_articles = slot_links + extra_links
+    lead_ins     = _generate_lead_ins(keyword, article_title, all_articles)
+    slot_lead_ins  = lead_ins[:len(slot_links)]
+    extra_lead_ins = lead_ins[len(slot_links):]
+
+    # 余剰リンク → 誘導文込みテキストリンクでまとめH3直前 or 末尾
     if extra_links:
-        extra_blocks = "".join(_text_link_block(a) for a in extra_links)
+        extra_blocks = "".join(
+            _text_link_block(a, lead_in=li)
+            for a, li in zip(extra_links, extra_lead_ins)
+        )
         matome_pat = re.compile(
             r'<!-- wp:heading \{"level":3\} -->\s*<h3[^>]*>[^<]*まとめ[^<]*</h3>\s*<!-- /wp:heading -->',
             re.DOTALL,
@@ -368,10 +486,11 @@ def inject_internal_links(
         else:
             content = content.rstrip() + "\n" + extra_blocks
 
-    # H3スロット → SWELLカードを後ろから挿入
+    # H3スロット → 誘導文 + SWELLカードを後ろから挿入
     for i in range(len(slot_links) - 1, -1, -1):
         insert_pos = section_ends[i]
-        block      = _card_block(slot_links[i])
-        content    = content[:insert_pos] + block + "\n" + content[insert_pos:]
+        lead  = _lead_in_block(slot_lead_ins[i])
+        card  = _card_block(slot_links[i])
+        content = content[:insert_pos] + lead + card + "\n" + content[insert_pos:]
 
     return content

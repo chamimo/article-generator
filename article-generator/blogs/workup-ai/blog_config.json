@@ -21,6 +21,24 @@
   "stop_words": ["おすすめ", "比較", "2026", "iphone", "アプリ"],
   "aliases": ["aivice", "workup-ai"],
 
+  "allowed_themes": [
+    "AI", "人工知能",
+    "ChatGPT", "Claude", "Gemini",
+    "ボイスレコーダー", "文字起こし",
+    "議事録", "音声認識",
+    "AI副業", "AIツール",
+    "画像生成", "AIライティング",
+    "自動化", "効率化",
+    "転職", "副業", "キャリア",
+    "録音", "ICレコーダー", "PLAUD", "Notta"
+  ],
+  "ng_keywords": [],
+
+  "asp_links": {
+    "PLAUD":  "https://workup-ai.com/plaud-note-ai-voice-recorder-review/",
+    "Notta":  ""
+  },
+
   "wp_url_env":          "WP_URL",
   "wp_username_env":     "WP_USERNAME",
   "wp_app_password_env": "WP_APP_PASSWORD"
