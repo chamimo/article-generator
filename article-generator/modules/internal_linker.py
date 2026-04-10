@@ -278,7 +278,7 @@ def select_related_articles(
         and parent in unescape(a["title"]).lower()
     ]
     if same_parent_pool:
-        for a in _claude_select(keyword, article_title, same_parent_pool, remaining,
+        for a in _rule_select(keyword, article_title, same_parent_pool, remaining,
                                 label=f"同親KW「{parent}」"):
             if a["id"] not in selected_ids and len(selected) < max_count:
                 selected.append({**a, "_link_type": "same_parent"})
@@ -297,7 +297,7 @@ def select_related_articles(
             and any(t in unescape(a["title"]).lower() for t in parent_terms)
         ]
         if others_pool:
-            for a in _claude_select(keyword, article_title, others_pool, remaining,
+            for a in _rule_select(keyword, article_title, others_pool, remaining,
                                     label="関連補完（親KW絞り込み）"):
                 if a["id"] not in selected_ids and len(selected) < max_count:
                     selected.append({**a, "_link_type": "related"})
@@ -336,71 +336,24 @@ def _generate_lead_ins(
     articles: list[dict],
 ) -> list[str]:
     """
-    内部リンク挿入前の誘導文を全記事分まとめてClaude Haikuで生成する。
-    API失敗時はフォールバック定型文を使用する。
+    内部リンク挿入前の誘導文を定型文プールからローテーション生成する（API不使用）。
+    リンクタイプ別に異なるプールを使い、同じ文言が連続しないようインデックスをずらす。
     """
     if not articles:
         return []
 
-    type_labels = {
-        "asp_conversion": "ASP成約記事（商品の価格・購入案内ページ）",
-        "asp_related":    "ASP関連記事（同じ商品に関連する記事）",
-        "same_parent":    "関連記事（同テーマ）",
-        "related":        "関連記事",
-    }
-
-    items_text = "\n".join(
-        f"[{i}] {type_labels.get(a.get('_link_type', 'related'), '関連記事')}: {unescape(a['title'])}"
-        for i, a in enumerate(articles)
-    )
-
-    prompt = (
-        f"ブログ記事の内部リンク直前に置く「誘導文」を生成してください。\n\n"
-        f"## 元記事\n"
-        f"- キーワード: {main_keyword}\n"
-        f"- タイトル: {main_title}\n\n"
-        f"## リンク先一覧\n"
-        f"{items_text}\n\n"
-        f"## ルール\n"
-        f"1. 各リンクの直前に置く自然な1文を生成する\n"
-        f"2. 同じ文言の繰り返しを避け、バリエーションを持たせる\n"
-        f"3. ASP成約記事: 価格・購入・導入を促す文言\n"
-        f"   例: 「実際の価格や購入方法はこちらで詳しく解説しています。」\n"
-        f"4. 関連記事: 内容を補完する文言\n"
-        f"   例: 「この点についてはこちらの記事で詳しく解説しています。」\n"
-        f"5. 語尾は「〜です。」「〜ください。」「〜ます。」など丁寧語で統一\n"
-        f"6. 30文字以内でシンプルに\n\n"
-        f"番号ごとの誘導文をJSON配列で出力してください。説明不要。例: [\"誘導文0\", \"誘導文1\"]"
-    )
-
-    try:
-        msg = _claude.messages.create(
-            model="claude-haiku-4-5-20251001",
-            max_tokens=400,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        raw = msg.content[0].text.strip()
-        raw = re.sub(r'```[a-z]*\n?', '', raw).strip().strip('`').strip()
-        lead_ins: list[str] = json.loads(raw)
-
-        result = []
-        for i, a in enumerate(articles):
-            is_asp = a.get("_link_type") == "asp_conversion"
-            if i < len(lead_ins) and isinstance(lead_ins[i], str) and lead_ins[i].strip():
-                result.append(lead_ins[i].strip())
-            else:
-                pool = _FALLBACKS_ASP if is_asp else _FALLBACKS_REL
-                result.append(pool[i % len(pool)])
-        return result
-
-    except Exception as e:
-        print(f"[internal_linker] 誘導文生成失敗（フォールバック使用）: {e}")
-        result = []
-        for i, a in enumerate(articles):
-            is_asp = a.get("_link_type") == "asp_conversion"
-            pool = _FALLBACKS_ASP if is_asp else _FALLBACKS_REL
-            result.append(pool[i % len(pool)])
-        return result
+    result  = []
+    asp_idx = 0
+    rel_idx = 0
+    for a in articles:
+        is_asp = a.get("_link_type") == "asp_conversion"
+        if is_asp:
+            result.append(_FALLBACKS_ASP[asp_idx % len(_FALLBACKS_ASP)])
+            asp_idx += 1
+        else:
+            result.append(_FALLBACKS_REL[rel_idx % len(_FALLBACKS_REL)])
+            rel_idx += 1
+    return result
 
 
 # ─────────────────────────────────────────────

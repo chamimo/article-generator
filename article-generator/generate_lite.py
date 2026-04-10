@@ -48,6 +48,7 @@ from config import (
 from modules.article_generator import generate_article
 from modules.wordpress_poster import create_post, post_article_with_image
 from modules.image_generator import generate_image_for_article
+from modules.api_guard import check_stop, daily_summary
 
 # ═══════════════════════════════════════════════════════════════
 # FEATURE FLAGS
@@ -105,7 +106,7 @@ class BlogConfig:
     name:             str
     display_name:     str
     genre:            str
-    target_length:    int
+    target_length:    int | dict  # int（全タイプ共通）or {"MONETIZE":9000,"LONGTAIL":6000,...}
     fact_check:       bool
     candidate_ss_id:  str
     candidate_sheet:  str
@@ -149,7 +150,8 @@ def load_blog_config(blog_name: str) -> BlogConfig:
         name            = blog_name,
         display_name    = data.get("display_name", blog_name),
         genre           = data.get("genre", ""),
-        target_length   = int(data.get("target_length", 3000)),
+        target_length   = (data["target_length"] if isinstance(data.get("target_length"), dict)
+                           else int(data.get("target_length", 9000))),
         fact_check      = bool(data.get("fact_check", True)),
         candidate_ss_id = data.get("candidate_ss_id", CANDIDATE_SS_ID),
         candidate_sheet = data.get("candidate_sheet", CANDIDATE_SHEET),
@@ -944,6 +946,35 @@ def select_keywords(
 
 # ═══════════════════════════════════════════════════════════════
 # STEP 3: 記事生成
+# ─────────────────────────────────────────────────────────────
+# 記事タイプ → target_length 解決ヘルパー
+# ─────────────────────────────────────────────────────────────
+
+def _resolve_target_length(target_length: int | dict, article_type: str) -> int:
+    """
+    BlogConfig.target_length（int or dict）と article_type から
+    生成に使う目標文字数を返す。
+
+    dict の場合: キーは大文字 MONETIZE / LONGTAIL / FUTURE / TREND など。
+    "trend" は "FUTURE" にフォールバック（キーがなければ最大値）。
+    """
+    if isinstance(target_length, int):
+        return target_length
+    if not isinstance(target_length, dict):
+        return 9000
+
+    key = article_type.upper()
+    normalized = {k.upper(): int(v) for k, v in target_length.items()}
+
+    if key in normalized:
+        return normalized[key]
+    # TREND → FUTURE フォールバック（短め記事として扱う）
+    if key == "TREND" and "FUTURE" in normalized:
+        return normalized["FUTURE"]
+    # どのキーにもマッチしなければ最大値（品質優先）
+    return max(normalized.values())
+
+
 # 既存の generate_article() をそのまま利用
 # ═══════════════════════════════════════════════════════════════
 def generate(
@@ -951,19 +982,25 @@ def generate(
     volume: int,
     blog_cfg: BlogConfig | None = None,
     sub_keywords: list[str] | None = None,
+    article_type: str = "longtail",
 ) -> dict:
     """
     記事を生成して dict で返す。
-    blog_cfg が指定された場合はそのブログの設定（fact_check）を反映する。
-    sub_keywords が指定された場合は記事本文に自然に盛り込む。
+    blog_cfg が指定された場合はそのブログの設定（fact_check・target_length）を反映する。
+    article_type に応じて target_length を解決し、H3本数・FAQ・max_tokensを切り替える。
     """
-    fact_check = blog_cfg.fact_check if blog_cfg is not None else True
+    fact_check    = blog_cfg.fact_check if blog_cfg is not None else True
+    raw_tl        = blog_cfg.target_length if blog_cfg is not None else 9000
+    target_length = _resolve_target_length(raw_tl, article_type)
+
     log.info(
-        f"[generate] 生成開始: 「{keyword}」(vol:{volume:,}) fact_check={fact_check}"
+        f"[generate] 生成開始: 「{keyword}」(vol:{volume:,})"
+        f" fact_check={fact_check} target_length={target_length:,}字"
         + (f"  サブKW:{len(sub_keywords)}件" if sub_keywords else "")
     )
     article = generate_article(keyword, volume, sub_keywords=sub_keywords,
-                               enable_fact_check=fact_check)
+                               enable_fact_check=fact_check,
+                               target_length=target_length)
     log.info(f"[generate] 完了: 「{article['title']}」")
     return article
 
@@ -1140,6 +1177,14 @@ def run_blog(
     n_success = 0
     n_error   = 0
 
+    # 処理開始前に安全装置チェック（STOP ファイル / 日次・時間上限）
+    check_stop()
+    summary = daily_summary()
+    log.info(
+        f"[api_guard] 本日の使用量: ${summary['cost_usd']:.4f} / ¥{summary['cost_jpy']:.0f}"
+        f" ({summary['calls']}回呼び出し)"
+    )
+
     for i, chosen in enumerate(targets, 1):
         article_type_label = chosen.get("_type", "longtail")
         log.info(f"{'─' * 60}")
@@ -1169,7 +1214,8 @@ def run_blog(
             ][:20]  # 最大20件まで渡す
 
             article     = generate(chosen["keyword"], chosen["volume"],
-                                   blog_cfg=blog_cfg, sub_keywords=related_sub or None)
+                                   blog_cfg=blog_cfg, sub_keywords=related_sub or None,
+                                   article_type=article_type_label)
             post_result = post(article, dry_run=dry_run, blog_cfg=blog_cfg)
 
             item.update({

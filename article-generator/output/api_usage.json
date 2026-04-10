@@ -1,0 +1,95 @@
+{
+  "entries": [
+    {
+      "timestamp": "2026-04-10T20:00:14.531840+00:00",
+      "date": "2026-04-10",
+      "hour": "2026-04-10T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 142,
+      "cost_usd": 0.000656,
+      "label": "lsi:AI副業 怖い 始められない"
+    },
+    {
+      "timestamp": "2026-04-10T20:00:17.719509+00:00",
+      "date": "2026-04-10",
+      "hour": "2026-04-10T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 426,
+      "cost_usd": 0.001846,
+      "label": "kw_research:AI副業 怖い 始められない"
+    },
+    {
+      "timestamp": "2026-04-10T20:02:22.019417+00:00",
+      "date": "2026-04-10",
+      "hour": "2026-04-10T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4910,
+      "output_tokens": 8000,
+      "cost_usd": 0.13473,
+      "label": "article:AI副業 怖い 始められない"
+    },
+    {
+      "timestamp": "2026-04-10T20:02:30.355681+00:00",
+      "date": "2026-04-10",
+      "hour": "2026-04-10T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 121,
+      "output_tokens": 81,
+      "cost_usd": 0.000421,
+      "label": "lsi:AndroidでiPhoneとAirDropできます、グーグルがXでアピール"
+    },
+    {
+      "timestamp": "2026-04-10T20:02:34.545006+00:00",
+      "date": "2026-04-10",
+      "hour": "2026-04-10T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 188,
+      "output_tokens": 496,
+      "cost_usd": 0.002134,
+      "label": "kw_research:AndroidでiPhoneとAirDropできます、グーグルがXでアピール"
+    },
+    {
+      "timestamp": "2026-04-10T20:03:45.156145+00:00",
+      "date": "2026-04-10",
+      "hour": "2026-04-10T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4927,
+      "output_tokens": 4500,
+      "cost_usd": 0.082281,
+      "label": "article:AndroidでiPhoneとAirDropできます、グーグルがXでアピール"
+    },
+    {
+      "timestamp": "2026-04-10T20:03:50.071991+00:00",
+      "date": "2026-04-10",
+      "hour": "2026-04-10T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 106,
+      "cost_usd": 0.000514,
+      "label": "lsi:chime note pro aiボイスレコーダー"
+    },
+    {
+      "timestamp": "2026-04-10T20:03:54.417300+00:00",
+      "date": "2026-04-10",
+      "hour": "2026-04-10T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 687,
+      "cost_usd": 0.002891,
+      "label": "kw_research:chime note pro aiボイスレコーダー"
+    },
+    {
+      "timestamp": "2026-04-10T20:06:27.559310+00:00",
+      "date": "2026-04-10",
+      "hour": "2026-04-10T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5550,
+      "output_tokens": 11210,
+      "cost_usd": 0.1848,
+      "label": "article:chime note pro aiボイスレコーダー"
+    }
+  ],
+  "events": []
+}

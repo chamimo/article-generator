@@ -1,0 +1,87 @@
+2026-04-11 05:00:06 [INFO] ============================================================
+2026-04-11 05:00:06 [INFO] generate_lite.py 開始  dry_run=False
+2026-04-11 05:00:06 [INFO] ============================================================
+2026-04-11 05:00:06 [INFO] 対象ブログ: ['workup-ai']
+2026-04-11 05:00:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-11 05:00:06 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-04-11 05:00:06 [INFO] ════════════════════════════════════════════════════════════
+2026-04-11 05:00:06 [INFO]   genre            : AI・副業・転職・キャリア
+2026-04-11 05:00:06 [INFO]   fact_check       : True
+2026-04-11 05:00:06 [INFO]   article_type_mix : True
+2026-04-11 05:00:06 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-04-11 05:00:06 [INFO]   article_count    : 3  dry_run: False
+2026-04-11 05:00:09 [INFO] [wp] 公開済み記事取得: 331件
+2026-04-11 05:00:09 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 1, 'monetize': 1}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-11 05:00:11 [DEBUG] [fetch] シート「絞り込みKW」: 505行 / ヘッダー: ['キーワード', 'SEO難易度', '月間検索数', 'CPC（$）', '競合性', 'キーワード', 'allintitle', 'intitle', 'Q&Aサイト', '', '無料ブログ', '', 'TikTok', '', 'Instagram', '', 'エックス', '', 'Facebook', '', 'aim', '投稿ステータス', '投稿日', '記事URL', '投稿ID', '使用サブKW', 'メモ']
+2026-04-11 05:00:11 [INFO] [fetch] [キーワード] メインKW: 170件（vol≥30 or N/A）  サブKW: 210件（vol<30）  テーマ外除外: 125件  aim内訳: [future:20, aim:115]
+2026-04-11 05:00:11 [DEBUG] [group_pool] グループ数: 75件 → pool: 50件
+2026-04-11 05:00:11 [INFO] [dup_check] 優先候補: 88件 {'future': 20, 'aim': 68} を先頭評価
+2026-04-11 05:00:11 [DEBUG] [dup_check] OK: 「AI副業 怖い 始められない」
+2026-04-11 05:00:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=138件, 要求=1件)
+2026-04-11 05:00:11 [INFO] [select] 1件選定 (要求=1件)
+2026-04-11 05:00:11 [INFO] [select]   1. 「AI副業 怖い 始められない」 vol=0 seo=N/A comp=N/A
+2026-04-11 05:00:11 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-04-11 05:00:12 [INFO] [trend] Google Trends JP: 10件
+2026-04-11 05:00:12 [INFO] [trend] はてなブックマーク IT: 30件
+2026-04-11 05:00:12 [INFO] [trend] トレンドKW 計: 40件（重複除去後）
+2026-04-11 05:00:12 [DEBUG] [group_pool] グループ数: 40件 → pool: 40件
+2026-04-11 05:00:12 [DEBUG] [dup_check] OK: 「AndroidでiPhoneとAirDropできます、グーグルがXでアピール」
+2026-04-11 05:00:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=40件, 要求=1件)
+2026-04-11 05:00:12 [INFO] [select] 1件選定 (要求=1件)
+2026-04-11 05:00:12 [INFO] [select]   1. 「AndroidでiPhoneとAirDropできます、グーグルがXでアピール」 vol=0 seo=N/A comp=N/A
+2026-04-11 05:00:12 [INFO] [workup-ai] TREND選定: 1件
+2026-04-11 05:00:12 [DEBUG] [group_pool] グループ数: 16件 → pool: 23件
+2026-04-11 05:00:12 [INFO] [dup_check] 除外: 「aiボイスレコーダー plaud note」 → 直近7日重複: 「PLAUD NOTEレビュー｜AIボイスレコーダーの使い方・価格・機能を徹底解説」
+2026-04-11 05:00:12 [INFO] [dup_check] 除外: 「AIボイスレコーダー」 → コアKW重複: 「AIボイスレコーダー比較おすすめ9選！文字起こし精度・価格・機能を徹底検証」(core: 'aiボイスレコーダー')
+2026-04-11 05:00:12 [DEBUG] [dup_check] OK: 「chime note pro aiボイスレコーダー」
+2026-04-11 05:00:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=2件 (pool=23件, 要求=1件)
+2026-04-11 05:00:12 [INFO] [select] 1件選定 (要求=1件)
+2026-04-11 05:00:12 [INFO] [select]   1. 「chime note pro aiボイスレコーダー」 vol=110 seo=N/A comp=96
+2026-04-11 05:00:12 [INFO] [workup-ai] MONETIZE選定: 1件
+2026-04-11 05:00:12 [INFO] [workup-ai] 候補: 170件 / 選定: 3件 / 生成予定: 3件
+2026-04-11 05:00:12 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-04-11 05:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-04-11 05:00:12 [INFO] [workup-ai] [1/3] [LONGTAIL] 「AI副業 怖い 始められない」 vol=0 ★FUTURE
+2026-04-11 05:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-04-11 05:00:12 [INFO] [generate] 生成開始: 「AI副業 怖い 始められない」(vol:0) fact_check=True target_length=6,000字
+2026-04-11 05:02:22 [ERROR] [workup-ai] [1/3] ❌ エラー（続行）: Claude APIからのJSON解析エラー: Unterminated string starting at: line 9 column 14 (char 639)
+---
+{
+  "title": "AI副業が怖い・始められない人へ！リスク回避と安全な始め方を徹底解説",
+  "meta_description": "AI副業が怖い・始められないと感じている初心者向けに、リスクの正体・詐欺の見分け方・失敗事例・安全な始め方をわかりやすく解説します。不安を克服して信頼できるAI副業を選ぶための具体的な手順と注意点を網羅。まずはここから読んでください。",
+  "slug": "ai-side-job-scary-how-to-start-safely",
+  "image_prompt": "A calm and reassuring illustration of a beginner sitting at a laptop with gentle light, AI icons floating around, safe and trusted symbols like shields and checkmarks, soft blue and white tones, no text, professional blog header, high q
+2026-04-11 05:02:22 [INFO] [workup-ai] 3秒待機...
+2026-04-11 05:02:25 [INFO] ────────────────────────────────────────────────────────────
+2026-04-11 05:02:25 [INFO] [workup-ai] [2/3] [TREND] 「AndroidでiPhoneとAirDropできます、グーグルがXでアピール」 vol=0
+2026-04-11 05:02:25 [INFO] ────────────────────────────────────────────────────────────
+2026-04-11 05:02:25 [INFO] [generate] 生成開始: 「AndroidでiPhoneとAirDropできます、グーグルがXでアピール」(vol:0) fact_check=True target_length=3,000字
+2026-04-11 05:03:45 [ERROR] [workup-ai] [2/3] ❌ エラー（続行）: Claude APIからのJSON解析エラー: Unterminated string starting at: line 9 column 14 (char 719)
+---
+{
+  "title": "AndroidでiPhoneとAirDropできる！GoogleがXで公式アピールした新機能とは",
+  "meta_description": "GoogleがX（旧Twitter）で「AndroidでもiPhoneとAirDropできる」と公式にアピールしたことが話題です。この記事では、AndroidとiPhoneのクロスプラットフォームなファイル転送を可能にするGoogle Nearby Shareの仕組みや使い方、AirDropとの違い、実際に試す手順まで初心者にもわかりやすく解説します。",
+  "slug": "android-iphone-airdrop-google-nearby-share",
+  "image_prompt": "Smartphone file transfer concept, Android phone and iPhone exchanging data wirelessly, glowing connection beams between two devices held side by side, clean 
+2026-04-11 05:03:45 [INFO] [workup-ai] 3秒待機...
+2026-04-11 05:03:48 [INFO] ────────────────────────────────────────────────────────────
+2026-04-11 05:03:48 [INFO] [workup-ai] [3/3] [MONETIZE] 「chime note pro aiボイスレコーダー」 vol=110
+2026-04-11 05:03:48 [INFO] ────────────────────────────────────────────────────────────
+2026-04-11 05:03:48 [INFO] [generate] 生成開始: 「chime note pro aiボイスレコーダー」(vol:110) fact_check=True target_length=9,000字
+2026-04-11 05:06:30 [INFO] [generate] 完了: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビュー！」
+2026-04-11 05:06:40 [INFO] [post] 画像生成完了: 80,706 bytes
+2026-04-11 05:06:53 [INFO] [post] WP投稿完了: ID=9487 → https://workup-ai.com/wp-admin/post.php?post=9487&action=edit
+2026-04-11 05:06:53 [INFO] [workup-ai] [3/3] ✅ 完了: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビュー！」
+2026-04-11 05:06:53 [INFO] [workup-ai] 完了: 成功=1件 / 失敗=2件 / 合計=3件
+2026-04-11 05:06:53 [INFO] 
+============================================================
+2026-04-11 05:06:53 [INFO] 【全体サマリー】
+2026-04-11 05:06:53 [INFO]   ブログ数  : 1件
+2026-04-11 05:06:53 [INFO]   生成件数  : 1件成功 / 2件失敗 / 計3件
+2026-04-11 05:06:53 [INFO]   所要時間  : 406.5秒
+2026-04-11 05:06:53 [INFO]   ❌ [workup-ai] AI副業 怖い 始められない → (生成失敗)
+2026-04-11 05:06:53 [INFO]   ❌ [workup-ai] AndroidでiPhoneとAirDropできます、グーグルがXでアピール → (生成失敗)
+2026-04-11 05:06:53 [INFO]   ✅ [workup-ai] chime note pro aiボイスレコーダー → Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビュー！
+2026-04-11 05:06:53 [INFO]        https://workup-ai.com/wp-admin/post.php?post=9487&action=edit
+2026-04-11 05:06:53 [INFO] ============================================================

@@ -6,6 +6,7 @@ import anthropic
 from config import ANTHROPIC_API_KEY
 from modules.image_generator import generate_imagefx_prompt
 from modules.fact_checker import needs_fact_check, check_facts
+from modules.api_guard import check_stop, record_usage
 
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
@@ -266,6 +267,50 @@ _PLAUD_NOTTA_INSTRUCTION = """\
 """
 
 
+# ============================================================
+# 記事タイプ別 構造設定
+# target_length → (h3_min, h3_max, faq_min, faq_max, max_tokens)
+# ============================================================
+_ARTICLE_STRUCTURE: dict[int, tuple[int, int, int, int, int]] = {
+    9000: (14, 18, 8, 10, 12000),  # MONETIZE: 比較・レビュー系・高品質
+    6000: ( 8, 12, 5,  7,  8000),  # LONGTAIL: 標準SEO記事
+    3000: ( 5,  7, 3,  4,  4500),  # FUTURE / TREND: 短め情報記事
+}
+
+def _get_structure(target_length: int) -> tuple[int, int, int, int, int]:
+    """target_lengthに最も近い構造設定を返す。"""
+    if target_length in _ARTICLE_STRUCTURE:
+        return _ARTICLE_STRUCTURE[target_length]
+    closest = min(_ARTICLE_STRUCTURE.keys(), key=lambda k: abs(k - target_length))
+    return _ARTICLE_STRUCTURE[closest]
+
+
+def _build_system_prompt(h3_min: int, h3_max: int, faq_min: int, faq_max: int) -> str:
+    """
+    H3本数・FAQ問数に応じてSYSTEM_PROMPTの数値指示を置き換えて返す。
+    SYSTEM_PROMPT自体は変更せず、呼び出しごとに必要な値で差し替える。
+    """
+    prompt = SYSTEM_PROMPT
+    prompt = prompt.replace(
+        "H3は合計14〜18本（抽象語禁止、質問形・行動導線を中心に）",
+        f"H3は合計{h3_min}〜{h3_max}本（抽象語禁止、質問形・行動導線を中心に）",
+    )
+    prompt = prompt.replace(
+        "FAQは8〜10問（各回答200字以上）",
+        f"FAQは{faq_min}〜{faq_max}問（各回答200字以上）",
+    )
+    prompt = prompt.replace(
+        "## 4. よくある質問（8〜10問、各回答200字以上）",
+        f"## 4. よくある質問（{faq_min}〜{faq_max}問、各回答200字以上）",
+    )
+    # SYSTEM_PROMPT はf-string なので {{8〜10問繰り返し}} → {8〜10問繰り返し} になっている
+    prompt = prompt.replace(
+        "{8〜10問繰り返し}",
+        f"{{{faq_min}〜{faq_max}問繰り返し}}",
+    )
+    return prompt
+
+
 def _get_keyword_research(keyword: str) -> dict:
     """
     Claude Haiku でキーワードリサーチを一括生成する。
@@ -277,6 +322,7 @@ def _get_keyword_research(keyword: str) -> dict:
             "longtail": ["ロングテール複合KW", ...] # 8〜10個
         }
     """
+    check_stop()
     msg = client.messages.create(
         model="claude-haiku-4-5-20251001",
         max_tokens=800,
@@ -291,6 +337,8 @@ def _get_keyword_research(keyword: str) -> dict:
             ),
         }],
     )
+    record_usage("claude-haiku-4-5-20251001",
+                 msg.usage.input_tokens, msg.usage.output_tokens, f"kw_research:{keyword}")
     raw = msg.content[0].text.strip()
     if raw.startswith("```"):
         lines = raw.split("\n")
@@ -313,6 +361,7 @@ def _get_lsi_keywords(keyword: str) -> str:
     Returns:
         「用語1、用語2、...」形式の文字列（プロンプトに直接埋め込む用）
     """
+    check_stop()
     msg = client.messages.create(
         model="claude-haiku-4-5-20251001",
         max_tokens=200,
@@ -326,6 +375,8 @@ def _get_lsi_keywords(keyword: str) -> str:
             ),
         }],
     )
+    record_usage("claude-haiku-4-5-20251001",
+                 msg.usage.input_tokens, msg.usage.output_tokens, f"lsi:{keyword}")
     raw = msg.content[0].text.strip()
     return raw.splitlines()[0] if raw else ""
 
@@ -364,12 +415,22 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    related_keywords: list[str] | None = None,
                    article_theme: str = "",
                    sub_keywords: list[str] | None = None,
-                   enable_fact_check: bool = True) -> dict:
+                   enable_fact_check: bool = True,
+                   target_length: int = 9000) -> dict:
     """
     記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
+
+    target_length に応じてH3本数・FAQ問数・max_tokensを動的に切り替える。
+      9000 (MONETIZE): H3×14〜18本 / FAQ×8〜10問 / max_tokens=12,000
+      6000 (LONGTAIL):  H3×8〜12本  / FAQ×5〜7問  / max_tokens=8,000
+      3000 (FUTURE):    H3×5〜7本   / FAQ×3〜4問  / max_tokens=4,500
     """
+    h3_min, h3_max, faq_min, faq_max, max_tokens = _get_structure(target_length)
+    system_prompt = _build_system_prompt(h3_min, h3_max, faq_min, faq_max)
+
     use_plaud_notta = _needs_plaud_notta(keyword)
     print(f"[article_generator] 記事構成生成中: 「{keyword}」(vol:{volume})"
+          + f" [{target_length:,}字 / H3:{h3_min}〜{h3_max}本 / FAQ:{faq_min}〜{faq_max}問]"
           + (" ※差別化モード" if differentiation_note else "")
           + (" ※PLAUD/Notta優先" if use_plaud_notta else ""))
 
@@ -448,10 +509,11 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     except Exception:
         pass
 
+    check_stop()
     message = client.messages.create(
         model="claude-sonnet-4-6",
-        max_tokens=16000,
-        system=SYSTEM_PROMPT,
+        max_tokens=max_tokens,
+        system=system_prompt,
         messages=[{
             "role": "user",
             "content": USER_PROMPT_TEMPLATE.format(
@@ -468,6 +530,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
             ),
         }],
     )
+    record_usage("claude-sonnet-4-6",
+                 message.usage.input_tokens, message.usage.output_tokens, f"article:{keyword}")
 
     raw = message.content[0].text.strip()
 
@@ -517,7 +581,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
 
 def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                      sub_keywords: list[str] | None = None,
-                     enable_fact_check: bool = True) -> dict:
+                     enable_fact_check: bool = True,
+                     target_length: int = 9000) -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
@@ -527,13 +592,15 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
         differentiation_note: カニバリ対策の差別化ヒント（空文字列なら通常生成）
         sub_keywords: スプレッドシートのAIM未判定キーワード（任意活用）
         enable_fact_check: 事実確認ステップを実行するか（デフォルト: True）
+        target_length: 目標文字数（9000/6000/3000）。H3本数・FAQ問数・max_tokensを自動調整
 
     Returns:
         {title, meta_description, slug, image_prompt, category_id, category_name,
          content, keyword, volume}
     """
     return _build_article(keyword, volume, differentiation_note,
-                          sub_keywords=sub_keywords, enable_fact_check=enable_fact_check)
+                          sub_keywords=sub_keywords, enable_fact_check=enable_fact_check,
+                          target_length=target_length)
 
 
 def generate_article_from_cluster(cluster: dict, sub_keywords: list[str] | None = None) -> dict:

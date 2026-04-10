@@ -4,7 +4,11 @@
   "display_name": "WorkUp AI",
 
   "genre": "AI・副業・転職・キャリア",
-  "target_length": 3000,
+  "target_length": {
+    "MONETIZE": 9000,
+    "LONGTAIL": 6000,
+    "FUTURE":   3000
+  },
   "fact_check": true,
 
   "candidate_ss_id": "13f8HorKWHGKYpFF5svHF4Cxj5drZ2OKK39FamaVY9n4",
