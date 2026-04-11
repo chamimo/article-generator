@@ -40,7 +40,11 @@
 
   "asp_links": {
     "PLAUD":  "https://workup-ai.com/plaud-note-ai-voice-recorder-review/",
-    "Notta":  ""
+    "Notta":  "",
+    "クラウドワークス": {
+      "url": "https://workup-ai.com/crowdworks",
+      "aliases": ["CrowdWorks", "クラウドワーク"]
+    }
   },
 
   "wp_url_env":          "WP_URL",

@@ -131,8 +131,8 @@ def _theme_hint(text: str) -> str:
 
 def _build_eyecatch_prompt(keyword: str, article_theme: str) -> str:
     """
-    キーワード・記事テーマから人物なしのアイキャッチ用FLUXプロンプトをClaude Haikuで生成する。
-    フラットイラスト・モダンデザイン風、テキストなし。
+    キーワード・記事テーマからアイキャッチ用FLUXプロンプトをClaude Haikuで生成する。
+    フラットデザイン・かわいいビジネス系・パステルカラー・人物なし。
     Haiku呼び出し失敗時はキーワードから直接フォールバックプロンプトを生成する。
     """
     topic = article_theme or keyword
@@ -145,11 +145,14 @@ def _build_eyecatch_prompt(keyword: str, article_theme: str) -> str:
                 "content": (
                     f"Create a short English image prompt (20-30 words) for a blog header illustration "
                     f"about: '{topic}'. "
-                    "Style: flat illustration, modern tech design, vibrant colors, wide horizontal format. "
-                    "Focus on visual objects/icons representing the topic (no people, no text, no watermark). "
+                    "Style: flat design illustration, cute and modern, kawaii business style, "
+                    "pastel colors, soft gradient background, minimal icons. "
+                    "Focus on simple icons and objects representing the topic (laptop, speech bubbles, "
+                    "charts, stars, coins, checkmarks, etc.). No people, no hands, no faces. "
+                    "Avoid: robots, cyberpunk, neon colors, dark backgrounds, clutter, realistic photos. "
                     "Examples: "
-                    "'smartphone with colorful sound wave icons and AI nodes, flat illustration, blue and white color palette' "
-                    "'microphone with flowing text lines and digital circuit patterns, modern flat design, teal and purple' "
+                    "'cute flat design icons of laptop and chat bubbles, soft pink and mint pastel tones, minimal kawaii business style' "
+                    "'flat illustration of calendar, coins and upward arrow icons, soft lavender and cream gradient, modern cute style' "
                     "Output the prompt only."
                 ),
             }],
@@ -158,34 +161,38 @@ def _build_eyecatch_prompt(keyword: str, article_theme: str) -> str:
         return re.sub(r'[#*`"\']+', '', raw).strip()
     except Exception as e:
         print(f"[image_generator] Haikuプロンプト生成失敗、フォールバック使用: {e}")
-        # キーワードをそのまま英語プロンプトに変換して返す
         safe_topic = re.sub(r'[^\w\s]', ' ', topic).strip()
-        return f"{safe_topic} concept icons, flat illustration style, modern tech design, blue and teal color palette"
+        return (
+            f"cute flat design icons for {safe_topic}, "
+            "pastel colors, soft gradient background, minimal kawaii business style"
+        )
 
 
 def generate_eyecatch_image(keyword: str, article_theme: str = "") -> bytes:
     """
-    アイキャッチ画像を生成する（人物なし・テーマ反映フラットイラスト）。
+    アイキャッチ画像を生成する（フラットデザイン・かわいいビジネス系・人物なし）。
 
     - プロンプト: キーワード・記事テーマからClaude Haikuで自動生成
-    - スタイル: フラットイラスト・モダンデザイン風
+    - スタイル: フラットイラスト・パステルカラー・kawaii business style
     - サイズ: 1216×832
     """
     prompt = _build_eyecatch_prompt(keyword, article_theme)
     suffix = (
-        "no people, no human, no face, no silhouette, "
-        "no text, no watermark, high quality digital art, professional blog header"
+        "flat design illustration, pastel colors, soft gradient background, "
+        "cute and modern, kawaii business style, minimal icons, "
+        "no people, no hands, no face, no human, no text, no watermark, "
+        "high quality digital art"
     )
     full_prompt = f"{prompt}, {suffix}"
 
-    print(f"[image_generator] アイキャッチ生成 (人物なし): {prompt[:60]}...")
+    print(f"[image_generator] アイキャッチ生成 (フラットイラスト): {prompt[:60]}...")
     return _call_flux(full_prompt, W_EYECATCH, H_EYECATCH)
 
 
 def _build_h2_image_prompt(h2_title: str, keyword: str) -> str:
     """
     H2タイトル・キーワードから記事テーマに合ったFLUXプロンプトをClaude Haikuで生成する。
-    フラットイラスト・モダンデザイン風、人物なし・テキストなし。
+    フラットデザイン・かわいいビジネス系・パステルカラー・人物なし。
     Haiku呼び出し失敗時はフォールバックプロンプトを使用する。
     """
     try:
@@ -195,11 +202,15 @@ def _build_h2_image_prompt(h2_title: str, keyword: str) -> str:
             messages=[{
                 "role": "user",
                 "content": (
-                    f"Create a short English image prompt (20-30 words) for a blog illustration "
+                    f"Create a short English image prompt (20-30 words) for a blog section illustration "
                     f"about: keyword='{keyword}', section='{h2_title}'. "
-                    "Style: flat illustration, modern design, vibrant colors, no people, no text, no watermark. "
-                    "Focus on visual objects/icons that represent the topic. "
-                    "Examples: 'smartphone with sound wave icons and microphone, flat illustration style, modern tech design, blue and white color palette' "
+                    "Style: flat design illustration, cute and modern, kawaii business style, "
+                    "pastel colors, soft gradient background, minimal icons. "
+                    "Focus on simple icons representing the topic. No people, no hands, no faces. "
+                    "Avoid: robots, cyberpunk, neon colors, dark backgrounds, clutter, realistic photos. "
+                    "Examples: "
+                    "'cute flat icons of checklist and coins with sparkles, soft mint and peach pastel tones, minimal kawaii style' "
+                    "'flat illustration of lightbulb and speech bubbles with stars, soft lavender gradient, modern cute business icons' "
                     "Output the prompt only."
                 ),
             }],
@@ -210,22 +221,27 @@ def _build_h2_image_prompt(h2_title: str, keyword: str) -> str:
         print(f"[image_generator] H2プロンプト生成失敗、フォールバック使用: {e}")
         topic = h2_title or keyword
         safe_topic = re.sub(r'[^\w\s]', ' ', topic).strip()
-        return f"{safe_topic} concept icons, flat illustration style, modern design, vibrant colors"
+        return (
+            f"cute flat design icons for {safe_topic}, "
+            "pastel colors, soft gradient background, minimal kawaii business style"
+        )
 
 
 def generate_h2_image(h2_title: str, keyword: str = "") -> bytes:
     """
-    H2記事内画像を生成する（人物なし・テーマ反映フラットイラスト）。
+    H2記事内画像を生成する（フラットデザイン・かわいいビジネス系・人物なし）。
 
     - プロンプト: H2タイトル・キーワードからClaude Haikuで自動生成
-    - スタイル: フラットイラスト・モダンデザイン風
+    - スタイル: フラットイラスト・パステルカラー・kawaii business style
     - サイズ: 1216×832
     """
     topic = h2_title or keyword
     prompt = _build_h2_image_prompt(topic, keyword)
     suffix = (
-        "flat illustration style, modern design, no people, no human, no face, "
-        "no text, no watermark, high quality digital art, clean background"
+        "flat design illustration, pastel colors, soft gradient background, "
+        "cute and modern, kawaii business style, minimal icons, "
+        "no people, no hands, no face, no human, no text, no watermark, "
+        "high quality digital art"
     )
     full_prompt = f"{prompt}, {suffix}"
 
@@ -249,19 +265,18 @@ _IMAGEFX_NO_PERSON = (
 )
 
 _IMAGEFX_BG_A = (
-    "Modern soft-tech abstract background: large smooth cool-toned color planes "
-    "(blue, mint, silver, purple allowed), with angled or straight lines "
-    "and minimal UI-like micro-lines."
+    "Clean modern workspace background: minimalist desk with soft natural light, "
+    "warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic."
 )
 
 _IMAGEFX_BG_B = (
-    "Dynamic flow abstract background with gently flowing curves or soft lines, "
-    "any color palette allowed, expressing movement and gentle energy."
+    "Soft pastel gradient background: gentle blush pink, cream and ivory tones, "
+    "warm neutral atmosphere, feminine and sophisticated, airy and bright."
 )
 
 _IMAGEFX_BG_C = (
-    "Soft abstract pastel background with smooth gradients, airy shapes, "
-    "gentle color transitions."
+    "Elegant lifestyle background: soft morning light with warm neutrals, "
+    "gentle depth-of-field effect, clean and airy ambiance, muted earth tones."
 )
 
 _IMAGEFX_BG_OPTIONS = [
@@ -292,13 +307,16 @@ def generate_imagefx_prompt(keyword: str, title: str) -> str:
         messages=[{
             "role": "user",
             "content": (
-                f"For a blog header image about '{keyword}' titled '{title}', "
-                "describe specific visual objects/icons (15-20 words) for a flat illustration style. "
-                "No people. Focus on objects, icons, devices, and abstract elements. "
+                f"For a blog header illustration about '{keyword}' titled '{title}', "
+                "describe specific flat design icons and objects (15-20 words). "
+                "Style: cute and modern, kawaii business style, pastel colors, minimal icons. "
+                "Focus on: simple icons representing the topic (laptop, speech bubbles, stars, coins, "
+                "checkmarks, calendars, lightbulbs, charts, etc.). "
+                "Avoid: people, hands, faces, robots, circuits, neon colors, dark elements. "
                 "No explanation. Only the description.\n"
                 "Examples: "
-                "'smartphone with sound wave icons and microphone, AI nodes, teal and blue color scheme' "
-                "'chat bubbles with AI circuit patterns, glowing nodes and digital grid, dark blue and purple'"
+                "'cute flat icons of laptop and speech bubbles with stars, soft pink and mint pastel tones' "
+                "'minimal flat design with calendar, coins and upward arrow, soft lavender and cream gradient'"
             ),
         }],
     )
@@ -323,7 +341,8 @@ def generate_imagefx_prompt(keyword: str, title: str) -> str:
         f"{theme_desc}\n"
         f"{bg_base}\n\n"
         f"{_IMAGEFX_NO_PERSON}\n"
-        "flat illustration style, modern design, no text, no watermark, high quality\n\n"
+        "modern minimal style, elegant design, soft pastel tones, warm neutral colors, "
+        "clean and sophisticated, no text, no watermark, high quality\n\n"
         f'Place one large "AIVice" watermark in the empty area, opacity 8–12%.\n\n'
         f'Add the text "{en_title}" in white or soft white, '
         f"blending naturally with the background."

@@ -64,7 +64,7 @@ AI特有の不自然さを排除し、読者にとって読みやすく、検索
 - FAQは8〜10問（各回答200字以上）
 - 結論ファーストな構成
 - タグは最大5個（重要度の高いものを厳選）
-- まとめチェックリストの直後に締めの訴求文（100〜150字）を1段落追加する。読者への行動促進（「まずは無料で試してみてください」など）を含める。キーワードに関連するアフィリリンク登録済みツールがあれば1つだけ自然に挿入すること。該当ツールがない場合はリンクなしでシンプルにまとめる（登録済みツール以外の公式リンクは不可）
+- まとめチェックリストの直後に締めの文章（150〜200字）を1段落追加する。2〜3文構成で書くこと。構成例：①読者が感じているであろう迷いや苦労に共感する一文（「〜って、慣れるまでどれを選べばいいか本当に迷いますよね」など自然な表現で）→②やさしく背中を押す一文（「気になったものがあれば、まず公式サイトでスペックだけでも確認してみるのがおすすめです」など）。「まず〇〇を試してみてください」「〇〇を選べば間違いありません」のような押しつけがましい表現は使わないこと。キーワードに関連するアフィリリンク登録済みツールがあれば1つだけ自然な文脈で組み込む（リンクのために文章を歪めない）。該当ツールがない場合はリンクなしでよい（登録済みツール以外の公式リンクは不可）
 
 # リンク挿入ルール（厳守）
 
@@ -229,7 +229,7 @@ AI特有の不自然さを排除し、読者にとって読みやすく、検索
 <!-- /wp:list -->
 
 <!-- wp:paragraph -->
-<p>{{締めの訴求文（100〜150字）。読者への行動促進（「まずは無料で試してみてください」など）。キーワードに関連するアフィリリンク登録済みツールがあれば1つだけ自然に挿入すること。該当ツールがない場合はリンクなしでシンプルにまとめる。}}</p>
+<p>{{締めの文章（150〜200字・2〜3文）。①読者の迷いや苦労に共感する一文 → ②やさしく背中を押す一文。「まず〇〇を試してみてください」のような押しつけ表現は禁止。アフィリリンク登録済みツールが文脈に自然に合う場合のみ1つ挿入。}}</p>
 <!-- /wp:paragraph -->
 
 """
@@ -273,8 +273,8 @@ _PLAUD_NOTTA_INSTRUCTION = """\
 # ============================================================
 _ARTICLE_STRUCTURE: dict[int, tuple[int, int, int, int, int]] = {
     9000: (14, 18, 8, 10, 12000),  # MONETIZE: 比較・レビュー系・高品質
-    6000: ( 8, 12, 5,  7,  8000),  # LONGTAIL: 標準SEO記事
-    3000: ( 5,  7, 3,  4,  4500),  # FUTURE / TREND: 短め情報記事
+    6000: ( 8, 12, 5,  7, 12000),  # LONGTAIL: 標準SEO記事（8000→10000→12000に増加）
+    3000: ( 5,  7, 3,  4,  6000),  # FUTURE / TREND: 短め情報記事（4500→6000に増加）
 }
 
 def _get_structure(target_length: int) -> tuple[int, int, int, int, int]:
@@ -422,7 +422,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
 
     target_length に応じてH3本数・FAQ問数・max_tokensを動的に切り替える。
       9000 (MONETIZE): H3×14〜18本 / FAQ×8〜10問 / max_tokens=12,000
-      6000 (LONGTAIL):  H3×8〜12本  / FAQ×5〜7問  / max_tokens=8,000
+      6000 (LONGTAIL):  H3×8〜12本  / FAQ×5〜7問  / max_tokens=10,000
+      3000 (TREND):     H3×5〜7本   / FAQ×3〜4問  / max_tokens= 6,000
       3000 (FUTURE):    H3×5〜7本   / FAQ×3〜4問  / max_tokens=4,500
     """
     h3_min, h3_max, faq_min, faq_max, max_tokens = _get_structure(target_length)
@@ -532,6 +533,13 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     )
     record_usage("claude-sonnet-4-6",
                  message.usage.input_tokens, message.usage.output_tokens, f"article:{keyword}")
+
+    # stop_reason チェック: max_tokens に到達した場合はJSONが途切れているので即エラーにする
+    if message.stop_reason == "max_tokens":
+        raise ValueError(
+            f"max_tokens上限（{max_tokens}）に到達しました。JSONが途切れています。"
+            f" 出力トークン: {message.usage.output_tokens}"
+        )
 
     raw = message.content[0].text.strip()
 

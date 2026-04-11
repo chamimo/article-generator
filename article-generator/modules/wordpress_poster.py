@@ -414,6 +414,7 @@ def post_article_with_image(
     article: dict,
     image_bytes: bytes | None = None,
     asp_links: dict | None = None,
+    stop_words: list[str] | None = None,
 ) -> dict:
     """
     ① カテゴリ自動選択
@@ -475,6 +476,9 @@ def post_article_with_image(
         print(f"[wordpress] H2画像処理: {len(h2_matches)}枚")
         h2_image_data: list[tuple[str, str]] = []
 
+        # アイキャッチ・使用済みH2画像の重複除外セット
+        used_media_ids: set[int] = {featured_media_id} if featured_media_id else set()
+
         for i, match in enumerate(h2_matches, 1):
             h2_title = _extract_h2_title(match.group(0))
             img_alt = f"{h2_title}のイメージ画像" if h2_title else f"{keyword}のイメージ画像"
@@ -482,14 +486,18 @@ def post_article_with_image(
             src_url = ""
             chosen_id = None
 
-            # ライブラリから検索（全枚共通）
+            # ライブラリから検索（アイキャッチ・使用済みH2画像を除外）
             for term in search_terms:
-                candidates = _fetch_media_by_tag(term)
+                candidates = [
+                    c for c in _fetch_media_by_tag(term)
+                    if int(c.get("id", 0)) not in used_media_ids
+                ]
                 if candidates:
                     chosen = random.choice(candidates)
                     src_url = chosen.get("source_url", "")
                     if src_url:
                         chosen_id = chosen.get("id")
+                        used_media_ids.add(int(chosen_id))
                         print(f"[wordpress] H2画像[{i}] ライブラリ選択 (#{term}): {src_url.split('/')[-1]}")
                         break
 
@@ -535,6 +543,7 @@ def post_article_with_image(
                 published_articles=published,
                 asp_links=asp_links or {},
                 article_content=article.get("content", ""),
+                stop_words=stop_words or [],
             )
             if related:
                 article["content"] = inject_internal_links(
@@ -569,7 +578,8 @@ def post_article_with_image(
             category_name=article.get("category_name", ""),
             tags=article.get("tags", []),
             char_count=char_count,
-            eyecatch_url=article.get("eyecatch_url", ""),
+            article_type=article.get("_article_type", ""),
+            kw_status=article.get("_kw_status", ""),
         )
 
 

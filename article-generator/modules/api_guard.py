@@ -18,8 +18,8 @@ from pathlib import Path
 # ============================================================
 # 設定
 # ============================================================
-DAILY_LIMIT_USD   = 2.00   # 1日の上限（ドル）
-HOURLY_LIMIT_USD  = 0.50   # 1時間の上限（ドル）
+DAILY_LIMIT_USD   = 5.00   # 1日の上限（ドル）
+HOURLY_LIMIT_USD  = 1.00   # 1時間の上限（ドル）
 
 # Anthropic 価格（per 1M tokens）
 PRICE = {

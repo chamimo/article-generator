@@ -55,7 +55,7 @@ _SCOPES = [
 _TRACKING_SHEET_NAME = "順位トラッキング"
 _SOURCE_SHEET_NAME   = "キーワード"
 _URL_COL_HEADER      = "記事URL"
-_METRICS             = ["順位", "表示", "クリック", "CTR"]
+_METRICS             = ["順位"]   # 表示・クリック・CTRは不要のため削除
 
 # 列幅（px）
 _COL_WIDTH_KEYWORD = 200
@@ -347,8 +347,10 @@ def sync_ranks(target_date: date | None = None, dry_run: bool = False,
         url     = art["url"]
         title   = art["title"]
 
-        # GSC データ取得
-        page_queries = page_query_data.get(url, [])
+        # GSC データ取得（末尾スラッシュの有無を両方試す）
+        url_slash   = url.rstrip("/") + "/"
+        url_noslash = url.rstrip("/")
+        page_queries = page_query_data.get(url_slash) or page_query_data.get(url_noslash) or []
         best         = client.find_best_query(keyword, page_queries) if page_queries else None
 
         if keyword in kw_to_tracking_row:
@@ -370,14 +372,10 @@ def sync_ranks(target_date: date | None = None, dry_run: bool = False,
 
         # 順位データを書き込み
         if best:
-            position    = round(best["position"], 1)
-            impressions = best["impressions"]
-            clicks      = best["clicks"]
-            ctr_pct     = f"{best['ctr'] * 100:.1f}%"
-            values      = [position, impressions, clicks, ctr_pct]
+            position = round(best["position"], 1)
+            values   = [position]
             matched += 1
-            print(f"  ✓ {keyword[:28]}")
-            print(f"    → {best['query']} | {position}位 / 表示{impressions} / クリック{clicks} / CTR{ctr_pct}")
+            print(f"  ✓ {keyword[:28]} → {best['query']} | {position}位")
 
             if keyword in kw_to_tracking_row:
                 tracking_row = kw_to_tracking_row[keyword]
@@ -395,7 +393,16 @@ def sync_ranks(target_date: date | None = None, dry_run: bool = False,
         else:
             no_data.append(keyword)
 
-    print(f"\n[sync_ranks] GSCマッチ: {matched}件 / データなし（未索引・圏外）: {len(no_data)}件")
+    print(f"\n[sync_ranks] GSCマッチ: {matched}件 / データなし: {len(no_data)}件")
+    if no_data:
+        print("  ※ データなしの主な原因:")
+        print("     - 新規投稿記事（Googleインデックスまで数週間かかる場合あり）")
+        print("     - GSCデータの遅延（約2〜3日）")
+        print("     - 検索順位が圏外または表示回数ゼロ")
+        for kw in no_data[:10]:
+            print(f"     - {kw[:50]}")
+        if len(no_data) > 10:
+            print(f"     ... 他{len(no_data) - 10}件")
     existing_updated = len(set(a["keyword"] for a in articles) & set(kw_to_tracking_row.keys()))
     print(f"[sync_ranks] 新規行: {len(new_rows)}件 / 既存行更新: {existing_updated}件")
 

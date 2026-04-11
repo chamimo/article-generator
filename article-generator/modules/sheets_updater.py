@@ -31,7 +31,7 @@ _NEW_HEADERS = ["投稿ステータス", "投稿日", "記事URL", "投稿ID", "
 _LIST_HEADERS = [
     "投稿日", "公開日", "記事タイトル", "URL", "WP投稿ID",
     "メインKW", "関連KW", "使用サブKW", "カテゴリー", "タグ",
-    "文字数（目安）", "アイキャッチURL", "ステータス",
+    "文字数（目安）", "記事タイプ", "KWステータス", "ステータス",
 ]
 
 _ARTICLE_LIST_SHEET_NAME = SHEETS_ARTICLE_LIST_NAME
@@ -302,7 +302,8 @@ def _append_to_article_list(
     category_name: str,
     tags: list[str],
     char_count: int,
-    eyecatch_url: str,
+    article_type: str = "",
+    kw_status: str = "",
 ) -> None:
     """「投稿記事一覧」シートに1行追記する。"""
     try:
@@ -319,7 +320,8 @@ def _append_to_article_list(
             category_name,
             "、".join(tags),
             str(char_count),
-            eyecatch_url,
+            article_type.upper() if article_type else "",  # LONGTAIL / MONETIZE / TREND / FUTURE
+            kw_status,                                      # aim / add / now / future / trend
             "下書き",
         ]
         ws.append_row(row, value_input_option="USER_ENTERED")
@@ -435,7 +437,8 @@ def mark_posted(
     category_name: str = "",
     tags: list[str] | None = None,
     char_count: int = 0,
-    eyecatch_url: str = "",
+    article_type: str = "",
+    kw_status: str = "",
 ) -> bool:
     """
     スプレッドシートの該当キーワード行に投稿済み情報を書き込み、
@@ -482,7 +485,8 @@ def mark_posted(
             category_name=category_name,
             tags=tags,
             char_count=char_count,
-            eyecatch_url=eyecatch_url,
+            article_type=article_type,
+            kw_status=kw_status,
         )
 
         return True
