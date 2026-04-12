@@ -659,6 +659,276 @@
       "output_tokens": 9903,
       "cost_usd": 0.163947,
       "label": "article:AI副業 初心者 失敗パターン"
+    },
+    {
+      "timestamp": "2026-04-11T20:32:58.062566+00:00",
+      "date": "2026-04-11",
+      "hour": "2026-04-11T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 102,
+      "cost_usd": 0.000496,
+      "label": "lsi:ChatGPT 依存してしまう"
+    },
+    {
+      "timestamp": "2026-04-11T20:33:01.116011+00:00",
+      "date": "2026-04-11",
+      "hour": "2026-04-11T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 435,
+      "cost_usd": 0.001882,
+      "label": "kw_research:ChatGPT 依存してしまう"
+    },
+    {
+      "timestamp": "2026-04-11T20:35:20.646691+00:00",
+      "date": "2026-04-11",
+      "hour": "2026-04-11T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5058,
+      "output_tokens": 9054,
+      "cost_usd": 0.150984,
+      "label": "article:ChatGPT 依存してしまう"
+    },
+    {
+      "timestamp": "2026-04-11T22:08:08.137839+00:00",
+      "date": "2026-04-11",
+      "hour": "2026-04-11T22",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 107,
+      "output_tokens": 96,
+      "cost_usd": 0.00047,
+      "label": "lsi:仕事辞めたい"
+    },
+    {
+      "timestamp": "2026-04-11T22:08:11.656324+00:00",
+      "date": "2026-04-11",
+      "hour": "2026-04-11T22",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 174,
+      "output_tokens": 515,
+      "cost_usd": 0.002199,
+      "label": "kw_research:仕事辞めたい"
+    },
+    {
+      "timestamp": "2026-04-11T22:10:28.648994+00:00",
+      "date": "2026-04-11",
+      "hour": "2026-04-11T22",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5571,
+      "output_tokens": 9929,
+      "cost_usd": 0.165648,
+      "label": "article:仕事辞めたい"
+    },
+    {
+      "timestamp": "2026-04-11T22:26:26.422386+00:00",
+      "date": "2026-04-11",
+      "hour": "2026-04-11T22",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 103,
+      "output_tokens": 79,
+      "cost_usd": 0.000398,
+      "label": "lsi:転職会議"
+    },
+    {
+      "timestamp": "2026-04-11T22:26:30.003069+00:00",
+      "date": "2026-04-11",
+      "hour": "2026-04-11T22",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 170,
+      "output_tokens": 434,
+      "cost_usd": 0.001872,
+      "label": "kw_research:転職会議"
+    },
+    {
+      "timestamp": "2026-04-11T22:28:48.409121+00:00",
+      "date": "2026-04-11",
+      "hour": "2026-04-11T22",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5371,
+      "output_tokens": 10276,
+      "cost_usd": 0.170253,
+      "label": "article:転職会議"
+    },
+    {
+      "timestamp": "2026-04-12T02:00:12.845842+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 105,
+      "output_tokens": 99,
+      "cost_usd": 0.00048,
+      "label": "lsi:転職履歴書"
+    },
+    {
+      "timestamp": "2026-04-12T02:00:16.550826+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 172,
+      "output_tokens": 538,
+      "cost_usd": 0.00229,
+      "label": "kw_research:転職履歴書"
+    },
+    {
+      "timestamp": "2026-04-12T02:02:50.035165+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5254,
+      "output_tokens": 9991,
+      "cost_usd": 0.165627,
+      "label": "article:転職履歴書"
+    },
+    {
+      "timestamp": "2026-04-12T02:03:50.608645+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 89,
+      "cost_usd": 0.000445,
+      "label": "lsi:AIで仕事減るのが怖い"
+    },
+    {
+      "timestamp": "2026-04-12T02:03:54.397939+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 494,
+      "cost_usd": 0.002118,
+      "label": "kw_research:AIで仕事減るのが怖い"
+    },
+    {
+      "timestamp": "2026-04-12T02:06:40.485625+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5099,
+      "output_tokens": 10275,
+      "cost_usd": 0.169422,
+      "label": "article:AIで仕事減るのが怖い"
+    },
+    {
+      "timestamp": "2026-04-12T11:00:12.370868+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 105,
+      "output_tokens": 67,
+      "cost_usd": 0.000352,
+      "label": "lsi:派遣 モア"
+    },
+    {
+      "timestamp": "2026-04-12T11:00:15.643187+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 172,
+      "output_tokens": 467,
+      "cost_usd": 0.002006,
+      "label": "kw_research:派遣 モア"
+    },
+    {
+      "timestamp": "2026-04-12T11:02:17.823043+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5207,
+      "output_tokens": 9718,
+      "cost_usd": 0.161391,
+      "label": "article:派遣 モア"
+    },
+    {
+      "timestamp": "2026-04-12T11:03:04.479874+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 113,
+      "cost_usd": 0.000542,
+      "label": "lsi:AI副業 時間かかりすぎる"
+    },
+    {
+      "timestamp": "2026-04-12T11:03:08.414754+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 484,
+      "cost_usd": 0.002079,
+      "label": "kw_research:AI副業 時間かかりすぎる"
+    },
+    {
+      "timestamp": "2026-04-12T11:05:36.431498+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5120,
+      "output_tokens": 9629,
+      "cost_usd": 0.159795,
+      "label": "article:AI副業 時間かかりすぎる"
+    },
+    {
+      "timestamp": "2026-04-12T20:00:11.584537+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 105,
+      "output_tokens": 132,
+      "cost_usd": 0.000612,
+      "label": "lsi:仕事 猫"
+    },
+    {
+      "timestamp": "2026-04-12T20:00:15.528979+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 172,
+      "output_tokens": 493,
+      "cost_usd": 0.00211,
+      "label": "kw_research:仕事 猫"
+    },
+    {
+      "timestamp": "2026-04-12T20:02:30.869641+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5455,
+      "output_tokens": 9448,
+      "cost_usd": 0.158085,
+      "label": "article:仕事 猫"
+    },
+    {
+      "timestamp": "2026-04-12T20:03:17.182863+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 88,
+      "cost_usd": 0.000441,
+      "label": "lsi:AIツール 無料だけでできる？"
+    },
+    {
+      "timestamp": "2026-04-12T20:03:20.581438+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 485,
+      "cost_usd": 0.002082,
+      "label": "kw_research:AIツール 無料だけでできる？"
+    },
+    {
+      "timestamp": "2026-04-12T20:05:36.685435+00:00",
+      "date": "2026-04-12",
+      "hour": "2026-04-12T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5096,
+      "output_tokens": 9959,
+      "cost_usd": 0.164673,
+      "label": "article:AIツール 無料だけでできる？"
     }
   ],
   "events": [
