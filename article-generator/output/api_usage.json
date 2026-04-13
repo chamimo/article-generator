@@ -929,6 +929,186 @@
       "output_tokens": 9959,
       "cost_usd": 0.164673,
       "label": "article:AIツール 無料だけでできる？"
+    },
+    {
+      "timestamp": "2026-04-13T02:00:10.508746+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 106,
+      "output_tokens": 77,
+      "cost_usd": 0.000393,
+      "label": "lsi:職場 人間関係"
+    },
+    {
+      "timestamp": "2026-04-13T02:00:14.030980+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 173,
+      "output_tokens": 562,
+      "cost_usd": 0.002386,
+      "label": "kw_research:職場 人間関係"
+    },
+    {
+      "timestamp": "2026-04-13T02:02:42.547321+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5474,
+      "output_tokens": 9754,
+      "cost_usd": 0.162732,
+      "label": "article:職場 人間関係"
+    },
+    {
+      "timestamp": "2026-04-13T02:03:18.866009+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 132,
+      "output_tokens": 123,
+      "cost_usd": 0.000598,
+      "label": "lsi:bouoke ボイスレコーダー aiボイスレコーダー 64gb大容量 icレコーダー"
+    },
+    {
+      "timestamp": "2026-04-13T02:03:23.271310+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 199,
+      "output_tokens": 658,
+      "cost_usd": 0.002791,
+      "label": "kw_research:bouoke ボイスレコーダー aiボイスレコーダー 64gb大容量 icレコーダー"
+    },
+    {
+      "timestamp": "2026-04-13T02:06:05.606546+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5731,
+      "output_tokens": 10433,
+      "cost_usd": 0.173688,
+      "label": "article:bouoke ボイスレコーダー aiボイスレコーダー 64gb大容量 icレコーダー"
+    },
+    {
+      "timestamp": "2026-04-13T11:00:13.767366+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 106,
+      "output_tokens": 64,
+      "cost_usd": 0.000341,
+      "label": "lsi:仕事給料高い"
+    },
+    {
+      "timestamp": "2026-04-13T11:00:17.765943+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 173,
+      "output_tokens": 482,
+      "cost_usd": 0.002066,
+      "label": "kw_research:仕事給料高い"
+    },
+    {
+      "timestamp": "2026-04-13T11:03:10.734435+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5068,
+      "output_tokens": 10887,
+      "cost_usd": 0.178509,
+      "label": "article:仕事給料高い"
+    },
+    {
+      "timestamp": "2026-04-13T11:04:08.626232+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 104,
+      "cost_usd": 0.000506,
+      "label": "lsi:leaccohome aiボイスレコーダー"
+    },
+    {
+      "timestamp": "2026-04-13T11:04:12.883649+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 688,
+      "cost_usd": 0.002895,
+      "label": "kw_research:leaccohome aiボイスレコーダー"
+    },
+    {
+      "timestamp": "2026-04-13T11:06:26.426913+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5725,
+      "output_tokens": 9285,
+      "cost_usd": 0.15645,
+      "label": "article:leaccohome aiボイスレコーダー"
+    },
+    {
+      "timestamp": "2026-04-13T20:00:11.874131+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 107,
+      "cost_usd": 0.000514,
+      "label": "lsi:仕事を辞めたい"
+    },
+    {
+      "timestamp": "2026-04-13T20:00:16.801621+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 633,
+      "cost_usd": 0.002672,
+      "label": "kw_research:仕事を辞めたい"
+    },
+    {
+      "timestamp": "2026-04-13T20:02:46.709540+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5358,
+      "output_tokens": 10362,
+      "cost_usd": 0.171504,
+      "label": "article:仕事を辞めたい"
+    },
+    {
+      "timestamp": "2026-04-13T20:03:42.603770+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 102,
+      "cost_usd": 0.000498,
+      "label": "lsi:leaccohome aiボイスレコーダー"
+    },
+    {
+      "timestamp": "2026-04-13T20:03:46.586261+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 596,
+      "cost_usd": 0.002527,
+      "label": "kw_research:leaccohome aiボイスレコーダー"
+    },
+    {
+      "timestamp": "2026-04-13T20:05:43.860927+00:00",
+      "date": "2026-04-13",
+      "hour": "2026-04-13T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5640,
+      "output_tokens": 8883,
+      "cost_usd": 0.150165,
+      "label": "article:leaccohome aiボイスレコーダー"
     }
   ],
   "events": [
