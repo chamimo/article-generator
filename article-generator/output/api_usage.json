@@ -1289,6 +1289,66 @@
       "output_tokens": 9372,
       "cost_usd": 0.157779,
       "label": "article:leaccohome aiボイスレコーダー"
+    },
+    {
+      "timestamp": "2026-04-15T20:00:13.718685+00:00",
+      "date": "2026-04-15",
+      "hour": "2026-04-15T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 91,
+      "cost_usd": 0.00045,
+      "label": "lsi:転職ドラクエ7"
+    },
+    {
+      "timestamp": "2026-04-15T20:00:17.381042+00:00",
+      "date": "2026-04-15",
+      "hour": "2026-04-15T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 589,
+      "cost_usd": 0.002496,
+      "label": "kw_research:転職ドラクエ7"
+    },
+    {
+      "timestamp": "2026-04-15T20:02:26.661471+00:00",
+      "date": "2026-04-15",
+      "hour": "2026-04-15T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5298,
+      "output_tokens": 9404,
+      "cost_usd": 0.156954,
+      "label": "article:転職ドラクエ7"
+    },
+    {
+      "timestamp": "2026-04-15T20:03:32.232386+00:00",
+      "date": "2026-04-15",
+      "hour": "2026-04-15T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 133,
+      "output_tokens": 122,
+      "cost_usd": 0.000594,
+      "label": "lsi:aiボイスレコーダー automemo(オートメモ) s ホワイト amswh 16gb /bluetooth対応"
+    },
+    {
+      "timestamp": "2026-04-15T20:03:36.252318+00:00",
+      "date": "2026-04-15",
+      "hour": "2026-04-15T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 200,
+      "output_tokens": 527,
+      "cost_usd": 0.002268,
+      "label": "kw_research:aiボイスレコーダー automemo(オートメモ) s ホワイト amswh 16gb /bluetooth対応"
+    },
+    {
+      "timestamp": "2026-04-15T20:06:16.575646+00:00",
+      "date": "2026-04-15",
+      "hour": "2026-04-15T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5600,
+      "output_tokens": 9748,
+      "cost_usd": 0.16302,
+      "label": "article:aiボイスレコーダー automemo(オートメモ) s ホワイト amswh 16gb /bluetooth対応"
     }
   ],
   "events": [

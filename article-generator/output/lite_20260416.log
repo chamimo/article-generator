@@ -1,0 +1,75 @@
+2026-04-16 05:00:03 [INFO] ============================================================
+2026-04-16 05:00:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-04-16 05:00:03 [INFO] ============================================================
+2026-04-16 05:00:03 [INFO] 対象ブログ: ['hataraku', 'workup-ai']
+2026-04-16 05:00:03 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-16 05:00:03 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-04-16 05:00:03 [INFO] ════════════════════════════════════════════════════════════
+2026-04-16 05:00:03 [INFO]   genre            : 転職・副業・キャリア
+2026-04-16 05:00:03 [INFO]   fact_check       : True
+2026-04-16 05:00:03 [INFO]   article_type_mix : True
+2026-04-16 05:00:03 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-04-16 05:00:03 [INFO]   article_count    : 1  dry_run: False
+2026-04-16 05:00:06 [WARNING] [hataraku] WP記事取得失敗（重複チェックなしで続行）: 400 Client Error: Bad Request for url: https://hataraku-navi.com/wp-json/wp/v2/posts?status=publish%2Cdraft%2Cprivate&_fields=id%2Ctitle%2Cdate%2Cslug%2Cstatus&per_page=100&page=1
+2026-04-16 05:00:06 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-16 05:00:10 [DEBUG] [fetch] シート「絞り込みKW」: 34164行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '競合性']
+2026-04-16 05:00:11 [INFO] [fetch] [絞り込みKW] メインKW: 12378件（vol≥30 or N/A）  サブKW: 15220件（vol<30）  テーマ外除外: 1992件
+2026-04-16 05:00:11 [INFO] [select] 1件選定 (要求=1件)
+2026-04-16 05:00:11 [INFO] [select]   1. 「転職ドラクエ7」 vol=14,800 seo=34 comp=N/A
+2026-04-16 05:00:11 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-04-16 05:00:11 [INFO] [hataraku] 候補: 12378件 / 選定: 1件 / 生成予定: 1件
+2026-04-16 05:00:11 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-04-16 05:00:11 [INFO] ────────────────────────────────────────────────────────────
+2026-04-16 05:00:11 [INFO] [hataraku] [1/1] [LONGTAIL] 「転職ドラクエ7」 vol=14,800
+2026-04-16 05:00:11 [INFO] ────────────────────────────────────────────────────────────
+2026-04-16 05:00:11 [INFO] [generate] 生成開始: 「転職ドラクエ7」(vol:14,800) fact_check=True target_length=6,000字  サブKW:1件
+2026-04-16 05:02:29 [INFO] [generate] 完了: 「転職ドラクエ7完全攻略！おすすめ職業・最強パーティ・効率的なレベル上げまで解説」
+2026-04-16 05:02:39 [INFO] [post] 画像生成完了: 58,387 bytes
+2026-04-16 05:03:26 [INFO] [post] WP投稿完了: ID=9625 → https://workup-ai.com/wp-admin/post.php?post=9625&action=edit
+2026-04-16 05:03:26 [INFO] [hataraku] [1/1] ✅ 完了: 「転職ドラクエ7完全攻略！おすすめ職業・最強パーティ・効率的なレベル上げまで解説」
+2026-04-16 05:03:26 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-04-16 05:03:26 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-16 05:03:26 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-04-16 05:03:26 [INFO] ════════════════════════════════════════════════════════════
+2026-04-16 05:03:26 [INFO]   genre            : AI・副業・転職・キャリア
+2026-04-16 05:03:26 [INFO]   fact_check       : True
+2026-04-16 05:03:26 [INFO]   article_type_mix : True
+2026-04-16 05:03:26 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-04-16 05:03:26 [INFO]   article_count    : 1  dry_run: False
+2026-04-16 05:03:28 [INFO] [wp] 記事取得: 計368件 (draft=10 / private=6 / publish=352)
+2026-04-16 05:03:28 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-16 05:03:30 [DEBUG] [fetch] シート「絞り込みKW」: 505行 / ヘッダー: ['キーワード', 'SEO難易度', '月間検索数', 'CPC（$）', '競合性', 'キーワード', 'allintitle', 'intitle', 'Q&Aサイト', '', '無料ブログ', '', 'TikTok', '', 'Instagram', '', 'エックス', '', 'Facebook', '', 'aim', '投稿ステータス', '投稿日', '記事URL', '投稿ID', '使用サブKW', 'メモ']
+2026-04-16 05:03:30 [INFO] [fetch] [キーワード] メインKW: 127件（vol≥30 or N/A）  サブKW: 176件（vol<30）  テーマ外除外: 125件  aim内訳: [aim:98]
+2026-04-16 05:03:30 [DEBUG] [group_pool] グループ数: 70件 → pool: 50件
+2026-04-16 05:03:30 [INFO] [dup_check] 優先候補: 51件 {'aim': 51} を先頭評価
+2026-04-16 05:03:30 [INFO] [dup_check] 除外: 「plaud note aiボイスレコーダー 無料ai文字起こし&要約機能込み(ケース付き)」 → 直近7日重複: 「PLAUD NOTEレビュー｜AIボイスレコーダーの使い方・価格・機能を徹底解説」
+2026-04-16 05:03:30 [INFO] [dup_check] 除外: 「plaud note aiボイスレコーダー iphone」 → コアKW重複: 「PLAUD NOTE AIボイスレコーダーの精度を徹底検証！距離・マイク・英語対」(core: 'plaud note aiボイスレコーダー')
+2026-04-16 05:03:30 [DEBUG] [dup_check] OK: 「aiボイスレコーダー automemo(オートメモ) s ホワイト amswh 16gb /bluetooth対応」
+2026-04-16 05:03:30 [INFO] [dup_check] 完了: 選定=1件 / 除外=2件 (pool=101件, 要求=1件)
+2026-04-16 05:03:30 [INFO] [select] 1件選定 (要求=1件)
+2026-04-16 05:03:30 [INFO] [select]   1. 「aiボイスレコーダー automemo(オートメモ) s ホワイト amswh 16gb /bluetooth対応」 vol=0 seo=N/A comp=N/A
+2026-04-16 05:03:30 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-04-16 05:03:30 [INFO] [workup-ai] 候補: 127件 / 選定: 1件 / 生成予定: 1件
+2026-04-16 05:03:30 [INFO] [api_guard] 本日の使用量: $0.1599 / ¥24 (3回呼び出し)
+2026-04-16 05:03:30 [INFO] ────────────────────────────────────────────────────────────
+2026-04-16 05:03:30 [INFO] [workup-ai] [1/1] [LONGTAIL] 「aiボイスレコーダー automemo(オートメモ) s ホワイト amswh 16gb /bluetooth対応」 vol=0 ★AIM
+2026-04-16 05:03:30 [INFO] ────────────────────────────────────────────────────────────
+2026-04-16 05:03:30 [INFO] [generate] 生成開始: 「aiボイスレコーダー automemo(オートメモ) s ホワイト amswh 16gb /bluetooth対応」(vol:0) fact_check=True target_length=6,000字
+2026-04-16 05:06:18 [INFO] [generate] 完了: 「AIボイスレコーダー automemo S ホワイト レビュー｜文字起こし・Bluetooth連携の実力を徹底解説」
+2026-04-16 05:06:27 [INFO] [post] 画像生成完了: 35,936 bytes
+2026-04-16 05:06:50 [INFO] [post] WP投稿完了: ID=9627 → https://workup-ai.com/wp-admin/post.php?post=9627&action=edit
+2026-04-16 05:06:51 [INFO] [workup-ai] [1/1] ✅ 完了: 「AIボイスレコーダー automemo S ホワイト レビュー｜文字起こし・Bluetooth連携の実力を徹底解説」
+2026-04-16 05:06:51 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-04-16 05:06:51 [INFO] 
+============================================================
+2026-04-16 05:06:51 [INFO] 【全体サマリー】
+2026-04-16 05:06:51 [INFO]   ブログ数  : 2件
+2026-04-16 05:06:51 [INFO]   生成件数  : 2件成功 / 0件失敗 / 計2件
+2026-04-16 05:06:51 [INFO]   所要時間  : 407.1秒
+2026-04-16 05:06:51 [INFO]   ✅ [hataraku] 転職ドラクエ7 → 転職ドラクエ7完全攻略！おすすめ職業・最強パーティ・効率的なレベル上げまで解説
+2026-04-16 05:06:51 [INFO]        https://workup-ai.com/wp-admin/post.php?post=9625&action=edit
+2026-04-16 05:06:51 [INFO]   ✅ [workup-ai] aiボイスレコーダー automemo(オートメモ) s ホワイト amswh 16gb /bluetooth対応 → AIボイスレコーダー automemo S ホワイト レビュー｜文字起こし・Bluetooth連携の実力を徹底解説
+2026-04-16 05:06:51 [INFO]        https://workup-ai.com/wp-admin/post.php?post=9627&action=edit
+2026-04-16 05:06:51 [INFO] ============================================================
