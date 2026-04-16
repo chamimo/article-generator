@@ -1,0 +1,47 @@
+{
+  "_comment": "generate_lite.py マルチブログ設定ファイル - はた楽ナビ",
+  "name": "hataraku",
+  "display_name": "はた楽ナビ",
+
+  "genre": "転職・副業・キャリア",
+  "target_length": {
+    "MONETIZE": 9000,
+    "LONGTAIL": 6000,
+    "FUTURE":   3000
+  },
+  "fact_check": true,
+
+  "candidate_ss_id": "1_pgNf2-JNlT2uwJFGzlVPGpuVpj2mf5eSsa_YLwMwGc",
+  "candidate_sheet": "絞り込みKW",
+  "article_count": 3,
+  "min_volume": 0,
+
+  "article_type_weights": {
+    "longtail": 0.5,
+    "trend":    0.3,
+    "monetize": 0.2
+  },
+
+  "wp_url_env":          "WP_URL",
+  "wp_username_env":     "WP_USERNAME",
+  "wp_app_password_env": "WP_APP_PASSWORD",
+
+  "stop_words": ["おすすめ", "比較", "2026", "ランキング"],
+  "aliases": ["hataraku", "hataraku-navi"],
+
+  "allowed_themes": [
+    "転職", "副業", "キャリア", "仕事", "派遣",
+    "フリーランス", "求人", "給与", "職場", "就職",
+    "アルバイト", "パート", "正社員", "面接", "履歴書"
+  ],
+  "ng_keywords": [],
+
+  "asp_links": {},
+
+  "writing_style": {
+    "tone":          "経験者の本音・リアル",
+    "persona":       "転職を複数回経験したWeb担当者",
+    "closing_style": "失敗談も交えた共感重視の締め",
+    "ng_expressions": ["〜してみてください", "〜がおすすめです", "ぜひ〜"]
+  }
+}
