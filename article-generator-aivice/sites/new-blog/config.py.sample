@@ -1,0 +1,76 @@
+"""
+新しいサイト用の設定テンプレート
+
+使い方:
+  1. sites/<サイト名>/ ディレクトリを作成
+  2. このファイルを config.py にコピーして編集
+  3. 必要に応じて sites/<サイト名>/.env を作成
+  4. python3 main.py --site <サイト名> --clusters --limit 5 で実行
+"""
+import os
+from dotenv import load_dotenv
+
+# ── パス解決 ──────────────────────────────────────────────────────────────
+_SITE_DIR = os.path.dirname(os.path.abspath(__file__))
+_ROOT_DIR = os.path.dirname(os.path.dirname(_SITE_DIR))
+
+# .env 読み込み: ルート .env → このサイト固有 .env（上書き）
+load_dotenv(os.path.join(_ROOT_DIR, ".env"))
+load_dotenv(os.path.join(_SITE_DIR, ".env"), override=True)
+
+# ── Anthropic ──────────────────────────────────────────────────────────────
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
+
+# ── WordPress ─────────────────────────────────────────────────────────────
+WP_URL          = os.getenv("WP_URL_SITE2", "https://your-new-site.com").rstrip("/")
+WP_USERNAME     = os.getenv("WP_USERNAME_SITE2", "")
+WP_APP_PASSWORD = os.getenv("WP_APP_PASSWORD_SITE2", "")
+
+# ── Google Sheets ──────────────────────────────────────────────────────────
+GOOGLE_SHEETS_ID        = os.getenv("GOOGLE_SHEETS_ID_SITE2", "")
+GOOGLE_CREDENTIALS_PATH = os.getenv(
+    "GOOGLE_CREDENTIALS_PATH",
+    os.path.join(_ROOT_DIR, "credentials.json"),
+)
+
+# ── Hugging Face ───────────────────────────────────────────────────────────
+HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY", "")
+
+# ── Google Search Console ──────────────────────────────────────────────────
+GSC_SITE_URL = os.getenv("GSC_SITE_URL_SITE2", "https://your-new-site.com/")
+
+# ── サイト情報（必ず変更すること）─────────────────────────────────────────
+SITE_NAME  = "新しいブログ名"
+SITE_THEME = "ブログのテーマ・ジャンル説明"
+
+# ── WordPress 投稿設定 ─────────────────────────────────────────────────────
+WP_CATEGORY_ID = int(os.getenv("WP_CATEGORY_ID_SITE2", "1"))
+WP_STATUS      = os.getenv("WP_STATUS_SITE2", "draft")
+
+# ── フィルター設定 ────────────────────────────────────────────────────────
+MIN_SEARCH_VOLUME = int(os.getenv("MIN_SEARCH_VOLUME", "50"))
+
+# ── パス ──────────────────────────────────────────────────────────────────
+DATA_DIR              = os.path.join(_SITE_DIR, "data")   # サイト固有のdataディレクトリ
+FILTERED_KEYWORDS_CSV = os.path.join(DATA_DIR, "filtered_keywords.csv")
+
+# ── Google Sheets 列設定 ──────────────────────────────────────────────────
+SHEETS_KEYWORD_COL  = "キーワード"
+SHEETS_AIM_COL      = "AIM判定"
+SHEETS_VOLUME_COL   = "検索ボリューム"
+AIM_POSITIVE_VALUES = {"○", "◯", "AIM", "aim", "あり", "YES", "yes", "true", "True", "1"}
+
+# ── Google Sheets シート名 ────────────────────────────────────────────────
+SHEETS_MAIN_SHEET_NAME   = os.getenv("SHEETS_MAIN_SHEET_NAME", "")
+SHEETS_ARTICLE_LIST_NAME = os.getenv("SHEETS_ARTICLE_LIST_NAME", "投稿記事一覧")
+SHEETS_LEGEND_NAME       = os.getenv("SHEETS_LEGEND_NAME", "凡例")
+
+# ── CTA設定 ───────────────────────────────────────────────────────────────
+CTA_CONFIG: list[dict] = [
+    # {
+    #     "name": "案件名",
+    #     "keywords": ["キーワード1", "キーワード2"],
+    #     "positions": ["top", "middle", "bottom"],
+    #     "block": "<!-- wp:group ... -->...",
+    # },
+]
