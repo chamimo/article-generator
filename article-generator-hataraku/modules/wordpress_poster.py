@@ -358,9 +358,14 @@ def create_post(article: dict, featured_media_id: int | None = None) -> dict:
         "slug": article.get("slug", ""),
         "categories": [category_id],
         "meta": {
+            # SEO Simple Pack（正式フィールド名）
+            "_ssp_post_title":       article.get("title", ""),
+            "_ssp_post_description": article.get("meta_description", ""),
+            # SEO Simple Pack（旧登録名 / AIVICE 後方互換）
             "ssp_meta_title":        article.get("title", ""),
             "ssp_meta_description":  article.get("meta_description", ""),
             "ssp_meta_ogimage_url":  article.get("eyecatch_url", ""),
+            # 他SEOプラグイン向け
             "_yoast_wpseo_metadesc": article.get("meta_description", ""),
             "rank_math_description": article.get("meta_description", ""),
             "imagefx_prompt":        article.get("imagefx_prompt", ""),

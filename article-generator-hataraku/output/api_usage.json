@@ -1529,6 +1529,126 @@
       "output_tokens": 10229,
       "cost_usd": 0.169257,
       "label": "article:派遣看護師 社会保険"
+    },
+    {
+      "timestamp": "2026-04-17T02:30:08.678353+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 162,
+      "cost_usd": 0.000736,
+      "label": "lsi:派遣 会社 儲かる"
+    },
+    {
+      "timestamp": "2026-04-17T02:30:12.614187+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 548,
+      "cost_usd": 0.002334,
+      "label": "kw_research:派遣 会社 儲かる"
+    },
+    {
+      "timestamp": "2026-04-17T02:32:44.997436+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5235,
+      "output_tokens": 9732,
+      "cost_usd": 0.161685,
+      "label": "article:派遣 会社 儲かる"
+    },
+    {
+      "timestamp": "2026-04-17T11:30:11.764889+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 106,
+      "output_tokens": 94,
+      "cost_usd": 0.000461,
+      "label": "lsi:職場急に休む人"
+    },
+    {
+      "timestamp": "2026-04-17T11:30:15.094369+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 173,
+      "output_tokens": 440,
+      "cost_usd": 0.001898,
+      "label": "kw_research:職場急に休む人"
+    },
+    {
+      "timestamp": "2026-04-17T11:32:19.510476+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5058,
+      "output_tokens": 9074,
+      "cost_usd": 0.151284,
+      "label": "article:職場急に休む人"
+    },
+    {
+      "timestamp": "2026-04-17T13:04:14.973250+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T13",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 103,
+      "cost_usd": 0.000499,
+      "label": "lsi:派遣の女 キャスト"
+    },
+    {
+      "timestamp": "2026-04-17T13:04:18.127888+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T13",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 490,
+      "cost_usd": 0.002101,
+      "label": "kw_research:派遣の女 キャスト"
+    },
+    {
+      "timestamp": "2026-04-17T13:06:20.441127+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T13",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5117,
+      "output_tokens": 9532,
+      "cost_usd": 0.158331,
+      "label": "article:派遣の女 キャスト"
+    },
+    {
+      "timestamp": "2026-04-17T20:30:10.971471+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 78,
+      "cost_usd": 0.000401,
+      "label": "lsi:仕事 理不尽 なんj"
+    },
+    {
+      "timestamp": "2026-04-17T20:30:15.116947+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 587,
+      "cost_usd": 0.00249,
+      "label": "kw_research:仕事 理不尽 なんj"
+    },
+    {
+      "timestamp": "2026-04-17T20:32:23.163397+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5182,
+      "output_tokens": 8987,
+      "cost_usd": 0.150351,
+      "label": "article:仕事 理不尽 なんj"
     }
   ],
   "events": [

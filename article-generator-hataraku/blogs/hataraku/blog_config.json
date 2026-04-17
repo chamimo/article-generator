@@ -38,6 +38,8 @@
 
   "asp_links": {},
 
+  "seo_plugin": "seo_simple_pack",
+
   "writing_style": {
     "tone":          "経験者の本音・リアル",
     "persona":       "転職を複数回経験したWeb担当者",
