@@ -1619,6 +1619,96 @@
       "output_tokens": 9648,
       "cost_usd": 0.159873,
       "label": "article:youtube ai画像"
+    },
+    {
+      "timestamp": "2026-04-17T02:00:12.468941+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 105,
+      "output_tokens": 90,
+      "cost_usd": 0.000444,
+      "label": "lsi:youtube aiイラスト"
+    },
+    {
+      "timestamp": "2026-04-17T02:00:16.534392+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 172,
+      "output_tokens": 509,
+      "cost_usd": 0.002174,
+      "label": "kw_research:youtube aiイラスト"
+    },
+    {
+      "timestamp": "2026-04-17T02:02:23.421998+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5112,
+      "output_tokens": 9374,
+      "cost_usd": 0.155946,
+      "label": "article:youtube aiイラスト"
+    },
+    {
+      "timestamp": "2026-04-17T11:00:12.291169+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 106,
+      "output_tokens": 123,
+      "cost_usd": 0.000577,
+      "label": "lsi:youtube ai字幕生成"
+    },
+    {
+      "timestamp": "2026-04-17T11:00:15.592425+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 173,
+      "output_tokens": 506,
+      "cost_usd": 0.002162,
+      "label": "kw_research:youtube ai字幕生成"
+    },
+    {
+      "timestamp": "2026-04-17T11:02:34.202830+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5143,
+      "output_tokens": 9401,
+      "cost_usd": 0.156444,
+      "label": "article:youtube ai字幕生成"
+    },
+    {
+      "timestamp": "2026-04-17T20:00:12.600881+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 103,
+      "output_tokens": 92,
+      "cost_usd": 0.00045,
+      "label": "lsi:youtube ai犬"
+    },
+    {
+      "timestamp": "2026-04-17T20:00:16.132607+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 170,
+      "output_tokens": 443,
+      "cost_usd": 0.001908,
+      "label": "kw_research:youtube ai犬"
+    },
+    {
+      "timestamp": "2026-04-17T20:02:37.568686+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5046,
+      "output_tokens": 10057,
+      "cost_usd": 0.165993,
+      "label": "article:youtube ai犬"
     }
   ],
   "events": [
