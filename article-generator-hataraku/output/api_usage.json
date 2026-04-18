@@ -1649,6 +1649,576 @@
       "output_tokens": 8987,
       "cost_usd": 0.150351,
       "label": "article:仕事 理不尽 なんj"
+    },
+    {
+      "timestamp": "2026-04-17T21:06:55.403945+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 107,
+      "output_tokens": 91,
+      "cost_usd": 0.00045,
+      "label": "lsi:仕事ルーティン"
+    },
+    {
+      "timestamp": "2026-04-17T21:06:59.094067+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 174,
+      "output_tokens": 548,
+      "cost_usd": 0.002331,
+      "label": "kw_research:仕事ルーティン"
+    },
+    {
+      "timestamp": "2026-04-17T21:08:57.919479+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T21",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5152,
+      "output_tokens": 9125,
+      "cost_usd": 0.152331,
+      "label": "article:仕事ルーティン"
+    },
+    {
+      "timestamp": "2026-04-17T21:15:35.737317+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 103,
+      "cost_usd": 0.000501,
+      "label": "lsi:派遣法とは わかりやすく"
+    },
+    {
+      "timestamp": "2026-04-17T21:15:39.712556+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 440,
+      "cost_usd": 0.001902,
+      "label": "kw_research:派遣法とは わかりやすく"
+    },
+    {
+      "timestamp": "2026-04-17T21:18:10.356921+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T21",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5072,
+      "output_tokens": 9899,
+      "cost_usd": 0.163701,
+      "label": "article:派遣法とは わかりやすく"
+    },
+    {
+      "timestamp": "2026-04-17T23:00:35.472630+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T23",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 107,
+      "output_tokens": 101,
+      "cost_usd": 0.00049,
+      "label": "lsi:仕事ない 暇"
+    },
+    {
+      "timestamp": "2026-04-17T23:00:39.344454+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T23",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 174,
+      "output_tokens": 564,
+      "cost_usd": 0.002395,
+      "label": "kw_research:仕事ない 暇"
+    },
+    {
+      "timestamp": "2026-04-17T23:03:11.097777+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T23",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5178,
+      "output_tokens": 9520,
+      "cost_usd": 0.158334,
+      "label": "article:仕事ない 暇"
+    },
+    {
+      "timestamp": "2026-04-18T00:15:08.769166+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 88,
+      "cost_usd": 0.000439,
+      "label": "lsi:仕事フェア 静岡"
+    },
+    {
+      "timestamp": "2026-04-18T00:15:12.946650+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 585,
+      "cost_usd": 0.002481,
+      "label": "kw_research:仕事フェア 静岡"
+    },
+    {
+      "timestamp": "2026-04-18T00:17:19.602227+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5296,
+      "output_tokens": 9477,
+      "cost_usd": 0.158043,
+      "label": "article:仕事フェア 静岡"
+    },
+    {
+      "timestamp": "2026-04-18T01:08:27.933399+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 88,
+      "cost_usd": 0.000438,
+      "label": "lsi:転職 本人希望欄"
+    },
+    {
+      "timestamp": "2026-04-18T01:08:31.469088+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 525,
+      "cost_usd": 0.00224,
+      "label": "kw_research:転職 本人希望欄"
+    },
+    {
+      "timestamp": "2026-04-18T01:10:39.942197+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5288,
+      "output_tokens": 9662,
+      "cost_usd": 0.160794,
+      "label": "article:転職 本人希望欄"
+    },
+    {
+      "timestamp": "2026-04-18T01:12:44.482923+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 111,
+      "cost_usd": 0.000532,
+      "label": "lsi:仕事 できない人 特徴"
+    },
+    {
+      "timestamp": "2026-04-18T01:12:47.807886+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 505,
+      "cost_usd": 0.002162,
+      "label": "kw_research:仕事 できない人 特徴"
+    },
+    {
+      "timestamp": "2026-04-18T01:15:46.403864+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5185,
+      "output_tokens": 11127,
+      "cost_usd": 0.18246,
+      "label": "article:仕事 できない人 特徴"
+    },
+    {
+      "timestamp": "2026-04-18T01:21:00.145996+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 102,
+      "cost_usd": 0.000501,
+      "label": "lsi:仕事 うまくいかない スピリチュアル"
+    },
+    {
+      "timestamp": "2026-04-18T01:21:03.688251+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 605,
+      "cost_usd": 0.002566,
+      "label": "kw_research:仕事 うまくいかない スピリチュアル"
+    },
+    {
+      "timestamp": "2026-04-18T01:23:11.537118+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 127,
+      "cost_usd": 0.000598,
+      "label": "lsi:仕事憂鬱 行きたくない"
+    },
+    {
+      "timestamp": "2026-04-18T01:23:15.097914+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 555,
+      "cost_usd": 0.002364,
+      "label": "kw_research:仕事憂鬱 行きたくない"
+    },
+    {
+      "timestamp": "2026-04-18T01:23:26.831986+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5287,
+      "output_tokens": 10030,
+      "cost_usd": 0.166311,
+      "label": "article:仕事 うまくいかない スピリチュアル"
+    },
+    {
+      "timestamp": "2026-04-18T01:25:40.844283+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5259,
+      "output_tokens": 10587,
+      "cost_usd": 0.174582,
+      "label": "article:仕事憂鬱 行きたくない"
+    },
+    {
+      "timestamp": "2026-04-18T02:30:12.464273+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 69,
+      "cost_usd": 0.000366,
+      "label": "lsi:派遣 社員 バイト 学生"
+    },
+    {
+      "timestamp": "2026-04-18T02:30:16.080202+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 485,
+      "cost_usd": 0.002083,
+      "label": "kw_research:派遣 社員 バイト 学生"
+    },
+    {
+      "timestamp": "2026-04-18T02:32:25.173883+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5145,
+      "output_tokens": 9797,
+      "cost_usd": 0.16239,
+      "label": "article:派遣 社員 バイト 学生"
+    },
+    {
+      "timestamp": "2026-04-18T08:34:30.130578+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 142,
+      "cost_usd": 0.000655,
+      "label": "lsi:転職初日 気をつけること"
+    },
+    {
+      "timestamp": "2026-04-18T08:34:33.525991+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 476,
+      "cost_usd": 0.002045,
+      "label": "kw_research:転職初日 気をつけること"
+    },
+    {
+      "timestamp": "2026-04-18T08:37:17.139394+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5206,
+      "output_tokens": 10091,
+      "cost_usd": 0.166983,
+      "label": "article:転職初日 気をつけること"
+    },
+    {
+      "timestamp": "2026-04-18T09:38:08.233216+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 90,
+      "cost_usd": 0.00045,
+      "label": "lsi:仕事 飛ぶ なんj"
+    },
+    {
+      "timestamp": "2026-04-18T09:38:12.954615+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 619,
+      "cost_usd": 0.002619,
+      "label": "kw_research:仕事 飛ぶ なんj"
+    },
+    {
+      "timestamp": "2026-04-18T09:40:59.560951+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5292,
+      "output_tokens": 10236,
+      "cost_usd": 0.169416,
+      "label": "article:仕事 飛ぶ なんj"
+    },
+    {
+      "timestamp": "2026-04-18T10:09:56.197779+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 67,
+      "cost_usd": 0.000358,
+      "label": "lsi:職場体験 お礼状 中学生"
+    },
+    {
+      "timestamp": "2026-04-18T10:09:59.747429+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 557,
+      "cost_usd": 0.002371,
+      "label": "kw_research:職場体験 お礼状 中学生"
+    },
+    {
+      "timestamp": "2026-04-18T10:12:25.518971+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T10",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5212,
+      "output_tokens": 9219,
+      "cost_usd": 0.153921,
+      "label": "article:職場体験 お礼状 中学生"
+    },
+    {
+      "timestamp": "2026-04-18T10:46:42.959145+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 105,
+      "output_tokens": 100,
+      "cost_usd": 0.000484,
+      "label": "lsi:職場までの距離"
+    },
+    {
+      "timestamp": "2026-04-18T10:46:49.342832+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 172,
+      "output_tokens": 519,
+      "cost_usd": 0.002214,
+      "label": "kw_research:職場までの距離"
+    },
+    {
+      "timestamp": "2026-04-18T10:48:53.235998+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T10",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5315,
+      "output_tokens": 9508,
+      "cost_usd": 0.158565,
+      "label": "article:職場までの距離"
+    },
+    {
+      "timestamp": "2026-04-18T11:30:10.227684+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 115,
+      "cost_usd": 0.00055,
+      "label": "lsi:職場 差し入れ 嬉しい"
+    },
+    {
+      "timestamp": "2026-04-18T11:30:14.271554+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 629,
+      "cost_usd": 0.00266,
+      "label": "kw_research:職場 差し入れ 嬉しい"
+    },
+    {
+      "timestamp": "2026-04-18T11:32:07.134929+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5439,
+      "output_tokens": 8905,
+      "cost_usd": 0.149892,
+      "label": "article:職場 差し入れ 嬉しい"
+    },
+    {
+      "timestamp": "2026-04-18T15:20:57.599650+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 87,
+      "cost_usd": 0.000436,
+      "label": "lsi:職場体験新聞 見出し"
+    },
+    {
+      "timestamp": "2026-04-18T15:21:01.341119+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 580,
+      "cost_usd": 0.002462,
+      "label": "kw_research:職場体験新聞 見出し"
+    },
+    {
+      "timestamp": "2026-04-18T15:23:14.941102+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T15",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5254,
+      "output_tokens": 9792,
+      "cost_usd": 0.162642,
+      "label": "article:職場体験新聞 見出し"
+    },
+    {
+      "timestamp": "2026-04-18T15:38:36.170899+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 105,
+      "cost_usd": 0.000508,
+      "label": "lsi:職場 の 教養 8 月"
+    },
+    {
+      "timestamp": "2026-04-18T15:38:40.079061+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 546,
+      "cost_usd": 0.002326,
+      "label": "kw_research:職場 の 教養 8 月"
+    },
+    {
+      "timestamp": "2026-04-18T15:40:47.627531+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T15",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5470,
+      "output_tokens": 9371,
+      "cost_usd": 0.156975,
+      "label": "article:職場 の 教養 8 月"
+    },
+    {
+      "timestamp": "2026-04-18T16:15:41.858621+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T16",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 103,
+      "cost_usd": 0.000498,
+      "label": "lsi:仕事 20代 女性"
+    },
+    {
+      "timestamp": "2026-04-18T16:15:45.227482+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T16",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 422,
+      "cost_usd": 0.001828,
+      "label": "kw_research:仕事 20代 女性"
+    },
+    {
+      "timestamp": "2026-04-18T16:18:05.769004+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T16",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5201,
+      "output_tokens": 9771,
+      "cost_usd": 0.162168,
+      "label": "article:仕事 20代 女性"
+    },
+    {
+      "timestamp": "2026-04-18T16:20:03.557815+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T16",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 104,
+      "cost_usd": 0.000504,
+      "label": "lsi:仕事 ストレス 解消"
+    },
+    {
+      "timestamp": "2026-04-18T16:20:07.062987+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T16",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 558,
+      "cost_usd": 0.002374,
+      "label": "kw_research:仕事 ストレス 解消"
+    },
+    {
+      "timestamp": "2026-04-18T16:23:01.968670+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T16",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5390,
+      "output_tokens": 10862,
+      "cost_usd": 0.1791,
+      "label": "article:仕事 ストレス 解消"
+    },
+    {
+      "timestamp": "2026-04-18T20:30:10.780968+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 103,
+      "output_tokens": 97,
+      "cost_usd": 0.00047,
+      "label": "lsi:転職面接"
+    },
+    {
+      "timestamp": "2026-04-18T20:30:14.571992+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 170,
+      "output_tokens": 501,
+      "cost_usd": 0.00214,
+      "label": "kw_research:転職面接"
+    },
+    {
+      "timestamp": "2026-04-18T20:32:20.043404+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5414,
+      "output_tokens": 9216,
+      "cost_usd": 0.154482,
+      "label": "article:転職面接"
     }
   ],
   "events": [

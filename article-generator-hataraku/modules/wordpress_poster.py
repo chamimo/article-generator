@@ -369,6 +369,8 @@ def create_post(article: dict, featured_media_id: int | None = None) -> dict:
             "_yoast_wpseo_metadesc": article.get("meta_description", ""),
             "rank_math_description": article.get("meta_description", ""),
             "imagefx_prompt":        article.get("imagefx_prompt", ""),
+            # SWELL: アイキャッチ画像の注釈
+            "_swell_post_eye_catch_caption": article.get("title", ""),
         },
     }
     if tag_ids:
@@ -389,7 +391,7 @@ def create_post(article: dict, featured_media_id: int | None = None) -> dict:
     edit_url = f"{wp_context.get_wp_url()}/wp-admin/post.php?post={post_id}&action=edit"
     print(f"[wordpress] 投稿完了 (ID: {post_id}) → {edit_url}")
 
-    # imagefx_prompt の保存確認（REST API で取得して表示）
+    # メタフィールド保存確認（REST API で取得してログ出力）
     try:
         verify = requests.get(
             f"{wp_context.get_wp_url()}/wp-json/wp/v2/posts/{post_id}",
@@ -397,15 +399,36 @@ def create_post(article: dict, featured_media_id: int | None = None) -> dict:
             params={"context": "edit", "_fields": "meta"},
             timeout=10,
         )
-        saved_prompt = verify.json().get("meta", {}).get("imagefx_prompt", "")
-        if saved_prompt:
+        saved_meta = verify.json().get("meta", {})
+
+        # SEO / SWELL フィールド確認
+        ssp_title      = saved_meta.get("_ssp_post_title", "")
+        ssp_desc       = saved_meta.get("_ssp_post_description", "")
+        ssp_meta_title = saved_meta.get("ssp_meta_title", "")
+        ssp_meta_desc  = saved_meta.get("ssp_meta_description", "")
+        eye_caption    = saved_meta.get("_swell_post_eye_catch_caption", "")
+        imagefx        = saved_meta.get("imagefx_prompt", "")
+
+        def _check(val, label):
+            if val:
+                return f"✅ {val[:40]}"
+            return f"❌ 未保存（functions.php要確認）"
+
+        print("[wordpress] ── メタフィールド保存確認 ──────────────")
+        print(f"[wordpress]  ssp_meta_title (SSP管理画面): {_check(ssp_meta_title, 'ssp_meta_title')}")
+        print(f"[wordpress]  ssp_meta_description ({len(ssp_meta_desc)}字): {_check(ssp_meta_desc, 'ssp_meta_desc')}")
+        print(f"[wordpress]  _ssp_post_title           : {_check(ssp_title, '_ssp_post_title')}")
+        print(f"[wordpress]  _ssp_post_description({len(ssp_desc)}字): {_check(ssp_desc, '_ssp_post_description')}")
+        print(f"[wordpress]  _swell_post_eye_catch_caption: {_check(eye_caption, 'eye_caption')}")
+        print(f"[wordpress]  imagefx_prompt            : {'✅ 保存済み' if imagefx else '❌ 未保存（functions.php要確認）'}")
+        print("[wordpress] ─────────────────────────────────────────")
+
+        if imagefx:
             print("\n" + "─" * 60)
             print("【ImageFX プロンプト（保存確認）】")
             print("─" * 60)
-            print(saved_prompt)
+            print(imagefx)
             print("─" * 60 + "\n")
-        else:
-            print("[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）")
     except Exception:
         pass
 
@@ -436,7 +459,18 @@ def post_article_with_image(
     slug = re.sub(r"[^a-z0-9\-]", "", article.get("slug", "article").lower()) or "article"
 
     # ① カテゴリ
-    if not article.get("category_id"):
+    # Claude が生成した category_id が WP 上に実在するか確認し、
+    # 存在しない場合は select_category() でキーワードマッチングを使う
+    if article.get("category_id"):
+        from modules.category_selector import fetch_categories
+        valid_ids = {c["id"] for c in fetch_categories()}
+        if article["category_id"] not in valid_ids:
+            print(f"[wordpress] カテゴリID {article['category_id']} は存在しないため再選択")
+            article["category_id"] = select_category(
+                keyword=keyword,
+                article_title=article["title"],
+            )
+    else:
         article["category_id"] = select_category(
             keyword=keyword,
             article_title=article["title"],
@@ -523,7 +557,7 @@ def post_article_with_image(
             # ライブラリになければFLUXフォールバック
             if not src_url:
                 try:
-                    img_bytes = generate_h2_image(h2_title, keyword)
+                    img_bytes = generate_h2_image(h2_title, keyword, article_type=article.get("_article_type", ""))
                     _, src_url = upload_media(img_bytes, filename, alt_text=img_alt, title=img_alt)
                     print(f"[wordpress] H2画像[{i}] FLUX生成（ライブラリ該当なし）: {h2_title[:30]}")
                 except Exception as e:

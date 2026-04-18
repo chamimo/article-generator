@@ -400,7 +400,7 @@ USER_PROMPT_TEMPLATE = """\
 
 {{
   "title": "SEOタイトル（30〜40字程度・キーワードを自然に含む・数字やメリット・疑問形でクリックを促す。例：「AIボイスレコーダーアプリiPhoneおすすめ7選！文字起こし・要約まで自動化」）",
-  "meta_description": "メタディスクリプション（150字以上）",
+  "meta_description": "メタディスクリプション（メインKW「{keyword}」を必ず2回以上含む・必ず120文字以上160文字以内・検索意図を踏まえたクリックを促す自然な文章・120文字未満は不可）",
   "slug": "url-slug-in-english-kebab-case",
   "image_prompt": "アイキャッチ用英語プロンプト（記事テーマを表す画像、no text, professional blog header, high quality）",
   "category_id": カテゴリーIDの整数,
@@ -416,7 +416,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    article_theme: str = "",
                    sub_keywords: list[str] | None = None,
                    enable_fact_check: bool = True,
-                   target_length: int = 9000) -> dict:
+                   target_length: int = 9000,
+                   article_type: str = "") -> dict:
     """
     記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
 
@@ -569,12 +570,39 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     else:
         data["tags"] = []
 
+    # meta_description 長さ検証（120字未満の場合は Haiku で補完）
+    meta_desc = data.get("meta_description", "")
+    if len(meta_desc) < 120:
+        print(f"[article_generator] meta_description 短すぎ({len(meta_desc)}字) → 再生成")
+        try:
+            fix_msg = client.messages.create(
+                model="claude-haiku-4-5-20251001",
+                max_tokens=300,
+                messages=[{
+                    "role": "user",
+                    "content": (
+                        f"以下のメタディスクリプションを120〜160字に書き直してください。"
+                        f"キーワード「{keyword}」を2回以上含め、検索意図に沿ったクリックを促す自然な文章にすること。"
+                        f"テキストのみ返してください（説明不要）。\n\n{meta_desc}"
+                    ),
+                }],
+            )
+            record_usage(fix_msg, label=f"meta_fix:{keyword}")
+            fixed = fix_msg.content[0].text.strip()
+            if len(fixed) >= 120:
+                data["meta_description"] = fixed
+                print(f"[article_generator] meta_description 補完完了: {len(fixed)}字")
+            else:
+                print(f"[article_generator] meta_description 補完後も短い({len(fixed)}字)・そのまま使用")
+        except Exception as e:
+            print(f"[article_generator] meta_description 補完スキップ: {e}")
+
     data["keyword"] = keyword
     data["volume"] = volume
 
     # ImageFX プロンプトを生成してdictに追加
     try:
-        data["imagefx_prompt"] = generate_imagefx_prompt(keyword, data["title"])
+        data["imagefx_prompt"] = generate_imagefx_prompt(keyword, data["title"], article_type=article_type)
     except Exception as e:
         print(f"[article_generator] ImageFXプロンプト生成スキップ: {e}")
         data["imagefx_prompt"] = ""
@@ -590,7 +618,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
 def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                      sub_keywords: list[str] | None = None,
                      enable_fact_check: bool = True,
-                     target_length: int = 9000) -> dict:
+                     target_length: int = 9000,
+                     article_type: str = "") -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
@@ -608,7 +637,7 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
     """
     return _build_article(keyword, volume, differentiation_note,
                           sub_keywords=sub_keywords, enable_fact_check=enable_fact_check,
-                          target_length=target_length)
+                          target_length=target_length, article_type=article_type)
 
 
 def generate_article_from_cluster(cluster: dict, sub_keywords: list[str] | None = None) -> dict:
