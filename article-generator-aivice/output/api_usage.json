@@ -1709,6 +1709,336 @@
       "output_tokens": 10057,
       "cost_usd": 0.165993,
       "label": "article:youtube ai犬"
+    },
+    {
+      "timestamp": "2026-04-17T23:00:33.242260+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T23",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 100,
+      "cost_usd": 0.000487,
+      "label": "lsi:youtubeの動画aiで要約"
+    },
+    {
+      "timestamp": "2026-04-17T23:00:36.478780+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T23",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 537,
+      "cost_usd": 0.002289,
+      "label": "kw_research:youtubeの動画aiで要約"
+    },
+    {
+      "timestamp": "2026-04-17T23:02:43.644095+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T23",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5157,
+      "output_tokens": 9489,
+      "cost_usd": 0.157806,
+      "label": "article:youtubeの動画aiで要約"
+    },
+    {
+      "timestamp": "2026-04-17T23:42:26.003649+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T23",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 104,
+      "output_tokens": 113,
+      "cost_usd": 0.000535,
+      "label": "lsi:youtube ai朗読"
+    },
+    {
+      "timestamp": "2026-04-17T23:42:29.660774+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T23",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 171,
+      "output_tokens": 528,
+      "cost_usd": 0.002249,
+      "label": "kw_research:youtube ai朗読"
+    },
+    {
+      "timestamp": "2026-04-17T23:44:53.503785+00:00",
+      "date": "2026-04-17",
+      "hour": "2026-04-17T23",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5150,
+      "output_tokens": 9561,
+      "cost_usd": 0.158865,
+      "label": "article:youtube ai朗読"
+    },
+    {
+      "timestamp": "2026-04-18T00:15:05.520292+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 100,
+      "cost_usd": 0.00049,
+      "label": "lsi:youtube ai翻訳 音声 オフ"
+    },
+    {
+      "timestamp": "2026-04-18T00:15:09.990896+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 621,
+      "cost_usd": 0.002627,
+      "label": "kw_research:youtube ai翻訳 音声 オフ"
+    },
+    {
+      "timestamp": "2026-04-18T00:17:31.544418+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5238,
+      "output_tokens": 9492,
+      "cost_usd": 0.158094,
+      "label": "article:youtube ai翻訳 音声 オフ"
+    },
+    {
+      "timestamp": "2026-04-18T02:00:10.803998+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 127,
+      "cost_usd": 0.000594,
+      "label": "lsi:youtube ai翻訳 音声"
+    },
+    {
+      "timestamp": "2026-04-18T02:00:14.627248+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 586,
+      "cost_usd": 0.002484,
+      "label": "kw_research:youtube ai翻訳 音声"
+    },
+    {
+      "timestamp": "2026-04-18T02:02:46.184499+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5226,
+      "output_tokens": 10287,
+      "cost_usd": 0.169983,
+      "label": "article:youtube ai翻訳 音声"
+    },
+    {
+      "timestamp": "2026-04-18T08:31:29.023948+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 169,
+      "cost_usd": 0.000762,
+      "label": "lsi:plaud note pro 充電方法"
+    },
+    {
+      "timestamp": "2026-04-18T08:31:34.155531+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 520,
+      "cost_usd": 0.00222,
+      "label": "kw_research:plaud note pro 充電方法"
+    },
+    {
+      "timestamp": "2026-04-18T08:33:52.813149+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5199,
+      "output_tokens": 9300,
+      "cost_usd": 0.155097,
+      "label": "article:plaud note pro 充電方法"
+    },
+    {
+      "timestamp": "2026-04-18T09:33:16.322511+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 103,
+      "output_tokens": 113,
+      "cost_usd": 0.000534,
+      "label": "lsi:youtube ai編集"
+    },
+    {
+      "timestamp": "2026-04-18T09:33:20.485641+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 170,
+      "output_tokens": 432,
+      "cost_usd": 0.001864,
+      "label": "kw_research:youtube ai編集"
+    },
+    {
+      "timestamp": "2026-04-18T09:35:54.812597+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5056,
+      "output_tokens": 11437,
+      "cost_usd": 0.186723,
+      "label": "article:youtube ai編集"
+    },
+    {
+      "timestamp": "2026-04-18T10:30:51.463138+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 103,
+      "output_tokens": 115,
+      "cost_usd": 0.000542,
+      "label": "lsi:youtube ai表記"
+    },
+    {
+      "timestamp": "2026-04-18T10:30:55.031836+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 170,
+      "output_tokens": 440,
+      "cost_usd": 0.001896,
+      "label": "kw_research:youtube ai表記"
+    },
+    {
+      "timestamp": "2026-04-18T10:33:34.741344+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T10",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5066,
+      "output_tokens": 10130,
+      "cost_usd": 0.167148,
+      "label": "article:youtube ai表記"
+    },
+    {
+      "timestamp": "2026-04-18T10:34:10.471554+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 106,
+      "output_tokens": 119,
+      "cost_usd": 0.000561,
+      "label": "lsi:youtube ai読み上げ"
+    },
+    {
+      "timestamp": "2026-04-18T10:34:13.957723+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 173,
+      "output_tokens": 532,
+      "cost_usd": 0.002266,
+      "label": "kw_research:youtube ai読み上げ"
+    },
+    {
+      "timestamp": "2026-04-18T10:36:52.533284+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T10",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5165,
+      "output_tokens": 10430,
+      "cost_usd": 0.171945,
+      "label": "article:youtube ai読み上げ"
+    },
+    {
+      "timestamp": "2026-04-18T10:43:55.306498+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 103,
+      "output_tokens": 82,
+      "cost_usd": 0.00041,
+      "label": "lsi:youtube ai絵"
+    },
+    {
+      "timestamp": "2026-04-18T10:43:58.959766+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 170,
+      "output_tokens": 494,
+      "cost_usd": 0.002112,
+      "label": "kw_research:youtube ai絵"
+    },
+    {
+      "timestamp": "2026-04-18T10:46:21.815797+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T10",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5081,
+      "output_tokens": 10292,
+      "cost_usd": 0.169623,
+      "label": "article:youtube ai絵"
+    },
+    {
+      "timestamp": "2026-04-18T11:00:10.310114+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 105,
+      "output_tokens": 112,
+      "cost_usd": 0.000532,
+      "label": "lsi:youtube ai画像生成"
+    },
+    {
+      "timestamp": "2026-04-18T11:00:13.466333+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 172,
+      "output_tokens": 490,
+      "cost_usd": 0.002098,
+      "label": "kw_research:youtube ai画像生成"
+    },
+    {
+      "timestamp": "2026-04-18T11:03:04.330874+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5112,
+      "output_tokens": 10960,
+      "cost_usd": 0.179736,
+      "label": "article:youtube ai画像生成"
+    },
+    {
+      "timestamp": "2026-04-18T20:00:12.861517+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 129,
+      "cost_usd": 0.000603,
+      "label": "lsi:youtube ai音声 収益化停止"
+    },
+    {
+      "timestamp": "2026-04-18T20:00:17.346844+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 544,
+      "cost_usd": 0.002317,
+      "label": "kw_research:youtube ai音声 収益化停止"
+    },
+    {
+      "timestamp": "2026-04-18T20:02:39.872802+00:00",
+      "date": "2026-04-18",
+      "hour": "2026-04-18T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5187,
+      "output_tokens": 10184,
+      "cost_usd": 0.168321,
+      "label": "article:youtube ai音声 収益化停止"
     }
   ],
   "events": [

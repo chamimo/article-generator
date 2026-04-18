@@ -416,7 +416,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    article_theme: str = "",
                    sub_keywords: list[str] | None = None,
                    enable_fact_check: bool = True,
-                   target_length: int = 9000) -> dict:
+                   target_length: int = 9000,
+                   article_type: str = "") -> dict:
     """
     記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
 
@@ -574,7 +575,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
 
     # ImageFX プロンプトを生成してdictに追加
     try:
-        data["imagefx_prompt"] = generate_imagefx_prompt(keyword, data["title"])
+        data["imagefx_prompt"] = generate_imagefx_prompt(keyword, data["title"], article_type=article_type)
     except Exception as e:
         print(f"[article_generator] ImageFXプロンプト生成スキップ: {e}")
         data["imagefx_prompt"] = ""
@@ -590,7 +591,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
 def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                      sub_keywords: list[str] | None = None,
                      enable_fact_check: bool = True,
-                     target_length: int = 9000) -> dict:
+                     target_length: int = 9000,
+                     article_type: str = "") -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
@@ -608,7 +610,7 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
     """
     return _build_article(keyword, volume, differentiation_note,
                           sub_keywords=sub_keywords, enable_fact_check=enable_fact_check,
-                          target_length=target_length)
+                          target_length=target_length, article_type=article_type)
 
 
 def generate_article_from_cluster(cluster: dict, sub_keywords: list[str] | None = None) -> dict:

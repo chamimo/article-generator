@@ -61,3 +61,669 @@
 2026-04-18 05:03:05 [INFO]   ✅ [workup-ai] youtube ai犬 → YouTube AI犬動画の作り方完全ガイド！無料ツールで初心者でも高クオリティに
 2026-04-18 05:03:05 [INFO]        https://workup-ai.com/wp-admin/post.php?post=9650&action=edit
 2026-04-18 05:03:05 [INFO] ============================================================
+2026-04-18 08:00:27 [INFO] ============================================================
+2026-04-18 08:00:27 [INFO] generate_lite.py 開始  dry_run=False
+2026-04-18 08:00:27 [INFO] ============================================================
+2026-04-18 08:00:27 [INFO] 対象ブログ: ['workup-ai']
+2026-04-18 08:00:27 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-18 08:00:27 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-04-18 08:00:27 [INFO] ════════════════════════════════════════════════════════════
+2026-04-18 08:00:27 [INFO]   genre            : AI・副業・転職・キャリア
+2026-04-18 08:00:27 [INFO]   fact_check       : True
+2026-04-18 08:00:27 [INFO]   article_type_mix : True
+2026-04-18 08:00:27 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-04-18 08:00:27 [INFO]   article_count    : 1  dry_run: False
+2026-04-18 08:00:29 [INFO] [wp] 記事取得: 計375件 (draft=14 / private=6 / publish=355)
+2026-04-18 08:00:29 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-18 08:00:31 [DEBUG] [fetch] シート「絞り込みKW」: 505行 / ヘッダー: ['キーワード', 'SEO難易度', '月間検索数', 'CPC（$）', '競合性', 'キーワード', 'allintitle', 'intitle', 'Q&Aサイト', '', '無料ブログ', '', 'TikTok', '', 'Instagram', '', 'エックス', '', 'Facebook', '', 'aim', '投稿ステータス', '投稿日', '記事URL', '投稿ID', '使用サブKW', 'メモ']
+2026-04-18 08:00:31 [INFO] [fetch] [キーワード] メインKW: 120件（vol≥30 or N/A）  サブKW: 176件（vol<30）  テーマ外除外: 125件  aim内訳: [aim:91]
+2026-04-18 08:00:31 [DEBUG] [group_pool] グループ数: 70件 → pool: 50件
+2026-04-18 08:00:31 [INFO] [dup_check] 優先候補: 44件 {'aim': 44} を先頭評価
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note aiボイスレコーダー iphone」 → コアKW重複: 「PLAUD NOTE AIボイスレコーダーの精度を徹底検証！距離・マイク・英語対」(core: 'plaud note aiボイスレコーダー')
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro 充電方法」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro 設定方法」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro 通話録音」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro zoom」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro オンライン会議」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro 文字起こし」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro 議事録」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro リアルタイム文字起こし」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro テンプレート」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro マルチモーダル」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro ヨドバシ」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro デメリット」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro セキュリティ」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro バッテリー」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro 評判」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro 口コミ」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「plaud note pro 精度」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「youtube ai ナレーション」 → 直近7日重複: 「YouTube AI犬動画の作り方完全ガイド！無料ツールで初心者でも高クオリティ」
+2026-04-18 08:00:31 [INFO] [dup_check] 除外: 「youtube ai 顔」 → 直近7日重複: 「YouTube AI犬動画の作り方完全ガイド！無料ツールで初心者でも高クオリティ」
+2026-04-18 08:00:31 [DEBUG] [dup_check] OK: 「youtubeの動画aiで要約」
+2026-04-18 08:00:31 [INFO] [dup_check] 完了: 選定=1件 / 除外=20件 (pool=94件, 要求=1件)
+2026-04-18 08:00:31 [INFO] [select] 1件選定 (要求=1件)
+2026-04-18 08:00:31 [INFO] [select]   1. 「youtubeの動画aiで要約」 vol=0 seo=N/A comp=N/A
+2026-04-18 08:00:31 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-04-18 08:00:31 [INFO] [workup-ai] 候補: 120件 / 選定: 1件 / 生成予定: 1件
+2026-04-18 08:00:31 [INFO] [api_guard] 本日の使用量: $0.4861 / ¥73 (9回呼び出し)
+2026-04-18 08:00:31 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 08:00:31 [INFO] [workup-ai] [1/1] [LONGTAIL] 「youtubeの動画aiで要約」 vol=0 ★AIM
+2026-04-18 08:00:31 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 08:00:31 [INFO] [generate] 生成開始: 「youtubeの動画aiで要約」(vol:0) fact_check=True target_length=6,000字
+2026-04-18 08:02:45 [INFO] [generate] 完了: 「YouTubeの動画をAIで要約する方法・無料ツール6選！Chrome拡張から日本語対応アプリまで」
+2026-04-18 08:02:55 [INFO] [post] 画像生成完了: 53,029 bytes
+2026-04-18 08:03:09 [INFO] [post] WP投稿完了: ID=9654 → https://workup-ai.com/wp-admin/post.php?post=9654&action=edit
+2026-04-18 08:03:09 [INFO] [workup-ai] [1/1] ✅ 完了: 「YouTubeの動画をAIで要約する方法・無料ツール6選！Chrome拡張から日本語対応アプリまで」
+2026-04-18 08:03:09 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-04-18 08:03:09 [INFO] 
+============================================================
+2026-04-18 08:03:10 [INFO] 【全体サマリー】
+2026-04-18 08:03:10 [INFO]   ブログ数  : 1件
+2026-04-18 08:03:10 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-04-18 08:03:10 [INFO]   所要時間  : 162.5秒
+2026-04-18 08:03:10 [INFO]   ✅ [workup-ai] youtubeの動画aiで要約 → YouTubeの動画をAIで要約する方法・無料ツール6選！Chrome拡張から日本語対応アプリまで
+2026-04-18 08:03:10 [INFO]        https://workup-ai.com/wp-admin/post.php?post=9654&action=edit
+2026-04-18 08:03:10 [INFO] ============================================================
+2026-04-18 08:42:19 [INFO] ============================================================
+2026-04-18 08:42:19 [INFO] generate_lite.py 開始  dry_run=False
+2026-04-18 08:42:19 [INFO] ============================================================
+2026-04-18 08:42:19 [INFO] 対象ブログ: ['workup-ai']
+2026-04-18 08:42:19 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-18 08:42:19 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-04-18 08:42:19 [INFO] ════════════════════════════════════════════════════════════
+2026-04-18 08:42:19 [INFO]   genre            : AI・副業・転職・キャリア
+2026-04-18 08:42:19 [INFO]   fact_check       : True
+2026-04-18 08:42:19 [INFO]   article_type_mix : True
+2026-04-18 08:42:19 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-04-18 08:42:19 [INFO]   article_count    : 1  dry_run: False
+2026-04-18 08:42:21 [INFO] [wp] 記事取得: 計376件 (draft=14 / private=6 / publish=356)
+2026-04-18 08:42:21 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-18 08:42:23 [DEBUG] [fetch] シート「絞り込みKW」: 505行 / ヘッダー: ['キーワード', 'SEO難易度', '月間検索数', 'CPC（$）', '競合性', 'キーワード', 'allintitle', 'intitle', 'Q&Aサイト', '', '無料ブログ', '', 'TikTok', '', 'Instagram', '', 'エックス', '', 'Facebook', '', 'aim', '投稿ステータス', '投稿日', '記事URL', '投稿ID', '使用サブKW', 'メモ']
+2026-04-18 08:42:23 [INFO] [fetch] [キーワード] メインKW: 119件（vol≥30 or N/A）  サブKW: 176件（vol<30）  テーマ外除外: 125件  aim内訳: [aim:90]
+2026-04-18 08:42:23 [DEBUG] [group_pool] グループ数: 70件 → pool: 50件
+2026-04-18 08:42:23 [INFO] [dup_check] 優先候補: 43件 {'aim': 43} を先頭評価
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note aiボイスレコーダー iphone」 → コアKW重複: 「PLAUD NOTE AIボイスレコーダーの精度を徹底検証！距離・マイク・英語対」(core: 'plaud note aiボイスレコーダー')
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro 充電方法」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro 設定方法」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro 通話録音」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro zoom」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro オンライン会議」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro 文字起こし」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro 議事録」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro リアルタイム文字起こし」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro テンプレート」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro マルチモーダル」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro ヨドバシ」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro デメリット」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro セキュリティ」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro バッテリー」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro 評判」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro 口コミ」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「plaud note pro 精度」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「youtube ai ナレーション」 → 直近7日重複: 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「youtube ai 顔」 → 直近7日重複: 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「youtube 文字 起こし ai ツール」 → 直近7日重複: 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「youtube 動画 編集 生成 ai」 → 直近7日重複: 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「youtube 字幕 自動 生成 ai」 → 直近7日重複: 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → 直近7日重複: 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → 直近7日重複: 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-04-18 08:42:23 [INFO] [dup_check] 除外: 「youtube 競合 分析 ai」 → 直近7日重複: 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-04-18 08:42:23 [DEBUG] [dup_check] OK: 「youtube ai朗読」
+2026-04-18 08:42:23 [INFO] [dup_check] 完了: 選定=1件 / 除外=26件 (pool=93件, 要求=1件)
+2026-04-18 08:42:23 [INFO] [select] 1件選定 (要求=1件)
+2026-04-18 08:42:23 [INFO] [select]   1. 「youtube ai朗読」 vol=0 seo=N/A comp=N/A
+2026-04-18 08:42:23 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-04-18 08:42:23 [INFO] [workup-ai] 候補: 119件 / 選定: 1件 / 生成予定: 1件
+2026-04-18 08:42:23 [INFO] [api_guard] 本日の使用量: $0.6467 / ¥97 (12回呼び出し)
+2026-04-18 08:42:23 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 08:42:23 [INFO] [workup-ai] [1/1] [LONGTAIL] 「youtube ai朗読」 vol=0 ★AIM
+2026-04-18 08:42:23 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 08:42:23 [INFO] [generate] 生成開始: 「youtube ai朗読」(vol:0) fact_check=True target_length=6,000字
+2026-04-18 08:44:55 [INFO] [generate] 完了: 「YouTube AI朗読動画の作り方！無料ツールおすすめ5選と収益化まで徹底解説」
+2026-04-18 08:45:04 [INFO] [post] 画像生成完了: 41,935 bytes
+2026-04-18 08:45:26 [INFO] [post] WP投稿完了: ID=9658 → https://workup-ai.com/wp-admin/post.php?post=9658&action=edit
+2026-04-18 08:45:26 [INFO] [workup-ai] [1/1] ✅ 完了: 「YouTube AI朗読動画の作り方！無料ツールおすすめ5選と収益化まで徹底解説」
+2026-04-18 08:45:26 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-04-18 08:45:26 [INFO] 
+============================================================
+2026-04-18 08:45:26 [INFO] 【全体サマリー】
+2026-04-18 08:45:26 [INFO]   ブログ数  : 1件
+2026-04-18 08:45:26 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-04-18 08:45:26 [INFO]   所要時間  : 186.9秒
+2026-04-18 08:45:26 [INFO]   ✅ [workup-ai] youtube ai朗読 → YouTube AI朗読動画の作り方！無料ツールおすすめ5選と収益化まで徹底解説
+2026-04-18 08:45:26 [INFO]        https://workup-ai.com/wp-admin/post.php?post=9658&action=edit
+2026-04-18 08:45:26 [INFO] ============================================================
+2026-04-18 09:15:00 [INFO] ============================================================
+2026-04-18 09:15:00 [INFO] generate_lite.py 開始  dry_run=False
+2026-04-18 09:15:00 [INFO] ============================================================
+2026-04-18 09:15:00 [INFO] 対象ブログ: ['workup-ai']
+2026-04-18 09:15:00 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-18 09:15:00 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-04-18 09:15:00 [INFO] ════════════════════════════════════════════════════════════
+2026-04-18 09:15:00 [INFO]   genre            : AI・副業・転職・キャリア
+2026-04-18 09:15:00 [INFO]   fact_check       : True
+2026-04-18 09:15:00 [INFO]   article_type_mix : True
+2026-04-18 09:15:00 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-04-18 09:15:00 [INFO]   article_count    : 1  dry_run: False
+2026-04-18 09:15:01 [INFO] [wp] 記事取得: 計377件 (draft=12 / private=6 / publish=359)
+2026-04-18 09:15:01 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-18 09:15:03 [DEBUG] [fetch] シート「絞り込みKW」: 505行 / ヘッダー: ['キーワード', 'SEO難易度', '月間検索数', 'CPC（$）', '競合性', 'キーワード', 'allintitle', 'intitle', 'Q&Aサイト', '', '無料ブログ', '', 'TikTok', '', 'Instagram', '', 'エックス', '', 'Facebook', '', 'aim', '投稿ステータス', '投稿日', '記事URL', '投稿ID', '使用サブKW', 'メモ']
+2026-04-18 09:15:03 [INFO] [fetch] [キーワード] メインKW: 118件（vol≥30 or N/A）  サブKW: 176件（vol<30）  テーマ外除外: 125件  aim内訳: [aim:89]
+2026-04-18 09:15:03 [DEBUG] [group_pool] グループ数: 70件 → pool: 50件
+2026-04-18 09:15:03 [INFO] [dup_check] 優先候補: 42件 {'aim': 42} を先頭評価
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note aiボイスレコーダー iphone」 → コアKW重複: 「PLAUD NOTE AIボイスレコーダーの精度を徹底検証！距離・マイク・英語対」(core: 'plaud note aiボイスレコーダー')
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro 充電方法」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro 設定方法」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro 通話録音」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro zoom」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro オンライン会議」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro 文字起こし」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro 議事録」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro リアルタイム文字起こし」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro テンプレート」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro マルチモーダル」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro ヨドバシ」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro デメリット」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro セキュリティ」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro バッテリー」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro 評判」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro 口コミ」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「plaud note pro 精度」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「youtube ai ナレーション」 → 直近7日重複: 「YouTube AI字幕生成の使い方完全ガイド！無料で日本語対応・精度を上げるコ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「youtube ai 顔」 → 直近7日重複: 「YouTube AI字幕生成の使い方完全ガイド！無料で日本語対応・精度を上げるコ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「youtube 文字 起こし ai ツール」 → 直近7日重複: 「YouTube AI字幕生成の使い方完全ガイド！無料で日本語対応・精度を上げるコ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「youtube 動画 編集 生成 ai」 → 直近7日重複: 「YouTube AI字幕生成の使い方完全ガイド！無料で日本語対応・精度を上げるコ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「youtube 字幕 自動 生成 ai」 → 直近7日重複: 「YouTube AI字幕生成の使い方完全ガイド！無料で日本語対応・精度を上げるコ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → 直近7日重複: 「YouTube AI字幕生成の使い方完全ガイド！無料で日本語対応・精度を上げるコ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → 直近7日重複: 「YouTube AI字幕生成の使い方完全ガイド！無料で日本語対応・精度を上げるコ」
+2026-04-18 09:15:03 [INFO] [dup_check] 除外: 「youtube 競合 分析 ai」 → 直近7日重複: 「YouTube AI字幕生成の使い方完全ガイド！無料で日本語対応・精度を上げるコ」
+2026-04-18 09:15:03 [DEBUG] [dup_check] OK: 「youtube ai翻訳 音声 オフ」
+2026-04-18 09:15:03 [INFO] [dup_check] 完了: 選定=1件 / 除外=26件 (pool=92件, 要求=1件)
+2026-04-18 09:15:03 [INFO] [select] 1件選定 (要求=1件)
+2026-04-18 09:15:03 [INFO] [select]   1. 「youtube ai翻訳 音声 オフ」 vol=0 seo=N/A comp=N/A
+2026-04-18 09:15:03 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-04-18 09:15:03 [INFO] [workup-ai] 候補: 118件 / 選定: 1件 / 生成予定: 1件
+2026-04-18 09:15:03 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-04-18 09:15:03 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 09:15:03 [INFO] [workup-ai] [1/1] [LONGTAIL] 「youtube ai翻訳 音声 オフ」 vol=0 ★AIM
+2026-04-18 09:15:03 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 09:15:03 [INFO] [generate] 生成開始: 「youtube ai翻訳 音声 オフ」(vol:0) fact_check=True target_length=6,000字
+2026-04-18 09:17:33 [INFO] [generate] 完了: 「YouTubeのAI翻訳で音声をオフにする方法！字幕だけ表示する設定を徹底解説」
+2026-04-18 09:17:42 [INFO] [post] 画像生成完了: 59,417 bytes
+2026-04-18 09:17:55 [INFO] [post] WP投稿完了: ID=9663 → https://workup-ai.com/wp-admin/post.php?post=9663&action=edit
+2026-04-18 09:17:55 [INFO] [workup-ai] [1/1] ✅ 完了: 「YouTubeのAI翻訳で音声をオフにする方法！字幕だけ表示する設定を徹底解説」
+2026-04-18 09:17:55 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-04-18 09:17:55 [INFO] 
+============================================================
+2026-04-18 09:17:55 [INFO] 【全体サマリー】
+2026-04-18 09:17:55 [INFO]   ブログ数  : 1件
+2026-04-18 09:17:55 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-04-18 09:17:55 [INFO]   所要時間  : 175.1秒
+2026-04-18 09:17:55 [INFO]   ✅ [workup-ai] youtube ai翻訳 音声 オフ → YouTubeのAI翻訳で音声をオフにする方法！字幕だけ表示する設定を徹底解説
+2026-04-18 09:17:55 [INFO]        https://workup-ai.com/wp-admin/post.php?post=9663&action=edit
+2026-04-18 09:17:55 [INFO] ============================================================
+2026-04-18 11:00:04 [INFO] ============================================================
+2026-04-18 11:00:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-04-18 11:00:04 [INFO] ============================================================
+2026-04-18 11:00:04 [INFO] 対象ブログ: ['workup-ai']
+2026-04-18 11:00:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-18 11:00:04 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-04-18 11:00:04 [INFO] ════════════════════════════════════════════════════════════
+2026-04-18 11:00:04 [INFO]   genre            : AI・副業・転職・キャリア
+2026-04-18 11:00:04 [INFO]   fact_check       : True
+2026-04-18 11:00:04 [INFO]   article_type_mix : True
+2026-04-18 11:00:04 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-04-18 11:00:04 [INFO]   article_count    : 1  dry_run: False
+2026-04-18 11:00:05 [INFO] [wp] 記事取得: 計378件 (draft=12 / private=6 / publish=360)
+2026-04-18 11:00:05 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-18 11:00:08 [DEBUG] [fetch] シート「絞り込みKW」: 505行 / ヘッダー: ['キーワード', 'SEO難易度', '月間検索数', 'CPC（$）', '競合性', 'キーワード', 'allintitle', 'intitle', 'Q&Aサイト', '', '無料ブログ', '', 'TikTok', '', 'Instagram', '', 'エックス', '', 'Facebook', '', 'aim', '投稿ステータス', '投稿日', '記事URL', '投稿ID', '使用サブKW', 'メモ']
+2026-04-18 11:00:08 [INFO] [fetch] [キーワード] メインKW: 117件（vol≥30 or N/A）  サブKW: 176件（vol<30）  テーマ外除外: 125件  aim内訳: [aim:88]
+2026-04-18 11:00:08 [DEBUG] [group_pool] グループ数: 70件 → pool: 50件
+2026-04-18 11:00:08 [INFO] [dup_check] 優先候補: 41件 {'aim': 41} を先頭評価
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note aiボイスレコーダー iphone」 → コアKW重複: 「PLAUD NOTE AIボイスレコーダーの精度を徹底検証！距離・マイク・英語対」(core: 'plaud note aiボイスレコーダー')
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro 充電方法」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro 設定方法」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro 通話録音」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro zoom」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro オンライン会議」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro 文字起こし」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro 議事録」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro リアルタイム文字起こし」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro テンプレート」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro マルチモーダル」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro ヨドバシ」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro デメリット」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro セキュリティ」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro バッテリー」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro 評判」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro 口コミ」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「plaud note pro 精度」 → 直近7日重複: 「Chime Note Pro AIボイスレコーダーの評判・使い方・機能を徹底レビ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「youtube ai ナレーション」 → 直近7日重複: 「YouTube AI犬動画の作り方完全ガイド！無料ツールで初心者でも高クオリティ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「youtube ai 顔」 → 直近7日重複: 「YouTube AI犬動画の作り方完全ガイド！無料ツールで初心者でも高クオリティ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「youtube 文字 起こし ai ツール」 → 直近7日重複: 「YouTube AI犬動画の作り方完全ガイド！無料ツールで初心者でも高クオリティ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「youtube 動画 編集 生成 ai」 → 直近7日重複: 「YouTube AI犬動画の作り方完全ガイド！無料ツールで初心者でも高クオリティ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「youtube 字幕 自動 生成 ai」 → 直近7日重複: 「YouTube AI犬動画の作り方完全ガイド！無料ツールで初心者でも高クオリティ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → 直近7日重複: 「YouTube AI犬動画の作り方完全ガイド！無料ツールで初心者でも高クオリティ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → 直近7日重複: 「YouTube AI犬動画の作り方完全ガイド！無料ツールで初心者でも高クオリティ」
+2026-04-18 11:00:08 [INFO] [dup_check] 除外: 「youtube 競合 分析 ai」 → 直近7日重複: 「YouTube AI犬動画の作り方完全ガイド！無料ツールで初心者でも高クオリティ」
+2026-04-18 11:00:08 [DEBUG] [dup_check] OK: 「youtube ai翻訳 音声」
+2026-04-18 11:00:08 [INFO] [dup_check] 完了: 選定=1件 / 除外=26件 (pool=91件, 要求=1件)
+2026-04-18 11:00:08 [INFO] [select] 1件選定 (要求=1件)
+2026-04-18 11:00:08 [INFO] [select]   1. 「youtube ai翻訳 音声」 vol=0 seo=N/A comp=N/A
+2026-04-18 11:00:08 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-04-18 11:00:08 [INFO] [workup-ai] 候補: 117件 / 選定: 1件 / 生成予定: 1件
+2026-04-18 11:00:08 [INFO] [api_guard] 本日の使用量: $0.1612 / ¥24 (3回呼び出し)
+2026-04-18 11:00:08 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 11:00:08 [INFO] [workup-ai] [1/1] [LONGTAIL] 「youtube ai翻訳 音声」 vol=0 ★AIM
+2026-04-18 11:00:08 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 11:00:08 [INFO] [generate] 生成開始: 「youtube ai翻訳 音声」(vol:0) fact_check=True target_length=6,000字
+2026-04-18 11:02:48 [INFO] [generate] 完了: 「YouTubeのAI翻訳音声機能を完全解説！やり方・対応言語・精度まで」
+2026-04-18 11:02:58 [INFO] [post] 画像生成完了: 51,203 bytes
+2026-04-18 11:03:18 [INFO] [post] WP投稿完了: ID=9669 → https://workup-ai.com/wp-admin/post.php?post=9669&action=edit
+2026-04-18 11:03:18 [INFO] [workup-ai] [1/1] ✅ 完了: 「YouTubeのAI翻訳音声機能を完全解説！やり方・対応言語・精度まで」
+2026-04-18 11:03:18 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-04-18 11:03:18 [INFO] 
+============================================================
+2026-04-18 11:03:18 [INFO] 【全体サマリー】
+2026-04-18 11:03:18 [INFO]   ブログ数  : 1件
+2026-04-18 11:03:18 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-04-18 11:03:18 [INFO]   所要時間  : 194.4秒
+2026-04-18 11:03:18 [INFO]   ✅ [workup-ai] youtube ai翻訳 音声 → YouTubeのAI翻訳音声機能を完全解説！やり方・対応言語・精度まで
+2026-04-18 11:03:18 [INFO]        https://workup-ai.com/wp-admin/post.php?post=9669&action=edit
+2026-04-18 11:03:18 [INFO] ============================================================
+2026-04-18 17:31:22 [INFO] [test] テストモード: 1記事生成
+2026-04-18 17:31:22 [INFO] ============================================================
+2026-04-18 17:31:22 [INFO] generate_lite.py 開始  dry_run=False
+2026-04-18 17:31:22 [INFO] ============================================================
+2026-04-18 17:31:22 [INFO] 対象ブログ: ['workup-ai']
+2026-04-18 17:31:22 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-18 17:31:22 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-04-18 17:31:22 [INFO] ════════════════════════════════════════════════════════════
+2026-04-18 17:31:22 [INFO]   genre            : AI・副業・転職・キャリア
+2026-04-18 17:31:22 [INFO]   fact_check       : True
+2026-04-18 17:31:22 [INFO]   article_type_mix : True
+2026-04-18 17:31:22 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-04-18 17:31:22 [INFO]   article_count    : 1  dry_run: False
+2026-04-18 17:31:25 [INFO] [wp] 記事取得: 計379件 (draft=12 / private=6 / publish=361)
+2026-04-18 17:31:25 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-18 17:31:27 [DEBUG] [fetch] シート「絞り込みKW」: 505行 / ヘッダー: ['キーワード', 'SEO難易度', '月間検索数', 'CPC（$）', '競合性', 'キーワード', 'allintitle', 'intitle', 'Q&Aサイト', '', '無料ブログ', '', 'TikTok', '', 'Instagram', '', 'エックス', '', 'Facebook', '', 'aim', '投稿ステータス', '投稿日', '記事URL', '投稿ID', '使用サブKW', 'メモ']
+2026-04-18 17:31:27 [INFO] [fetch] [キーワード] メインKW: 116件（vol≥30 or N/A）  サブKW: 176件（vol<30）  テーマ外除外: 125件  aim内訳: [aim:87]
+2026-04-18 17:31:27 [DEBUG] [group_pool] グループ数: 70件 → pool: 50件
+2026-04-18 17:31:27 [INFO] [dup_check] 優先候補: 40件 {'aim': 40} を先頭評価
+2026-04-18 17:31:27 [INFO] [dup_check] 除外: 「plaud note aiボイスレコーダー iphone」 → コアKW重複: 「PLAUD NOTE AIボイスレコーダーの精度を徹底検証！距離・マイク・英語対」(core: 'plaud note aiボイスレコーダー')
+2026-04-18 17:31:27 [DEBUG] [dup_check] OK: 「plaud note pro 充電方法」
+2026-04-18 17:31:27 [INFO] [dup_check] 完了: 選定=1件 / 除外=1件 (pool=90件, 要求=1件)
+2026-04-18 17:31:27 [INFO] [select] 1件選定 (要求=1件)
+2026-04-18 17:31:27 [INFO] [select]   1. 「plaud note pro 充電方法」 vol=0 seo=N/A comp=N/A
+2026-04-18 17:31:27 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-04-18 17:31:27 [INFO] [workup-ai] 候補: 116件 / 選定: 1件 / 生成予定: 1件
+2026-04-18 17:31:27 [INFO] [api_guard] 本日の使用量: $0.3343 / ¥50 (6回呼び出し)
+2026-04-18 17:31:27 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 17:31:27 [INFO] [workup-ai] [1/1] [LONGTAIL] 「plaud note pro 充電方法」 vol=0 ★AIM
+2026-04-18 17:31:27 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 17:31:27 [INFO] [generate] 生成開始: 「plaud note pro 充電方法」(vol:0) fact_check=True target_length=6,000字
+2026-04-18 17:33:55 [INFO] [generate] 完了: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 17:34:05 [INFO] [post] 画像生成完了: 64,382 bytes
+2026-04-18 17:34:18 [INFO] [post] WP投稿完了: ID=9672 → https://workup-ai.com/wp-admin/post.php?post=9672&action=edit
+2026-04-18 17:34:18 [INFO] [workup-ai] [1/1] ✅ 完了: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 17:34:18 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-04-18 17:34:18 [INFO] 
+============================================================
+2026-04-18 17:34:18 [INFO] 【全体サマリー】
+2026-04-18 17:34:18 [INFO]   ブログ数  : 1件
+2026-04-18 17:34:18 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-04-18 17:34:18 [INFO]   所要時間  : 175.8秒
+2026-04-18 17:34:18 [INFO]   ✅ [workup-ai] plaud note pro 充電方法 → PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで
+2026-04-18 17:34:18 [INFO]        https://workup-ai.com/wp-admin/post.php?post=9672&action=edit
+2026-04-18 17:34:18 [INFO] ============================================================
+2026-04-18 18:33:10 [INFO] [test] テストモード: 1記事生成
+2026-04-18 18:33:10 [INFO] ============================================================
+2026-04-18 18:33:10 [INFO] generate_lite.py 開始  dry_run=False
+2026-04-18 18:33:10 [INFO] ============================================================
+2026-04-18 18:33:10 [INFO] 対象ブログ: ['workup-ai']
+2026-04-18 18:33:10 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-18 18:33:10 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-04-18 18:33:10 [INFO] ════════════════════════════════════════════════════════════
+2026-04-18 18:33:10 [INFO]   genre            : AI・副業・転職・キャリア
+2026-04-18 18:33:10 [INFO]   fact_check       : True
+2026-04-18 18:33:10 [INFO]   article_type_mix : True
+2026-04-18 18:33:10 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-04-18 18:33:10 [INFO]   article_count    : 1  dry_run: False
+2026-04-18 18:33:11 [INFO] [wp] 記事取得: 計380件 (draft=13 / private=6 / publish=361)
+2026-04-18 18:33:11 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-18 18:33:13 [DEBUG] [fetch] シート「絞り込みKW」: 505行 / ヘッダー: ['キーワード', 'SEO難易度', '月間検索数', 'CPC（$）', '競合性', 'キーワード', 'allintitle', 'intitle', 'Q&Aサイト', '', '無料ブログ', '', 'TikTok', '', 'Instagram', '', 'エックス', '', 'Facebook', '', 'aim', '投稿ステータス', '投稿日', '記事URL', '投稿ID', '使用サブKW', 'メモ']
+2026-04-18 18:33:13 [INFO] [fetch] [キーワード] メインKW: 115件（vol≥30 or N/A）  サブKW: 176件（vol<30）  テーマ外除外: 125件  aim内訳: [aim:86]
+2026-04-18 18:33:13 [DEBUG] [group_pool] グループ数: 70件 → pool: 50件
+2026-04-18 18:33:13 [INFO] [dup_check] 優先候補: 39件 {'aim': 39} を先頭評価
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note aiボイスレコーダー iphone」 → コアKW重複: 「PLAUD NOTE AIボイスレコーダーの精度を徹底検証！距離・マイク・英語対」(core: 'plaud note aiボイスレコーダー')
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note pro 設定方法」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note pro 通話録音」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note pro zoom」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note pro オンライン会議」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note pro 文字起こし」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note pro 議事録」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note pro リアルタイム文字起こし」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note pro テンプレート」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note pro マルチモーダル」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note pro ヨドバシ」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note pro デメリット」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note pro セキュリティ」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note pro バッテリー」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note pro 評判」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note pro 口コミ」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「plaud note pro 精度」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「youtube ai ナレーション」 → 直近7日重複: 「YouTubeのAI翻訳で音声をオフにする方法！字幕だけ表示する設定を徹底解説」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「youtube ai 顔」 → 直近7日重複: 「YouTubeのAI翻訳で音声をオフにする方法！字幕だけ表示する設定を徹底解説」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「youtube 文字 起こし ai ツール」 → 直近7日重複: 「YouTubeのAI翻訳で音声をオフにする方法！字幕だけ表示する設定を徹底解説」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「youtube 動画 編集 生成 ai」 → 直近7日重複: 「YouTubeのAI翻訳で音声をオフにする方法！字幕だけ表示する設定を徹底解説」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「youtube 字幕 自動 生成 ai」 → 直近7日重複: 「YouTubeのAI翻訳で音声をオフにする方法！字幕だけ表示する設定を徹底解説」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → 直近7日重複: 「YouTubeのAI翻訳で音声をオフにする方法！字幕だけ表示する設定を徹底解説」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → 直近7日重複: 「YouTubeのAI翻訳で音声をオフにする方法！字幕だけ表示する設定を徹底解説」
+2026-04-18 18:33:14 [INFO] [dup_check] 除外: 「youtube 競合 分析 ai」 → 直近7日重複: 「YouTubeのAI翻訳で音声をオフにする方法！字幕だけ表示する設定を徹底解説」
+2026-04-18 18:33:14 [DEBUG] [dup_check] OK: 「youtube ai編集」
+2026-04-18 18:33:14 [INFO] [dup_check] 完了: 選定=1件 / 除外=25件 (pool=89件, 要求=1件)
+2026-04-18 18:33:14 [INFO] [select] 1件選定 (要求=1件)
+2026-04-18 18:33:14 [INFO] [select]   1. 「youtube ai編集」 vol=0 seo=N/A comp=N/A
+2026-04-18 18:33:14 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-04-18 18:33:14 [INFO] [workup-ai] 候補: 115件 / 選定: 1件 / 生成予定: 1件
+2026-04-18 18:33:14 [INFO] [api_guard] 本日の使用量: $0.4924 / ¥74 (9回呼び出し)
+2026-04-18 18:33:14 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 18:33:14 [INFO] [workup-ai] [1/1] [LONGTAIL] 「youtube ai編集」 vol=0 ★AIM
+2026-04-18 18:33:14 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 18:33:14 [INFO] [generate] 生成開始: 「youtube ai編集」(vol:0) fact_check=True target_length=6,000字
+2026-04-18 18:35:57 [INFO] [generate] 完了: 「YouTube AI編集おすすめツール7選！初心者でも時間短縮できる自動編集の全手順」
+2026-04-18 18:36:06 [INFO] [post] 画像生成完了: 45,690 bytes
+2026-04-18 18:36:18 [INFO] [post] WP投稿完了: ID=9674 → https://workup-ai.com/wp-admin/post.php?post=9674&action=edit
+2026-04-18 18:36:18 [INFO] [workup-ai] [1/1] ✅ 完了: 「YouTube AI編集おすすめツール7選！初心者でも時間短縮できる自動編集の全手順」
+2026-04-18 18:36:18 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-04-18 18:36:18 [INFO] 
+============================================================
+2026-04-18 18:36:18 [INFO] 【全体サマリー】
+2026-04-18 18:36:18 [INFO]   ブログ数  : 1件
+2026-04-18 18:36:18 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-04-18 18:36:18 [INFO]   所要時間  : 187.8秒
+2026-04-18 18:36:18 [INFO]   ✅ [workup-ai] youtube ai編集 → YouTube AI編集おすすめツール7選！初心者でも時間短縮できる自動編集の全手順
+2026-04-18 18:36:18 [INFO]        https://workup-ai.com/wp-admin/post.php?post=9674&action=edit
+2026-04-18 18:36:18 [INFO] ============================================================
+2026-04-18 19:30:45 [INFO] [test] テストモード: 1記事生成
+2026-04-18 19:30:45 [INFO] ============================================================
+2026-04-18 19:30:45 [INFO] generate_lite.py 開始  dry_run=False
+2026-04-18 19:30:45 [INFO] ============================================================
+2026-04-18 19:30:45 [INFO] 対象ブログ: ['workup-ai']
+2026-04-18 19:30:45 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-18 19:30:45 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-04-18 19:30:45 [INFO] ════════════════════════════════════════════════════════════
+2026-04-18 19:30:45 [INFO]   genre            : AI・副業・転職・キャリア
+2026-04-18 19:30:45 [INFO]   fact_check       : True
+2026-04-18 19:30:45 [INFO]   article_type_mix : True
+2026-04-18 19:30:45 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-04-18 19:30:45 [INFO]   article_count    : 1  dry_run: False
+2026-04-18 19:30:47 [INFO] [wp] 記事取得: 計381件 (draft=13 / private=6 / publish=362)
+2026-04-18 19:30:47 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-18 19:30:49 [DEBUG] [fetch] シート「絞り込みKW」: 505行 / ヘッダー: ['キーワード', 'SEO難易度', '月間検索数', 'CPC（$）', '競合性', 'キーワード', 'allintitle', 'intitle', 'Q&Aサイト', '', '無料ブログ', '', 'TikTok', '', 'Instagram', '', 'エックス', '', 'Facebook', '', 'aim', '投稿ステータス', '投稿日', '記事URL', '投稿ID', '使用サブKW', 'メモ']
+2026-04-18 19:30:49 [INFO] [fetch] [キーワード] メインKW: 114件（vol≥30 or N/A）  サブKW: 176件（vol<30）  テーマ外除外: 125件  aim内訳: [aim:85]
+2026-04-18 19:30:49 [DEBUG] [group_pool] グループ数: 70件 → pool: 50件
+2026-04-18 19:30:49 [INFO] [dup_check] 優先候補: 38件 {'aim': 38} を先頭評価
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note aiボイスレコーダー iphone」 → コアKW重複: 「PLAUD NOTE AIボイスレコーダーの精度を徹底検証！距離・マイク・英語対」(core: 'plaud note aiボイスレコーダー')
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note pro 設定方法」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note pro 通話録音」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note pro zoom」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note pro オンライン会議」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note pro 文字起こし」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note pro 議事録」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note pro リアルタイム文字起こし」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note pro テンプレート」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note pro マルチモーダル」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note pro ヨドバシ」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note pro デメリット」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note pro セキュリティ」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note pro バッテリー」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note pro 評判」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note pro 口コミ」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「plaud note pro 精度」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「youtube ai ナレーション」 → 直近7日重複: 「YouTube AI編集おすすめツール7選！初心者でも時間短縮できる自動編集の全」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「youtube ai 顔」 → 直近7日重複: 「YouTube AI編集おすすめツール7選！初心者でも時間短縮できる自動編集の全」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「youtube 文字 起こし ai ツール」 → 直近7日重複: 「YouTube AI編集おすすめツール7選！初心者でも時間短縮できる自動編集の全」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「youtube 動画 編集 生成 ai」 → 直近7日重複: 「YouTube AI編集おすすめツール7選！初心者でも時間短縮できる自動編集の全」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「youtube 字幕 自動 生成 ai」 → 直近7日重複: 「YouTube AI編集おすすめツール7選！初心者でも時間短縮できる自動編集の全」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → 直近7日重複: 「YouTube AI編集おすすめツール7選！初心者でも時間短縮できる自動編集の全」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → 直近7日重複: 「YouTube AI編集おすすめツール7選！初心者でも時間短縮できる自動編集の全」
+2026-04-18 19:30:49 [INFO] [dup_check] 除外: 「youtube 競合 分析 ai」 → 直近7日重複: 「YouTube AI編集おすすめツール7選！初心者でも時間短縮できる自動編集の全」
+2026-04-18 19:30:49 [DEBUG] [dup_check] OK: 「youtube ai表記」
+2026-04-18 19:30:49 [INFO] [dup_check] 完了: 選定=1件 / 除外=25件 (pool=88件, 要求=1件)
+2026-04-18 19:30:49 [INFO] [select] 1件選定 (要求=1件)
+2026-04-18 19:30:49 [INFO] [select]   1. 「youtube ai表記」 vol=0 seo=N/A comp=N/A
+2026-04-18 19:30:49 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-04-18 19:30:49 [INFO] [workup-ai] 候補: 114件 / 選定: 1件 / 生成予定: 1件
+2026-04-18 19:30:49 [INFO] [api_guard] 本日の使用量: $0.6815 / ¥102 (12回呼び出し)
+2026-04-18 19:30:49 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 19:30:49 [INFO] [workup-ai] [1/1] [LONGTAIL] 「youtube ai表記」 vol=0 ★AIM
+2026-04-18 19:30:49 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 19:30:49 [INFO] [generate] 生成開始: 「youtube ai表記」(vol:0) fact_check=True target_length=6,000字
+2026-04-18 19:33:34 [INFO] [generate] 完了: 「YouTubeのAI表記とは？表示の意味・つけ方・消す方法を徹底解説」
+2026-04-18 19:33:44 [INFO] [post] 画像生成完了: 47,741 bytes
+2026-04-18 19:33:57 [INFO] [post] WP投稿完了: ID=9677 → https://workup-ai.com/wp-admin/post.php?post=9677&action=edit
+2026-04-18 19:33:57 [INFO] [workup-ai] [1/1] ✅ 完了: 「YouTubeのAI表記とは？表示の意味・つけ方・消す方法を徹底解説」
+2026-04-18 19:33:57 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-04-18 19:33:57 [INFO] 
+============================================================
+2026-04-18 19:33:57 [INFO] 【全体サマリー】
+2026-04-18 19:33:57 [INFO]   ブログ数  : 1件
+2026-04-18 19:33:57 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-04-18 19:33:57 [INFO]   所要時間  : 192.0秒
+2026-04-18 19:33:57 [INFO]   ✅ [workup-ai] youtube ai表記 → YouTubeのAI表記とは？表示の意味・つけ方・消す方法を徹底解説
+2026-04-18 19:33:57 [INFO]        https://workup-ai.com/wp-admin/post.php?post=9677&action=edit
+2026-04-18 19:33:57 [INFO] ============================================================
+2026-04-18 19:34:04 [INFO] [test] テストモード: 1記事生成
+2026-04-18 19:34:04 [INFO] ============================================================
+2026-04-18 19:34:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-04-18 19:34:04 [INFO] ============================================================
+2026-04-18 19:34:04 [INFO] 対象ブログ: ['workup-ai']
+2026-04-18 19:34:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-18 19:34:04 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-04-18 19:34:04 [INFO] ════════════════════════════════════════════════════════════
+2026-04-18 19:34:04 [INFO]   genre            : AI・副業・転職・キャリア
+2026-04-18 19:34:04 [INFO]   fact_check       : True
+2026-04-18 19:34:04 [INFO]   article_type_mix : True
+2026-04-18 19:34:04 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-04-18 19:34:04 [INFO]   article_count    : 1  dry_run: False
+2026-04-18 19:34:06 [INFO] [wp] 記事取得: 計382件 (draft=14 / private=6 / publish=362)
+2026-04-18 19:34:06 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-18 19:34:07 [DEBUG] [fetch] シート「絞り込みKW」: 505行 / ヘッダー: ['キーワード', 'SEO難易度', '月間検索数', 'CPC（$）', '競合性', 'キーワード', 'allintitle', 'intitle', 'Q&Aサイト', '', '無料ブログ', '', 'TikTok', '', 'Instagram', '', 'エックス', '', 'Facebook', '', 'aim', '投稿ステータス', '投稿日', '記事URL', '投稿ID', '使用サブKW', 'メモ']
+2026-04-18 19:34:07 [INFO] [fetch] [キーワード] メインKW: 113件（vol≥30 or N/A）  サブKW: 176件（vol<30）  テーマ外除外: 125件  aim内訳: [aim:84]
+2026-04-18 19:34:07 [DEBUG] [group_pool] グループ数: 70件 → pool: 50件
+2026-04-18 19:34:07 [INFO] [dup_check] 優先候補: 37件 {'aim': 37} を先頭評価
+2026-04-18 19:34:07 [INFO] [dup_check] 除外: 「plaud note aiボイスレコーダー iphone」 → コアKW重複: 「PLAUD NOTE AIボイスレコーダーの精度を徹底検証！距離・マイク・英語対」(core: 'plaud note aiボイスレコーダー')
+2026-04-18 19:34:07 [INFO] [dup_check] 除外: 「plaud note pro 設定方法」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:34:07 [INFO] [dup_check] 除外: 「plaud note pro 通話録音」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:34:07 [INFO] [dup_check] 除外: 「plaud note pro zoom」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「plaud note pro オンライン会議」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「plaud note pro 文字起こし」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「plaud note pro 議事録」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「plaud note pro リアルタイム文字起こし」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「plaud note pro テンプレート」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「plaud note pro マルチモーダル」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「plaud note pro ヨドバシ」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「plaud note pro デメリット」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「plaud note pro セキュリティ」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「plaud note pro バッテリー」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「plaud note pro 評判」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「plaud note pro 口コミ」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「plaud note pro 精度」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「youtube ai ナレーション」 → 直近7日重複: 「YouTubeのAI表記とは？表示の意味・つけ方・消す方法を徹底解説」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「youtube ai 顔」 → 直近7日重複: 「YouTubeのAI表記とは？表示の意味・つけ方・消す方法を徹底解説」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「youtube 文字 起こし ai ツール」 → 直近7日重複: 「YouTubeのAI表記とは？表示の意味・つけ方・消す方法を徹底解説」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「youtube 動画 編集 生成 ai」 → 直近7日重複: 「YouTubeのAI表記とは？表示の意味・つけ方・消す方法を徹底解説」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「youtube 字幕 自動 生成 ai」 → 直近7日重複: 「YouTubeのAI表記とは？表示の意味・つけ方・消す方法を徹底解説」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → 直近7日重複: 「YouTubeのAI表記とは？表示の意味・つけ方・消す方法を徹底解説」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → 直近7日重複: 「YouTubeのAI表記とは？表示の意味・つけ方・消す方法を徹底解説」
+2026-04-18 19:34:08 [INFO] [dup_check] 除外: 「youtube 競合 分析 ai」 → 直近7日重複: 「YouTubeのAI表記とは？表示の意味・つけ方・消す方法を徹底解説」
+2026-04-18 19:34:08 [DEBUG] [dup_check] OK: 「youtube ai読み上げ」
+2026-04-18 19:34:08 [INFO] [dup_check] 完了: 選定=1件 / 除外=25件 (pool=87件, 要求=1件)
+2026-04-18 19:34:08 [INFO] [select] 1件選定 (要求=1件)
+2026-04-18 19:34:08 [INFO] [select]   1. 「youtube ai読み上げ」 vol=0 seo=N/A comp=N/A
+2026-04-18 19:34:08 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-04-18 19:34:08 [INFO] [workup-ai] 候補: 113件 / 選定: 1件 / 生成予定: 1件
+2026-04-18 19:34:08 [INFO] [api_guard] 本日の使用量: $0.8511 / ¥128 (15回呼び出し)
+2026-04-18 19:34:08 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 19:34:08 [INFO] [workup-ai] [1/1] [LONGTAIL] 「youtube ai読み上げ」 vol=0 ★AIM
+2026-04-18 19:34:08 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 19:34:08 [INFO] [generate] 生成開始: 「youtube ai読み上げ」(vol:0) fact_check=True target_length=6,000字
+2026-04-18 19:36:52 [INFO] [generate] 完了: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 19:37:02 [INFO] [post] 画像生成完了: 54,563 bytes
+2026-04-18 19:37:13 [INFO] [post] WP投稿完了: ID=9679 → https://workup-ai.com/wp-admin/post.php?post=9679&action=edit
+2026-04-18 19:37:13 [INFO] [workup-ai] [1/1] ✅ 完了: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 19:37:13 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-04-18 19:37:13 [INFO] 
+============================================================
+2026-04-18 19:37:13 [INFO] 【全体サマリー】
+2026-04-18 19:37:13 [INFO]   ブログ数  : 1件
+2026-04-18 19:37:13 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-04-18 19:37:13 [INFO]   所要時間  : 189.9秒
+2026-04-18 19:37:13 [INFO]   ✅ [workup-ai] youtube ai読み上げ → YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選
+2026-04-18 19:37:13 [INFO]        https://workup-ai.com/wp-admin/post.php?post=9679&action=edit
+2026-04-18 19:37:13 [INFO] ============================================================
+2026-04-18 19:43:49 [INFO] [test] テストモード: 1記事生成
+2026-04-18 19:43:49 [INFO] ============================================================
+2026-04-18 19:43:49 [INFO] generate_lite.py 開始  dry_run=False
+2026-04-18 19:43:49 [INFO] ============================================================
+2026-04-18 19:43:49 [INFO] 対象ブログ: ['workup-ai']
+2026-04-18 19:43:49 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-18 19:43:49 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-04-18 19:43:49 [INFO] ════════════════════════════════════════════════════════════
+2026-04-18 19:43:49 [INFO]   genre            : AI・副業・転職・キャリア
+2026-04-18 19:43:49 [INFO]   fact_check       : True
+2026-04-18 19:43:49 [INFO]   article_type_mix : True
+2026-04-18 19:43:49 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-04-18 19:43:49 [INFO]   article_count    : 1  dry_run: False
+2026-04-18 19:43:51 [INFO] [wp] 記事取得: 計383件 (draft=15 / private=6 / publish=362)
+2026-04-18 19:43:51 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-18 19:43:53 [DEBUG] [fetch] シート「絞り込みKW」: 505行 / ヘッダー: ['キーワード', 'SEO難易度', '月間検索数', 'CPC（$）', '競合性', 'キーワード', 'allintitle', 'intitle', 'Q&Aサイト', '', '無料ブログ', '', 'TikTok', '', 'Instagram', '', 'エックス', '', 'Facebook', '', 'aim', '投稿ステータス', '投稿日', '記事URL', '投稿ID', '使用サブKW', 'メモ']
+2026-04-18 19:43:53 [INFO] [fetch] [キーワード] メインKW: 112件（vol≥30 or N/A）  サブKW: 176件（vol<30）  テーマ外除外: 125件  aim内訳: [aim:83]
+2026-04-18 19:43:53 [DEBUG] [group_pool] グループ数: 70件 → pool: 50件
+2026-04-18 19:43:53 [INFO] [dup_check] 優先候補: 36件 {'aim': 36} を先頭評価
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note aiボイスレコーダー iphone」 → コアKW重複: 「PLAUD NOTE AIボイスレコーダーの精度を徹底検証！距離・マイク・英語対」(core: 'plaud note aiボイスレコーダー')
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note pro 設定方法」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note pro 通話録音」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note pro zoom」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note pro オンライン会議」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note pro 文字起こし」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note pro 議事録」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note pro リアルタイム文字起こし」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note pro テンプレート」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note pro マルチモーダル」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note pro ヨドバシ」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note pro デメリット」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note pro セキュリティ」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note pro バッテリー」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note pro 評判」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note pro 口コミ」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「plaud note pro 精度」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「youtube ai ナレーション」 → 直近7日重複: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「youtube ai 顔」 → 直近7日重複: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「youtube 文字 起こし ai ツール」 → 直近7日重複: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「youtube 動画 編集 生成 ai」 → 直近7日重複: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「youtube 字幕 自動 生成 ai」 → 直近7日重複: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → 直近7日重複: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → 直近7日重複: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 19:43:53 [INFO] [dup_check] 除外: 「youtube 競合 分析 ai」 → 直近7日重複: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 19:43:53 [DEBUG] [dup_check] OK: 「youtube ai絵」
+2026-04-18 19:43:53 [INFO] [dup_check] 完了: 選定=1件 / 除外=25件 (pool=86件, 要求=1件)
+2026-04-18 19:43:53 [INFO] [select] 1件選定 (要求=1件)
+2026-04-18 19:43:53 [INFO] [select]   1. 「youtube ai絵」 vol=0 seo=N/A comp=N/A
+2026-04-18 19:43:53 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-04-18 19:43:53 [INFO] [workup-ai] 候補: 112件 / 選定: 1件 / 生成予定: 1件
+2026-04-18 19:43:53 [INFO] [api_guard] 本日の使用量: $1.0258 / ¥154 (18回呼び出し)
+2026-04-18 19:43:53 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 19:43:53 [INFO] [workup-ai] [1/1] [LONGTAIL] 「youtube ai絵」 vol=0 ★AIM
+2026-04-18 19:43:53 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 19:43:53 [INFO] [generate] 生成開始: 「youtube ai絵」(vol:0) fact_check=True target_length=6,000字
+2026-04-18 19:46:23 [INFO] [generate] 完了: 「YouTube AI絵の作り方・収益化まで完全解説！無料ツールと著作権の注意点も」
+2026-04-18 19:46:23 [WARNING] [workup-ai] [1/1] ⏭️ 重複スキップ: タイトル重複のため投稿スキップ: 「YouTube AI絵の作り方・収益化まで完全解説！無料ツールと著作権」≈「YouTube AI朗読動画の作り方！無料ツールおすすめ5選と収益化ま」
+2026-04-18 19:46:27 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=1件 / 失敗=0件 / 合計=1件
+2026-04-18 19:46:27 [INFO] 
+============================================================
+2026-04-18 19:46:27 [INFO] 【全体サマリー】
+2026-04-18 19:46:27 [INFO]   ブログ数  : 1件
+2026-04-18 19:46:27 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計1件
+2026-04-18 19:46:27 [INFO]   所要時間  : 158.1秒
+2026-04-18 19:46:27 [INFO]   ❌ [workup-ai] youtube ai絵 → (生成失敗)
+2026-04-18 19:46:27 [INFO] ============================================================
+2026-04-18 20:00:04 [INFO] ============================================================
+2026-04-18 20:00:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-04-18 20:00:04 [INFO] ============================================================
+2026-04-18 20:00:04 [INFO] 対象ブログ: ['workup-ai']
+2026-04-18 20:00:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-18 20:00:04 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-04-18 20:00:04 [INFO] ════════════════════════════════════════════════════════════
+2026-04-18 20:00:04 [INFO]   genre            : AI・副業・転職・キャリア
+2026-04-18 20:00:04 [INFO]   fact_check       : True
+2026-04-18 20:00:04 [INFO]   article_type_mix : True
+2026-04-18 20:00:04 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-04-18 20:00:04 [INFO]   article_count    : 1  dry_run: False
+2026-04-18 20:00:06 [INFO] [wp] 記事取得: 計383件 (draft=15 / private=6 / publish=362)
+2026-04-18 20:00:06 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-18 20:00:07 [DEBUG] [fetch] シート「絞り込みKW」: 505行 / ヘッダー: ['キーワード', 'SEO難易度', '月間検索数', 'CPC（$）', '競合性', 'キーワード', 'allintitle', 'intitle', 'Q&Aサイト', '', '無料ブログ', '', 'TikTok', '', 'Instagram', '', 'エックス', '', 'Facebook', '', 'aim', '投稿ステータス', '投稿日', '記事URL', '投稿ID', '使用サブKW', 'メモ']
+2026-04-18 20:00:07 [INFO] [fetch] [キーワード] メインKW: 111件（vol≥30 or N/A）  サブKW: 176件（vol<30）  テーマ外除外: 125件  aim内訳: [aim:82]
+2026-04-18 20:00:07 [DEBUG] [group_pool] グループ数: 70件 → pool: 50件
+2026-04-18 20:00:07 [INFO] [dup_check] 優先候補: 35件 {'aim': 35} を先頭評価
+2026-04-18 20:00:07 [INFO] [dup_check] 除外: 「plaud note aiボイスレコーダー iphone」 → コアKW重複: 「PLAUD NOTE AIボイスレコーダーの精度を徹底検証！距離・マイク・英語対」(core: 'plaud note aiボイスレコーダー')
+2026-04-18 20:00:07 [INFO] [dup_check] 除外: 「plaud note pro 設定方法」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 20:00:07 [INFO] [dup_check] 除外: 「plaud note pro 通話録音」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「plaud note pro zoom」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「plaud note pro オンライン会議」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「plaud note pro 文字起こし」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「plaud note pro 議事録」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「plaud note pro リアルタイム文字起こし」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「plaud note pro テンプレート」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「plaud note pro マルチモーダル」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「plaud note pro ヨドバシ」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「plaud note pro デメリット」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「plaud note pro セキュリティ」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「plaud note pro バッテリー」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「plaud note pro 評判」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「plaud note pro 口コミ」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「plaud note pro 精度」 → 直近7日重複: 「PLAUD Note Pro 充電方法を完全解説！充電時間・トラブル対処まで」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「youtube ai ナレーション」 → 直近7日重複: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「youtube ai 顔」 → 直近7日重複: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「youtube 文字 起こし ai ツール」 → 直近7日重複: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「youtube 動画 編集 生成 ai」 → 直近7日重複: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「youtube 字幕 自動 生成 ai」 → 直近7日重複: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → 直近7日重複: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → 直近7日重複: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 20:00:08 [INFO] [dup_check] 除外: 「youtube 競合 分析 ai」 → 直近7日重複: 「YouTube AI読み上げ完全ガイド！使い方・設定・おすすめツール6選」
+2026-04-18 20:00:08 [DEBUG] [dup_check] OK: 「youtube ai画像生成」
+2026-04-18 20:00:08 [INFO] [dup_check] 完了: 選定=1件 / 除外=25件 (pool=85件, 要求=1件)
+2026-04-18 20:00:08 [INFO] [select] 1件選定 (要求=1件)
+2026-04-18 20:00:08 [INFO] [select]   1. 「youtube ai画像生成」 vol=0 seo=N/A comp=N/A
+2026-04-18 20:00:08 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-04-18 20:00:08 [INFO] [workup-ai] 候補: 111件 / 選定: 1件 / 生成予定: 1件
+2026-04-18 20:00:08 [INFO] [api_guard] 本日の使用量: $1.1980 / ¥180 (21回呼び出し)
+2026-04-18 20:00:08 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 20:00:08 [INFO] [workup-ai] [1/1] [LONGTAIL] 「youtube ai画像生成」 vol=0 ★AIM
+2026-04-18 20:00:08 [INFO] ────────────────────────────────────────────────────────────
+2026-04-18 20:00:08 [INFO] [generate] 生成開始: 「youtube ai画像生成」(vol:0) fact_check=True target_length=6,000字
+2026-04-18 20:03:06 [INFO] [generate] 完了: 「YouTube×AI画像生成おすすめツール7選！無料・商用利用・著作権まで徹底解説」
+2026-04-18 20:03:15 [INFO] [post] 画像生成完了: 53,812 bytes
+2026-04-18 20:03:29 [INFO] [post] WP投稿完了: ID=9681 → https://workup-ai.com/wp-admin/post.php?post=9681&action=edit
+2026-04-18 20:03:29 [INFO] [workup-ai] [1/1] ✅ 完了: 「YouTube×AI画像生成おすすめツール7選！無料・商用利用・著作権まで徹底解説」
+2026-04-18 20:03:29 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-04-18 20:03:29 [INFO] 
+============================================================
+2026-04-18 20:03:29 [INFO] 【全体サマリー】
+2026-04-18 20:03:29 [INFO]   ブログ数  : 1件
+2026-04-18 20:03:29 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-04-18 20:03:29 [INFO]   所要時間  : 205.7秒
+2026-04-18 20:03:29 [INFO]   ✅ [workup-ai] youtube ai画像生成 → YouTube×AI画像生成おすすめツール7選！無料・商用利用・著作権まで徹底解説
+2026-04-18 20:03:29 [INFO]        https://workup-ai.com/wp-admin/post.php?post=9681&action=edit
+2026-04-18 20:03:29 [INFO] ============================================================

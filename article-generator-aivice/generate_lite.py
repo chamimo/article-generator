@@ -1070,7 +1070,8 @@ def generate(
     )
     article = generate_article(keyword, volume, sub_keywords=sub_keywords,
                                enable_fact_check=fact_check,
-                               target_length=target_length)
+                               target_length=target_length,
+                               article_type=article_type)
     log.info(f"[generate] 完了: 「{article['title']}」")
     return article
 
@@ -1102,7 +1103,10 @@ def post(article: dict, dry_run: bool = False,
             image_bytes: bytes | None = None
             keyword = article.get("keyword", "")
             try:
-                image_bytes = generate_image_for_article(keyword=keyword)
+                image_bytes = generate_image_for_article(
+                    keyword=keyword,
+                    article_type=article.get("_article_type", ""),
+                )
                 log.info(f"[post] 画像生成完了: {len(image_bytes):,} bytes")
             except Exception as img_err:
                 log.warning(f"[post] 画像生成スキップ（続行）: {img_err}")
