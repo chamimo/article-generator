@@ -87,6 +87,11 @@ ARTICLE_TYPE_WEIGHTS: dict[str, float] = {
     "monetize": 0.2,   # 収益化記事（CV重視）
 }
 
+# 全ブログ共通NGワード（部分一致でスキップ）
+GLOBAL_NG_KEYWORDS: list[str] = [
+    "怪しい", "詐欺", "返金", "被害", "トラブル", "やばい",
+]
+
 
 # ═══════════════════════════════════════════════════════════════
 # ARTICLE TYPE
@@ -127,7 +132,8 @@ class BlogConfig:
     aliases: list = field(default_factory=list)         # --blog で使える別名リスト
     allowed_themes: list = field(default_factory=list)  # テーマホワイトリスト（空=無制限）
     ng_keywords: list = field(default_factory=list)     # NGワードブラックリスト
-    asp_links: dict = field(default_factory=dict)       # ASP案件リンク {名称: URL}
+    asp_links: dict = field(default_factory=dict)       # ASP案件リンク {名称: URL}（静的フォールバック）
+    affili_ss_id: str = ""                              # アフィリURLシートのスプレッドシートID（空=シート読み込みなし）
     # 追加設定はここに列追加するだけで OK
     extra: dict = field(default_factory=dict)
 
@@ -198,13 +204,14 @@ def load_blog_config(blog_name: str) -> BlogConfig:
         allowed_themes  = [str(t) for t in data.get("allowed_themes", [])],
         ng_keywords     = [str(k) for k in data.get("ng_keywords", [])],
         asp_links       = _normalize_asp_links(data.get("asp_links", {})),
+        affili_ss_id    = data.get("affili_ss_id", ""),
         extra           = {k: v for k, v in data.items()
                            if k not in ("name", "display_name", "genre", "target_length",
                                         "fact_check", "candidate_ss_id", "candidate_sheet",
                                         "article_count", "min_volume", "wp_url", "wp_username",
                                         "wp_app_password", "article_type_weights",
                                         "stop_words", "aliases", "allowed_themes",
-                                        "ng_keywords", "asp_links", "_comment")
+                                        "ng_keywords", "asp_links", "affili_ss_id", "_comment")
                            and not k.endswith("_env")},
     )
 
@@ -466,7 +473,10 @@ def fetch_candidates(
 
     def _passes_theme(kw: str) -> bool:
         kw_l = kw.lower()
-        # NGワードチェック（ブラックリスト）
+        # 全ブログ共通NGワードチェック（部分一致）
+        if any(ng in kw_l for ng in GLOBAL_NG_KEYWORDS):
+            return False
+        # ブログ固有NGワードチェック（ブラックリスト）
         if ng_keywords and any(ng.lower() in kw_l for ng in ng_keywords):
             return False
         # テーマチェック（ホワイトリスト）
@@ -1053,11 +1063,13 @@ def generate(
     blog_cfg: BlogConfig | None = None,
     sub_keywords: list[str] | None = None,
     article_type: str = "longtail",
+    asp_list: list[dict] | None = None,
 ) -> dict:
     """
     記事を生成して dict で返す。
     blog_cfg が指定された場合はそのブログの設定（fact_check・target_length）を反映する。
     article_type に応じて target_length を解決し、H3本数・FAQ・max_tokensを切り替える。
+    asp_list が渡された場合はASP案件リンクをプロンプトに注入する。
     """
     fact_check    = blog_cfg.fact_check if blog_cfg is not None else True
     raw_tl        = blog_cfg.target_length if blog_cfg is not None else 9000
@@ -1071,7 +1083,8 @@ def generate(
     article = generate_article(keyword, volume, sub_keywords=sub_keywords,
                                enable_fact_check=fact_check,
                                target_length=target_length,
-                               article_type=article_type)
+                               article_type=article_type,
+                               asp_list=asp_list)
     log.info(f"[generate] 完了: 「{article['title']}」")
     return article
 
@@ -1081,7 +1094,8 @@ def generate(
 # Phase 2: 画像生成・CTA挿入・シートフラグ更新を追加予定
 # ═══════════════════════════════════════════════════════════════
 def post(article: dict, dry_run: bool = False,
-         blog_cfg: BlogConfig | None = None) -> dict:
+         blog_cfg: BlogConfig | None = None,
+         asp_list: list[dict] | None = None) -> dict:
     """
     WordPress に下書きとして投稿する。
     blog_cfg が指定された場合は一時的に WP 認証情報を切り替えて投稿する。
@@ -1111,7 +1125,11 @@ def post(article: dict, dry_run: bool = False,
             except Exception as img_err:
                 log.warning(f"[post] 画像生成スキップ（続行）: {img_err}")
 
-            asp_links  = blog_cfg.asp_links  if blog_cfg else {}
+            # asp_links: blog_config.json の静的リンク + シートからの動的リンク をマージ
+            asp_links  = dict(blog_cfg.asp_links) if blog_cfg else {}
+            if asp_list:
+                from modules.asp_fetcher import to_asp_dict
+                asp_links.update(to_asp_dict(asp_list))
             stop_words = blog_cfg.stop_words if blog_cfg else []
             result = post_article_with_image(article, image_bytes=image_bytes,
                                              asp_links=asp_links, stop_words=stop_words)
@@ -1160,6 +1178,15 @@ def run_blog(
     log.info(f"  article_type_mix : {FEATURES['article_type_mix']}")
     log.info(f"  stop_words       : {stop_words or '(なし)'}")
     log.info(f"  article_count    : {n_articles}  dry_run: {dry_run}")
+
+    # ── ASP案件リスト読み込み（affili_ss_id が設定されている場合のみ）──
+    asp_list: list[dict] = []
+    if blog_cfg.affili_ss_id:
+        try:
+            from modules.asp_fetcher import fetch_asp_links
+            asp_list = fetch_asp_links(blog_cfg.display_name, blog_cfg.affili_ss_id)
+        except Exception as asp_err:
+            log.warning(f"[{blog_cfg.name}] ASP案件読み込みスキップ（続行）: {asp_err}")
 
     # ── Step 1: キーワード選定 ──────────────────────────
     sub_keywords: list[str] = []  # vol<30のサブKW（記事本文に盛り込む）
@@ -1299,7 +1326,8 @@ def run_blog(
 
             article     = generate(chosen["keyword"], chosen["volume"],
                                    blog_cfg=blog_cfg, sub_keywords=related_sub or None,
-                                   article_type=article_type_label)
+                                   article_type=article_type_label,
+                                   asp_list=asp_list or None)
             # 記事タイプ・KWステータスを article dict に付与（シート書き込み用）
             article["_article_type"] = article_type_label
             article["_kw_status"]    = chosen.get("_aim", "")
@@ -1316,7 +1344,7 @@ def run_blog(
                         f"「{article['title'][:35]}」≈「{dup_title[:35]}」"
                     )
 
-            post_result = post(article, dry_run=dry_run, blog_cfg=blog_cfg)
+            post_result = post(article, dry_run=dry_run, blog_cfg=blog_cfg, asp_list=asp_list)
 
             item.update({
                 "status":      post_result["status"],

@@ -2039,6 +2039,96 @@
       "output_tokens": 10184,
       "cost_usd": 0.168321,
       "label": "article:youtube ai音声 収益化停止"
+    },
+    {
+      "timestamp": "2026-04-19T02:00:14.206128+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 94,
+      "cost_usd": 0.000462,
+      "label": "lsi:マイキャリ ai副業"
+    },
+    {
+      "timestamp": "2026-04-19T02:00:18.261147+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 563,
+      "cost_usd": 0.002392,
+      "label": "kw_research:マイキャリ ai副業"
+    },
+    {
+      "timestamp": "2026-04-19T02:02:42.633649+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5167,
+      "output_tokens": 9600,
+      "cost_usd": 0.159501,
+      "label": "article:マイキャリ ai副業"
+    },
+    {
+      "timestamp": "2026-04-19T11:00:15.553926+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 121,
+      "cost_usd": 0.000573,
+      "label": "lsi:ピグ ai副業 怪しい"
+    },
+    {
+      "timestamp": "2026-04-19T11:00:19.299654+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 515,
+      "cost_usd": 0.002202,
+      "label": "kw_research:ピグ ai副業 怪しい"
+    },
+    {
+      "timestamp": "2026-04-19T11:02:38.176616+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5155,
+      "output_tokens": 9775,
+      "cost_usd": 0.16209,
+      "label": "article:ピグ ai副業 怪しい"
+    },
+    {
+      "timestamp": "2026-04-19T20:00:27.663248+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 92,
+      "cost_usd": 0.000455,
+      "label": "lsi:ai副業本 おすすめ"
+    },
+    {
+      "timestamp": "2026-04-19T20:00:31.137941+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 439,
+      "cost_usd": 0.001897,
+      "label": "kw_research:ai副業本 おすすめ"
+    },
+    {
+      "timestamp": "2026-04-19T20:03:22.090169+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5045,
+      "output_tokens": 10730,
+      "cost_usd": 0.176085,
+      "label": "article:ai副業本 おすすめ"
     }
   ],
   "events": [

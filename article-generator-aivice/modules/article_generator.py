@@ -285,10 +285,11 @@ def _get_structure(target_length: int) -> tuple[int, int, int, int, int]:
     return _ARTICLE_STRUCTURE[closest]
 
 
-def _build_system_prompt(h3_min: int, h3_max: int, faq_min: int, faq_max: int) -> str:
+def _build_system_prompt(h3_min: int, h3_max: int, faq_min: int, faq_max: int,
+                         asp_links_section: str = "") -> str:
     """
     H3本数・FAQ問数に応じてSYSTEM_PROMPTの数値指示を置き換えて返す。
-    SYSTEM_PROMPT自体は変更せず、呼び出しごとに必要な値で差し替える。
+    asp_links_section が指定された場合はASP案件リストをプロンプト末尾に追記する。
     """
     prompt = SYSTEM_PROMPT
     prompt = prompt.replace(
@@ -308,6 +309,8 @@ def _build_system_prompt(h3_min: int, h3_max: int, faq_min: int, faq_max: int) -
         "{8〜10問繰り返し}",
         f"{{{faq_min}〜{faq_max}問繰り返し}}",
     )
+    if asp_links_section:
+        prompt = prompt + "\n" + asp_links_section
     return prompt
 
 
@@ -417,7 +420,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    sub_keywords: list[str] | None = None,
                    enable_fact_check: bool = True,
                    target_length: int = 9000,
-                   article_type: str = "") -> dict:
+                   article_type: str = "",
+                   asp_list: list[dict] | None = None) -> dict:
     """
     記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
 
@@ -428,7 +432,10 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
       3000 (FUTURE):    H3×5〜7本   / FAQ×3〜4問  / max_tokens=4,500
     """
     h3_min, h3_max, faq_min, faq_max, max_tokens = _get_structure(target_length)
-    system_prompt = _build_system_prompt(h3_min, h3_max, faq_min, faq_max)
+    from modules.asp_fetcher import build_asp_prompt_section
+    asp_links_section = build_asp_prompt_section(asp_list or [])
+    system_prompt = _build_system_prompt(h3_min, h3_max, faq_min, faq_max,
+                                         asp_links_section=asp_links_section)
 
     use_plaud_notta = _needs_plaud_notta(keyword)
     print(f"[article_generator] 記事構成生成中: 「{keyword}」(vol:{volume})"
@@ -570,6 +577,34 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     else:
         data["tags"] = []
 
+    # meta_description 長さ検証（120字未満の場合は Haiku で補完）
+    meta_desc = data.get("meta_description", "")
+    if len(meta_desc) < 120:
+        print(f"[article_generator] meta_description 短すぎ({len(meta_desc)}字) → 再生成")
+        try:
+            fix_msg = client.messages.create(
+                model="claude-haiku-4-5-20251001",
+                max_tokens=300,
+                messages=[{
+                    "role": "user",
+                    "content": (
+                        f"以下のメタディスクリプションを120〜160字に書き直してください。"
+                        f"キーワード「{keyword}」を2回以上含め、検索意図に沿ったクリックを促す自然な文章にすること。"
+                        f"テキストのみ返してください（説明不要）。\n\n{meta_desc}"
+                    ),
+                }],
+            )
+            record_usage(fix_msg.model, fix_msg.usage.input_tokens, fix_msg.usage.output_tokens,
+                         label=f"meta_fix:{keyword}")
+            fixed = fix_msg.content[0].text.strip()
+            if len(fixed) >= 120:
+                data["meta_description"] = fixed
+                print(f"[article_generator] meta_description 補完完了: {len(fixed)}字")
+            else:
+                print(f"[article_generator] meta_description 補完後も短い({len(fixed)}字)・そのまま使用")
+        except Exception as e:
+            print(f"[article_generator] meta_description 補完スキップ: {e}")
+
     data["keyword"] = keyword
     data["volume"] = volume
 
@@ -592,7 +627,8 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                      sub_keywords: list[str] | None = None,
                      enable_fact_check: bool = True,
                      target_length: int = 9000,
-                     article_type: str = "") -> dict:
+                     article_type: str = "",
+                     asp_list: list[dict] | None = None) -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
@@ -603,6 +639,7 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
         sub_keywords: スプレッドシートのAIM未判定キーワード（任意活用）
         enable_fact_check: 事実確認ステップを実行するか（デフォルト: True）
         target_length: 目標文字数（9000/6000/3000）。H3本数・FAQ問数・max_tokensを自動調整
+        asp_list: ASP案件リスト（fetch_asp_links()の返り値）。プロンプトに注入される。
 
     Returns:
         {title, meta_description, slug, image_prompt, category_id, category_name,
@@ -610,7 +647,8 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
     """
     return _build_article(keyword, volume, differentiation_note,
                           sub_keywords=sub_keywords, enable_fact_check=enable_fact_check,
-                          target_length=target_length, article_type=article_type)
+                          target_length=target_length, article_type=article_type,
+                          asp_list=asp_list)
 
 
 def generate_article_from_cluster(cluster: dict, sub_keywords: list[str] | None = None) -> dict:
