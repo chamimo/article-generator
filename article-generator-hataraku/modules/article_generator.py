@@ -64,7 +64,7 @@ AI特有の不自然さを排除し、読者にとって読みやすく、検索
 - FAQは8〜10問（各回答200字以上）
 - 結論ファーストな構成
 - タグは最大5個（重要度の高いものを厳選）
-- まとめチェックリストの直後に締めの文章（150〜200字）を1段落追加する。2〜3文構成で書くこと。構成例：①読者が感じているであろう迷いや苦労に共感する一文（「〜って、慣れるまでどれを選べばいいか本当に迷いますよね」など自然な表現で）→②やさしく背中を押す一文（「気になったものがあれば、まず公式サイトでスペックだけでも確認してみるのがおすすめです」など）。「まず〇〇を試してみてください」「〇〇を選べば間違いありません」のような押しつけがましい表現は使わないこと。キーワードに関連するアフィリリンク登録済みツールがあれば1つだけ自然な文脈で組み込む（リンクのために文章を歪めない）。該当ツールがない場合はリンクなしでよい（登録済みツール以外の公式リンクは不可）
+- まとめチェックリストの直後に締めの文章（150〜200字）を1段落追加する。2〜3文構成で書くこと。構成例：①読者が感じているであろう迷いや苦労に共感する一文（「〜って、慣れるまでどれを選べばいいか本当に迷いますよね」など自然な表現で）→②やさしく背中を押す一文（「気になったものがあれば、まず公式サイトでスペックだけでも確認してみるのがおすすめです」など）→③締めの1文として「一つの情報に絞らず、いくつかの選択肢を見比べながら、自分に合った道を探してみてください。」のニュアンスで、口語的になりすぎずまとめ全体のトーンに馴染む言葉で締めくくる。「まず〇〇を試してみてください」「〇〇を選べば間違いありません」のような押しつけがましい表現は使わないこと。キーワードに関連するアフィリリンク登録済みツールがあれば1つだけ自然な文脈で組み込む（リンクのために文章を歪めない）。該当ツールがない場合はリンクなしでよい（登録済みツール以外の公式リンクは不可）
 
 # リンク挿入ルール（厳守）
 
@@ -229,7 +229,7 @@ AI特有の不自然さを排除し、読者にとって読みやすく、検索
 <!-- /wp:list -->
 
 <!-- wp:paragraph -->
-<p>{{締めの文章（150〜200字・2〜3文）。①読者の迷いや苦労に共感する一文 → ②やさしく背中を押す一文。「まず〇〇を試してみてください」のような押しつけ表現は禁止。アフィリリンク登録済みツールが文脈に自然に合う場合のみ1つ挿入。}}</p>
+<p>{{締めの文章（150〜200字・3文）。①読者の迷いや苦労に共感する一文 → ②やさしく背中を押す一文 → ③「一つの情報に絞らず、いくつかの選択肢を見比べながら自分に合った道を探してみてください」のニュアンスで締めくくる1文（口語的になりすぎず、まとめ全体のトーンに馴染む表現で）。「まず〇〇を試してみてください」のような押しつけ表現は禁止。アフィリリンク登録済みツールが文脈に自然に合う場合のみ1つ挿入。}}</p>
 <!-- /wp:paragraph -->
 
 """
@@ -285,10 +285,43 @@ def _get_structure(target_length: int) -> tuple[int, int, int, int, int]:
     return _ARTICLE_STRUCTURE[closest]
 
 
-def _build_system_prompt(h3_min: int, h3_max: int, faq_min: int, faq_max: int) -> str:
+def build_guide_links_section(guide_links: dict) -> str:
+    """
+    内部誘導リンク用プロンプトセクションを構築する。
+    guide_links: {"pv_url": str, "comparison_url": str, "cv_url": str}
+    空のURLはスキップ。全て空の場合は空文字列を返す。
+    """
+    if not guide_links:
+        return ""
+    entries = []
+    pv_url  = guide_links.get("pv_url", "").strip()
+    cmp_url = guide_links.get("comparison_url", "").strip()
+    cv_url  = guide_links.get("cv_url", "").strip()
+    if pv_url:
+        entries.append(f"- 流入記事（PV記事）: {pv_url}")
+    if cmp_url:
+        entries.append(f"- 比較記事: {cmp_url}")
+    if cv_url:
+        entries.append(f"- 成約記事（CV記事）: {cv_url}")
+    if not entries:
+        return ""
+    return (
+        "\n## 内部誘導リンク（自然な文脈で挿入・1〜2箇所まで）\n"
+        "以下の記事URLへ、強制的な誘導にならず**自然な流れ**で本文中1〜2箇所だけ言及してください。\n"
+        "「こちらの記事もおすすめです」のような直接的な案内は禁止。\n"
+        "話題の流れで「この点については別記事で詳しく触れていますが〜」のように有機的に組み込むこと。\n"
+        "読者体験を損なわない箇所に限定し、必要性が低い場合は無理に挿入しないこと。\n\n"
+        + "\n".join(entries)
+    )
+
+
+def _build_system_prompt(h3_min: int, h3_max: int, faq_min: int, faq_max: int,
+                         asp_links_section: str = "",
+                         guide_links_section: str = "") -> str:
     """
     H3本数・FAQ問数に応じてSYSTEM_PROMPTの数値指示を置き換えて返す。
-    SYSTEM_PROMPT自体は変更せず、呼び出しごとに必要な値で差し替える。
+    asp_links_section が指定された場合はASP案件リストをプロンプト末尾に追記する。
+    guide_links_section が指定された場合は内部誘導リンク指示をプロンプト末尾に追記する。
     """
     prompt = SYSTEM_PROMPT
     prompt = prompt.replace(
@@ -308,6 +341,10 @@ def _build_system_prompt(h3_min: int, h3_max: int, faq_min: int, faq_max: int) -
         "{8〜10問繰り返し}",
         f"{{{faq_min}〜{faq_max}問繰り返し}}",
     )
+    if asp_links_section:
+        prompt = prompt + "\n" + asp_links_section
+    if guide_links_section:
+        prompt = prompt + "\n" + guide_links_section
     return prompt
 
 
@@ -417,7 +454,9 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    sub_keywords: list[str] | None = None,
                    enable_fact_check: bool = True,
                    target_length: int = 9000,
-                   article_type: str = "") -> dict:
+                   article_type: str = "",
+                   asp_list: list[dict] | None = None,
+                   guide_links: dict | None = None) -> dict:
     """
     記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
 
@@ -428,7 +467,12 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
       3000 (FUTURE):    H3×5〜7本   / FAQ×3〜4問  / max_tokens=4,500
     """
     h3_min, h3_max, faq_min, faq_max, max_tokens = _get_structure(target_length)
-    system_prompt = _build_system_prompt(h3_min, h3_max, faq_min, faq_max)
+    from modules.asp_fetcher import build_asp_prompt_section
+    asp_links_section  = build_asp_prompt_section(asp_list or [])
+    guide_links_section = build_guide_links_section(guide_links or {})
+    system_prompt = _build_system_prompt(h3_min, h3_max, faq_min, faq_max,
+                                         asp_links_section=asp_links_section,
+                                         guide_links_section=guide_links_section)
 
     use_plaud_notta = _needs_plaud_notta(keyword)
     print(f"[article_generator] 記事構成生成中: 「{keyword}」(vol:{volume})"
@@ -587,7 +631,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                     ),
                 }],
             )
-            record_usage(fix_msg, label=f"meta_fix:{keyword}")
+            record_usage(fix_msg.model, fix_msg.usage.input_tokens, fix_msg.usage.output_tokens,
+                         label=f"meta_fix:{keyword}")
             fixed = fix_msg.content[0].text.strip()
             if len(fixed) >= 120:
                 data["meta_description"] = fixed
@@ -619,7 +664,9 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                      sub_keywords: list[str] | None = None,
                      enable_fact_check: bool = True,
                      target_length: int = 9000,
-                     article_type: str = "") -> dict:
+                     article_type: str = "",
+                     asp_list: list[dict] | None = None,
+                     guide_links: dict | None = None) -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
@@ -630,6 +677,8 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
         sub_keywords: スプレッドシートのAIM未判定キーワード（任意活用）
         enable_fact_check: 事実確認ステップを実行するか（デフォルト: True）
         target_length: 目標文字数（9000/6000/3000）。H3本数・FAQ問数・max_tokensを自動調整
+        asp_list: ASP案件リスト（fetch_asp_links()の返り値）。プロンプトに注入される。
+        guide_links: 内部誘導リンク {"pv_url": str, "comparison_url": str, "cv_url": str}
 
     Returns:
         {title, meta_description, slug, image_prompt, category_id, category_name,
@@ -637,7 +686,8 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
     """
     return _build_article(keyword, volume, differentiation_note,
                           sub_keywords=sub_keywords, enable_fact_check=enable_fact_check,
-                          target_length=target_length, article_type=article_type)
+                          target_length=target_length, article_type=article_type,
+                          asp_list=asp_list, guide_links=guide_links)
 
 
 def generate_article_from_cluster(cluster: dict, sub_keywords: list[str] | None = None) -> dict:

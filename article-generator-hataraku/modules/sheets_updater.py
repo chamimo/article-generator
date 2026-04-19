@@ -494,3 +494,32 @@ def mark_posted(
     except Exception as e:
         print(f"[sheets_updater] 書き込みエラー（続行）: {e}")
         return False
+
+
+def mark_duplicate_skip(keyword: str, reason: str = "") -> bool:
+    """
+    重複タイトルでスキップされたキーワードを「カニバリスキップ」としてシートに記録する。
+    これにより次回の記事生成で同キーワードが再選択されるのを防ぐ。
+    """
+    try:
+        ws = _get_worksheet()
+        col_map = _ensure_headers(ws)
+        row = _find_keyword_row(ws, keyword)
+        if row is None:
+            print(f"[sheets_updater] キーワード「{keyword}」が見つかりません（スキップ）")
+            return False
+        # 「投稿済み」行は上書きしない
+        current_status = ws.cell(row, col_map["投稿ステータス"]).value or ""
+        if current_status.strip() == "投稿済み":
+            print(f"[sheets_updater] スキップ（投稿済み行は保護）: 「{keyword}」")
+            return False
+        updates = [gspread.Cell(row, col_map["投稿ステータス"], "カニバリスキップ")]
+        if reason and "メモ" in col_map:
+            updates.append(gspread.Cell(row, col_map["メモ"], reason[:200]))
+        ws.update_cells(updates, value_input_option="USER_ENTERED")
+        _highlight_orange(ws, row)
+        print(f"[sheets_updater] カニバリスキップ記録: 行{row} 「{keyword}」")
+        return True
+    except Exception as e:
+        print(f"[sheets_updater] カニバリスキップ書き込みエラー（続行）: {e}")
+        return False

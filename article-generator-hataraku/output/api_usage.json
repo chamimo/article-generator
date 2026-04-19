@@ -2219,6 +2219,246 @@
       "output_tokens": 9216,
       "cost_usd": 0.154482,
       "label": "article:転職面接"
+    },
+    {
+      "timestamp": "2026-04-19T01:02:14.655825+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 105,
+      "cost_usd": 0.000507,
+      "label": "lsi:転職3回目 厳しい"
+    },
+    {
+      "timestamp": "2026-04-19T01:02:18.146774+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 485,
+      "cost_usd": 0.002081,
+      "label": "kw_research:転職3回目 厳しい"
+    },
+    {
+      "timestamp": "2026-04-19T01:04:40.791736+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5834,
+      "output_tokens": 9048,
+      "cost_usd": 0.153222,
+      "label": "article:転職3回目 厳しい"
+    },
+    {
+      "timestamp": "2026-04-19T02:02:04.280180+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 103,
+      "output_tokens": 122,
+      "cost_usd": 0.00057,
+      "label": "lsi:職場香典"
+    },
+    {
+      "timestamp": "2026-04-19T02:02:07.752773+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 170,
+      "output_tokens": 431,
+      "cost_usd": 0.00186,
+      "label": "kw_research:職場香典"
+    },
+    {
+      "timestamp": "2026-04-19T02:04:37.235451+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5780,
+      "output_tokens": 9440,
+      "cost_usd": 0.15894,
+      "label": "article:職場香典"
+    },
+    {
+      "timestamp": "2026-04-19T02:04:38.426365+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 187,
+      "output_tokens": 80,
+      "cost_usd": 0.00047,
+      "label": "meta_fix:職場香典"
+    },
+    {
+      "timestamp": "2026-04-19T02:30:13.546436+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 115,
+      "cost_usd": 0.00055,
+      "label": "lsi:仕事 帰りたい 鬱"
+    },
+    {
+      "timestamp": "2026-04-19T02:30:17.888366+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 588,
+      "cost_usd": 0.002495,
+      "label": "kw_research:仕事 帰りたい 鬱"
+    },
+    {
+      "timestamp": "2026-04-19T02:32:40.516259+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5950,
+      "output_tokens": 10242,
+      "cost_usd": 0.17148,
+      "label": "article:仕事 帰りたい 鬱"
+    },
+    {
+      "timestamp": "2026-04-19T02:32:41.917724+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 215,
+      "output_tokens": 103,
+      "cost_usd": 0.000584,
+      "label": "meta_fix:仕事 帰りたい 鬱"
+    },
+    {
+      "timestamp": "2026-04-19T11:30:14.119272+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 105,
+      "output_tokens": 92,
+      "cost_usd": 0.000452,
+      "label": "lsi:職場訓練校"
+    },
+    {
+      "timestamp": "2026-04-19T11:30:17.665058+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 172,
+      "output_tokens": 521,
+      "cost_usd": 0.002222,
+      "label": "kw_research:職場訓練校"
+    },
+    {
+      "timestamp": "2026-04-19T11:32:33.333876+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5941,
+      "output_tokens": 9174,
+      "cost_usd": 0.155433,
+      "label": "article:職場訓練校"
+    },
+    {
+      "timestamp": "2026-04-19T11:39:05.952679+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 119,
+      "output_tokens": 156,
+      "cost_usd": 0.000719,
+      "label": "lsi:転職面接 服装 女性 50代 ユニクロ"
+    },
+    {
+      "timestamp": "2026-04-19T11:39:10.626848+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 186,
+      "output_tokens": 679,
+      "cost_usd": 0.002865,
+      "label": "kw_research:転職面接 服装 女性 50代 ユニクロ"
+    },
+    {
+      "timestamp": "2026-04-19T11:41:33.214417+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6091,
+      "output_tokens": 10072,
+      "cost_usd": 0.169353,
+      "label": "article:転職面接 服装 女性 50代 ユニクロ"
+    },
+    {
+      "timestamp": "2026-04-19T12:05:33.696185+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 120,
+      "output_tokens": 154,
+      "cost_usd": 0.000712,
+      "label": "lsi:転職 面接 服装 女性 50代 ユニクロ"
+    },
+    {
+      "timestamp": "2026-04-19T12:05:38.918362+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 187,
+      "output_tokens": 697,
+      "cost_usd": 0.002938,
+      "label": "kw_research:転職 面接 服装 女性 50代 ユニクロ"
+    },
+    {
+      "timestamp": "2026-04-19T12:07:46.800806+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T12",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6284,
+      "output_tokens": 8998,
+      "cost_usd": 0.153822,
+      "label": "article:転職 面接 服装 女性 50代 ユニクロ"
+    },
+    {
+      "timestamp": "2026-04-19T12:07:48.363577+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 218,
+      "output_tokens": 115,
+      "cost_usd": 0.000634,
+      "label": "meta_fix:転職 面接 服装 女性 50代 ユニクロ"
+    },
+    {
+      "timestamp": "2026-04-19T20:30:09.410570+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 86,
+      "cost_usd": 0.000432,
+      "label": "lsi:経理 に 転職 未経験"
+    },
+    {
+      "timestamp": "2026-04-19T20:30:12.809352+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 536,
+      "cost_usd": 0.002286,
+      "label": "kw_research:経理 に 転職 未経験"
+    },
+    {
+      "timestamp": "2026-04-19T20:33:00.470836+00:00",
+      "date": "2026-04-19",
+      "hour": "2026-04-19T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6044,
+      "output_tokens": 10579,
+      "cost_usd": 0.176817,
+      "label": "article:経理 に 転職 未経験"
     }
   ],
   "events": [

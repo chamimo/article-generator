@@ -11,8 +11,8 @@
   },
   "fact_check": true,
 
-  "candidate_ss_id": "1_pgNf2-JNlT2uwJFGzlVPGpuVpj2mf5eSsa_YLwMwGc",
-  "candidate_sheet": "絞り込みKW",
+  "candidate_ss_id": "1w0oAjA8JflYqHZP31XeF2RYZ_jxdznRl6D2e8387jLU",
+  "candidate_sheet": "キーワード",
   "article_count": 3,
   "min_volume": 0,
 
@@ -40,6 +40,13 @@
   ],
 
   "asp_links": {},
+  "affili_ss_id": "1_pgNf2-JNlT2uwJFGzlVPGpuVpj2mf5eSsa_YLwMwGc",
+
+  "guide_links": {
+    "pv_url":          "",
+    "comparison_url":  "",
+    "cv_url":          ""
+  },
 
   "seo_plugin": "seo_simple_pack",
 
