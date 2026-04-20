@@ -134,6 +134,7 @@ class BlogConfig:
     ng_keywords: list = field(default_factory=list)     # NGワードブラックリスト
     asp_links: dict = field(default_factory=dict)       # ASP案件リンク {名称: URL}（静的フォールバック）
     affili_ss_id: str = ""                              # アフィリURLシートのスプレッドシートID（空=シート読み込みなし）
+    guide_links: dict = field(default_factory=dict)    # 内部誘導リンク {pv_url, comparison_url, cv_url}
     # 追加設定はここに列追加するだけで OK
     extra: dict = field(default_factory=dict)
 
@@ -205,13 +206,15 @@ def load_blog_config(blog_name: str) -> BlogConfig:
         ng_keywords     = [str(k) for k in data.get("ng_keywords", [])],
         asp_links       = _normalize_asp_links(data.get("asp_links", {})),
         affili_ss_id    = data.get("affili_ss_id", ""),
+        guide_links     = data.get("guide_links", {}),
         extra           = {k: v for k, v in data.items()
                            if k not in ("name", "display_name", "genre", "target_length",
                                         "fact_check", "candidate_ss_id", "candidate_sheet",
                                         "article_count", "min_volume", "wp_url", "wp_username",
                                         "wp_app_password", "article_type_weights",
                                         "stop_words", "aliases", "allowed_themes",
-                                        "ng_keywords", "asp_links", "affili_ss_id", "_comment")
+                                        "ng_keywords", "asp_links", "affili_ss_id",
+                                        "guide_links", "_comment")
                            and not k.endswith("_env")},
     )
 
@@ -1070,21 +1073,25 @@ def generate(
     blog_cfg が指定された場合はそのブログの設定（fact_check・target_length）を反映する。
     article_type に応じて target_length を解決し、H3本数・FAQ・max_tokensを切り替える。
     asp_list が渡された場合はASP案件リンクをプロンプトに注入する。
+    blog_cfg.guide_links が設定されている場合は内部誘導リンクをプロンプトに注入する。
     """
     fact_check    = blog_cfg.fact_check if blog_cfg is not None else True
     raw_tl        = blog_cfg.target_length if blog_cfg is not None else 9000
     target_length = _resolve_target_length(raw_tl, article_type)
+    guide_links   = blog_cfg.guide_links if blog_cfg is not None else {}
 
     log.info(
         f"[generate] 生成開始: 「{keyword}」(vol:{volume:,})"
         f" fact_check={fact_check} target_length={target_length:,}字"
         + (f"  サブKW:{len(sub_keywords)}件" if sub_keywords else "")
+        + (f"  誘導リンク:{len([v for v in guide_links.values() if v])}件" if guide_links else "")
     )
     article = generate_article(keyword, volume, sub_keywords=sub_keywords,
                                enable_fact_check=fact_check,
                                target_length=target_length,
                                article_type=article_type,
-                               asp_list=asp_list)
+                               asp_list=asp_list,
+                               guide_links=guide_links or None)
     log.info(f"[generate] 完了: 「{article['title']}」")
     return article
 
@@ -1419,6 +1426,8 @@ def main() -> None:
     log.info("=" * 60)
 
     # ── ブログ一覧の決定 ──────────────────────────────────
+    registry_map: dict[str, dict] = {}  # name -> registry entry（guide_links 等）
+
     if args.blog is not None:
         # --blog: 番号または名前で1ブログ指定
         blog_names = [resolve_blog(args.blog)]
@@ -1426,7 +1435,21 @@ def main() -> None:
         if args.blogs is not None:
             blog_names = args.blogs  # --blogs で明示指定
         else:
-            blog_names = list_blogs()
+            # ブログ管理シートから稼働中ブログを動的取得（フォールバック: ローカルディレクトリ）
+            try:
+                from modules.blog_registry import load_active_blogs
+                registry_entries = load_active_blogs(GOOGLE_CREDENTIALS_PATH)
+                if registry_entries:
+                    blog_names  = [e["name"] for e in registry_entries]
+                    registry_map = {e["name"]: e for e in registry_entries}
+                    log.info(f"[registry] ブログ管理シートから {len(blog_names)} 件取得: {blog_names}")
+                else:
+                    log.warning("[registry] シートから稼働中ブログが0件 → ローカルディレクトリにフォールバック")
+                    blog_names = list_blogs()
+            except Exception as _reg_err:
+                log.warning(f"[registry] ブログ管理シート読み込みエラー → フォールバック: {_reg_err}")
+                blog_names = list_blogs()
+
             if not blog_names:
                 # blogs/ が空の場合は --site をフォールバックとして使用
                 blog_names = [args.site]
@@ -1447,6 +1470,13 @@ def main() -> None:
         except FileNotFoundError as e:
             log.error(f"[{blog_name}] 設定ファイルが見つかりません（スキップ）: {e}")
             continue
+
+        # ── ブログ管理シートの guide_links でローカル設定を上書き ──
+        if registry_map.get(blog_name):
+            sheet_guide = registry_map[blog_name].get("guide_links", {})
+            if any(v.strip() for v in sheet_guide.values() if v):
+                blog_cfg.guide_links = {k: v for k, v in sheet_guide.items() if v.strip()}
+                log.debug(f"[{blog_name}] シートの guide_links を適用: {blog_cfg.guide_links}")
 
         domain = blog_cfg.wp_url.replace("https://", "").replace("http://", "").rstrip("/")
         log.info(f"\n{'═' * 60}")

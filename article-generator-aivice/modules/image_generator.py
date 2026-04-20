@@ -361,6 +361,7 @@ def generate_imagefx_prompt(keyword: str, title: str, article_type: str = "") ->
     - ビジュアル: article_type に応じたスタイル（A:フラット/B:デフォルメ/C:アイコン）
     - 背景スタイル: A/B/C からランダム選択
     - ウォーターマーク・タイトルテキスト: 固定ルールで追記
+    - ※APIコールなし: キーワードから静的にプロンプトを生成（コスト削減）
 
     Returns:
         完成した ImageFX プロンプト文字列
@@ -368,41 +369,15 @@ def generate_imagefx_prompt(keyword: str, title: str, article_type: str = "") ->
     style = _select_style(article_type)
     bg_label, bg_base = random.choice(_IMAGEFX_BG_OPTIONS)
 
-    # テーマに合ったビジュアル説明をClaude Haikuで生成
-    theme_resp = _claude.messages.create(
-        model="claude-haiku-4-5-20251001",
-        max_tokens=80,
-        messages=[{
-            "role": "user",
-            "content": (
-                f"For a blog header illustration about '{keyword}' titled '{title}', "
-                "describe specific icons and objects (15-20 words). "
-                f"{style['haiku_style']} "
-                "Absolutely NO laptop, NO computer, NO monitor, NO smartphone, NO device screens. "
-                "Focus on: coins, charts, checkmarks, calendars, stars, lightbulbs, "
-                "speech bubbles, documents, magnifying glass, arrows, trophies, shields. "
-                "Avoid: people, hands, faces, robots, circuits, neon colors, dark elements. "
-                "No explanation. Only the description.\n"
-                f"Examples: {style['haiku_examples']}"
-            ),
-        }],
+    # テーマ: キーワードから静的生成（APIコール不要）
+    safe_kw = re.sub(r'[^\w\s\-]', ' ', keyword).strip()
+    theme_desc = (
+        f"flat design icons and symbols related to {safe_kw}, "
+        f"minimal illustration, soft pastel colors, no people, no devices"
     )
-    theme_desc = theme_resp.content[0].text.strip().splitlines()[0]
-    theme_desc = re.sub(r'[#*`"\']+', '', theme_desc).strip()
 
-    # 記事タイトルを英訳（短縮）
-    title_resp = _claude.messages.create(
-        model="claude-haiku-4-5-20251001",
-        max_tokens=20,
-        messages=[{
-            "role": "user",
-            "content": (
-                f"Translate to short English (max 5 words, title case, no punctuation): {title}"
-            ),
-        }],
-    )
-    en_title = title_resp.content[0].text.strip().splitlines()[0]
-    en_title = re.sub(r'[#*`]+', '', en_title).strip()
+    # タイトル: 英数字のみ抽出（APIコール不要）
+    en_title = re.sub(r'[^\w\s\-]', ' ', keyword)[:30].strip() or "Blog Article"
 
     prompt = (
         f"{theme_desc}\n"

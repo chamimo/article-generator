@@ -2129,6 +2129,66 @@
       "output_tokens": 10730,
       "cost_usd": 0.176085,
       "label": "article:ai副業本 おすすめ"
+    },
+    {
+      "timestamp": "2026-04-20T02:03:02.909782+00:00",
+      "date": "2026-04-20",
+      "hour": "2026-04-20T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4485,
+      "output_tokens": 10137,
+      "cost_usd": 0.16551,
+      "label": "article:ai副業 稼げない 知恵袋"
+    },
+    {
+      "timestamp": "2026-04-20T11:00:16.850702+00:00",
+      "date": "2026-04-20",
+      "hour": "2026-04-20T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 212,
+      "output_tokens": 546,
+      "cost_usd": 0.002354,
+      "label": "kw_research:ai副業 何をする"
+    },
+    {
+      "timestamp": "2026-04-20T11:02:42.368979+00:00",
+      "date": "2026-04-20",
+      "hour": "2026-04-20T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5001,
+      "output_tokens": 10500,
+      "cost_usd": 0.172503,
+      "label": "article:ai副業 何をする"
+    },
+    {
+      "timestamp": "2026-04-20T20:00:20.146327+00:00",
+      "date": "2026-04-20",
+      "hour": "2026-04-20T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 212,
+      "output_tokens": 542,
+      "cost_usd": 0.002338,
+      "label": "kw_research:ai副業 何をする"
+    },
+    {
+      "timestamp": "2026-04-20T20:02:58.936595+00:00",
+      "date": "2026-04-20",
+      "hour": "2026-04-20T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4998,
+      "output_tokens": 10132,
+      "cost_usd": 0.166974,
+      "label": "article:ai副業 何をする"
+    },
+    {
+      "timestamp": "2026-04-20T20:03:00.226415+00:00",
+      "date": "2026-04-20",
+      "hour": "2026-04-20T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 198,
+      "output_tokens": 103,
+      "cost_usd": 0.00057,
+      "label": "meta_fix:ai副業 何をする"
     }
   ],
   "events": [
