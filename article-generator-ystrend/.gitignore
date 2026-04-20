@@ -1,0 +1,27 @@
+# 機密情報
+.env
+credentials.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# macOS
+.DS_Store
+
+# データファイル（大容量CSVなど）
+data/*.csv
+
+# 処理済み画像（大容量バイナリ）
+library_images/done/
+
+# ログ・サンプル出力
+output/log_*.txt
+output/sample_*.png
+
+# エディタ
+.vscode/
+.idea/

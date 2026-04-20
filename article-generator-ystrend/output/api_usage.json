@@ -1,0 +1,44 @@
+{
+  "entries": [
+    {
+      "timestamp": "2026-04-20T11:00:16.052389+00:00",
+      "date": "2026-04-20",
+      "hour": "2026-04-20T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 238,
+      "output_tokens": 545,
+      "cost_usd": 0.00237,
+      "label": "kw_research:人間は取締役、AIがCEO　サムアルトマンがAGI論争を終了させてまで"
+    },
+    {
+      "timestamp": "2026-04-20T11:01:55.983017+00:00",
+      "date": "2026-04-20",
+      "hour": "2026-04-20T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4596,
+      "output_tokens": 6000,
+      "cost_usd": 0.103788,
+      "label": "article:人間は取締役、AIがCEO　サムアルトマンがAGI論争を終了させてまで"
+    },
+    {
+      "timestamp": "2026-04-20T20:01:27.217228+00:00",
+      "date": "2026-04-20",
+      "hour": "2026-04-20T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 215,
+      "output_tokens": 534,
+      "cost_usd": 0.002308,
+      "label": "kw_research:ggsql: A grammar of graphics for SQL"
+    },
+    {
+      "timestamp": "2026-04-20T20:03:02.117886+00:00",
+      "date": "2026-04-20",
+      "hour": "2026-04-20T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 3865,
+      "output_tokens": 6000,
+      "cost_usd": 0.101595,
+      "label": "article:ggsql: A grammar of graphics for SQL"
+    }
+  ]
+}
