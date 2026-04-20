@@ -1426,6 +1426,8 @@ def main() -> None:
     log.info("=" * 60)
 
     # ── ブログ一覧の決定 ──────────────────────────────────
+    registry_map: dict[str, dict] = {}  # name -> registry entry（guide_links 等）
+
     if args.blog is not None:
         # --blog: 番号または名前で1ブログ指定
         blog_names = [resolve_blog(args.blog)]
@@ -1433,7 +1435,21 @@ def main() -> None:
         if args.blogs is not None:
             blog_names = args.blogs  # --blogs で明示指定
         else:
-            blog_names = list_blogs()
+            # ブログ管理シートから稼働中ブログを動的取得（フォールバック: ローカルディレクトリ）
+            try:
+                from modules.blog_registry import load_active_blogs
+                registry_entries = load_active_blogs(GOOGLE_CREDENTIALS_PATH)
+                if registry_entries:
+                    blog_names  = [e["name"] for e in registry_entries]
+                    registry_map = {e["name"]: e for e in registry_entries}
+                    log.info(f"[registry] ブログ管理シートから {len(blog_names)} 件取得: {blog_names}")
+                else:
+                    log.warning("[registry] シートから稼働中ブログが0件 → ローカルディレクトリにフォールバック")
+                    blog_names = list_blogs()
+            except Exception as _reg_err:
+                log.warning(f"[registry] ブログ管理シート読み込みエラー → フォールバック: {_reg_err}")
+                blog_names = list_blogs()
+
             if not blog_names:
                 # blogs/ が空の場合は --site をフォールバックとして使用
                 blog_names = [args.site]
@@ -1454,6 +1470,13 @@ def main() -> None:
         except FileNotFoundError as e:
             log.error(f"[{blog_name}] 設定ファイルが見つかりません（スキップ）: {e}")
             continue
+
+        # ── ブログ管理シートの guide_links でローカル設定を上書き ──
+        if registry_map.get(blog_name):
+            sheet_guide = registry_map[blog_name].get("guide_links", {})
+            if any(v.strip() for v in sheet_guide.values() if v):
+                blog_cfg.guide_links = {k: v for k, v in sheet_guide.items() if v.strip()}
+                log.debug(f"[{blog_name}] シートの guide_links を適用: {blog_cfg.guide_links}")
 
         domain = blog_cfg.wp_url.replace("https://", "").replace("http://", "").rstrip("/")
         log.info(f"\n{'═' * 60}")
