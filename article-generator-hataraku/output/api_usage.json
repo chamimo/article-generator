@@ -2519,6 +2519,76 @@
       "output_tokens": 100,
       "cost_usd": 0.00056,
       "label": "meta_fix:経理 に 転職 未経験"
+    },
+    {
+      "timestamp": "2026-04-21T02:30:12.128048+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 219,
+      "output_tokens": 595,
+      "cost_usd": 0.002555,
+      "label": "kw_research:キーネットワーク 転職 失敗"
+    },
+    {
+      "timestamp": "2026-04-21T02:32:38.476098+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4991,
+      "output_tokens": 9566,
+      "cost_usd": 0.158463,
+      "label": "article:キーネットワーク 転職 失敗"
+    },
+    {
+      "timestamp": "2026-04-21T02:32:39.662571+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 196,
+      "output_tokens": 97,
+      "cost_usd": 0.000545,
+      "label": "meta_fix:キーネットワーク 転職 失敗"
+    },
+    {
+      "timestamp": "2026-04-21T11:30:13.825078+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 219,
+      "output_tokens": 724,
+      "cost_usd": 0.003071,
+      "label": "kw_research:転職 面接 聞かれること 20代"
+    },
+    {
+      "timestamp": "2026-04-21T11:32:46.243187+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5022,
+      "output_tokens": 10360,
+      "cost_usd": 0.170466,
+      "label": "article:転職 面接 聞かれること 20代"
+    },
+    {
+      "timestamp": "2026-04-21T20:30:12.221486+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 217,
+      "output_tokens": 422,
+      "cost_usd": 0.001862,
+      "label": "kw_research:経理 事務 未経験 求人"
+    },
+    {
+      "timestamp": "2026-04-21T20:32:20.164464+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4819,
+      "output_tokens": 9331,
+      "cost_usd": 0.154422,
+      "label": "article:経理 事務 未経験 求人"
     }
   ],
   "events": [

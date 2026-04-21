@@ -42,3 +42,79 @@
 2026-04-21 05:33:14 [INFO]   ✅ [hataraku] 経理 に 転職 未経験 → 経理に転職！未経験でも成功できる理由と必要な資格・勉強法を解説
 2026-04-21 05:33:14 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=432&action=edit
 2026-04-21 05:33:14 [INFO] ============================================================
+2026-04-21 11:30:02 [INFO] ============================================================
+2026-04-21 11:30:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-04-21 11:30:02 [INFO] ============================================================
+2026-04-21 11:30:02 [INFO] 対象ブログ: ['hataraku']
+2026-04-21 11:30:02 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-21 11:30:02 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-04-21 11:30:02 [INFO] ════════════════════════════════════════════════════════════
+2026-04-21 11:30:02 [INFO]   genre            : 転職・副業・キャリア
+2026-04-21 11:30:02 [INFO]   fact_check       : True
+2026-04-21 11:30:02 [INFO]   article_type_mix : True
+2026-04-21 11:30:02 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-04-21 11:30:02 [INFO]   article_count    : 1  dry_run: False
+2026-04-21 11:30:05 [WARNING] [hataraku] WP記事取得失敗（重複チェックなしで続行）: HTTPSConnectionPool(host='hataraku-navi.com', port=443): Max retries exceeded with url: /wp-json/wp/v2/posts?status=publish%2Cdraft%2Cprivate&_fields=id%2Ctitle%2Cdate%2Cslug%2Cstatus&per_page=100&page=1 (Caused by NameResolutionError("HTTPSConnection(host='hataraku-navi.com', port=443): Failed to resolve 'hataraku-navi.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-04-21 11:30:05 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-21 11:30:07 [DEBUG] [fetch] シート「絞り込みKW」: 1230行 / ヘッダー: ['キーワード', 'SEO難易度', '月間検索数', 'CPC（$）', '競合性', 'キーワード', 'allintitle', 'intitle', 'Q&Aサイト', '', '無料ブログ', '', 'TikTok', '', 'Instagram', '', 'エックス', '', 'Facebook', '', 'aim', '投稿ステータス', '投稿日', '記事URL', '投稿ID', '使用サブKW', 'メモ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-04-21 11:30:07 [INFO] [fetch] [キーワード] メインKW: 450件（vol≥30 or N/A）  サブKW: 99件（vol<30）  テーマ外除外: 394件  aim内訳: [aim:844]
+2026-04-21 11:30:07 [INFO] [select] 1件選定 (要求=1件)
+2026-04-21 11:30:07 [INFO] [select]   1. 「キーネットワーク 転職 失敗」 vol=720 seo=22 comp=8
+2026-04-21 11:30:07 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-04-21 11:30:07 [INFO] [hataraku] 候補: 450件 / 選定: 1件 / 生成予定: 1件
+2026-04-21 11:30:07 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-04-21 11:30:07 [INFO] ────────────────────────────────────────────────────────────
+2026-04-21 11:30:07 [INFO] [hataraku] [1/1] [LONGTAIL] 「キーネットワーク 転職 失敗」 vol=720 ★AIM
+2026-04-21 11:30:07 [INFO] ────────────────────────────────────────────────────────────
+2026-04-21 11:30:07 [INFO] [generate] 生成開始: 「キーネットワーク 転職 失敗」(vol:720) fact_check=True target_length=6,000字  誘導リンク:0件
+2026-04-21 11:32:39 [INFO] [generate] 完了: 「キーネットワークの転職で失敗する理由と後悔しないための対策5選」
+2026-04-21 11:32:52 [INFO] [post] 画像生成完了: 48,429 bytes
+2026-04-21 11:32:53 [ERROR] [hataraku] [1/1] ❌ エラー（続行）: HTTPSConnectionPool(host='hataraku-navi.com', port=443): Max retries exceeded with url: /wp-json/wp/v2/categories?per_page=100 (Caused by NameResolutionError("HTTPSConnection(host='hataraku-navi.com', port=443): Failed to resolve 'hataraku-navi.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-04-21 11:32:53 [INFO] [hataraku] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-04-21 11:32:53 [INFO] 
+============================================================
+2026-04-21 11:32:53 [INFO] 【全体サマリー】
+2026-04-21 11:32:53 [INFO]   ブログ数  : 1件
+2026-04-21 11:32:53 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-04-21 11:32:53 [INFO]   所要時間  : 170.8秒
+2026-04-21 11:32:53 [INFO]   ❌ [hataraku] キーネットワーク 転職 失敗 → (生成失敗)
+2026-04-21 11:32:53 [INFO] ============================================================
+2026-04-21 20:30:03 [INFO] ============================================================
+2026-04-21 20:30:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-04-21 20:30:03 [INFO] ============================================================
+2026-04-21 20:30:03 [INFO] 対象ブログ: ['hataraku']
+2026-04-21 20:30:03 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-21 20:30:03 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-04-21 20:30:03 [INFO] ════════════════════════════════════════════════════════════
+2026-04-21 20:30:03 [INFO]   genre            : 転職・副業・キャリア
+2026-04-21 20:30:03 [INFO]   fact_check       : True
+2026-04-21 20:30:03 [INFO]   article_type_mix : True
+2026-04-21 20:30:03 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-04-21 20:30:03 [INFO]   article_count    : 1  dry_run: False
+2026-04-21 20:30:06 [WARNING] [hataraku] WP記事取得失敗（重複チェックなしで続行）: HTTPSConnectionPool(host='hataraku-navi.com', port=443): Max retries exceeded with url: /wp-json/wp/v2/posts?status=publish%2Cdraft%2Cprivate&_fields=id%2Ctitle%2Cdate%2Cslug%2Cstatus&per_page=100&page=1 (Caused by NameResolutionError("HTTPSConnection(host='hataraku-navi.com', port=443): Failed to resolve 'hataraku-navi.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-04-21 20:30:06 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-21 20:30:08 [DEBUG] [fetch] シート「絞り込みKW」: 1230行 / ヘッダー: ['キーワード', 'SEO難易度', '月間検索数', 'CPC（$）', '競合性', 'キーワード', 'allintitle', 'intitle', 'Q&Aサイト', '', '無料ブログ', '', 'TikTok', '', 'Instagram', '', 'エックス', '', 'Facebook', '', 'aim', '投稿ステータス', '投稿日', '記事URL', '投稿ID', '使用サブKW', 'メモ', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+2026-04-21 20:30:08 [INFO] [fetch] [キーワード] メインKW: 450件（vol≥30 or N/A）  サブKW: 99件（vol<30）  テーマ外除外: 394件  aim内訳: [aim:844]
+2026-04-21 20:30:08 [INFO] [select] 1件選定 (要求=1件)
+2026-04-21 20:30:08 [INFO] [select]   1. 「転職 面接 聞かれること 20代」 vol=260 seo=38 comp=34
+2026-04-21 20:30:08 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-04-21 20:30:08 [INFO] [hataraku] 候補: 450件 / 選定: 1件 / 生成予定: 1件
+2026-04-21 20:30:08 [INFO] [api_guard] 本日の使用量: $0.1616 / ¥24 (3回呼び出し)
+2026-04-21 20:30:08 [INFO] ────────────────────────────────────────────────────────────
+2026-04-21 20:30:08 [INFO] [hataraku] [1/1] [LONGTAIL] 「転職 面接 聞かれること 20代」 vol=260 ★AIM
+2026-04-21 20:30:08 [INFO] ────────────────────────────────────────────────────────────
+2026-04-21 20:30:08 [INFO] [generate] 生成開始: 「転職 面接 聞かれること 20代」(vol:260) fact_check=True target_length=6,000字  誘導リンク:0件
+2026-04-21 20:32:46 [INFO] [generate] 完了: 「転職面接で20代が聞かれること完全ガイド｜質問例と回答例まとめ」
+2026-04-21 20:32:55 [INFO] [post] 画像生成完了: 65,375 bytes
+2026-04-21 20:32:55 [ERROR] [hataraku] [1/1] ❌ エラー（続行）: HTTPSConnectionPool(host='hataraku-navi.com', port=443): Max retries exceeded with url: /wp-json/wp/v2/categories?per_page=100 (Caused by NameResolutionError("HTTPSConnection(host='hataraku-navi.com', port=443): Failed to resolve 'hataraku-navi.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-04-21 20:32:55 [INFO] [hataraku] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-04-21 20:32:55 [INFO] 
+============================================================
+2026-04-21 20:32:55 [INFO] 【全体サマリー】
+2026-04-21 20:32:55 [INFO]   ブログ数  : 1件
+2026-04-21 20:32:55 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-04-21 20:32:55 [INFO]   所要時間  : 172.4秒
+2026-04-21 20:32:55 [INFO]   ❌ [hataraku] 転職 面接 聞かれること 20代 → (生成失敗)
+2026-04-21 20:32:55 [INFO] ============================================================
