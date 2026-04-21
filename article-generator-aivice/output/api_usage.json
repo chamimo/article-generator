@@ -2189,6 +2189,76 @@
       "output_tokens": 103,
       "cost_usd": 0.00057,
       "label": "meta_fix:ai副業 何をする"
+    },
+    {
+      "timestamp": "2026-04-21T02:00:15.602624+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 213,
+      "output_tokens": 369,
+      "cost_usd": 0.001646,
+      "label": "kw_research:ai副業 何 を する"
+    },
+    {
+      "timestamp": "2026-04-21T02:02:34.548489+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4928,
+      "output_tokens": 9780,
+      "cost_usd": 0.161484,
+      "label": "article:ai副業 何 を する"
+    },
+    {
+      "timestamp": "2026-04-21T02:02:36.603407+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 195,
+      "output_tokens": 101,
+      "cost_usd": 0.00056,
+      "label": "meta_fix:ai副業 何 を する"
+    },
+    {
+      "timestamp": "2026-04-21T11:00:35.611415+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 216,
+      "output_tokens": 644,
+      "cost_usd": 0.002749,
+      "label": "kw_research:ai副業 パソコンスペック"
+    },
+    {
+      "timestamp": "2026-04-21T11:02:47.825899+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6528,
+      "output_tokens": 10080,
+      "cost_usd": 0.170784,
+      "label": "article:ai副業 パソコンスペック"
+    },
+    {
+      "timestamp": "2026-04-21T20:00:16.379537+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 208,
+      "output_tokens": 357,
+      "cost_usd": 0.001594,
+      "label": "kw_research:nano banana ai"
+    },
+    {
+      "timestamp": "2026-04-21T20:02:20.868228+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4912,
+      "output_tokens": 9272,
+      "cost_usd": 0.153816,
+      "label": "article:nano banana ai"
     }
   ],
   "events": [
