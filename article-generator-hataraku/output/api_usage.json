@@ -2589,6 +2589,96 @@
       "output_tokens": 9331,
       "cost_usd": 0.154422,
       "label": "article:経理 事務 未経験 求人"
+    },
+    {
+      "timestamp": "2026-04-22T02:30:12.843453+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 220,
+      "output_tokens": 651,
+      "cost_usd": 0.00278,
+      "label": "kw_research:副業 社会 保険 入り たく ない"
+    },
+    {
+      "timestamp": "2026-04-22T02:32:27.972387+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4951,
+      "output_tokens": 10322,
+      "cost_usd": 0.169683,
+      "label": "article:副業 社会 保険 入り たく ない"
+    },
+    {
+      "timestamp": "2026-04-22T02:32:29.376889+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 204,
+      "output_tokens": 101,
+      "cost_usd": 0.000567,
+      "label": "meta_fix:副業 社会 保険 入り たく ない"
+    },
+    {
+      "timestamp": "2026-04-22T11:30:13.058583+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 220,
+      "output_tokens": 671,
+      "cost_usd": 0.00286,
+      "label": "kw_research:保育士 派遣 時給高い 理由"
+    },
+    {
+      "timestamp": "2026-04-22T11:32:29.813682+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4968,
+      "output_tokens": 10083,
+      "cost_usd": 0.166149,
+      "label": "article:保育士 派遣 時給高い 理由"
+    },
+    {
+      "timestamp": "2026-04-22T11:32:30.942622+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 216,
+      "output_tokens": 108,
+      "cost_usd": 0.000605,
+      "label": "meta_fix:保育士 派遣 時給高い 理由"
+    },
+    {
+      "timestamp": "2026-04-22T20:30:13.149620+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 212,
+      "output_tokens": 646,
+      "cost_usd": 0.002754,
+      "label": "kw_research:転職 失敗談"
+    },
+    {
+      "timestamp": "2026-04-22T20:32:35.795375+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4927,
+      "output_tokens": 10451,
+      "cost_usd": 0.171546,
+      "label": "article:転職 失敗談"
+    },
+    {
+      "timestamp": "2026-04-22T20:32:37.343312+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 212,
+      "output_tokens": 116,
+      "cost_usd": 0.000634,
+      "label": "meta_fix:転職 失敗談"
     }
   ],
   "events": [
