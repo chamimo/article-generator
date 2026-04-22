@@ -39,6 +39,126 @@
       "output_tokens": 6000,
       "cost_usd": 0.101595,
       "label": "article:ggsql: A grammar of graphics for SQL"
+    },
+    {
+      "timestamp": "2026-04-21T02:00:15.999781+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 231,
+      "output_tokens": 570,
+      "cost_usd": 0.002465,
+      "label": "kw_research:AIでデザインするClaude Design。プロトタイプやプレゼン資料など"
+    },
+    {
+      "timestamp": "2026-04-21T02:01:43.199513+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4600,
+      "output_tokens": 6000,
+      "cost_usd": 0.1038,
+      "label": "article:AIでデザインするClaude Design。プロトタイプやプレゼン資料など"
+    },
+    {
+      "timestamp": "2026-04-21T11:00:15.631427+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 213,
+      "output_tokens": 442,
+      "cost_usd": 0.001938,
+      "label": "kw_research:くわ ば たり え"
+    },
+    {
+      "timestamp": "2026-04-21T11:01:41.707348+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4693,
+      "output_tokens": 6000,
+      "cost_usd": 0.104079,
+      "label": "article:くわ ば たり え"
+    },
+    {
+      "timestamp": "2026-04-21T20:00:15.979461+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 238,
+      "output_tokens": 613,
+      "cost_usd": 0.002642,
+      "label": "kw_research:コーディングでGPT-5.4超え、1兆パラメータAIKimi K2.6を無償"
+    },
+    {
+      "timestamp": "2026-04-21T20:01:44.137844+00:00",
+      "date": "2026-04-21",
+      "hour": "2026-04-21T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4815,
+      "output_tokens": 6000,
+      "cost_usd": 0.104445,
+      "label": "article:コーディングでGPT-5.4超え、1兆パラメータAIKimi K2.6を無償"
+    },
+    {
+      "timestamp": "2026-04-22T02:00:17.443158+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 209,
+      "output_tokens": 502,
+      "cost_usd": 0.002175,
+      "label": "kw_research:高田純次"
+    },
+    {
+      "timestamp": "2026-04-22T02:01:47.471614+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4658,
+      "output_tokens": 6000,
+      "cost_usd": 0.103974,
+      "label": "article:高田純次"
+    },
+    {
+      "timestamp": "2026-04-22T11:00:13.950238+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 227,
+      "output_tokens": 572,
+      "cost_usd": 0.00247,
+      "label": "kw_research:とほほのローカルAI入門 - とほほのWWW入門"
+    },
+    {
+      "timestamp": "2026-04-22T11:01:48.273425+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4750,
+      "output_tokens": 6000,
+      "cost_usd": 0.10425,
+      "label": "article:とほほのローカルAI入門 - とほほのWWW入門"
+    },
+    {
+      "timestamp": "2026-04-22T20:00:24.666143+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 246,
+      "output_tokens": 392,
+      "cost_usd": 0.001765,
+      "label": "kw_research:AIの導入、新卒の早期離職...大手企業が新卒採用を絞る傾向に入り第二の氷河期"
+    },
+    {
+      "timestamp": "2026-04-22T20:02:03.553769+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4713,
+      "output_tokens": 6000,
+      "cost_usd": 0.104139,
+      "label": "article:AIの導入、新卒の早期離職...大手企業が新卒採用を絞る傾向に入り第二の氷河期"
     }
   ]
 }
