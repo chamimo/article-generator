@@ -21,25 +21,28 @@ from config import WP_USERNAME as _DEFAULT_USER
 from config import WP_APP_PASSWORD as _DEFAULT_PASS
 from requests.auth import HTTPBasicAuth
 
-_url:      str | None = None
-_username: str | None = None
-_password: str | None = None
+_url:         str | None = None
+_username:    str | None = None
+_password:    str | None = None
+_post_status: str | None = None
 
 
 def set_context(
     wp_url:          str | None = None,
     wp_username:     str | None = None,
     wp_app_password: str | None = None,
+    wp_post_status:  str | None = None,
 ) -> None:
     """
     ブログ別の WP 認証情報をセットする。
     None を渡すと config.py のデフォルト値にフォールバックする。
     ブログ切り替え時はキャッシュもクリアする。
     """
-    global _url, _username, _password
-    _url      = wp_url
-    _username = wp_username
-    _password = wp_app_password
+    global _url, _username, _password, _post_status
+    _url         = wp_url
+    _username    = wp_username
+    _password    = wp_app_password
+    _post_status = wp_post_status
     _clear_caches()
 
 
@@ -50,6 +53,14 @@ def clear_context() -> None:
 
 def get_wp_url() -> str:
     return _url or _DEFAULT_URL
+
+
+def get_post_status() -> str:
+    """現在のコンテキストの投稿ステータスを返す。未設定なら config.WP_STATUS にフォールバック。"""
+    if _post_status:
+        return _post_status
+    from config import WP_STATUS
+    return WP_STATUS
 
 
 def get_auth() -> HTTPBasicAuth:

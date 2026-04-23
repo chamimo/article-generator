@@ -1,8 +1,9 @@
 """
-Step 6: WordPress REST APIで下書き投稿
+Step 6: WordPress REST APIで投稿
 """
 import random
 import re
+import urllib.parse
 import requests
 from requests.auth import HTTPBasicAuth
 from config import WP_CATEGORY_ID, WP_STATUS, CTA_CONFIG
@@ -205,6 +206,30 @@ def _fetch_media_by_tag(search_term: str) -> list[dict]:
 
 
 # ─────────────────────────────────────────────
+# 外部リンク必須化
+# ─────────────────────────────────────────────
+
+def _ensure_external_link(content: str, keyword: str) -> str:
+    """
+    記事コンテンツに外部リンク（href="https?://"）が最低1個あるかチェックし、
+    なければキーワードに対応するWikipediaリンクを自動追加する。
+    """
+    if re.search(r'href=["\']https?://', content, re.IGNORECASE):
+        return content
+
+    encoded = urllib.parse.quote(keyword)
+    wiki_url = f"https://ja.wikipedia.org/wiki/{encoded}"
+    link_block = (
+        "\n\n<!-- wp:paragraph -->\n"
+        f'<p>参考：<a href="{wiki_url}" target="_blank" rel="noopener noreferrer">'
+        f"{keyword}（Wikipedia）</a></p>\n"
+        "<!-- /wp:paragraph -->"
+    )
+    print(f"[wordpress] 外部リンク未検出 → Wikipedia自動追加: {keyword}")
+    return content.rstrip() + link_block
+
+
+# ─────────────────────────────────────────────
 # H2記事内画像ヘルパー
 # ─────────────────────────────────────────────
 
@@ -351,10 +376,13 @@ def create_post(article: dict, featured_media_id: int | None = None) -> dict:
     if imagefx_prompt:
         content = content.rstrip() + f"\n\n<!-- imagefx_prompt\n{imagefx_prompt}\n-->"
 
+    post_status = wp_context.get_post_status()
+    print(f"[wordpress] 投稿方式: {post_status}")
+
     payload: dict = {
         "title": article["title"],
         "content": content,
-        "status": WP_STATUS,
+        "status": post_status,
         "slug": article.get("slug", ""),
         "categories": [category_id],
         "meta": {
@@ -600,6 +628,9 @@ def post_article_with_image(
 
     # ⑤ CTA挿入（まとめH3直前）
     article["content"] = _inject_cta(article["content"], keyword)
+
+    # ⑤' 外部リンク確認・補完（最低1個必須）
+    article["content"] = _ensure_external_link(article["content"], keyword)
 
     # ⑥ 投稿
     result = create_post(article, featured_media_id=featured_media_id)

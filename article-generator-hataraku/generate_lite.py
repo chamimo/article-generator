@@ -135,6 +135,7 @@ class BlogConfig:
     asp_links: dict = field(default_factory=dict)       # ASP案件リンク {名称: URL}（静的フォールバック）
     affili_ss_id: str = ""                              # アフィリURLシートのスプレッドシートID（空=シート読み込みなし）
     guide_links: dict = field(default_factory=dict)    # 内部誘導リンク {pv_url, comparison_url, cv_url}
+    wp_post_status: str = "draft"                      # 投稿方式: "draft"（下書き）or "publish"（即公開）
     # 追加設定はここに列追加するだけで OK
     extra: dict = field(default_factory=dict)
 
@@ -192,7 +193,9 @@ def load_blog_config(blog_name: str) -> BlogConfig:
         target_length   = (data["target_length"] if isinstance(data.get("target_length"), dict)
                            else int(data.get("target_length", 9000))),
         fact_check      = bool(data.get("fact_check", True)),
-        candidate_ss_id = data.get("candidate_ss_id", CANDIDATE_SS_ID),
+        candidate_ss_id = (data.get("candidate_ss_id")
+                           or os.environ.get(data.get("candidate_ss_id_env", ""), "")
+                           or CANDIDATE_SS_ID),
         candidate_sheet = data.get("candidate_sheet", CANDIDATE_SHEET),
         article_count   = int(data.get("article_count", ARTICLE_COUNT)),
         min_volume      = int(data.get("min_volume", MIN_VOLUME)),
@@ -207,6 +210,7 @@ def load_blog_config(blog_name: str) -> BlogConfig:
         asp_links       = _normalize_asp_links(data.get("asp_links", {})),
         affili_ss_id    = data.get("affili_ss_id", ""),
         guide_links     = data.get("guide_links", {}),
+        wp_post_status  = data.get("wp_post_status", "draft"),
         extra           = {k: v for k, v in data.items()
                            if k not in ("name", "display_name", "genre", "target_length",
                                         "fact_check", "candidate_ss_id", "candidate_sheet",
@@ -214,7 +218,7 @@ def load_blog_config(blog_name: str) -> BlogConfig:
                                         "wp_app_password", "article_type_weights",
                                         "stop_words", "aliases", "allowed_themes",
                                         "ng_keywords", "asp_links", "affili_ss_id",
-                                        "guide_links", "_comment")
+                                        "guide_links", "wp_post_status", "_comment")
                            and not k.endswith("_env")},
     )
 
@@ -1114,9 +1118,15 @@ def post(article: dict, dry_run: bool = False,
         log.info(f"[post] DRY-RUN スキップ: 「{article['title']}」")
         return {"id": None, "url": "", "edit_url": "", "status": "dry-run"}
 
-    # ブログ別 WP 認証情報をコンテキストにセット（全モジュール共有）
+    # ブログ別 WP 認証情報・投稿方式をコンテキストにセット（全モジュール共有）
     if blog_cfg:
-        wp_context.set_context(blog_cfg.wp_url, blog_cfg.wp_username, blog_cfg.wp_app_password)
+        wp_context.set_context(
+            blog_cfg.wp_url,
+            blog_cfg.wp_username,
+            blog_cfg.wp_app_password,
+            wp_post_status=blog_cfg.wp_post_status,
+        )
+        log.info(f"[post] 投稿方式: {blog_cfg.wp_post_status}")
 
     try:
         if FEATURES["image_generation"]:

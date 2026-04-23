@@ -2679,6 +2679,86 @@
       "output_tokens": 116,
       "cost_usd": 0.000634,
       "label": "meta_fix:転職 失敗談"
+    },
+    {
+      "timestamp": "2026-04-23T02:30:17.310353+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 219,
+      "output_tokens": 643,
+      "cost_usd": 0.002747,
+      "label": "kw_research:マイナビ 転職フェア 40代"
+    },
+    {
+      "timestamp": "2026-04-23T02:32:27.817004+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4949,
+      "output_tokens": 9593,
+      "cost_usd": 0.158742,
+      "label": "article:マイナビ 転職フェア 40代"
+    },
+    {
+      "timestamp": "2026-04-23T02:32:29.306202+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 202,
+      "output_tokens": 103,
+      "cost_usd": 0.000574,
+      "label": "meta_fix:マイナビ 転職フェア 40代"
+    },
+    {
+      "timestamp": "2026-04-23T11:30:15.278989+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 218,
+      "output_tokens": 648,
+      "cost_usd": 0.002766,
+      "label": "kw_research:フリーランス エンジニア 末路"
+    },
+    {
+      "timestamp": "2026-04-23T11:32:49.127447+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4949,
+      "output_tokens": 9767,
+      "cost_usd": 0.161352,
+      "label": "article:フリーランス エンジニア 末路"
+    },
+    {
+      "timestamp": "2026-04-23T11:32:50.756515+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 210,
+      "output_tokens": 99,
+      "cost_usd": 0.000564,
+      "label": "meta_fix:フリーランス エンジニア 末路"
+    },
+    {
+      "timestamp": "2026-04-23T20:30:12.355742+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 219,
+      "output_tokens": 743,
+      "cost_usd": 0.003147,
+      "label": "kw_research:web デザイナー 転職 エージェント"
+    },
+    {
+      "timestamp": "2026-04-23T20:32:52.439740+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4765,
+      "output_tokens": 10500,
+      "cost_usd": 0.171795,
+      "label": "article:web デザイナー 転職 エージェント"
     }
   ],
   "events": [

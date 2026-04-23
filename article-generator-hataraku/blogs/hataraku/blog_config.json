@@ -2,58 +2,81 @@
   "_comment": "generate_lite.py マルチブログ設定ファイル - はた楽ナビ",
   "name": "hataraku",
   "display_name": "はた楽ナビ",
-
   "genre": "転職・副業・キャリア",
   "target_length": {
     "MONETIZE": 9000,
     "LONGTAIL": 6000,
-    "FUTURE":   3000
+    "FUTURE": 3000
   },
   "fact_check": true,
-
   "candidate_ss_id": "1w0oAjA8JflYqHZP31XeF2RYZ_jxdznRl6D2e8387jLU",
   "candidate_sheet": "キーワード",
   "article_count": 3,
   "min_volume": 0,
-
   "article_type_weights": {
     "longtail": 0.5,
-    "trend":    0.3,
+    "trend": 0.3,
     "monetize": 0.2
   },
-
-  "wp_url_env":          "WP_URL",
-  "wp_username_env":     "WP_USERNAME",
+  "wp_url_env": "WP_URL",
+  "wp_username_env": "WP_USERNAME",
   "wp_app_password_env": "WP_APP_PASSWORD",
-
-  "stop_words": ["おすすめ", "比較", "2026", "ランキング"],
-  "aliases": ["hataraku", "hataraku-navi"],
-
+  "stop_words": [
+    "おすすめ",
+    "比較",
+    "2026",
+    "ランキング"
+  ],
+  "aliases": [
+    "hataraku",
+    "hataraku-navi"
+  ],
   "allowed_themes": [
-    "転職", "副業", "キャリア", "仕事", "派遣",
-    "フリーランス", "求人", "給与", "職場", "就職",
-    "アルバイト", "パート", "正社員", "面接", "履歴書"
+    "転職",
+    "副業",
+    "キャリア",
+    "仕事",
+    "派遣",
+    "フリーランス",
+    "求人",
+    "給与",
+    "職場",
+    "就職",
+    "アルバイト",
+    "パート",
+    "正社員",
+    "面接",
+    "履歴書"
   ],
   "ng_keywords": [
-    "ドラマ", "キャスト", "俳優", "女優", "映画", "アニメ", "漫画",
-    "バラエティ", "芸能人", "出演者"
+    "ドラマ",
+    "キャスト",
+    "俳優",
+    "女優",
+    "映画",
+    "アニメ",
+    "漫画",
+    "バラエティ",
+    "芸能人",
+    "出演者"
   ],
-
   "asp_links": {},
   "affili_ss_id": "1_pgNf2-JNlT2uwJFGzlVPGpuVpj2mf5eSsa_YLwMwGc",
-
   "guide_links": {
-    "pv_url":          "",
-    "comparison_url":  "",
-    "cv_url":          ""
+    "pv_url": "",
+    "comparison_url": "",
+    "cv_url": ""
   },
-
   "seo_plugin": "seo_simple_pack",
-
   "writing_style": {
-    "tone":          "経験者の本音・リアル",
-    "persona":       "転職を複数回経験したWeb担当者",
+    "tone": "経験者の本音・リアル",
+    "persona": "転職を複数回経験したWeb担当者",
     "closing_style": "失敗談も交えた共感重視の締め",
-    "ng_expressions": ["〜してみてください", "〜がおすすめです", "ぜひ〜"]
-  }
+    "ng_expressions": [
+      "〜してみてください",
+      "〜がおすすめです",
+      "ぜひ〜"
+    ]
+  },
+  "wp_post_status": "publish"
 }

@@ -2,52 +2,71 @@
   "_comment": "generate_lite.py マルチブログ設定ファイル",
   "name": "workup-ai",
   "display_name": "WorkUp AI",
-
   "genre": "AI・副業・転職・キャリア",
   "target_length": {
     "MONETIZE": 9000,
     "LONGTAIL": 6000,
-    "FUTURE":   3000
+    "FUTURE": 3000
   },
   "fact_check": true,
-
   "candidate_ss_id": "13f8HorKWHGKYpFF5svHF4Cxj5drZ2OKK39FamaVY9n4",
   "candidate_sheet": "キーワード",
   "article_count": 3,
   "min_volume": 0,
-
   "article_type_weights": {
     "longtail": 0.5,
-    "trend":    0.3,
+    "trend": 0.3,
     "monetize": 0.2
   },
-
-  "stop_words": ["おすすめ", "比較", "2026", "iphone", "アプリ"],
-  "aliases": ["aivice", "workup-ai"],
-
+  "stop_words": [
+    "おすすめ",
+    "比較",
+    "2026",
+    "iphone",
+    "アプリ"
+  ],
+  "aliases": [
+    "aivice",
+    "workup-ai"
+  ],
   "allowed_themes": [
-    "AI", "人工知能",
-    "ChatGPT", "Claude", "Gemini",
-    "ボイスレコーダー", "文字起こし",
-    "議事録", "音声認識",
-    "AI副業", "AIツール",
-    "画像生成", "AIライティング",
-    "自動化", "効率化",
-    "転職", "副業", "キャリア",
-    "録音", "ICレコーダー", "PLAUD", "Notta"
+    "AI",
+    "人工知能",
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "ボイスレコーダー",
+    "文字起こし",
+    "議事録",
+    "音声認識",
+    "AI副業",
+    "AIツール",
+    "画像生成",
+    "AIライティング",
+    "自動化",
+    "効率化",
+    "転職",
+    "副業",
+    "キャリア",
+    "録音",
+    "ICレコーダー",
+    "PLAUD",
+    "Notta"
   ],
   "ng_keywords": [],
-
   "asp_links": {
-    "PLAUD":  "https://workup-ai.com/plaud-note-ai-voice-recorder-review/",
-    "Notta":  "",
+    "PLAUD": "https://workup-ai.com/plaud-note-ai-voice-recorder-review/",
+    "Notta": "",
     "クラウドワークス": {
       "url": "https://workup-ai.com/crowdworks",
-      "aliases": ["CrowdWorks", "クラウドワーク"]
+      "aliases": [
+        "CrowdWorks",
+        "クラウドワーク"
+      ]
     }
   },
-
-  "wp_url_env":          "WP_URL",
-  "wp_username_env":     "WP_USERNAME",
-  "wp_app_password_env": "WP_APP_PASSWORD"
+  "wp_url_env": "WP_URL",
+  "wp_username_env": "WP_USERNAME",
+  "wp_app_password_env": "WP_APP_PASSWORD",
+  "wp_post_status": "draft"
 }
