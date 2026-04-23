@@ -2259,6 +2259,136 @@
       "output_tokens": 9272,
       "cost_usd": 0.153816,
       "label": "article:nano banana ai"
+    },
+    {
+      "timestamp": "2026-04-22T02:00:17.949571+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 212,
+      "output_tokens": 552,
+      "cost_usd": 0.002378,
+      "label": "kw_research:claude code 無料枠"
+    },
+    {
+      "timestamp": "2026-04-22T02:02:42.824450+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5007,
+      "output_tokens": 9261,
+      "cost_usd": 0.153936,
+      "label": "article:claude code 無料枠"
+    },
+    {
+      "timestamp": "2026-04-22T11:00:16.561632+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 214,
+      "output_tokens": 548,
+      "cost_usd": 0.002363,
+      "label": "kw_research:gemini nanobanana 料金"
+    },
+    {
+      "timestamp": "2026-04-22T11:02:37.616326+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5005,
+      "output_tokens": 9329,
+      "cost_usd": 0.15495,
+      "label": "article:gemini nanobanana 料金"
+    },
+    {
+      "timestamp": "2026-04-22T20:00:15.124713+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 213,
+      "output_tokens": 555,
+      "cost_usd": 0.00239,
+      "label": "kw_research:ChatGPT images2.0"
+    },
+    {
+      "timestamp": "2026-04-22T20:02:16.868897+00:00",
+      "date": "2026-04-22",
+      "hour": "2026-04-22T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5115,
+      "output_tokens": 9329,
+      "cost_usd": 0.15528,
+      "label": "article:ChatGPT images2.0"
+    },
+    {
+      "timestamp": "2026-04-23T02:00:16.095351+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 213,
+      "output_tokens": 548,
+      "cost_usd": 0.002362,
+      "label": "kw_research:claude code 料金 確認"
+    },
+    {
+      "timestamp": "2026-04-23T02:02:44.822728+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5001,
+      "output_tokens": 9374,
+      "cost_usd": 0.155613,
+      "label": "article:claude code 料金 確認"
+    },
+    {
+      "timestamp": "2026-04-23T02:02:46.330651+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 191,
+      "output_tokens": 89,
+      "cost_usd": 0.000509,
+      "label": "meta_fix:claude code 料金 確認"
+    },
+    {
+      "timestamp": "2026-04-23T11:00:18.105154+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 213,
+      "output_tokens": 439,
+      "cost_usd": 0.001926,
+      "label": "kw_research:claude code 使い方 windows"
+    },
+    {
+      "timestamp": "2026-04-23T11:02:33.687645+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4998,
+      "output_tokens": 9052,
+      "cost_usd": 0.150774,
+      "label": "article:claude code 使い方 windows"
+    },
+    {
+      "timestamp": "2026-04-23T20:00:19.363821+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 213,
+      "output_tokens": 408,
+      "cost_usd": 0.001802,
+      "label": "kw_research:claude code 使い方 windows"
+    },
+    {
+      "timestamp": "2026-04-23T20:02:11.612297+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4966,
+      "output_tokens": 8691,
+      "cost_usd": 0.145263,
+      "label": "article:claude code 使い方 windows"
     }
   ],
   "events": [
