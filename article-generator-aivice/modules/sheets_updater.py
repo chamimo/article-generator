@@ -39,15 +39,23 @@ _LEGEND_SHEET_NAME = SHEETS_LEGEND_NAME
 
 _ws_cache: gspread.Worksheet | None = None
 _ss_cache: gspread.Spreadsheet | None = None
+_active_ss_id_cache: str | None = None
 
 
 def _get_spreadsheet() -> gspread.Spreadsheet:
-    global _ss_cache
-    if _ss_cache is not None:
+    global _ss_cache, _ws_cache, _active_ss_id_cache
+    try:
+        from modules import wp_context
+        active_ss_id = wp_context.get_candidate_ss_id()
+    except Exception:
+        active_ss_id = GOOGLE_SHEETS_ID
+    if _ss_cache is not None and _active_ss_id_cache == active_ss_id:
         return _ss_cache
     creds = Credentials.from_service_account_file(GOOGLE_CREDENTIALS_PATH, scopes=_SCOPES)
     gc = gspread.authorize(creds)
-    _ss_cache = gc.open_by_key(GOOGLE_SHEETS_ID)
+    _ss_cache = gc.open_by_key(active_ss_id)
+    _active_ss_id_cache = active_ss_id
+    _ws_cache = None  # SSが変わったらワークシートキャッシュもクリア
     return _ss_cache
 
 
@@ -56,8 +64,13 @@ def _get_worksheet() -> gspread.Worksheet:
     if _ws_cache is not None:
         return _ws_cache
     ss = _get_spreadsheet()
-    if SHEETS_MAIN_SHEET_NAME:
-        _ws_cache = ss.worksheet(SHEETS_MAIN_SHEET_NAME)
+    try:
+        from modules import wp_context
+        sheet_name = wp_context.get_candidate_sheet()
+    except Exception:
+        sheet_name = SHEETS_MAIN_SHEET_NAME
+    if sheet_name:
+        _ws_cache = ss.worksheet(sheet_name)
     else:
         _ws_cache = ss.get_worksheet(0)
     return _ws_cache
@@ -457,7 +470,21 @@ def mark_posted(
         row = _find_keyword_row(ws, keyword)
 
         if row is None:
-            print(f"[sheets_updater] キーワード「{keyword}」が見つかりません（スキップ）")
+            print(f"[sheets_updater] キーワード「{keyword}」が見つかりません（投稿記事一覧には記録）")
+            _append_to_article_list(
+                posted_date=date_str,
+                title=article_title or keyword,
+                url=post_url,
+                post_id=post_id,
+                keyword=keyword,
+                related_keywords=related_keywords,
+                sub_keywords=sub_keywords,
+                category_name=category_name,
+                tags=tags,
+                char_count=char_count,
+                article_type=article_type,
+                kw_status=kw_status,
+            )
             return False
 
         sub_kw_str = "、".join(sub_keywords[:10])  # 最大10個
@@ -493,33 +520,4 @@ def mark_posted(
 
     except Exception as e:
         print(f"[sheets_updater] 書き込みエラー（続行）: {e}")
-        return False
-
-
-def mark_duplicate_skip(keyword: str, reason: str = "") -> bool:
-    """
-    重複タイトルでスキップされたキーワードを「カニバリスキップ」としてシートに記録する。
-    これにより次回の記事生成で同キーワードが再選択されるのを防ぐ。
-    """
-    try:
-        ws = _get_worksheet()
-        col_map = _ensure_headers(ws)
-        row = _find_keyword_row(ws, keyword)
-        if row is None:
-            print(f"[sheets_updater] キーワード「{keyword}」が見つかりません（スキップ）")
-            return False
-        # 「投稿済み」行は上書きしない
-        current_status = ws.cell(row, col_map["投稿ステータス"]).value or ""
-        if current_status.strip() == "投稿済み":
-            print(f"[sheets_updater] スキップ（投稿済み行は保護）: 「{keyword}」")
-            return False
-        updates = [gspread.Cell(row, col_map["投稿ステータス"], "カニバリスキップ")]
-        if reason and "メモ" in col_map:
-            updates.append(gspread.Cell(row, col_map["メモ"], reason[:200]))
-        ws.update_cells(updates, value_input_option="USER_ENTERED")
-        _highlight_orange(ws, row)
-        print(f"[sheets_updater] カニバリスキップ記録: 行{row} 「{keyword}」")
-        return True
-    except Exception as e:
-        print(f"[sheets_updater] カニバリスキップ書き込みエラー（続行）: {e}")
         return False

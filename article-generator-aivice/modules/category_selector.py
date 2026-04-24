@@ -25,7 +25,7 @@ def fetch_categories() -> list[dict]:
         timeout=10,
     )
     r.raise_for_status()
-    _category_cache = [{"id": c["id"], "name": c["name"]} for c in r.json()]
+    _category_cache = [{"id": c["id"], "name": c["name"], "count": c.get("count", 0)} for c in r.json()]
     print(f"[category_selector] カテゴリ取得: {len(_category_cache)}件")
     return _category_cache
 
@@ -64,6 +64,10 @@ def select_category(keyword: str, article_title: str = "") -> int:
     categories = fetch_categories()
     candidates = [c for c in categories if c["id"] not in EXCLUDE_IDS]
 
+    # 除外後に候補が0件の場合（カテゴリ未整備サイトなど）は全カテゴリから選ぶ
+    if not candidates:
+        candidates = categories if categories else [{"id": 1, "name": "未分類", "count": 0}]
+
     scored = sorted(
         candidates,
         key=lambda c: _score(keyword, article_title, c["name"]),
@@ -74,11 +78,8 @@ def select_category(keyword: str, article_title: str = "") -> int:
     best_score = _score(keyword, article_title, best["name"])
 
     if best_score == 0:
-        # スコアゼロ（完全不一致）→ 「生成AI・チャット・仕事術」を探してフォールバック
-        fallback = next(
-            (c for c in candidates if "生成ai" in c["name"].lower() or "チャット" in c["name"].lower()),
-            candidates[0],
-        )
+        # スコアゼロ（完全不一致）→ 記事数が最も多いカテゴリをフォールバックとして使用
+        fallback = max(candidates, key=lambda c: c.get("count", 0))
         print(f"[category_selector] 「{keyword}」→ マッチなし、フォールバック: {fallback['name']}({fallback['id']})")
         return fallback["id"]
 

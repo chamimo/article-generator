@@ -273,8 +273,8 @@ _PLAUD_NOTTA_INSTRUCTION = """\
 # ============================================================
 _ARTICLE_STRUCTURE: dict[int, tuple[int, int, int, int, int]] = {
     9000: (14, 18, 8, 10, 12000),  # MONETIZE: 比較・レビュー系・高品質
-    6000: ( 8, 12, 5,  7, 10500),  # LONGTAIL: 標準SEO記事
-    3000: ( 5,  7, 3,  4,  6000),  # FUTURE / TREND: 短め情報記事（4500→6000に増加）
+    6000: ( 8, 12, 5,  7, 12000),  # LONGTAIL: 標準SEO記事（8000→10000→12000に増加）
+    3000: ( 5,  7, 3,  4, 12000),  # FUTURE / TREND: 短め情報記事
 }
 
 def _get_structure(target_length: int) -> tuple[int, int, int, int, int]:
@@ -285,43 +285,10 @@ def _get_structure(target_length: int) -> tuple[int, int, int, int, int]:
     return _ARTICLE_STRUCTURE[closest]
 
 
-def build_guide_links_section(guide_links: dict) -> str:
-    """
-    内部誘導リンク用プロンプトセクションを構築する。
-    guide_links: {"pv_url": str, "comparison_url": str, "cv_url": str}
-    空のURLはスキップ。全て空の場合は空文字列を返す。
-    """
-    if not guide_links:
-        return ""
-    entries = []
-    pv_url  = guide_links.get("pv_url", "").strip()
-    cmp_url = guide_links.get("comparison_url", "").strip()
-    cv_url  = guide_links.get("cv_url", "").strip()
-    if pv_url:
-        entries.append(f"- 流入記事（PV記事）: {pv_url}")
-    if cmp_url:
-        entries.append(f"- 比較記事: {cmp_url}")
-    if cv_url:
-        entries.append(f"- 成約記事（CV記事）: {cv_url}")
-    if not entries:
-        return ""
-    return (
-        "\n## 内部誘導リンク（自然な文脈で挿入・1〜2箇所まで）\n"
-        "以下の記事URLへ、強制的な誘導にならず**自然な流れ**で本文中1〜2箇所だけ言及してください。\n"
-        "「こちらの記事もおすすめです」のような直接的な案内は禁止。\n"
-        "話題の流れで「この点については別記事で詳しく触れていますが〜」のように有機的に組み込むこと。\n"
-        "読者体験を損なわない箇所に限定し、必要性が低い場合は無理に挿入しないこと。\n\n"
-        + "\n".join(entries)
-    )
-
-
-def _build_system_prompt(h3_min: int, h3_max: int, faq_min: int, faq_max: int,
-                         asp_links_section: str = "",
-                         guide_links_section: str = "") -> str:
+def _build_system_prompt(h3_min: int, h3_max: int, faq_min: int, faq_max: int) -> str:
     """
     H3本数・FAQ問数に応じてSYSTEM_PROMPTの数値指示を置き換えて返す。
-    asp_links_section が指定された場合はASP案件リストをプロンプト末尾に追記する。
-    guide_links_section が指定された場合は内部誘導リンク指示をプロンプト末尾に追記する。
+    SYSTEM_PROMPT自体は変更せず、呼び出しごとに必要な値で差し替える。
     """
     prompt = SYSTEM_PROMPT
     prompt = prompt.replace(
@@ -341,35 +308,32 @@ def _build_system_prompt(h3_min: int, h3_max: int, faq_min: int, faq_max: int,
         "{8〜10問繰り返し}",
         f"{{{faq_min}〜{faq_max}問繰り返し}}",
     )
-    if asp_links_section:
-        prompt = prompt + "\n" + asp_links_section
-    if guide_links_section:
-        prompt = prompt + "\n" + guide_links_section
     return prompt
 
 
-def _get_keyword_and_lsi(keyword: str) -> tuple[dict, str]:
+def _get_keyword_research(keyword: str) -> dict:
     """
-    Claude Haiku でキーワードリサーチと共起語・LSIを1コールで生成する。
+    Claude Haiku でキーワードリサーチを一括生成する。
 
     Returns:
-        (kw_research, lsi_words)
-        kw_research: {"suggest": [...], "paa": [...], "longtail": [...]}
-        lsi_words: 「用語1、用語2、...」形式の文字列
+        {
+            "suggest":  ["サジェスト候補", ...],   # 8〜10個
+            "paa":      ["PAA質問文", ...],         # 5〜8個
+            "longtail": ["ロングテール複合KW", ...] # 8〜10個
+        }
     """
     check_stop()
     msg = client.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=1000,
+        max_tokens=800,
         messages=[{
             "role": "user",
             "content": (
-                f"「{keyword}」のSEO記事向けに以下を一括で生成してください。\n"
+                f"「{keyword}」のSEO記事向けにキーワードリサーチを行ってください。\n"
                 "以下のJSONのみ出力してください（```json などのコードブロック記号は不要）：\n"
                 '{"suggest":["サジェスト候補8〜10個（Googleサジェスト想定）"],'
                 '"paa":["PAA形式の質問文5〜8個（〜とは・〜やり方・〜比較・〜おすすめなど）"],'
-                '"longtail":["3〜5語のロングテール複合キーワード8〜10個"],'
-                '"lsi":"読者が同時に検索・気にするであろう関連共起語・LSIキーワードをカンマ区切りで15個"}'
+                '"longtail":["3〜5語のロングテール複合キーワード8〜10個"]}'
             ),
         }],
     )
@@ -381,18 +345,40 @@ def _get_keyword_and_lsi(keyword: str) -> tuple[dict, str]:
         raw = "\n".join(lines[1:-1] if lines[-1].strip() == "```" else lines[1:])
     try:
         result = json.loads(raw)
-        kw_research = {
+        return {
             "suggest":  result.get("suggest", [])[:10],
             "paa":      result.get("paa", [])[:8],
             "longtail": result.get("longtail", [])[:10],
         }
-        lsi_raw = result.get("lsi", "")
-        if isinstance(lsi_raw, list):
-            lsi_raw = "、".join(lsi_raw)
-        lsi_words = str(lsi_raw).splitlines()[0] if lsi_raw else ""
-        return kw_research, lsi_words
     except Exception:
-        return {"suggest": [], "paa": [], "longtail": []}, ""
+        return {"suggest": [], "paa": [], "longtail": []}
+
+
+def _get_lsi_keywords(keyword: str) -> str:
+    """
+    Claude Haiku でキーワードの共起語・LSIキーワードを生成する。
+
+    Returns:
+        「用語1、用語2、...」形式の文字列（プロンプトに直接埋め込む用）
+    """
+    check_stop()
+    msg = client.messages.create(
+        model="claude-haiku-4-5-20251001",
+        max_tokens=200,
+        messages=[{
+            "role": "user",
+            "content": (
+                f"「{keyword}」というキーワードの記事でSEO的に重要な共起語・LSIキーワードを"
+                f"15個生成してください。"
+                f"読者が同時に検索・気にするであろう関連語句を中心に。"
+                f"出力は「語句1、語句2、語句3、...」の形式のみ。説明不要。"
+            ),
+        }],
+    )
+    record_usage("claude-haiku-4-5-20251001",
+                 msg.usage.input_tokens, msg.usage.output_tokens, f"lsi:{keyword}")
+    raw = msg.content[0].text.strip()
+    return raw.splitlines()[0] if raw else ""
 
 
 def _needs_plaud_notta(keyword: str) -> bool:
@@ -401,24 +387,61 @@ def _needs_plaud_notta(keyword: str) -> bool:
     return any(term in kw for term in _PLAUD_NOTTA_TERMS)
 
 
+def _build_blog_context_section() -> str:
+    """
+    wp_contextのblog_metaからブログ専用コンテキストセクションを生成する。
+    値が入っている項目のみ出力。全て空の場合は空文字列を返す。
+    空欄の項目はClaudeが記事内容から自動判断する。
+    """
+    try:
+        from modules import wp_context
+        meta = wp_context.get_blog_meta()
+    except Exception:
+        return ""
+
+    if not meta:
+        return ""
+
+    lines = []
+    if meta.get("site_purpose"):
+        lines.append(f"【サイトの目的】{meta['site_purpose']}")
+    if meta.get("target"):
+        lines.append(f"【ターゲット読者】{meta['target']}")
+    if meta.get("writing_taste"):
+        lines.append(f"【文章のテイスト】{meta['writing_taste']}")
+    if meta.get("genre_detail"):
+        lines.append(f"【ジャンル】{meta['genre_detail']}")
+    if meta.get("search_intent"):
+        lines.append(f"【検索意図タイプ】{meta['search_intent']}")
+
+    if not lines:
+        return ""
+
+    block = "\n".join(lines)
+    return (
+        "## ブログのコンテキスト（記事の方向性・文体・読者に合わせて記事を最適化してください）\n"
+        f"{block}\n\n"
+    )
+
+
 USER_PROMPT_TEMPLATE = """\
 以下のキーワードで記事構成を生成してください。
 
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{plaud_notta_section}
+{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{plaud_notta_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
 以下のJSONのみ返してください。前後に説明文・コードブロック記号は不要です。
 
 {{
-  "title": "SEOタイトル（30〜40字程度・キーワードを自然に含む・数字やメリット・疑問形でクリックを促す。例：「AIボイスレコーダーアプリiPhoneおすすめ7選！文字起こし・要約まで自動化」）",
-  "meta_description": "メタディスクリプション（150字以上）",
+  "title": "H1タイトル（30〜40字程度・キーワードを自然に含む・数字やメリット・疑問形でクリックを促す。例：「AIボイスレコーダーアプリiPhoneおすすめ7選！文字起こし・要約まで自動化」）",
+  "seo_title": "タイトルタグ（検索結果に表示されるSEOタイトル。28〜32字・キーワードを先頭に・サイト名は不要。例：「AIボイスレコーダーアプリおすすめ7選｜文字起こし自動化」）",
+  "meta_description": "メタディスクリプション（80〜120字・キーワードを含み検索意図に沿ったクリックを促す文章。例：「AIボイスレコーダーアプリのおすすめ7選を解説。文字起こし・議事録作成を自動化したい人向けに、機能・価格・使いやすさを徹底比較します。」）",
   "slug": "url-slug-in-english-kebab-case",
-  "category_id": カテゴリーIDの整数,
-  "category_name": "カテゴリー名",
-  "tags": ["タグ1", "タグ2", "タグ3", "タグ4", "タグ5"],
+  "image_prompt": "アイキャッチ用英語プロンプト（記事テーマを表す画像、no text, professional blog header, high quality）",
+  "tags": ["記事テーマに合うタグ1", "タグ2", "タグ3", "タグ4", "タグ5（必ず5つ）"],
   "content": "WordPress SWELL形式の完全なHTML（セクション1〜5をすべて含む。記事データセクションは不要）"
 }}
 """
@@ -429,10 +452,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    article_theme: str = "",
                    sub_keywords: list[str] | None = None,
                    enable_fact_check: bool = True,
-                   target_length: int = 9000,
-                   article_type: str = "",
-                   asp_list: list[dict] | None = None,
-                   guide_links: dict | None = None) -> dict:
+                   target_length: int = 9000) -> dict:
     """
     記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
 
@@ -443,12 +463,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
       3000 (FUTURE):    H3×5〜7本   / FAQ×3〜4問  / max_tokens=4,500
     """
     h3_min, h3_max, faq_min, faq_max, max_tokens = _get_structure(target_length)
-    from modules.asp_fetcher import build_asp_prompt_section
-    asp_links_section   = build_asp_prompt_section(asp_list or [])
-    guide_links_section = build_guide_links_section(guide_links or {})
-    system_prompt = _build_system_prompt(h3_min, h3_max, faq_min, faq_max,
-                                         asp_links_section=asp_links_section,
-                                         guide_links_section=guide_links_section)
+    system_prompt = _build_system_prompt(h3_min, h3_max, faq_min, faq_max)
 
     use_plaud_notta = _needs_plaud_notta(keyword)
     print(f"[article_generator] 記事構成生成中: 「{keyword}」(vol:{volume})"
@@ -477,6 +492,9 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     diff_section = f"差別化の方針: {differentiation_note}\n" if differentiation_note else ""
     plaud_notta_section = _PLAUD_NOTTA_INSTRUCTION if use_plaud_notta else ""
 
+    # ブログコンテキスト（管理シートのメタデータ）
+    blog_context_section = _build_blog_context_section()
+
     # 関連キーワード指示
     related_section = ""
     if related_keywords:
@@ -488,29 +506,16 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     # 記事テーマ指示
     theme_section = f"記事テーマ: {article_theme}\n" if article_theme else ""
 
-    # キーワードリサーチ + 共起語・LSI（Haiku 1コールで生成）
-    lsi_section = ""
-    keyword_research_section = ""
+    # 共起語・LSIキーワード（Haiku で生成）
     try:
-        kw_research, lsi_words = _get_keyword_and_lsi(keyword)
+        lsi_words = _get_lsi_keywords(keyword)
+        lsi_section = (
+            f"共起語・LSIキーワード（H3本文・FAQ・まとめに自然に散りばめること）: {lsi_words}\n"
+        ) if lsi_words else ""
         if lsi_words:
-            lsi_section = (
-                f"共起語・LSIキーワード（H3本文・FAQ・まとめに自然に散りばめること）: {lsi_words}\n"
-            )
             print(f"[article_generator] 共起語: {lsi_words[:60]}...")
-        parts = []
-        if kw_research["suggest"]:
-            parts.append("サジェストキーワード（H3見出しや本文に自然に使う）: " + "・".join(kw_research["suggest"]))
-        if kw_research["paa"]:
-            parts.append("関連質問PAA（FAQの質問文やH3見出しに活用する）: " + "・".join(kw_research["paa"]))
-        if kw_research["longtail"]:
-            parts.append("ロングテールキーワード（本文中に自然に散りばめる）: " + "・".join(kw_research["longtail"]))
-        if parts:
-            keyword_research_section = "\n".join(parts) + "\n"
-            suggest_preview = "・".join(kw_research["suggest"][:3])
-            print(f"[article_generator] サジェスト: {suggest_preview}...")
     except Exception:
-        pass
+        lsi_section = ""
 
     # スプレッドシートのAIM未判定サブキーワード
     sub_keywords_section = ""
@@ -526,6 +531,24 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
             )
             print(f"[article_generator] サブKW候補: {len(candidates)}件 ({candidates[0]}〜)")
 
+    # サジェスト・PAA・ロングテールキーワード（Haiku で生成）
+    keyword_research_section = ""
+    try:
+        kw_research = _get_keyword_research(keyword)
+        parts = []
+        if kw_research["suggest"]:
+            parts.append("サジェストキーワード（H3見出しや本文に自然に使う）: " + "・".join(kw_research["suggest"]))
+        if kw_research["paa"]:
+            parts.append("関連質問PAA（FAQの質問文やH3見出しに活用する）: " + "・".join(kw_research["paa"]))
+        if kw_research["longtail"]:
+            parts.append("ロングテールキーワード（本文中に自然に散りばめる）: " + "・".join(kw_research["longtail"]))
+        if parts:
+            keyword_research_section = "\n".join(parts) + "\n"
+            suggest_preview = "・".join(kw_research["suggest"][:3])
+            print(f"[article_generator] サジェスト: {suggest_preview}...")
+    except Exception:
+        pass
+
     check_stop()
     message = client.messages.create(
         model="claude-sonnet-4-6",
@@ -536,6 +559,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
             "content": USER_PROMPT_TEMPLATE.format(
                 keyword=keyword,
                 volume=volume,
+                blog_context_section=blog_context_section,
                 related_section=related_section,
                 theme_section=theme_section,
                 lsi_section=lsi_section,
@@ -569,56 +593,30 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     except json.JSONDecodeError as e:
         raise ValueError(f"Claude APIからのJSON解析エラー: {e}\n---\n{raw[:500]}") from e
 
-    for key in ("title", "meta_description", "slug", "content"):
+    for key in ("title", "meta_description", "slug", "image_prompt", "content"):
         if key not in data:
             raise ValueError(f"レスポンスに必須キー '{key}' がありません")
 
-    if "category_id" in data:
-        try:
-            data["category_id"] = int(data["category_id"])
-        except (ValueError, TypeError):
-            data.pop("category_id", None)
+    # seo_title が未生成の場合は title から生成（32字に切り詰め）
+    if not data.get("seo_title"):
+        data["seo_title"] = data["title"][:32]
 
-    # タグを最大5個に制限
+    # category_id は wordpress_poster の select_category() で決定するため、ここでは使わない
+    data.pop("category_id", None)
+    data.pop("category_name", None)
+
+    # タグを最大5個に制限（不足時は空リストのまま → 投稿時にログ警告）
     if isinstance(data.get("tags"), list):
-        data["tags"] = data["tags"][:5]
+        data["tags"] = [t for t in data["tags"] if t][:5]
     else:
         data["tags"] = []
-
-    # meta_description 長さ検証（120字未満の場合は Haiku で補完）
-    meta_desc = data.get("meta_description", "")
-    if len(meta_desc) < 120:
-        print(f"[article_generator] meta_description 短すぎ({len(meta_desc)}字) → 再生成")
-        try:
-            fix_msg = client.messages.create(
-                model="claude-haiku-4-5-20251001",
-                max_tokens=300,
-                messages=[{
-                    "role": "user",
-                    "content": (
-                        f"以下のメタディスクリプションを120〜160字に書き直してください。"
-                        f"キーワード「{keyword}」を2回以上含め、検索意図に沿ったクリックを促す自然な文章にすること。"
-                        f"テキストのみ返してください（説明不要）。\n\n{meta_desc}"
-                    ),
-                }],
-            )
-            record_usage(fix_msg.model, fix_msg.usage.input_tokens, fix_msg.usage.output_tokens,
-                         label=f"meta_fix:{keyword}")
-            fixed = fix_msg.content[0].text.strip()
-            if len(fixed) >= 120:
-                data["meta_description"] = fixed
-                print(f"[article_generator] meta_description 補完完了: {len(fixed)}字")
-            else:
-                print(f"[article_generator] meta_description 補完後も短い({len(fixed)}字)・そのまま使用")
-        except Exception as e:
-            print(f"[article_generator] meta_description 補完スキップ: {e}")
 
     data["keyword"] = keyword
     data["volume"] = volume
 
     # ImageFX プロンプトを生成してdictに追加
     try:
-        data["imagefx_prompt"] = generate_imagefx_prompt(keyword, data["title"], article_type=article_type)
+        data["imagefx_prompt"] = generate_imagefx_prompt(keyword, data["title"])
     except Exception as e:
         print(f"[article_generator] ImageFXプロンプト生成スキップ: {e}")
         data["imagefx_prompt"] = ""
@@ -634,10 +632,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
 def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                      sub_keywords: list[str] | None = None,
                      enable_fact_check: bool = True,
-                     target_length: int = 9000,
-                     article_type: str = "",
-                     asp_list: list[dict] | None = None,
-                     guide_links: dict | None = None) -> dict:
+                     target_length: int = 9000) -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
@@ -648,8 +643,6 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
         sub_keywords: スプレッドシートのAIM未判定キーワード（任意活用）
         enable_fact_check: 事実確認ステップを実行するか（デフォルト: True）
         target_length: 目標文字数（9000/6000/3000）。H3本数・FAQ問数・max_tokensを自動調整
-        asp_list: ASP案件リスト（fetch_asp_links()の返り値）。プロンプトに注入される。
-        guide_links: 内部誘導リンク {"pv_url": str, "comparison_url": str, "cv_url": str}
 
     Returns:
         {title, meta_description, slug, image_prompt, category_id, category_name,
@@ -657,8 +650,7 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
     """
     return _build_article(keyword, volume, differentiation_note,
                           sub_keywords=sub_keywords, enable_fact_check=enable_fact_check,
-                          target_length=target_length, article_type=article_type,
-                          asp_list=asp_list, guide_links=guide_links)
+                          target_length=target_length)
 
 
 def generate_article_from_cluster(cluster: dict, sub_keywords: list[str] | None = None) -> dict:

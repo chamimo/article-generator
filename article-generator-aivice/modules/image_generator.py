@@ -12,6 +12,7 @@ import re
 import time
 import anthropic
 from huggingface_hub import InferenceClient
+from modules import wp_context
 
 from config import HUGGINGFACE_API_KEY, ANTHROPIC_API_KEY
 
@@ -59,6 +60,82 @@ _ABSTRACT_SUFFIX = (
 )
 
 _claude = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+
+
+_JP_TO_EN: dict[str, str] = {
+    "シンプル": "simple", "やさしい": "gentle", "教育": "education",
+    "フラット": "flat", "インフォグラフィック": "infographic", "パステル": "pastel",
+    "テック": "tech", "デザイン": "design", "スタイル": "style",
+    "ブルー": "blue", "グリーン": "green", "ホワイト": "white",
+    "ラベンダー": "lavender", "ミント": "mint", "オレンジ": "orange",
+    "PC": "PC", "タブレット": "tablet", "ノート": "notebook",
+    "チェックリスト": "checklist", "グラフ": "chart", "アイコン": "icon",
+    "中心": "focused", "系": "", "・": " ", "　": " ",
+}
+
+
+def _jp_to_en(text: str) -> str:
+    """日本語キーワードを英語に置換し、残った日本語文字を除去する。"""
+    for jp, en in _JP_TO_EN.items():
+        # 英語単語の置換時はスペースで区切る
+        replacement = f" {en} " if en else " "
+        text = text.replace(jp, replacement)
+    # 残った日本語（ひらがな・カタカナ・漢字）を除去
+    text = re.sub(r'[　-鿿]+', ' ', text)
+    return re.sub(r'\s+', ' ', text).strip()
+
+
+def _get_style_hint() -> str:
+    """
+    wp_contextのimage_style設定からFLUXプロンプト用スタイル指示文字列を生成する。
+    設定がない場合はブログのgenreからスタイルを推測する。
+    """
+    cfg = wp_context.get_image_style()
+    if not cfg:
+        # blog_metaのgenreからスタイル推測
+        meta = wp_context.get_blog_meta()
+        genre = meta.get("genre_detail") or meta.get("genre", "")
+        if genre:
+            genre_en = _jp_to_en(genre)[:60]
+            return f"flat design illustration, pastel colors, soft gradient, topic: {genre_en}"
+        return "flat design illustration, pastel colors, soft gradient background"
+
+    parts = []
+
+    # スタイル
+    if cfg.get("style"):
+        parts.append(_jp_to_en(cfg["style"])[:80])
+
+    # メインカラー（カラーコードを抽出）
+    color_codes = re.findall(r'#[0-9A-Fa-f]{6}', " ".join(filter(None, [
+        cfg.get("color_main", ""), cfg.get("color_sub", "")
+    ])))
+    if color_codes:
+        parts.append(f"colors: {' '.join(color_codes[:4])}")
+    elif cfg.get("color_main"):
+        parts.append(f"main color: {_jp_to_en(cfg['color_main'])[:40]}")
+
+    # tone（最初の文のみ・数字除去）
+    if cfg.get("tone"):
+        tone_raw = cfg["tone"].split("。")[0]
+        tone_en = _jp_to_en(tone_raw)
+        tone_en = re.sub(r'\b\d+\b', '', tone_en).strip()
+        if tone_en:
+            parts.append(tone_en[:60])
+
+    return ", ".join(p for p in parts if p) or "flat design illustration, pastel colors"
+
+
+def _get_motifs_hint() -> str:
+    """
+    image_styleのmotifsをプロンプト用英語句で返す。
+    未設定の場合は空文字を返す（Claudeにトピックから推測させる）。
+    """
+    cfg = wp_context.get_image_style()
+    motifs = cfg.get("motifs", [])
+    if not motifs:
+        return ""
+    return ", ".join(_jp_to_en(m) for m in motifs[:8])
 
 
 # ─────────────────────────────────────────────
@@ -126,108 +203,23 @@ def _theme_hint(text: str) -> str:
 
 
 # ─────────────────────────────────────────────
-# イラストスタイル定義
-# ─────────────────────────────────────────────
-
-# STYLE_A: フラットデザイン（信頼感・MONETIZE向け）
-_STYLE_A = {
-    "label": "A-flat",
-    "haiku_style": (
-        "Style: flat design illustration, clean and professional, "
-        "soft pastel colors, minimal geometric icons. "
-        "Focus on symbols representing the topic: coins, charts, checkmarks, "
-        "calendars, documents, arrows, stars, speech bubbles, lightbulbs, magnifying glass. "
-        "Absolutely NO laptop, NO computer, NO monitor, NO smartphone, NO device screens."
-    ),
-    "haiku_examples": (
-        "'flat design icons of coins, upward chart and checkmarks, soft mint and cream pastel tones, minimal professional style' "
-        "'flat illustration of calendar, documents and star icons, soft lavender and peach gradient, clean business style'"
-    ),
-    "flux_suffix": (
-        "flat design illustration, pastel colors, soft gradient background, "
-        "clean professional style, minimal geometric icons, "
-        "no laptop, no computer, no monitor, no phone, no screen, no device, "
-        "no people, no hands, no face, no human, no text, no watermark, "
-        "high quality digital art"
-    ),
-}
-
-# STYLE_B: デフォルメキャラ（親しみやすさ・FUTURE向け）
-_STYLE_B = {
-    "label": "B-chibi",
-    "haiku_style": (
-        "Style: cute chibi illustration, kawaii style, soft pastel colors, "
-        "adorable round shapes, simple background. "
-        "Focus on cute animal or object characters representing the topic "
-        "(bunny, bear, cat, penguin, chick — each holding or surrounded by topic-related items). "
-        "Absolutely NO laptop, NO computer, NO monitor, NO smartphone, NO device screens."
-    ),
-    "haiku_examples": (
-        "'cute chibi bear holding coins and upward arrow, soft pink and mint pastel tones, kawaii minimal style' "
-        "'adorable round penguin with speech bubble and stars, soft lavender gradient, kawaii illustration'"
-    ),
-    "flux_suffix": (
-        "cute chibi illustration, kawaii style, pastel colors, "
-        "adorable rounded shapes, simple pastel background, "
-        "no laptop, no computer, no monitor, no phone, no screen, no device, "
-        "no people, no hands, no human face, no text, no watermark, "
-        "high quality digital art"
-    ),
-}
-
-# STYLE_C: アイコン・オブジェクト系（LONGTAIL ランダム選択肢の一つ）
-_STYLE_C = {
-    "label": "C-icon",
-    "haiku_style": (
-        "Style: flat icon design, colorful objects on white or very light background, "
-        "clean minimal line icons, modern and simple. "
-        "Focus on 3-5 distinct icons representing the topic: documents, magnifying glass, "
-        "lightbulb, trophy, shield, leaf, clock, calendar, puzzle piece, graph bars. "
-        "Absolutely NO laptop, NO computer, NO monitor, NO smartphone, NO device screens."
-    ),
-    "haiku_examples": (
-        "'minimal flat icons of trophy, lightbulb and upward arrow, colorful on white background, clean icon design' "
-        "'flat icon set of magnifying glass, document and shield, soft color fills, modern minimal style'"
-    ),
-    "flux_suffix": (
-        "flat icon design, colorful objects, white or very light background, "
-        "clean minimal style, distinct icon shapes, "
-        "no laptop, no computer, no monitor, no phone, no screen, no device, "
-        "no people, no hands, no face, no human, no text, no watermark, "
-        "high quality digital art"
-    ),
-}
-
-_LONGTAIL_STYLES = [_STYLE_A, _STYLE_B, _STYLE_C]
-
-
-def _select_style(article_type: str) -> dict:
-    """
-    記事タイプに応じてスタイルを選択する。
-      MONETIZE → A（フラットデザイン・信頼感）
-      FUTURE   → B（デフォルメキャラ・親しみやすさ）
-      LONGTAIL → A/B/C ランダム
-      その他    → A/B/C ランダム
-    """
-    t = article_type.lower() if article_type else ""
-    if "monetize" in t:
-        return _STYLE_A
-    if "future" in t or "trend" in t:
-        return _STYLE_B
-    # LONGTAIL / その他: ランダム
-    return random.choice(_LONGTAIL_STYLES)
-
-
-# ─────────────────────────────────────────────
 # 公開API
 # ─────────────────────────────────────────────
 
-def _build_eyecatch_prompt(keyword: str, article_theme: str, style: dict) -> str:
+def _build_eyecatch_prompt(keyword: str, article_theme: str) -> str:
     """
     キーワード・記事テーマからアイキャッチ用FLUXプロンプトをClaude Haikuで生成する。
+    ブログ別image_style設定がある場合はそのスタイルを優先する。
     Haiku呼び出し失敗時はキーワードから直接フォールバックプロンプトを生成する。
     """
     topic = article_theme or keyword
+    style_hint = _get_style_hint()
+    motifs_hint = _get_motifs_hint()
+    motifs_line = (
+        f"Focus on simple icons and objects related to the topic: {motifs_hint}."
+        if motifs_hint else
+        "Focus on icons and objects that visually represent the article topic. Do NOT use laptops or generic business icons unless the topic is about business/tech."
+    )
     try:
         msg = _claude.messages.create(
             model="claude-haiku-4-5-20251001",
@@ -237,10 +229,9 @@ def _build_eyecatch_prompt(keyword: str, article_theme: str, style: dict) -> str
                 "content": (
                     f"Create a short English image prompt (20-30 words) for a blog header illustration "
                     f"about: '{topic}'. "
-                    f"{style['haiku_style']} "
-                    "No people, no hands, no faces. "
+                    f"Style: {style_hint}. "
+                    f"{motifs_line} No people, no hands, no faces. "
                     "Avoid: robots, cyberpunk, neon colors, dark backgrounds, clutter, realistic photos. "
-                    f"Examples: {style['haiku_examples']} "
                     "Output the prompt only."
                 ),
             }],
@@ -250,30 +241,43 @@ def _build_eyecatch_prompt(keyword: str, article_theme: str, style: dict) -> str
     except Exception as e:
         print(f"[image_generator] Haikuプロンプト生成失敗、フォールバック使用: {e}")
         safe_topic = re.sub(r'[^\w\s]', ' ', topic).strip()
-        return f"cute flat design icons for {safe_topic}, pastel colors, minimal style, no laptop, no computer"
+        return (
+            f"flat design icons for {safe_topic}, "
+            f"{style_hint}"
+        )
 
 
-def generate_eyecatch_image(keyword: str, article_theme: str = "", article_type: str = "") -> bytes:
+def generate_eyecatch_image(keyword: str, article_theme: str = "") -> bytes:
     """
-    アイキャッチ画像を生成する（スタイルバリエーション対応・人物なし）。
-
-    - スタイル選択: article_type に応じて A/B/C から選択
-      MONETIZE→A(フラット), FUTURE→B(デフォルメ), LONGTAIL→ランダム
-    - サイズ: 1216×832
+    アイキャッチ画像を生成する（フラットデザイン・人物なし）。
+    ブログ別image_style設定がある場合はそのスタイルを反映する。
     """
-    style = _select_style(article_type)
-    prompt = _build_eyecatch_prompt(keyword, article_theme, style)
-    full_prompt = f"{prompt}, {style['flux_suffix']}"
+    prompt = _build_eyecatch_prompt(keyword, article_theme)
+    style_hint = _get_style_hint()
+    suffix = (
+        f"flat design illustration, {style_hint}, minimal icons, "
+        "no people, no hands, no face, no human, no text, no watermark, "
+        "high quality digital art"
+    )
+    full_prompt = f"{prompt}, {suffix}"
 
-    print(f"[image_generator] アイキャッチ生成 (スタイル{style['label']}): {prompt[:60]}...")
+    print(f"[image_generator] アイキャッチ生成 (フラットイラスト): {prompt[:60]}...")
     return _call_flux(full_prompt, W_EYECATCH, H_EYECATCH)
 
 
-def _build_h2_image_prompt(h2_title: str, keyword: str, style: dict) -> str:
+def _build_h2_image_prompt(h2_title: str, keyword: str) -> str:
     """
     H2タイトル・キーワードから記事テーマに合ったFLUXプロンプトをClaude Haikuで生成する。
+    フラットデザイン・かわいいビジネス系・パステルカラー・人物なし。
     Haiku呼び出し失敗時はフォールバックプロンプトを使用する。
     """
+    style_hint = _get_style_hint()
+    motifs_hint = _get_motifs_hint()
+    motifs_line = (
+        f"Focus on simple icons: {motifs_hint}."
+        if motifs_hint else
+        "Focus on icons and objects that visually represent the section topic. Do NOT use laptops or generic business icons unless the topic is about business/tech."
+    )
     try:
         msg = _claude.messages.create(
             model="claude-haiku-4-5-20251001",
@@ -283,10 +287,9 @@ def _build_h2_image_prompt(h2_title: str, keyword: str, style: dict) -> str:
                 "content": (
                     f"Create a short English image prompt (20-30 words) for a blog section illustration "
                     f"about: keyword='{keyword}', section='{h2_title}'. "
-                    f"{style['haiku_style']} "
-                    "No people, no hands, no faces. "
+                    f"Style: {style_hint}. "
+                    f"{motifs_line} No people, no hands, no faces. "
                     "Avoid: robots, cyberpunk, neon colors, dark backgrounds, clutter, realistic photos. "
-                    f"Examples: {style['haiku_examples']} "
                     "Output the prompt only."
                 ),
             }],
@@ -297,28 +300,34 @@ def _build_h2_image_prompt(h2_title: str, keyword: str, style: dict) -> str:
         print(f"[image_generator] H2プロンプト生成失敗、フォールバック使用: {e}")
         topic = h2_title or keyword
         safe_topic = re.sub(r'[^\w\s]', ' ', topic).strip()
-        return f"cute flat design icons for {safe_topic}, pastel colors, minimal style, no laptop, no computer"
+        return (
+            f"flat design icons for {safe_topic}, "
+            f"{style_hint}"
+        )
 
 
-def generate_h2_image(h2_title: str, keyword: str = "", article_type: str = "") -> bytes:
+def generate_h2_image(h2_title: str, keyword: str = "") -> bytes:
     """
-    H2記事内画像を生成する（スタイルバリエーション対応・人物なし）。
-
-    - スタイル: アイキャッチと同じ article_type に基づくスタイルを使用
-    - サイズ: 1216×832
+    H2記事内画像を生成する（フラットデザイン・人物なし）。
+    ブログ別image_style設定がある場合はそのスタイルを反映する。
     """
-    style = _select_style(article_type)
     topic = h2_title or keyword
-    prompt = _build_h2_image_prompt(topic, keyword, style)
-    full_prompt = f"{prompt}, {style['flux_suffix']}"
+    prompt = _build_h2_image_prompt(topic, keyword)
+    style_hint = _get_style_hint()
+    suffix = (
+        f"flat design illustration, {style_hint}, minimal icons, "
+        "no people, no hands, no face, no human, no text, no watermark, "
+        "high quality digital art"
+    )
+    full_prompt = f"{prompt}, {suffix}"
 
-    print(f"[image_generator] H2画像生成 (スタイル{style['label']}): {prompt[:60]}...")
+    print(f"[image_generator] H2画像生成 (テーマ反映): {prompt[:60]}...")
     return _call_flux(full_prompt, W_EYECATCH, H_EYECATCH)
 
 
-def generate_image_for_article(keyword: str, article_theme: str = "", article_type: str = "") -> bytes:
+def generate_image_for_article(keyword: str, article_theme: str = "") -> bytes:
     """後方互換エイリアス（アイキャッチ生成）。"""
-    return generate_eyecatch_image(keyword, article_theme, article_type)
+    return generate_eyecatch_image(keyword, article_theme)
 
 
 # ─────────────────────────────────────────────
@@ -353,31 +362,56 @@ _IMAGEFX_BG_OPTIONS = [
 ]
 
 
-def generate_imagefx_prompt(keyword: str, title: str, article_type: str = "") -> str:
+def generate_imagefx_prompt(keyword: str, title: str) -> str:
     """
-    ImageFX 用アイキャッチプロンプトを生成する（人物なし・テーマ反映・スタイルバリエーション対応）。
+    ImageFX 用アイキャッチプロンプトを生成する（人物なし・テーマ反映フラットイラスト）。
 
     - 人物: 完全禁止
-    - ビジュアル: article_type に応じたスタイル（A:フラット/B:デフォルメ/C:アイコン）
+    - ビジュアル: 記事テーマに合ったフラットイラスト・モダンデザイン
     - 背景スタイル: A/B/C からランダム選択
     - ウォーターマーク・タイトルテキスト: 固定ルールで追記
-    - ※APIコールなし: キーワードから静的にプロンプトを生成（コスト削減）
 
     Returns:
         完成した ImageFX プロンプト文字列
     """
-    style = _select_style(article_type)
     bg_label, bg_base = random.choice(_IMAGEFX_BG_OPTIONS)
 
-    # テーマ: キーワードから静的生成（APIコール不要）
-    safe_kw = re.sub(r'[^\w\s\-]', ' ', keyword).strip()
-    theme_desc = (
-        f"flat design icons and symbols related to {safe_kw}, "
-        f"minimal illustration, soft pastel colors, no people, no devices"
+    # テーマに合ったビジュアル説明をClaude Haikuで生成
+    theme_resp = _claude.messages.create(
+        model="claude-haiku-4-5-20251001",
+        max_tokens=80,
+        messages=[{
+            "role": "user",
+            "content": (
+                f"For a blog header illustration about '{keyword}' titled '{title}', "
+                "describe specific flat design icons and objects (15-20 words). "
+                "Style: cute and modern, kawaii business style, pastel colors, minimal icons. "
+                "Focus on: simple icons representing the topic (laptop, speech bubbles, stars, coins, "
+                "checkmarks, calendars, lightbulbs, charts, etc.). "
+                "Avoid: people, hands, faces, robots, circuits, neon colors, dark elements. "
+                "No explanation. Only the description.\n"
+                "Examples: "
+                "'cute flat icons of laptop and speech bubbles with stars, soft pink and mint pastel tones' "
+                "'minimal flat design with calendar, coins and upward arrow, soft lavender and cream gradient'"
+            ),
+        }],
     )
+    theme_desc = theme_resp.content[0].text.strip().splitlines()[0]
+    theme_desc = re.sub(r'[#*`"\']+', '', theme_desc).strip()
 
-    # タイトル: 英数字のみ抽出（APIコール不要）
-    en_title = re.sub(r'[^\w\s\-]', ' ', keyword)[:30].strip() or "Blog Article"
+    # 記事タイトルを英訳（短縮）
+    title_resp = _claude.messages.create(
+        model="claude-haiku-4-5-20251001",
+        max_tokens=20,
+        messages=[{
+            "role": "user",
+            "content": (
+                f"Translate to short English (max 5 words, title case, no punctuation): {title}"
+            ),
+        }],
+    )
+    en_title = title_resp.content[0].text.strip().splitlines()[0]
+    en_title = re.sub(r'[#*`]+', '', en_title).strip()
 
     prompt = (
         f"{theme_desc}\n"
