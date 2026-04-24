@@ -159,6 +159,198 @@
       "output_tokens": 6000,
       "cost_usd": 0.104139,
       "label": "article:AIの導入、新卒の早期離職...大手企業が新卒採用を絞る傾向に入り第二の氷河期"
+    },
+    {
+      "timestamp": "2026-04-23T02:00:15.426080+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 237,
+      "output_tokens": 531,
+      "cost_usd": 0.002314,
+      "label": "kw_research:マイクロソフトがWindows 11ユーザーに明言、2026年最良のウイルス対"
+    },
+    {
+      "timestamp": "2026-04-23T02:01:51.626119+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4831,
+      "output_tokens": 6000,
+      "cost_usd": 0.104493,
+      "label": "article:マイクロソフトがWindows 11ユーザーに明言、2026年最良のウイルス対"
+    },
+    {
+      "timestamp": "2026-04-23T11:00:15.647529+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 228,
+      "output_tokens": 503,
+      "cost_usd": 0.002194,
+      "label": "kw_research:［速報］Google、AIエージェントをローコードで作れるAgent Stud"
+    },
+    {
+      "timestamp": "2026-04-23T11:01:34.700813+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 3870,
+      "output_tokens": 6000,
+      "cost_usd": 0.10161,
+      "label": "article:［速報］Google、AIエージェントをローコードで作れるAgent Stud"
+    },
+    {
+      "timestamp": "2026-04-23T20:00:19.637895+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 211,
+      "output_tokens": 419,
+      "cost_usd": 0.001845,
+      "label": "kw_research:アーム 株価"
+    },
+    {
+      "timestamp": "2026-04-23T20:01:59.305909+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4436,
+      "output_tokens": 6000,
+      "cost_usd": 0.103308,
+      "label": "article:アーム 株価"
+    },
+    {
+      "timestamp": "2026-04-23T21:04:23.485719+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 211,
+      "output_tokens": 544,
+      "cost_usd": 0.002345,
+      "label": "kw_research:緒方恵美"
+    },
+    {
+      "timestamp": "2026-04-23T21:05:58.565366+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T21",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4472,
+      "output_tokens": 6000,
+      "cost_usd": 0.103416,
+      "label": "article:緒方恵美"
+    },
+    {
+      "timestamp": "2026-04-23T21:08:43.845216+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 236,
+      "output_tokens": 614,
+      "cost_usd": 0.002645,
+      "label": "kw_research:ローカルPCで動作するのにClaude Opus 4.5に迫る性能のQwen3"
+    },
+    {
+      "timestamp": "2026-04-23T21:10:50.194412+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T21",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4582,
+      "output_tokens": 8000,
+      "cost_usd": 0.133746,
+      "label": "article:ローカルPCで動作するのにClaude Opus 4.5に迫る性能のQwen3"
+    },
+    {
+      "timestamp": "2026-04-23T21:11:57.887303+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 218,
+      "output_tokens": 535,
+      "cost_usd": 0.002314,
+      "label": "kw_research:エージェント モードがWord、Excel、PowerPoint"
+    },
+    {
+      "timestamp": "2026-04-23T21:13:56.529555+00:00",
+      "date": "2026-04-23",
+      "hour": "2026-04-23T21",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4466,
+      "output_tokens": 7675,
+      "cost_usd": 0.128523,
+      "label": "article:エージェント モードがWord、Excel、PowerPoint"
+    },
+    {
+      "timestamp": "2026-04-24T12:31:00.822872+00:00",
+      "date": "2026-04-24",
+      "hour": "2026-04-24T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 104,
+      "output_tokens": 88,
+      "cost_usd": 0.000435,
+      "label": "lsi:三菱電機"
+    },
+    {
+      "timestamp": "2026-04-24T12:31:04.742926+00:00",
+      "date": "2026-04-24",
+      "hour": "2026-04-24T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 171,
+      "output_tokens": 497,
+      "cost_usd": 0.002125,
+      "label": "kw_research:三菱電機"
+    },
+    {
+      "timestamp": "2026-04-24T12:33:07.969664+00:00",
+      "date": "2026-04-24",
+      "hour": "2026-04-24T12",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6126,
+      "output_tokens": 7661,
+      "cost_usd": 0.133293,
+      "label": "article:三菱電機"
+    },
+    {
+      "timestamp": "2026-04-24T12:38:39.134793+00:00",
+      "date": "2026-04-24",
+      "hour": "2026-04-24T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 106,
+      "output_tokens": 73,
+      "cost_usd": 0.000377,
+      "label": "lsi:節約 スロたか"
+    },
+    {
+      "timestamp": "2026-04-24T12:38:42.681064+00:00",
+      "date": "2026-04-24",
+      "hour": "2026-04-24T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 173,
+      "output_tokens": 501,
+      "cost_usd": 0.002142,
+      "label": "kw_research:節約 スロたか"
+    },
+    {
+      "timestamp": "2026-04-24T12:41:04.480734+00:00",
+      "date": "2026-04-24",
+      "hour": "2026-04-24T12",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6127,
+      "output_tokens": 10085,
+      "cost_usd": 0.169656,
+      "label": "article:節約 スロたか"
+    }
+  ],
+  "events": [
+    {
+      "timestamp": "2026-04-24T12:54:51.429669+00:00",
+      "type": "global_daily_limit",
+      "message": "[api_guard] 🛑 全体日次コスト上限: 本日合計 $2.0577 (¥309) >= $2.00 (¥300)\n  翌日（UTC）にリセットされます。"
+    },
+    {
+      "timestamp": "2026-04-24T13:03:23.721356+00:00",
+      "type": "global_daily_limit",
+      "message": "[api_guard] 🛑 全体日次コスト上限: 本日合計 $2.0577 (¥309) >= $2.00 (¥300)\n  翌日（UTC）にリセットされます。"
     }
   ]
 }

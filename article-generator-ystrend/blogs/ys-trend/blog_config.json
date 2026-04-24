@@ -2,62 +2,92 @@
   "_comment": "generate_lite.py マルチブログ設定ファイル - ワイズトレンド",
   "name": "ys-trend",
   "display_name": "ワイズトレンド",
-
   "genre": "エンタメ・トレンド・ライフスタイル",
   "target_length": {
     "MONETIZE": 9000,
     "LONGTAIL": 6000,
-    "FUTURE":   3000
+    "FUTURE": 3000
   },
   "fact_check": true,
-
   "candidate_ss_id": "1PPkCm-QEK-H9SSsAJiFksKhNl3IyDk495--xmChSGRM",
   "candidate_sheet": "キーワード",
   "article_count": 3,
   "min_volume": 0,
-
   "article_type_weights": {
     "longtail": 0.4,
-    "trend":    0.5,
+    "trend": 0.5,
     "monetize": 0.1
   },
-
-  "wp_url_env":          "WP_URL",
-  "wp_username_env":     "WP_USERNAME",
+  "wp_url_env": "WP_URL",
+  "wp_username_env": "WP_USERNAME",
   "wp_app_password_env": "WP_APP_PASSWORD",
-
-  "stop_words": ["おすすめ", "比較", "2026", "ランキング"],
-  "aliases": ["ys-trend", "ystrend", "wise-trend"],
-
+  "stop_words": [
+    "おすすめ",
+    "比較",
+    "2026",
+    "ランキング"
+  ],
+  "aliases": [
+    "ys-trend",
+    "ystrend",
+    "wise-trend"
+  ],
   "allowed_themes": [
-    "エンタメ", "トレンド", "話題",
-    "ドラマ", "映画", "アニメ", "漫画",
-    "音楽", "アーティスト", "俳優", "女優", "芸能人",
-    "ゲーム", "バラエティ",
-    "ファッション", "コーデ", "ブランド",
-    "美容", "コスメ", "スキンケア", "ダイエット", "健康",
-    "グルメ", "レシピ", "スイーツ", "カフェ",
-    "スポーツ", "サッカー", "野球",
-    "イベント", "フェス", "チケット",
-    "ライフスタイル", "生活", "節約"
+    "エンタメ",
+    "トレンド",
+    "話題",
+    "ドラマ",
+    "映画",
+    "アニメ",
+    "漫画",
+    "音楽",
+    "アーティスト",
+    "俳優",
+    "女優",
+    "芸能人",
+    "ゲーム",
+    "バラエティ",
+    "ファッション",
+    "コーデ",
+    "ブランド",
+    "美容",
+    "コスメ",
+    "スキンケア",
+    "ダイエット",
+    "健康",
+    "グルメ",
+    "レシピ",
+    "スイーツ",
+    "カフェ",
+    "スポーツ",
+    "サッカー",
+    "野球",
+    "イベント",
+    "フェス",
+    "チケット",
+    "ライフスタイル",
+    "生活",
+    "節約"
   ],
   "ng_keywords": [],
-
   "asp_links": {},
   "affili_ss_id": "1_pgNf2-JNlT2uwJFGzlVPGpuVpj2mf5eSsa_YLwMwGc",
-
   "guide_links": {
-    "pv_url":          "",
-    "comparison_url":  "",
-    "cv_url":          ""
+    "pv_url": "",
+    "comparison_url": "",
+    "cv_url": ""
   },
-
   "seo_plugin": "seo_simple_pack",
-
   "writing_style": {
-    "tone":          "フレンドリー・トレンド感・わかりやすく",
-    "persona":       "エンタメ・トレンドに詳しいWebライター",
+    "tone": "フレンドリー・トレンド感・わかりやすく",
+    "persona": "エンタメ・トレンドに詳しいWebライター",
     "closing_style": "読者の共感を引き出す軽快な締め",
-    "ng_expressions": ["〜してみてください", "〜がおすすめです", "ぜひ〜"]
-  }
+    "ng_expressions": [
+      "〜してみてください",
+      "〜がおすすめです",
+      "ぜひ〜"
+    ]
+  },
+  "wp_post_status": "publish",
+  "wp_url": "https://ys-trend.com"
 }
