@@ -57,6 +57,7 @@ from modules import wp_context
 # ═══════════════════════════════════════════════════════════════
 FEATURES: dict[str, bool] = {
     "trend_from_x":     False,  # (未使用) X API連携 → fetch_trend_keywords() に置換
+    "trend_auto_fetch": False,  # キーワードシート外からのトレンドKW自動取得（無効=シートのみ使用）
     "article_type_mix": True,   # Phase 2: 記事タイプ配分制御（longtail/trend/monetize）
     "duplicate_check":  True,   # Phase 2: 投稿済み重複チェック
     "image_generation": True,   # Phase 2: アイキャッチ画像生成
@@ -136,6 +137,14 @@ class BlogConfig:
     affili_ss_id: str = ""                              # アフィリURLシートのスプレッドシートID（空=シート読み込みなし）
     guide_links: dict = field(default_factory=dict)    # 内部誘導リンク {pv_url, comparison_url, cv_url}
     wp_post_status: str = "draft"                      # 投稿方式: "draft"（下書き）or "publish"（即公開）
+    image_style: dict = field(default_factory=dict)    # 画像生成スタイル設定
+    asp_ss_id:   str  = ""                             # ASP専用SS（空=candidate_ss_idを使用）
+    # ブログ管理シートから動的取得（空 = Claude自動判断）
+    site_purpose:  str = ""  # サイトの目的
+    target:        str = ""  # ターゲット読者
+    writing_taste: str = ""  # 文章のテイスト
+    genre_detail:  str = ""  # ジャンル詳細
+    search_intent: str = ""  # 検索意図タイプ（Know / Do / Buy）
     # 追加設定はここに列追加するだけで OK
     extra: dict = field(default_factory=dict)
 
@@ -186,7 +195,7 @@ def load_blog_config(blog_name: str) -> BlogConfig:
         env_name = data.get(f"{key}_env", env_key)
         return os.environ.get(env_name, fallback)
 
-    return BlogConfig(
+    cfg = BlogConfig(
         name            = blog_name,
         display_name    = data.get("display_name", blog_name),
         genre           = data.get("genre", ""),
@@ -211,6 +220,8 @@ def load_blog_config(blog_name: str) -> BlogConfig:
         affili_ss_id    = data.get("affili_ss_id", ""),
         guide_links     = data.get("guide_links", {}),
         wp_post_status  = data.get("wp_post_status", "draft"),
+        image_style     = data.get("image_style", {}),
+        asp_ss_id       = data.get("asp_ss_id", ""),
         extra           = {k: v for k, v in data.items()
                            if k not in ("name", "display_name", "genre", "target_length",
                                         "fact_check", "candidate_ss_id", "candidate_sheet",
@@ -218,9 +229,22 @@ def load_blog_config(blog_name: str) -> BlogConfig:
                                         "wp_app_password", "article_type_weights",
                                         "stop_words", "aliases", "allowed_themes",
                                         "ng_keywords", "asp_links", "affili_ss_id",
-                                        "guide_links", "wp_post_status", "_comment")
+                                        "guide_links", "wp_post_status",
+                                        "image_style", "asp_ss_id", "_comment")
                            and not k.endswith("_env")},
     )
+    # ブログ管理シートから追加メタデータを補完
+    try:
+        from modules.blog_meta import load_blog_meta
+        meta = load_blog_meta(blog_name, credentials_path=GOOGLE_CREDENTIALS_PATH)
+        if meta.get("site_purpose"):  cfg.site_purpose  = meta["site_purpose"]
+        if meta.get("target"):         cfg.target        = meta["target"]
+        if meta.get("writing_taste"):  cfg.writing_taste = meta["writing_taste"]
+        if meta.get("genre"):          cfg.genre_detail  = meta["genre"]
+        if meta.get("search_intent"):  cfg.search_intent = meta["search_intent"]
+    except Exception:
+        pass
+    return cfg
 
 
 def list_blogs() -> list[str]:
@@ -719,6 +743,8 @@ def fetch_trend_keywords() -> list[dict]:
         [{"keyword": str, "volume": 0, "seo_difficulty": None,
           "competition": None, "priority": False, "_type": "trend"}, ...]
     """
+    if not FEATURES.get("trend_auto_fetch", True):
+        return []
     import requests
     import xml.etree.ElementTree as ET
 
@@ -1125,6 +1151,18 @@ def post(article: dict, dry_run: bool = False,
             blog_cfg.wp_username,
             blog_cfg.wp_app_password,
             wp_post_status=blog_cfg.wp_post_status,
+            candidate_ss_id=blog_cfg.candidate_ss_id,
+            candidate_sheet=blog_cfg.candidate_sheet,
+            image_style=blog_cfg.image_style,
+            asp_ss_id=blog_cfg.asp_ss_id,
+            default_fallback_category=blog_cfg.extra.get("default_fallback_category", ""),
+            blog_meta={
+                "site_purpose":  blog_cfg.site_purpose,
+                "target":        blog_cfg.target,
+                "writing_taste": blog_cfg.writing_taste,
+                "genre_detail":  blog_cfg.genre_detail,
+                "search_intent": blog_cfg.search_intent,
+            },
         )
         log.info(f"[post] 投稿方式: {blog_cfg.wp_post_status}")
 
@@ -1196,14 +1234,13 @@ def run_blog(
     log.info(f"  stop_words       : {stop_words or '(なし)'}")
     log.info(f"  article_count    : {n_articles}  dry_run: {dry_run}")
 
-    # ── ASP案件リスト読み込み（affili_ss_id が設定されている場合のみ）──
+    # ── ASP案件リスト読み込み（ブログ別SS の ASP案件マスターシートから）──
     asp_list: list[dict] = []
-    if blog_cfg.affili_ss_id:
-        try:
-            from modules.asp_fetcher import fetch_asp_links
-            asp_list = fetch_asp_links(blog_cfg.display_name, blog_cfg.affili_ss_id)
-        except Exception as asp_err:
-            log.warning(f"[{blog_cfg.name}] ASP案件読み込みスキップ（続行）: {asp_err}")
+    try:
+        from modules.asp_fetcher import fetch_asp_links
+        asp_list = fetch_asp_links(blog_cfg.display_name)
+    except Exception as asp_err:
+        log.warning(f"[{blog_cfg.name}] ASP案件読み込みスキップ（続行）: {asp_err}")
 
     # ── Step 1: キーワード選定 ──────────────────────────
     sub_keywords: list[str] = []  # vol<30のサブKW（記事本文に盛り込む）
