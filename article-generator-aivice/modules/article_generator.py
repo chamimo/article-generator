@@ -5,7 +5,7 @@ import json
 import anthropic
 from config import ANTHROPIC_API_KEY
 from modules.image_generator import generate_imagefx_prompt
-from modules.fact_checker import needs_fact_check, check_facts
+from modules.fact_checker import needs_fact_check, check_facts, detect_person_keyword, PERSON_ARTICLE_INSTRUCTION
 from modules.api_guard import check_stop, record_usage
 
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
@@ -429,7 +429,7 @@ USER_PROMPT_TEMPLATE = """\
 
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{plaud_notta_section}
+{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{asp_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
@@ -452,7 +452,9 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    article_theme: str = "",
                    sub_keywords: list[str] | None = None,
                    enable_fact_check: bool = True,
-                   target_length: int = 9000) -> dict:
+                   target_length: int = 9000,
+                   asp_list: list[dict] | None = None,
+                   guide_links: dict | None = None) -> dict:
     """
     記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
 
@@ -489,8 +491,14 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
         else:
             print("[article_generator] 事実確認: 確認情報なし（スキップ）")
 
+    person_section = PERSON_ARTICLE_INSTRUCTION + "\n" if detect_person_keyword(keyword) else ""
     diff_section = f"差別化の方針: {differentiation_note}\n" if differentiation_note else ""
     plaud_notta_section = _PLAUD_NOTTA_INSTRUCTION if use_plaud_notta else ""
+    try:
+        from modules.asp_fetcher import build_asp_prompt_section
+        asp_section = build_asp_prompt_section(asp_list) if asp_list else ""
+    except Exception:
+        asp_section = ""
 
     # ブログコンテキスト（管理シートのメタデータ）
     blog_context_section = _build_blog_context_section()
@@ -567,7 +575,9 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                 sub_keywords_section=sub_keywords_section,
                 differentiation_section=diff_section,
                 fact_check_section=fact_check_section,
+                person_section=person_section,
                 plaud_notta_section=plaud_notta_section,
+                asp_section=asp_section,
             ),
         }],
     )
@@ -632,7 +642,10 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
 def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                      sub_keywords: list[str] | None = None,
                      enable_fact_check: bool = True,
-                     target_length: int = 9000) -> dict:
+                     target_length: int = 9000,
+                     article_type: str = "longtail",
+                     asp_list: list[dict] | None = None,
+                     guide_links: dict | None = None) -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
@@ -643,6 +656,9 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
         sub_keywords: スプレッドシートのAIM未判定キーワード（任意活用）
         enable_fact_check: 事実確認ステップを実行するか（デフォルト: True）
         target_length: 目標文字数（9000/6000/3000）。H3本数・FAQ問数・max_tokensを自動調整
+        article_type: 記事タイプ（longtail/trend/monetize）
+        asp_list: ASP案件リスト（プロンプト注入用）
+        guide_links: 内部誘導リンク dict
 
     Returns:
         {title, meta_description, slug, image_prompt, category_id, category_name,
@@ -650,7 +666,9 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
     """
     return _build_article(keyword, volume, differentiation_note,
                           sub_keywords=sub_keywords, enable_fact_check=enable_fact_check,
-                          target_length=target_length)
+                          target_length=target_length,
+                          asp_list=asp_list,
+                          guide_links=guide_links)
 
 
 def generate_article_from_cluster(cluster: dict, sub_keywords: list[str] | None = None) -> dict:

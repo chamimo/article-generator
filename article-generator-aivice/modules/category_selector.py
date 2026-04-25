@@ -3,6 +3,7 @@
 
 スコアリング方式:
   カテゴリ名を語単位に分割し、keyword + article_title に含まれる語の長さを合算。
+  日本語(漢字・かな)は2文字以上、英数字混じりは3文字以上をマッチ対象とする。
   最高スコアのカテゴリを選択する。
 """
 import re
@@ -11,6 +12,9 @@ from modules import wp_context
 
 _category_cache: list[dict] | None = None
 EXCLUDE_IDS = {1, 1405, 1408}
+
+# 日本語文字（漢字・ひらがな・カタカナ）のみで構成される文字列を判定
+_JA_ONLY_RE = re.compile(r'^[぀-鿿]+$')
 
 
 def fetch_categories() -> list[dict]:
@@ -30,14 +34,19 @@ def fetch_categories() -> list[dict]:
     return _category_cache
 
 
+def _min_len(term: str) -> int:
+    """日本語のみなら2文字、英数字混じりは3文字を最低マッチ長とする。"""
+    return 2 if _JA_ONLY_RE.match(term) else 3
+
+
 def _score(keyword: str, article_title: str, category_name: str) -> int:
     """
     キーワード + 記事タイトルとカテゴリ名の一致スコアを返す。
 
     2方向マッチ:
-      方向1: カテゴリ名の語（>=3文字）がテキストに含まれる → len*2点
-      方向2: テキストの語（>=3文字）がカテゴリ名に含まれる → len点
-    長い語が一致するほど高得点。2文字の曖昧マッチ（"ai"など）を防ぐ。
+      方向1: カテゴリ名の語がテキストに含まれる → len*2点
+      方向2: テキストの語がカテゴリ名に含まれる → len点
+    日本語(漢字・かな)は2文字以上、英数字混じりは3文字以上をマッチ対象とする。
     """
     text = f"{keyword} {article_title}".lower()
     cat  = category_name.lower()
@@ -45,11 +54,11 @@ def _score(keyword: str, article_title: str, category_name: str) -> int:
     score = 0
     # 方向1: カテゴリ側の語がテキストに含まれる
     for term in re.split(r'[・/（）()\s　]+', cat):
-        if len(term) >= 3 and term in text:
+        if len(term) >= _min_len(term) and term in text:
             score += len(term) * 2
     # 方向2: テキスト側の語がカテゴリ名に含まれる
-    for word in re.split(r'[\s\u3000]+', text):
-        if len(word) >= 3 and word in cat:
+    for word in re.split(r'[\s　]+', text):
+        if len(word) >= _min_len(word) and word in cat:
             score += len(word)
     return score
 
@@ -78,7 +87,14 @@ def select_category(keyword: str, article_title: str = "") -> int:
     best_score = _score(keyword, article_title, best["name"])
 
     if best_score == 0:
-        # スコアゼロ（完全不一致）→ 記事数が最も多いカテゴリをフォールバックとして使用
+        # スコアゼロ（完全不一致）→ blog_config の default_fallback_category を優先
+        fallback_name = wp_context.get_default_fallback_category()
+        if fallback_name:
+            named = next((c for c in candidates if c["name"] == fallback_name), None)
+            if named:
+                print(f"[category_selector] 「{keyword}」→ マッチなし、設定フォールバック: {named['name']}({named['id']})")
+                return named["id"]
+        # 設定がない・見つからない場合は記事数最多カテゴリ
         fallback = max(candidates, key=lambda c: c.get("count", 0))
         print(f"[category_selector] 「{keyword}」→ マッチなし、フォールバック: {fallback['name']}({fallback['id']})")
         return fallback["id"]

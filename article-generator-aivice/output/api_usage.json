@@ -2389,6 +2389,36 @@
       "output_tokens": 8691,
       "cost_usd": 0.145263,
       "label": "article:claude code 使い方 windows"
+    },
+    {
+      "timestamp": "2026-04-25T01:32:25.453092+00:00",
+      "date": "2026-04-25",
+      "hour": "2026-04-25T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 95,
+      "cost_usd": 0.00047,
+      "label": "lsi:AIスキル 就職 支援サービス"
+    },
+    {
+      "timestamp": "2026-04-25T01:32:28.615267+00:00",
+      "date": "2026-04-25",
+      "hour": "2026-04-25T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 402,
+      "cost_usd": 0.001751,
+      "label": "kw_research:AIスキル 就職 支援サービス"
+    },
+    {
+      "timestamp": "2026-04-25T01:34:39.690177+00:00",
+      "date": "2026-04-25",
+      "hour": "2026-04-25T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5698,
+      "output_tokens": 10210,
+      "cost_usd": 0.170244,
+      "label": "article:AIスキル 就職 支援サービス"
     }
   ],
   "events": [

@@ -400,8 +400,11 @@ def create_post(article: dict, featured_media_id: int | None = None) -> dict:
             "rank_math_title":       article.get("seo_title") or article.get("title", ""),
             "rank_math_description": article.get("meta_description", ""),
             # OGP / その他
-            "ssp_meta_ogimage_url":  article.get("eyecatch_url", ""),
-            "imagefx_prompt":        article.get("imagefx_prompt", ""),
+            "ssp_meta_ogimage_url":      article.get("eyecatch_url", ""),
+            "imagefx_prompt":            article.get("imagefx_prompt", ""),
+            # SWELL アイキャッチ注釈（要 Code Snippets スニペット）
+            "swell_meta_thumb_caption":      article.get("title", ""),   # SWELL〜2.15
+            "_swell_post_eye_catch_caption": article.get("title", ""),   # SWELL 2.16+
         },
     }
     if tag_ids:
