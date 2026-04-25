@@ -339,6 +339,66 @@
       "output_tokens": 10085,
       "cost_usd": 0.169656,
       "label": "article:節約 スロたか"
+    },
+    {
+      "timestamp": "2026-04-24T21:44:18.148235+00:00",
+      "date": "2026-04-24",
+      "hour": "2026-04-24T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 106,
+      "output_tokens": 75,
+      "cost_usd": 0.000385,
+      "label": "lsi:節約 スロたか"
+    },
+    {
+      "timestamp": "2026-04-24T21:44:21.668659+00:00",
+      "date": "2026-04-24",
+      "hour": "2026-04-24T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 173,
+      "output_tokens": 518,
+      "cost_usd": 0.00221,
+      "label": "kw_research:節約 スロたか"
+    },
+    {
+      "timestamp": "2026-04-24T21:46:37.825959+00:00",
+      "date": "2026-04-24",
+      "hour": "2026-04-24T21",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6252,
+      "output_tokens": 9784,
+      "cost_usd": 0.165516,
+      "label": "article:節約 スロたか"
+    },
+    {
+      "timestamp": "2026-04-25T00:26:38.250930+00:00",
+      "date": "2026-04-25",
+      "hour": "2026-04-25T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 105,
+      "output_tokens": 108,
+      "cost_usd": 0.000516,
+      "label": "lsi:節約術 食費"
+    },
+    {
+      "timestamp": "2026-04-25T00:26:42.275185+00:00",
+      "date": "2026-04-25",
+      "hour": "2026-04-25T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 172,
+      "output_tokens": 484,
+      "cost_usd": 0.002074,
+      "label": "kw_research:節約術 食費"
+    },
+    {
+      "timestamp": "2026-04-25T00:29:31.814540+00:00",
+      "date": "2026-04-25",
+      "hour": "2026-04-25T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6258,
+      "output_tokens": 11943,
+      "cost_usd": 0.197919,
+      "label": "article:節約術 食費"
     }
   ],
   "events": [
@@ -349,6 +409,11 @@
     },
     {
       "timestamp": "2026-04-24T13:03:23.721356+00:00",
+      "type": "global_daily_limit",
+      "message": "[api_guard] 🛑 全体日次コスト上限: 本日合計 $2.0577 (¥309) >= $2.00 (¥300)\n  翌日（UTC）にリセットされます。"
+    },
+    {
+      "timestamp": "2026-04-24T20:51:51.496822+00:00",
       "type": "global_daily_limit",
       "message": "[api_guard] 🛑 全体日次コスト上限: 本日合計 $2.0577 (¥309) >= $2.00 (¥300)\n  翌日（UTC）にリセットされます。"
     }

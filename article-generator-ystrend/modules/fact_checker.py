@@ -5,11 +5,13 @@
 確認済み情報のみを記事に使用し、不確かな情報は表現を和らげる指示を生成する。
 """
 import json
+import logging
 import re
 import anthropic
 from config import ANTHROPIC_API_KEY
 
 _client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+_log = logging.getLogger(__name__)
 
 # 事実確認が必要な記事を示すパターン
 _NEEDS_CHECK_RE = re.compile(
@@ -23,10 +25,62 @@ _BRAND_RE = re.compile(
     r'([A-Za-z][A-Za-z0-9\s\-\.]{1,30}|[ァ-ヶー]{3,15})',
 )
 
+# ── 人物・YouTuber 検出 ────────────────────────────────────────────
+
+# 人物を示す文脈語（キーワード中に含まれる場合）
+_PERSON_CONTEXT_RE = re.compile(
+    r'(本名|年齢|年収|彼女|彼氏|結婚|炎上|素顔|顔バレ|身長|出身|学歴'
+    r'|プロフィール|wiki|チャンネル|登録者|ユーチューバー|YouTuber'
+    r'|インフルエンサー|芸能人|俳優|女優|アイドル|歌手|タレント'
+    r'|実況者|配信者|ストリーマー)',
+    re.IGNORECASE,
+)
+
+# ひらがなで終わる名前読みパターン（よくある人名語尾）
+# 「節約スロ + たか」のように、語の末尾がひらがな1〜3文字の名前読み
+_PERSON_NAME_END_RE = re.compile(
+    r'(?<=[^\s])'  # 先頭でない
+    r'(たか|けん|ゆう|りょう|あき|なお|まさ|ひろ|じん|しん|かい|はる|ゆき'
+    r'|そう|てつ|こう|りく|いく|ゆうき|こうき|だいき|たいき|けいた|しょう'
+    r'|のり|かず|みき|さき|えみ|まい|なな|りな|もも|はな|ちか|みお|るな'
+    r'|みか|ゆあ|りこ|あゆ|かほ|ひな|れな|あいか|せな|ことね|こはる'
+    r'|あおい|つばさ|ひかり|そら|ゆめ|こころ|のあ)$',
+    re.IGNORECASE,
+)
+
+# 人物記事プロンプト注入テキスト
+PERSON_ARTICLE_INSTRUCTION = """\
+## 重要：人物・チャンネル名キーワードの注意事項
+このキーワードはYouTuber・インフルエンサー・有名人・チャンネル名の可能性があります。
+- 「やり方・コツ・手法」として解説する記事にしない
+- 人物紹介・プロフィール・活動内容を中心とした記事として構成すること
+- 取り上げるべき内容：チャンネル概要・活動歴・代表コンテンツ・人物の素顔・ファンの声など
+- 具体的な数字（登録者数・年収など）は確認できない場合は「〜とされています」と柔らかく表現すること
+"""
+
 
 def needs_fact_check(keyword: str) -> bool:
     """製品・企業情報を含む記事かどうかを判定する。"""
     return bool(_NEEDS_CHECK_RE.search(keyword))
+
+
+def detect_person_keyword(keyword: str) -> bool:
+    """
+    キーワードが人名・YouTuber・チャンネル名を指しているか判定する。
+    API呼び出しなし・regexのみ。
+
+    検出できなかったケース（False）は INFO ログに記録する。
+    漏れを発見したら _PERSON_NAME_END_RE または _PERSON_CONTEXT_RE を拡張すること。
+    """
+    kw = keyword.strip()
+    detected = bool(_PERSON_CONTEXT_RE.search(kw)) or bool(_PERSON_NAME_END_RE.search(kw))
+
+    if detected:
+        _log.info(f"[person_detect] ✅ 人物キーワード検出: 「{kw}」→ 人物記事として生成")
+    else:
+        _log.info(f"[person_detect] — 未検出: 「{kw}」（人名・チャンネル名なら報告を）")
+
+    return detected
 
 
 def check_facts(keyword: str, article_theme: str = "") -> dict:

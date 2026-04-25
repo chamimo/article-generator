@@ -1155,6 +1155,7 @@ def post(article: dict, dry_run: bool = False,
             candidate_sheet=blog_cfg.candidate_sheet,
             image_style=blog_cfg.image_style,
             asp_ss_id=blog_cfg.asp_ss_id,
+            default_fallback_category=blog_cfg.extra.get("default_fallback_category", ""),
             blog_meta={
                 "site_purpose":  blog_cfg.site_purpose,
                 "target":        blog_cfg.target,

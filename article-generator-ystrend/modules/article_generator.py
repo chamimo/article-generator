@@ -5,7 +5,7 @@ import json
 import anthropic
 from config import ANTHROPIC_API_KEY
 from modules.image_generator import generate_imagefx_prompt
-from modules.fact_checker import needs_fact_check, check_facts
+from modules.fact_checker import needs_fact_check, check_facts, detect_person_keyword, PERSON_ARTICLE_INSTRUCTION
 from modules.api_guard import check_stop, record_usage
 
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
@@ -429,7 +429,7 @@ USER_PROMPT_TEMPLATE = """\
 
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{plaud_notta_section}{asp_section}
+{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{asp_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
@@ -474,6 +474,9 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
           + (" ※PLAUD/Notta優先" if use_plaud_notta else ""))
 
     # ── 事実確認ステップ（製品・企業情報を含む記事のみ）──
+    # 人物・YouTuber 検出
+    person_section = PERSON_ARTICLE_INSTRUCTION + "\n" if detect_person_keyword(keyword) else ""
+
     fact_check_section = ""
     if enable_fact_check and needs_fact_check(keyword):
         print(f"[article_generator] 事実確認中: 「{keyword}」")
@@ -576,6 +579,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                 sub_keywords_section=sub_keywords_section,
                 differentiation_section=diff_section,
                 fact_check_section=fact_check_section,
+                person_section=person_section,
                 plaud_notta_section=plaud_notta_section,
                 asp_section=asp_section,
             ),
