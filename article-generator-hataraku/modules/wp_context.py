@@ -149,3 +149,8 @@ def _clear_caches() -> None:
         _su._active_ss_id_cache = None
     except Exception:
         pass
+    try:
+        import modules.testimonial_fetcher as _tf
+        _tf.clear_cache()
+    except Exception:
+        pass

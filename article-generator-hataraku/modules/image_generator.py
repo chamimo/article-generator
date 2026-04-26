@@ -325,7 +325,7 @@ def generate_h2_image(h2_title: str, keyword: str = "") -> bytes:
     return _call_flux(full_prompt, W_EYECATCH, H_EYECATCH)
 
 
-def generate_image_for_article(keyword: str, article_theme: str = "") -> bytes:
+def generate_image_for_article(keyword: str, article_theme: str = "", article_type: str = "", **kwargs) -> bytes:
     """後方互換エイリアス（アイキャッチ生成）。"""
     return generate_eyecatch_image(keyword, article_theme)
 

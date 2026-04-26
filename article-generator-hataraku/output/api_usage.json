@@ -2759,6 +2759,96 @@
       "output_tokens": 10500,
       "cost_usd": 0.171795,
       "label": "article:web デザイナー 転職 エージェント"
+    },
+    {
+      "timestamp": "2026-04-26T00:21:15.394520+00:00",
+      "date": "2026-04-26",
+      "hour": "2026-04-26T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 105,
+      "output_tokens": 80,
+      "cost_usd": 0.000404,
+      "label": "lsi:FREENANCE 評判"
+    },
+    {
+      "timestamp": "2026-04-26T00:21:19.084621+00:00",
+      "date": "2026-04-26",
+      "hour": "2026-04-26T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 172,
+      "output_tokens": 503,
+      "cost_usd": 0.00215,
+      "label": "kw_research:FREENANCE 評判"
+    },
+    {
+      "timestamp": "2026-04-26T00:22:23.642930+00:00",
+      "date": "2026-04-26",
+      "hour": "2026-04-26T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 135,
+      "cost_usd": 0.000628,
+      "label": "lsi:仕事 できない人 特徴"
+    },
+    {
+      "timestamp": "2026-04-26T00:22:27.003642+00:00",
+      "date": "2026-04-26",
+      "hour": "2026-04-26T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 514,
+      "cost_usd": 0.002198,
+      "label": "kw_research:仕事 できない人 特徴"
+    },
+    {
+      "timestamp": "2026-04-26T00:23:45.333945+00:00",
+      "date": "2026-04-26",
+      "hour": "2026-04-26T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6471,
+      "output_tokens": 9575,
+      "cost_usd": 0.163038,
+      "label": "article:FREENANCE 評判"
+    },
+    {
+      "timestamp": "2026-04-26T00:24:54.438911+00:00",
+      "date": "2026-04-26",
+      "hour": "2026-04-26T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5339,
+      "output_tokens": 9447,
+      "cost_usd": 0.157722,
+      "label": "article:仕事 できない人 特徴"
+    },
+    {
+      "timestamp": "2026-04-26T00:25:10.292261+00:00",
+      "date": "2026-04-26",
+      "hour": "2026-04-26T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 130,
+      "cost_usd": 0.000606,
+      "label": "lsi:ウズウズIT 評判"
+    },
+    {
+      "timestamp": "2026-04-26T00:25:13.897902+00:00",
+      "date": "2026-04-26",
+      "hour": "2026-04-26T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 533,
+      "cost_usd": 0.002272,
+      "label": "kw_research:ウズウズIT 評判"
+    },
+    {
+      "timestamp": "2026-04-26T00:27:48.383914+00:00",
+      "date": "2026-04-26",
+      "hour": "2026-04-26T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6708,
+      "output_tokens": 9880,
+      "cost_usd": 0.168324,
+      "label": "article:ウズウズIT 評判"
     }
   ],
   "events": [

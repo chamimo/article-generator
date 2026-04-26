@@ -439,6 +439,129 @@ def mark_cannibal_results_bulk(
         print(f"[sheets_updater] 一括書き込みエラー（続行）: {e}")
 
 
+def mark_kanikabari_results_new_format(
+    results: list[dict],
+    ws: gspread.Worksheet,
+) -> None:
+    """
+    新フォーマットシートにかにばり判定結果を一括書き込みする。
+
+    results の各要素:
+        {"keyword": str, "row": int,
+         "hantei":    "親KW"|"サブKW"|"カニバリスキップ"|"要確認",
+         "togo_saki": str,   # 統合先KW または WP記事タイトル
+         "status":   "生成待ち"|"統合対象"|"カニバリスキップ"|"要確認",
+         "memo":     str,
+         "wp_url":   str,    # 既存WP記事 URL（なければ ""）
+         "wp_id":    str,    # 既存WP記事 ID（なければ ""）
+        }
+
+    書き込み先列（ヘッダー名で検索、なければ末尾に自動追加）:
+        判定 / 統合先KW / ステータス / メモ / 既存記事URL / 既存記事ID
+
+    色凡例:
+        生成待ち        = 薄イエロー  (1.0, 1.0, 0.6)
+        統合対象        = 薄オレンジ  (1.0, 0.8, 0.6)
+        カニバリスキップ = 薄グレー   (0.85, 0.85, 0.85)
+        要確認          = 薄ブルー   (0.8, 0.9, 1.0)
+    """
+    import time
+
+    if not results:
+        print("[sheets_updater] かにばり: 書き込み対象なし")
+        return
+
+    header_row: list[str] = ws.row_values(1)
+
+    def _find_col(names: list[str]) -> int:
+        """複数候補名でヘッダーを検索し、1-based 列番号を返す。なければ -1。"""
+        for name in names:
+            if name in header_row:
+                return header_row.index(name) + 1
+        return -1
+
+    def _ensure_col(col_name: str) -> int:
+        """列がなければ末尾に追加して 1-based 列番号を返す。"""
+        if col_name in header_row:
+            return header_row.index(col_name) + 1
+        new_col = len(header_row) + 1
+        ws.update_cell(1, new_col, col_name)
+        header_row.append(col_name)
+        time.sleep(0.5)
+        return new_col
+
+    c_hantei    = _find_col(["判定"])
+    c_togo_saki = _find_col(["統合先KW"])
+    c_status    = _find_col(["ステータス"])
+    c_memo      = _find_col(["メモ"])
+    c_wp_url    = _ensure_col("既存記事URL")
+    c_wp_id     = _ensure_col("既存記事ID")
+
+    if c_hantei < 0:
+        print("[sheets_updater] かにばり: 「判定」列が見つかりません")
+        return
+
+    cell_updates:  list[gspread.Cell] = []
+    color_requests: list[dict]        = []
+
+    for r in results:
+        row_num   = r["row"]
+        hantei    = r.get("hantei",    "")
+        togo_saki = r.get("togo_saki", "")
+        status    = r.get("status",    "")
+        memo      = r.get("memo",      "")
+        wp_url    = r.get("wp_url",    "")
+        wp_id     = r.get("wp_id",     "")
+
+        if c_hantei    > 0 and hantei:    cell_updates.append(gspread.Cell(row_num, c_hantei,    hantei))
+        if c_togo_saki > 0 and togo_saki: cell_updates.append(gspread.Cell(row_num, c_togo_saki, togo_saki))
+        if c_status    > 0 and status:    cell_updates.append(gspread.Cell(row_num, c_status,    status))
+        if c_memo      > 0 and memo:      cell_updates.append(gspread.Cell(row_num, c_memo,      memo))
+        if c_wp_url    > 0 and wp_url:    cell_updates.append(gspread.Cell(row_num, c_wp_url,    wp_url))
+        if c_wp_id     > 0 and wp_id:     cell_updates.append(gspread.Cell(row_num, c_wp_id,     wp_id))
+
+        # 背景色
+        if status == "生成待ち":
+            rc, gc_v, bc = 1.0,   1.0,   0.6    # 薄イエロー
+        elif status == "統合対象":
+            rc, gc_v, bc = 1.0,   0.8,   0.6    # 薄オレンジ
+        elif status == "カニバリスキップ":
+            rc, gc_v, bc = 0.85,  0.85,  0.85   # 薄グレー
+        elif status == "要確認":
+            rc, gc_v, bc = 0.8,   0.9,   1.0    # 薄ブルー
+        else:
+            rc, gc_v, bc = None, None, None
+
+        if rc is not None:
+            color_requests.append({
+                "repeatCell": {
+                    "range": {
+                        "sheetId":       ws.id,
+                        "startRowIndex": row_num - 1,
+                        "endRowIndex":   row_num,
+                    },
+                    "cell": {
+                        "userEnteredFormat": {
+                            "backgroundColor": {"red": rc, "green": gc_v, "blue": bc}
+                        }
+                    },
+                    "fields": "userEnteredFormat.backgroundColor",
+                }
+            })
+
+        print(f"[sheets_updater] {hantei}({status}): 行{row_num} 「{r.get('keyword', '')}」"
+              + (f" → WP/{wp_id}" if wp_id else ""))
+
+    if cell_updates:
+        ws.update_cells(cell_updates, value_input_option="USER_ENTERED")
+        time.sleep(1)
+
+    if color_requests:
+        ws.spreadsheet.batch_update({"requests": color_requests})
+
+    print(f"[sheets_updater] かにばり判定書き込み完了: {len(cell_updates)}セル更新 / {len(color_requests)}行に背景色適用")
+
+
 def mark_posted(
     keyword: str,
     post_id: int,
@@ -466,7 +589,12 @@ def mark_posted(
 
     try:
         ws = _get_worksheet()
-        col_map = _ensure_headers(ws)
+        # 新フォーマット（判定列あり）は固定列を使うため _ensure_headers 不要
+        _header_check = ws.row_values(1)
+        if "判定" in _header_check:
+            col_map = {}  # 新フォーマットでは使用しない
+        else:
+            col_map = _ensure_headers(ws)
         row = _find_keyword_row(ws, keyword)
 
         if row is None:
@@ -487,14 +615,33 @@ def mark_posted(
             )
             return False
 
-        sub_kw_str = "、".join(sub_keywords[:10])  # 最大10個
-        updates = [
-            gspread.Cell(row, col_map["投稿ステータス"], "投稿済み"),
-            gspread.Cell(row, col_map["投稿日"],         date_str),
-            gspread.Cell(row, col_map["記事URL"],        post_url),
-            gspread.Cell(row, col_map["投稿ID"],         str(post_id)),
-            gspread.Cell(row, col_map["使用サブKW"],     sub_kw_str),
-        ]
+        header_row = ws.row_values(1)
+        is_new_format = "判定" in header_row
+
+        if is_new_format:
+            # 新フォーマット: G=ステータス, I=投稿日, J=URL, K=ID（固定列名）
+            def _col(name: str) -> int:
+                return header_row.index(name) + 1 if name in header_row else -1
+            updates = []
+            c_status = _col("ステータス")
+            c_date   = _col("投稿日")
+            c_url    = _col("URL")
+            c_id     = _col("ID")
+            if c_status > 0: updates.append(gspread.Cell(row, c_status, "投稿済み"))
+            if c_date   > 0: updates.append(gspread.Cell(row, c_date,   date_str))
+            if c_url    > 0: updates.append(gspread.Cell(row, c_url,    post_url))
+            if c_id     > 0: updates.append(gspread.Cell(row, c_id,     str(post_id)))
+        else:
+            # 旧フォーマット: 動的ヘッダー
+            sub_kw_str = "、".join(sub_keywords[:10])
+            updates = [
+                gspread.Cell(row, col_map["投稿ステータス"], "投稿済み"),
+                gspread.Cell(row, col_map["投稿日"],         date_str),
+                gspread.Cell(row, col_map["記事URL"],        post_url),
+                gspread.Cell(row, col_map["投稿ID"],         str(post_id)),
+                gspread.Cell(row, col_map["使用サブKW"],     sub_kw_str),
+            ]
+
         ws.update_cells(updates, value_input_option="USER_ENTERED")
         _highlight_gray(ws, row)
 
