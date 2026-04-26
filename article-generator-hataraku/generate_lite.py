@@ -424,12 +424,15 @@ def fetch_candidates(
                 return header.index(name)
         return -1
 
-    kw_idx     = col(["キーワード", "Keyword"])
-    vol_idx    = col(["月間検索数", "検索ボリューム", "volume"])
-    seo_idx    = col(["SEO難易度", "seo_difficulty"])
-    comp_idx   = col(["競合性", "competition"])
-    aim_idx    = col(["aim", "AIM", "Aim"])
-    status_idx = col(["投稿ステータス", "ステータス", "status"])  # 投稿済み除外用
+    kw_idx        = col(["キーワード", "Keyword"])
+    vol_idx       = col(["月間検索数", "検索ボリューム", "volume"])
+    seo_idx       = col(["SEO難易度", "seo_difficulty"])
+    comp_idx      = col(["競合性", "competition"])
+    aim_idx       = col(["aim", "AIM", "Aim"])
+    status_idx    = col(["投稿ステータス", "ステータス", "status"])  # 投稿済み除外用
+    hantei_idx    = col(["判定"])       # D列: 親KW / サブKW （新フォーマット）
+    togo_saki_idx = col(["統合先KW"])   # E列: 統合先KW （新フォーマット）
+    is_new_format = hantei_idx >= 0    # 判定列の有無で新旧フォーマットを判別
 
     # aim列の値 → 優先度レベル（高いほど先に評価）
     _AIM_PRIORITY = {"now": 4, "future": 3, "monetize": 2, "aim": 1, "add": 1}
@@ -446,6 +449,9 @@ def fetch_candidates(
 
     candidates: list[dict] = []   # メインKW（vol>=30 or N/A）
     sub_keywords: list[str] = []  # サブKW（vol<30）→ 記事本文に盛り込む
+    n_posted_skip = 0             # 投稿済みスキップ件数（ログ用）
+    sub_kws_map: dict[str, list[str]] = {}  # 親KW → サブKWリスト（新フォーマット専用）
+    n_sub_kw_skip = 0             # サブKW除外件数（新フォーマット）
 
     for row in rows[1:]:
         def cell(i: int) -> str:
@@ -457,13 +463,32 @@ def fetch_candidates(
         seo  = to_int(cell(seo_idx))
         comp = to_int(cell(comp_idx))
         aim  = cell(aim_idx).lower().strip() if aim_idx >= 0 else ""
-        post_status = cell(status_idx).strip() if status_idx >= 0 else ""
+        post_status  = cell(status_idx).strip()    if status_idx    >= 0 else ""
+        hantei       = cell(hantei_idx).strip()    if hantei_idx    >= 0 else ""
+        togo_saki    = cell(togo_saki_idx).strip() if togo_saki_idx >= 0 else ""
 
         if not kw:
             continue
 
-        # 投稿済みキーワードはスキップ
+        # ── 新フォーマット（判定列あり）専用処理 ──────────────────────
+        if is_new_format:
+            # AIM列が "AIM" / "aim" の行のみ対象
+            if aim != "aim":
+                continue
+            # サブKW行：記事生成しない → 統合先KWに紐付けて蓄積
+            if hantei == "サブKW":
+                if togo_saki:
+                    sub_kws_map.setdefault(togo_saki, []).append(kw)
+                n_sub_kw_skip += 1
+                continue
+            # 要確認・統合対象はスキップ（人間の確認待ち or かにばり統合済み）
+            if hantei == "要確認" or post_status in ("統合対象",):
+                n_posted_skip += 1
+                continue
+
+        # 投稿済みキーワードはスキップ（新旧共通）
         if post_status in ("投稿済み", "カニバリスキップ"):
+            n_posted_skip += 1
             continue
 
         # vol=N/A（None）はメイン扱い、明示的な数値は30以上のみメイン
@@ -471,7 +496,7 @@ def fetch_candidates(
         vol_int = vol if vol is not None else 0
 
         if not is_main:
-            # vol<30 → サブKWとして収集（min_vol チェック不要）
+            # vol<30 → サブKWとして収集（旧フォーマット用）
             sub_keywords.append(kw)
             continue
 
@@ -483,10 +508,17 @@ def fetch_candidates(
             "volume":          vol_int,
             "seo_difficulty":  seo,
             "competition":     comp,
-            "priority":        aim == "now",                    # 後方互換
-            "_aim":            aim,                              # aim列の生値
-            "_priority_level": _AIM_PRIORITY.get(aim, 0),      # 優先度スコア
+            "priority":        aim == "now",
+            "_aim":            aim,
+            "_priority_level": _AIM_PRIORITY.get(aim, 0),
         })
+
+    # 新フォーマット: 各候補にサブKWを直接紐付け
+    if is_new_format:
+        for c in candidates:
+            c["_sub_kws"] = sub_kws_map.get(c["keyword"], [])
+        if sub_kws_map:
+            log.info(f"[fetch] サブKW紐付け: {sum(len(v) for v in sub_kws_map.values())}件 → {len([c for c in candidates if c.get('_sub_kws')])}記事に統合")
 
     # aim優先度の内訳をログに出す
     aim_counts: dict[str, int] = {}
@@ -522,7 +554,9 @@ def fetch_candidates(
 
     log.info(
         f"[fetch] [{sheet}] メインKW: {len(candidates)}件（vol≥{MAIN_VOL_THRESHOLD} or N/A）"
-        f"  サブKW: {len(sub_keywords)}件（vol<{MAIN_VOL_THRESHOLD}）"
+        + (f"  サブKW除外: {n_sub_kw_skip}件（統合対象）" if n_sub_kw_skip else
+           f"  サブKW: {len(sub_keywords)}件（vol<{MAIN_VOL_THRESHOLD}）")
+        + (f"  投稿済みスキップ: {n_posted_skip}件" if n_posted_skip else "")
         + (f"  テーマ外除外: {filtered_out}件" if filtered_out else "")
         + (f"  aim内訳: [{aim_summary}]" if aim_summary else "")
     )
@@ -552,7 +586,7 @@ def fetch_wp_posts(blog_cfg: BlogConfig | None = None) -> list[dict]:
     endpoint = f"{base}/wp-json/wp/v2/posts"
     params: dict = {
         "status":   "publish,draft,private",  # ゴミ箱以外を全て取得
-        "_fields":  "id,title,date,slug,status",
+        "_fields":  "id,title,date,slug,status,link",
         "per_page": 100,
         "page":     1,
     }
@@ -573,6 +607,7 @@ def fetch_wp_posts(blog_cfg: BlogConfig | None = None) -> list[dict]:
                 "slug":   p.get("slug", ""),
                 "date":   p.get("date", ""),
                 "status": p.get("status", ""),
+                "link":   p.get("link", ""),
             })
         total_pages = int(resp.headers.get("X-WP-TotalPages", 1))
         if params["page"] >= total_pages:
@@ -1371,12 +1406,15 @@ def run_blog(
         }
 
         try:
-            # メインKWに関連するサブKWを抽出して記事本文に盛り込む
-            kw_core = _extract_core_keyword(chosen["keyword"].lower(), stop_words)
-            related_sub = [
-                s for s in sub_keywords
-                if kw_core and kw_core in s.lower()
-            ][:20]  # 最大20件まで渡す
+            # サブKWを取得（新フォーマット: _sub_kws、旧フォーマット: fuzzyマッチ）
+            if "_sub_kws" in chosen:
+                related_sub = chosen["_sub_kws"][:20]  # 新フォーマット: 紐付け済みサブKW
+            else:
+                kw_core = _extract_core_keyword(chosen["keyword"].lower(), stop_words)
+                related_sub = [
+                    s for s in sub_keywords
+                    if kw_core and kw_core in s.lower()
+                ][:20]
 
             article     = generate(chosen["keyword"], chosen["volume"],
                                    blog_cfg=blog_cfg, sub_keywords=related_sub or None,
@@ -1399,6 +1437,16 @@ def run_blog(
                     )
 
             post_result = post(article, dry_run=dry_run, blog_cfg=blog_cfg, asp_list=asp_list)
+
+            # 投稿成功後にメモリ内 wp_posts を更新（同セッション内の重複防止）
+            if wp_posts is not None:
+                wp_posts.append({
+                    "id":     post_result.get("id", 0),
+                    "title":  article["title"],
+                    "slug":   "",
+                    "date":   datetime.now().isoformat(),
+                    "status": blog_cfg.wp_post_status,
+                })
 
             item.update({
                 "status":      post_result["status"],
@@ -1442,6 +1490,619 @@ def run_blog(
 
 
 # ═══════════════════════════════════════════════════════════════
+# KANIKABARI CHECK（--kanikabari モード）
+# ─────────────────────────────────────────────────────────────
+# シート内キーワード間クラスタリング + WP既存記事との重複判定を行い、
+# D列(判定)・E列(統合先KW)・G列(ステータス)に結果を書き込む。
+# ─────────────────────────────────────────────────────────────
+INTRA_CLUSTER_THRESHOLD       = 0.20  # シート内 Jaccard 閾値
+KANIKABARI_WP_SKIP_HIGH       = 0.55  # ほぼ同一タイトル → カニバリスキップ
+KANIKABARI_WP_SKIP_MED        = 0.35  # 意図一致・高類似 → カニバリスキップ
+KANIKABARI_WP_TOGO_THRESH     = 0.25  # 意図一致・中類似 → 統合対象（追記）
+KANIKABARI_WP_REVIEW_THRESH   = 0.20  # 弱類似・意図曖昧 → 要確認
+
+# 末尾修飾語（検索意図の主軸ではない語）— ベースKW抽出時に除去する
+_BASE_KW_MODIFIERS: frozenset[str] = frozenset({
+    # 方法・手順系
+    "方法", "やり方", "仕方", "手順", "手続き", "手続",
+    "始め方", "辞め方", "やめ方", "選び方", "使い方", "作り方",
+    "書き方", "読み方", "聞き方", "伝え方", "話し方", "見つけ方",
+    # 評価・口コミ系
+    "相場", "口コミ", "評判", "レビュー", "評価", "体験談", "感想",
+    # 解説系
+    "とは", "解説", "まとめ", "ガイド", "一覧", "比較", "違い", "特徴",
+    # 理由・原因系
+    "理由", "原因", "なぜ", "なんで",
+    # 注意・ポイント系
+    "注意点", "注意", "ポイント", "コツ", "デメリット", "メリット", "問題",
+    # 解決系
+    "解決策", "対処法", "対処", "解決", "改善方法", "改善",
+    # ランキング・おすすめ系
+    "ランキング", "おすすめ", "人気",
+    # 費用・料金系
+    "手数料", "料金", "費用", "値段", "価格",
+})
+
+# 末尾サフィックス（これで終わるトークンは修飾語扱い）
+_BASE_KW_MODIFIER_SUFFIXES: tuple[str, ...] = (
+    "たくない", "できない", "わからない", "づらい", "にくい",
+    "すぎる", "すぎ", "したい", "したくない",
+)
+
+# ③ 検索意図カテゴリ — 同一主語でも意図が異なれば別クラスター確定
+_INTENT_CATEGORIES: dict[str, frozenset[str]] = {
+    "基礎":  frozenset({"とは", "わかりやすく", "初心者", "入門", "基礎", "基本"}),
+    "方法":  frozenset({"やり方", "仕方", "手順", "手続", "手続き", "始め方", "手法"}),
+    "評判":  frozenset({"評判", "口コミ", "レビュー", "体験談", "感想", "評価"}),
+    "比較":  frozenset({"比較", "おすすめ", "ランキング", "一覧", "まとめ", "違い", "選び方"}),
+    "税務":  frozenset({"税金", "確定申告", "申告", "課税", "納税", "etax", "e-tax",
+                        "源泉徴収", "雑所得", "分離課税", "累進課税"}),
+}
+
+# ① 複数サービス横断KW（ブランドをまたいで統合してよい）
+_MULTI_SERVICE_MARKERS: frozenset[str] = frozenset({
+    "おすすめ", "比較", "ランキング", "一覧", "まとめ",
+})
+
+
+def _extract_intent(keyword: str) -> str | None:
+    """検索意図カテゴリを返す。該当なしはNone。"""
+    import unicodedata
+    tokens = set(unicodedata.normalize("NFKC", keyword).lower().split())
+    for intent, markers in _INTENT_CATEGORIES.items():
+        if tokens & markers:
+            return intent
+    return None
+
+
+def _ascii_brand(keyword: str) -> str | None:
+    """先頭の純ASCII英字トークン（3文字以上）= ブランド名候補。該当なしはNone。"""
+    import re, unicodedata
+    parts = unicodedata.normalize("NFKC", keyword).lower().split()
+    if parts and re.fullmatch(r'[a-z]{3,}', parts[0]):
+        return parts[0]
+    return None
+
+
+def _kani_jaccard(a: str, b: str) -> float:
+    """bigram Jaccard（大文字小文字・記号を正規化）"""
+    import re, unicodedata
+    def norm(s: str) -> str:
+        s = unicodedata.normalize("NFKC", s).lower()
+        return re.sub(r'[！-／：-＠【】「」『』（）・\s　]+', ' ', s).strip()
+    def bigrams(s: str) -> set[str]:
+        return {s[i:i+2] for i in range(len(s) - 1)} if len(s) >= 2 else set(s)
+    na, nb = norm(a), norm(b)
+    ba, bb = bigrams(na), bigrams(nb)
+    if not ba and not bb: return 1.0
+    if not ba or not bb:  return 0.0
+    return len(ba & bb) / len(ba | bb)
+
+
+def _kani_shared_tokens(a: str, b: str) -> int:
+    """スペース区切りトークンの共有数（2文字以上のトークンのみ）"""
+    import unicodedata
+    def tokens(s: str) -> set[str]:
+        return {t for t in unicodedata.normalize("NFKC", s).lower().split() if len(t) >= 2}
+    return len(tokens(a) & tokens(b))
+
+
+def _extract_base_kw(keyword: str) -> str:
+    """
+    キーワードから主語（ベースKW）を抽出する。
+
+    1. 末尾から修飾語を除去（_BASE_KW_MODIFIERS / _BASE_KW_MODIFIER_SUFFIXES に一致する間）
+    2. 残りトークンが 3語以上なら先頭 2語に絞る
+
+    例:
+        "ダンボール 買取 相場"  → "ダンボール 買取"
+        "転職 初日 注意点"      → "転職 初日"
+        "仕事 行きたくない"     → "仕事"
+    """
+    import unicodedata
+    tokens = unicodedata.normalize("NFKC", keyword).lower().split()
+    if not tokens:
+        return keyword.lower()
+
+    while len(tokens) > 1:
+        tail = tokens[-1]
+        if tail in _BASE_KW_MODIFIERS:
+            tokens.pop()
+        elif any(tail.endswith(suf) for suf in _BASE_KW_MODIFIER_SUFFIXES):
+            tokens.pop()
+        else:
+            break
+
+    if len(tokens) >= 3:
+        tokens = tokens[:2]
+
+    return " ".join(tokens)
+
+
+def _cluster_keywords_intra(kws: list[dict]) -> list[dict]:
+    """
+    グリーディークラスタリングで 親KW / サブKW を決定する。
+
+    volume 降順にソートし、未割り当てのキーワードを順に 親KW として確定。
+    判定ルール（上から優先）:
+      ③ 検索意図（とは/方法/評判/比較/税務）が双方に存在しかつ異なる → 統合しない（別クラスター）
+      1. ベースKW完全一致
+      2. ベースKW部分一致（どちらかが他方を含む）
+      3/4. bigram Jaccard >= 0.20 または 共有トークン >= 2語
+           ① ブランド競合（異なるASCII英字ブランド）→ 要確認
+           ④ 広ジャンル過剰統合（先頭トークン共有のみ・Jaccard < 0.35）→ 要確認
+      ② 1語ベースで補助条件なし → 要確認（既存ルール）
+
+    Returns:
+        [{"main": dict, "subs": [dict, ...]}, ...]
+        各 sub dict に "_cluster_reason" / "_cluster_confidence" キーを付与（ログ用）
+    """
+    import unicodedata
+    sorted_kws = sorted(kws, key=lambda x: -x.get("volume", 0))
+    for kw in sorted_kws:
+        kw["_base"] = _extract_base_kw(kw["keyword"])
+
+    def kw_tokens(kw: str) -> set[str]:
+        return set(unicodedata.normalize("NFKC", kw).lower().split())
+
+    assigned: set[int] = set()
+    clusters: list[dict] = []
+
+    for i, main_cand in enumerate(sorted_kws):
+        if i in assigned:
+            continue
+        cluster: dict = {"main": main_cand, "subs": []}
+        assigned.add(i)
+        main_base          = main_cand["_base"]
+        main_base_toks     = main_base.split()
+        main_base_is_single = len(main_base_toks) == 1
+        main_intent        = _extract_intent(main_cand["keyword"])
+        main_brand         = _ascii_brand(main_cand["keyword"])
+        main_is_multi      = bool(kw_tokens(main_cand["keyword"]) & _MULTI_SERVICE_MARKERS)
+
+        for j, other in enumerate(sorted_kws):
+            if j in assigned:
+                continue
+            other_base      = other["_base"]
+            other_base_toks = other_base.split()
+            other_intent    = _extract_intent(other["keyword"])
+
+            # ③ 検索意図が双方に明示されかつ異なる → 別クラスター確定（統合しない）
+            if main_intent and other_intent and main_intent != other_intent:
+                continue
+
+            sim    = _kani_jaccard(main_cand["keyword"], other["keyword"])
+            shared = _kani_shared_tokens(main_cand["keyword"], other["keyword"])
+            aux_ok = sim >= INTRA_CLUSTER_THRESHOLD or shared >= 2
+
+            reason:     str | None = None
+            confidence: str        = "strong"
+
+            # 1. ベースKW完全一致（最優先）
+            if main_base and other_base and main_base == other_base:
+                if main_base_is_single and not aux_ok:
+                    reason     = f"ベースKW一致({main_base!r}) ※Jaccard={sim:.2f}/共有={shared}語"
+                    confidence = "weak"
+                else:
+                    reason = f"ベースKW一致({main_base!r})"
+
+            # 2. ベースKW部分一致
+            elif main_base and other_base and (
+                main_base in other_base or other_base in main_base
+            ):
+                if main_base_is_single and not aux_ok:
+                    reason     = f"ベースKW部分一致({main_base!r}↔{other_base!r}) ※Jaccard={sim:.2f}/共有={shared}語"
+                    confidence = "weak"
+                else:
+                    reason = f"ベースKW部分一致({main_base!r}↔{other_base!r})"
+
+            # 3/4. Jaccard / 共有トークン（ベースKW不一致 → 追加ガード適用）
+            elif sim >= INTRA_CLUSTER_THRESHOLD or shared >= 2:
+                other_brand    = _ascii_brand(other["keyword"])
+                other_is_multi = bool(kw_tokens(other["keyword"]) & _MULTI_SERVICE_MARKERS)
+
+                if (main_brand and other_brand
+                        and main_brand != other_brand
+                        and main_brand not in other_brand   # zozo / zozotown は同一
+                        and other_brand not in main_brand
+                        and not main_is_multi and not other_is_multi):
+                    # ① ブランド競合：異なるASCIIブランドはJaccardだけでは統合しない
+                    reason     = f"ブランド競合({main_brand!r}≠{other_brand!r}) Jaccard={sim:.2f}"
+                    confidence = "weak"
+
+                elif (len(main_base_toks) >= 2 and len(other_base_toks) >= 2
+                        and main_base_toks[0] == other_base_toks[0]
+                        and main_base != other_base
+                        and sim < 0.35):
+                    # ④ 広ジャンル過剰統合：先頭トークン共有のみでJaccard < 0.35
+                    reason     = f"広ジャンル({main_base_toks[0]!r}系) ベースKW相違 Jaccard={sim:.2f}"
+                    confidence = "weak"
+
+                elif sim >= INTRA_CLUSTER_THRESHOLD:
+                    reason = f"Jaccard={sim:.2f}"
+                else:
+                    reason = f"共有トークン={shared}語"
+
+            if reason is not None:
+                cluster["subs"].append({
+                    **other,
+                    "_cluster_reason":     reason,
+                    "_cluster_confidence": confidence,
+                })
+                assigned.add(j)
+
+        clusters.append(cluster)
+
+    return clusters
+
+
+# WP verdict priority (high=skip > togo > review > ok=0)
+_WP_VERDICT_RANK: dict[str, int] = {"skip": 3, "togo": 2, "review": 1, "ok": 0}
+
+
+def _classify_vs_wp(keyword: str, wp_articles: list[dict]) -> dict:
+    """
+    KW と WP既存記事タイトルを照合し、3段階分類を返す。
+
+    Returns:
+        {
+          "verdict": "skip" | "togo" | "review" | "ok",
+          "score":   float,
+          "title":   str,
+          "url":     str,
+          "post_id": int | str,
+          "memo":    str,
+        }
+
+    分類基準:
+        skip   … ほぼ同一 / 意図一致かつ高類似 → 新規記事不要
+        togo   … 意図一致かつ中類似 → 既存記事に追記
+        review … 類似するが意図が曖昧 → 人間確認
+        ok     … 類似なし → 新規親KW
+    """
+    import unicodedata
+    empty = {"verdict": "ok", "score": 0.0, "title": "", "url": "", "post_id": "", "memo": ""}
+    if not wp_articles:
+        return empty
+
+    kw_l        = keyword.lower()
+    kw_intent   = _extract_intent(keyword)
+    kw_brand    = _ascii_brand(keyword)
+    kw_base     = _extract_base_kw(keyword)
+    kw_is_multi = bool(
+        set(unicodedata.normalize("NFKC", keyword).lower().split()) & _MULTI_SERVICE_MARKERS
+    )
+
+    best: dict = empty.copy()
+
+    for article in wp_articles:
+        title   = article.get("title", "")
+        url     = article.get("link",  article.get("url", ""))
+        post_id = article.get("id",    "")
+        if not title:
+            continue
+
+        # ① ブランド競合 → この記事はスキップ（別ブランド = 別記事）
+        title_brand = _ascii_brand(title)
+        if (kw_brand and title_brand
+                and kw_brand != title_brand
+                and kw_brand not in title_brand
+                and title_brand not in kw_brand
+                and not kw_is_multi):
+            continue
+
+        import unicodedata as _ud
+        title_nfkc       = _ud.normalize("NFKC", title).lower()
+        kw_nfkc          = _ud.normalize("NFKC", keyword).lower()
+        kw_base_compact  = kw_base.replace(" ", "")
+        sim    = _kani_jaccard(keyword, title)
+        shared = _kani_shared_tokens(keyword, title)
+
+        # ── スコアブースト（日本語WPタイトルはスペースなし複合語が多い）──
+        # KW文字列がタイトルに完全含まれる → ほぼ同一
+        if kw_l in title_nfkc:
+            sim = max(sim, 0.92)
+        else:
+            # トークン単位の含有チェック（スペース区切りKW ↔ 連結タイトル）
+            kw_toks  = {t for t in kw_nfkc.split() if len(t) >= 2}
+            if kw_toks:
+                n_match = sum(1 for t in kw_toks if t in title_nfkc)
+                ratio   = n_match / len(kw_toks)
+                if ratio == 1.0:   sim = max(sim, 0.75)   # 全トークン一致
+                elif ratio >= 0.8: sim = max(sim, 0.60)   # 80%+
+                elif ratio >= 0.5: sim = max(sim, 0.35)   # 50%+
+            # ベースKW連結形がタイトルに含まれる（2文字以上）
+            if len(kw_base_compact) >= 2 and kw_base_compact in title_nfkc:
+                sim = max(sim, 0.55)
+
+        # ── 意図・ベースKW・ブランドを評価 ──
+        title_intent = _extract_intent(title)
+        title_base   = _extract_base_kw(title)
+        title_base_compact = title_base.replace(" ", "")
+        intent_conflict = bool(kw_intent and title_intent and kw_intent != title_intent)
+        base_match = bool(kw_base and (
+            kw_base == title_base
+            or kw_base in title_base
+            or title_base in kw_base
+            or (len(kw_base_compact) >= 2 and kw_base_compact in title_nfkc)
+            or (len(title_base_compact) >= 2 and title_base_compact in kw_nfkc)
+        ))
+        # 同ブランドがタイトルに含まれるか（例: "zozo" が "zozo買取サービス..." に含まれる）
+        same_brand = bool(
+            kw_brand and (title_nfkc.startswith(kw_brand) or f" {kw_brand}" in title_nfkc)
+        )
+
+        # ── 3段階分類 ──
+        # skip: ほぼ同一 or 構造一致+高類似+意図一致
+        if sim >= 0.92:
+            verdict = "skip"
+            memo    = f"WP「{title[:28]}」とほぼ同一(s={sim:.2f})"
+        elif sim >= 0.75 and base_match and not intent_conflict:
+            verdict = "skip"
+            memo    = f"WP「{title[:28]}」とほぼ同一・意図一致(s={sim:.2f})"
+        elif sim >= 0.60 and not intent_conflict and base_match:
+            verdict = "skip"
+            memo    = f"WP「{title[:28]}」と高類似・意図一致(s={sim:.2f})"
+        # togo: 関連記事（追記で対応）
+        elif sim >= 0.60 and not intent_conflict:
+            verdict = "togo"
+            memo    = f"WP「{title[:28]}」と関連・追記候補(s={sim:.2f})"
+        elif sim >= 0.45 and not intent_conflict and (base_match or shared >= 2 or same_brand):
+            verdict = "togo"
+            memo    = f"WP「{title[:28]}」と検索意図近似→追記候補(s={sim:.2f})"
+        # review: 類似するが意図が曖昧
+        elif sim >= 0.20 and (intent_conflict or base_match or same_brand):
+            verdict = "review"
+            memo    = (
+                f"WP「{title[:28]}」と意図が異なる可能性(s={sim:.2f})" if intent_conflict
+                else f"WP「{title[:28]}」と部分類似→要確認(s={sim:.2f})"
+            )
+        else:
+            continue  # 閾値以下は無視
+
+        # より高い verdict またはスコアで更新
+        if (_WP_VERDICT_RANK[verdict] > _WP_VERDICT_RANK[best["verdict"]]
+                or (verdict == best["verdict"] and sim > best["score"])):
+            best = {
+                "verdict":  verdict,
+                "score":    sim,
+                "title":    title,
+                "url":      url,
+                "post_id":  post_id,
+                "memo":     memo,
+            }
+
+    return best
+
+
+def run_kanikabari_check(blog_cfg: BlogConfig) -> None:
+    """
+    シートの未判定AIMキーワードに対してかにばりチェックを実行し、結果を書き込む。
+
+    Step 1: シートから 判定列が空の AIM="aim" キーワードを取得
+    Step 2: キーワード間クラスタリング（intra-sheet）→ 親KW / サブKW 決定
+    Step 3: 親KWについて WP既存記事との重複チェック
+    Step 4: シートに書き込む（D=判定, E=統合先KW, G=ステータス, H=メモ）
+    """
+    import gspread
+    from google.oauth2.service_account import Credentials
+
+    ss_id = blog_cfg.candidate_ss_id
+    sheet = blog_cfg.candidate_sheet
+
+    log.info(f"[kanikabari] 開始: {blog_cfg.display_name} / シート「{sheet}」")
+
+    scopes = [
+        "https://www.googleapis.com/auth/spreadsheets",
+        "https://www.googleapis.com/auth/drive",
+    ]
+    creds = Credentials.from_service_account_file(GOOGLE_CREDENTIALS_PATH, scopes=scopes)
+    gc    = gspread.authorize(creds)
+    ws    = gc.open_by_key(ss_id).worksheet(sheet)
+
+    rows   = ws.get_all_values()
+    header = rows[0] if rows else []
+
+    def col(names: list[str]) -> int:
+        for name in names:
+            if name in header:
+                return header.index(name)
+        return -1
+
+    kw_idx     = col(["キーワード", "Keyword"])
+    vol_idx    = col(["月間検索数", "検索ボリューム", "volume"])
+    aim_idx    = col(["aim", "AIM", "Aim"])
+    hantei_idx = col(["判定"])
+
+    if hantei_idx < 0:
+        log.error("[kanikabari] 「判定」列が見つかりません。新フォーマットのシートか確認してください。")
+        return
+    if kw_idx < 0:
+        log.error("[kanikabari] 「キーワード」列が見つかりません。")
+        return
+
+    def to_int(v: str) -> int:
+        if not v or v.upper() in ("N/A", "NULL", "-", ""):
+            return 0
+        try:
+            return int(float(v))
+        except ValueError:
+            return 0
+
+    # 未判定の AIM キーワードを収集（1-based 行番号付き）
+    unjudged: list[dict] = []
+    for row_idx, row in enumerate(rows[1:], start=2):
+        def cell(i: int, _row: list = row) -> str:
+            return _row[i].strip() if 0 <= i < len(_row) else ""
+
+        kw     = cell(kw_idx)
+        aim    = cell(aim_idx).lower() if aim_idx >= 0 else ""
+        hantei = cell(hantei_idx)
+
+        if not kw:
+            continue
+        if aim != "aim":
+            continue
+        if hantei:  # 既に判定済みはスキップ
+            continue
+
+        unjudged.append({
+            "keyword": kw,
+            "volume":  to_int(cell(vol_idx)),
+            "_row":    row_idx,
+        })
+
+    log.info(f"[kanikabari] 未判定AIMキーワード: {len(unjudged)}件")
+    if not unjudged:
+        log.info("[kanikabari] 処理対象なし。終了します。")
+        return
+
+    # intra-sheet クラスタリング
+    clusters = _cluster_keywords_intra(unjudged)
+    log.info(f"[kanikabari] クラスタリング結果: {len(clusters)}クラスター")
+    for c in clusters:
+        main_base = c["main"].get("_base", "")
+        if c["subs"]:
+            subs_str = "  ".join(
+                "[要確認] " * (s.get("_cluster_confidence") == "weak")
+                + f"「{s['keyword']}」({s.get('_cluster_reason', '')})"
+                for s in c["subs"]
+            )
+            log.info(f"  親KW: 「{c['main']['keyword']}」[base={main_base!r}]  サブKW: {subs_str}")
+        else:
+            log.info(f"  親KW: 「{c['main']['keyword']}」[base={main_base!r}]  (サブKWなし)")
+
+    # ── Step 1: WP既存記事を取得（全ステータス）────────────────────────
+    wp_articles: list[dict] = []
+    try:
+        wp_articles = fetch_wp_posts(blog_cfg=blog_cfg)
+        pub   = sum(1 for p in wp_articles if p["status"] == "publish")
+        draft = sum(1 for p in wp_articles if p["status"] == "draft")
+        log.info(f"[kanikabari] WP既存記事: {len(wp_articles)}件取得 (公開={pub} / 下書き={draft})")
+    except Exception as e:
+        log.warning(f"[kanikabari] WP記事取得失敗（WPチェックなしで続行）: {e}")
+
+    # ── Step 2: 最終結果をまとめる ──────────────────────────────────
+    results: list[dict] = []
+
+    def _sub_result(sub: dict, togo_ref: str, wp_url: str = "", wp_id: str = "") -> dict:
+        """サブKW1件分の result dict を生成するヘルパー。"""
+        if sub.get("_cluster_confidence") == "weak":
+            return {
+                "keyword":   sub["keyword"],
+                "row":       sub["_row"],
+                "hantei":    "要確認",
+                "togo_saki": "",
+                "status":    "要確認",
+                "memo":      sub.get("_cluster_reason", ""),
+                "wp_url":    wp_url,
+                "wp_id":     wp_id,
+            }
+        return {
+            "keyword":   sub["keyword"],
+            "row":       sub["_row"],
+            "hantei":    "サブKW",
+            "togo_saki": togo_ref,
+            "status":    "統合対象",
+            "memo":      "",
+            "wp_url":    wp_url,
+            "wp_id":     wp_id,
+        }
+
+    for cluster in clusters:
+        main_kw = cluster["main"]
+        wp      = _classify_vs_wp(main_kw["keyword"], wp_articles)
+
+        if wp["verdict"] == "skip":
+            # ── カニバリスキップ ─────────────────────────────────────
+            results.append({
+                "keyword":   main_kw["keyword"],
+                "row":       main_kw["_row"],
+                "hantei":    "カニバリスキップ",
+                "togo_saki": wp["title"],
+                "status":    "カニバリスキップ",
+                "memo":      wp["memo"],
+                "wp_url":    wp["url"],
+                "wp_id":     str(wp["post_id"]),
+            })
+            # サブKWは引き続きその WP 記事への統合対象とする
+            for sub in cluster["subs"]:
+                results.append(_sub_result(sub, wp["title"], wp["url"], str(wp["post_id"])))
+
+        elif wp["verdict"] == "togo":
+            # ── 統合対象（既存WP記事への追記候補）──────────────────────
+            results.append({
+                "keyword":   main_kw["keyword"],
+                "row":       main_kw["_row"],
+                "hantei":    "サブKW",
+                "togo_saki": wp["title"],
+                "status":    "統合対象",
+                "memo":      wp["memo"],
+                "wp_url":    wp["url"],
+                "wp_id":     str(wp["post_id"]),
+            })
+            for sub in cluster["subs"]:
+                results.append(_sub_result(sub, wp["title"], wp["url"], str(wp["post_id"])))
+
+        elif wp["verdict"] == "review":
+            # ── 要確認（既存WP記事との関係が曖昧）──────────────────────
+            results.append({
+                "keyword":   main_kw["keyword"],
+                "row":       main_kw["_row"],
+                "hantei":    "要確認",
+                "togo_saki": "",
+                "status":    "要確認",
+                "memo":      wp["memo"],
+                "wp_url":    wp["url"],
+                "wp_id":     str(wp["post_id"]),
+            })
+            for sub in cluster["subs"]:
+                results.append(_sub_result(sub, main_kw["keyword"]))
+
+        else:
+            # ── ok → 新規親KW（生成待ち）────────────────────────────
+            results.append({
+                "keyword":   main_kw["keyword"],
+                "row":       main_kw["_row"],
+                "hantei":    "親KW",
+                "togo_saki": "",
+                "status":    "生成待ち",
+                "memo":      "",
+                "wp_url":    "",
+                "wp_id":     "",
+            })
+            for sub in cluster["subs"]:
+                results.append(_sub_result(sub, main_kw["keyword"]))
+
+    log.info(f"[kanikabari] 書き込み対象: {len(results)}件")
+
+    from modules.sheets_updater import mark_kanikabari_results_new_format
+    mark_kanikabari_results_new_format(results, ws)
+
+    n_ok    = sum(1 for r in results if r["hantei"] == "親KW" and r["status"] == "生成待ち")
+    n_togo  = sum(1 for r in results if r["status"] == "統合対象" and r["wp_id"])
+    n_skip  = sum(1 for r in results if r["status"] == "カニバリスキップ")
+    n_sub   = sum(1 for r in results if r["hantei"] == "サブKW" and not r["wp_id"])
+    n_rev   = sum(1 for r in results if r["status"] == "要確認")
+    log.info(
+        f"[kanikabari] 完了: 親KW生成待ち={n_ok}件 / シート内サブKW={n_sub}件"
+        f" / WP統合対象={n_togo}件 / カニバリスキップ={n_skip}件 / 要確認={n_rev}件"
+    )
+
+    # 代表的な判定例をログ出力
+    examples = (
+        [r for r in results if r["status"] == "カニバリスキップ"][:2]
+        + [r for r in results if r["status"] == "統合対象" and r["wp_id"]][:2]
+        + [r for r in results if r["status"] == "要確認" and r["wp_id"]][:2]
+    )
+    for ex in examples:
+        log.info(
+            f"  [{ex['hantei']}] 「{ex['keyword']}」→ {ex['status']}"
+            + (f" / WP「{ex['togo_saki'][:25]}」" if ex.get("togo_saki") else "")
+        )
+
+
+# ═══════════════════════════════════════════════════════════════
 # MAIN
 # ═══════════════════════════════════════════════════════════════
 def main() -> None:
@@ -1460,6 +2121,8 @@ def main() -> None:
     parser.add_argument("--yes", "-y", action="store_true", help="実行前確認をスキップ")
     parser.add_argument("--test",     action="store_true",
                         help="テスト生成モード: 1記事のみ生成・下書き保存（--count 1 と同等）")
+    parser.add_argument("--kanikabari", action="store_true",
+                        help="かにばりチェックを実行してシートに判定を書き込む（記事生成はしない）")
     args = parser.parse_args()
 
     # --test フラグ: count=1 を強制（--count と同時指定時は --count を優先）
@@ -1535,14 +2198,17 @@ def main() -> None:
             log.info(f"[{blog_name}] キャンセルされました。")
             continue
 
-        results = run_blog(
-            blog_cfg,
-            dry_run=args.dry_run,
-            keyword=args.keyword,
-            volume=args.volume,
-            count=args.count,
-        )
-        all_results.extend(results)
+        if args.kanikabari:
+            run_kanikabari_check(blog_cfg)
+        else:
+            results = run_blog(
+                blog_cfg,
+                dry_run=args.dry_run,
+                keyword=args.keyword,
+                volume=args.volume,
+                count=args.count,
+            )
+            all_results.extend(results)
 
     # ── 全体サマリー ──────────────────────────────────────
     elapsed   = (datetime.now() - started_at).total_seconds()

@@ -1,0 +1,16 @@
+{
+  "_comment": "かにばりチェックテスト用 - ワイズトレンド (hataraku generate_lite.py から実行)",
+  "name": "ys-trend",
+  "display_name": "ワイズトレンド",
+  "genre": "エンタメ・トレンド・ライフスタイル",
+  "target_length": {"MONETIZE": 9000, "LONGTAIL": 6000, "FUTURE": 3000},
+  "fact_check": true,
+  "candidate_ss_id": "1PPkCm-QEK-H9SSsAJiFksKhNl3IyDk495--xmChSGRM",
+  "candidate_sheet": "キーワード",
+  "article_count": 3,
+  "min_volume": 0,
+  "wp_url": "https://ys-trend.com",
+  "wp_username": "yscafe3824",
+  "wp_app_password": "sHVa wrtK YOX9 q3gI sEtX y6Z9",
+  "stop_words": ["おすすめ","比較","2026","ランキング"]
+}

@@ -387,6 +387,96 @@ def _needs_plaud_notta(keyword: str) -> bool:
     return any(term in kw for term in _PLAUD_NOTTA_TERMS)
 
 
+# ============================================================
+# 検索意図タイプ検出・トーン指示
+# ============================================================
+
+_INTENT_SYMPATHY_WORDS = [
+    "辞めたい", "疲れた", "不安", "悩み", "ストレス", "しんどい", "つらい",
+    "迷って", "怖い", "不満", "嫌", "やめたい", "向いていない", "続かない",
+    "人間関係", "職場", "パワハラ", "ブラック", "しんどい", "きつい",
+]
+_INTENT_COMPARISON_WORDS = [
+    "比較", "ランキング", "どちら", "どれ", "違い", "選び方", "メリット",
+    "デメリット", "向いてる", "まとめ", "一覧", "どこ",
+]
+_INTENT_PURCHASE_WORDS = [
+    "登録", "申し込み", "始め方", "使い方", "料金", "評判", "口コミ",
+    "無料", "体験", "試し", "手順", "流れ", "やり方", "方法",
+]
+
+_TONE_INSTRUCTIONS: dict[str, str] = {
+    "sympathy": """\
+## 検索意図タイプ: 共感系（寄り添い調）
+このキーワードで検索するユーザーは「誰かにわかってほしい」「背中を押してほしい」という気持ちを持っています。
+文体ルール：
+- 冒頭や各H3の冒頭で読者の気持ちに共感する一文を入れる（例：「転職活動って、本当に疲れますよね」）
+- 「〜という方は多いのではないでしょうか」「〜という状況、よく聞きます」など共感フレーズを自然に使う
+- 専門的・事務的な語調は避け、「一緒に考えましょう」「大丈夫です」のような温かみのある言葉を使う
+- 失敗談・苦労話を交えて「あなただけじゃない」と感じさせる表現を盛り込む
+""",
+    "comparison": """\
+## 検索意図タイプ: 比較系（客観的・データ重視）
+このキーワードで検索するユーザーは「正しい情報で冷静に選びたい」という気持ちを持っています。
+文体ルール：
+- 感情的な表現を抑え、事実・数字・比較の切り口を中心に構成する
+- 「A社は〜、B社は〜という特徴があります」「向いている人・向いていない人」の軸で整理する
+- 「〜がベスト」「絶対〜」などの断定は避け、「〜という観点では〜が優れています」という客観表現を使う
+- 読者自身が判断できる情報を提供することを最優先に考える
+""",
+    "purchase": """\
+## 検索意図タイプ: 購買直前（背中を押す）
+このキーワードで検索するユーザーは「もう少しの後押しがほしい」という段階にいます。
+文体ルール：
+- 冒頭・まとめで「まず一歩踏み出してみましょう」のような前向きなフレーズを使う
+- 「無料だからリスクはない」「最悪うまくいかなくても〜」などハードルを下げる言葉を自然に入れる
+- 登録・申し込みの手順を具体的かつ簡潔に説明する
+- ベネフィットを最後に改めて強調し「よし、やってみよう」と思えるよう締める
+""",
+}
+
+
+def _detect_search_intent(keyword: str) -> str:
+    """
+    キーワードから検索意図タイプを判定する。
+    Returns: 'sympathy' | 'comparison' | 'purchase' | ''
+    """
+    kw = keyword.lower()
+    scores = {
+        "sympathy":   sum(1 for w in _INTENT_SYMPATHY_WORDS   if w in kw),
+        "comparison": sum(1 for w in _INTENT_COMPARISON_WORDS  if w in kw),
+        "purchase":   sum(1 for w in _INTENT_PURCHASE_WORDS    if w in kw),
+    }
+    best = max(scores, key=lambda k: scores[k])
+    return best if scores[best] > 0 else ""
+
+
+def _build_tone_section(keyword: str) -> str:
+    """検索意図に対応したトーン指示文字列を返す。"""
+    intent = _detect_search_intent(keyword)
+    if not intent:
+        return ""
+    label = {"sympathy": "共感系", "comparison": "比較系", "purchase": "購買直前"}[intent]
+    print(f"[article_generator] 検索意図: {label} → トーン調整")
+    return _TONE_INSTRUCTIONS[intent]
+
+
+def _build_testimonial_section(keyword: str) -> str:
+    """スプレッドシートから関連体験談を取得してプロンプトセクションを返す。"""
+    try:
+        from modules import wp_context
+        from modules.testimonial_fetcher import build_prompt_section
+        from config import GOOGLE_CREDENTIALS_PATH
+        ss_id = wp_context.get_candidate_ss_id()
+        section = build_prompt_section(keyword, ss_id, GOOGLE_CREDENTIALS_PATH)
+        if section:
+            print(f"[article_generator] 体験談: 関連体験談をプロンプトに組み込みました")
+        return section
+    except Exception as e:
+        print(f"[article_generator] 体験談スキップ: {e}")
+        return ""
+
+
 def _build_blog_context_section() -> str:
     """
     wp_contextのblog_metaからブログ専用コンテキストセクションを生成する。
@@ -429,7 +519,7 @@ USER_PROMPT_TEMPLATE = """\
 
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}
+{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{tone_section}{testimonial_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
@@ -550,6 +640,12 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     except Exception:
         pass
 
+    # 検索意図トーン調整
+    tone_section = _build_tone_section(keyword)
+
+    # 体験談セクション（スプレッドシートから関連するものを取得）
+    testimonial_section = _build_testimonial_section(keyword)
+
     check_stop()
     message = client.messages.create(
         model="claude-sonnet-4-6",
@@ -570,6 +666,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                 fact_check_section=fact_check_section,
                 person_section=person_section,
                 plaud_notta_section=plaud_notta_section,
+                tone_section=tone_section,
+                testimonial_section=testimonial_section,
             ),
         }],
     )
@@ -634,7 +732,10 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
 def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                      sub_keywords: list[str] | None = None,
                      enable_fact_check: bool = True,
-                     target_length: int = 9000) -> dict:
+                     target_length: int = 9000,
+                     article_type: str = "longtail",
+                     asp_list: list | None = None,
+                     guide_links: dict | None = None) -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
