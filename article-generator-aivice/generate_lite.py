@@ -446,6 +446,7 @@ def fetch_candidates(
 
     candidates: list[dict] = []   # メインKW（vol>=30 or N/A）
     sub_keywords: list[str] = []  # サブKW（vol<30）→ 記事本文に盛り込む
+    n_posted_skip = 0             # 投稿済みスキップ件数（ログ用）
 
     for row in rows[1:]:
         def cell(i: int) -> str:
@@ -464,6 +465,7 @@ def fetch_candidates(
 
         # 投稿済みキーワードはスキップ
         if post_status in ("投稿済み", "カニバリスキップ"):
+            n_posted_skip += 1
             continue
 
         # vol=N/A（None）はメイン扱い、明示的な数値は30以上のみメイン
@@ -523,6 +525,7 @@ def fetch_candidates(
     log.info(
         f"[fetch] [{sheet}] メインKW: {len(candidates)}件（vol≥{MAIN_VOL_THRESHOLD} or N/A）"
         f"  サブKW: {len(sub_keywords)}件（vol<{MAIN_VOL_THRESHOLD}）"
+        + (f"  投稿済みスキップ: {n_posted_skip}件" if n_posted_skip else "")
         + (f"  テーマ外除外: {filtered_out}件" if filtered_out else "")
         + (f"  aim内訳: [{aim_summary}]" if aim_summary else "")
     )
@@ -1399,6 +1402,16 @@ def run_blog(
                     )
 
             post_result = post(article, dry_run=dry_run, blog_cfg=blog_cfg, asp_list=asp_list)
+
+            # 投稿成功後にメモリ内 wp_posts を更新（同セッション内の重複防止）
+            if wp_posts is not None:
+                wp_posts.append({
+                    "id":     post_result.get("id", 0),
+                    "title":  article["title"],
+                    "slug":   "",
+                    "date":   datetime.now().isoformat(),
+                    "status": blog_cfg.wp_post_status,
+                })
 
             item.update({
                 "status":      post_result["status"],

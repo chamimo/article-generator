@@ -2419,6 +2419,36 @@
       "output_tokens": 10210,
       "cost_usd": 0.170244,
       "label": "article:AIスキル 就職 支援サービス"
+    },
+    {
+      "timestamp": "2026-04-25T21:50:47.637917+00:00",
+      "date": "2026-04-25",
+      "hour": "2026-04-25T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 104,
+      "output_tokens": 108,
+      "cost_usd": 0.000515,
+      "label": "lsi:plaud note pro zoom"
+    },
+    {
+      "timestamp": "2026-04-25T21:50:51.107777+00:00",
+      "date": "2026-04-25",
+      "hour": "2026-04-25T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 171,
+      "output_tokens": 460,
+      "cost_usd": 0.001977,
+      "label": "kw_research:plaud note pro zoom"
+    },
+    {
+      "timestamp": "2026-04-25T21:52:56.900816+00:00",
+      "date": "2026-04-25",
+      "hour": "2026-04-25T21",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5758,
+      "output_tokens": 9273,
+      "cost_usd": 0.156369,
+      "label": "article:plaud note pro zoom"
     }
   ],
   "events": [
