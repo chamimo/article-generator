@@ -399,6 +399,66 @@
       "output_tokens": 11943,
       "cost_usd": 0.197919,
       "label": "article:節約術 食費"
+    },
+    {
+      "timestamp": "2026-04-25T19:10:11.311134+00:00",
+      "date": "2026-04-25",
+      "hour": "2026-04-25T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 80,
+      "cost_usd": 0.00041,
+      "label": "lsi:節約オタクふゆこ 大学"
+    },
+    {
+      "timestamp": "2026-04-25T19:10:14.745969+00:00",
+      "date": "2026-04-25",
+      "hour": "2026-04-25T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 536,
+      "cost_usd": 0.002287,
+      "label": "kw_research:節約オタクふゆこ 大学"
+    },
+    {
+      "timestamp": "2026-04-25T19:12:46.400836+00:00",
+      "date": "2026-04-25",
+      "hour": "2026-04-25T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6342,
+      "output_tokens": 9579,
+      "cost_usd": 0.162711,
+      "label": "article:節約オタクふゆこ 大学"
+    },
+    {
+      "timestamp": "2026-04-25T21:53:40.035227+00:00",
+      "date": "2026-04-25",
+      "hour": "2026-04-25T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 85,
+      "cost_usd": 0.00043,
+      "label": "lsi:節約オタクふゆこ 結婚"
+    },
+    {
+      "timestamp": "2026-04-25T21:53:44.121748+00:00",
+      "date": "2026-04-25",
+      "hour": "2026-04-25T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 600,
+      "cost_usd": 0.002544,
+      "label": "kw_research:節約オタクふゆこ 結婚"
+    },
+    {
+      "timestamp": "2026-04-25T21:55:56.084349+00:00",
+      "date": "2026-04-25",
+      "hour": "2026-04-25T21",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6620,
+      "output_tokens": 9678,
+      "cost_usd": 0.16503,
+      "label": "article:節約オタクふゆこ 結婚"
     }
   ],
   "events": [
