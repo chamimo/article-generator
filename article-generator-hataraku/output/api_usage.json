@@ -2849,6 +2849,36 @@
       "output_tokens": 9880,
       "cost_usd": 0.168324,
       "label": "article:ウズウズIT 評判"
+    },
+    {
+      "timestamp": "2026-04-26T19:50:11.204519+00:00",
+      "date": "2026-04-26",
+      "hour": "2026-04-26T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 117,
+      "cost_usd": 0.000555,
+      "label": "lsi:保育士 転職 異業種"
+    },
+    {
+      "timestamp": "2026-04-26T19:50:17.398763+00:00",
+      "date": "2026-04-26",
+      "hour": "2026-04-26T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 629,
+      "cost_usd": 0.002657,
+      "label": "kw_research:保育士 転職 異業種"
+    },
+    {
+      "timestamp": "2026-04-26T19:52:45.088097+00:00",
+      "date": "2026-04-26",
+      "hour": "2026-04-26T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5777,
+      "output_tokens": 10488,
+      "cost_usd": 0.174651,
+      "label": "article:保育士 転職 異業種"
     }
   ],
   "events": [
