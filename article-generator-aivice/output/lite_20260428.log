@@ -1,0 +1,67 @@
+2026-04-28 17:31:21 [INFO] ============================================================
+2026-04-28 17:31:21 [INFO] generate_lite.py 開始  dry_run=False
+2026-04-28 17:31:21 [INFO] ============================================================
+2026-04-28 17:31:23 [INFO] [registry] ブログ管理シートから 7 件取得: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-04-28 17:31:23 [INFO] 対象ブログ: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-04-28 17:31:23 [ERROR] [hataraku] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hataraku/blog_config.json
+2026-04-28 17:31:24 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-28 17:31:24 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-04-28 17:31:24 [INFO] ════════════════════════════════════════════════════════════
+2026-04-28 17:31:24 [INFO]   genre            : AI・副業・転職・キャリア
+2026-04-28 17:31:24 [INFO]   fact_check       : True
+2026-04-28 17:31:24 [INFO]   article_type_mix : True
+2026-04-28 17:31:24 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-04-28 17:31:24 [INFO]   article_count    : 1  dry_run: False
+2026-04-28 17:31:27 [INFO] [wp] 記事取得: 計386件 (private=7 / publish=379)
+2026-04-28 17:31:27 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-28 17:31:28 [DEBUG] [fetch] シート「絞り込みKW」: 62行 / ヘッダー: ['キーワード', '親KW', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID']
+2026-04-28 17:31:28 [INFO] [fetch] [キーワード] メインKW: 22件（vol≥30 or N/A）  サブKW: 0件（vol<30）  テーマ外除外: 40件  aim内訳: [aim:62]
+2026-04-28 17:31:28 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-04-28 17:31:28 [INFO] [dup_check] 優先候補: 22件 {'aim': 22} を先頭評価
+2026-04-28 17:31:28 [INFO] [dup_check] 除外: 「plaud note pro オンライン会議」 → 直近7日重複: 「PLAUD NOTE Pro×Zoom連携の方法！AI議事録・文字起こしを自動化」
+2026-04-28 17:31:28 [INFO] [dup_check] 除外: 「plaud note pro セキュリティ」 → 直近7日重複: 「PLAUD NOTE Pro×Zoom連携の方法！AI議事録・文字起こしを自動化」
+2026-04-28 17:31:29 [INFO] [dup_check] 除外: 「plaud note pro デメリット」 → 直近7日重複: 「PLAUD NOTE Pro×Zoom連携の方法！AI議事録・文字起こしを自動化」
+2026-04-28 17:31:29 [INFO] [dup_check] 除外: 「plaud note pro テンプレート」 → 直近7日重複: 「PLAUD NOTE Pro×Zoom連携の方法！AI議事録・文字起こしを自動化」
+2026-04-28 17:31:29 [INFO] [dup_check] 除外: 「plaud note pro バッテリー」 → 直近7日重複: 「PLAUD NOTE Pro×Zoom連携の方法！AI議事録・文字起こしを自動化」
+2026-04-28 17:31:29 [INFO] [dup_check] 除外: 「plaud note pro マルチモーダル」 → 直近7日重複: 「PLAUD NOTE Pro×Zoom連携の方法！AI議事録・文字起こしを自動化」
+2026-04-28 17:31:29 [INFO] [dup_check] 除外: 「plaud note pro ヨドバシ」 → 直近7日重複: 「PLAUD NOTE Pro×Zoom連携の方法！AI議事録・文字起こしを自動化」
+2026-04-28 17:31:29 [INFO] [dup_check] 除外: 「plaud note pro リアルタイム文字起こし」 → 直近7日重複: 「PLAUD NOTE Pro×Zoom連携の方法！AI議事録・文字起こしを自動化」
+2026-04-28 17:31:29 [INFO] [dup_check] 除外: 「plaud note pro 議事録」 → 直近7日重複: 「PLAUD NOTE Pro×Zoom連携の方法！AI議事録・文字起こしを自動化」
+2026-04-28 17:31:29 [INFO] [dup_check] 除外: 「plaud note pro 口コミ」 → 直近7日重複: 「PLAUD NOTE Pro×Zoom連携の方法！AI議事録・文字起こしを自動化」
+2026-04-28 17:31:29 [INFO] [dup_check] 除外: 「plaud note pro 精度」 → 直近7日重複: 「PLAUD NOTE Pro×Zoom連携の方法！AI議事録・文字起こしを自動化」
+2026-04-28 17:31:29 [INFO] [dup_check] 除外: 「plaud note pro 設定方法」 → 直近7日重複: 「PLAUD NOTE Pro×Zoom連携の方法！AI議事録・文字起こしを自動化」
+2026-04-28 17:31:29 [INFO] [dup_check] 除外: 「plaud note pro 通話録音」 → 直近7日重複: 「PLAUD NOTE Pro×Zoom連携の方法！AI議事録・文字起こしを自動化」
+2026-04-28 17:31:29 [INFO] [dup_check] 除外: 「plaud note pro 評判」 → 直近7日重複: 「PLAUD NOTE Pro×Zoom連携の方法！AI議事録・文字起こしを自動化」
+2026-04-28 17:31:29 [INFO] [dup_check] 除外: 「plaud note pro 文字起こし」 → 直近7日重複: 「PLAUD NOTE Pro×Zoom連携の方法！AI議事録・文字起こしを自動化」
+2026-04-28 17:31:29 [DEBUG] [dup_check] OK: 「youtube ai ナレーション」
+2026-04-28 17:31:29 [INFO] [dup_check] 完了: 選定=1件 / 除外=15件 (pool=22件, 要求=1件)
+2026-04-28 17:31:29 [INFO] [select] 1件選定 (要求=1件)
+2026-04-28 17:31:29 [INFO] [select]   1. 「youtube ai ナレーション」 vol=0 seo=N/A comp=N/A
+2026-04-28 17:31:29 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-04-28 17:31:29 [INFO] [workup-ai] 候補: 22件 / 選定: 1件 / 生成予定: 1件
+2026-04-28 17:31:29 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-04-28 17:31:29 [INFO] ────────────────────────────────────────────────────────────
+2026-04-28 17:31:29 [INFO] [workup-ai] [1/1] [LONGTAIL] 「youtube ai ナレーション」 vol=0 ★AIM
+2026-04-28 17:31:29 [INFO] ────────────────────────────────────────────────────────────
+2026-04-28 17:31:29 [INFO] [generate] 生成開始: 「youtube ai ナレーション」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+2026-04-28 17:33:43 [INFO] [generate] 完了: 「YouTube AIナレーション完全ガイド｜おすすめツール6選と作り方・収益化まで解説」
+2026-04-28 17:33:43 [INFO] [post] 投稿方式: draft
+2026-04-28 17:33:53 [INFO] [post] 画像生成完了: 90,430 bytes
+2026-04-28 17:34:06 [INFO] [post] WP投稿完了: ID=9831 → https://workup-ai.com/wp-admin/post.php?post=9831&action=edit
+2026-04-28 17:34:06 [INFO] [workup-ai] [1/1] ✅ 完了: 「YouTube AIナレーション完全ガイド｜おすすめツール6選と作り方・収益化まで解説」
+2026-04-28 17:34:06 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-04-28 17:34:06 [ERROR] [ys-trend] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/ys-trend/blog_config.json
+2026-04-28 17:34:06 [ERROR] [kaerudoko] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/kaerudoko/blog_config.json
+2026-04-28 17:34:06 [ERROR] [hapipo8] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hapipo8/blog_config.json
+2026-04-28 17:34:06 [ERROR] [hida-no-omoide] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hida-no-omoide/blog_config.json
+2026-04-28 17:34:06 [ERROR] [web-study1] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/web-study1/blog_config.json
+2026-04-28 17:34:06 [INFO] 
+============================================================
+2026-04-28 17:34:06 [INFO] 【全体サマリー】
+2026-04-28 17:34:06 [INFO]   ブログ数  : 7件
+2026-04-28 17:34:06 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-04-28 17:34:06 [INFO]   所要時間  : 165.6秒
+2026-04-28 17:34:06 [INFO]   ✅ [workup-ai] youtube ai ナレーション → YouTube AIナレーション完全ガイド｜おすすめツール6選と作り方・収益化まで解説
+2026-04-28 17:34:06 [INFO]        https://workup-ai.com/wp-admin/post.php?post=9831&action=edit
+2026-04-28 17:34:06 [INFO] ============================================================
