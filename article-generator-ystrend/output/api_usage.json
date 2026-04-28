@@ -519,6 +519,36 @@
       "output_tokens": 9188,
       "cost_usd": 0.157218,
       "label": "article:節約 ブログ 農家の嫁"
+    },
+    {
+      "timestamp": "2026-04-27T19:10:11.098542+00:00",
+      "date": "2026-04-27",
+      "hour": "2026-04-27T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 90,
+      "cost_usd": 0.000451,
+      "label": "lsi:漫画 買取 ダンボール 無料"
+    },
+    {
+      "timestamp": "2026-04-27T19:10:15.767689+00:00",
+      "date": "2026-04-27",
+      "hour": "2026-04-27T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 636,
+      "cost_usd": 0.002689,
+      "label": "kw_research:漫画 買取 ダンボール 無料"
+    },
+    {
+      "timestamp": "2026-04-27T19:12:33.532843+00:00",
+      "date": "2026-04-27",
+      "hour": "2026-04-27T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6623,
+      "output_tokens": 8918,
+      "cost_usd": 0.153639,
+      "label": "article:漫画 買取 ダンボール 無料"
     }
   ],
   "events": [
