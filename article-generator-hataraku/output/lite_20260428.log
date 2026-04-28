@@ -1,0 +1,39 @@
+2026-04-28 04:50:03 [INFO] ============================================================
+2026-04-28 04:50:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-04-28 04:50:03 [INFO] ============================================================
+2026-04-28 04:50:03 [INFO] 対象ブログ: ['hataraku']
+2026-04-28 04:50:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-04-28 04:50:05 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-04-28 04:50:05 [INFO] ════════════════════════════════════════════════════════════
+2026-04-28 04:50:05 [INFO]   genre            : 転職・副業・キャリア
+2026-04-28 04:50:05 [INFO]   fact_check       : True
+2026-04-28 04:50:05 [INFO]   article_type_mix : True
+2026-04-28 04:50:05 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-04-28 04:50:05 [INFO]   article_count    : 1  dry_run: False
+2026-04-28 04:50:07 [WARNING] [hataraku] WP記事取得失敗（重複チェックなしで続行）: HTTPSConnectionPool(host='hataraku-navi.com', port=443): Max retries exceeded with url: /wp-json/wp/v2/posts?status=publish%2Cdraft%2Cprivate&_fields=id%2Ctitle%2Cdate%2Cslug%2Cstatus%2Clink&per_page=100&page=1 (Caused by NameResolutionError("HTTPSConnection(host='hataraku-navi.com', port=443): Failed to resolve 'hataraku-navi.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-04-28 04:50:07 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-04-28 04:50:08 [DEBUG] [fetch] シート「絞り込みKW」: 1104行 / ヘッダー: ['キーワード', '親KW', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID']
+2026-04-28 04:50:08 [INFO] [fetch] [キーワード] メインKW: 577件（vol≥30 or N/A）  サブKW: 0件（vol<30）  テーマ外除外: 527件  aim内訳: [aim:1104]
+2026-04-28 04:50:08 [INFO] [select] 1件選定 (要求=1件)
+2026-04-28 04:50:08 [INFO] [select]   1. 「マイナビ 転職フェア 40代」 vol=0 seo=N/A comp=N/A
+2026-04-28 04:50:08 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-04-28 04:50:08 [INFO] [hataraku] 候補: 577件 / 選定: 1件 / 生成予定: 1件
+2026-04-28 04:50:08 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-04-28 04:50:08 [INFO] ────────────────────────────────────────────────────────────
+2026-04-28 04:50:08 [INFO] [hataraku] [1/1] [LONGTAIL] 「マイナビ 転職フェア 40代」 vol=0 ★AIM
+2026-04-28 04:50:08 [INFO] ────────────────────────────────────────────────────────────
+2026-04-28 04:50:08 [INFO] [generate] 生成開始: 「マイナビ 転職フェア 40代」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+2026-04-28 04:53:03 [INFO] [generate] 完了: 「マイナビ転職フェア40代向け完全ガイド｜準備・服装・成功のコツを解説」
+2026-04-28 04:53:03 [INFO] [post] 投稿方式: publish
+2026-04-28 04:53:14 [INFO] [post] 画像生成完了: 86,722 bytes
+2026-04-28 04:53:14 [ERROR] [hataraku] [1/1] ❌ エラー（続行）: HTTPSConnectionPool(host='hataraku-navi.com', port=443): Max retries exceeded with url: /wp-json/wp/v2/categories?per_page=100 (Caused by NameResolutionError("HTTPSConnection(host='hataraku-navi.com', port=443): Failed to resolve 'hataraku-navi.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-04-28 04:53:14 [INFO] [hataraku] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-04-28 04:53:14 [INFO] 
+============================================================
+2026-04-28 04:53:14 [INFO] 【全体サマリー】
+2026-04-28 04:53:14 [INFO]   ブログ数  : 1件
+2026-04-28 04:53:14 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-04-28 04:53:14 [INFO]   所要時間  : 191.2秒
+2026-04-28 04:53:14 [INFO]   ❌ [hataraku] マイナビ 転職フェア 40代 → (生成失敗)
+2026-04-28 04:53:14 [INFO] ============================================================

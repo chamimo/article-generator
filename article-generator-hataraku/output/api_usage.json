@@ -2879,6 +2879,36 @@
       "output_tokens": 10488,
       "cost_usd": 0.174651,
       "label": "article:保育士 転職 異業種"
+    },
+    {
+      "timestamp": "2026-04-27T19:50:10.718225+00:00",
+      "date": "2026-04-27",
+      "hour": "2026-04-27T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 104,
+      "cost_usd": 0.000506,
+      "label": "lsi:マイナビ 転職フェア 40代"
+    },
+    {
+      "timestamp": "2026-04-27T19:50:15.466396+00:00",
+      "date": "2026-04-27",
+      "hour": "2026-04-27T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 605,
+      "cost_usd": 0.002564,
+      "label": "kw_research:マイナビ 転職フェア 40代"
+    },
+    {
+      "timestamp": "2026-04-27T19:53:01.068373+00:00",
+      "date": "2026-04-27",
+      "hour": "2026-04-27T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5749,
+      "output_tokens": 10594,
+      "cost_usd": 0.176157,
+      "label": "article:マイナビ 転職フェア 40代"
     }
   ],
   "events": [
