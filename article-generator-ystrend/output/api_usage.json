@@ -549,6 +549,36 @@
       "output_tokens": 8918,
       "cost_usd": 0.153639,
       "label": "article:漫画 買取 ダンボール 無料"
+    },
+    {
+      "timestamp": "2026-04-28T19:10:13.559372+00:00",
+      "date": "2026-04-28",
+      "hour": "2026-04-28T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 107,
+      "cost_usd": 0.00052,
+      "label": "lsi:電気 代 節約 コンセント 抜く"
+    },
+    {
+      "timestamp": "2026-04-28T19:10:17.145948+00:00",
+      "date": "2026-04-28",
+      "hour": "2026-04-28T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 541,
+      "cost_usd": 0.00231,
+      "label": "kw_research:電気 代 節約 コンセント 抜く"
+    },
+    {
+      "timestamp": "2026-04-28T19:12:24.488139+00:00",
+      "date": "2026-04-28",
+      "hour": "2026-04-28T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6551,
+      "output_tokens": 9467,
+      "cost_usd": 0.161658,
+      "label": "article:電気 代 節約 コンセント 抜く"
     }
   ],
   "events": [
