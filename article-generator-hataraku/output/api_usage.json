@@ -2909,6 +2909,36 @@
       "output_tokens": 10594,
       "cost_usd": 0.176157,
       "label": "article:マイナビ 転職フェア 40代"
+    },
+    {
+      "timestamp": "2026-04-28T19:50:11.065294+00:00",
+      "date": "2026-04-28",
+      "hour": "2026-04-28T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 83,
+      "cost_usd": 0.000422,
+      "label": "lsi:30代 転職 志望動機 例文"
+    },
+    {
+      "timestamp": "2026-04-28T19:50:14.975441+00:00",
+      "date": "2026-04-28",
+      "hour": "2026-04-28T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 549,
+      "cost_usd": 0.002339,
+      "label": "kw_research:30代 転職 志望動機 例文"
+    },
+    {
+      "timestamp": "2026-04-28T19:53:06.198721+00:00",
+      "date": "2026-04-28",
+      "hour": "2026-04-28T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5678,
+      "output_tokens": 11887,
+      "cost_usd": 0.195339,
+      "label": "article:30代 転職 志望動機 例文"
     }
   ],
   "events": [
