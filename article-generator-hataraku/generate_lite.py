@@ -50,6 +50,10 @@ from modules.wordpress_poster import create_post, post_article_with_image
 from modules.image_generator import generate_image_for_article
 from modules.api_guard import check_stop, daily_summary
 from modules import wp_context
+from modules.wp_pattern_fetcher import fetch_patterns, match_pattern, insert_pattern_cta
+
+# ブログ別マイパターンキャッシュ（セッション中の再フェッチを防ぐ）
+_wp_patterns_cache: dict[str, list] = {}
 
 # ═══════════════════════════════════════════════════════════════
 # FEATURE FLAGS
@@ -1157,6 +1161,25 @@ def generate(
                                article_type=article_type,
                                asp_list=asp_list,
                                guide_links=guide_links or None)
+
+    # ── マイパターン CTA 挿入（ブログにパターンがある場合のみ）──
+    if blog_cfg:
+        blog_name = blog_cfg.name
+        if blog_name not in _wp_patterns_cache:
+            try:
+                _wp_patterns_cache[blog_name] = fetch_patterns(blog_cfg)
+            except Exception as e:
+                log.warning(f"[generate] マイパターン取得失敗（スキップ）: {e}")
+                _wp_patterns_cache[blog_name] = []
+        patterns = _wp_patterns_cache[blog_name]
+        if patterns:
+            matched = match_pattern(keyword, patterns)
+            if matched:
+                article["content"] = insert_pattern_cta(article["content"], matched)
+                log.info(f"[generate] パターンCTA挿入: 「{matched.title}」(ID:{matched.id})")
+            else:
+                log.debug(f"[generate] マッチするパターンなし（KW={keyword!r}）")
+
     log.info(f"[generate] 完了: 「{article['title']}」")
     return article
 
