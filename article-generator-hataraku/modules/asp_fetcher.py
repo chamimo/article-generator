@@ -127,7 +127,7 @@ def fetch_asp_links(
 
     results.sort(key=lambda x: x["priority"])
 
-    # ── 混入チェック: B列のブログ名が複数種類ある場合は警告 ──
+    # ── 混入チェック: B列のブログ名が別ブログの行は除外 ──
     if blog_display_name:
         other_blogs = {
             r["blog"] for r in results
@@ -137,6 +137,14 @@ def fetch_asp_links(
             log.warning(
                 f"[asp_fetcher] ⚠️  混入検知: 「{used}」に別ブログの案件が含まれています "
                 f"→ {other_blogs}（{blog_display_name} のSSを確認してください）"
+            )
+            before = len(results)
+            results = [
+                r for r in results
+                if not r["blog"] or r["blog"] == blog_display_name
+            ]
+            log.warning(
+                f"[asp_fetcher] ⚠️  別ブログ案件を除外: {before - len(results)}件除外 → {len(results)}件に絞り込み"
             )
 
     print(f"[asp_fetcher] {blog_display_name or ss_id[:16]} / 「{used}」: {len(results)}件")

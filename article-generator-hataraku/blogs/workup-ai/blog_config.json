@@ -1,0 +1,87 @@
+{
+  "_comment": "generate_lite.py マルチブログ設定ファイル - AIVice",
+  "name": "workup-ai",
+  "display_name": "AIVice",
+  "genre": "AI・テクノロジー・副業ツール",
+  "target_length": {
+    "MONETIZE": 9000,
+    "LONGTAIL": 6000,
+    "FUTURE": 3000
+  },
+  "fact_check": true,
+  "candidate_ss_id": "13f8HorKWHGKYpFF5svHF4Cxj5drZ2OKK39FamaVY9n4",
+  "candidate_sheet": "キーワード",
+  "article_count": 3,
+  "min_volume": 0,
+  "article_type_weights": {
+    "longtail": 0.5,
+    "trend": 0.3,
+    "monetize": 0.2
+  },
+  "wp_url_env": "WORKUP_AI_WP_URL",
+  "wp_username_env": "WORKUP_AI_WP_USERNAME",
+  "wp_app_password_env": "WORKUP_AI_WP_APP_PASSWORD",
+  "stop_words": [
+    "おすすめ",
+    "比較",
+    "2026",
+    "ランキング"
+  ],
+  "aliases": [
+    "workup-ai",
+    "aivice"
+  ],
+  "allowed_themes": [
+    "AI",
+    "ChatGPT",
+    "Claude",
+    "Gemini",
+    "生成AI",
+    "AIツール",
+    "副業",
+    "自動化",
+    "プロンプト",
+    "ライティング",
+    "画像生成",
+    "AI活用",
+    "業務効率",
+    "フリーランス",
+    "在宅",
+    "収益化",
+    "ブログ",
+    "ノーコード",
+    "API"
+  ],
+  "ng_keywords": [
+    "ドラマ",
+    "キャスト",
+    "俳優",
+    "女優",
+    "映画",
+    "アニメ",
+    "漫画",
+    "バラエティ",
+    "芸能人",
+    "出演者"
+  ],
+  "asp_links": {},
+  "affili_ss_id": "",
+  "guide_links": {
+    "pv_url": "",
+    "comparison_url": "",
+    "cv_url": ""
+  },
+  "seo_plugin": "seo_simple_pack",
+  "writing_style": {
+    "tone": "実用・シンプル・即実践できる",
+    "persona": "AIツールを日常的に使いこなすWebライター",
+    "closing_style": "具体的な次のアクションを示す締め",
+    "ng_expressions": [
+      "〜してみてください",
+      "〜がおすすめです",
+      "ぜひ〜"
+    ]
+  },
+  "wp_post_status": "draft",
+  "wp_url": "https://workup-ai.com"
+}

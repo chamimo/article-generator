@@ -2939,6 +2939,1146 @@
       "output_tokens": 11887,
       "cost_usd": 0.195339,
       "label": "article:30代 転職 志望動機 例文"
+    },
+    {
+      "timestamp": "2026-05-01T03:00:26.736059+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 81,
+      "cost_usd": 0.000414,
+      "label": "lsi:転職 面接 聞かれること 20代"
+    },
+    {
+      "timestamp": "2026-05-01T03:00:30.236202+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 549,
+      "cost_usd": 0.00234,
+      "label": "kw_research:転職 面接 聞かれること 20代"
+    },
+    {
+      "timestamp": "2026-05-01T03:03:43.566686+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5508,
+      "output_tokens": 12000,
+      "cost_usd": 0.196524,
+      "label": "article:転職 面接 聞かれること 20代"
+    },
+    {
+      "timestamp": "2026-05-01T03:04:12.927745+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 116,
+      "cost_usd": 0.000553,
+      "label": "lsi:障害者 転職 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T03:04:16.361473+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 537,
+      "cost_usd": 0.00229,
+      "label": "kw_research:障害者 転職 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T03:06:45.329634+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5445,
+      "output_tokens": 9760,
+      "cost_usd": 0.162735,
+      "label": "article:障害者 転職 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T03:07:55.538943+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 86,
+      "cost_usd": 0.000436,
+      "label": "lsi:節約 一人暮らし 低収入 女性"
+    },
+    {
+      "timestamp": "2026-05-01T03:07:59.944236+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 647,
+      "cost_usd": 0.002734,
+      "label": "kw_research:節約 一人暮らし 低収入 女性"
+    },
+    {
+      "timestamp": "2026-05-01T03:10:21.622741+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5528,
+      "output_tokens": 8958,
+      "cost_usd": 0.150954,
+      "label": "article:節約 一人暮らし 低収入 女性"
+    },
+    {
+      "timestamp": "2026-05-01T03:11:20.946817+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 118,
+      "output_tokens": 90,
+      "cost_usd": 0.000454,
+      "label": "lsi:忍者めし 鉄の鎧 コンビニ"
+    },
+    {
+      "timestamp": "2026-05-01T03:11:24.213314+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 185,
+      "output_tokens": 574,
+      "cost_usd": 0.002444,
+      "label": "kw_research:忍者めし 鉄の鎧 コンビニ"
+    },
+    {
+      "timestamp": "2026-05-01T03:13:46.554036+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5374,
+      "output_tokens": 9787,
+      "cost_usd": 0.162927,
+      "label": "article:忍者めし 鉄の鎧 コンビニ"
+    },
+    {
+      "timestamp": "2026-05-01T03:17:07.236439+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 94,
+      "cost_usd": 0.000469,
+      "label": "lsi:ゴールデンウィーク デトックス 方法"
+    },
+    {
+      "timestamp": "2026-05-01T03:17:13.838699+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 706,
+      "cost_usd": 0.00297,
+      "label": "kw_research:ゴールデンウィーク デトックス 方法"
+    },
+    {
+      "timestamp": "2026-05-01T03:19:36.923551+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5708,
+      "output_tokens": 9520,
+      "cost_usd": 0.159924,
+      "label": "article:ゴールデンウィーク デトックス 方法"
+    },
+    {
+      "timestamp": "2026-05-01T03:21:13.643303+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 100,
+      "cost_usd": 0.000493,
+      "label": "lsi:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T03:21:18.140371+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 533,
+      "cost_usd": 0.002278,
+      "label": "kw_research:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T03:23:45.450523+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5329,
+      "output_tokens": 9376,
+      "cost_usd": 0.156627,
+      "label": "article:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T03:56:43.645166+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 96,
+      "cost_usd": 0.000477,
+      "label": "lsi:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T03:56:47.177148+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 476,
+      "cost_usd": 0.00205,
+      "label": "kw_research:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T03:59:10.898058+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5271,
+      "output_tokens": 9361,
+      "cost_usd": 0.156228,
+      "label": "article:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T04:00:02.530096+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 121,
+      "output_tokens": 101,
+      "cost_usd": 0.000501,
+      "label": "lsi:飛騨高山 春 桜 臥龍桜 見頃"
+    },
+    {
+      "timestamp": "2026-05-01T04:00:07.312456+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 188,
+      "output_tokens": 606,
+      "cost_usd": 0.002574,
+      "label": "kw_research:飛騨高山 春 桜 臥龍桜 見頃"
+    },
+    {
+      "timestamp": "2026-05-01T04:02:24.658392+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T04",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5408,
+      "output_tokens": 9117,
+      "cost_usd": 0.152979,
+      "label": "article:飛騨高山 春 桜 臥龍桜 見頃"
+    },
+    {
+      "timestamp": "2026-05-01T04:15:25.770645+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 92,
+      "cost_usd": 0.000457,
+      "label": "lsi:ChatGPT 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T04:15:29.109320+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 514,
+      "cost_usd": 0.002198,
+      "label": "kw_research:ChatGPT 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T04:18:04.028733+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T04",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5509,
+      "output_tokens": 9786,
+      "cost_usd": 0.163317,
+      "label": "article:ChatGPT 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T04:18:41.258244+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 78,
+      "cost_usd": 0.000404,
+      "label": "lsi:オンライン学習 プログラミング 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T04:18:45.427425+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 697,
+      "cost_usd": 0.002934,
+      "label": "kw_research:オンライン学習 プログラミング 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T04:21:16.553356+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T04",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5475,
+      "output_tokens": 9774,
+      "cost_usd": 0.163035,
+      "label": "article:オンライン学習 プログラミング 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T05:48:38.519062+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 82,
+      "cost_usd": 0.000421,
+      "label": "lsi:転職先 合わない 1ヶ月 40代"
+    },
+    {
+      "timestamp": "2026-05-01T05:48:42.621579+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 576,
+      "cost_usd": 0.00245,
+      "label": "kw_research:転職先 合わない 1ヶ月 40代"
+    },
+    {
+      "timestamp": "2026-05-01T05:51:29.900188+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T05",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5202,
+      "output_tokens": 10313,
+      "cost_usd": 0.170301,
+      "label": "article:転職先 合わない 1ヶ月 40代"
+    },
+    {
+      "timestamp": "2026-05-01T05:52:05.352498+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 127,
+      "cost_usd": 0.000597,
+      "label": "lsi:ChatGPT 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T05:52:09.053507+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 497,
+      "cost_usd": 0.00213,
+      "label": "kw_research:ChatGPT 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T05:54:40.530553+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T05",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5242,
+      "output_tokens": 9572,
+      "cost_usd": 0.159306,
+      "label": "article:ChatGPT 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T05:55:29.389574+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 104,
+      "output_tokens": 88,
+      "cost_usd": 0.000435,
+      "label": "lsi:Claude AI 活用"
+    },
+    {
+      "timestamp": "2026-05-01T05:55:32.494687+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 171,
+      "output_tokens": 355,
+      "cost_usd": 0.001557,
+      "label": "kw_research:Claude AI 活用"
+    },
+    {
+      "timestamp": "2026-05-01T05:58:01.882351+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T05",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4835,
+      "output_tokens": 9301,
+      "cost_usd": 0.15402,
+      "label": "article:Claude AI 活用"
+    },
+    {
+      "timestamp": "2026-05-01T06:01:29.621197+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 91,
+      "cost_usd": 0.000456,
+      "label": "lsi:節約 一人暮らし 低収入 女性"
+    },
+    {
+      "timestamp": "2026-05-01T06:01:34.167327+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 620,
+      "cost_usd": 0.002626,
+      "label": "kw_research:節約 一人暮らし 低収入 女性"
+    },
+    {
+      "timestamp": "2026-05-01T06:04:21.359450+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5221,
+      "output_tokens": 10482,
+      "cost_usd": 0.172893,
+      "label": "article:節約 一人暮らし 低収入 女性"
+    },
+    {
+      "timestamp": "2026-05-01T06:04:58.630795+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 118,
+      "output_tokens": 91,
+      "cost_usd": 0.000458,
+      "label": "lsi:忍者めし 鉄の鎧 コンビニ"
+    },
+    {
+      "timestamp": "2026-05-01T06:05:02.704633+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 185,
+      "output_tokens": 622,
+      "cost_usd": 0.002636,
+      "label": "kw_research:忍者めし 鉄の鎧 コンビニ"
+    },
+    {
+      "timestamp": "2026-05-01T06:07:18.502352+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5132,
+      "output_tokens": 9197,
+      "cost_usd": 0.153351,
+      "label": "article:忍者めし 鉄の鎧 コンビニ"
+    },
+    {
+      "timestamp": "2026-05-01T06:07:38.052117+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 118,
+      "output_tokens": 95,
+      "cost_usd": 0.000474,
+      "label": "lsi:忍者めし 鉄の鎧 コンビニ"
+    },
+    {
+      "timestamp": "2026-05-01T06:07:42.158715+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 185,
+      "output_tokens": 640,
+      "cost_usd": 0.002708,
+      "label": "kw_research:忍者めし 鉄の鎧 コンビニ"
+    },
+    {
+      "timestamp": "2026-05-01T06:10:05.537583+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5151,
+      "output_tokens": 9521,
+      "cost_usd": 0.158268,
+      "label": "article:忍者めし 鉄の鎧 コンビニ"
+    },
+    {
+      "timestamp": "2026-05-01T06:14:08.176073+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 107,
+      "cost_usd": 0.000518,
+      "label": "lsi:雑貨 トレンド かわいい"
+    },
+    {
+      "timestamp": "2026-05-01T06:14:11.850603+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 615,
+      "cost_usd": 0.002603,
+      "label": "kw_research:雑貨 トレンド かわいい"
+    },
+    {
+      "timestamp": "2026-05-01T06:16:49.176543+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5126,
+      "output_tokens": 10212,
+      "cost_usd": 0.168558,
+      "label": "article:雑貨 トレンド かわいい"
+    },
+    {
+      "timestamp": "2026-05-01T06:18:02.382552+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 96,
+      "cost_usd": 0.000477,
+      "label": "lsi:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T06:18:06.405618+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 501,
+      "cost_usd": 0.00215,
+      "label": "kw_research:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T06:20:42.126287+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5008,
+      "output_tokens": 9983,
+      "cost_usd": 0.164769,
+      "label": "article:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T06:20:59.842145+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 89,
+      "cost_usd": 0.000449,
+      "label": "lsi:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T06:21:03.207410+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 499,
+      "cost_usd": 0.002142,
+      "label": "kw_research:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T06:23:44.856554+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4996,
+      "output_tokens": 10010,
+      "cost_usd": 0.165138,
+      "label": "article:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T06:24:16.470495+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 91,
+      "cost_usd": 0.000455,
+      "label": "lsi:飛騨高山 古い町並み 散策"
+    },
+    {
+      "timestamp": "2026-05-01T06:24:20.980521+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 761,
+      "cost_usd": 0.003189,
+      "label": "kw_research:飛騨高山 古い町並み 散策"
+    },
+    {
+      "timestamp": "2026-05-01T06:27:12.965092+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5255,
+      "output_tokens": 10714,
+      "cost_usd": 0.176475,
+      "label": "article:飛騨高山 古い町並み 散策"
+    },
+    {
+      "timestamp": "2026-05-01T06:42:06.130586+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 107,
+      "output_tokens": 97,
+      "cost_usd": 0.000474,
+      "label": "lsi:Python 独学 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T06:42:10.258668+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 174,
+      "output_tokens": 611,
+      "cost_usd": 0.002583,
+      "label": "kw_research:Python 独学 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T06:44:48.123148+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5100,
+      "output_tokens": 9989,
+      "cost_usd": 0.165135,
+      "label": "article:Python 独学 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T06:45:06.323603+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 107,
+      "output_tokens": 80,
+      "cost_usd": 0.000406,
+      "label": "lsi:Python 独学 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T06:45:10.528224+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 174,
+      "output_tokens": 609,
+      "cost_usd": 0.002575,
+      "label": "kw_research:Python 独学 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T06:47:46.853744+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5081,
+      "output_tokens": 9739,
+      "cost_usd": 0.161328,
+      "label": "article:Python 独学 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T06:49:11.443116+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 106,
+      "output_tokens": 88,
+      "cost_usd": 0.000437,
+      "label": "lsi:JavaScript 学習 無料"
+    },
+    {
+      "timestamp": "2026-05-01T06:49:14.754554+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 173,
+      "output_tokens": 500,
+      "cost_usd": 0.002138,
+      "label": "kw_research:JavaScript 学習 無料"
+    },
+    {
+      "timestamp": "2026-05-01T06:52:00.962537+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T06",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5201,
+      "output_tokens": 10458,
+      "cost_usd": 0.172473,
+      "label": "article:JavaScript 学習 無料"
+    },
+    {
+      "timestamp": "2026-05-01T08:20:20.507739+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 90,
+      "cost_usd": 0.00045,
+      "label": "lsi:高校生 通信教育 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T08:20:24.222103+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 525,
+      "cost_usd": 0.002244,
+      "label": "kw_research:高校生 通信教育 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T08:23:16.319888+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4760,
+      "output_tokens": 11011,
+      "cost_usd": 0.179445,
+      "label": "article:高校生 通信教育 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T08:23:55.483138+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 95,
+      "cost_usd": 0.00047,
+      "label": "lsi:高校生 通信教育 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T08:23:59.055957+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 574,
+      "cost_usd": 0.00244,
+      "label": "kw_research:高校生 通信教育 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T08:26:50.756217+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4805,
+      "output_tokens": 10721,
+      "cost_usd": 0.17523,
+      "label": "article:高校生 通信教育 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T09:42:43.716617+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 93,
+      "cost_usd": 0.000465,
+      "label": "lsi:中学生 勉強 やる気 出す 方法"
+    },
+    {
+      "timestamp": "2026-05-01T09:42:47.776340+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 596,
+      "cost_usd": 0.00253,
+      "label": "kw_research:中学生 勉強 やる気 出す 方法"
+    },
+    {
+      "timestamp": "2026-05-01T09:45:23.105262+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4974,
+      "output_tokens": 10851,
+      "cost_usd": 0.177687,
+      "label": "article:中学生 勉強 やる気 出す 方法"
+    },
+    {
+      "timestamp": "2026-05-01T09:46:30.207189+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 102,
+      "cost_usd": 0.0005,
+      "label": "lsi:小学生 オンライン学習 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T09:46:34.039974+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 645,
+      "cost_usd": 0.002726,
+      "label": "kw_research:小学生 オンライン学習 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T09:48:41.110872+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4809,
+      "output_tokens": 9315,
+      "cost_usd": 0.154152,
+      "label": "article:小学生 オンライン学習 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T09:49:53.718215+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 98,
+      "cost_usd": 0.000484,
+      "label": "lsi:小学生 プログラミング 学習 始め方"
+    },
+    {
+      "timestamp": "2026-05-01T09:49:57.837608+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 652,
+      "cost_usd": 0.002754,
+      "label": "kw_research:小学生 プログラミング 学習 始め方"
+    },
+    {
+      "timestamp": "2026-05-01T09:52:09.012427+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5031,
+      "output_tokens": 9493,
+      "cost_usd": 0.157488,
+      "label": "article:小学生 プログラミング 学習 始め方"
+    },
+    {
+      "timestamp": "2026-05-01T09:52:58.378131+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 105,
+      "cost_usd": 0.000511,
+      "label": "lsi:幼児 英語 教材 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T09:53:02.453815+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 616,
+      "cost_usd": 0.002609,
+      "label": "kw_research:幼児 英語 教材 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T09:55:28.869435+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4784,
+      "output_tokens": 10199,
+      "cost_usd": 0.167337,
+      "label": "article:幼児 英語 教材 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T09:56:32.948867+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 119,
+      "output_tokens": 130,
+      "cost_usd": 0.000615,
+      "label": "lsi:幼児 知育 アプリ 無料 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T09:56:37.514620+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 186,
+      "output_tokens": 725,
+      "cost_usd": 0.003049,
+      "label": "kw_research:幼児 知育 アプリ 無料 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T09:58:48.018690+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5137,
+      "output_tokens": 9360,
+      "cost_usd": 0.155811,
+      "label": "article:幼児 知育 アプリ 無料 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T09:59:37.663760+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 118,
+      "output_tokens": 113,
+      "cost_usd": 0.000546,
+      "label": "lsi:英語 オンライン学習 おすすめ 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T09:59:41.794326+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 185,
+      "output_tokens": 650,
+      "cost_usd": 0.002748,
+      "label": "kw_research:英語 オンライン学習 おすすめ 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T10:02:13.760845+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T10",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4828,
+      "output_tokens": 10777,
+      "cost_usd": 0.176139,
+      "label": "article:英語 オンライン学習 おすすめ 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T10:03:18.972912+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 86,
+      "cost_usd": 0.000434,
+      "label": "lsi:英語 独学 勉強法 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T10:03:23.237705+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 645,
+      "cost_usd": 0.002724,
+      "label": "kw_research:英語 独学 勉強法 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T10:05:45.004987+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T10",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4788,
+      "output_tokens": 9807,
+      "cost_usd": 0.161469,
+      "label": "article:英語 独学 勉強法 初心者"
+    },
+    {
+      "timestamp": "2026-05-01T10:06:35.517883+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 94,
+      "cost_usd": 0.000466,
+      "label": "lsi:ITパスポート 独学 勉強法"
+    },
+    {
+      "timestamp": "2026-05-01T10:06:39.331901+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 561,
+      "cost_usd": 0.002387,
+      "label": "kw_research:ITパスポート 独学 勉強法"
+    },
+    {
+      "timestamp": "2026-05-01T10:09:01.106905+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T10",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4710,
+      "output_tokens": 10185,
+      "cost_usd": 0.166905,
+      "label": "article:ITパスポート 独学 勉強法"
+    },
+    {
+      "timestamp": "2026-05-01T10:10:01.993048+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 67,
+      "cost_usd": 0.000358,
+      "label": "lsi:資格 通信講座 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T10:10:05.454327+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 606,
+      "cost_usd": 0.002567,
+      "label": "kw_research:資格 通信講座 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T10:12:19.871562+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T10",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4738,
+      "output_tokens": 9651,
+      "cost_usd": 0.158979,
+      "label": "article:資格 通信講座 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T12:49:22.601153+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 96,
+      "cost_usd": 0.000477,
+      "label": "lsi:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T12:49:26.055903+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 494,
+      "cost_usd": 0.002122,
+      "label": "kw_research:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T12:51:57.360159+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T12",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4656,
+      "output_tokens": 9694,
+      "cost_usd": 0.159378,
+      "label": "article:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T12:52:32.476210+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 118,
+      "output_tokens": 152,
+      "cost_usd": 0.000702,
+      "label": "lsi:飛騨高山 温泉 宿 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T12:52:36.331987+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 185,
+      "output_tokens": 616,
+      "cost_usd": 0.002612,
+      "label": "kw_research:飛騨高山 温泉 宿 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T12:55:27.963873+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T12",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4842,
+      "output_tokens": 11047,
+      "cost_usd": 0.180231,
+      "label": "article:飛騨高山 温泉 宿 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-01T14:49:54.777210+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 93,
+      "cost_usd": 0.000465,
+      "label": "lsi:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T14:49:58.202692+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 510,
+      "cost_usd": 0.002186,
+      "label": "kw_research:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T14:52:19.404150+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T14",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4669,
+      "output_tokens": 10073,
+      "cost_usd": 0.165102,
+      "label": "article:高山 中橋 歴史 わかりやすく"
+    },
+    {
+      "timestamp": "2026-05-01T14:52:38.444955+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 195,
+      "cost_usd": 0.000873,
+      "label": "lsi:飛騨高山 朝市 楽しみ方"
+    },
+    {
+      "timestamp": "2026-05-01T14:52:42.256198+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 653,
+      "cost_usd": 0.002758,
+      "label": "kw_research:飛騨高山 朝市 楽しみ方"
+    },
+    {
+      "timestamp": "2026-05-01T14:55:00.489554+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T14",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4911,
+      "output_tokens": 10133,
+      "cost_usd": 0.166728,
+      "label": "article:飛騨高山 朝市 楽しみ方"
     }
   ],
   "events": [
@@ -2956,6 +4096,26 @@
       "timestamp": "2026-04-11T19:05:05.111782+00:00",
       "type": "daily_limit",
       "message": "[api_guard] 🛑 日次上限超過: 本日のコスト $2.1500 >= $2.00\n  翌日（UTC）まで待つか、DAILY_LIMIT_USD を引き上げてください。"
+    },
+    {
+      "timestamp": "2026-05-01T03:26:39.704047+00:00",
+      "type": "hourly_limit",
+      "message": "[api_guard] 🛑 時間上限超過: 直近1時間のコスト $1.0076 >= $1.00\n  1時間後に再試行するか、HOURLY_LIMIT_USD を引き上げてください。"
+    },
+    {
+      "timestamp": "2026-05-01T03:54:27.230501+00:00",
+      "type": "hourly_limit",
+      "message": "[api_guard] 🛑 時間上限超過: 直近1時間のコスト $1.0076 >= $1.00\n  1時間後に再試行するか、HOURLY_LIMIT_USD を引き上げてください。"
+    },
+    {
+      "timestamp": "2026-05-01T05:58:42.482930+00:00",
+      "type": "daily_limit",
+      "message": "[api_guard] 🛑 デプロイ日次上限超過: 本日のコスト $2.1459 >= $2.00\n  翌日（UTC）まで待つか、DAILY_LIMIT_USD を引き上げてください。"
+    },
+    {
+      "timestamp": "2026-05-01T06:28:14.725144+00:00",
+      "type": "global_article_limit",
+      "message": "[api_guard] 🛑 全体日次記事数上限: 本日合計 20件 >= 20件\n  翌日（UTC）にリセットされます。"
     }
   ]
 }

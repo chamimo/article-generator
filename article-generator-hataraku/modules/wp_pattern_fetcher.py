@@ -169,30 +169,56 @@ def match_pattern(keyword: str, patterns: list[PatternItem]) -> PatternItem | No
 # 記事 HTML への CTA 挿入
 # ──────────────────────────────────────────────────────────
 
-# CTA を挿入する直前のアンカーパターン（優先順）
-_CTA_ANCHORS = [
-    r'<!-- /wp:heading -->(?=\s*<!-- wp:paragraph -->)',  # 見出し直後の段落前
-    r'(</h[23]>)',                                        # h2/h3 タグ直後
-]
-
-# 記事末尾の「まとめ」相当の見出しを探すパターン
-_SUMMARY_HEADING = re.compile(
-    r'(<!-- wp:heading[^>]*>.*?<h[23][^>]*>(?:まとめ|総まとめ|最後に|おわりに)[^<]*</h[23]>.*?<!-- /wp:heading -->)',
-    re.DOTALL | re.IGNORECASE,
+# wp:paragraph ブロック全体にマッチ
+_WP_PARA_BLOCK = re.compile(
+    r'<!-- wp:paragraph[^>]*-->.*?<!-- /wp:paragraph -->',
+    re.DOTALL,
 )
 
-# フォールバック: 末尾 </p> の直後
-_LAST_P = re.compile(r'(</p>\s*)$', re.DOTALL)
+# SWELL「この記事のポイント」ブロックの閉じタグ
+_POINTS_BLOCK_END = re.compile(
+    r'<!-- /wp:loos/cap-block -->',
+    re.IGNORECASE,
+)
+
+
+def _find_points_block_end(article_html: str) -> int | None:
+    """「この記事のポイント」ブロック（wp:loos/cap-block）の終端位置を返す。"""
+    m = _POINTS_BLOCK_END.search(article_html)
+    return m.end() if m else None
+
+
+def _find_mention_end(article_html: str, tokens: frozenset[str]) -> int | None:
+    """
+    パターンのトークンを含む最後の wp:paragraph ブロックの終端位置を返す。
+    見つからなければ None。
+    """
+    search_terms = sorted(
+        (t for t in tokens if len(t) >= 2),
+        key=len, reverse=True,
+    )[:8]
+    if not search_terms:
+        return None
+
+    mention_end: int | None = None
+    for m in _WP_PARA_BLOCK.finditer(article_html):
+        block_lower = m.group().lower()
+        if any(t in block_lower for t in search_terms):
+            mention_end = m.end()
+
+    return mention_end
 
 
 def insert_pattern_cta(article_html: str, pattern: PatternItem) -> str:
     """
-    記事 HTML の CTA 位置にパターン HTML を挿入して返す。
+    記事 HTML にパターン CTA を最大 3 箇所挿入して返す。
 
-    挿入位置の優先順:
-        1. 「まとめ」系見出しブロックの直前
-        2. 末尾の </p> の直後
-        3. 上記なし → 末尾に追記
+    挿入位置（元 HTML の位置で計算し、後ろ→前の順で挿入してインデックスずれを防ぐ）:
+        1. 「この記事のポイント」ブロック（wp:loos/cap-block）直後（常に）
+        2. 案件名を含む最後の段落ブロック直後（該当段落が見つかった場合のみ）
+        3. 記事末尾（常に）
+
+    複数案件がある場合は呼び出し元 match_pattern() がスコア最高の 1 件を選ぶ。
 
     Returns:
         str  挿入済みの記事 HTML
@@ -207,20 +233,40 @@ def insert_pattern_cta(article_html: str, pattern: PatternItem) -> str:
         else f"\n{pattern.html.strip()}\n"
     )
 
-    # 1. 「まとめ」見出しの直前に挿入
-    m = _SUMMARY_HEADING.search(article_html)
-    if m:
-        pos = m.start()
-        log.debug(f"[wp_pattern_fetcher] 「まとめ」見出し直前 (pos={pos}) に挿入")
-        return article_html[:pos] + cta_block + article_html[pos:]
+    original_len = len(article_html)
 
-    # 2. 末尾 </p> の直後に挿入
-    m2 = _LAST_P.search(article_html)
-    if m2:
-        pos = m2.end()
-        log.debug(f"[wp_pattern_fetcher] 末尾 </p> 直後 (pos={pos}) に挿入")
-        return article_html[:pos] + cta_block + article_html[pos:]
+    # --- 元 HTML で挿入位置をすべて計算 ---
 
-    # 3. 末尾に追記
-    log.debug("[wp_pattern_fetcher] 末尾に追記")
-    return article_html + cta_block
+    # 位置①: 「この記事のポイント」直後
+    points_pos = _find_points_block_end(article_html)
+
+    # 位置②: 案件言及段落直後
+    # 末尾から 50 字以内（＝言及段落が記事の最終段落）は末尾挿入と隣接するためスキップ
+    mention_pos = _find_mention_end(article_html, pattern.tokens)
+    if mention_pos is not None and mention_pos >= original_len - 50:
+        mention_pos = None
+
+    # 位置③: 末尾
+    end_pos = original_len
+
+    # --- 後ろ→前の順に挿入（インデックスがずれない） ---
+
+    # ③ 末尾
+    article_html = article_html[:end_pos] + cta_block + article_html[end_pos:]
+    log.debug("[wp_pattern_fetcher] 記事末尾に挿入")
+
+    # ② 言及段落直後（③より前なので safe）
+    if mention_pos is not None:
+        article_html = article_html[:mention_pos] + cta_block + article_html[mention_pos:]
+        log.debug(f"[wp_pattern_fetcher] 「{pattern.title}」言及段落直後 (pos={mention_pos}) に挿入")
+    else:
+        log.debug(f"[wp_pattern_fetcher] 「{pattern.title}」の言及が見つからず or 末尾付近のため中間挿入スキップ")
+
+    # ① ポイント直後（最も前なので最後に挿入）
+    if points_pos is not None:
+        article_html = article_html[:points_pos] + cta_block + article_html[points_pos:]
+        log.debug(f"[wp_pattern_fetcher] 「この記事のポイント」直後 (pos={points_pos}) に挿入")
+    else:
+        log.debug("[wp_pattern_fetcher] 「この記事のポイント」ブロックが見つからず（スキップ）")
+
+    return article_html

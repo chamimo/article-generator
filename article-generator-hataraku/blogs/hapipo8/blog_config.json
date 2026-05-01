@@ -1,0 +1,70 @@
+{
+  "_comment": "generate_lite.py マルチブログ設定ファイル - 気になることブログ",
+  "name": "hapipo8",
+  "display_name": "気になることブログ",
+  "genre": "雑学・エンタメ・生活情報",
+  "target_length": {
+    "MONETIZE": 9000,
+    "LONGTAIL": 6000,
+    "FUTURE": 3000
+  },
+  "fact_check": true,
+  "candidate_ss_id": "1Mz5yztHfu8gnQ6JaPau47daK0Y4ykogTKNWyPtdDGrM",
+  "candidate_sheet": "キーワード",
+  "article_count": 3,
+  "min_volume": 0,
+  "article_type_weights": {
+    "longtail": 0.5,
+    "trend": 0.4,
+    "monetize": 0.1
+  },
+  "wp_url_env": "HAPIPO8_WP_URL",
+  "wp_username_env": "HAPIPO8_WP_USERNAME",
+  "wp_app_password_env": "HAPIPO8_WP_APP_PASSWORD",
+  "stop_words": [
+    "2026"
+  ],
+  "aliases": [
+    "hapipo8"
+  ],
+  "allowed_themes": [
+    "雑学",
+    "豆知識",
+    "なぜ",
+    "理由",
+    "意味",
+    "違い",
+    "方法",
+    "使い方",
+    "生活",
+    "暮らし",
+    "トレンド",
+    "話題",
+    "気になる",
+    "調べてみた",
+    "食べ物",
+    "健康",
+    "お金",
+    "ことば"
+  ],
+  "ng_keywords": [],
+  "asp_links": {},
+  "affili_ss_id": "",
+  "guide_links": {
+    "pv_url": "",
+    "comparison_url": "",
+    "cv_url": ""
+  },
+  "seo_plugin": "seo_simple_pack",
+  "writing_style": {
+    "tone": "親しみやすく・読みやすく・好奇心をくすぐる",
+    "persona": "日常のふとした疑問を深掘りするブロガー",
+    "closing_style": "読後に「へ〜！」と思わせる余韻のある締め",
+    "ng_expressions": [
+      "ぜひ〜",
+      "〜がおすすめです"
+    ]
+  },
+  "wp_post_status": "publish",
+  "wp_url": "https://hapipo8.com"
+}

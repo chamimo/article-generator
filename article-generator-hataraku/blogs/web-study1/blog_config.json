@@ -1,0 +1,84 @@
+{
+  "_comment": "generate_lite.py マルチブログ設定ファイル - オンライン学習ナビ",
+  "name": "web-study1",
+  "display_name": "オンライン学習ナビ",
+  "genre": "オンライン学習・プログラミング・資格・スキルアップ",
+  "target_length": {
+    "MONETIZE": 9000,
+    "LONGTAIL": 6000,
+    "FUTURE": 3000
+  },
+  "fact_check": true,
+  "candidate_ss_id": "1oRQdKWPBsy6f9N9rJORPzn59T4V4qBbh4KtMR4dCcqk",
+  "candidate_sheet": "キーワード",
+  "article_count": 3,
+  "min_volume": 0,
+  "article_type_weights": {
+    "longtail": 0.5,
+    "trend": 0.2,
+    "monetize": 0.3
+  },
+  "wp_url_env": "WEB_STUDY1_WP_URL",
+  "wp_username_env": "WEB_STUDY1_WP_USERNAME",
+  "wp_app_password_env": "WEB_STUDY1_WP_APP_PASSWORD",
+  "stop_words": [
+    "2026",
+    "ランキング"
+  ],
+  "aliases": [
+    "web-study1",
+    "web-study"
+  ],
+  "allowed_themes": [
+    "オンライン学習",
+    "プログラミング",
+    "資格",
+    "スキルアップ",
+    "Udemy",
+    "Coursera",
+    "ProgateProgete",
+    "Python",
+    "JavaScript",
+    "英語",
+    "TOEIC",
+    "ITパスポート",
+    "データサイエンス",
+    "Web制作",
+    "副業",
+    "転職",
+    "独学",
+    "通信教育"
+  ],
+  "ng_keywords": [
+    "ドラマ",
+    "キャスト",
+    "俳優",
+    "女優",
+    "映画",
+    "アニメ",
+    "漫画",
+    "バラエティ",
+    "芸能人",
+    "出演者"
+  ],
+  "asp_links": {},
+  "affili_ss_id": "",
+  "guide_links": {
+    "pv_url": "",
+    "comparison_url": "",
+    "cv_url": ""
+  },
+  "seo_plugin": "seo_simple_pack",
+  "writing_style": {
+    "tone": "丁寧・具体的・挫折しない学習法を重視",
+    "persona": "独学でスキルを身につけたWebエンジニア",
+    "closing_style": "次の学習ステップを明示する実用的な締め",
+    "ng_expressions": [
+      "〜してみてください",
+      "〜がおすすめです",
+      "ぜひ〜"
+    ]
+  },
+  "wp_post_status": "draft",
+  "wp_url": "https://web-study1.com"
+}

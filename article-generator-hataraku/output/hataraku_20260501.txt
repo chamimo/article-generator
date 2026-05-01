@@ -1,0 +1,113 @@
+2026-05-01 12:00:20 [INFO] ============================================================
+2026-05-01 12:00:20 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-01 12:00:20 [INFO] ============================================================
+2026-05-01 12:00:20 [INFO] 対象ブログ: ['hataraku']
+2026-05-01 12:00:21 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-01 12:00:21 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-01 12:00:21 [INFO] ════════════════════════════════════════════════════════════
+2026-05-01 12:00:21 [INFO]   genre            : 転職・副業・キャリア
+2026-05-01 12:00:21 [INFO]   fact_check       : True
+2026-05-01 12:00:21 [INFO]   article_type_mix : True
+2026-05-01 12:00:21 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-01 12:00:21 [INFO]   article_count    : 1  dry_run: False
+2026-05-01 12:00:23 [WARNING] [hataraku] WP記事取得失敗（重複チェックなしで続行）: HTTPSConnectionPool(host='hataraku-navi.com', port=443): Max retries exceeded with url: /wp-json/wp/v2/posts?status=publish%2Cdraft%2Cprivate&_fields=id%2Ctitle%2Cdate%2Cslug%2Cstatus%2Clink&per_page=100&page=1 (Caused by NameResolutionError("HTTPSConnection(host='hataraku-navi.com', port=443): Failed to resolve 'hataraku-navi.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-01 12:00:23 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-01 12:00:25 [INFO] [fetch] サブKW紐付け: 929件 → 63記事に統合
+2026-05-01 12:00:25 [INFO] [fetch] [キーワード] メインKW: 43件（vol≥30 or N/A）  サブKW除外: 929件（統合対象）  投稿済みスキップ: 94件  テーマ外除外: 38件  aim内訳: [aim:81]
+2026-05-01 12:00:25 [INFO] [select] 1件選定 (要求=1件)
+2026-05-01 12:00:25 [INFO] [select]   1. 「転職 面接 聞かれること 20代」 vol=0 seo=N/A comp=N/A
+2026-05-01 12:00:25 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-01 12:00:25 [INFO] [hataraku] 候補: 43件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$2.00 / 時間$1.00)  全体: $0.0000(¥0) / 0記事
+2026-05-01 12:00:25 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-01 12:00:25 [INFO] ────────────────────────────────────────────────────────────
+2026-05-01 12:00:25 [INFO] [hataraku] [1/1] [LONGTAIL] 「転職 面接 聞かれること 20代」 vol=0 ★AIM
+2026-05-01 12:00:25 [INFO] ────────────────────────────────────────────────────────────
+2026-05-01 12:00:25 [INFO] [generate] 生成開始: 「転職 面接 聞かれること 20代」(vol:0) fact_check=True target_length=6,000字  サブKW:6件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「転職 面接 聞かれること 20代」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$2.00 / 時間$1.00)  全体: $0.0000(¥0) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=113 out=81 → $0.0004  (lsi:転職 面接 聞かれること 20代)
+[api_guard] 本日の使用量: $0.0004 / ¥0 (295回呼び出し)
+[article_generator] 共起語: 転職理由、志望動機、自己PR、職務経歴、キャリアプラン、長所短所、退職理由、年収交渉、服装マナー、逆質問、未経験業界、ス...
+[article_generator] サブKW候補: 6件 (脱退一時金 受け取るべき 転職 20代〜)
+[api_guard] ✅ 本日: $0.0004 / 1時間: $0.0004  (上限 日次$2.00 / 時間$1.00)  全体: $0.0004(¥0) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=180 out=549 → $0.0023  (kw_research:転職 面接 聞かれること 20代)
+[api_guard] 本日の使用量: $0.0028 / ¥0 (296回呼び出し)
+[article_generator] サジェスト: 転職 面接 聞かれること 20代 質問・転職 面接 聞かれること 20代 対策・転職 面接 聞かれること 20代 回答例...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.0028 / 1時間: $0.0028  (上限 日次$2.00 / 時間$1.00)  全体: $0.0028(¥0) / 0記事
+[api_guard] 記録: claude-sonnet-4-6 in=5508 out=12000 → $0.1965  (article:転職 面接 聞かれること 20代)
+[api_guard] 本日の使用量: $0.1993 / ¥29 (297回呼び出し)
+2026-05-01 12:03:43 [ERROR] [hataraku] [1/1] ❌ エラー（続行）: max_tokens上限（12000）に到達しました。JSONが途切れています。 出力トークン: 12000
+2026-05-01 12:03:43 [INFO] [hataraku] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-01 12:03:43 [INFO] 
+============================================================
+2026-05-01 12:03:43 [INFO] 【全体サマリー】
+2026-05-01 12:03:43 [INFO]   ブログ数  : 1件
+2026-05-01 12:03:43 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-01 12:03:43 [INFO]   所要時間  : 202.8秒
+2026-05-01 12:03:43 [INFO]   ❌ [hataraku] 転職 面接 聞かれること 20代 → (生成失敗)
+2026-05-01 12:03:43 [INFO] ============================================================
+===== [HATARAKU] 実行開始: 2026-05-01 12:04:05 =====
+2026-05-01 12:04:07 [INFO] ============================================================
+2026-05-01 12:04:07 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-01 12:04:07 [INFO] ============================================================
+2026-05-01 12:04:07 [INFO] 対象ブログ: ['hataraku']
+2026-05-01 12:04:08 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-01 12:04:08 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-01 12:04:08 [INFO] ════════════════════════════════════════════════════════════
+2026-05-01 12:04:08 [INFO]   genre            : 転職・副業・キャリア
+2026-05-01 12:04:08 [INFO]   fact_check       : True
+2026-05-01 12:04:08 [INFO]   article_type_mix : True
+2026-05-01 12:04:08 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-01 12:04:08 [INFO]   article_count    : 1  dry_run: False
+2026-05-01 12:04:09 [WARNING] [hataraku] WP記事取得失敗（重複チェックなしで続行）: HTTPSConnectionPool(host='hataraku-navi.com', port=443): Max retries exceeded with url: /wp-json/wp/v2/posts?status=publish%2Cdraft%2Cprivate&_fields=id%2Ctitle%2Cdate%2Cslug%2Cstatus%2Clink&per_page=100&page=1 (Caused by NameResolutionError("HTTPSConnection(host='hataraku-navi.com', port=443): Failed to resolve 'hataraku-navi.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-01 12:04:09 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-01 12:04:11 [INFO] [fetch] サブKW紐付け: 929件 → 63記事に統合
+2026-05-01 12:04:11 [INFO] [fetch] [キーワード] メインKW: 43件（vol≥30 or N/A）  サブKW除外: 929件（統合対象）  投稿済みスキップ: 94件  テーマ外除外: 38件  aim内訳: [aim:81]
+2026-05-01 12:04:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-01 12:04:11 [INFO] [select]   1. 「障害者 転職 おすすめ」 vol=0 seo=N/A comp=N/A
+2026-05-01 12:04:11 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-01 12:04:11 [INFO] [hataraku] 候補: 43件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.1993 / 1時間: $0.1993  (上限 日次$2.00 / 時間$1.00)  全体: $0.1993(¥30) / 1記事
+2026-05-01 12:04:11 [INFO] [api_guard] 本日の使用量: $0.1993 / ¥30 (3回呼び出し)
+2026-05-01 12:04:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-01 12:04:11 [INFO] [hataraku] [1/1] [LONGTAIL] 「障害者 転職 おすすめ」 vol=0 ★AIM
+2026-05-01 12:04:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-01 12:04:11 [INFO] [generate] 生成開始: 「障害者 転職 おすすめ」(vol:0) fact_check=True target_length=6,000字  サブKW:1件  誘導リンク:0件
+[wp_pattern_fetcher] 接続エラー: HTTPSConnectionPool(host='hataraku-navi.com', port=443): Max retries exceeded with url: /wp-json/wp/v2/blocks?per_page=100&page=1&_fields=id%2Ctitle%2Ccontent (Caused by NameResolutionError("HTTPSConnection(host='hataraku-navi.com', port=443): Failed to resolve 'hataraku-navi.com' ([Errno 8] nodename nor servname provided, or not known)"))
+[article_generator] 記事構成生成中: 「障害者 転職 おすすめ」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.1993 / 1時間: $0.1993  (上限 日次$2.00 / 時間$1.00)  全体: $0.1993(¥30) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=111 out=116 → $0.0006  (lsi:障害者 転職 おすすめ)
+[api_guard] 本日の使用量: $0.1998 / ¥29 (298回呼び出し)
+[article_generator] 共起語: 障害者雇用、転職サイト、適職診断、障害者手帳、職業訓練校、ハローワーク、企業の受け入れ体制、給与・待遇、在宅勤務、障害別...
+[article_generator] サブKW候補: 1件 (マイナビ 転職 障害者〜)
+[api_guard] ✅ 本日: $0.1998 / 1時間: $0.1998  (上限 日次$2.00 / 時間$1.00)  全体: $0.1998(¥30) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=178 out=537 → $0.0023  (kw_research:障害者 転職 おすすめ)
+[api_guard] 本日の使用量: $0.2021 / ¥30 (299回呼び出し)
+[article_generator] サジェスト: 障害者 転職 おすすめ 企業・障害者 転職 サイト・障害者 転職 給与...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.2021 / 1時間: $0.2021  (上限 日次$2.00 / 時間$1.00)  全体: $0.2021(¥30) / 1記事
+[api_guard] 記録: claude-sonnet-4-6 in=5445 out=9760 → $0.1627  (article:障害者 転職 おすすめ)
+[api_guard] 本日の使用量: $0.3649 / ¥54 (300回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of laptop, briefcase, star, checkm
+[imagefx] タイトル(英): Disability Career Change Complete Guide
+[article_generator] 完了: 「障害者転職おすすめ完全ガイド｜サイト・企業・成功のコツを徹底解説」 カテゴリ: 未設定(-) タグ: ['障害者雇用', '転職サイト', '障害者転職', '就労支援', 'キャリアカウンセリング']
+2026-05-01 12:06:47 [INFO] [generate] 完了: 「障害者転職おすすめ完全ガイド｜サイト・企業・成功のコツを徹底解説」
+2026-05-01 12:06:47 [INFO] [post] 投稿方式: publish
+[image_generator] アイキャッチ生成 (フラットイラスト): Colorful accessibility icons, job ladder, IT tools, and upwa...
+[image_generator] 完了 (39KB, 1216x832)
+2026-05-01 12:07:04 [INFO] [post] 画像生成完了: 40,750 bytes
+2026-05-01 12:07:04 [ERROR] [hataraku] [1/1] ❌ エラー（続行）: HTTPSConnectionPool(host='hataraku-navi.com', port=443): Max retries exceeded with url: /wp-json/wp/v2/categories?per_page=100 (Caused by NameResolutionError("HTTPSConnection(host='hataraku-navi.com', port=443): Failed to resolve 'hataraku-navi.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-01 12:07:04 [INFO] [hataraku] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-01 12:07:04 [INFO] 
+============================================================
+2026-05-01 12:07:04 [INFO] 【全体サマリー】
+2026-05-01 12:07:04 [INFO]   ブログ数  : 1件
+2026-05-01 12:07:04 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-01 12:07:04 [INFO]   所要時間  : 177.0秒
+2026-05-01 12:07:04 [INFO]   ❌ [hataraku] 障害者 転職 おすすめ → (生成失敗)
+2026-05-01 12:07:04 [INFO] ============================================================
+===== [HATARAKU] 記事生成終了: 2026-05-01 12:07:04 / exit=0 =====

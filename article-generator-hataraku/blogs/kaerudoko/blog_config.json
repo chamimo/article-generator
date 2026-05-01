@@ -1,0 +1,81 @@
+{
+  "_comment": "generate_lite.py マルチブログ設定ファイル - どこで売ってるナビ",
+  "name": "kaerudoko",
+  "display_name": "どこで売ってるナビ",
+  "genre": "ショッピング・購入場所・買い物情報",
+  "target_length": {
+    "MONETIZE": 9000,
+    "LONGTAIL": 6000,
+    "FUTURE": 3000
+  },
+  "fact_check": true,
+  "candidate_ss_id": "16h7aV0iHC8dsQR05xMeKTqUvMSXb2lGcNfxr6P6lp8I",
+  "candidate_sheet": "キーワード",
+  "article_count": 3,
+  "min_volume": 0,
+  "article_type_weights": {
+    "longtail": 0.6,
+    "trend": 0.2,
+    "monetize": 0.2
+  },
+  "wp_url_env": "KAERUDOKO_WP_URL",
+  "wp_username_env": "KAERUDOKO_WP_USERNAME",
+  "wp_app_password_env": "KAERUDOKO_WP_APP_PASSWORD",
+  "stop_words": [
+    "2026",
+    "ランキング"
+  ],
+  "aliases": [
+    "kaerudoko",
+    "dokode-uттеru"
+  ],
+  "allowed_themes": [
+    "どこで売ってる",
+    "販売店",
+    "購入場所",
+    "通販",
+    "Amazon",
+    "楽天",
+    "コンビニ",
+    "ドラッグストア",
+    "ホームセンター",
+    "スーパー",
+    "取扱店",
+    "市販",
+    "ネット購入",
+    "送料",
+    "最安値"
+  ],
+  "ng_keywords": [
+    "ドラマ",
+    "キャスト",
+    "俳優",
+    "女優",
+    "映画",
+    "アニメ",
+    "漫画",
+    "バラエティ",
+    "芸能人",
+    "転職",
+    "副業"
+  ],
+  "asp_links": {},
+  "affili_ss_id": "",
+  "guide_links": {
+    "pv_url": "",
+    "comparison_url": "",
+    "cv_url": ""
+  },
+  "seo_plugin": "seo_simple_pack",
+  "writing_style": {
+    "tone": "親切・わかりやすく・すぐ役立つ",
+    "persona": "買い物好きで全国の販売店情報に詳しい主婦",
+    "closing_style": "最寄りの購入場所を案内する実用的な締め",
+    "ng_expressions": [
+      "〜してみてください",
+      "ぜひ〜"
+    ]
+  },
+  "wp_post_status": "publish",
+  "wp_url": "https://kaerudoko.com"
+}

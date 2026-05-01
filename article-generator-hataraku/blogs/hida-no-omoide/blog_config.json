@@ -1,0 +1,83 @@
+{
+  "_comment": "generate_lite.py マルチブログ設定ファイル - 飛騨の思い出",
+  "name": "hida-no-omoide",
+  "display_name": "飛騨の思い出",
+  "genre": "旅行・観光・飛騨・地域情報",
+  "target_length": {
+    "MONETIZE": 9000,
+    "LONGTAIL": 6000,
+    "FUTURE": 3000
+  },
+  "fact_check": true,
+  "candidate_ss_id": "16DZ0M_EbviPRhZBNwV_FpEJL2SjsuZw9BLKwAJE9AWE",
+  "candidate_sheet": "キーワード",
+  "article_count": 3,
+  "min_volume": 0,
+  "article_type_weights": {
+    "longtail": 0.5,
+    "trend": 0.3,
+    "monetize": 0.2
+  },
+  "wp_url_env": "HIDA_NO_OMOIDE_WP_URL",
+  "wp_username_env": "HIDA_NO_OMOIDE_WP_USERNAME",
+  "wp_app_password_env": "HIDA_NO_OMOIDE_WP_APP_PASSWORD",
+  "stop_words": [
+    "2026",
+    "ランキング"
+  ],
+  "aliases": [
+    "hida-no-omoide",
+    "hida"
+  ],
+  "allowed_themes": [
+    "飛騨",
+    "高山",
+    "白川郷",
+    "古川",
+    "岐阜",
+    "観光",
+    "旅行",
+    "グルメ",
+    "温泉",
+    "宿",
+    "ホテル",
+    "旅館",
+    "お土産",
+    "祭り",
+    "世界遺産",
+    "アクセス",
+    "モデルコース",
+    "日帰り"
+  ],
+  "ng_keywords": [
+    "ドラマ",
+    "キャスト",
+    "俳優",
+    "女優",
+    "アニメ",
+    "漫画",
+    "転職",
+    "副業",
+    "AI"
+  ],
+  "asp_links": {},
+  "affili_ss_id": "",
+  "guide_links": {
+    "pv_url": "",
+    "comparison_url": "",
+    "cv_url": ""
+  },
+  "seo_plugin": "seo_simple_pack",
+  "writing_style": {
+    "tone": "温かく・土地への愛情が伝わる・体験談ベース",
+    "persona": "飛騨地域をよく知る地元在住ライター",
+    "closing_style": "訪れた人の思い出になるような情感ある締め",
+    "ng_expressions": [
+      "〜がおすすめです",
+      "ぜひ〜"
+    ]
+  },
+  "content_notes": "・季節の描写は春夏秋冬をバランスよく扱うこと。桜（春）だけに偏らないように注意する。・季節に関するセクションや見どころ紹介では、夏（新緑・祭り・川遊び）・秋（紅葉・高山祭）・冬（雪景色・温泉）も均等に取り上げること。・記事全体として、春以外の季節の魅力も読者に伝えるよう意識する。",
+  "wp_post_status": "draft",
+  "wp_url": "https://hida-no-omoide.com"
+}

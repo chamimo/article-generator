@@ -2,6 +2,7 @@
 Step 4: Claude APIで記事構成を生成（WordPress SWELL形式）
 """
 import json
+from datetime import date
 import anthropic
 from config import ANTHROPIC_API_KEY
 from modules.image_generator import generate_imagefx_prompt
@@ -10,33 +11,7 @@ from modules.api_guard import check_stop, record_usage
 
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
-# ============================================================
-# アフィリエイトリンク一覧（ツール名 → Pretty Links URL）
-# ============================================================
-AFFILIATE_LINKS = {
-    "PLAUD NOTE": "https://workup-ai.com/plaud",
-    "Notta": "https://workup-ai.com/notta",
-    "Notta（メモ機能）": "https://workup-ai.com/nottamemo",
-    "Udemy AI": "https://workup-ai.com/udemy-ai",
-    "ConoHa AI Canvas": "https://workup-ai.com/conoha_ai_canvas",
-    "Filmora": "https://workup-ai.com/filmora",
-    "バイテック": "https://workup-ai.com/bytech",
-    "すらら": "https://workup-ai.com/surara",
-    "Neuro Dive": "https://workup-ai.com/neurodive",
-    "buzz-school": "https://workup-ai.com/buzz-school",
-    "winスクール": "https://workup-ai.com/win-school",
-    "PhotoDirector": "https://workup-ai.com/photodirector",
-    "MyEdit": "https://workup-ai.com/myedit",
-    "イラストAC": "https://workup-ai.com/illust-ac",
-    "デザインAC": "https://workup-ai.com/design_ac",
-    "freenance": "https://workup-ai.com/freenance",
-    "ペライチ": "https://workup-ai.com/peraichi",
-    "picsoroban": "https://workup-ai.com/picsoroban",
-    "NoLang": "https://workup-ai.com/nolang",
-    "TechStock": "https://workup-ai.com/techstock",
-}
-
-_affiliate_lines = "\n".join(f"- {name}: {url}" for name, url in AFFILIATE_LINKS.items())
+_AFFILIATE_LINES_PLACEHOLDER = "__AFFILIATE_LINES__"
 
 SYSTEM_PROMPT = f"""\
 # 役割
@@ -44,10 +19,7 @@ SYSTEM_PROMPT = f"""\
 AI特有の不自然さを排除し、読者にとって読みやすく、検索意図に沿った構成を作成します。
 
 # サイト情報
-- サイト名: AIVice（https://workup-ai.com）
-- テーマ: AIツール・生成AI活用情報メディア
-- 対象読者: AI初心者・検索初心者
-- テーマカラー: やさしく・安心感
+__SITE_INFO__
 
 # 出力ルール
 - WordPress SWELLの構造に完全準拠（独自CSSやstyle禁止）
@@ -73,22 +45,15 @@ AI特有の不自然さを排除し、読者にとって読みやすく、検索
 公式サイトへのリンクは絶対に追加しないこと。同じツールに2つ以上リンクを貼らないこと。
 リンク形式: <a href="{{URL}}" target="_blank" rel="noopener noreferrer">{{ツール名}}</a>
 
-{_affiliate_lines}
+__AFFILIATE_LINES__
 
 ## アフィリリンク未登録ツール → 公式サイトリンクのみ
-上記リスト以外のAIツールを紹介する場合のみ、公式サイトへのリンクを貼ること。
+上記リスト以外のツールを紹介する場合のみ、公式サイトへのリンクを貼ること。
 形式: <a href="{{公式URL}}" target="_blank" rel="noopener noreferrer">{{ツール名}}公式サイト</a>
 
 ## リンク共通ルール
 - アフィリ登録済みツールに公式リンクを重ねて貼ることは禁止
-- PLAUD NOTE・Notta 以外のツール: 記事全体で1回のみ（初出時に貼る）
-- PLAUD NOTE・Notta: 下記「積極リンク挿入ルール」に従う
-
-## PLAUD NOTE・Notta 積極リンク挿入ルール（PLAUD/Notta関連記事のみ）
-- 冒頭文（250〜300字の段落）にPLAUD NOTEまたはNottaへの言及があれば**必ずリンクを挿入**する
-- 各H3本文でPLAUD NOTEまたはNottaの名前が**初登場する箇所に必ずリンクを挿入**する
-- 同じH3ブロック内での2回目以降は通常テキスト（リンク不要）
-- 1記事全体でPLAUD NOTEへのリンクを**最低3回以上**挿入すること（冒頭・H3初出・まとめ訴求文などで達成する）
+- 各ツール: 記事全体で1回のみ（初出時に貼る）
 
 # カテゴリー（WordPressのID）
 - 生成AI・チャット・仕事術: 1397
@@ -285,12 +250,39 @@ def _get_structure(target_length: int) -> tuple[int, int, int, int, int]:
     return _ARTICLE_STRUCTURE[closest]
 
 
-def _build_system_prompt(h3_min: int, h3_max: int, faq_min: int, faq_max: int) -> str:
+def _build_system_prompt(
+    h3_min: int, h3_max: int, faq_min: int, faq_max: int,
+    asp_links: dict | None = None,
+) -> str:
     """
-    H3本数・FAQ問数に応じてSYSTEM_PROMPTの数値指示を置き換えて返す。
-    SYSTEM_PROMPT自体は変更せず、呼び出しごとに必要な値で差し替える。
+    H3本数・FAQ問数・ブログ固有アフィリリンクに応じてSYSTEM_PROMPTを組み立てる。
+    asp_links は {名称: URL} の辞書。None または空の場合は「(なし)」と表示。
+    ブログ情報（サイト名・テーマ等）は wp_context から動的に取得する。
     """
     prompt = SYSTEM_PROMPT
+
+    # サイト情報（ブログ固有）を動的に差し込む
+    try:
+        from modules import wp_context
+        meta = wp_context.get_blog_meta()
+        display_name = meta.get("display_name", "")
+        wp_url       = meta.get("wp_url", wp_context.get_wp_url())
+        genre        = meta.get("genre", meta.get("genre_detail", ""))
+        target       = meta.get("target", "")
+        site_lines = f"- サイト名: {display_name}（{wp_url}）\n- テーマ: {genre}"
+        if target:
+            site_lines += f"\n- 対象読者: {target}"
+    except Exception:
+        site_lines = "- （ブログ情報未設定）"
+    prompt = prompt.replace("__SITE_INFO__", site_lines)
+
+    # アフィリリンク（ブログ固有）を動的に差し込む
+    if asp_links:
+        affiliate_lines = "\n".join(f"- {name}: {url}" for name, url in asp_links.items())
+    else:
+        affiliate_lines = "（このブログにはアフィリリンク登録なし）"
+    prompt = prompt.replace(_AFFILIATE_LINES_PLACEHOLDER, affiliate_lines)
+
     prompt = prompt.replace(
         "H3は合計14〜18本（抽象語禁止、質問形・行動導線を中心に）",
         f"H3は合計{h3_min}〜{h3_max}本（抽象語禁止、質問形・行動導線を中心に）",
@@ -303,7 +295,6 @@ def _build_system_prompt(h3_min: int, h3_max: int, faq_min: int, faq_max: int) -
         "## 4. よくある質問（8〜10問、各回答200字以上）",
         f"## 4. よくある質問（{faq_min}〜{faq_max}問、各回答200字以上）",
     )
-    # SYSTEM_PROMPT はf-string なので {{8〜10問繰り返し}} → {8〜10問繰り返し} になっている
     prompt = prompt.replace(
         "{8〜10問繰り返し}",
         f"{{{faq_min}〜{faq_max}問繰り返し}}",
@@ -517,9 +508,11 @@ def _build_blog_context_section() -> str:
 USER_PROMPT_TEMPLATE = """\
 以下のキーワードで記事構成を生成してください。
 
+現在の日付: {current_date}（記事内で年や「今年」「最新」などの表現を使う際は必ずこの年に合わせること）
+
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{tone_section}{testimonial_section}
+{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{tone_section}{testimonial_section}{forced_title_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
@@ -542,7 +535,9 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    article_theme: str = "",
                    sub_keywords: list[str] | None = None,
                    enable_fact_check: bool = True,
-                   target_length: int = 9000) -> dict:
+                   target_length: int = 9000,
+                   asp_links: dict | None = None,
+                   forced_title: str | None = None) -> dict:
     """
     記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
 
@@ -553,7 +548,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
       3000 (FUTURE):    H3×5〜7本   / FAQ×3〜4問  / max_tokens=4,500
     """
     h3_min, h3_max, faq_min, faq_max, max_tokens = _get_structure(target_length)
-    system_prompt = _build_system_prompt(h3_min, h3_max, faq_min, faq_max)
+    system_prompt = _build_system_prompt(h3_min, h3_max, faq_min, faq_max, asp_links=asp_links)
 
     use_plaud_notta = _needs_plaud_notta(keyword)
     print(f"[article_generator] 記事構成生成中: 「{keyword}」(vol:{volume})"
@@ -646,6 +641,15 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     # 体験談セクション（スプレッドシートから関連するものを取得）
     testimonial_section = _build_testimonial_section(keyword)
 
+    # タイトル強制指定セクション
+    forced_title_section = ""
+    if forced_title:
+        forced_title_section = (
+            f"\n※ タイトルは必ず「{forced_title}」を使用してください。"
+            f"このタイトルに合わせた内容・構成で記事を執筆してください。\n"
+        )
+        print(f"[article_generator] タイトル強制指定: 「{forced_title}」")
+
     check_stop()
     message = client.messages.create(
         model="claude-sonnet-4-6",
@@ -654,6 +658,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
         messages=[{
             "role": "user",
             "content": USER_PROMPT_TEMPLATE.format(
+                current_date=date.today().strftime("%Y年%m月%d日"),
                 keyword=keyword,
                 volume=volume,
                 blog_context_section=blog_context_section,
@@ -668,6 +673,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                 plaud_notta_section=plaud_notta_section,
                 tone_section=tone_section,
                 testimonial_section=testimonial_section,
+                forced_title_section=forced_title_section,
             ),
         }],
     )
@@ -696,6 +702,10 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     for key in ("title", "meta_description", "slug", "image_prompt", "content"):
         if key not in data:
             raise ValueError(f"レスポンスに必須キー '{key}' がありません")
+
+    # タイトル強制指定: 生成後に上書き
+    if forced_title:
+        data["title"] = forced_title
 
     # seo_title が未生成の場合は title から生成（32字に切り詰め）
     if not data.get("seo_title"):
@@ -735,7 +745,8 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                      target_length: int = 9000,
                      article_type: str = "longtail",
                      asp_list: list | None = None,
-                     guide_links: dict | None = None) -> dict:
+                     guide_links: dict | None = None,
+                     forced_title: str | None = None) -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
@@ -751,9 +762,15 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
         {title, meta_description, slug, image_prompt, category_id, category_name,
          content, keyword, volume}
     """
+    # asp_list ({name, url, ...}のリスト) → asp_links ({name: url}の辞書) に変換
+    asp_links: dict | None = None
+    if asp_list:
+        asp_links = {item["name"]: item["url"] for item in asp_list if item.get("name") and item.get("url")}
+
     return _build_article(keyword, volume, differentiation_note,
                           sub_keywords=sub_keywords, enable_fact_check=enable_fact_check,
-                          target_length=target_length)
+                          target_length=target_length, asp_links=asp_links,
+                          forced_title=forced_title)
 
 
 def generate_article_from_cluster(cluster: dict, sub_keywords: list[str] | None = None) -> dict:

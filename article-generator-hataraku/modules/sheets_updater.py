@@ -668,3 +668,51 @@ def mark_posted(
     except Exception as e:
         print(f"[sheets_updater] 書き込みエラー（続行）: {e}")
         return False
+
+
+def mark_duplicate_skip(keyword: str, reason: str = "") -> None:
+    """
+    記事生成後のタイトル重複スキップをシートに記録する。
+    「投稿ステータス」または「ステータス」列に「カニバリスキップ」を書き込み、
+    次回の記事生成で同じKWが選ばれないようにする。
+    """
+    try:
+        ws = _get_worksheet()
+        headers = ws.row_values(1)
+
+        # ステータス列を検索（投稿ステータス → ステータス の優先順）
+        status_col: int | None = None
+        for col_name in ["投稿ステータス", "ステータス"]:
+            if col_name in headers:
+                status_col = headers.index(col_name) + 1  # 1-indexed
+                break
+
+        if status_col is None:
+            print(f"[sheets_updater] ステータス列が見つからないためスキップ記録不可: {keyword}")
+            return
+
+        row = _find_keyword_row(ws, keyword)
+        if row is None:
+            print(f"[sheets_updater] キーワード「{keyword}」がシートに見つかりません")
+            return
+
+        # 投稿済みは上書きしない
+        current = ws.cell(row, status_col).value or ""
+        if current.strip() == "投稿済み":
+            return
+
+        ws.update_cell(row, status_col, "カニバリスキップ")
+        _highlight_orange(ws, row)
+
+        # メモ列があれば理由を記録
+        if reason and "メモ" in headers:
+            memo_col = headers.index("メモ") + 1
+            existing_memo = ws.cell(row, memo_col).value or ""
+            new_memo = f"重複スキップ: {reason[:60]}"
+            if not existing_memo:
+                ws.update_cell(row, memo_col, new_memo)
+
+        print(f"[sheets_updater] 重複スキップ記録: 行{row} 「{keyword}」→ カニバリスキップ")
+
+    except Exception as e:
+        print(f"[sheets_updater] mark_duplicate_skip エラー: {e}")

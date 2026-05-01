@@ -1,0 +1,219 @@
+===== [HIDA-NO-OMOIDE] 実行開始: 2026-05-01 12:21:04 =====
+2026-05-01 12:21:06 [INFO] ============================================================
+2026-05-01 12:21:06 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-01 12:21:06 [INFO] ============================================================
+2026-05-01 12:21:06 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-01 12:21:07 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-01 12:21:07 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-01 12:21:07 [INFO] ════════════════════════════════════════════════════════════
+2026-05-01 12:21:07 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-01 12:21:07 [INFO]   fact_check       : True
+2026-05-01 12:21:07 [INFO]   article_type_mix : True
+2026-05-01 12:21:07 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-01 12:21:07 [INFO]   article_count    : 1  dry_run: False
+2026-05-01 12:21:09 [INFO] [wp] 記事取得: 計10件 (draft=2 / publish=8)
+2026-05-01 12:21:09 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-01 12:21:11 [INFO] [fetch] [キーワード] メインKW: 71件（vol≥30 or N/A）  サブKW: 0件（vol<30）  投稿済みスキップ: 4件  テーマ外除外: 4件  aim内訳: [aim:75]
+2026-05-01 12:21:11 [INFO] [dup_check] 優先候補: 71件 {'aim': 71} を先頭評価
+2026-05-01 12:21:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=71件, 要求=1件)
+2026-05-01 12:21:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-01 12:21:11 [INFO] [select]   1. 「高山 中橋 歴史 わかりやすく」 vol=0 seo=N/A comp=N/A
+2026-05-01 12:21:11 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-01 12:21:11 [INFO] [hida-no-omoide] 候補: 71件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.8482 / 1時間: $0.8482  (上限 日次$2.00 / 時間$1.00)  全体: $0.8482(¥127) / 5記事
+2026-05-01 12:21:11 [INFO] [api_guard] 本日の使用量: $0.8482 / ¥127 (15回呼び出し)
+2026-05-01 12:21:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-01 12:21:11 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「高山 中橋 歴史 わかりやすく」 vol=0 ★AIM
+2026-05-01 12:21:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-01 12:21:11 [INFO] [generate] 生成開始: 「高山 中橋 歴史 わかりやすく」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「高山 中橋 歴史 わかりやすく」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.8482 / 1時間: $0.8482  (上限 日次$2.00 / 時間$1.00)  全体: $0.8482(¥127) / 5記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=116 out=100 → $0.0005  (lsi:高山 中橋 歴史 わかりやすく)
+[api_guard] 本日の使用量: $0.8487 / ¥127 (310回呼び出し)
+[article_generator] 共起語: 飛騨高山、中橋の建築、江戸時代、木造橋、赤い橋、高山城下町、古い町並み、橋の構造、飛騨大工、観光スポット、文化財、修復工...
+[api_guard] ✅ 本日: $0.8487 / 1時間: $0.8487  (上限 日次$2.00 / 時間$1.00)  全体: $0.8487(¥127) / 5記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=183 out=533 → $0.0023  (kw_research:高山 中橋 歴史 わかりやすく)
+[api_guard] 本日の使用量: $0.8509 / ¥127 (311回呼び出し)
+[article_generator] サジェスト: 高山 中橋 歴史・高山 中橋 いつ建設・高山 中橋 江戸時代...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.8509 / 1時間: $0.8509  (上限 日次$2.00 / 時間$1.00)  全体: $0.8509(¥128) / 5記事
+[api_guard] 記録: claude-sonnet-4-6 in=5329 out=9376 → $0.1566  (article:高山 中橋 歴史 わかりやすく)
+[api_guard] 本日の使用量: $1.0076 / ¥151 (312回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of red bridge, calendar, lightbulb
+[imagefx] タイトル(英): Red Bridge History Explained Simply
+[article_generator] 完了: 「高山・中橋の歴史をわかりやすく解説！江戸時代から続く赤い橋の魅力」 カテゴリ: 未設定(-) タグ: ['飛騨高山', '中橋', '江戸時代', '高山市の歴史', '観光スポット']
+2026-05-01 12:23:48 [INFO] [generate] 完了: 「高山・中橋の歴史をわかりやすく解説！江戸時代から続く赤い橋の魅力」
+2026-05-01 12:23:48 [INFO] [post] 投稿方式: publish
+[image_generator] アイキャッチ生成 (フラットイラスト): Historic mountain bridge illustration with traditional Japan...
+[image_generator] 完了 (276KB, 1216x832)
+2026-05-01 12:23:58 [INFO] [post] 画像生成完了: 283,543 bytes
+[category_selector] カテゴリ取得: 72件
+[category_selector] 「高山 中橋 歴史 わかりやすく」→ 中橋・宮川エリア(23) score=6
+[wordpress] メディアアップロード完了 (ID: 106)
+[wordpress] アイキャッチ キャプションタグ付与: #高山 中橋
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#高山): takayama-back-alley-walking-guide-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 高山・中橋の歴史｜江戸時代の城下町と宮川が生んだ赤い橋のイメージ画像
+[wordpress] H2画像[2] ライブラリ選択 (#高山): takayama-red-bridge-origin-eyecatch.jpg
+[wordpress] H2画像[2] ライブラリALT更新: 中橋の構造的な特徴｜赤い橋が持つ建築としての魅力のイメージ画像
+[wordpress] H2画像[3] ライブラリ選択 (#高山): takayama-fuwaranai-keshiki-spots-eyecatch.jpg
+[wordpress] H2画像[3] ライブラリALT更新: 中橋の観光ガイド｜見どころ・アクセス・周辺スポットを総まとめのイメージ画像
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 8件
+[internal_linker] 関連補完（親KW絞り込み）: 6件選定（ルールベース）
+[internal_linker] 内部リンク選定完了: 計6件 (成約:0 / 案件関連:0 / 同親KW+補完:6)
+[internal_linker] 内部リンク挿入完了: 計6件 (本文H3:6 / 末尾リスト:0)
+[internal_linker] 内部リンク 6件 挿入: ['飛騨高山の変わらない風景スポット7選｜江戸時代の古い町並みを', '高山で昔の風景が残る場所7選！江戸時代の建物・古民家を歩いて', '高山の川×夕方が落ち着く理由と絶景スポット5選｜飛騨の癒し旅', '高山の路地裏・裏道散策ガイド｜静かな穴場スポット&#038;', '高山の懐かしい町並み見どころ完全ガイド！散歩・食べ歩き・撮影', '高山の川・朝の静かな風景を楽しむ完全ガイド｜宮川・散歩コース']
+[wordpress] 外部リンク未検出 → Wikipedia自動追加: 高山 中橋 歴史 わかりやすく
+[wordpress] タグ設定: ['飛騨高山', '中橋', '江戸時代', '高山市の歴史', '観光スポット']
+[wordpress] 投稿方式: publish
+[wordpress] 投稿完了 (ID: 107) → https://hida-no-omoide.com/wp-admin/post.php?post=107&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of red bridge, calendar, lightbulb, scroll, star and checkmark in soft coral, mint and cream pastel tones, minimal kawaii business style.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Red Bridge History Explained Simply" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行6 「高山 中橋 歴史 わかりやすく」→ 投稿済み (2026/05/01, ID:107) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「高山・中橋の歴史をわかりやすく解説！江戸時代から続く赤い橋の」
+2026-05-01 12:24:08 [INFO] [post] WP投稿完了: ID=107 → https://hida-no-omoide.com/wp-admin/post.php?post=107&action=edit
+2026-05-01 12:24:08 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「高山・中橋の歴史をわかりやすく解説！江戸時代から続く赤い橋の魅力」
+2026-05-01 12:24:08 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-01 12:24:08 [INFO] 
+============================================================
+2026-05-01 12:24:08 [INFO] 【全体サマリー】
+2026-05-01 12:24:08 [INFO]   ブログ数  : 1件
+2026-05-01 12:24:08 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-01 12:24:08 [INFO]   所要時間  : 182.7秒
+2026-05-01 12:24:08 [INFO]   ✅ [hida-no-omoide] 高山 中橋 歴史 わかりやすく → 高山・中橋の歴史をわかりやすく解説！江戸時代から続く赤い橋の魅力
+2026-05-01 12:24:08 [INFO]        https://hida-no-omoide.com/wp-admin/post.php?post=107&action=edit
+2026-05-01 12:24:08 [INFO] ============================================================
+===== [HIDA-NO-OMOIDE] 記事生成終了: 2026-05-01 12:24:09 / exit=0 =====
+===== [HIDA-NO-OMOIDE] 実行開始: 2026-05-01 12:54:21 =====
+2026-05-01 12:54:23 [INFO] ============================================================
+2026-05-01 12:54:23 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-01 12:54:23 [INFO] ============================================================
+2026-05-01 12:54:23 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-01 12:54:24 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-01 12:54:24 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-01 12:54:24 [INFO] ════════════════════════════════════════════════════════════
+2026-05-01 12:54:24 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-01 12:54:24 [INFO]   fact_check       : True
+2026-05-01 12:54:24 [INFO]   article_type_mix : True
+2026-05-01 12:54:24 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-01 12:54:24 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'AIVice'}（飛騨の思い出 のSSを確認してください）
+[asp_fetcher] 飛騨の思い出 / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-01 12:54:26 [INFO] [wp] 記事取得: 計11件 (draft=2 / publish=9)
+2026-05-01 12:54:26 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-01 12:54:27 [INFO] [fetch] サブKW紐付け: 35件 → 10記事に統合
+2026-05-01 12:54:27 [INFO] [fetch] [キーワード] メインKW: 32件（vol≥30 or N/A）  サブKW除外: 35件（統合対象）  投稿済みスキップ: 22件  テーマ外除外: 5件  aim内訳: [aim:22, claude:15]
+2026-05-01 12:54:27 [INFO] [dup_check] 優先候補: 32件 {'aim': 19, 'claude': 13} を先頭評価
+2026-05-01 12:54:27 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=32件, 要求=1件)
+2026-05-01 12:54:27 [INFO] [select] 1件選定 (要求=1件)
+2026-05-01 12:54:27 [INFO] [select]   1. 「高山 中橋 歴史 わかりやすく」 vol=0 seo=N/A comp=N/A
+2026-05-01 12:54:27 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-01 12:54:27 [INFO] [hida-no-omoide] 候補: 32件 / 選定: 1件 / 生成予定: 1件
+[api_guard] 🛑 時間上限超過: 直近1時間のコスト $1.0076 >= $1.00
+  1時間後に再試行するか、HOURLY_LIMIT_USD を引き上げてください。
+Traceback (most recent call last):
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 2306, in <module>
+    main()
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 2275, in main
+    results = run_blog(
+              ^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 1404, in run_blog
+    check_stop()
+  File "/Users/yama/article-generator-hataraku/modules/api_guard.py", line 159, in check_stop
+    raise RuntimeError(msg)
+RuntimeError: [api_guard] 🛑 時間上限超過: 直近1時間のコスト $1.0076 >= $1.00
+  1時間後に再試行するか、HOURLY_LIMIT_USD を引き上げてください。
+===== [HIDA-NO-OMOIDE] 記事生成終了: 2026-05-01 12:54:27 / exit=1 =====
+===== [HIDA-NO-OMOIDE] 実行開始: 2026-05-01 12:56:36 =====
+2026-05-01 12:56:37 [INFO] ============================================================
+2026-05-01 12:56:37 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-01 12:56:37 [INFO] ============================================================
+2026-05-01 12:56:37 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-01 12:56:38 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-01 12:56:38 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-01 12:56:38 [INFO] ════════════════════════════════════════════════════════════
+2026-05-01 12:56:38 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-01 12:56:38 [INFO]   fact_check       : True
+2026-05-01 12:56:38 [INFO]   article_type_mix : True
+2026-05-01 12:56:38 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-01 12:56:38 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'AIVice'}（飛騨の思い出 のSSを確認してください）
+[asp_fetcher] 飛騨の思い出 / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-01 12:56:40 [INFO] [wp] 記事取得: 計11件 (draft=2 / publish=9)
+2026-05-01 12:56:40 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-01 12:56:41 [INFO] [fetch] サブKW紐付け: 35件 → 10記事に統合
+2026-05-01 12:56:41 [INFO] [fetch] [キーワード] メインKW: 32件（vol≥30 or N/A）  サブKW除外: 35件（統合対象）  投稿済みスキップ: 22件  テーマ外除外: 5件  aim内訳: [aim:22, claude:15]
+2026-05-01 12:56:41 [INFO] [dup_check] 優先候補: 32件 {'aim': 19, 'claude': 13} を先頭評価
+2026-05-01 12:56:41 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=32件, 要求=1件)
+2026-05-01 12:56:41 [INFO] [select] 1件選定 (要求=1件)
+2026-05-01 12:56:41 [INFO] [select]   1. 「高山 中橋 歴史 わかりやすく」 vol=0 seo=N/A comp=N/A
+2026-05-01 12:56:41 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-01 12:56:41 [INFO] [hida-no-omoide] 候補: 32件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.0076 / 1時間: $1.0076  (上限 日次$2.00 / 時間$5.00)  全体: $1.0076(¥151) / 6記事
+2026-05-01 12:56:41 [INFO] [api_guard] 本日の使用量: $1.0076 / ¥151 (18回呼び出し)
+2026-05-01 12:56:41 [INFO] ────────────────────────────────────────────────────────────
+2026-05-01 12:56:41 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「高山 中橋 歴史 わかりやすく」 vol=0 ★AIM
+2026-05-01 12:56:41 [INFO] ────────────────────────────────────────────────────────────
+2026-05-01 12:56:41 [INFO] [generate] 生成開始: 「高山 中橋 歴史 わかりやすく」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「高山 中橋 歴史 わかりやすく」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $1.0076 / 1時間: $1.0076  (上限 日次$2.00 / 時間$5.00)  全体: $1.0076(¥151) / 6記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=116 out=96 → $0.0005  (lsi:高山 中橋 歴史 わかりやすく)
+[api_guard] 本日の使用量: $1.0080 / ¥151 (313回呼び出し)
+[article_generator] 共起語: 飛騨高山、中橋構造、江戸時代、木造橋、赤い橋、高山市観光、古い橋、橋の歴史、飛騨地方、建築様式、重要文化財、伝統建築、観...
+[api_guard] ✅ 本日: $1.0080 / 1時間: $1.0080  (上限 日次$2.00 / 時間$5.00)  全体: $1.0080(¥151) / 6記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=183 out=476 → $0.0021  (kw_research:高山 中橋 歴史 わかりやすく)
+[api_guard] 本日の使用量: $1.0101 / ¥151 (314回呼び出し)
+[article_generator] サジェスト: 高山中橋 歴史・高山中橋 いつ建設・高山中橋 江戸時代...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $1.0101 / 1時間: $1.0101  (上限 日次$2.00 / 時間$5.00)  全体: $1.0101(¥152) / 6記事
+[api_guard] 記録: claude-sonnet-4-6 in=5271 out=9361 → $0.1562  (article:高山 中橋 歴史 わかりやすく)
+[api_guard] 本日の使用量: $1.1663 / ¥174 (315回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of wooden bridge, historical scrol
+[imagefx] タイトル(英): Takayama Nakahashi Historic Bridge
+[article_generator] 完了: 「高山・中橋の歴史をわかりやすく解説！江戸時代から続く飛騨の名橋」 カテゴリ: 未設定(-) タグ: ['飛騨高山', '中橋', '歴史', '観光スポット', '伝統建築']
+2026-05-01 12:59:14 [INFO] [generate] 完了: 「高山・中橋の歴史をわかりやすく解説！江戸時代から続く飛騨の名橋」
+2026-05-01 12:59:14 [WARNING] [hida-no-omoide] [1/1] ⏭️ 重複スキップ: タイトル重複のため投稿スキップ: 「高山・中橋の歴史をわかりやすく解説！江戸時代から続く飛騨の名橋」≈「高山・中橋の歴史をわかりやすく解説！江戸時代から続く赤い橋の魅力」
+2026-05-01 12:59:14 [WARNING] [hida-no-omoide] シートへのスキップ記録失敗（続行）: cannot import name 'mark_duplicate_skip' from 'modules.sheets_updater' (/Users/yama/article-generator-hataraku/modules/sheets_updater.py)
+2026-05-01 12:59:14 [INFO] [hida-no-omoide] 完了: 成功=0件 / 重複スキップ=1件 / 失敗=0件 / 合計=1件
+2026-05-01 12:59:14 [INFO] 
+============================================================
+2026-05-01 12:59:14 [INFO] 【全体サマリー】
+2026-05-01 12:59:14 [INFO]   ブログ数  : 1件
+2026-05-01 12:59:14 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計1件
+2026-05-01 12:59:14 [INFO]   所要時間  : 157.3秒
+2026-05-01 12:59:14 [INFO]   ❌ [hida-no-omoide] 高山 中橋 歴史 わかりやすく → (生成失敗)
+2026-05-01 12:59:14 [INFO] ============================================================
+===== [HIDA-NO-OMOIDE] 記事生成終了: 2026-05-01 12:59:14 / exit=0 =====
