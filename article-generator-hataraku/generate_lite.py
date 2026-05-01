@@ -55,6 +55,114 @@ from modules.wp_pattern_fetcher import fetch_patterns, match_pattern, insert_pat
 # ブログ別マイパターンキャッシュ（セッション中の再フェッチを防ぐ）
 _wp_patterns_cache: dict[str, list] = {}
 
+
+def _insert_rakuten_shortcode(content: str) -> str:
+    """
+    楽天トラベルショートコードを2箇所に挿入する（hida-no-omoide 専用）。
+
+    挿入位置:
+      A) まとめH2直前
+         ← リード文「泊まるともっと楽しめる」導線 + ショートコード
+      B) 記事末尾
+         ← 軽い締め一言 + ショートコード
+
+    まとめH2が見つからない場合は、後半最初のH2直前(A) と末尾(B) に挿入する。
+    """
+    import re
+
+    SC = '\n<!-- wp:shortcode -->\n[rakuten_hida_hotels]\n<!-- /wp:shortcode -->\n'
+
+    # ---- リード文（まとめ直前） ----
+    LEAD = (
+        '\n<!-- wp:paragraph -->\n'
+        '<p>飛騨の旅をもっと深く味わいたいなら、ぜひ一泊してみてください。'
+        '朝靄に包まれた古い町並みや、静まり返った夜の宿場の空気は、'
+        '日帰りでは決して出会えない時間です。'
+        '以下に、エリア内でおすすめのホテル・旅館をまとめました。</p>\n'
+        '<!-- /wp:paragraph -->\n'
+    )
+
+    # ---- 末尾の締め一言 ----
+    CLOSING = (
+        '\n<!-- wp:paragraph -->\n'
+        '<p>宿選びに迷ったら、楽天トラベルで口コミと料金を比べてみてください。'
+        'お気に入りの一軒に出会えれば、飛騨の思い出がさらに色鮮やかになるはずです。</p>\n'
+        '<!-- /wp:paragraph -->\n'
+    )
+
+    # ---- まとめH2/H3を探す ----
+    _MATOME_PAT = re.compile(
+        r'<!-- wp:heading[^>]*-->'
+        r'\s*<h[23][^>]*>[^<]*(?:まとめ|総まとめ)[^<]*</h[23]>'
+        r'\s*<!-- /wp:heading -->',
+        re.DOTALL,
+    )
+    matome_m = _MATOME_PAT.search(content)
+
+    # ---- 後半最初のH2を探す（まとめ未検出時のフォールバック） ----
+    _H2_PAT = re.compile(
+        r'<!-- wp:heading[^>]*-->\s*<h2[^>]*>',
+        re.DOTALL,
+    )
+    h2_positions = [m.start() for m in _H2_PAT.finditer(content)]
+
+    # ---- 挿入位置A をオリジナルのコンテンツで計算 ----
+    if matome_m:
+        pos_a = matome_m.start()
+    elif len(h2_positions) >= 2:
+        # まとめがない場合: 後半最初のH2（全H2の後半1/2の先頭）を目安にする
+        midpoint = len(h2_positions) // 2
+        pos_a = h2_positions[midpoint]
+    else:
+        # H2が1本以下: 全段落の後半先頭付近
+        paras = list(re.finditer(r'<!-- /wp:paragraph -->', content))
+        mid_idx = max(0, len(paras) * 2 // 3 - 1)
+        pos_a = paras[mid_idx].end() if paras else len(content) // 2
+
+    pos_b = len(content)  # 末尾
+
+    # ---- 後ろ→前の順で挿入（インデックスずれを防ぐ） ----
+    # B: 末尾に追記
+    content = content + CLOSING + SC
+
+    # A: まとめ直前（位置はオリジナル基準なので pos_a はまだ有効）
+    content = content[:pos_a] + LEAD + SC + content[pos_a:]
+
+    return content
+
+
+def _insert_hotel_pattern(content: str) -> str:
+    """
+    再利用ブロック「ホテル紹介」(ID=144) を FAQ直前に挿入する（hida-no-omoide 全記事）。
+
+    挿入位置の優先順:
+      1. <!-- wp:loos/faq --> の直前
+      2. まとめH2/H3 の直前
+      3. 末尾
+    """
+    import re
+
+    BLOCK = '\n<!-- wp:block {"ref":144} /-->\n'
+
+    # 1. FAQ ブロックを探す
+    faq_m = re.search(r'<!-- wp:loos/faq[ >]', content)
+    if faq_m:
+        pos = faq_m.start()
+        return content[:pos] + BLOCK + content[pos:]
+
+    # 2. まとめH2/H3 を探す
+    matome_m = re.search(
+        r'<!-- wp:heading[^>]*-->\s*<h[23][^>]*>[^<]*(?:まとめ|総まとめ)[^<]*</h[23]>',
+        content, re.DOTALL
+    )
+    if matome_m:
+        pos = matome_m.start()
+        return content[:pos] + BLOCK + content[pos:]
+
+    # 3. 末尾
+    return content + BLOCK
+
+
 # ═══════════════════════════════════════════════════════════════
 # FEATURE FLAGS
 # Phase 2以降で True に切り替える。既存ロジックには影響しない。
@@ -439,7 +547,7 @@ def fetch_candidates(
     is_new_format = hantei_idx >= 0    # 判定列の有無で新旧フォーマットを判別
 
     # aim列の値 → 優先度レベル（高いほど先に評価）
-    _AIM_PRIORITY = {"now": 4, "future": 3, "monetize": 2, "aim": 1, "add": 1}
+    _AIM_PRIORITY = {"now": 4, "future": 3, "monetize": 2, "aim": 1, "claude": 1, "add": 1}
 
     def to_int(v: str) -> int | None:
         if not v or v.upper() in ("N/A", "NULL", "-", ""):
@@ -476,8 +584,8 @@ def fetch_candidates(
 
         # ── 新フォーマット（判定列あり）専用処理 ──────────────────────
         if is_new_format:
-            # AIM列が "AIM" / "aim" の行のみ対象
-            if aim != "aim":
+            # AIM列が "aim" / "claude"（Claude Code追加分）の行のみ対象
+            if aim not in ("aim", "claude"):
                 continue
             # サブKW行：記事生成しない → 統合先KWに紐付けて蓄積
             if hantei == "サブKW":
@@ -1136,6 +1244,7 @@ def generate(
     sub_keywords: list[str] | None = None,
     article_type: str = "longtail",
     asp_list: list[dict] | None = None,
+    forced_title: str | None = None,
 ) -> dict:
     """
     記事を生成して dict で返す。
@@ -1160,7 +1269,8 @@ def generate(
                                target_length=target_length,
                                article_type=article_type,
                                asp_list=asp_list,
-                               guide_links=guide_links or None)
+                               guide_links=guide_links or None,
+                               forced_title=forced_title)
 
     # ── マイパターン CTA 挿入（ブログにパターンがある場合のみ）──
     if blog_cfg:
@@ -1179,6 +1289,7 @@ def generate(
                 log.info(f"[generate] パターンCTA挿入: 「{matched.title}」(ID:{matched.id})")
             else:
                 log.debug(f"[generate] マッチするパターンなし（KW={keyword!r}）")
+
 
     log.info(f"[generate] 完了: 「{article['title']}」")
     return article
@@ -1215,9 +1326,16 @@ def post(article: dict, dry_run: bool = False,
             asp_ss_id=blog_cfg.asp_ss_id,
             default_fallback_category=blog_cfg.extra.get("default_fallback_category", ""),
             blog_meta={
+                "display_name":  blog_cfg.display_name,
+                "wp_url":        blog_cfg.wp_url,
+                "genre":         blog_cfg.genre,
                 "site_purpose":  blog_cfg.site_purpose,
                 "target":        blog_cfg.target,
-                "writing_taste": blog_cfg.writing_taste,
+                "writing_taste": (
+                    blog_cfg.writing_taste
+                    + ("\n" + blog_cfg.extra.get("content_notes", "")
+                       if blog_cfg.extra.get("content_notes") else "")
+                ),
                 "genre_detail":  blog_cfg.genre_detail,
                 "search_intent": blog_cfg.search_intent,
             },
@@ -1270,6 +1388,7 @@ def run_blog(
     keyword: str | None = None,
     volume: int = 0,
     count: int | None = None,
+    forced_title: str | None = None,
 ) -> list[dict]:
     """
     1ブログ分の記事生成フローを実行して結果リストを返す。
@@ -1442,14 +1561,15 @@ def run_blog(
             article     = generate(chosen["keyword"], chosen["volume"],
                                    blog_cfg=blog_cfg, sub_keywords=related_sub or None,
                                    article_type=article_type_label,
-                                   asp_list=asp_list or None)
+                                   asp_list=asp_list or None,
+                                   forced_title=forced_title)
             # 記事タイプ・KWステータスを article dict に付与（シート書き込み用）
             article["_article_type"] = article_type_label
             article["_kw_status"]    = chosen.get("_aim", "")
 
             # ── 生成後タイトル重複チェック ──────────────────────────
-            # キーワード段階より精度が高い（タイトル同士の比較）
-            if wp_posts:
+            # タイトル強制指定時はスキップ（ユーザーが明示的に指定したため）
+            if wp_posts and not forced_title:
                 is_dup_post, dup_title = _check_title_after_generation(
                     article["title"], wp_posts
                 )
@@ -1560,6 +1680,12 @@ _INTENT_CATEGORIES: dict[str, frozenset[str]] = {
     "比較":  frozenset({"比較", "おすすめ", "ランキング", "一覧", "まとめ", "違い", "選び方"}),
     "税務":  frozenset({"税金", "確定申告", "申告", "課税", "納税", "etax", "e-tax",
                         "源泉徴収", "雑所得", "分離課税", "累進課税"}),
+    "料金":  frozenset({"料金", "費用", "価格", "月額", "年額", "コスト", "値段",
+                        "キャンペーン", "クーポン", "割引", "無料"}),
+    "解約":  frozenset({"解約", "退会", "やめ方", "辞め方", "解除", "停止"}),
+    "特徴":  frozenset({"メリット", "デメリット", "特徴", "強み", "弱み"}),
+    "効果":  frozenset({"効果", "結果", "成果", "実績"}),
+    "登録":  frozenset({"入会", "登録", "申し込み", "開設", "作り方"}),
 }
 
 # ① 複数サービス横断KW（ブランドをまたいで統合してよい）
@@ -1713,6 +1839,14 @@ def _cluster_keywords_intra(kws: list[dict]) -> list[dict]:
             elif main_base and other_base and (
                 main_base in other_base or other_base in main_base
             ):
+                # ⑤ 同一意図 かつ other が main より具体的（ベースKWが拡張されている）→ 別クラスター
+                # 例: 「チャレンジタッチ 評判」の下に「チャレンジタッチ 不登校 評判」を吸収しない
+                if (main_intent and other_intent
+                        and main_intent == other_intent
+                        and main_base in other_base
+                        and main_base != other_base):
+                    continue
+
                 if main_base_is_single and not aux_ok:
                     reason     = f"ベースKW部分一致({main_base!r}↔{other_base!r}) ※Jaccard={sim:.2f}/共有={shared}語"
                     confidence = "weak"
@@ -1998,7 +2132,7 @@ def run_kanikabari_check(blog_cfg: BlogConfig) -> None:
 
         if not kw:
             continue
-        if aim != "aim":
+        if aim not in ("aim", "claude"):
             continue
         if hantei:  # 既に判定済みはスキップ
             continue
@@ -2173,6 +2307,7 @@ def main() -> None:
     parser.add_argument("--count",    type=int, default=None,
                         help="生成記事数（省略時は各ブログの blog_config.json に従う）")
     parser.add_argument("--keyword",  help="キーワードを直接指定（1ブログ・1件のみ対応）")
+    parser.add_argument("--title",    help="記事タイトルを強制指定（--keyword と併用）")
     parser.add_argument("--volume",   type=int, default=0, help="--keyword 指定時の月間検索数")
     parser.add_argument("--dry-run",  action="store_true", help="WP投稿をスキップ")
     parser.add_argument("--yes", "-y", action="store_true", help="実行前確認をスキップ")
@@ -2264,6 +2399,7 @@ def main() -> None:
                 keyword=args.keyword,
                 volume=args.volume,
                 count=args.count,
+                forced_title=args.title,
             )
             all_results.extend(results)
 

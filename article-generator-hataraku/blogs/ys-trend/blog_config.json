@@ -1,16 +1,80 @@
 {
-  "_comment": "かにばりチェックテスト用 - ワイズトレンド (hataraku generate_lite.py から実行)",
+  "_comment": "generate_lite.py マルチブログ設定ファイル - ワイズトレンド",
   "name": "ys-trend",
   "display_name": "ワイズトレンド",
   "genre": "エンタメ・トレンド・ライフスタイル",
-  "target_length": {"MONETIZE": 9000, "LONGTAIL": 6000, "FUTURE": 3000},
+  "target_length": {
+    "MONETIZE": 9000,
+    "LONGTAIL": 6000,
+    "FUTURE": 3000
+  },
   "fact_check": true,
   "candidate_ss_id": "1PPkCm-QEK-H9SSsAJiFksKhNl3IyDk495--xmChSGRM",
   "candidate_sheet": "キーワード",
   "article_count": 3,
   "min_volume": 0,
-  "wp_url": "https://ys-trend.com",
-  "wp_username": "yscafe3824",
-  "wp_app_password": "sHVa wrtK YOX9 q3gI sEtX y6Z9",
-  "stop_words": ["おすすめ","比較","2026","ランキング"]
+  "article_type_weights": {
+    "longtail": 0.5,
+    "trend": 0.3,
+    "monetize": 0.2
+  },
+  "wp_url_env": "YS_TREND_WP_URL",
+  "wp_username_env": "YS_TREND_WP_USERNAME",
+  "wp_app_password_env": "YS_TREND_WP_APP_PASSWORD",
+  "stop_words": [
+    "おすすめ",
+    "比較",
+    "2026",
+    "ランキング"
+  ],
+  "aliases": [
+    "ys-trend",
+    "ys_trend"
+  ],
+  "allowed_themes": [
+    "エンタメ",
+    "トレンド",
+    "ライフスタイル",
+    "話題",
+    "流行",
+    "芸能",
+    "ドラマ",
+    "映画",
+    "音楽",
+    "グルメ",
+    "旅行",
+    "健康",
+    "美容",
+    "ファッション",
+    "暮らし",
+    "季節",
+    "イベント"
+  ],
+  "ng_keywords": [
+    "転職",
+    "副業",
+    "確定申告",
+    "プログラミング",
+    "資格"
+  ],
+  "asp_links": {},
+  "affili_ss_id": "",
+  "guide_links": {
+    "pv_url": "",
+    "comparison_url": "",
+    "cv_url": ""
+  },
+  "seo_plugin": "seo_simple_pack",
+  "writing_style": {
+    "tone": "親しみやすく・読みやすく・トレンド感がある",
+    "persona": "流行に敏感な20〜30代向けライター",
+    "closing_style": "読後に話題にしたくなる余韻のある締め",
+    "ng_expressions": [
+      "〜してみてください",
+      "〜がおすすめです",
+      "ぜひ〜"
+    ]
+  },
+  "wp_post_status": "publish",
+  "wp_url": "https://ys-trend.com"
 }

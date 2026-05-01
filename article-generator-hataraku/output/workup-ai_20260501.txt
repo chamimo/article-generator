@@ -1,0 +1,43 @@
+===== [WORKUP-AI] 実行開始: 2026-05-01 12:07:29 =====
+2026-05-01 12:07:31 [INFO] ============================================================
+2026-05-01 12:07:31 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-01 12:07:31 [INFO] ============================================================
+2026-05-01 12:07:31 [INFO] 対象ブログ: ['workup-ai']
+2026-05-01 12:07:32 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-01 12:07:32 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-01 12:07:32 [INFO] ════════════════════════════════════════════════════════════
+2026-05-01 12:07:32 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-01 12:07:32 [INFO]   fact_check       : True
+2026-05-01 12:07:32 [INFO]   article_type_mix : True
+2026-05-01 12:07:32 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-01 12:07:32 [INFO]   article_count    : 1  dry_run: False
+2026-05-01 12:07:36 [INFO] [wp] 記事取得: 計388件 (private=7 / publish=381)
+2026-05-01 12:07:36 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.12/site-packages/gspread/spreadsheet.py", line 327, in worksheet
+    item = finditem(
+           ^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/gspread/utils.py", line 224, in finditem
+    return next(item for item in seq if func(item))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 2292, in <module>
+    main()
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 2261, in main
+    results = run_blog(
+              ^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 1327, in run_blog
+    sheet_candidates, sub_keywords = fetch_candidates(ArticleType.LONGTAIL, blog_cfg=blog_cfg)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 418, in fetch_candidates
+    ws    = gc.open_by_key(ss_id).worksheet(sheet)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/gspread/spreadsheet.py", line 333, in worksheet
+    raise WorksheetNotFound(title)
+gspread.exceptions.WorksheetNotFound: キーワード
+===== [WORKUP-AI] 記事生成終了: 2026-05-01 12:07:36 / exit=1 =====

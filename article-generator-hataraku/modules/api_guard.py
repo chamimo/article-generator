@@ -21,12 +21,12 @@ from pathlib import Path
 # ============================================================
 # 設定
 # ============================================================
-DAILY_LIMIT_USD   = 2.00   # デプロイ単体の日次上限（ドル）
-HOURLY_LIMIT_USD  = 1.00   # 1時間の上限（ドル）
+DAILY_LIMIT_USD   = 10.00  # デプロイ単体の日次上限（ドル）
+HOURLY_LIMIT_USD  = 5.00   # 1時間の上限（ドル）
 
 # 全デプロイ合計の上限
-GLOBAL_DAILY_LIMIT_USD     = 2.00   # ≈¥300（JPY/USD=150換算）
-GLOBAL_DAILY_ARTICLE_LIMIT = 20     # 1日の合計生成記事数
+GLOBAL_DAILY_LIMIT_USD     = 10.00  # 全デプロイ合計
+GLOBAL_DAILY_ARTICLE_LIMIT = 40     # 1日の合計生成記事数
 
 JPY_PER_USD = 150  # 円換算レート
 

@@ -16,15 +16,20 @@ import importlib.util
 import os
 
 _SITE     = os.environ.get("ARTICLE_SITE", "workup-ai")
-_CFG_PATH = os.path.join(
-    os.path.dirname(os.path.abspath(__file__)),
-    "sites", _SITE, "config.py",
-)
+_BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-if not os.path.exists(_CFG_PATH):
+# blogs/ 優先、sites/ をフォールバック
+_BLOGS_CFG = os.path.join(_BASE_DIR, "blogs", _SITE, "config.py")
+_SITES_CFG = os.path.join(_BASE_DIR, "sites",  _SITE, "config.py")
+
+if os.path.exists(_BLOGS_CFG):
+    _CFG_PATH = _BLOGS_CFG
+elif os.path.exists(_SITES_CFG):
+    _CFG_PATH = _SITES_CFG
+else:
     raise FileNotFoundError(
-        f"[config] サイト設定が見つかりません: {_CFG_PATH}\n"
-        f"  sites/{_SITE}/config.py を作成してください。\n"
+        f"[config] サイト設定が見つかりません: {_SITE}\n"
+        f"  blogs/{_SITE}/config.py または sites/{_SITE}/config.py を作成してください。\n"
         f"  テンプレート: sites/new-blog/config.py.sample"
     )
 

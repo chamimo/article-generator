@@ -1,0 +1,37 @@
+===== [WEB-STUDY1] 実行開始: 2026-05-01 12:26:32 =====
+2026-05-01 12:26:33 [INFO] ============================================================
+2026-05-01 12:26:33 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-01 12:26:33 [INFO] ============================================================
+2026-05-01 12:26:33 [INFO] 対象ブログ: ['web-study1']
+2026-05-01 12:26:34 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-01 12:26:34 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-05-01 12:26:34 [INFO] ════════════════════════════════════════════════════════════
+2026-05-01 12:26:34 [INFO]   genre            : オンライン学習・プログラミング・資格・スキルアップ
+2026-05-01 12:26:34 [INFO]   fact_check       : True
+2026-05-01 12:26:34 [INFO]   article_type_mix : True
+2026-05-01 12:26:34 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-01 12:26:34 [INFO]   article_count    : 1  dry_run: False
+2026-05-01 12:26:37 [INFO] [wp] 記事取得: 計6件 (draft=2 / publish=4)
+2026-05-01 12:26:37 [INFO] [web-study1] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.2, 'monetize': 0.3})
+2026-05-01 12:26:39 [INFO] [fetch] [キーワード] メインKW: 1件（vol≥30 or N/A）  サブKW: 0件（vol<30）  投稿済みスキップ: 7件  テーマ外除外: 5件
+2026-05-01 12:26:39 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=1件, 要求=1件)
+2026-05-01 12:26:39 [INFO] [select] 1件選定 (要求=1件)
+2026-05-01 12:26:39 [INFO] [select]   1. 「通信教育 小学生」 vol=0 seo=N/A comp=N/A
+2026-05-01 12:26:39 [INFO] [web-study1] LONGTAIL選定: 1件
+2026-05-01 12:26:39 [INFO] [web-study1] 候補: 1件 / 選定: 1件 / 生成予定: 1件
+[api_guard] 🛑 時間上限超過: 直近1時間のコスト $1.0076 >= $1.00
+  1時間後に再試行するか、HOURLY_LIMIT_USD を引き上げてください。
+Traceback (most recent call last):
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 2292, in <module>
+    main()
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 2261, in main
+    results = run_blog(
+              ^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 1404, in run_blog
+    check_stop()
+  File "/Users/yama/article-generator-hataraku/modules/api_guard.py", line 159, in check_stop
+    raise RuntimeError(msg)
+RuntimeError: [api_guard] 🛑 時間上限超過: 直近1時間のコスト $1.0076 >= $1.00
+  1時間後に再試行するか、HOURLY_LIMIT_USD を引き上げてください。
+===== [WEB-STUDY1] 記事生成終了: 2026-05-01 12:26:39 / exit=1 =====
