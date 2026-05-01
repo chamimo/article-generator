@@ -1532,7 +1532,7 @@ _BASE_KW_MODIFIER_SUFFIXES: tuple[str, ...] = (
 # ③ 検索意図カテゴリ — 同一主語でも意図が異なれば別クラスター確定
 _INTENT_CATEGORIES: dict[str, frozenset[str]] = {
     "基礎":  frozenset({"とは", "わかりやすく", "初心者", "入門", "基礎", "基本"}),
-    "方法":  frozenset({"やり方", "仕方", "手順", "手続", "手続き", "始め方", "手法"}),
+    "方法":  frozenset({"方法", "やり方", "仕方", "手順", "手続", "手続き", "始め方", "手法"}),
     "評判":  frozenset({"評判", "口コミ", "レビュー", "体験談", "感想", "評価"}),
     "比較":  frozenset({"比較", "おすすめ", "ランキング", "一覧", "まとめ", "違い", "選び方"}),
     "税務":  frozenset({"税金", "確定申告", "申告", "課税", "納税", "etax", "e-tax",
@@ -1784,6 +1784,12 @@ def _classify_vs_wp(keyword: str, wp_articles: list[dict]) -> dict:
 
         # ① ブランド競合 → この記事はスキップ（別ブランド = 別記事）
         title_brand = _ascii_brand(title)
+        # 複合語タイトルはスペースがないため _ascii_brand がNoneを返す → 先頭ASCIIをフォールバック検出
+        if title_brand is None:
+            import re as _re_tb
+            _tb_m = _re_tb.match(r'^([a-z]{3,})', unicodedata.normalize("NFKC", title).lower())
+            if _tb_m:
+                title_brand = _tb_m.group(1)
         if (kw_brand and title_brand
                 and kw_brand != title_brand
                 and kw_brand not in title_brand
@@ -1814,22 +1820,40 @@ def _classify_vs_wp(keyword: str, wp_articles: list[dict]) -> dict:
             # ベースKW連結形がタイトルに含まれる（2文字以上）
             if len(kw_base_compact) >= 2 and kw_base_compact in title_nfkc:
                 sim = max(sim, 0.55)
+            # 「の」「・」除去後の連結形チェック（"買取の相場" など助詞を挟む場合）
+            _title_stripped = title_nfkc.replace("の", "").replace("・", "")
+            if len(kw_base_compact) >= 2 and kw_base_compact in _title_stripped:
+                sim = max(sim, 0.55)
 
         # ── 意図・ベースKW・ブランドを評価 ──
         title_intent = _extract_intent(title)
         title_base   = _extract_base_kw(title)
         title_base_compact = title_base.replace(" ", "")
         intent_conflict = bool(kw_intent and title_intent and kw_intent != title_intent)
+        _title_s = title_nfkc.replace("の", "").replace("・", "")
         base_match = bool(kw_base and (
             kw_base == title_base
             or kw_base in title_base
             or title_base in kw_base
             or (len(kw_base_compact) >= 2 and kw_base_compact in title_nfkc)
+            or (len(kw_base_compact) >= 2 and kw_base_compact in _title_s)
             or (len(title_base_compact) >= 2 and title_base_compact in kw_nfkc)
         ))
         # 同ブランドがタイトルに含まれるか（例: "zozo" が "zozo買取サービス..." に含まれる）
         same_brand = bool(
             kw_brand and (title_nfkc.startswith(kw_brand) or f" {kw_brand}" in title_nfkc)
+        )
+        # KW意図マーカーを除いたコンテンツトークン（例: "副業 おすすめ" → {"副業"}）
+        _all_intent_markers: frozenset[str] = frozenset(
+            m for ms in _INTENT_CATEGORIES.values() for m in ms
+        )
+        kw_content_toks = {
+            t for t in kw_nfkc.split()
+            if len(t) >= 2 and t not in _all_intent_markers
+        }
+        # KWのコンテンツトークンがタイトルに1つでも含まれるか
+        _has_content_overlap = bool(
+            kw_content_toks and any(t in title_nfkc for t in kw_content_toks)
         )
 
         # ── 3段階分類 ──
@@ -1848,10 +1872,20 @@ def _classify_vs_wp(keyword: str, wp_articles: list[dict]) -> dict:
             verdict = "togo"
             memo    = f"WP「{title[:28]}」と関連・追記候補(s={sim:.2f})"
         elif sim >= 0.45 and not intent_conflict and (base_match or shared >= 2 or same_brand):
+            # KW意図が明示されているが記事タイトルが複合語で意図不明 → 保守的に要確認
+            if kw_intent and title_intent is None and (base_match or shared >= 2) and not same_brand:
+                verdict = "review"
+                memo    = f"WP「{title[:28]}」と意図不明→要確認(s={sim:.2f})"
+            else:
+                verdict = "togo"
+                memo    = f"WP「{title[:28]}」と検索意図近似→追記候補(s={sim:.2f})"
+        # 同ブランド記事・意図非競合 → 追記候補（低閾値）
+        elif sim >= 0.30 and not intent_conflict and same_brand:
             verdict = "togo"
-            memo    = f"WP「{title[:28]}」と検索意図近似→追記候補(s={sim:.2f})"
-        # review: 類似するが意図が曖昧
-        elif sim >= 0.20 and (intent_conflict or base_match or same_brand):
+            memo    = f"WP「{title[:28]}」と同ブランド関連→追記候補(s={sim:.2f})"
+        # review: 類似するが意図が曖昧 / KW意図明示+コンテンツ一致
+        elif sim >= 0.20 and (intent_conflict or base_match or same_brand
+                              or (kw_intent and sim >= 0.25 and _has_content_overlap)):
             verdict = "review"
             memo    = (
                 f"WP「{title[:28]}」と意図が異なる可能性(s={sim:.2f})" if intent_conflict
