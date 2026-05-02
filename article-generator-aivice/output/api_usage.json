@@ -2496,6 +2496,11 @@
       "timestamp": "2026-04-11T19:05:05.111782+00:00",
       "type": "daily_limit",
       "message": "[api_guard] 🛑 日次上限超過: 本日のコスト $2.1500 >= $2.00\n  翌日（UTC）まで待つか、DAILY_LIMIT_USD を引き上げてください。"
+    },
+    {
+      "timestamp": "2026-05-01T19:00:10.227306+00:00",
+      "type": "global_daily_limit",
+      "message": "[api_guard] 🛑 全体日次コスト上限: 本日合計 $6.3826 (¥957) >= $2.00 (¥300)\n  翌日（UTC）にリセットされます。"
     }
   ]
 }

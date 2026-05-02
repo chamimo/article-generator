@@ -1,0 +1,21 @@
+2026-05-02 04:00:03 [INFO] ============================================================
+2026-05-02 04:00:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-02 04:00:03 [INFO] ============================================================
+2026-05-02 04:00:03 [INFO] 対象ブログ: ['workup-ai']
+2026-05-02 04:00:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-02 04:00:05 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-05-02 04:00:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-02 04:00:05 [INFO]   genre            : AI・副業・転職・キャリア
+2026-05-02 04:00:05 [INFO]   fact_check       : True
+2026-05-02 04:00:05 [INFO]   article_type_mix : True
+2026-05-02 04:00:05 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-05-02 04:00:05 [INFO]   article_count    : 1  dry_run: False
+2026-05-02 04:00:08 [WARNING] [workup-ai] WP記事取得失敗（重複チェックなしで続行）: 400 Client Error: Bad Request for url: https://workup-ai.com/wp-json/wp/v2/posts?status=publish%2Cdraft%2Cprivate&_fields=id%2Ctitle%2Cdate%2Cslug%2Cstatus&per_page=100&page=1
+2026-05-02 04:00:08 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-02 04:00:10 [DEBUG] [fetch] シート「絞り込みKW」: 72行 / ヘッダー: ['キーワード', '親KW', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '投稿ステータス', '記事URL', '投稿ID', '使用サブKW', '既存記事URL', '既存記事ID']
+2026-05-02 04:00:10 [INFO] [fetch] [キーワード] メインKW: 29件（vol≥30 or N/A）  サブKW: 0件（vol<30）  投稿済みスキップ: 1件  テーマ外除外: 42件  aim内訳: [aim:61, claude:10]
+2026-05-02 04:00:10 [INFO] [select] 1件選定 (要求=1件)
+2026-05-02 04:00:10 [INFO] [select]   1. 「plaud note pro 設定方法」 vol=0 seo=N/A comp=N/A
+2026-05-02 04:00:10 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-02 04:00:10 [INFO] [workup-ai] 候補: 29件 / 選定: 1件 / 生成予定: 1件
