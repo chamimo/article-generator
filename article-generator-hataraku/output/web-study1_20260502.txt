@@ -1,0 +1,42 @@
+===== [WEB-STUDY1] 実行開始: 2026-05-02 05:30:00 =====
+2026-05-02 05:30:03 [INFO] ============================================================
+2026-05-02 05:30:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-02 05:30:03 [INFO] ============================================================
+2026-05-02 05:30:03 [INFO] 対象ブログ: ['web-study1']
+2026-05-02 05:30:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-02 05:30:05 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-05-02 05:30:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-02 05:30:05 [INFO]   genre            : オンライン学習・プログラミング・資格・スキルアップ
+2026-05-02 05:30:05 [INFO]   fact_check       : True
+2026-05-02 05:30:05 [INFO]   article_type_mix : True
+2026-05-02 05:30:05 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-02 05:30:05 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'AIVice'}（オンライン学習ナビ のSSを確認してください）
+[asp_fetcher] ⚠️  別ブログ案件を除外: 18件除外 → 0件に絞り込み
+[asp_fetcher] オンライン学習ナビ / 「ASP案件マスター」: 0件
+2026-05-02 05:30:12 [INFO] [wp] 記事取得: 計17件 (draft=6 / publish=11)
+2026-05-02 05:30:12 [INFO] [web-study1] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.2, 'monetize': 0.3})
+2026-05-02 05:30:14 [INFO] [fetch] サブKW紐付け: 29件 → 12記事に統合
+2026-05-02 05:30:14 [INFO] [fetch] [キーワード] メインKW: 5件（vol≥30 or N/A）  サブKW除外: 29件（統合対象）  投稿済みスキップ: 8件  テーマ外除外: 23件  aim内訳: [aim:23, claude:5]
+2026-05-02 05:30:14 [INFO] [dup_check] 優先候補: 5件 {'claude': 5} を先頭評価
+2026-05-02 05:30:14 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=5件, 要求=1件)
+2026-05-02 05:30:14 [INFO] [select] 1件選定 (要求=1件)
+2026-05-02 05:30:14 [INFO] [select]   1. 「Coursera 日本 評判」 vol=0 seo=N/A comp=N/A
+2026-05-02 05:30:14 [INFO] [web-study1] LONGTAIL選定: 1件
+2026-05-02 05:30:14 [INFO] [web-study1] 候補: 5件 / 選定: 1件 / 生成予定: 1件
+[api_guard] 🛑 全体日次記事数上限: 本日合計 40件 >= 40件
+  翌日（UTC）にリセットされます。
+Traceback (most recent call last):
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 2428, in <module>
+    main()
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 2396, in main
+    results = run_blog(
+              ^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 1523, in run_blog
+    check_stop()
+  File "/Users/yama/article-generator-hataraku/modules/api_guard.py", line 196, in check_stop
+    raise RuntimeError(msg)
+RuntimeError: [api_guard] 🛑 全体日次記事数上限: 本日合計 40件 >= 40件
+  翌日（UTC）にリセットされます。
+===== [WEB-STUDY1] 記事生成終了: 2026-05-02 05:30:15 / exit=1 =====

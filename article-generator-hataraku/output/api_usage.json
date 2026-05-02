@@ -4079,6 +4079,126 @@
       "output_tokens": 10133,
       "cost_usd": 0.166728,
       "label": "article:飛騨高山 朝市 楽しみ方"
+    },
+    {
+      "timestamp": "2026-05-01T19:20:12.938182+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 96,
+      "cost_usd": 0.000474,
+      "label": "lsi:雑貨 トレンド かわいい"
+    },
+    {
+      "timestamp": "2026-05-01T19:20:17.280682+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 669,
+      "cost_usd": 0.002819,
+      "label": "kw_research:雑貨 トレンド かわいい"
+    },
+    {
+      "timestamp": "2026-05-01T19:23:06.919300+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4821,
+      "output_tokens": 10325,
+      "cost_usd": 0.169338,
+      "label": "article:雑貨 トレンド かわいい"
+    },
+    {
+      "timestamp": "2026-05-01T19:30:12.929107+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 95,
+      "cost_usd": 0.000471,
+      "label": "lsi:果汁のしずく グミ コンビニ"
+    },
+    {
+      "timestamp": "2026-05-01T19:30:17.179759+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 595,
+      "cost_usd": 0.002525,
+      "label": "kw_research:果汁のしずく グミ コンビニ"
+    },
+    {
+      "timestamp": "2026-05-01T19:32:54.625548+00:00",
+      "date": "2026-05-01",
+      "hour": "2026-05-01T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4972,
+      "output_tokens": 10018,
+      "cost_usd": 0.165186,
+      "label": "article:果汁のしずく グミ コンビニ"
+    },
+    {
+      "timestamp": "2026-05-02T01:14:11.154112+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 91,
+      "cost_usd": 0.000456,
+      "label": "lsi:節約 一人暮らし 低収入 女性"
+    },
+    {
+      "timestamp": "2026-05-02T01:14:15.680573+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 615,
+      "cost_usd": 0.002606,
+      "label": "kw_research:節約 一人暮らし 低収入 女性"
+    },
+    {
+      "timestamp": "2026-05-02T01:17:16.463634+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4868,
+      "output_tokens": 11169,
+      "cost_usd": 0.182139,
+      "label": "article:節約 一人暮らし 低収入 女性"
+    },
+    {
+      "timestamp": "2026-05-02T12:20:49.291254+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 105,
+      "output_tokens": 89,
+      "cost_usd": 0.00044,
+      "label": "lsi:経理 派遣"
+    },
+    {
+      "timestamp": "2026-05-02T12:20:52.325072+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 172,
+      "output_tokens": 474,
+      "cost_usd": 0.002034,
+      "label": "kw_research:経理 派遣"
+    },
+    {
+      "timestamp": "2026-05-02T12:22:57.051543+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T12",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4771,
+      "output_tokens": 9613,
+      "cost_usd": 0.158508,
+      "label": "article:経理 派遣"
     }
   ],
   "events": [
@@ -4116,6 +4236,16 @@
       "timestamp": "2026-05-01T06:28:14.725144+00:00",
       "type": "global_article_limit",
       "message": "[api_guard] 🛑 全体日次記事数上限: 本日合計 20件 >= 20件\n  翌日（UTC）にリセットされます。"
+    },
+    {
+      "timestamp": "2026-05-01T19:50:09.559442+00:00",
+      "type": "global_article_limit",
+      "message": "[api_guard] 🛑 全体日次記事数上限: 本日合計 40件 >= 40件\n  翌日（UTC）にリセットされます。"
+    },
+    {
+      "timestamp": "2026-05-01T20:30:14.664932+00:00",
+      "type": "global_article_limit",
+      "message": "[api_guard] 🛑 全体日次記事数上限: 本日合計 40件 >= 40件\n  翌日（UTC）にリセットされます。"
     }
   ]
 }
