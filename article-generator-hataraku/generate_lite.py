@@ -56,6 +56,100 @@ from modules.wp_pattern_fetcher import fetch_patterns, match_pattern, insert_pat
 _wp_patterns_cache: dict[str, list] = {}
 
 
+def _remove_dead_external_links(content: str) -> str:
+    """
+    記事HTML内の外部リンクを検証し、存在しないURL（404・接続不可）の
+    <a>タグを除去してリンクテキストだけ残す。
+
+    - 内部リンク（WP自サイト）はスキップ
+    - HEADリクエストで確認（タイムアウト5秒）
+    - 並列チェックで速度を確保（最大8スレッド）
+    """
+    import re
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    import urllib.request
+
+    # 外部リンクを全件抽出
+    pattern = re.compile(
+        r'<a\s[^>]*href=["\'](?P<url>https?://[^"\']+)["\'][^>]*>(?P<text>.*?)</a>',
+        re.DOTALL | re.IGNORECASE,
+    )
+    matches = list(pattern.finditer(content))
+    if not matches:
+        return content
+
+    # WPサイト自身のURLは除外（内部リンク）
+    try:
+        from modules import wp_context
+        own_host = wp_context.get_wp_url().rstrip("/").replace("https://", "").replace("http://", "")
+    except Exception:
+        own_host = ""
+
+    def check_url(url: str) -> tuple[str, bool]:
+        """(url, is_alive) を返す。alive=True なら残す。"""
+        if own_host and own_host in url:
+            return url, True  # 内部リンクは常にOK
+
+        import urllib.parse
+        # 日本語等の非ASCII文字をパーセントエンコード
+        parsed = urllib.parse.urlsplit(url)
+        encoded_path = urllib.parse.quote(parsed.path, safe="/-_.~!$&'()*+,;=:@")
+        encoded_url  = urllib.parse.urlunsplit(parsed._replace(path=encoded_path))
+
+        headers = {
+            "User-Agent": (
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/120.0.0.0 Safari/537.36"
+            ),
+            "Accept-Language": "ja,en;q=0.9",
+        }
+
+        # HEAD → GET の順で試す（HEADを拒否するサーバー対応）
+        for method in ("HEAD", "GET"):
+            try:
+                req = urllib.request.Request(encoded_url, method=method, headers=headers)
+                with urllib.request.urlopen(req, timeout=6) as res:
+                    return url, res.status < 400
+            except urllib.error.HTTPError as e:
+                if e.code == 405 and method == "HEAD":
+                    continue  # HEAD不可 → GETで再試行
+                return url, e.code < 400
+            except Exception:
+                if method == "HEAD":
+                    continue  # ネットワーク系エラーもGETで再試行
+                return url, False
+
+        return url, False
+
+    # 並列チェック
+    urls = list({m.group("url") for m in matches})
+    url_alive: dict[str, bool] = {}
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        futures = {ex.submit(check_url, u): u for u in urls}
+        for f in as_completed(futures):
+            url, alive = f.result()
+            url_alive[url] = alive
+
+    # 死リンクをリンクテキストに置換（後ろから処理してインデックスずれを防ぐ）
+    dead_urls = [u for u, ok in url_alive.items() if not ok]
+    if not dead_urls:
+        return content
+
+    removed = 0
+    for m in reversed(matches):
+        if m.group("url") in dead_urls:
+            content = content[:m.start()] + m.group("text") + content[m.end():]
+            removed += 1
+
+    if removed:
+        log.info(f"[link_check] 死リンク除去: {removed}件 / チェック: {len(urls)}件")
+        for u in dead_urls:
+            log.debug(f"[link_check]   削除: {u}")
+
+    return content
+
+
 def _insert_rakuten_shortcode(content: str) -> str:
     """
     楽天トラベルショートコードを2箇所に挿入する（hida-no-omoide 専用）。
@@ -584,8 +678,8 @@ def fetch_candidates(
 
         # ── 新フォーマット（判定列あり）専用処理 ──────────────────────
         if is_new_format:
-            # AIM列が "aim" / "claude"（Claude Code追加分）の行のみ対象
-            if aim not in ("aim", "claude"):
+            # AIM列が "aim" / "claude"（Claude Code追加分）/ "add"（ユーザー追加）の行のみ対象
+            if aim not in ("aim", "claude", "add"):
                 continue
             # サブKW行：記事生成しない → 統合先KWに紐付けて蓄積
             if hantei == "サブKW":
@@ -806,11 +900,29 @@ def _check_duplicate(
     # コアKWが短すぎる場合はテーマ重複チェックをスキップ（誤検知防止）
     core_valid = bool(core_kw) and len(core_kw.replace(" ", "")) >= 4
 
+    # カニバリ検知用：2文字以上の意味語トークンを抽出
+    # 助詞・助動詞相当の短語・ストップワードを除外して残った語で重複判定
+    _TRIVIAL = {"する", "できる", "ない", "ある", "なる", "いる", "もの",
+                "こと", "ため", "から", "まで", "より", "など", "ので",
+                "では", "には", "との", "への", "での", "とは", "について",
+                "について", "として", "による", "方法", "やり方", "一覧"}
+    kw_tokens = [
+        w for w in kw_lower.split()
+        if len(w) >= 2 and w not in _stop and w not in _TRIVIAL
+    ]
+    # カニバリ判定閾値：トークン数に応じて動的に設定
+    #   2語 → 2語全一致, 3語 → 2語以上, 4語以上 → 3語以上
+    if len(kw_tokens) >= 2:
+        kanibari_threshold = max(2, min(3, len(kw_tokens) - 1))
+    else:
+        kanibari_threshold = 999  # 1語以下は判定しない
+
     recent_posts = []
     for p in wp_posts:
         title_raw  = p["title"]
         slug       = p["slug"].replace("-", " ")
         norm_title = _normalize_title(title_raw)
+        title_lower = title_raw.lower()
 
         # (0) コアKW重複（最優先）─ ストップワード除去後のコア一致
         if _stop and core_valid:
@@ -821,7 +933,7 @@ def _check_duplicate(
                 return True, f"コアKW重複: 「{title_raw[:40]}」(core: {core_kw!r})"
 
         # (1) 同一キーワード
-        if kw_lower in title_raw.lower() or kw_lower in slug:
+        if kw_lower in title_lower or kw_lower in slug:
             return True, f"同一キーワード: 「{title_raw[:40]}」"
 
         # (2) 同一タイトル（正規化後）
@@ -832,6 +944,15 @@ def _check_duplicate(
         sim = _title_similarity(norm_kw, norm_title)
         if sim >= TITLE_SIM_THRESHOLD:
             return True, f"近似タイトル({sim:.2f}): 「{title_raw[:40]}」"
+
+        # (5) カニバリ検知：意味語トークンが閾値以上タイトルに含まれる
+        if kw_tokens:
+            token_overlap = [w for w in kw_tokens if w in title_lower]
+            if len(token_overlap) >= kanibari_threshold:
+                return True, (
+                    f"カニバリ({len(token_overlap)}/{len(kw_tokens)}語重複"
+                    f" {token_overlap}): 「{title_raw[:40]}」"
+                )
 
         # 直近記事リストを作成（(4)で使用）
         try:
@@ -1290,6 +1411,8 @@ def generate(
             else:
                 log.debug(f"[generate] マッチするパターンなし（KW={keyword!r}）")
 
+    # 外部リンク死活チェック（存在しないWikipedia等のリンクを除去）
+    article["content"] = _remove_dead_external_links(article["content"])
 
     log.info(f"[generate] 完了: 「{article['title']}」")
     return article
@@ -2132,7 +2255,7 @@ def run_kanikabari_check(blog_cfg: BlogConfig) -> None:
 
         if not kw:
             continue
-        if aim not in ("aim", "claude"):
+        if aim not in ("aim", "claude", "add"):
             continue
         if hantei:  # 既に判定済みはスキップ
             continue

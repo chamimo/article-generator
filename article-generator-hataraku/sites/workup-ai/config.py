@@ -55,7 +55,7 @@ FILTERED_KEYWORDS_CSV = os.path.join(DATA_DIR, "filtered_keywords.csv")
 SHEETS_KEYWORD_COL  = "キーワード"
 SHEETS_AIM_COL      = "AIM判定"
 SHEETS_VOLUME_COL   = "検索ボリューム"
-AIM_POSITIVE_VALUES = {"○", "◯", "AIM", "aim", "あり", "YES", "yes", "true", "True", "1"}
+AIM_POSITIVE_VALUES = {"○", "◯", "AIM", "aim", "あり", "YES", "yes", "true", "True", "1"} | {"claude"}
 
 # ── Google Sheets シート名 ────────────────────────────────────────────────
 SHEETS_MAIN_SHEET_NAME    = os.getenv("SHEETS_MAIN_SHEET_NAME", "")

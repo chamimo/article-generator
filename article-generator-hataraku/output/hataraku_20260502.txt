@@ -1,0 +1,147 @@
+===== [HATARAKU] 実行開始: 2026-05-02 04:50:00 =====
+2026-05-02 04:50:03 [INFO] ============================================================
+2026-05-02 04:50:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-02 04:50:03 [INFO] ============================================================
+2026-05-02 04:50:03 [INFO] 対象ブログ: ['hataraku']
+2026-05-02 04:50:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-02 04:50:05 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-02 04:50:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-02 04:50:05 [INFO]   genre            : 転職・副業・キャリア
+2026-05-02 04:50:05 [INFO]   fact_check       : True
+2026-05-02 04:50:05 [INFO]   article_type_mix : True
+2026-05-02 04:50:05 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-02 04:50:05 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'AIVice'}（はた楽ナビ のSSを確認してください）
+[asp_fetcher] ⚠️  別ブログ案件を除外: 18件除外 → 0件に絞り込み
+[asp_fetcher] はた楽ナビ / 「ASP案件マスター」: 0件
+2026-05-02 04:50:07 [WARNING] [hataraku] WP記事取得失敗（重複チェックなしで続行）: HTTPSConnectionPool(host='hataraku-navi.com', port=443): Max retries exceeded with url: /wp-json/wp/v2/posts?status=publish%2Cdraft%2Cprivate&_fields=id%2Ctitle%2Cdate%2Cslug%2Cstatus%2Clink&per_page=100&page=1 (Caused by NameResolutionError("HTTPSConnection(host='hataraku-navi.com', port=443): Failed to resolve 'hataraku-navi.com' ([Errno 8] nodename nor servname provided, or not known)"))
+2026-05-02 04:50:07 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-02 04:50:09 [INFO] [fetch] サブKW紐付け: 929件 → 63記事に統合
+2026-05-02 04:50:09 [INFO] [fetch] [キーワード] メインKW: 43件（vol≥30 or N/A）  サブKW除外: 929件（統合対象）  投稿済みスキップ: 94件  テーマ外除外: 38件  aim内訳: [aim:81]
+2026-05-02 04:50:09 [INFO] [select] 1件選定 (要求=1件)
+2026-05-02 04:50:09 [INFO] [select]   1. 「chat gpt 転職相談」 vol=0 seo=N/A comp=N/A
+2026-05-02 04:50:09 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-02 04:50:09 [INFO] [hataraku] 候補: 43件 / 選定: 1件 / 生成予定: 1件
+[api_guard] 🛑 全体日次記事数上限: 本日合計 40件 >= 40件
+  翌日（UTC）にリセットされます。
+Traceback (most recent call last):
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 2428, in <module>
+    main()
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 2396, in main
+    results = run_blog(
+              ^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 1523, in run_blog
+    check_stop()
+  File "/Users/yama/article-generator-hataraku/modules/api_guard.py", line 196, in check_stop
+    raise RuntimeError(msg)
+RuntimeError: [api_guard] 🛑 全体日次記事数上限: 本日合計 40件 >= 40件
+  翌日（UTC）にリセットされます。
+===== [HATARAKU] 記事生成終了: 2026-05-02 04:50:09 / exit=1 =====
+===== [HATARAKU] 実行開始: 2026-05-02 21:20:38 =====
+2026-05-02 21:20:39 [INFO] ============================================================
+2026-05-02 21:20:39 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-02 21:20:39 [INFO] ============================================================
+2026-05-02 21:20:39 [INFO] 対象ブログ: ['hataraku']
+2026-05-02 21:20:41 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-02 21:20:41 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-02 21:20:41 [INFO] ════════════════════════════════════════════════════════════
+2026-05-02 21:20:41 [INFO]   genre            : 転職・副業・キャリア
+2026-05-02 21:20:41 [INFO]   fact_check       : True
+2026-05-02 21:20:41 [INFO]   article_type_mix : True
+2026-05-02 21:20:41 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-02 21:20:41 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'AIVice'}（はた楽ナビ のSSを確認してください）
+[asp_fetcher] ⚠️  別ブログ案件を除外: 20件除外 → 0件に絞り込み
+[asp_fetcher] はた楽ナビ / 「ASP案件マスター」: 0件
+2026-05-02 21:20:45 [INFO] [wp] 記事取得: 計32件 (publish=32)
+2026-05-02 21:20:45 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-02 21:20:47 [INFO] [fetch] サブKW紐付け: 929件 → 63記事に統合
+2026-05-02 21:20:47 [INFO] [fetch] [キーワード] メインKW: 83件（vol≥30 or N/A）  サブKW除外: 929件（統合対象）  投稿済みスキップ: 94件  テーマ外除外: 93件  aim内訳: [aim:81, claude:95]
+2026-05-02 21:20:47 [INFO] [dup_check] 優先候補: 83件 {'aim': 43, 'claude': 40} を先頭評価
+2026-05-02 21:20:47 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=83件, 要求=1件)
+2026-05-02 21:20:47 [INFO] [select] 1件選定 (要求=1件)
+2026-05-02 21:20:47 [INFO] [select]   1. 「経理 派遣」 vol=0 seo=N/A comp=N/A
+2026-05-02 21:20:47 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-02 21:20:47 [INFO] [hataraku] 候補: 83件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.1852 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.1852(¥28) / 1記事
+2026-05-02 21:20:47 [INFO] [api_guard] 本日の使用量: $0.1852 / ¥28 (3回呼び出し)
+2026-05-02 21:20:47 [INFO] ────────────────────────────────────────────────────────────
+2026-05-02 21:20:47 [INFO] [hataraku] [1/1] [LONGTAIL] 「経理 派遣」 vol=0 ★AIM
+2026-05-02 21:20:47 [INFO] ────────────────────────────────────────────────────────────
+2026-05-02 21:20:47 [INFO] [generate] 生成開始: 「経理 派遣」(vol:0) fact_check=True target_length=6,000字  サブKW:6件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「経理 派遣」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.1852 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.1852(¥28) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=105 out=89 → $0.0004  (lsi:経理 派遣)
+[api_guard] 本日の使用量: $0.1856 / ¥27 (418回呼び出し)
+[article_generator] 共起語: 派遣会社、経理事務、給与計算、請求書作成、伝票処理、経理スタッフ、派遣時給、未経験、研修制度、経験者向け、派遣求人、経理...
+[article_generator] サブKW候補: 6件 (経理 未経験 派遣〜)
+[api_guard] ✅ 本日: $0.1856 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $0.1856(¥28) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=172 out=474 → $0.0020  (kw_research:経理 派遣)
+[api_guard] 本日の使用量: $0.1877 / ¥28 (419回呼び出し)
+[article_generator] サジェスト: 経理 派遣 単価・経理 派遣 求人・経理 派遣 未経験...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.1877 / 1時間: $0.0025  (上限 日次$10.00 / 時間$5.00)  全体: $0.1877(¥28) / 1記事
+[api_guard] 記録: claude-sonnet-4-6 in=4771 out=9613 → $0.1585  (article:経理 派遣)
+[api_guard] 本日の使用量: $0.3462 / ¥51 (420回呼び出し)
+[imagefx] 背景:B / ビジュアル:Cute flat icons of laptop, calendar, coins, charts
+[imagefx] タイトル(英): Accounting Temp Work Reality Guide
+[article_generator] 完了: 「経理派遣のリアルを徹底解説！時給・仕事内容・未経験でも働ける？」 カテゴリ: 未設定(-) タグ: ['経理派遣', '経理事務', '派遣求人', '派遣時給', '未経験歓迎']
+2026-05-02 21:22:59 [INFO] [link_check] 死リンク除去: 1件 / チェック: 1件
+2026-05-02 21:22:59 [INFO] [generate] 完了: 「経理派遣のリアルを徹底解説！時給・仕事内容・未経験でも働ける？」
+2026-05-02 21:22:59 [INFO] [post] 投稿方式: draft
+[image_generator] アイキャッチ生成 (フラットイラスト): Colorful accounting icons including calculator, spreadsheet ...
+[image_generator] 完了 (59KB, 1216x832)
+2026-05-02 21:23:07 [INFO] [post] 画像生成完了: 60,741 bytes
+[category_selector] カテゴリ取得: 21件
+[category_selector] 「経理 派遣」→ 派遣・パート(273) score=6
+[wordpress] メディアアップロード完了 (ID: 435)
+[wordpress] アイキャッチ キャプションタグ付与: #経理 派遣
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#経理): accounting-career-change-no-experience-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 経理派遣の仕事内容と時給・給料の相場のイメージ画像
+[wordpress] H2画像[2] ライブラリ選択 (#経理): keiri-tensyoku-mikeiken-eyecatch.jpg
+[wordpress] H2画像[2] ライブラリALT更新: 経理派遣は未経験でも可能？スキルと資格の準備のイメージ画像
+[wordpress] H2画像[3] ライブラリ選択 (#経理): accounting-career-change-no-experience-eyecatch-1.jpg
+[wordpress] H2画像[3] ライブラリALT更新: 経理派遣のメリット・デメリットと正社員との違いのイメージ画像
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 32件
+[internal_linker] 関連補完（親KW絞り込み）: 7件選定（ルールベース）
+[internal_linker] 内部リンク選定完了: 計7件 (成約:0 / 案件関連:0 / 同親KW+補完:7)
+[internal_linker] 内部リンク挿入完了: 計7件 (本文H3:7 / 末尾リスト:0)
+[internal_linker] 内部リンク 7件 挿入: ['派遣会社が儲かる仕組みを徹底解説！マージン率・利益構造・開業', '派遣看護師の社会保険完全ガイド｜加入条件・保険料・メリットを', '経理に転職！未経験でも採用される7つのポイントと資格・志望動', '派遣の女キャスト一覧｜主演・相手役・脇役まで出演者を徹底まと', '経理に転職！未経験から成功する5つのポイントと必要な資格・勉', '派遣法とはわかりやすく解説！3年ルール・改正・禁止業務まで総', '派遣社員とバイトの違いを学生向けに解説！給料・福利厚生・メリ']
+[wordpress] 外部リンク未検出 → Wikipedia自動追加: 経理 派遣
+[wordpress] タグ設定: ['経理派遣', '経理事務', '派遣求人', '派遣時給', '未経験歓迎']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 436) → https://hataraku-navi.com/wp-admin/post.php?post=436&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, calendar, coins, charts, lightbulbs, checkmarks and speech bubbles with stars, soft pastel pink, mint and lavender tones, minimal style.
+Soft pastel gradient background: gentle blush pink, cream and ivory tones, warm neutral atmosphere, feminine and sophisticated, airy and bright.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Accounting Temp Work Reality Guide" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行3 「経理 派遣」→ 投稿済み (2026/05/02, ID:436) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「経理派遣のリアルを徹底解説！時給・仕事内容・未経験でも働ける」
+2026-05-02 21:23:19 [INFO] [post] WP投稿完了: ID=436 → https://hataraku-navi.com/wp-admin/post.php?post=436&action=edit
+2026-05-02 21:23:19 [INFO] [hataraku] [1/1] ✅ 完了: 「経理派遣のリアルを徹底解説！時給・仕事内容・未経験でも働ける？」
+2026-05-02 21:23:19 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-02 21:23:19 [INFO] 
+============================================================
+2026-05-02 21:23:19 [INFO] 【全体サマリー】
+2026-05-02 21:23:19 [INFO]   ブログ数  : 1件
+2026-05-02 21:23:19 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-02 21:23:19 [INFO]   所要時間  : 159.9秒
+2026-05-02 21:23:19 [INFO]   ✅ [hataraku] 経理 派遣 → 経理派遣のリアルを徹底解説！時給・仕事内容・未経験でも働ける？
+2026-05-02 21:23:19 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=436&action=edit
+2026-05-02 21:23:19 [INFO] ============================================================
+===== [HATARAKU] 記事生成終了: 2026-05-02 21:23:19 / exit=0 =====
