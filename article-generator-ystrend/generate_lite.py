@@ -432,7 +432,7 @@ def fetch_candidates(
     status_idx = col(["投稿ステータス", "ステータス", "status"])  # 投稿済み除外用
 
     # aim列の値 → 優先度レベル（高いほど先に評価）
-    _AIM_PRIORITY = {"now": 4, "future": 3, "monetize": 2, "aim": 1, "add": 1}
+    _AIM_PRIORITY = {"now": 4, "future": 3, "monetize": 2, "aim": 1, "claude": 1, "add": 1}
 
     def to_int(v: str) -> int | None:
         if not v or v.upper() in ("N/A", "NULL", "-", ""):
