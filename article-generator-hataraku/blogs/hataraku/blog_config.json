@@ -1,5 +1,6 @@
 {
   "_comment": "generate_lite.py マルチブログ設定ファイル - はた楽ナビ",
+  "gsc_site_url": "sc-domain:hataraku-navi.com",
   "name": "hataraku",
   "display_name": "はた楽ナビ",
   "genre": "転職・副業・キャリア",

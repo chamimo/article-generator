@@ -44,6 +44,7 @@ from config import (
     WP_URL,
     WP_USERNAME,
     WP_APP_PASSWORD,
+    GSC_SITE_URL,
 )
 from modules.gsc_client import GSCClient
 
@@ -54,6 +55,7 @@ _SCOPES = [
 
 _TRACKING_SHEET_NAME = "順位トラッキング"
 _SOURCE_SHEET_NAME   = "キーワード"
+_RESERVED_HEADERS    = {"要リライトフラグ", "優先度スコア"}  # 日付列より後ろに保つ
 _URL_COL_HEADER      = "記事URL"
 _METRICS             = ["順位"]   # 表示・クリック・CTRは不要のため削除
 
@@ -235,7 +237,7 @@ def sync_ranks(target_date: date | None = None, dry_run: bool = False,
                rebuild: bool = False) -> None:
 
     # ── 1. GSC データ取得 ──
-    client = GSCClient()
+    client = GSCClient(site_url=GSC_SITE_URL)
 
     if target_date is None:
         print("[sync_ranks] データが存在する最新日付を検索中...")
@@ -312,12 +314,31 @@ def sync_ranks(target_date: date | None = None, dry_run: bool = False,
         base_col_idx = tracking_headers.index(expected_metric_headers[0])
         print(f"[sync_ranks] 既存の日付列を使用: 列{base_col_idx+1} ({date_label})")
     else:
-        base_col_idx = len(tracking_headers)
+        # フラグ列より前に挿入する位置を探す
+        reserved_start = next(
+            (i for i, h in enumerate(tracking_headers) if h in _RESERVED_HEADERS),
+            len(tracking_headers),
+        )
+        base_col_idx = reserved_start
         if not dry_run:
-            # シート列数を拡張
-            needed = base_col_idx + len(_METRICS)
-            if ws.col_count < needed:
-                ws.resize(rows=ws.row_count, cols=needed + 20)
+            if reserved_start < len(tracking_headers):
+                # フラグ列が既にある → insertDimension で列を押し込む
+                ss.batch_update({"requests": [{
+                    "insertDimension": {
+                        "range": {
+                            "sheetId":    ws.id,
+                            "dimension":  "COLUMNS",
+                            "startIndex": reserved_start,
+                            "endIndex":   reserved_start + len(_METRICS),
+                        },
+                        "inheritFromBefore": True,
+                    }
+                }]})
+            else:
+                # フラグ列なし → 末尾に追加（列数拡張）
+                needed = base_col_idx + len(_METRICS)
+                if ws.col_count < needed:
+                    ws.resize(rows=ws.row_count, cols=needed + 20)
             # ヘッダー書き込み
             for i, h in enumerate(expected_metric_headers):
                 ws.update_cell(1, base_col_idx + 1 + i, h)
@@ -466,7 +487,8 @@ def check_access() -> None:
         cred_data = json.load(f)
     print(f"[check] サービスアカウント: {cred_data.get('client_email','')}")
 
-    client = GSCClient()
+    client = GSCClient(site_url=GSC_SITE_URL)
+    print(f"[check] 対象サイト: {client.site_url}")
     try:
         service   = client._get_service()
         sites     = service.sites().list().execute()

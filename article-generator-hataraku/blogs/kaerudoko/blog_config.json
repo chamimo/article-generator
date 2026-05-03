@@ -1,5 +1,6 @@
 {
   "_comment": "generate_lite.py マルチブログ設定ファイル - どこで売ってるナビ",
+  "gsc_site_url": "sc-domain:kaerudoko.com",
   "name": "kaerudoko",
   "display_name": "どこで売ってるナビ",
   "genre": "ショッピング・購入場所・買い物情報",

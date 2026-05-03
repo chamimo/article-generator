@@ -34,7 +34,9 @@ class GSCClient:
     """Search Console API クライアント（遅延初期化）。"""
 
     def __init__(self, site_url: str | None = None, credentials_path: str | None = None) -> None:
-        self.site_url         = (site_url or GSC_SITE_URL).rstrip("/") + "/"
+        raw = (site_url or GSC_SITE_URL)
+        # sc-domain: プロパティはスラッシュ不要
+        self.site_url         = raw if raw.startswith("sc-domain:") else raw.rstrip("/") + "/"
         self.credentials_path = credentials_path or GSC_CREDENTIALS_PATH
         self._service         = None
 
