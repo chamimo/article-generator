@@ -1,0 +1,97 @@
+===== [KAERUDOKO] 実行開始: 2026-05-03 04:30:00 =====
+2026-05-03 04:30:02 [INFO] ============================================================
+2026-05-03 04:30:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-03 04:30:02 [INFO] ============================================================
+2026-05-03 04:30:02 [INFO] 対象ブログ: ['kaerudoko']
+2026-05-03 04:30:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-03 04:30:04 [INFO] === どこで売ってるナビ (kaerudoko.com) 処理開始 ===
+2026-05-03 04:30:04 [INFO] ════════════════════════════════════════════════════════════
+2026-05-03 04:30:04 [INFO]   genre            : ショッピング・購入場所・買い物情報
+2026-05-03 04:30:04 [INFO]   fact_check       : True
+2026-05-03 04:30:04 [INFO]   article_type_mix : True
+2026-05-03 04:30:04 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-03 04:30:04 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'AIVice'}（どこで売ってるナビ のSSを確認してください）
+[asp_fetcher] ⚠️  別ブログ案件を除外: 20件除外 → 0件に絞り込み
+[asp_fetcher] どこで売ってるナビ / 「ASP案件マスター」: 0件
+2026-05-03 04:30:08 [INFO] [wp] 記事取得: 計69件 (draft=19 / publish=50)
+2026-05-03 04:30:08 [INFO] [kaerudoko] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.6, 'trend': 0.2, 'monetize': 0.2})
+2026-05-03 04:30:10 [INFO] [fetch] サブKW紐付け: 357件 → 50記事に統合
+2026-05-03 04:30:10 [INFO] [fetch] [キーワード] メインKW: 42件（vol≥30 or N/A）  サブKW除外: 357件（統合対象）  投稿済みスキップ: 46件  テーマ外除外: 25件  aim内訳: [aim:24, claude:43]
+2026-05-03 04:30:10 [INFO] [dup_check] 優先候補: 42件 {'aim': 4, 'claude': 38} を先頭評価
+2026-05-03 04:30:10 [INFO] [dup_check] 除外: 「果汁のしずく グミ コンビニ」 → カニバリ(3/3語重複 ['果汁のしずく', 'グミ', 'コンビニ']): 「果汁のしずくグミはコンビニで買える？味・カロリー・販売店を徹底解説」
+2026-05-03 04:30:10 [INFO] [dup_check] 完了: 選定=1件 / 除外=1件 (pool=42件, 要求=1件)
+2026-05-03 04:30:10 [INFO] [select] 1件選定 (要求=1件)
+2026-05-03 04:30:10 [INFO] [select]   1. 「ダルバ ミスト Amazon」 vol=0 seo=N/A comp=N/A
+2026-05-03 04:30:10 [INFO] [kaerudoko] LONGTAIL選定: 1件
+2026-05-03 04:30:10 [INFO] [kaerudoko] 候補: 42件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.5150 / 1時間: $0.1688  (上限 日次$10.00 / 時間$5.00)  全体: $0.8412(¥126) / 5記事
+2026-05-03 04:30:10 [INFO] [api_guard] 本日の使用量: $0.5150 / ¥77 (9回呼び出し)
+2026-05-03 04:30:10 [INFO] ────────────────────────────────────────────────────────────
+2026-05-03 04:30:10 [INFO] [kaerudoko] [1/1] [LONGTAIL] 「ダルバ ミスト Amazon」 vol=0 ★AIM
+2026-05-03 04:30:10 [INFO] ────────────────────────────────────────────────────────────
+2026-05-03 04:30:10 [INFO] [generate] 生成開始: 「ダルバ ミスト Amazon」(vol:0) fact_check=True target_length=6,000字  サブKW:1件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「ダルバ ミスト Amazon」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.5150 / 1時間: $0.1688  (上限 日次$10.00 / 時間$5.00)  全体: $0.8412(¥126) / 5記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=109 out=80 → $0.0004  (lsi:ダルバ ミスト Amazon)
+[api_guard] 本日の使用量: $0.5154 / ¥77 (424回呼び出し)
+[article_generator] 共起語: ダルバ、ミスト、Amazon、スキンケア、化粧水、保湿、美容、肌荒れ、敏感肌、韓国コスメ、BBクリーム、ベースメイク、毛...
+[article_generator] サブKW候補: 1件 (VT リードルショット Amazon〜)
+[api_guard] ✅ 本日: $0.5154 / 1時間: $0.1692  (上限 日次$10.00 / 時間$5.00)  全体: $0.8416(¥126) / 5記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=176 out=534 → $0.0023  (kw_research:ダルバ ミスト Amazon)
+[api_guard] 本日の使用量: $0.5177 / ¥77 (425回呼び出し)
+[article_generator] サジェスト: ダルバ ミスト Amazon 口コミ・ダルバ ミスト 使い方・ダルバ ミスト 効果...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.5177 / 1時間: $0.1715  (上限 日次$10.00 / 時間$5.00)  全体: $0.8439(¥127) / 5記事
+[api_guard] 記録: claude-sonnet-4-6 in=4769 out=8950 → $0.1486  (article:ダルバ ミスト Amazon)
+[api_guard] 本日の使用量: $0.6662 / ¥99 (426回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of laptop, shopping bag, star rati
+[imagefx] タイトル(英): Dalbamist Amazon Price Review Guide
+[article_generator] 完了: 「ダルバミストをAmazonで買う前に確認！効果・口コミ・最安値を徹底解説」 カテゴリ: 未設定(-) タグ: ['韓国コスメ', 'ダルバ', '保湿ミスト', 'スキンケア', '敏感肌']
+2026-05-03 04:32:19 [INFO] [generate] 完了: 「ダルバミストをAmazonで買う前に確認！効果・口コミ・最安値を徹底解説」
+2026-05-03 04:32:19 [INFO] [post] 投稿方式: publish
+[image_generator] アイキャッチ生成 (フラットイラスト): Mystical forest mist swirling around glowing botanical leave...
+[image_generator] 完了 (168KB, 1216x832)
+2026-05-03 04:32:27 [INFO] [post] 画像生成完了: 172,767 bytes
+[category_selector] カテゴリ取得: 5件
+[category_selector] 「ダルバ ミスト Amazon」→ マッチなし、フォールバック: 食品・スイーツ・飲料(181)
+[wordpress] メディアアップロード完了 (ID: 685)
+[wordpress] アイキャッチ キャプションタグ付与: #ダルバ ミスト
+[wordpress] H2画像処理: 3枚
+[image_generator] H2画像生成 (テーマ反映): Delicate skincare mist bottle surrounded by glowing ingredie...
+[image_generator] 完了 (55KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 686)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: ダルバミストの特徴と成分｜保湿・美容効果を正しく理解しよう
+[image_generator] H2画像生成 (テーマ反映): Colorful shopping bags and star ratings floating above an Am...
+[image_generator] 完了 (83KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 687)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: ダルバミストのAmazon口コミ・評判と最安値の見つけ方
+[image_generator] H2画像生成 (テーマ反映): Delicate mist bottle surrounded by skincare product icons, s...
+[image_generator] 完了 (43KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 688)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: ダルバミストの正しい使い方と目的別おすすめ活用法
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 50件
+[internal_linker] 内部リンク選定完了: 計0件 (成約:0 / 案件関連:0 / 同親KW+補完:0)
+[internal_linker] 関連記事なし・内部リンクなし
+[wordpress] 外部リンク未検出 → Wikipedia自動追加: ダルバ ミスト Amazon
+[wordpress] タグ設定: ['韓国コスメ', 'ダルバ', '保湿ミスト', 'スキンケア', '敏感肌']
+[wordpress] 投稿方式: publish
+[wordpress] 投稿完了 (ID: 689) → https://kaerudoko.com/wp-admin/post.php?post=689&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行34 「ダルバ ミスト Amazon」→ 投稿済み (2026/05/03, ID:689) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「ダルバミストをAmazonで買う前に確認！効果・口コミ・最安」
+2026-05-03 04:33:13 [INFO] [post] WP投稿完了: ID=689 → https://kaerudoko.com/wp-admin/post.php?post=689&action=edit
+2026-05-03 04:33:13 [INFO] [kaerudoko] [1/1] ✅ 完了: 「ダルバミストをAmazonで買う前に確認！効果・口コミ・最安値を徹底解説」
+2026-05-03 04:33:13 [INFO] [kaerudoko] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-03 04:33:13 [INFO] 
+============================================================
+2026-05-03 04:33:13 [INFO] 【全体サマリー】
+2026-05-03 04:33:13 [INFO]   ブログ数  : 1件
+2026-05-03 04:33:13 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-03 04:33:13 [INFO]   所要時間  : 190.9秒
+2026-05-03 04:33:13 [INFO]   ✅ [kaerudoko] ダルバ ミスト Amazon → ダルバミストをAmazonで買う前に確認！効果・口コミ・最安値を徹底解説
+2026-05-03 04:33:13 [INFO]        https://kaerudoko.com/wp-admin/post.php?post=689&action=edit
+2026-05-03 04:33:13 [INFO] ============================================================
+===== [KAERUDOKO] 記事生成終了: 2026-05-03 04:33:14 / exit=0 =====

@@ -1,0 +1,110 @@
+===== [HATARAKU] 実行開始: 2026-05-03 04:50:00 =====
+2026-05-03 04:50:02 [INFO] ============================================================
+2026-05-03 04:50:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-03 04:50:02 [INFO] ============================================================
+2026-05-03 04:50:02 [INFO] 対象ブログ: ['hataraku']
+2026-05-03 04:50:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-03 04:50:04 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-03 04:50:04 [INFO] ════════════════════════════════════════════════════════════
+2026-05-03 04:50:04 [INFO]   genre            : 転職・副業・キャリア
+2026-05-03 04:50:04 [INFO]   fact_check       : True
+2026-05-03 04:50:04 [INFO]   article_type_mix : True
+2026-05-03 04:50:04 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-03 04:50:04 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'AIVice'}（はた楽ナビ のSSを確認してください）
+[asp_fetcher] ⚠️  別ブログ案件を除外: 20件除外 → 0件に絞り込み
+[asp_fetcher] はた楽ナビ / 「ASP案件マスター」: 0件
+2026-05-03 04:50:08 [INFO] [wp] 記事取得: 計33件 (publish=33)
+2026-05-03 04:50:08 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-03 04:50:09 [INFO] [fetch] サブKW紐付け: 992件 → 72記事に統合
+2026-05-03 04:50:09 [INFO] [fetch] [キーワード] メインKW: 59件（vol≥30 or N/A）  サブKW除外: 992件（統合対象）  投稿済みスキップ: 108件  テーマ外除外: 40件  aim内訳: [aim:80, claude:10, add:9]
+2026-05-03 04:50:09 [INFO] [dup_check] 優先候補: 59件 {'aim': 42, 'claude': 9, 'add': 8} を先頭評価
+2026-05-03 04:50:09 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=59件, 要求=1件)
+2026-05-03 04:50:09 [INFO] [select] 1件選定 (要求=1件)
+2026-05-03 04:50:09 [INFO] [select]   1. 「キーネットワーク 転職 失敗」 vol=0 seo=N/A comp=N/A
+2026-05-03 04:50:09 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-03 04:50:09 [INFO] [hataraku] 候補: 59件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.6662 / 1時間: $0.3201  (上限 日次$10.00 / 時間$5.00)  全体: $0.9925(¥149) / 6記事
+2026-05-03 04:50:10 [INFO] [api_guard] 本日の使用量: $0.6662 / ¥100 (12回呼び出し)
+2026-05-03 04:50:10 [INFO] ────────────────────────────────────────────────────────────
+2026-05-03 04:50:10 [INFO] [hataraku] [1/1] [LONGTAIL] 「キーネットワーク 転職 失敗」 vol=0 ★AIM
+2026-05-03 04:50:10 [INFO] ────────────────────────────────────────────────────────────
+2026-05-03 04:50:10 [INFO] [generate] 生成開始: 「キーネットワーク 転職 失敗」(vol:0) fact_check=True target_length=6,000字  サブKW:20件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「キーネットワーク 転職 失敗」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.6662 / 1時間: $0.3201  (上限 日次$10.00 / 時間$5.00)  全体: $0.9925(¥149) / 6記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=113 out=94 → $0.0005  (lsi:キーネットワーク 転職 失敗)
+[api_guard] 本日の使用量: $0.6667 / ¥100 (427回呼び出し)
+[article_generator] 共起語: キーネットワーク転職失敗、後悔、評判、口コミ、ブラック企業、離職率、給与未払い、労働環境、トラブル、返金、契約内容、面接...
+[article_generator] サブKW候補: 20件 (キー ネットワーク 転職 失敗〜)
+[api_guard] ✅ 本日: $0.6667 / 1時間: $0.3205  (上限 日次$10.00 / 時間$5.00)  全体: $0.9929(¥149) / 6記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=180 out=621 → $0.0026  (kw_research:キーネットワーク 転職 失敗)
+[api_guard] 本日の使用量: $0.6693 / ¥100 (428回呼び出し)
+[article_generator] サジェスト: キーネットワーク 転職 失敗 理由・キーネットワーク 転職 評判・キーネットワーク 転職 口コミ...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.6693 / 1時間: $0.3231  (上限 日次$10.00 / 時間$5.00)  全体: $0.9955(¥149) / 6記事
+[api_guard] 記録: claude-sonnet-4-6 in=5183 out=9660 → $0.1604  (article:キーネットワーク 転職 失敗)
+[api_guard] 本日の使用量: $0.8298 / ¥124 (429回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of laptop, warning sign, speech bu
+[imagefx] タイトル(英): Key Network Job Change Failures
+[article_generator] 完了: 「キーネットワーク転職失敗の理由と対策｜口コミ・評判から学ぶ7つの教訓」 カテゴリ: 未設定(-) タグ: ['転職失敗', 'キーネットワーク', '転職エージェント', '転職口コミ', '転職対策']
+2026-05-03 04:52:42 [INFO] [link_check] 死リンク除去: 1件 / チェック: 3件
+2026-05-03 04:52:42 [INFO] [generate] 完了: 「キーネットワーク転職失敗の理由と対策｜口コミ・評判から学ぶ7つの教訓」
+2026-05-03 04:52:42 [INFO] [post] 投稿方式: draft
+[image_generator] アイキャッチ生成 (フラットイラスト): Broken chain links with job search icons, resume documents, ...
+[image_generator] 完了 (80KB, 1216x832)
+2026-05-03 04:52:51 [INFO] [post] 画像生成完了: 82,191 bytes
+[category_selector] カテゴリ取得: 21件
+[category_selector] 「キーネットワーク 転職 失敗」→ 転職・就職(269) score=6
+[wordpress] メディアアップロード完了 (ID: 438)
+[wordpress] アイキャッチ キャプションタグ付与: #キーネットワーク
+[wordpress] H2画像処理: 3枚
+[image_generator] H2画像生成 (テーマ反映): A flat design illustration featuring interconnected network ...
+[image_generator] 完了 (48KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 439)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: キーネットワーク転職失敗の主な理由と口コミ・評判
+[image_generator] H2画像生成 (テーマ反映): A flat design illustration featuring interconnected network ...
+[image_generator] 完了 (66KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 440)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: キーネットワーク転職失敗を防ぐ具体的な対策と注意点
+[image_generator] H2画像生成 (テーマ反映): Flat design illustration featuring recruitment comparison ic...
+[image_generator] 完了 (76KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 441)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: キーネットワークより良い転職エージェントの選び方と比較ポイン
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 33件
+[internal_linker] 内部リンク選定完了: 計0件 (成約:0 / 案件関連:0 / 同親KW+補完:0)
+[internal_linker] 関連記事なし・内部リンクなし
+[wordpress] タグ設定: ['転職失敗', 'キーネットワーク', '転職エージェント', '転職口コミ', '転職対策']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 442) → https://hataraku-navi.com/wp-admin/post.php?post=442&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, warning sign, speech bubbles, stars, checkmarks, lightbulbs, and charts in soft pink, mint, and lavender pastel tones with minimal line details.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Key Network Job Change Failures" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行8 「キーネットワーク 転職 失敗」→ 投稿済み (2026/05/03, ID:442) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「キーネットワーク転職失敗の理由と対策｜口コミ・評判から学ぶ7」
+2026-05-03 04:53:38 [INFO] [post] WP投稿完了: ID=442 → https://hataraku-navi.com/wp-admin/post.php?post=442&action=edit
+2026-05-03 04:53:38 [INFO] [hataraku] [1/1] ✅ 完了: 「キーネットワーク転職失敗の理由と対策｜口コミ・評判から学ぶ7つの教訓」
+2026-05-03 04:53:38 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-03 04:53:38 [INFO] 
+============================================================
+2026-05-03 04:53:38 [INFO] 【全体サマリー】
+2026-05-03 04:53:38 [INFO]   ブログ数  : 1件
+2026-05-03 04:53:38 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-03 04:53:38 [INFO]   所要時間  : 215.9秒
+2026-05-03 04:53:38 [INFO]   ✅ [hataraku] キーネットワーク 転職 失敗 → キーネットワーク転職失敗の理由と対策｜口コミ・評判から学ぶ7つの教訓
+2026-05-03 04:53:38 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=442&action=edit
+2026-05-03 04:53:38 [INFO] ============================================================
+===== [HATARAKU] 記事生成終了: 2026-05-03 04:53:38 / exit=0 =====

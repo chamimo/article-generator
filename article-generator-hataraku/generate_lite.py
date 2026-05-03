@@ -678,8 +678,8 @@ def fetch_candidates(
 
         # ── 新フォーマット（判定列あり）専用処理 ──────────────────────
         if is_new_format:
-            # AIM列が "aim" / "claude"（Claude Code追加分）/ "add"（ユーザー追加）の行のみ対象
-            if aim not in ("aim", "claude", "add"):
+            # AIM列が生成対象の値の行のみ対象
+            if aim not in ("aim", "claude", "add", "now", "future", "monetize"):
                 continue
             # サブKW行：記事生成しない → 統合先KWに紐付けて蓄積
             if hantei == "サブKW":
@@ -754,7 +754,8 @@ def fetch_candidates(
         return any(theme.lower() in kw_l for theme in allowed_themes)
 
     before_filter = len(candidates)
-    candidates  = [c for c in candidates  if _passes_theme(c["keyword"])]
+    # now/future は緊急指定のためテーマフィルターを免除
+    candidates  = [c for c in candidates  if c.get("_aim") in ("now", "future") or _passes_theme(c["keyword"])]
     sub_keywords = [k for k in sub_keywords if _passes_theme(k)]
     filtered_out = before_filter - len(candidates)
 
@@ -1851,11 +1852,30 @@ def _kani_jaccard(a: str, b: str) -> float:
     return len(ba & bb) / len(ba | bb)
 
 
+_GENERIC_QUERY_TOKENS: frozenset[str] = _BASE_KW_MODIFIERS | frozenset({
+    # 購買・行動系
+    "購入", "買い方", "どこで", "どれがいい", "どれ", "どっち",
+    # 汎用状態修飾
+    "無料", "有料", "安い", "高い", "最安値", "格安",
+    # 検索クエリ副詞
+    "いつ", "なに", "だれ", "いくら",
+})
+
+
 def _kani_shared_tokens(a: str, b: str) -> int:
-    """スペース区切りトークンの共有数（2文字以上のトークンのみ）"""
+    """
+    意味のある共有トークン数（汎用修飾語・サフィックス語を除外してカウント）。
+
+    「福ちゃん おすすめ 使い方」と「ヒューマンアカデミー おすすめ 使い方」のように
+    サフィックスのみが一致するケースを誤クラスタリングしないよう、
+    _GENERIC_QUERY_TOKENS に含まれるトークンをカウント対象から除外する。
+    """
     import unicodedata
     def tokens(s: str) -> set[str]:
-        return {t for t in unicodedata.normalize("NFKC", s).lower().split() if len(t) >= 2}
+        return {
+            t for t in unicodedata.normalize("NFKC", s).lower().split()
+            if len(t) >= 2 and t not in _GENERIC_QUERY_TOKENS
+        }
     return len(tokens(a) & tokens(b))
 
 
@@ -1981,7 +2001,24 @@ def _cluster_keywords_intra(kws: list[dict]) -> list[dict]:
                 other_brand    = _ascii_brand(other["keyword"])
                 other_is_multi = bool(kw_tokens(other["keyword"]) & _MULTI_SERVICE_MARKERS)
 
-                if (main_brand and other_brand
+                # ⑥ 主語不一致ガード：先頭ベーストークンが互いに相手KWに含まれなければ別クラスター
+                # 例: 「AI英会話アプリ【スピーク】比較」と「福ちゃん 比較」は統合しない
+                _mfirst = unicodedata.normalize("NFKC", main_base_toks[0]).lower() if main_base_toks else ""
+                _ofirst = unicodedata.normalize("NFKC", other_base_toks[0]).lower() if other_base_toks else ""
+                _mnorm  = unicodedata.normalize("NFKC", main_cand["keyword"]).lower()
+                _onorm  = unicodedata.normalize("NFKC", other["keyword"]).lower()
+                _subject_mismatch = (
+                    bool(_mfirst) and bool(_ofirst)
+                    and len(_mfirst) >= 2 and len(_ofirst) >= 2
+                    and _mfirst != _ofirst
+                    and _mfirst not in _onorm
+                    and _ofirst not in _mnorm
+                )
+
+                if _subject_mismatch:
+                    pass  # reason stays None → 別クラスター確定
+
+                elif (main_brand and other_brand
                         and main_brand != other_brand
                         and main_brand not in other_brand   # zozo / zozotown は同一
                         and other_brand not in main_brand
@@ -2255,7 +2292,7 @@ def run_kanikabari_check(blog_cfg: BlogConfig) -> None:
 
         if not kw:
             continue
-        if aim not in ("aim", "claude", "add"):
+        if aim not in ("aim", "claude", "add", "now", "future", "monetize"):
             continue
         if hantei:  # 既に判定済みはスキップ
             continue
@@ -2329,34 +2366,36 @@ def run_kanikabari_check(blog_cfg: BlogConfig) -> None:
 
         if wp["verdict"] == "skip":
             # ── カニバリスキップ ─────────────────────────────────────
+            # togo_saki はシート上のKW（記事タイトルではなくキーワードで揃える）
             results.append({
                 "keyword":   main_kw["keyword"],
                 "row":       main_kw["_row"],
                 "hantei":    "カニバリスキップ",
-                "togo_saki": wp["title"],
+                "togo_saki": main_kw["keyword"],
                 "status":    "カニバリスキップ",
-                "memo":      wp["memo"],
+                "memo":      wp["title"],   # タイトルはメモへ
                 "wp_url":    wp["url"],
                 "wp_id":     str(wp["post_id"]),
             })
-            # サブKWは引き続きその WP 記事への統合対象とする
+            # サブKWは同じ親KW（キーワード）への統合対象とする
             for sub in cluster["subs"]:
-                results.append(_sub_result(sub, wp["title"], wp["url"], str(wp["post_id"])))
+                results.append(_sub_result(sub, main_kw["keyword"], wp["url"], str(wp["post_id"])))
 
         elif wp["verdict"] == "togo":
             # ── 統合対象（既存WP記事への追記候補）──────────────────────
+            # togo_saki はシート上のKW（記事タイトルではなくキーワードで揃える）
             results.append({
                 "keyword":   main_kw["keyword"],
                 "row":       main_kw["_row"],
                 "hantei":    "サブKW",
-                "togo_saki": wp["title"],
+                "togo_saki": main_kw["keyword"],
                 "status":    "統合対象",
-                "memo":      wp["memo"],
+                "memo":      wp["title"],   # タイトルはメモへ
                 "wp_url":    wp["url"],
                 "wp_id":     str(wp["post_id"]),
             })
             for sub in cluster["subs"]:
-                results.append(_sub_result(sub, wp["title"], wp["url"], str(wp["post_id"])))
+                results.append(_sub_result(sub, main_kw["keyword"], wp["url"], str(wp["post_id"])))
 
         elif wp["verdict"] == "review":
             # ── 要確認（既存WP記事との関係が曖昧）──────────────────────

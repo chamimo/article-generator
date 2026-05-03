@@ -4199,6 +4199,876 @@
       "output_tokens": 9613,
       "cost_usd": 0.158508,
       "label": "article:経理 派遣"
+    },
+    {
+      "timestamp": "2026-05-02T19:20:14.295687+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 119,
+      "output_tokens": 97,
+      "cost_usd": 0.000483,
+      "label": "lsi:ヒューマンアカデミー おすすめ 使い方"
+    },
+    {
+      "timestamp": "2026-05-02T19:20:18.859455+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 186,
+      "output_tokens": 752,
+      "cost_usd": 0.003157,
+      "label": "kw_research:ヒューマンアカデミー おすすめ 使い方"
+    },
+    {
+      "timestamp": "2026-05-02T19:22:29.039251+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5423,
+      "output_tokens": 9927,
+      "cost_usd": 0.165174,
+      "label": "article:ヒューマンアカデミー おすすめ 使い方"
+    },
+    {
+      "timestamp": "2026-05-02T19:30:12.102708+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 80,
+      "cost_usd": 0.000407,
+      "label": "lsi:ダルバ ミスト Amazon"
+    },
+    {
+      "timestamp": "2026-05-02T19:30:15.445613+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 534,
+      "cost_usd": 0.002277,
+      "label": "kw_research:ダルバ ミスト Amazon"
+    },
+    {
+      "timestamp": "2026-05-02T19:32:16.893601+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4769,
+      "output_tokens": 8950,
+      "cost_usd": 0.148557,
+      "label": "article:ダルバ ミスト Amazon"
+    },
+    {
+      "timestamp": "2026-05-02T19:50:11.748331+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 94,
+      "cost_usd": 0.000466,
+      "label": "lsi:キーネットワーク 転職 失敗"
+    },
+    {
+      "timestamp": "2026-05-02T19:50:15.743214+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 621,
+      "cost_usd": 0.002628,
+      "label": "kw_research:キーネットワーク 転職 失敗"
+    },
+    {
+      "timestamp": "2026-05-02T19:52:26.828466+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5183,
+      "output_tokens": 9660,
+      "cost_usd": 0.160449,
+      "label": "article:キーネットワーク 転職 失敗"
+    },
+    {
+      "timestamp": "2026-05-02T20:30:32.161367+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 87,
+      "cost_usd": 0.000434,
+      "label": "lsi:Coursera 日本 評判"
+    },
+    {
+      "timestamp": "2026-05-02T20:30:35.585909+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 456,
+      "cost_usd": 0.001964,
+      "label": "kw_research:Coursera 日本 評判"
+    },
+    {
+      "timestamp": "2026-05-02T20:32:54.851744+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5951,
+      "output_tokens": 10084,
+      "cost_usd": 0.169113,
+      "label": "article:Coursera 日本 評判"
+    },
+    {
+      "timestamp": "2026-05-02T21:56:06.022751+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 106,
+      "cost_usd": 0.000514,
+      "label": "lsi:韓国ドラマ 見る 方法"
+    },
+    {
+      "timestamp": "2026-05-02T21:56:10.366127+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 695,
+      "cost_usd": 0.002924,
+      "label": "kw_research:韓国ドラマ 見る 方法"
+    },
+    {
+      "timestamp": "2026-05-02T21:58:17.145771+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T21",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5195,
+      "output_tokens": 9668,
+      "cost_usd": 0.160605,
+      "label": "article:韓国ドラマ 見る 方法"
+    },
+    {
+      "timestamp": "2026-05-02T22:15:11.091773+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T22",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 136,
+      "cost_usd": 0.000634,
+      "label": "lsi:AIエージェント 何ができる 初心者"
+    },
+    {
+      "timestamp": "2026-05-02T22:15:14.548865+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T22",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 482,
+      "cost_usd": 0.002072,
+      "label": "kw_research:AIエージェント 何ができる 初心者"
+    },
+    {
+      "timestamp": "2026-05-02T22:17:27.268476+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T22",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5113,
+      "output_tokens": 9899,
+      "cost_usd": 0.163824,
+      "label": "article:AIエージェント 何ができる 初心者"
+    },
+    {
+      "timestamp": "2026-05-03T08:34:06.783064+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 104,
+      "cost_usd": 0.000506,
+      "label": "lsi:40代 転職失敗 人生終わり"
+    },
+    {
+      "timestamp": "2026-05-03T08:34:10.242007+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 545,
+      "cost_usd": 0.002324,
+      "label": "kw_research:40代 転職失敗 人生終わり"
+    },
+    {
+      "timestamp": "2026-05-03T08:36:55.925412+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5203,
+      "output_tokens": 10451,
+      "cost_usd": 0.172374,
+      "label": "article:40代 転職失敗 人生終わり"
+    },
+    {
+      "timestamp": "2026-05-03T08:37:59.608871+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 117,
+      "cost_usd": 0.000557,
+      "label": "lsi:転職後 自信喪失 30代"
+    },
+    {
+      "timestamp": "2026-05-03T08:38:03.814412+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 577,
+      "cost_usd": 0.00245,
+      "label": "kw_research:転職後 自信喪失 30代"
+    },
+    {
+      "timestamp": "2026-05-03T08:40:43.893848+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5275,
+      "output_tokens": 9837,
+      "cost_usd": 0.16338,
+      "label": "article:転職後 自信喪失 30代"
+    },
+    {
+      "timestamp": "2026-05-03T08:41:42.775153+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 94,
+      "cost_usd": 0.000463,
+      "label": "lsi:簿記 1 級 転職"
+    },
+    {
+      "timestamp": "2026-05-03T08:41:46.737061+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 574,
+      "cost_usd": 0.002437,
+      "label": "kw_research:簿記 1 級 転職"
+    },
+    {
+      "timestamp": "2026-05-03T08:44:55.265871+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5070,
+      "output_tokens": 12000,
+      "cost_usd": 0.19521,
+      "label": "article:簿記 1 級 転職"
+    },
+    {
+      "timestamp": "2026-05-03T08:45:02.692298+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 94,
+      "cost_usd": 0.000462,
+      "label": "lsi:AI自動化 業務効率"
+    },
+    {
+      "timestamp": "2026-05-03T08:45:06.550625+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 555,
+      "cost_usd": 0.00236,
+      "label": "kw_research:AI自動化 業務効率"
+    },
+    {
+      "timestamp": "2026-05-03T08:45:07.865709+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 184,
+      "cost_usd": 0.000829,
+      "label": "lsi:部屋干し 臭い 取る方法 最強"
+    },
+    {
+      "timestamp": "2026-05-03T08:45:11.945795+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 625,
+      "cost_usd": 0.002646,
+      "label": "kw_research:部屋干し 臭い 取る方法 最強"
+    },
+    {
+      "timestamp": "2026-05-03T08:47:20.776170+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4869,
+      "output_tokens": 9971,
+      "cost_usd": 0.164172,
+      "label": "article:AI自動化 業務効率"
+    },
+    {
+      "timestamp": "2026-05-03T08:47:21.099434+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5264,
+      "output_tokens": 9735,
+      "cost_usd": 0.161817,
+      "label": "article:部屋干し 臭い 取る方法 最強"
+    },
+    {
+      "timestamp": "2026-05-03T08:48:23.997839+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 102,
+      "cost_usd": 0.000497,
+      "label": "lsi:ノーコード ツール 自動化"
+    },
+    {
+      "timestamp": "2026-05-03T08:48:28.194975+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 589,
+      "cost_usd": 0.002498,
+      "label": "kw_research:ノーコード ツール 自動化"
+    },
+    {
+      "timestamp": "2026-05-03T08:48:30.829183+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 102,
+      "cost_usd": 0.000501,
+      "label": "lsi:湿気 対策 部屋 一人暮らし"
+    },
+    {
+      "timestamp": "2026-05-03T08:48:35.917107+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 690,
+      "cost_usd": 0.002906,
+      "label": "kw_research:湿気 対策 部屋 一人暮らし"
+    },
+    {
+      "timestamp": "2026-05-03T08:50:53.302371+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5025,
+      "output_tokens": 10337,
+      "cost_usd": 0.17013,
+      "label": "article:湿気 対策 部屋 一人暮らし"
+    },
+    {
+      "timestamp": "2026-05-03T08:51:30.260707+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4917,
+      "output_tokens": 11368,
+      "cost_usd": 0.185271,
+      "label": "article:ノーコード ツール 自動化"
+    },
+    {
+      "timestamp": "2026-05-03T08:51:55.519375+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 102,
+      "cost_usd": 0.000498,
+      "label": "lsi:エアコン 電気代 節約 方法"
+    },
+    {
+      "timestamp": "2026-05-03T08:52:00.611300+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 683,
+      "cost_usd": 0.002876,
+      "label": "kw_research:エアコン 電気代 節約 方法"
+    },
+    {
+      "timestamp": "2026-05-03T08:52:28.445162+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 117,
+      "output_tokens": 157,
+      "cost_usd": 0.000722,
+      "label": "lsi:AI副業 主婦 在宅 稼ぐ"
+    },
+    {
+      "timestamp": "2026-05-03T08:52:34.455689+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 184,
+      "output_tokens": 565,
+      "cost_usd": 0.002407,
+      "label": "kw_research:AI副業 主婦 在宅 稼ぐ"
+    },
+    {
+      "timestamp": "2026-05-03T08:54:17.240647+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5230,
+      "output_tokens": 9896,
+      "cost_usd": 0.16413,
+      "label": "article:エアコン 電気代 節約 方法"
+    },
+    {
+      "timestamp": "2026-05-03T08:55:44.442790+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5059,
+      "output_tokens": 12000,
+      "cost_usd": 0.195177,
+      "label": "article:AI副業 主婦 在宅 稼ぐ"
+    },
+    {
+      "timestamp": "2026-05-03T08:55:49.645683+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 82,
+      "cost_usd": 0.000416,
+      "label": "lsi:梅雨 旅行 服装"
+    },
+    {
+      "timestamp": "2026-05-03T08:55:53.646189+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 634,
+      "cost_usd": 0.002678,
+      "label": "kw_research:梅雨 旅行 服装"
+    },
+    {
+      "timestamp": "2026-05-03T08:58:02.685696+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6579,
+      "output_tokens": 9490,
+      "cost_usd": 0.162087,
+      "label": "article:梅雨 旅行 服装"
+    },
+    {
+      "timestamp": "2026-05-03T08:58:39.416288+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 82,
+      "cost_usd": 0.000416,
+      "label": "lsi:梅雨 台風 季節風"
+    },
+    {
+      "timestamp": "2026-05-03T08:58:43.094896+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 517,
+      "cost_usd": 0.00221,
+      "label": "kw_research:梅雨 台風 季節風"
+    },
+    {
+      "timestamp": "2026-05-03T09:01:01.335292+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6330,
+      "output_tokens": 10242,
+      "cost_usd": 0.17262,
+      "label": "article:梅雨 台風 季節風"
+    },
+    {
+      "timestamp": "2026-05-03T09:01:27.972484+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 81,
+      "cost_usd": 0.000414,
+      "label": "lsi:梅雨 に 流行る 病気"
+    },
+    {
+      "timestamp": "2026-05-03T09:01:32.068926+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 569,
+      "cost_usd": 0.002419,
+      "label": "kw_research:梅雨 に 流行る 病気"
+    },
+    {
+      "timestamp": "2026-05-03T09:04:12.497941+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6380,
+      "output_tokens": 12000,
+      "cost_usd": 0.19914,
+      "label": "article:梅雨 に 流行る 病気"
+    },
+    {
+      "timestamp": "2026-05-03T09:04:18.956874+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 130,
+      "cost_usd": 0.000607,
+      "label": "lsi:IKEA お菓子 通販"
+    },
+    {
+      "timestamp": "2026-05-03T09:04:22.458017+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 524,
+      "cost_usd": 0.002237,
+      "label": "kw_research:IKEA お菓子 通販"
+    },
+    {
+      "timestamp": "2026-05-03T09:06:38.819078+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4884,
+      "output_tokens": 9295,
+      "cost_usd": 0.154077,
+      "label": "article:IKEA お菓子 通販"
+    },
+    {
+      "timestamp": "2026-05-03T09:07:40.723071+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 122,
+      "cost_usd": 0.00058,
+      "label": "lsi:ポッキー 季節限定 コンビニ"
+    },
+    {
+      "timestamp": "2026-05-03T09:07:44.301190+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 577,
+      "cost_usd": 0.002454,
+      "label": "kw_research:ポッキー 季節限定 コンビニ"
+    },
+    {
+      "timestamp": "2026-05-03T09:10:04.161836+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5036,
+      "output_tokens": 9081,
+      "cost_usd": 0.151323,
+      "label": "article:ポッキー 季節限定 コンビニ"
+    },
+    {
+      "timestamp": "2026-05-03T09:11:02.188338+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 82,
+      "cost_usd": 0.000418,
+      "label": "lsi:ちいかわ チョコ 販売店"
+    },
+    {
+      "timestamp": "2026-05-03T09:11:06.146530+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 606,
+      "cost_usd": 0.002568,
+      "label": "kw_research:ちいかわ チョコ 販売店"
+    },
+    {
+      "timestamp": "2026-05-03T09:13:24.892226+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5129,
+      "output_tokens": 9284,
+      "cost_usd": 0.154647,
+      "label": "article:ちいかわ チョコ 販売店"
+    },
+    {
+      "timestamp": "2026-05-03T09:14:22.377959+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 88,
+      "cost_usd": 0.000443,
+      "label": "lsi:梅雨前線と停滞前線の違い"
+    },
+    {
+      "timestamp": "2026-05-03T09:14:26.341132+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 574,
+      "cost_usd": 0.002441,
+      "label": "kw_research:梅雨前線と停滞前線の違い"
+    },
+    {
+      "timestamp": "2026-05-03T09:16:38.224302+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5545,
+      "output_tokens": 10203,
+      "cost_usd": 0.16968,
+      "label": "article:梅雨前線と停滞前線の違い"
+    },
+    {
+      "timestamp": "2026-05-03T09:17:39.711224+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 57,
+      "cost_usd": 0.000314,
+      "label": "lsi:梅雨漢字意味"
+    },
+    {
+      "timestamp": "2026-05-03T09:17:42.863760+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 465,
+      "cost_usd": 0.002,
+      "label": "kw_research:梅雨漢字意味"
+    },
+    {
+      "timestamp": "2026-05-03T09:20:00.568449+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5099,
+      "output_tokens": 9987,
+      "cost_usd": 0.165102,
+      "label": "article:梅雨漢字意味"
+    },
+    {
+      "timestamp": "2026-05-03T12:39:24.791764+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 102,
+      "cost_usd": 0.000497,
+      "label": "lsi:梅雨バテ 食べ物"
+    },
+    {
+      "timestamp": "2026-05-03T12:39:28.543317+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 580,
+      "cost_usd": 0.002462,
+      "label": "kw_research:梅雨バテ 食べ物"
+    },
+    {
+      "timestamp": "2026-05-03T12:41:42.591183+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T12",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5046,
+      "output_tokens": 10307,
+      "cost_usd": 0.169743,
+      "label": "article:梅雨バテ 食べ物"
+    },
+    {
+      "timestamp": "2026-05-03T12:42:12.383503+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 105,
+      "cost_usd": 0.000509,
+      "label": "lsi:梅雨バテ 食べ物"
+    },
+    {
+      "timestamp": "2026-05-03T12:42:15.932583+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 577,
+      "cost_usd": 0.00245,
+      "label": "kw_research:梅雨バテ 食べ物"
+    },
+    {
+      "timestamp": "2026-05-03T12:44:29.280240+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T12",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5046,
+      "output_tokens": 10430,
+      "cost_usd": 0.171588,
+      "label": "article:梅雨バテ 食べ物"
+    },
+    {
+      "timestamp": "2026-05-03T12:51:44.564464+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 79,
+      "cost_usd": 0.000406,
+      "label": "lsi:福ちゃん 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-03T12:51:48.250345+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 523,
+      "cost_usd": 0.002236,
+      "label": "kw_research:福ちゃん 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-03T12:53:59.817184+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T12",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5969,
+      "output_tokens": 9674,
+      "cost_usd": 0.163017,
+      "label": "article:福ちゃん 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-03T13:03:46.683325+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T13",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 119,
+      "output_tokens": 86,
+      "cost_usd": 0.000439,
+      "label": "lsi:細木数子 地獄に落ちるわよ フィクション"
+    },
+    {
+      "timestamp": "2026-05-03T13:03:50.570280+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T13",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 186,
+      "output_tokens": 631,
+      "cost_usd": 0.002673,
+      "label": "kw_research:細木数子 地獄に落ちるわよ フィクション"
+    },
+    {
+      "timestamp": "2026-05-03T13:06:14.829048+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T13",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4968,
+      "output_tokens": 10041,
+      "cost_usd": 0.165519,
+      "label": "article:細木数子 地獄に落ちるわよ フィクション"
+    },
+    {
+      "timestamp": "2026-05-03T13:10:27.127359+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T13",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 79,
+      "cost_usd": 0.000406,
+      "label": "lsi:細木数子 netflix ドラマ 反省"
+    },
+    {
+      "timestamp": "2026-05-03T13:10:31.184459+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T13",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 639,
+      "cost_usd": 0.0027,
+      "label": "kw_research:細木数子 netflix ドラマ 反省"
+    },
+    {
+      "timestamp": "2026-05-03T13:12:48.001397+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T13",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4954,
+      "output_tokens": 9705,
+      "cost_usd": 0.160437,
+      "label": "article:細木数子 netflix ドラマ 反省"
+    },
+    {
+      "timestamp": "2026-05-03T13:16:48.901695+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T13",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 126,
+      "output_tokens": 80,
+      "cost_usd": 0.000421,
+      "label": "lsi:地獄に堕ちるわよ netflix 細木数子 戸田恵梨香"
+    },
+    {
+      "timestamp": "2026-05-03T13:16:53.273392+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T13",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 193,
+      "output_tokens": 675,
+      "cost_usd": 0.002854,
+      "label": "kw_research:地獄に堕ちるわよ netflix 細木数子 戸田恵梨香"
+    },
+    {
+      "timestamp": "2026-05-03T13:19:04.648240+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T13",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4998,
+      "output_tokens": 9840,
+      "cost_usd": 0.162594,
+      "label": "article:地獄に堕ちるわよ netflix 細木数子 戸田恵梨香"
     }
   ],
   "events": [

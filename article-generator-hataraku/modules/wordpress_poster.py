@@ -211,22 +211,14 @@ def _fetch_media_by_tag(search_term: str) -> list[dict]:
 
 def _ensure_external_link(content: str, keyword: str) -> str:
     """
-    記事コンテンツに外部リンク（href="https?://"）が最低1個あるかチェックし、
-    なければキーワードに対応するWikipediaリンクを自動追加する。
+    記事コンテンツに外部リンク（href="https?://"）が最低1個あるかチェックする。
+    なければ警告ログのみ出力（Wikipedia等への自動追加は行わない）。
     """
     if re.search(r'href=["\']https?://', content, re.IGNORECASE):
         return content
 
-    encoded = urllib.parse.quote(keyword)
-    wiki_url = f"https://ja.wikipedia.org/wiki/{encoded}"
-    link_block = (
-        "\n\n<!-- wp:paragraph -->\n"
-        f'<p>参考：<a href="{wiki_url}" target="_blank" rel="noopener noreferrer">'
-        f"{keyword}（Wikipedia）</a></p>\n"
-        "<!-- /wp:paragraph -->"
-    )
-    print(f"[wordpress] 外部リンク未検出 → Wikipedia自動追加: {keyword}")
-    return content.rstrip() + link_block
+    print(f"[wordpress] 警告: 外部リンク未検出 → 記事プロンプトを確認してください: {keyword}")
+    return content
 
 
 # ─────────────────────────────────────────────

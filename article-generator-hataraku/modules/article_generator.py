@@ -54,6 +54,9 @@ __AFFILIATE_LINES__
 ## リンク共通ルール
 - アフィリ登録済みツールに公式リンクを重ねて貼ることは禁止
 - 各ツール: 記事全体で1回のみ（初出時に貼る）
+- **記事全体で必ず1つ以上の外部リンク（href="https://..."）を含めること**（アフィリリンク・公式サイトリンクどちらでも可）
+- Wikipediaへのリンクは絶対に禁止。存在確認できない架空URLも禁止
+- 外部リンクが1つも入らない場合は、記事中で紹介する公的機関・業界団体・政府サイト・ブランド公式サイト・大手メディアのうち最も関連性の高いものへのリンクを1つ追加すること
 
 # カテゴリー（WordPressのID）
 - 生成AI・チャット・仕事術: 1397
@@ -696,8 +699,14 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
 
     try:
         data = json.loads(raw)
-    except json.JSONDecodeError as e:
-        raise ValueError(f"Claude APIからのJSON解析エラー: {e}\n---\n{raw[:500]}") from e
+    except json.JSONDecodeError:
+        # 制御文字（改行・タブ以外）をエスケープして再試行
+        import re as _re
+        sanitized = _re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', raw)
+        try:
+            data = json.loads(sanitized)
+        except json.JSONDecodeError as e:
+            raise ValueError(f"Claude APIからのJSON解析エラー: {e}\n---\n{raw[:500]}") from e
 
     for key in ("title", "meta_description", "slug", "image_prompt", "content"):
         if key not in data:

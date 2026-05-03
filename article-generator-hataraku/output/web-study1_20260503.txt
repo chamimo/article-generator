@@ -1,0 +1,103 @@
+===== [WEB-STUDY1] 実行開始: 2026-05-03 05:30:00 =====
+2026-05-03 05:30:02 [INFO] ============================================================
+2026-05-03 05:30:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-03 05:30:02 [INFO] ============================================================
+2026-05-03 05:30:02 [INFO] 対象ブログ: ['web-study1']
+2026-05-03 05:30:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-03 05:30:04 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-05-03 05:30:04 [INFO] ════════════════════════════════════════════════════════════
+2026-05-03 05:30:04 [INFO]   genre            : オンライン学習・プログラミング・資格・スキルアップ
+2026-05-03 05:30:04 [INFO]   fact_check       : True
+2026-05-03 05:30:04 [INFO]   article_type_mix : True
+2026-05-03 05:30:04 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-03 05:30:04 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'AIVice'}（オンライン学習ナビ のSSを確認してください）
+[asp_fetcher] ⚠️  別ブログ案件を除外: 20件除外 → 0件に絞り込み
+[asp_fetcher] オンライン学習ナビ / 「ASP案件マスター」: 0件
+2026-05-03 05:30:14 [INFO] [wp] 記事取得: 計15件 (publish=15)
+2026-05-03 05:30:14 [INFO] [web-study1] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.2, 'monetize': 0.3})
+2026-05-03 05:30:16 [INFO] [fetch] サブKW紐付け: 32件 → 13記事に統合
+2026-05-03 05:30:16 [INFO] [fetch] [キーワード] メインKW: 6件（vol≥30 or N/A）  サブKW除外: 32件（統合対象）  投稿済みスキップ: 11件  テーマ外除外: 26件  aim内訳: [aim:23, claude:5, add:4]
+2026-05-03 05:30:16 [INFO] [dup_check] 優先候補: 6件 {'claude': 5, 'add': 1} を先頭評価
+2026-05-03 05:30:16 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=6件, 要求=1件)
+2026-05-03 05:30:16 [INFO] [select] 1件選定 (要求=1件)
+2026-05-03 05:30:16 [INFO] [select]   1. 「Coursera 日本 評判」 vol=0 seo=N/A comp=N/A
+2026-05-03 05:30:16 [INFO] [web-study1] LONGTAIL選定: 1件
+2026-05-03 05:30:16 [INFO] [web-study1] 候補: 6件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.8298 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.3183(¥198) / 8記事
+2026-05-03 05:30:16 [INFO] [api_guard] 本日の使用量: $0.8298 / ¥124 (15回呼び出し)
+2026-05-03 05:30:16 [INFO] ────────────────────────────────────────────────────────────
+2026-05-03 05:30:16 [INFO] [web-study1] [1/1] [LONGTAIL] 「Coursera 日本 評判」 vol=0 ★CLAUDE
+2026-05-03 05:30:16 [INFO] ────────────────────────────────────────────────────────────
+2026-05-03 05:30:16 [INFO] [generate] 生成開始: 「Coursera 日本 評判」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「Coursera 日本 評判」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[article_generator] 事実確認中: 「Coursera 日本 評判」
+[article_generator] 事実確認完了: 確認済み10件 / 不確か3件 / 注意6件
+  ⚠️  価格は為替変動により頻繁に変わる可能性があるため、記事執筆時は最新の公式サイト確認を推奨
+  ⚠️  日本語字幕は AI による自動翻訳のため、時に誤訳が発生する可能性 - 実際に利用者の口コミで「たまに誤訳がある」との報告あり
+  ⚠️  無料コースと有料コースで機能に大きな制限差がある（修了証は有料版のみ）点を説明する必要あり
+  ⚠️  転職・就職での修了証の価値は企業・職種により異なる可能性があり、普遍的に高い価値があると記述しないこと
+  ⚠️  完全オンラインのため自己管理が重要で、オンライン学習特有の挫折リスクがある点を提示すること
+  ⚠️  英語が中心のコース・教材があり、日本語字幕でも課題やフォーラムが英語である場合がある
+[api_guard] ✅ 本日: $0.8298 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.3183(¥198) / 8記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=108 out=87 → $0.0004  (lsi:Coursera 日本 評判)
+[api_guard] 本日の使用量: $0.8302 / ¥124 (430回呼び出し)
+[article_generator] 共起語: オンライン講座、無料コース、修了証、学習プラットフォーム、大学講義、スキルアップ、資格取得、自学自習、講師の質、字幕、日...
+[api_guard] ✅ 本日: $0.8302 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $1.3187(¥198) / 8記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=175 out=456 → $0.0020  (kw_research:Coursera 日本 評判)
+[api_guard] 本日の使用量: $0.8322 / ¥124 (431回呼び出し)
+[article_generator] サジェスト: Coursera 日本 評判 口コミ・Coursera 日本語・Coursera 料金...
+[article_generator] 検索意図: 購買直前 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.8322 / 1時間: $0.0024  (上限 日次$10.00 / 時間$5.00)  全体: $1.3207(¥198) / 8記事
+[api_guard] 記録: claude-sonnet-4-6 in=5951 out=10084 → $0.1691  (article:Coursera 日本 評判)
+[api_guard] 本日の使用量: $1.0013 / ¥150 (432回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of laptop, speech bubbles, gold st
+[imagefx] タイトル(英): Coursera Japan Review Complete Guide
+[article_generator] 完了: 「Coursera日本の評判は？料金・日本語対応・修了証まで徹底解説」 カテゴリ: 未設定(-) タグ: ['Coursera', 'オンライン学習', 'スキルアップ', 'AI学習', '資格取得']
+2026-05-03 05:33:00 [INFO] [generate] 完了: 「Coursera日本の評判は？料金・日本語対応・修了証まで徹底解説」
+2026-05-03 05:33:00 [INFO] [post] 投稿方式: draft
+[image_generator] アイキャッチ生成 (フラットイラスト): Flat design illustration featuring stacked books, graduation...
+[image_generator] 完了 (76KB, 1216x832)
+2026-05-03 05:33:08 [INFO] [post] 画像生成完了: 77,994 bytes
+[category_selector] カテゴリ取得: 13件
+[category_selector] 「Coursera 日本 評判」→ マッチなし、フォールバック: プログラミング(89)
+[wordpress] メディアアップロード完了 (ID: 275)
+[wordpress] アイキャッチ キャプションタグ付与: #coursera
+[wordpress] H2画像処理: 3枚
+[image_generator] H2画像生成 (テーマ反映): Image Prompt...
+[image_generator] 完了 (17KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 276)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: Coursera日本の評判・口コミ｜リアルな声をまとめた
+[image_generator] H2画像生成 (テーマ反映): A flat design illustration showing stacked coins, a golden l...
+[image_generator] 完了 (60KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 277)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: Coursera料金と無料コースの正直な使い方ガイド
+[image_generator] H2画像生成 (テーマ反映): Flat design illustration featuring a glowing certificate wit...
+[image_generator] 完了 (41KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 278)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: Courseraの修了証と就職・キャリアへの活用法
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 15件
+[internal_linker] 内部リンク選定完了: 計0件 (成約:0 / 案件関連:0 / 同親KW+補完:0)
+[internal_linker] 関連記事なし・内部リンクなし
+[wordpress] タグ設定: ['Coursera', 'オンライン学習', 'スキルアップ', 'AI学習', '資格取得']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 279) → https://web-study1.com/wp-admin/post.php?post=279&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行60 「Coursera 日本 評判」→ 投稿済み (2026/05/03, ID:279) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「Coursera日本の評判は？料金・日本語対応・修了証まで徹」
+2026-05-03 05:33:49 [INFO] [post] WP投稿完了: ID=279 → https://web-study1.com/wp-admin/post.php?post=279&action=edit
+2026-05-03 05:33:49 [INFO] [web-study1] [1/1] ✅ 完了: 「Coursera日本の評判は？料金・日本語対応・修了証まで徹底解説」
+2026-05-03 05:33:49 [INFO] [web-study1] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-03 05:33:49 [INFO] 
+============================================================
+2026-05-03 05:33:49 [INFO] 【全体サマリー】
+2026-05-03 05:33:49 [INFO]   ブログ数  : 1件
+2026-05-03 05:33:49 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-03 05:33:49 [INFO]   所要時間  : 227.1秒
+2026-05-03 05:33:49 [INFO]   ✅ [web-study1] Coursera 日本 評判 → Coursera日本の評判は？料金・日本語対応・修了証まで徹底解説
+2026-05-03 05:33:49 [INFO]        https://web-study1.com/wp-admin/post.php?post=279&action=edit
+2026-05-03 05:33:49 [INFO] ============================================================
+===== [WEB-STUDY1] 記事生成終了: 2026-05-03 05:33:50 / exit=0 =====
