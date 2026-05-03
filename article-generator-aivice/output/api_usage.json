@@ -2479,6 +2479,36 @@
       "output_tokens": 9534,
       "cost_usd": 0.161331,
       "label": "article:youtube ai ナレーション"
+    },
+    {
+      "timestamp": "2026-05-02T19:00:12.039809+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 104,
+      "cost_usd": 0.000505,
+      "label": "lsi:Claude Code ブログ生成 やり方"
+    },
+    {
+      "timestamp": "2026-05-02T19:00:15.598498+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 561,
+      "cost_usd": 0.002386,
+      "label": "kw_research:Claude Code ブログ生成 やり方"
+    },
+    {
+      "timestamp": "2026-05-02T19:02:29.318789+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6303,
+      "output_tokens": 9869,
+      "cost_usd": 0.166944,
+      "label": "article:Claude Code ブログ生成 やり方"
     }
   ],
   "events": [
