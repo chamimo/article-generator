@@ -579,6 +579,126 @@
       "output_tokens": 9467,
       "cost_usd": 0.161658,
       "label": "article:電気 代 節約 コンセント 抜く"
+    },
+    {
+      "timestamp": "2026-05-02T19:10:11.135361+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 76,
+      "cost_usd": 0.00039,
+      "label": "lsi:節約速報 プライチ"
+    },
+    {
+      "timestamp": "2026-05-02T19:10:15.136247+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 634,
+      "cost_usd": 0.002676,
+      "label": "kw_research:節約速報 プライチ"
+    },
+    {
+      "timestamp": "2026-05-02T19:12:03.345741+00:00",
+      "date": "2026-05-02",
+      "hour": "2026-05-02T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 9754,
+      "output_tokens": 8270,
+      "cost_usd": 0.153312,
+      "label": "article:節約速報 プライチ"
+    },
+    {
+      "timestamp": "2026-05-03T07:45:05.538877+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 89,
+      "cost_usd": 0.000447,
+      "label": "lsi:漫画 買取 ダンボール 無料"
+    },
+    {
+      "timestamp": "2026-05-03T07:45:09.185874+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 568,
+      "cost_usd": 0.002417,
+      "label": "kw_research:漫画 買取 ダンボール 無料"
+    },
+    {
+      "timestamp": "2026-05-03T07:47:18.959592+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T07",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 8328,
+      "output_tokens": 9662,
+      "cost_usd": 0.169914,
+      "label": "article:漫画 買取 ダンボール 無料"
+    },
+    {
+      "timestamp": "2026-05-03T07:48:06.449125+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 101,
+      "cost_usd": 0.000493,
+      "label": "lsi:梅雨コーデ 高校生"
+    },
+    {
+      "timestamp": "2026-05-03T07:48:10.533298+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 581,
+      "cost_usd": 0.002466,
+      "label": "kw_research:梅雨コーデ 高校生"
+    },
+    {
+      "timestamp": "2026-05-03T07:50:32.147895+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T07",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 8353,
+      "output_tokens": 10243,
+      "cost_usd": 0.178704,
+      "label": "article:梅雨コーデ 高校生"
+    },
+    {
+      "timestamp": "2026-05-03T07:51:31.718423+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 89,
+      "cost_usd": 0.000445,
+      "label": "lsi:梅雨 健康 ネタ"
+    },
+    {
+      "timestamp": "2026-05-03T07:51:35.542262+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 536,
+      "cost_usd": 0.002286,
+      "label": "kw_research:梅雨 健康 ネタ"
+    },
+    {
+      "timestamp": "2026-05-03T07:53:51.526851+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T07",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 8287,
+      "output_tokens": 10014,
+      "cost_usd": 0.175071,
+      "label": "article:梅雨 健康 ネタ"
     }
   ],
   "events": [
@@ -601,6 +721,11 @@
       "timestamp": "2026-05-01T19:10:08.446083+00:00",
       "type": "global_daily_limit",
       "message": "[api_guard] 🛑 全体日次コスト上限: 本日合計 $6.3826 (¥957) >= $2.00 (¥300)\n  翌日（UTC）にリセットされます。"
+    },
+    {
+      "timestamp": "2026-05-03T12:09:40.630181+00:00",
+      "type": "global_daily_limit",
+      "message": "[api_guard] 🛑 全体日次コスト上限: 本日合計 $3.4831 (¥522) >= $2.00 (¥300)\n  翌日（UTC）にリセットされます。"
     }
   ]
 }
