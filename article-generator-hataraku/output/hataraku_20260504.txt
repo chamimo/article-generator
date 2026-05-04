@@ -1,0 +1,109 @@
+===== [HATARAKU] 実行開始: 2026-05-04 04:50:00 =====
+2026-05-04 04:50:03 [INFO] ============================================================
+2026-05-04 04:50:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-04 04:50:03 [INFO] ============================================================
+2026-05-04 04:50:03 [INFO] 対象ブログ: ['hataraku']
+2026-05-04 04:50:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-04 04:50:05 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-04 04:50:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-04 04:50:05 [INFO]   genre            : 転職・副業・キャリア
+2026-05-04 04:50:05 [INFO]   fact_check       : True
+2026-05-04 04:50:05 [INFO]   article_type_mix : True
+2026-05-04 04:50:05 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-04 04:50:05 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'AIVice'}（はた楽ナビ のSSを確認してください）
+[asp_fetcher] ⚠️  別ブログ案件を除外: 18件除外 → 0件に絞り込み
+[asp_fetcher] はた楽ナビ / 「ASP案件マスター」: 0件
+2026-05-04 04:50:09 [INFO] [wp] 記事取得: 計36件 (draft=3 / publish=33)
+2026-05-04 04:50:09 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-04 04:50:11 [INFO] [fetch] サブKW紐付け: 992件 → 69記事に統合
+2026-05-04 04:50:11 [INFO] [fetch] [キーワード] メインKW: 56件（vol≥30 or N/A）  サブKW除外: 992件（統合対象）  投稿済みスキップ: 111件  テーマ外除外: 40件  aim内訳: [aim:77, claude:10, add:9]
+2026-05-04 04:50:11 [INFO] [dup_check] 優先候補: 56件 {'aim': 39, 'claude': 9, 'add': 8} を先頭評価
+2026-05-04 04:50:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=56件, 要求=1件)
+2026-05-04 04:50:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-04 04:50:11 [INFO] [select]   1. 「簿記 1 級 転職」 vol=0 seo=N/A comp=N/A
+2026-05-04 04:50:11 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-04 04:50:11 [INFO] [hataraku] 候補: 56件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $4.3082 / 1時間: $0.3464  (上限 日次$10.00 / 時間$5.00)  全体: $4.8404(¥726) / 28記事
+2026-05-04 04:50:11 [INFO] [api_guard] 本日の使用量: $4.3082 / ¥646 (75回呼び出し)
+2026-05-04 04:50:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-04 04:50:11 [INFO] [hataraku] [1/1] [LONGTAIL] 「簿記 1 級 転職」 vol=0 ★AIM
+2026-05-04 04:50:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-04 04:50:11 [INFO] [generate] 生成開始: 「簿記 1 級 転職」(vol:0) fact_check=True target_length=6,000字  サブKW:6件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「簿記 1 級 転職」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $4.3082 / 1時間: $0.3464  (上限 日次$10.00 / 時間$5.00)  全体: $4.8404(¥726) / 28記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=109 out=92 → $0.0005  (lsi:簿記 1 級 転職)
+[api_guard] 本日の使用量: $4.3087 / ¥646 (514回呼び出し)
+[article_generator] 共起語: 簿記1級資格、転職市場、就職活動、キャリアアップ、年収向上、実務経験、採用試験、簿記資格取得、財務会計、管理会計、税理士...
+[article_generator] サブKW候補: 6件 (簿記 2 級 転職 厳しい〜)
+[api_guard] ✅ 本日: $4.3087 / 1時間: $0.3468  (上限 日次$10.00 / 時間$5.00)  全体: $4.8409(¥726) / 28記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=176 out=527 → $0.0022  (kw_research:簿記 1 級 転職)
+[api_guard] 本日の使用量: $4.3109 / ¥646 (515回呼び出し)
+[article_generator] サジェスト: 簿記1級 転職・簿記1級 転職 有利・簿記1級 転職 難易度...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $4.3109 / 1時間: $0.3491  (上限 日次$10.00 / 時間$5.00)  全体: $4.8431(¥726) / 28記事
+[api_guard] 記録: claude-sonnet-4-6 in=5031 out=9516 → $0.1578  (article:簿記 1 級 転職)
+[api_guard] 本日の使用量: $4.4687 / ¥670 (516回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of laptop, ascending chart, coins,
+[imagefx] タイトル(英): Bookkeeping Level 1 Career Advantages
+[article_generator] 完了: 「簿記1級転職で有利になる理由と年収・求人・未経験からの可能性を徹底解説」 カテゴリ: 未設定(-) タグ: ['簿記1級', '転職・キャリアアップ', '経理・財務', '資格取得', '年収アップ']
+2026-05-04 04:52:31 [INFO] [generate] 完了: 「簿記1級転職で有利になる理由と年収・求人・未経験からの可能性を徹底解説」
+2026-05-04 04:52:31 [INFO] [post] 投稿方式: draft
+[image_generator] アイキャッチ生成 (フラットイラスト): Flat design illustration featuring accounting ledger, calcul...
+[image_generator] 完了 (59KB, 1216x832)
+2026-05-04 04:52:39 [INFO] [post] 画像生成完了: 60,889 bytes
+[category_selector] カテゴリ取得: 21件
+[category_selector] 「簿記 1 級 転職」→ 転職・就職(269) score=6
+[wordpress] メディアアップロード完了 (ID: 453)
+[wordpress] アイキャッチ キャプションタグ付与: #簿記 1
+[wordpress] H2画像処理: 3枚
+[image_generator] H2画像生成 (テーマ反映): A flat design illustration featuring accounting ledger icons...
+[image_generator] 完了 (51KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 454)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: 簿記1級転職が有利になる理由と転職市場での評価
+[image_generator] H2画像生成 (テーマ反映): Flat design illustration featuring stacked books, clock, pro...
+[image_generator] 完了 (53KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 455)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 簿記1級転職の難易度・勉強時間・合格率の現実
+[image_generator] H2画像生成 (テーマ反映): Flat design illustration of ascending bar chart with account...
+[image_generator] 完了 (33KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 456)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 簿記1級転職で年収を上げるための戦略と活用法
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 33件
+[internal_linker] 内部リンク選定完了: 計0件 (成約:0 / 案件関連:0 / 同親KW+補完:0)
+[internal_linker] 関連記事なし・内部リンクなし
+[wordpress] タグ設定: ['簿記1級', '転職・キャリアアップ', '経理・財務', '資格取得', '年収アップ']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 457) → https://hataraku-navi.com/wp-admin/post.php?post=457&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, ascending chart, coins, stars, checkmark badges, lightbulb, calendar in soft pastel pink, mint, lavender and cream tones, minimal style.
+Elegant lifestyle background: soft morning light with warm neutrals, gentle depth-of-field effect, clean and airy ambiance, muted earth tones.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Bookkeeping Level 1 Career Advantages" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行14 「簿記 1 級 転職」→ 投稿済み (2026/05/04, ID:457) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「簿記1級転職で有利になる理由と年収・求人・未経験からの可能性」
+2026-05-04 04:53:24 [INFO] [post] WP投稿完了: ID=457 → https://hataraku-navi.com/wp-admin/post.php?post=457&action=edit
+2026-05-04 04:53:24 [INFO] [hataraku] [1/1] ✅ 完了: 「簿記1級転職で有利になる理由と年収・求人・未経験からの可能性を徹底解説」
+2026-05-04 04:53:24 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-04 04:53:24 [INFO] 
+============================================================
+2026-05-04 04:53:24 [INFO] 【全体サマリー】
+2026-05-04 04:53:24 [INFO]   ブログ数  : 1件
+2026-05-04 04:53:24 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-04 04:53:24 [INFO]   所要時間  : 201.1秒
+2026-05-04 04:53:24 [INFO]   ✅ [hataraku] 簿記 1 級 転職 → 簿記1級転職で有利になる理由と年収・求人・未経験からの可能性を徹底解説
+2026-05-04 04:53:24 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=457&action=edit
+2026-05-04 04:53:24 [INFO] ============================================================
+===== [HATARAKU] 記事生成終了: 2026-05-04 04:53:26 / exit=0 =====

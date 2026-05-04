@@ -5069,6 +5069,96 @@
       "output_tokens": 9840,
       "cost_usd": 0.162594,
       "label": "article:地獄に堕ちるわよ netflix 細木数子 戸田恵梨香"
+    },
+    {
+      "timestamp": "2026-05-03T19:20:18.572864+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 97,
+      "cost_usd": 0.000476,
+      "label": "lsi:モリゾーとキッコロ"
+    },
+    {
+      "timestamp": "2026-05-03T19:20:22.327696+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 580,
+      "cost_usd": 0.002462,
+      "label": "kw_research:モリゾーとキッコロ"
+    },
+    {
+      "timestamp": "2026-05-03T19:22:38.185158+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4906,
+      "output_tokens": 9905,
+      "cost_usd": 0.163293,
+      "label": "article:モリゾーとキッコロ"
+    },
+    {
+      "timestamp": "2026-05-03T19:30:13.563037+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 84,
+      "cost_usd": 0.000426,
+      "label": "lsi:ブルダック炒め麺 販売店"
+    },
+    {
+      "timestamp": "2026-05-03T19:30:17.393273+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 618,
+      "cost_usd": 0.002616,
+      "label": "kw_research:ブルダック炒め麺 販売店"
+    },
+    {
+      "timestamp": "2026-05-03T19:32:44.492703+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5067,
+      "output_tokens": 10792,
+      "cost_usd": 0.177081,
+      "label": "article:ブルダック炒め麺 販売店"
+    },
+    {
+      "timestamp": "2026-05-03T19:50:14.421011+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 92,
+      "cost_usd": 0.000455,
+      "label": "lsi:簿記 1 級 転職"
+    },
+    {
+      "timestamp": "2026-05-03T19:50:17.931994+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 527,
+      "cost_usd": 0.002249,
+      "label": "kw_research:簿記 1 級 転職"
+    },
+    {
+      "timestamp": "2026-05-03T19:52:28.075326+00:00",
+      "date": "2026-05-03",
+      "hour": "2026-05-03T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5031,
+      "output_tokens": 9516,
+      "cost_usd": 0.157833,
+      "label": "article:簿記 1 級 転職"
     }
   ],
   "events": [
