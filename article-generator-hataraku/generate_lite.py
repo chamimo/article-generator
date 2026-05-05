@@ -299,6 +299,25 @@ GLOBAL_NG_KEYWORDS: list[str] = [
     "怪しい", "詐欺", "返金", "被害", "トラブル", "やばい",
 ]
 
+# 特定企業・団体への攻撃的記事を防ぐパターン（法人格マーカー＋ネガティブワード）
+import re as _re
+_LEGAL_ENTITY_RE = _re.compile(
+    r'株式会社|合同会社|有限会社|一般社団法人|一般財団法人|NPO法人|社会福祉法人|学校法人'
+)
+_NEGATIVE_ATTACK_WORDS = [
+    "失敗", "体験談", "やめた", "やめとけ", "最悪", "ひどい", "悪い",
+    "問題", "訴訟", "苦情", "クレーム", "悪評", "炎上", "ブラック",
+    "パワハラ", "セクハラ", "ハラスメント", "告発", "内部告発",
+    "詐欺", "被害", "危険", "違法", "不正", "逮捕",
+]
+
+def _is_company_attack(kw: str) -> bool:
+    """特定企業・法人名＋ネガティブワードの組み合わせを検出する。"""
+    if not _LEGAL_ENTITY_RE.search(kw):
+        return False
+    kw_l = kw.lower()
+    return any(w in kw_l for w in _NEGATIVE_ATTACK_WORDS)
+
 
 # ═══════════════════════════════════════════════════════════════
 # ARTICLE TYPE
@@ -744,6 +763,10 @@ def fetch_candidates(
         kw_l = kw.lower()
         # 全ブログ共通NGワードチェック（部分一致）
         if any(ng in kw_l for ng in GLOBAL_NG_KEYWORDS):
+            return False
+        # 特定企業・法人への攻撃的キーワードチェック
+        if _is_company_attack(kw):
+            log.warning(f"[fetch] 企業攻撃KW除外（リスク回避）: 「{kw}」")
             return False
         # ブログ固有NGワードチェック（ブラックリスト）
         if ng_keywords and any(ng.lower() in kw_l for ng in ng_keywords):
@@ -1449,6 +1472,7 @@ def post(article: dict, dry_run: bool = False,
             image_style=blog_cfg.image_style,
             asp_ss_id=blog_cfg.asp_ss_id,
             default_fallback_category=blog_cfg.extra.get("default_fallback_category", ""),
+            category_keywords=blog_cfg.extra.get("category_keywords", {}),
             blog_meta={
                 "display_name":  blog_cfg.display_name,
                 "wp_url":        blog_cfg.wp_url,
@@ -1930,7 +1954,12 @@ def _cluster_keywords_intra(kws: list[dict]) -> list[dict]:
         各 sub dict に "_cluster_reason" / "_cluster_confidence" キーを付与（ログ用）
     """
     import unicodedata
-    sorted_kws = sorted(kws, key=lambda x: -x.get("volume", 0))
+    # aim="aim" を最優先、次いで now/monetize/future、残りは volume 降順
+    _AIM_SORT = {"aim": 0, "now": 1, "monetize": 2, "future": 3, "claude": 4, "add": 5}
+    sorted_kws = sorted(
+        kws,
+        key=lambda x: (_AIM_SORT.get(x.get("_aim", ""), 9), -x.get("volume", 0)),
+    )
     for kw in sorted_kws:
         kw["_base"] = _extract_base_kw(kw["keyword"])
 
@@ -2281,6 +2310,7 @@ def run_kanikabari_check(blog_cfg: BlogConfig) -> None:
             return 0
 
     # 未判定の AIM キーワードを収集（1-based 行番号付き）
+    include_no_aim = blog_cfg.extra.get("kanikabari_include_no_aim", False)
     unjudged: list[dict] = []
     for row_idx, row in enumerate(rows[1:], start=2):
         def cell(i: int, _row: list = row) -> str:
@@ -2292,7 +2322,7 @@ def run_kanikabari_check(blog_cfg: BlogConfig) -> None:
 
         if not kw:
             continue
-        if aim not in ("aim", "claude", "add", "now", "future", "monetize"):
+        if not include_no_aim and aim not in ("aim", "claude", "add", "now", "future", "monetize"):
             continue
         if hantei:  # 既に判定済みはスキップ
             continue
