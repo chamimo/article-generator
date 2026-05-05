@@ -699,6 +699,36 @@
       "output_tokens": 10014,
       "cost_usd": 0.175071,
       "label": "article:梅雨 健康 ネタ"
+    },
+    {
+      "timestamp": "2026-05-04T19:10:12.659798+00:00",
+      "date": "2026-05-04",
+      "hour": "2026-05-04T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 90,
+      "cost_usd": 0.000451,
+      "label": "lsi:漫画 買取 ダンボール 無料"
+    },
+    {
+      "timestamp": "2026-05-04T19:10:16.274544+00:00",
+      "date": "2026-05-04",
+      "hour": "2026-05-04T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 539,
+      "cost_usd": 0.002301,
+      "label": "kw_research:漫画 買取 ダンボール 無料"
+    },
+    {
+      "timestamp": "2026-05-04T19:12:54.887349+00:00",
+      "date": "2026-05-04",
+      "hour": "2026-05-04T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 8306,
+      "output_tokens": 10261,
+      "cost_usd": 0.178833,
+      "label": "article:漫画 買取 ダンボール 無料"
     }
   ],
   "events": [
