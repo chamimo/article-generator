@@ -63,6 +63,26 @@ def _score(keyword: str, article_title: str, category_name: str) -> int:
     return score
 
 
+def _hint_score(keyword: str, article_title: str, category_name: str) -> int:
+    """
+    blog_config の category_keywords ヒントマップを使ったスコアを返す。
+    カテゴリ名が該当し、テキストにヒントキーワードが含まれれば加点。
+    """
+    hints: dict = wp_context.get_category_keywords()
+    if not hints:
+        return 0
+    kw_list = hints.get(category_name)
+    if not kw_list:
+        return 0
+    text = f"{keyword} {article_title}".lower()
+    score = 0
+    for hint in kw_list:
+        h = hint.lower()
+        if h in text:
+            score += len(h) * 3  # ヒントマッチは高めに加点
+    return score
+
+
 def select_category(keyword: str, article_title: str = "") -> int:
     """
     キーワードと記事タイトルから最適なカテゴリIDを返す。
@@ -77,14 +97,13 @@ def select_category(keyword: str, article_title: str = "") -> int:
     if not candidates:
         candidates = categories if categories else [{"id": 1, "name": "未分類", "count": 0}]
 
-    scored = sorted(
-        candidates,
-        key=lambda c: _score(keyword, article_title, c["name"]),
-        reverse=True,
-    )
+    def total_score(c: dict) -> int:
+        return _score(keyword, article_title, c["name"]) + _hint_score(keyword, article_title, c["name"])
+
+    scored = sorted(candidates, key=total_score, reverse=True)
 
     best = scored[0]
-    best_score = _score(keyword, article_title, best["name"])
+    best_score = total_score(best)
 
     if best_score == 0:
         # スコアゼロ（完全不一致）→ blog_config の default_fallback_category を優先

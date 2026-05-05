@@ -79,5 +79,6 @@
   },
   "content_notes": "・季節の描写は春夏秋冬をバランスよく扱うこと。桜（春）だけに偏らないように注意する。・季節に関するセクションや見どころ紹介では、夏（新緑・祭り・川遊び）・秋（紅葉・高山祭）・冬（雪景色・温泉）も均等に取り上げること。・記事全体として、春以外の季節の魅力も読者に伝えるよう意識する。",
   "wp_post_status": "draft",
-  "wp_url": "https://hida-no-omoide.com"
+  "wp_url": "https://hida-no-omoide.com",
+  "kanikabari_include_no_aim": true
 }

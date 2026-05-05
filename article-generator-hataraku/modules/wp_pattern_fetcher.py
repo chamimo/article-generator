@@ -36,10 +36,18 @@ class PatternItem:
 # 内部ユーティリティ
 # ──────────────────────────────────────────────────────────
 
+def _to_hiragana(text: str) -> str:
+    """カタカナ（ァ-ヶ）をひらがなに変換する（マッチング用）。"""
+    return "".join(
+        chr(ord(c) - 0x60) if 0x30A1 <= ord(c) <= 0x30F6 else c
+        for c in text
+    )
+
+
 def _tokenize(text: str) -> frozenset[str]:
-    """NFKC正規化→小文字→スペース分割 で2文字以上のトークンを返す。"""
-    normalized = unicodedata.normalize("NFKC", text).lower()
-    return frozenset(t for t in re.split(r"[\s\-_・/【】「」]+", normalized) if len(t) >= 2)
+    """NFKC正規化→カタカナ→ひらがな変換→小文字→スペース分割 で2文字以上のトークンを返す。"""
+    normalized = _to_hiragana(unicodedata.normalize("NFKC", text).lower())
+    return frozenset(t for t in re.split(r"[\s\-_・/【】「」()（）]+", normalized) if len(t) >= 2)
 
 
 def _render(field_val: object) -> str:

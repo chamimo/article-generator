@@ -31,6 +31,7 @@ _image_style:      dict | None = None
 _blog_meta:        dict | None = None  # {site_purpose, target, writing_taste, genre_detail, search_intent}
 _asp_ss_id:        str  | None = None  # ASP専用SS（空ならcandidate_ss_idにフォールバック）
 _default_fallback_category: str = ""   # スコアゼロ時のフォールバックカテゴリ名
+_category_keywords: dict = {}          # カテゴリ名 → キーワードリスト のヒントマップ
 
 
 def set_context(
@@ -44,13 +45,14 @@ def set_context(
     blog_meta:        dict | None = None,
     asp_ss_id:        str  | None = None,
     default_fallback_category: str = "",
+    category_keywords: dict | None = None,
 ) -> None:
     """
     ブログ別の WP 認証情報をセットする。
     None を渡すと config.py のデフォルト値にフォールバックする。
     ブログ切り替え時はキャッシュもクリアする。
     """
-    global _url, _username, _password, _post_status, _candidate_ss_id, _candidate_sheet, _image_style, _blog_meta, _asp_ss_id, _default_fallback_category
+    global _url, _username, _password, _post_status, _candidate_ss_id, _candidate_sheet, _image_style, _blog_meta, _asp_ss_id, _default_fallback_category, _category_keywords
     _url              = wp_url
     _username         = wp_username
     _password         = wp_app_password
@@ -61,6 +63,7 @@ def set_context(
     _blog_meta        = blog_meta or {}
     _asp_ss_id        = asp_ss_id or ""
     _default_fallback_category = default_fallback_category
+    _category_keywords = category_keywords or {}
     _clear_caches()
 
 
@@ -117,6 +120,11 @@ def get_asp_ss_id() -> str:
 def get_default_fallback_category() -> str:
     """スコアゼロ時に使うフォールバックカテゴリ名。未設定なら空文字。"""
     return _default_fallback_category
+
+
+def get_category_keywords() -> dict:
+    """カテゴリ名→キーワードリストのヒントマップ。未設定なら空dict。"""
+    return _category_keywords
 
 
 def get_auth() -> HTTPBasicAuth:

@@ -5159,6 +5159,216 @@
       "output_tokens": 9516,
       "cost_usd": 0.157833,
       "label": "article:簿記 1 級 転職"
+    },
+    {
+      "timestamp": "2026-05-04T19:20:28.206319+00:00",
+      "date": "2026-05-04",
+      "hour": "2026-05-04T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 117,
+      "output_tokens": 80,
+      "cost_usd": 0.000414,
+      "label": "lsi:もぐワン ペットフード 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-04T19:20:31.762524+00:00",
+      "date": "2026-05-04",
+      "hour": "2026-05-04T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 184,
+      "output_tokens": 487,
+      "cost_usd": 0.002095,
+      "label": "kw_research:もぐワン ペットフード 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-04T19:22:42.660732+00:00",
+      "date": "2026-05-04",
+      "hour": "2026-05-04T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6051,
+      "output_tokens": 9758,
+      "cost_usd": 0.164523,
+      "label": "article:もぐワン ペットフード 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-04T19:30:13.703595+00:00",
+      "date": "2026-05-04",
+      "hour": "2026-05-04T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 117,
+      "output_tokens": 84,
+      "cost_usd": 0.00043,
+      "label": "lsi:辛ラーメン トゥーンバ 販売店"
+    },
+    {
+      "timestamp": "2026-05-04T19:30:18.051147+00:00",
+      "date": "2026-05-04",
+      "hour": "2026-05-04T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 184,
+      "output_tokens": 723,
+      "cost_usd": 0.003039,
+      "label": "kw_research:辛ラーメン トゥーンバ 販売店"
+    },
+    {
+      "timestamp": "2026-05-04T19:32:19.648545+00:00",
+      "date": "2026-05-04",
+      "hour": "2026-05-04T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5181,
+      "output_tokens": 9357,
+      "cost_usd": 0.155898,
+      "label": "article:辛ラーメン トゥーンバ 販売店"
+    },
+    {
+      "timestamp": "2026-05-04T19:50:12.907937+00:00",
+      "date": "2026-05-04",
+      "hour": "2026-05-04T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 122,
+      "output_tokens": 93,
+      "cost_usd": 0.00047,
+      "label": "lsi:株式会社 いーふらん 転職 失敗集団訴訟"
+    },
+    {
+      "timestamp": "2026-05-04T19:50:18.462499+00:00",
+      "date": "2026-05-04",
+      "hour": "2026-05-04T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 189,
+      "output_tokens": 545,
+      "cost_usd": 0.002331,
+      "label": "kw_research:株式会社 いーふらん 転職 失敗集団訴訟"
+    },
+    {
+      "timestamp": "2026-05-04T19:52:39.107688+00:00",
+      "date": "2026-05-04",
+      "hour": "2026-05-04T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4889,
+      "output_tokens": 10122,
+      "cost_usd": 0.166497,
+      "label": "article:株式会社 いーふらん 転職 失敗集団訴訟"
+    },
+    {
+      "timestamp": "2026-05-05T03:06:32.330107+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 122,
+      "output_tokens": 92,
+      "cost_usd": 0.000466,
+      "label": "lsi:クラウドワークス 初心者 始め方 稼ぎ方"
+    },
+    {
+      "timestamp": "2026-05-05T03:06:36.203058+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 189,
+      "output_tokens": 613,
+      "cost_usd": 0.002603,
+      "label": "kw_research:クラウドワークス 初心者 始め方 稼ぎ方"
+    },
+    {
+      "timestamp": "2026-05-05T03:09:14.556621+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5159,
+      "output_tokens": 10215,
+      "cost_usd": 0.168702,
+      "label": "article:クラウドワークス 初心者 始め方 稼ぎ方"
+    },
+    {
+      "timestamp": "2026-05-05T03:10:20.435343+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 105,
+      "cost_usd": 0.00051,
+      "label": "lsi:IT転職 未経験 30代 現実"
+    },
+    {
+      "timestamp": "2026-05-05T03:10:24.445523+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 588,
+      "cost_usd": 0.002495,
+      "label": "kw_research:IT転職 未経験 30代 現実"
+    },
+    {
+      "timestamp": "2026-05-05T03:13:17.155402+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4921,
+      "output_tokens": 10533,
+      "cost_usd": 0.172758,
+      "label": "article:IT転職 未経験 30代 現実"
+    },
+    {
+      "timestamp": "2026-05-05T11:40:30.053410+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 72,
+      "cost_usd": 0.000377,
+      "label": "lsi:五平餅 お土産 できる？"
+    },
+    {
+      "timestamp": "2026-05-05T11:40:33.489675+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 533,
+      "cost_usd": 0.002274,
+      "label": "kw_research:五平餅 お土産 できる？"
+    },
+    {
+      "timestamp": "2026-05-05T11:42:36.899532+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4839,
+      "output_tokens": 9167,
+      "cost_usd": 0.152022,
+      "label": "article:五平餅 お土産 できる？"
+    },
+    {
+      "timestamp": "2026-05-05T11:43:41.172660+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 117,
+      "output_tokens": 84,
+      "cost_usd": 0.00043,
+      "label": "lsi:朴葉味噌 お土産 日持ちする？"
+    },
+    {
+      "timestamp": "2026-05-05T11:43:45.198155+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 184,
+      "output_tokens": 607,
+      "cost_usd": 0.002575,
+      "label": "kw_research:朴葉味噌 お土産 日持ちする？"
+    },
+    {
+      "timestamp": "2026-05-05T11:45:57.708583+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4925,
+      "output_tokens": 10010,
+      "cost_usd": 0.164925,
+      "label": "article:朴葉味噌 お土産 日持ちする？"
     }
   ],
   "events": [
