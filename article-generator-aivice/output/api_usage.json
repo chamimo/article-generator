@@ -2509,6 +2509,36 @@
       "output_tokens": 9869,
       "cost_usd": 0.166944,
       "label": "article:Claude Code ブログ生成 やり方"
+    },
+    {
+      "timestamp": "2026-05-04T19:00:20.075761+00:00",
+      "date": "2026-05-04",
+      "hour": "2026-05-04T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 120,
+      "cost_usd": 0.000566,
+      "label": "lsi:Claude Code リライト 自動化"
+    },
+    {
+      "timestamp": "2026-05-04T19:00:23.491405+00:00",
+      "date": "2026-05-04",
+      "hour": "2026-05-04T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 521,
+      "cost_usd": 0.002224,
+      "label": "kw_research:Claude Code リライト 自動化"
+    },
+    {
+      "timestamp": "2026-05-04T19:02:47.479707+00:00",
+      "date": "2026-05-04",
+      "hour": "2026-05-04T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6185,
+      "output_tokens": 9351,
+      "cost_usd": 0.15882,
+      "label": "article:Claude Code リライト 自動化"
     }
   ],
   "events": [
