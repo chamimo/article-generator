@@ -1,0 +1,116 @@
+===== [HATARAKU] 実行開始: 2026-05-06 04:50:01 =====
+2026-05-06 04:50:03 [INFO] ============================================================
+2026-05-06 04:50:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-06 04:50:03 [INFO] ============================================================
+2026-05-06 04:50:03 [INFO] 対象ブログ: ['hataraku']
+2026-05-06 04:50:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-06 04:50:06 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-06 04:50:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-06 04:50:06 [INFO]   genre            : 転職・副業・キャリア
+2026-05-06 04:50:06 [INFO]   fact_check       : True
+2026-05-06 04:50:06 [INFO]   article_type_mix : True
+2026-05-06 04:50:06 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-06 04:50:06 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'AIVice'}（はた楽ナビ のSSを確認してください）
+[asp_fetcher] ⚠️  別ブログ案件を除外: 18件除外 → 0件に絞り込み
+[asp_fetcher] はた楽ナビ / 「ASP案件マスター」: 0件
+2026-05-06 04:50:09 [INFO] [wp] 記事取得: 計39件 (draft=3 / publish=36)
+2026-05-06 04:50:09 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-06 04:50:12 [INFO] [fetch] サブKW紐付け: 7155件 → 277記事に統合
+2026-05-06 04:50:12 [WARNING] [fetch] 企業攻撃KW除外（リスク回避）: 「株式会社ワールドコーポレーション 転職 失敗 集団訴訟」
+2026-05-06 04:50:12 [WARNING] [fetch] 企業攻撃KW除外（リスク回避）: 「株式会社エコリング 転職 失敗 集団 訴訟」
+2026-05-06 04:50:12 [WARNING] [fetch] 企業攻撃KW除外（リスク回避）: 「日本情報クリエイト株式会社 転職 失敗 集団 訴訟」
+2026-05-06 04:50:12 [WARNING] [fetch] 企業攻撃KW除外（リスク回避）: 「株式会社ハマエンジニアリング 転職 失敗 集団 訴訟」
+2026-05-06 04:50:12 [INFO] [fetch] [キーワード] メインKW: 272件（vol≥30 or N/A）  サブKW除外: 7155件（統合対象）  投稿済みスキップ: 905件  テーマ外除外: 503件  aim内訳: [now:1, aim:222, claude:541, add:11]
+2026-05-06 04:50:12 [INFO] [dup_check] 優先候補: 272件 {'now': 1, 'aim': 83, 'claude': 178, 'add': 10} を先頭評価
+2026-05-06 04:50:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=272件, 要求=1件)
+2026-05-06 04:50:12 [INFO] [select] 1件選定 (要求=1件)
+2026-05-06 04:50:12 [INFO] [select]   1. 「社会復帰 ブランク 転職 志望動機」 vol=0 seo=N/A comp=N/A
+2026-05-06 04:50:12 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-06 04:50:12 [INFO] [hataraku] 候補: 272件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.9912 / 1時間: $0.3210  (上限 日次$10.00 / 時間$5.00)  全体: $1.1369(¥171) / 7記事
+2026-05-06 04:50:12 [INFO] [api_guard] 本日の使用量: $0.9912 / ¥149 (18回呼び出し)
+2026-05-06 04:50:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-06 04:50:12 [INFO] [hataraku] [1/1] [LONGTAIL] 「社会復帰 ブランク 転職 志望動機」 vol=0 ★NOW
+2026-05-06 04:50:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-06 04:50:12 [INFO] [generate] 生成開始: 「社会復帰 ブランク 転職 志望動機」(vol:0) fact_check=True target_length=6,000字  サブKW:18件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「社会復帰 ブランク 転職 志望動機」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.9912 / 1時間: $0.3210  (上限 日次$10.00 / 時間$5.00)  全体: $1.1369(¥171) / 7記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=117 out=123 → $0.0006  (lsi:社会復帰 ブランク 転職 志望動機)
+[api_guard] 本日の使用量: $0.9918 / ¥148 (544回呼び出し)
+[article_generator] 共起語: ブランク期間の説明方法、職務経歴書の書き方、面接対策、自信を取り戻す、スキルアップ、アルバイト経験、育児との両立、介護休...
+[article_generator] サブKW候補: 18件 (社会復帰 とは〜)
+[api_guard] ✅ 本日: $0.9918 / 1時間: $0.3216  (上限 日次$10.00 / 時間$5.00)  全体: $1.1375(¥171) / 7記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=184 out=608 → $0.0026  (kw_research:社会復帰 ブランク 転職 志望動機)
+[api_guard] 本日の使用量: $0.9943 / ¥149 (545回呼び出し)
+[article_generator] サジェスト: 社会復帰 ブランク 転職・社会復帰 ブランク 志望動機・社会復帰 ブランク期間...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.9943 / 1時間: $0.3242  (上限 日次$10.00 / 時間$5.00)  全体: $1.1401(¥171) / 7記事
+[api_guard] 記録: claude-sonnet-4-6 in=5288 out=10199 → $0.1688  (article:社会復帰 ブランク 転職 志望動機)
+[api_guard] 本日の使用量: $1.1632 / ¥174 (546回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of laptop, calendar, lightbulb, ch
+[imagefx] タイトル(英): Career Change After Gap Period
+[article_generator] 完了: 「社会復帰・ブランクありの転職志望動機の書き方｜例文と面接対策まで解説」 カテゴリ: 未設定(-) タグ: ['社会復帰', 'ブランク転職', '志望動機', '転職活動', '面接対策']
+2026-05-06 04:52:40 [INFO] [generate] 完了: 「社会復帰・ブランクありの転職志望動機の書き方｜例文と面接対策まで解説」
+2026-05-06 04:52:40 [INFO] [post] 投稿方式: draft
+[image_generator] アイキャッチ生成 (フラットイラスト): Flat design illustration featuring a bridge connecting two i...
+[image_generator] 完了 (68KB, 1216x832)
+2026-05-06 04:52:43 [INFO] [post] 画像生成完了: 70,225 bytes
+[category_selector] カテゴリ取得: 21件
+[category_selector] 「社会復帰 ブランク 転職 志望動機」→ ストレス・メンタル(284) score=24
+[wordpress] メディアアップロード完了 (ID: 477)
+[wordpress] アイキャッチ キャプションタグ付与: #社会復帰
+[wordpress] H2画像処理: 3枚
+[image_generator] H2画像生成 (テーマ反映): Soft pastel illustration showing a bridge connecting a pause...
+[image_generator] 完了 (56KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 478)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: 社会復帰・ブランクありの転職志望動機を書く前に知っておくべき
+[image_generator] H2画像生成 (テーマ反映): A flat design illustration featuring a bridge connecting two...
+[image_generator] 完了 (68KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 479)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 状況別・社会復帰ブランクありの志望動機例文と書き方
+[image_generator] H2画像生成 (テーマ反映): A flat design illustration featuring a bridge icon connectin...
+[image_generator] 完了 (35KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 480)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 社会復帰・ブランクありの転職面接で成功するための対策
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 36件
+[internal_linker] キーワードトークンマッチ: 2件選定（ルールベース）
+[internal_linker] 内部リンク選定完了: 計2件 (成約:0 / 案件関連:0 / 同親KW+補完:2)
+[internal_linker] 注意: 内部リンク2件（目標5件未達）
+[internal_linker] 内部リンク挿入完了: 計2件 (本文H3:2 / 末尾リスト:0)
+[internal_linker] 内部リンク 2件 挿入: ['経理に転職！未経験でも採用される7つのポイントと資格・志望動', '転職で事務の志望動機を書くコツ7選！未経験・例文・NG例まで']
+[wordpress] タグ設定: ['社会復帰', 'ブランク転職', '志望動機', '転職活動', '面接対策']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 481) → https://hataraku-navi.com/wp-admin/post.php?post=481&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, calendar, lightbulb, checkmarks, and upward chart with speech bubbles, soft pastel pink, mint, and cream tones, minimal design style.
+Elegant lifestyle background: soft morning light with warm neutrals, gentle depth-of-field effect, clean and airy ambiance, muted earth tones.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Career Change After Gap Period" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行1210 「社会復帰 ブランク 転職 志望動機」→ 投稿済み (2026/05/06, ID:481) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「社会復帰・ブランクありの転職志望動機の書き方｜例文と面接対策」
+2026-05-06 04:53:09 [INFO] [post] WP投稿完了: ID=481 → https://hataraku-navi.com/wp-admin/post.php?post=481&action=edit
+2026-05-06 04:53:09 [INFO] [hataraku] [1/1] ✅ 完了: 「社会復帰・ブランクありの転職志望動機の書き方｜例文と面接対策まで解説」
+2026-05-06 04:53:09 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-06 04:53:09 [INFO] 
+============================================================
+2026-05-06 04:53:09 [INFO] 【全体サマリー】
+2026-05-06 04:53:09 [INFO]   ブログ数  : 1件
+2026-05-06 04:53:09 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-06 04:53:09 [INFO]   所要時間  : 185.7秒
+2026-05-06 04:53:09 [INFO]   ✅ [hataraku] 社会復帰 ブランク 転職 志望動機 → 社会復帰・ブランクありの転職志望動機の書き方｜例文と面接対策まで解説
+2026-05-06 04:53:09 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=481&action=edit
+2026-05-06 04:53:09 [INFO] ============================================================
+===== [HATARAKU] 記事生成終了: 2026-05-06 04:53:12 / exit=0 =====
