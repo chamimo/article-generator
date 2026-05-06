@@ -2539,6 +2539,66 @@
       "output_tokens": 9351,
       "cost_usd": 0.15882,
       "label": "article:Claude Code リライト 自動化"
+    },
+    {
+      "timestamp": "2026-05-05T19:00:12.899284+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 173,
+      "cost_usd": 0.000778,
+      "label": "lsi:plaud note pro バッテリー"
+    },
+    {
+      "timestamp": "2026-05-05T19:00:16.924308+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 569,
+      "cost_usd": 0.002416,
+      "label": "kw_research:plaud note pro バッテリー"
+    },
+    {
+      "timestamp": "2026-05-05T19:02:03.167094+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6286,
+      "output_tokens": 8247,
+      "cost_usd": 0.142563,
+      "label": "article:plaud note pro バッテリー"
+    },
+    {
+      "timestamp": "2026-05-06T01:40:41.965059+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 96,
+      "cost_usd": 0.000474,
+      "label": "lsi:AIエージェント 何ができる 初心者"
+    },
+    {
+      "timestamp": "2026-05-06T01:40:46.670204+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 502,
+      "cost_usd": 0.002152,
+      "label": "kw_research:AIエージェント 何ができる 初心者"
+    },
+    {
+      "timestamp": "2026-05-06T01:43:15.307306+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6141,
+      "output_tokens": 9626,
+      "cost_usd": 0.162813,
+      "label": "article:AIエージェント 何ができる 初心者"
     }
   ],
   "events": [
