@@ -18,6 +18,7 @@ from __future__ import annotations
 import json
 import re
 import requests
+from datetime import datetime, timezone, timedelta
 from html import unescape
 from requests.auth import HTTPBasicAuth
 
@@ -95,7 +96,7 @@ def get_published_articles(force_refresh: bool = False) -> list[dict]:
                 "per_page": 100,
                 "page": page,
                 "status": "publish",
-                "_fields": "id,title,slug,link",
+                "_fields": "id,title,slug,link,date",
             },
             timeout=15,
         )
@@ -110,6 +111,7 @@ def get_published_articles(force_refresh: bool = False) -> list[dict]:
                 "id":    p["id"],
                 "title": p["title"]["rendered"],
                 "link":  p.get("link", ""),
+                "date":  p.get("date", ""),
             })
         if len(batch) < 100:
             break
@@ -220,6 +222,27 @@ def select_related_articles(
     """
     if not published_articles:
         return []
+
+    # ── 事前処理: 2年以上前の記事を除外（古いトレンドネタを内部リンクに使わない）──
+    cutoff = datetime.now(timezone.utc) - timedelta(days=730)
+    fresh_articles = []
+    excluded_old = 0
+    for a in published_articles:
+        raw_date = a.get("date", "")
+        if raw_date:
+            try:
+                pub = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
+                if pub.tzinfo is None:
+                    pub = pub.replace(tzinfo=timezone.utc)
+                if pub < cutoff:
+                    excluded_old += 1
+                    continue
+            except ValueError:
+                pass
+        fresh_articles.append(a)
+    if excluded_old:
+        print(f"[internal_linker] 古い記事を除外: {excluded_old}件（2年以上前）→ {len(fresh_articles)}件で選定")
+    published_articles = fresh_articles
 
     # ── 事前処理: 同タイトル記事を高ID優先で1件に絞り込む ───────────
     # WPに同じタイトルの記事が複数存在する場合、IDが大きい（新しい）方を残す

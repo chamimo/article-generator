@@ -1403,6 +1403,16 @@ def generate(
     target_length = _resolve_target_length(raw_tl, article_type)
     guide_links   = blog_cfg.guide_links if blog_cfg is not None else {}
 
+    # blog_cfg.asp_links（blog_config.json の静的案件）を asp_list にマージ
+    # スプレッドシートから0件の場合でもプロンプトに案件情報が渡るようにする
+    merged_asp: list[dict] = list(asp_list or [])
+    if blog_cfg and blog_cfg.asp_links:
+        existing_names = {item["name"] for item in merged_asp}
+        for name, url in blog_cfg.asp_links.items():
+            if name not in existing_names:
+                merged_asp.append({"name": name, "url": url, "priority": 999})
+    asp_list = merged_asp or None
+
     log.info(
         f"[generate] 生成開始: 「{keyword}」(vol:{volume:,})"
         f" fact_check={fact_check} target_length={target_length:,}字"
@@ -1437,6 +1447,18 @@ def generate(
 
     # 外部リンク死活チェック（存在しないWikipedia等のリンクを除去）
     article["content"] = _remove_dead_external_links(article["content"])
+
+    # Google Maps 挿入（hida-no-omoide 専用）
+    if blog_cfg and blog_cfg.name == "hida-no-omoide":
+        try:
+            from modules.maps_embedder import insert_map
+            article["content"] = insert_map(
+                article["content"],
+                keyword=keyword,
+                title=article.get("title", ""),
+            )
+        except Exception as _me:
+            log.warning(f"[generate] maps_embedder エラー（続行）: {_me}")
 
     log.info(f"[generate] 完了: 「{article['title']}」")
     return article
@@ -1473,6 +1495,7 @@ def post(article: dict, dry_run: bool = False,
             asp_ss_id=blog_cfg.asp_ss_id,
             default_fallback_category=blog_cfg.extra.get("default_fallback_category", ""),
             category_keywords=blog_cfg.extra.get("category_keywords", {}),
+            trusted_external_links=blog_cfg.extra.get("trusted_external_links", []),
             blog_meta={
                 "display_name":  blog_cfg.display_name,
                 "wp_url":        blog_cfg.wp_url,

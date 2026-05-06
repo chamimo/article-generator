@@ -48,7 +48,14 @@
     "ことば"
   ],
   "ng_keywords": [],
-  "asp_links": {},
+  "asp_links": {
+    "メディカルフードサービス": "https://hapipo8.com/medical_food",
+    "シェフの無添つくりおき": "https://hapipo8.com/tukurioki",
+    "nosh - ナッシュ": "https://hapipo8.com/nosh",
+    "DELIPICKS": "https://hapipo8.com/delipicks",
+    "Dr.つるかめキッチン": "https://hapipo8.com/tsurukame",
+    "食楽膳": "https://hapipo8.com/shokurakuzen"
+  },
   "affili_ss_id": "",
   "guide_links": {
     "pv_url": "",

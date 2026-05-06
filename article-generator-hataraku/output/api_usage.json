@@ -5369,6 +5369,586 @@
       "output_tokens": 10010,
       "cost_usd": 0.164925,
       "label": "article:朴葉味噌 お土産 日持ちする？"
+    },
+    {
+      "timestamp": "2026-05-05T19:20:14.174676+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 106,
+      "cost_usd": 0.000513,
+      "label": "lsi:梅雨だるい 食べ物"
+    },
+    {
+      "timestamp": "2026-05-05T19:20:17.796617+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 527,
+      "cost_usd": 0.00225,
+      "label": "kw_research:梅雨だるい 食べ物"
+    },
+    {
+      "timestamp": "2026-05-05T19:22:28.682907+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4867,
+      "output_tokens": 10154,
+      "cost_usd": 0.166911,
+      "label": "article:梅雨だるい 食べ物"
+    },
+    {
+      "timestamp": "2026-05-05T19:30:13.762933+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 72,
+      "cost_usd": 0.000376,
+      "label": "lsi:VT リードルショット 販売店"
+    },
+    {
+      "timestamp": "2026-05-05T19:30:17.007011+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 513,
+      "cost_usd": 0.002194,
+      "label": "kw_research:VT リードルショット 販売店"
+    },
+    {
+      "timestamp": "2026-05-05T19:32:13.334626+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4994,
+      "output_tokens": 8921,
+      "cost_usd": 0.148797,
+      "label": "article:VT リードルショット 販売店"
+    },
+    {
+      "timestamp": "2026-05-05T19:50:14.063842+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 117,
+      "output_tokens": 123,
+      "cost_usd": 0.000586,
+      "label": "lsi:社会復帰 ブランク 転職 志望動機"
+    },
+    {
+      "timestamp": "2026-05-05T19:50:18.511896+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 184,
+      "output_tokens": 608,
+      "cost_usd": 0.002579,
+      "label": "kw_research:社会復帰 ブランク 転職 志望動機"
+    },
+    {
+      "timestamp": "2026-05-05T19:52:37.676008+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5288,
+      "output_tokens": 10199,
+      "cost_usd": 0.168849,
+      "label": "article:社会復帰 ブランク 転職 志望動機"
+    },
+    {
+      "timestamp": "2026-05-05T20:09:19.080396+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 92,
+      "cost_usd": 0.000455,
+      "label": "lsi:Udemy おすすめ コース"
+    },
+    {
+      "timestamp": "2026-05-05T20:09:23.448291+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 593,
+      "cost_usd": 0.002513,
+      "label": "kw_research:Udemy おすすめ コース"
+    },
+    {
+      "timestamp": "2026-05-05T20:11:30.605656+00:00",
+      "date": "2026-05-05",
+      "hour": "2026-05-05T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4907,
+      "output_tokens": 9616,
+      "cost_usd": 0.158961,
+      "label": "article:Udemy おすすめ コース"
+    },
+    {
+      "timestamp": "2026-05-06T03:50:12.316489+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 75,
+      "cost_usd": 0.000391,
+      "label": "lsi:飛騨 空がきれいに見える場所"
+    },
+    {
+      "timestamp": "2026-05-06T03:50:16.685954+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 559,
+      "cost_usd": 0.002381,
+      "label": "kw_research:飛騨 空がきれいに見える場所"
+    },
+    {
+      "timestamp": "2026-05-06T03:53:05.997004+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4868,
+      "output_tokens": 10560,
+      "cost_usd": 0.173004,
+      "label": "article:飛騨 空がきれいに見える場所"
+    },
+    {
+      "timestamp": "2026-05-06T04:09:22.159174+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 89,
+      "cost_usd": 0.000448,
+      "label": "lsi:飛騨 民芸 見学 できる場所"
+    },
+    {
+      "timestamp": "2026-05-06T04:09:26.179034+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 597,
+      "cost_usd": 0.002534,
+      "label": "kw_research:飛騨 民芸 見学 できる場所"
+    },
+    {
+      "timestamp": "2026-05-06T04:12:15.801179+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T04",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4918,
+      "output_tokens": 10728,
+      "cost_usd": 0.175674,
+      "label": "article:飛騨 民芸 見学 できる場所"
+    },
+    {
+      "timestamp": "2026-05-06T04:42:52.818123+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 121,
+      "cost_usd": 0.000576,
+      "label": "lsi:高山 お土産 ネット 購入 方法"
+    },
+    {
+      "timestamp": "2026-05-06T04:42:56.480051+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 535,
+      "cost_usd": 0.002286,
+      "label": "kw_research:高山 お土産 ネット 購入 方法"
+    },
+    {
+      "timestamp": "2026-05-06T04:45:23.957543+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T04",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5376,
+      "output_tokens": 10498,
+      "cost_usd": 0.173598,
+      "label": "article:高山 お土産 ネット 購入 方法"
+    },
+    {
+      "timestamp": "2026-05-06T04:45:40.341519+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 377,
+      "output_tokens": 19,
+      "cost_usd": 0.000378,
+      "label": "maps:高山 お土産 ネット 購入 方法"
+    },
+    {
+      "timestamp": "2026-05-06T04:46:29.853489+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 360,
+      "output_tokens": 19,
+      "cost_usd": 0.000364,
+      "label": "maps:高山 お土産 ネット 購入 方法"
+    },
+    {
+      "timestamp": "2026-05-06T04:46:30.778241+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 362,
+      "output_tokens": 29,
+      "cost_usd": 0.000406,
+      "label": "maps:宮川朝市 楽しみ方 時間"
+    },
+    {
+      "timestamp": "2026-05-06T04:46:31.924494+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 362,
+      "output_tokens": 30,
+      "cost_usd": 0.00041,
+      "label": "maps:飛騨高山 カフェ おすすめ"
+    },
+    {
+      "timestamp": "2026-05-06T04:46:33.680187+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 362,
+      "output_tokens": 29,
+      "cost_usd": 0.000406,
+      "label": "maps:宮川朝市 楽しみ方 時間"
+    },
+    {
+      "timestamp": "2026-05-06T04:46:47.410513+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 89,
+      "cost_usd": 0.000446,
+      "label": "lsi:春慶塗 お土産 人気商品"
+    },
+    {
+      "timestamp": "2026-05-06T04:46:51.111825+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 492,
+      "cost_usd": 0.002112,
+      "label": "kw_research:春慶塗 お土産 人気商品"
+    },
+    {
+      "timestamp": "2026-05-06T04:49:25.133385+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T04",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4811,
+      "output_tokens": 9957,
+      "cost_usd": 0.163788,
+      "label": "article:春慶塗 お土産 人気商品"
+    },
+    {
+      "timestamp": "2026-05-06T04:49:28.908396+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 391,
+      "output_tokens": 31,
+      "cost_usd": 0.000437,
+      "label": "maps:春慶塗 お土産 人気商品"
+    },
+    {
+      "timestamp": "2026-05-06T04:50:08.623913+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 363,
+      "output_tokens": 19,
+      "cost_usd": 0.000366,
+      "label": "maps:春慶塗 お土産 人気商品"
+    },
+    {
+      "timestamp": "2026-05-06T05:44:54.299492+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 123,
+      "output_tokens": 98,
+      "cost_usd": 0.00049,
+      "label": "lsi:奥飛騨温泉郷 日帰り 駐車場 情報"
+    },
+    {
+      "timestamp": "2026-05-06T05:44:59.183342+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 190,
+      "output_tokens": 800,
+      "cost_usd": 0.003352,
+      "label": "kw_research:奥飛騨温泉郷 日帰り 駐車場 情報"
+    },
+    {
+      "timestamp": "2026-05-06T05:47:13.285339+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T05",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4517,
+      "output_tokens": 9044,
+      "cost_usd": 0.149211,
+      "label": "article:奥飛騨温泉郷 日帰り 駐車場 情報"
+    },
+    {
+      "timestamp": "2026-05-06T05:47:17.524353+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 397,
+      "output_tokens": 35,
+      "cost_usd": 0.000458,
+      "label": "maps:奥飛騨温泉郷 日帰り 駐車場 情報"
+    },
+    {
+      "timestamp": "2026-05-06T05:48:09.255592+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 117,
+      "output_tokens": 74,
+      "cost_usd": 0.00039,
+      "label": "lsi:平湯温泉 足湯 場所 アクセス"
+    },
+    {
+      "timestamp": "2026-05-06T05:48:13.125698+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 184,
+      "output_tokens": 622,
+      "cost_usd": 0.002635,
+      "label": "kw_research:平湯温泉 足湯 場所 アクセス"
+    },
+    {
+      "timestamp": "2026-05-06T05:50:37.273470+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T05",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4930,
+      "output_tokens": 9406,
+      "cost_usd": 0.15588,
+      "label": "article:平湯温泉 足湯 場所 アクセス"
+    },
+    {
+      "timestamp": "2026-05-06T05:50:41.801510+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 381,
+      "output_tokens": 33,
+      "cost_usd": 0.000437,
+      "label": "maps:平湯温泉 足湯 場所 アクセス"
+    },
+    {
+      "timestamp": "2026-05-06T05:53:11.416190+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 119,
+      "output_tokens": 96,
+      "cost_usd": 0.000479,
+      "label": "lsi:平湯温泉 日帰り バスターミナル 近く"
+    },
+    {
+      "timestamp": "2026-05-06T05:53:15.934119+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 186,
+      "output_tokens": 673,
+      "cost_usd": 0.002841,
+      "label": "kw_research:平湯温泉 日帰り バスターミナル 近く"
+    },
+    {
+      "timestamp": "2026-05-06T05:55:23.321559+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T05",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5119,
+      "output_tokens": 9661,
+      "cost_usd": 0.160272,
+      "label": "article:平湯温泉 日帰り バスターミナル 近く"
+    },
+    {
+      "timestamp": "2026-05-06T05:55:27.195959+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 392,
+      "output_tokens": 40,
+      "cost_usd": 0.000474,
+      "label": "maps:平湯温泉 日帰り バスターミナル 近く"
+    },
+    {
+      "timestamp": "2026-05-06T10:51:28.252053+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 96,
+      "cost_usd": 0.000475,
+      "label": "lsi:TIRTIR クッションファンデ 販売店"
+    },
+    {
+      "timestamp": "2026-05-06T10:51:32.588191+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 615,
+      "cost_usd": 0.002605,
+      "label": "kw_research:TIRTIR クッションファンデ 販売店"
+    },
+    {
+      "timestamp": "2026-05-06T10:53:37.794509+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T10",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5229,
+      "output_tokens": 9177,
+      "cost_usd": 0.153342,
+      "label": "article:TIRTIR クッションファンデ 販売店"
+    },
+    {
+      "timestamp": "2026-05-06T13:09:10.539758+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T13",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 102,
+      "cost_usd": 0.000497,
+      "label": "lsi:宅食 おすすめ 比較"
+    },
+    {
+      "timestamp": "2026-05-06T13:09:14.711737+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T13",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 600,
+      "cost_usd": 0.002542,
+      "label": "kw_research:宅食 おすすめ 比較"
+    },
+    {
+      "timestamp": "2026-05-06T13:11:45.270581+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T13",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6601,
+      "output_tokens": 11507,
+      "cost_usd": 0.192408,
+      "label": "article:宅食 おすすめ 比較"
+    },
+    {
+      "timestamp": "2026-05-06T13:33:28.669758+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T13",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 95,
+      "cost_usd": 0.000469,
+      "label": "lsi:宅食 おすすめ 比較"
+    },
+    {
+      "timestamp": "2026-05-06T13:33:32.738892+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T13",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 566,
+      "cost_usd": 0.002406,
+      "label": "kw_research:宅食 おすすめ 比較"
+    },
+    {
+      "timestamp": "2026-05-06T13:35:56.310747+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T13",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5110,
+      "output_tokens": 10345,
+      "cost_usd": 0.170505,
+      "label": "article:宅食 おすすめ 比較"
+    },
+    {
+      "timestamp": "2026-05-06T13:37:18.059786+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T13",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 94,
+      "cost_usd": 0.000465,
+      "label": "lsi:宅食 おすすめ 比較"
+    },
+    {
+      "timestamp": "2026-05-06T13:37:22.159253+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T13",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 590,
+      "cost_usd": 0.002502,
+      "label": "kw_research:宅食 おすすめ 比較"
+    },
+    {
+      "timestamp": "2026-05-06T13:39:55.866075+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T13",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6517,
+      "output_tokens": 11737,
+      "cost_usd": 0.195606,
+      "label": "article:宅食 おすすめ 比較"
+    },
+    {
+      "timestamp": "2026-05-06T14:08:12.653233+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 98,
+      "cost_usd": 0.000481,
+      "label": "lsi:宅食 おすすめ 比較"
+    },
+    {
+      "timestamp": "2026-05-06T14:08:16.890740+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 635,
+      "cost_usd": 0.002682,
+      "label": "kw_research:宅食 おすすめ 比較"
+    },
+    {
+      "timestamp": "2026-05-06T14:10:44.930490+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T14",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5399,
+      "output_tokens": 11226,
+      "cost_usd": 0.184587,
+      "label": "article:宅食 おすすめ 比較"
     }
   ],
   "events": [

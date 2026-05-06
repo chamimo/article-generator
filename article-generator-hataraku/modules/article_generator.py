@@ -241,7 +241,7 @@ _PLAUD_NOTTA_INSTRUCTION = """\
 # ============================================================
 _ARTICLE_STRUCTURE: dict[int, tuple[int, int, int, int, int]] = {
     9000: (14, 18, 8, 10, 12000),  # MONETIZE: 比較・レビュー系・高品質
-    6000: ( 8, 12, 5,  7, 12000),  # LONGTAIL: 標準SEO記事（8000→10000→12000に増加）
+    6000: ( 8, 12, 5,  7, 16000),  # LONGTAIL: 標準SEO記事
     3000: ( 5,  7, 3,  4, 12000),  # FUTURE / TREND: 短め情報記事
 }
 
@@ -282,6 +282,11 @@ def _build_system_prompt(
     # アフィリリンク（ブログ固有）を動的に差し込む
     if asp_links:
         affiliate_lines = "\n".join(f"- {name}: {url}" for name, url in asp_links.items())
+        affiliate_lines += (
+            "\n\n**重要**: 比較・おすすめ・ランキング系の記事では、"
+            "上記登録済みサービスをすべて記事内で必ず1回以上紹介し、各サービスにアフィリリンクを挿入すること。"
+            "各サービスは個別のH3セクションまたは比較表で取り上げること。"
+        )
     else:
         affiliate_lines = "（このブログにはアフィリリンク登録なし）"
     prompt = prompt.replace(_AFFILIATE_LINES_PLACEHOLDER, affiliate_lines)
@@ -515,7 +520,7 @@ USER_PROMPT_TEMPLATE = """\
 
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{tone_section}{testimonial_section}{forced_title_section}
+{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{tone_section}{testimonial_section}{trusted_external_links_section}{forced_title_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
@@ -644,6 +649,24 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     # 体験談セクション（スプレッドシートから関連するものを取得）
     testimonial_section = _build_testimonial_section(keyword)
 
+    # 信頼できる外部リンクセクション（ブログ設定で指定がある場合のみ）
+    trusted_external_links_section = ""
+    try:
+        from modules import wp_context as _wpc
+        ext_links = _wpc.get_trusted_external_links()
+        if ext_links:
+            link_lines = "\n".join(
+                f"- {item['name']}: {item['url']}" for item in ext_links
+            )
+            trusted_external_links_section = (
+                "## 外部リンク挿入ルール（必須）\n"
+                "以下の公式サイト・信頼できる外部リンクのうち、記事テーマに最も自然に合うものを**必ず1件以上**本文中に挿入してください。\n"
+                "挿入例：「最新情報や開催時間は<a href=\"URL\" target=\"_blank\" rel=\"noopener noreferrer\">〇〇公式サイト</a>でご確認ください。」\n"
+                f"{link_lines}\n"
+            )
+    except Exception:
+        pass
+
     # タイトル強制指定セクション
     forced_title_section = ""
     if forced_title:
@@ -676,6 +699,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                 plaud_notta_section=plaud_notta_section,
                 tone_section=tone_section,
                 testimonial_section=testimonial_section,
+                trusted_external_links_section=trusted_external_links_section,
                 forced_title_section=forced_title_section,
             ),
         }],

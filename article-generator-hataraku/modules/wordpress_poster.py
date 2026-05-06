@@ -366,11 +366,7 @@ def create_post(article: dict, featured_media_id: int | None = None) -> dict:
             print(f"[wordpress] タグ設定: {tags}")
         tag_ids = get_or_create_tags(tags)
 
-    # imagefx_prompt を本文末尾にHTMLコメントとして挿入（下書き確認用）
     content = article["content"]
-    imagefx_prompt = article.get("imagefx_prompt", "")
-    if imagefx_prompt:
-        content = content.rstrip() + f"\n\n<!-- imagefx_prompt\n{imagefx_prompt}\n-->"
 
     post_status = wp_context.get_post_status()
     print(f"[wordpress] 投稿方式: {post_status}")
