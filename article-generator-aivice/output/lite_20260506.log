@@ -1,0 +1,94 @@
+2026-05-06 04:00:03 [INFO] ============================================================
+2026-05-06 04:00:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-06 04:00:03 [INFO] ============================================================
+2026-05-06 04:00:03 [INFO] 対象ブログ: ['workup-ai']
+2026-05-06 04:00:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-06 04:00:06 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-05-06 04:00:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-06 04:00:06 [INFO]   genre            : AI・副業・転職・キャリア
+2026-05-06 04:00:06 [INFO]   fact_check       : True
+2026-05-06 04:00:06 [INFO]   article_type_mix : True
+2026-05-06 04:00:06 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-05-06 04:00:06 [INFO]   article_count    : 1  dry_run: False
+2026-05-06 04:00:09 [WARNING] [workup-ai] WP記事取得失敗（重複チェックなしで続行）: 400 Client Error: Bad Request for url: https://workup-ai.com/wp-json/wp/v2/posts?status=publish%2Cdraft%2Cprivate&_fields=id%2Ctitle%2Cdate%2Cslug%2Cstatus&per_page=100&page=1
+2026-05-06 04:00:09 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-06 04:00:10 [DEBUG] [fetch] シート「絞り込みKW」: 183行 / ヘッダー: ['キーワード', '親KW', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '投稿ステータス', '記事URL', '投稿ID', '使用サブKW', '既存記事URL', '既存記事ID']
+2026-05-06 04:00:10 [INFO] [fetch] [キーワード] メインKW: 98件（vol≥30 or N/A）  サブKW: 0件（vol<30）  投稿済みスキップ: 1件  テーマ外除外: 84件  aim内訳: [now:1, aim:123, claude:58]
+2026-05-06 04:00:10 [INFO] [select] 1件選定 (要求=1件)
+2026-05-06 04:00:10 [INFO] [select]   1. 「plaud note pro バッテリー」 vol=0 seo=N/A comp=N/A
+2026-05-06 04:00:10 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-06 04:00:10 [INFO] [workup-ai] 候補: 98件 / 選定: 1件 / 生成予定: 1件
+2026-05-06 04:00:10 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-06 04:00:10 [INFO] ────────────────────────────────────────────────────────────
+2026-05-06 04:00:10 [INFO] [workup-ai] [1/1] [LONGTAIL] 「plaud note pro バッテリー」 vol=0 ★AIM
+2026-05-06 04:00:10 [INFO] ────────────────────────────────────────────────────────────
+2026-05-06 04:00:10 [INFO] [generate] 生成開始: 「plaud note pro バッテリー」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+2026-05-06 04:02:05 [INFO] [generate] 完了: 「PLAUD Note Proのバッテリーを徹底解説！持ち時間・節約方法・寿命まで」
+2026-05-06 04:02:05 [INFO] [post] 投稿方式: draft
+2026-05-06 04:02:09 [INFO] [post] 画像生成完了: 62,266 bytes
+2026-05-06 04:02:09 [ERROR] [workup-ai] [1/1] ❌ エラー（続行）: 401 Client Error: Unauthorized for url: https://workup-ai.com/wp-json/wp/v2/media
+2026-05-06 04:02:09 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-06 04:02:09 [INFO] 
+============================================================
+2026-05-06 04:02:09 [INFO] 【全体サマリー】
+2026-05-06 04:02:09 [INFO]   ブログ数  : 1件
+2026-05-06 04:02:09 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-06 04:02:09 [INFO]   所要時間  : 126.2秒
+2026-05-06 04:02:09 [INFO]   ❌ [workup-ai] plaud note pro バッテリー → (生成失敗)
+2026-05-06 04:02:09 [INFO] ============================================================
+2026-05-06 10:40:32 [INFO] ============================================================
+2026-05-06 10:40:32 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-06 10:40:32 [INFO] ============================================================
+2026-05-06 10:40:34 [INFO] [registry] ブログ管理シートから 7 件取得: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-06 10:40:34 [INFO] 対象ブログ: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-06 10:40:34 [ERROR] [hataraku] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hataraku/blog_config.json
+2026-05-06 10:40:35 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-06 10:40:35 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-05-06 10:40:35 [INFO] ════════════════════════════════════════════════════════════
+2026-05-06 10:40:35 [INFO]   genre            : AI・副業・転職・キャリア
+2026-05-06 10:40:35 [INFO]   fact_check       : True
+2026-05-06 10:40:35 [INFO]   article_type_mix : True
+2026-05-06 10:40:35 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-05-06 10:40:35 [INFO]   article_count    : 1  dry_run: False
+2026-05-06 10:40:39 [INFO] [wp] 記事取得: 計393件 (private=7 / publish=386)
+2026-05-06 10:40:39 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-06 10:40:40 [DEBUG] [fetch] シート「絞り込みKW」: 183行 / ヘッダー: ['キーワード', '親KW', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '投稿ステータス', '記事URL', '投稿ID', '使用サブKW', '既存記事URL', '既存記事ID']
+2026-05-06 10:40:40 [INFO] [fetch] [キーワード] メインKW: 98件（vol≥30 or N/A）  サブKW: 0件（vol<30）  投稿済みスキップ: 1件  テーマ外除外: 84件  aim内訳: [now:1, aim:123, claude:58]
+2026-05-06 10:40:40 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-06 10:40:40 [INFO] [dup_check] 優先候補: 98件 {'now': 1, 'aim': 43, 'claude': 54} を先頭評価
+2026-05-06 10:40:40 [DEBUG] [dup_check] OK: 「AIエージェント 何ができる 初心者」
+2026-05-06 10:40:40 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=98件, 要求=1件)
+2026-05-06 10:40:40 [INFO] [select] 1件選定 (要求=1件)
+2026-05-06 10:40:40 [INFO] [select]   1. 「AIエージェント 何ができる 初心者」 vol=0 seo=N/A comp=N/A
+2026-05-06 10:40:40 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-06 10:40:40 [INFO] [workup-ai] 候補: 98件 / 選定: 1件 / 生成予定: 1件
+2026-05-06 10:40:40 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-06 10:40:40 [INFO] ────────────────────────────────────────────────────────────
+2026-05-06 10:40:40 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AIエージェント 何ができる 初心者」 vol=0 ★NOW
+2026-05-06 10:40:40 [INFO] ────────────────────────────────────────────────────────────
+2026-05-06 10:40:40 [INFO] [generate] 生成開始: 「AIエージェント 何ができる 初心者」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+2026-05-06 10:43:17 [INFO] [generate] 完了: 「AIエージェントで何ができる？初心者にもわかりやすく使い方・できることを解説」
+2026-05-06 10:43:17 [INFO] [post] 投稿方式: draft
+2026-05-06 10:43:21 [INFO] [post] 画像生成完了: 47,514 bytes
+2026-05-06 10:43:45 [INFO] [post] WP投稿完了: ID=9872 → https://workup-ai.com/wp-admin/post.php?post=9872&action=edit
+2026-05-06 10:43:45 [INFO] [workup-ai] [1/1] ✅ 完了: 「AIエージェントで何ができる？初心者にもわかりやすく使い方・できることを解説」
+2026-05-06 10:43:45 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-06 10:43:45 [ERROR] [ys-trend] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/ys-trend/blog_config.json
+2026-05-06 10:43:45 [ERROR] [kaerudoko] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/kaerudoko/blog_config.json
+2026-05-06 10:43:45 [ERROR] [hapipo8] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hapipo8/blog_config.json
+2026-05-06 10:43:45 [ERROR] [hida-no-omoide] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hida-no-omoide/blog_config.json
+2026-05-06 10:43:45 [ERROR] [web-study1] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/web-study1/blog_config.json
+2026-05-06 10:43:45 [INFO] 
+============================================================
+2026-05-06 10:43:45 [INFO] 【全体サマリー】
+2026-05-06 10:43:45 [INFO]   ブログ数  : 7件
+2026-05-06 10:43:45 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-06 10:43:45 [INFO]   所要時間  : 193.1秒
+2026-05-06 10:43:45 [INFO]   ✅ [workup-ai] AIエージェント 何ができる 初心者 → AIエージェントで何ができる？初心者にもわかりやすく使い方・できることを解説
+2026-05-06 10:43:45 [INFO]        https://workup-ai.com/wp-admin/post.php?post=9872&action=edit
+2026-05-06 10:43:45 [INFO] ============================================================
+2026-05-06 12:49:55 [INFO] ============================================================
+2026-05-06 12:49:55 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-06 12:49:55 [INFO] ============================================================
