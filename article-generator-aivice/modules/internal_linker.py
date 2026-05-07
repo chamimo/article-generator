@@ -18,6 +18,7 @@ from __future__ import annotations
 import json
 import re
 import requests
+from datetime import datetime, timezone, timedelta
 from html import unescape
 from requests.auth import HTTPBasicAuth
 
@@ -95,7 +96,7 @@ def get_published_articles(force_refresh: bool = False) -> list[dict]:
                 "per_page": 100,
                 "page": page,
                 "status": "publish",
-                "_fields": "id,title,slug,link",
+                "_fields": "id,title,slug,link,date,categories",
             },
             timeout=15,
         )
@@ -107,9 +108,11 @@ def get_published_articles(force_refresh: bool = False) -> list[dict]:
             break
         for p in batch:
             articles.append({
-                "id":    p["id"],
-                "title": p["title"]["rendered"],
-                "link":  p.get("link", ""),
+                "id":         p["id"],
+                "title":      p["title"]["rendered"],
+                "link":       p.get("link", ""),
+                "date":       p.get("date", ""),
+                "categories": p.get("categories", []),
             })
         if len(batch) < 100:
             break
@@ -205,6 +208,7 @@ def select_related_articles(
     asp_links: dict | None = None,
     article_content: str = "",
     stop_words: list[str] | None = None,
+    article_category_ids: list[int] | None = None,
 ) -> list[dict]:
     """
     公開済み記事から内部リンク候補を優先順位に従って選ぶ。
@@ -220,6 +224,27 @@ def select_related_articles(
     """
     if not published_articles:
         return []
+
+    # ── 事前処理: 2年以上前の記事を除外（古いトレンドネタを内部リンクに使わない）──
+    cutoff = datetime.now(timezone.utc) - timedelta(days=730)
+    fresh_articles = []
+    excluded_old = 0
+    for a in published_articles:
+        raw_date = a.get("date", "")
+        if raw_date:
+            try:
+                pub = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
+                if pub.tzinfo is None:
+                    pub = pub.replace(tzinfo=timezone.utc)
+                if pub < cutoff:
+                    excluded_old += 1
+                    continue
+            except ValueError:
+                pass
+        fresh_articles.append(a)
+    if excluded_old:
+        print(f"[internal_linker] 古い記事を除外: {excluded_old}件（2年以上前）→ {len(fresh_articles)}件で選定")
+    published_articles = fresh_articles
 
     # ── 事前処理: 同タイトル記事を高ID優先で1件に絞り込む ───────────
     # WPに同じタイトルの記事が複数存在する場合、IDが大きい（新しい）方を残す
@@ -294,7 +319,7 @@ def select_related_articles(
             if a["id"] in self_similar_ids:
                 continue
             if a.get("link", "").rstrip("/") == review_url_norm:
-                _add({**a, "_link_type": "asp_conversion", "_product_name": product_name})
+                _add({**a, "_link_type": "asp_conversion", "_product_name": product_name, "_high_relevance": True})
                 conv_count += 1
                 print(f"[internal_linker] 成約記事「{product_name}」→ {a['title'][:40]}")
                 break
@@ -312,10 +337,30 @@ def select_related_articles(
         for a in kw_pool[:2]:          # 1案件あたり最大2件
             if len(selected) >= max_count:
                 break
-            _add({**a, "_link_type": "asp_related", "_product_name": product_name})
+            _add({**a, "_link_type": "asp_related", "_product_name": product_name, "_high_relevance": True})
             kw_match_count += 1
         if kw_match_count:
             print(f"[internal_linker] 「{product_name}」関連記事: {kw_match_count}件追加")
+
+    remaining = max_count - len(selected)
+    if remaining <= 0:
+        return selected[:max_count]
+
+    # ── 優先2.5: 同カテゴリー記事（カテゴリーIDが一致する記事）────
+    if article_category_ids:
+        cat_set = set(article_category_ids)
+        same_cat_pool = [
+            a for a in published_articles
+            if _can_add(a)
+            and a["id"] not in self_similar_ids
+            and cat_set & set(a.get("categories", []))
+        ]
+        if same_cat_pool:
+            for a in _rule_select(keyword, article_title, same_cat_pool, remaining,
+                                  label="同カテゴリー"):
+                if _can_add(a) and len(selected) < max_count:
+                    _add({**a, "_link_type": "same_category", "_high_relevance": True})
+            remaining = max_count - len(selected)
 
     remaining = max_count - len(selected)
     if remaining <= 0:
@@ -333,7 +378,7 @@ def select_related_articles(
         for a in _rule_select(keyword, article_title, same_parent_pool, remaining,
                                 label=f"同親KW「{parent}」"):
             if _can_add(a) and len(selected) < max_count:
-                _add({**a, "_link_type": "same_parent"})
+                _add({**a, "_link_type": "same_parent", "_high_relevance": True})
 
     remaining = max_count - len(selected)
     if remaining <= 0:
@@ -358,7 +403,10 @@ def select_related_articles(
             for a in _rule_select(keyword, article_title, token_pool, remaining,
                                     label="キーワードトークンマッチ"):
                 if _can_add(a) and len(selected) < max_count:
-                    _add({**a, "_link_type": "keyword_token"})
+                    # キーワードトークン一致 + 同カテゴリー → HIGH、それ以外 → LOW
+                    cat_set = set(article_category_ids or [])
+                    is_high = bool(cat_set & set(a.get("categories", []))) if cat_set else True
+                    _add({**a, "_link_type": "keyword_token", "_high_relevance": is_high})
 
     remaining = max_count - len(selected)
     if remaining <= 0:
@@ -377,7 +425,7 @@ def select_related_articles(
             for a in _rule_select(keyword, article_title, others_pool, remaining,
                                     label="関連補完（親KW絞り込み）"):
                 if _can_add(a) and len(selected) < max_count:
-                    _add({**a, "_link_type": "related"})
+                    _add({**a, "_link_type": "related", "_high_relevance": False})
 
     # ── 後処理: キーワード製品リンク確保 ────────────────────────
     # 優先1〜4で親KW（製品名）に関連する記事が選ばれなかった場合に強制追加する。
@@ -554,6 +602,17 @@ def _assign_links_to_sections(
     slot_assignment: list[dict | None] = [None] * n_slots
     assigned_ids: set[int] = set()
 
+    # 関連性が低い記事（_high_relevance=False）はH3セクションに入れずフッターへ
+    high_relevance = [a for a in related_articles if a.get("_high_relevance", True)]
+    low_relevance  = [a for a in related_articles if not a.get("_high_relevance", True)]
+
+    if low_relevance:
+        low_titles = [unescape(a["title"])[:25] for a in low_relevance]
+        print(f"[internal_linker] 低関連性 {len(low_relevance)}件をフッターへ: {low_titles}")
+
+    # 以降はHIGH関連性のみでH3割り当てを行う
+    related_articles = high_relevance
+
     product_articles = [a for a in related_articles if a.get("_product_name")]
     generic_articles = [a for a in related_articles if not a.get("_product_name")]
 
@@ -598,8 +657,8 @@ def _assign_links_to_sections(
                 assigned_ids.add(candidate["id"])
                 break
 
-    # 未割り当て記事 → footer（製品記事も汎用記事も含む）
-    footer_links = [a for a in related_articles if a["id"] not in assigned_ids]
+    # 未割り当て記事 + 低関連性記事 → footer
+    footer_links = [a for a in related_articles if a["id"] not in assigned_ids] + low_relevance
 
     assignments = [
         (sections[i]["end"], slot_assignment[i])
