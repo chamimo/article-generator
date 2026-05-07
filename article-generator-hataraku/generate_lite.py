@@ -50,7 +50,7 @@ from modules.wordpress_poster import create_post, post_article_with_image
 from modules.image_generator import generate_image_for_article
 from modules.api_guard import check_stop, daily_summary
 from modules import wp_context
-from modules.wp_pattern_fetcher import fetch_patterns, match_pattern, insert_pattern_cta
+from modules.wp_pattern_fetcher import fetch_patterns, match_pattern, insert_pattern_cta, insert_per_h3_cta
 
 # ブログ別マイパターンキャッシュ（セッション中の再フェッチを防ぐ）
 _wp_patterns_cache: dict[str, list] = {}
@@ -1438,12 +1438,22 @@ def generate(
                 _wp_patterns_cache[blog_name] = []
         patterns = _wp_patterns_cache[blog_name]
         if patterns:
-            matched = match_pattern(keyword, patterns)
+            # ① 各案件H3末尾へのCTA挿入（案件名 ↔ パターンタイトルマッチ）
+            article["content"], n_h3 = insert_per_h3_cta(
+                article["content"], patterns, asp_list or []
+            )
+            if n_h3 > 0:
+                log.info(f"[generate] パターンCTA挿入（H3末尾）: {n_h3}件")
+
+            # ② キーワードマッチパターンを「この記事のポイント」直後と末尾に挿入
+            asp_names = [item["name"] for item in (asp_list or [])]
+            matched = match_pattern(keyword, patterns, asp_names=asp_names)
             if matched:
-                article["content"] = insert_pattern_cta(article["content"], matched)
-                log.info(f"[generate] パターンCTA挿入: 「{matched.title}」(ID:{matched.id})")
-            else:
-                log.debug(f"[generate] マッチするパターンなし（KW={keyword!r}）")
+                # H3末尾挿入済みの場合は②言及段落をスキップして重複を避ける
+                article["content"] = insert_pattern_cta(
+                    article["content"], matched, skip_mention=(n_h3 > 0)
+                )
+                log.info(f"[generate] パターンCTA挿入（KWマッチ）: 「{matched.title}」(ID:{matched.id})")
 
     # 外部リンク死活チェック（存在しないWikipedia等のリンクを除去）
     article["content"] = _remove_dead_external_links(article["content"])
@@ -1586,9 +1596,26 @@ def run_blog(
     asp_list: list[dict] = []
     try:
         from modules.asp_fetcher import fetch_asp_links
-        asp_list = fetch_asp_links(blog_cfg.display_name)
+        # ss_id を直接渡すことで wp_context の初期化タイミングに依存しない
+        _asp_ss = blog_cfg.asp_ss_id or blog_cfg.candidate_ss_id
+        asp_list = fetch_asp_links(blog_cfg.display_name, ss_id=_asp_ss)
     except Exception as asp_err:
         log.warning(f"[{blog_cfg.name}] ASP案件読み込みスキップ（続行）: {asp_err}")
+
+    # ── アフィリ案件確認ログ ──────────────────────────────
+    static_links = blog_cfg.asp_links if blog_cfg else {}
+    if asp_list:
+        from modules.asp_fetcher import _PRIORITY_MAP
+        log.info(f"[{blog_cfg.name}] アフィリ案件: {len(asp_list)}件（スプレッドシート）")
+        for item in asp_list:
+            pri_label = next((k for k, v in _PRIORITY_MAP.items() if v == item["priority"]), "?")
+            log.info(f"[{blog_cfg.name}]   [{pri_label}] {item['name']} → {item['url'][:60]}")
+    elif static_links:
+        log.info(f"[{blog_cfg.name}] アフィリ案件: {len(static_links)}件（blog_config.json）")
+        for name, url in static_links.items():
+            log.info(f"[{blog_cfg.name}]   {name} → {url[:60]}")
+    else:
+        log.warning(f"[{blog_cfg.name}] ⚠️  アフィリ案件: 0件 — 登録がないため汎用記事を生成します")
 
     # ── Step 1: キーワード選定 ──────────────────────────
     sub_keywords: list[str] = []  # vol<30のサブKW（記事本文に盛り込む）

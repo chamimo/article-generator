@@ -5949,6 +5949,826 @@
       "output_tokens": 11226,
       "cost_usd": 0.184587,
       "label": "article:宅食 おすすめ 比較"
+    },
+    {
+      "timestamp": "2026-05-06T19:10:14.312574+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 98,
+      "cost_usd": 0.00048,
+      "label": "lsi:海外旅行 安い 方法"
+    },
+    {
+      "timestamp": "2026-05-06T19:10:17.964690+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 502,
+      "cost_usd": 0.00215,
+      "label": "kw_research:海外旅行 安い 方法"
+    },
+    {
+      "timestamp": "2026-05-06T19:13:14.835964+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5272,
+      "output_tokens": 11176,
+      "cost_usd": 0.183456,
+      "label": "article:海外旅行 安い 方法"
+    },
+    {
+      "timestamp": "2026-05-06T19:40:13.426756+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 200,
+      "cost_usd": 0.00089,
+      "label": "lsi:ロムアンド ティント 販売店"
+    },
+    {
+      "timestamp": "2026-05-06T19:40:17.679634+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 600,
+      "cost_usd": 0.002543,
+      "label": "kw_research:ロムアンド ティント 販売店"
+    },
+    {
+      "timestamp": "2026-05-06T19:42:38.689526+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5172,
+      "output_tokens": 8970,
+      "cost_usd": 0.150066,
+      "label": "article:ロムアンド ティント 販売店"
+    },
+    {
+      "timestamp": "2026-05-06T20:10:14.738808+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 80,
+      "cost_usd": 0.00041,
+      "label": "lsi:TOEIC 勉強 アプリ"
+    },
+    {
+      "timestamp": "2026-05-06T20:10:19.281588+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 690,
+      "cost_usd": 0.002903,
+      "label": "kw_research:TOEIC 勉強 アプリ"
+    },
+    {
+      "timestamp": "2026-05-06T20:13:13.926393+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4998,
+      "output_tokens": 11106,
+      "cost_usd": 0.181584,
+      "label": "article:TOEIC 勉強 アプリ"
+    },
+    {
+      "timestamp": "2026-05-06T23:37:27.838422+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T23",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 66,
+      "cost_usd": 0.000354,
+      "label": "lsi:TOEIC 勉強 アプリ"
+    },
+    {
+      "timestamp": "2026-05-06T23:37:31.991730+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T23",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 651,
+      "cost_usd": 0.002747,
+      "label": "kw_research:TOEIC 勉強 アプリ"
+    },
+    {
+      "timestamp": "2026-05-06T23:40:07.671588+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T23",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 4951,
+      "output_tokens": 10137,
+      "cost_usd": 0.166908,
+      "label": "article:TOEIC 勉強 アプリ"
+    },
+    {
+      "timestamp": "2026-05-06T23:41:29.268630+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T23",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 70,
+      "cost_usd": 0.00037,
+      "label": "lsi:TOEIC 勉強 アプリ"
+    },
+    {
+      "timestamp": "2026-05-06T23:41:33.293118+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T23",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 644,
+      "cost_usd": 0.002719,
+      "label": "kw_research:TOEIC 勉強 アプリ"
+    },
+    {
+      "timestamp": "2026-05-06T23:44:21.493396+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T23",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5658,
+      "output_tokens": 11993,
+      "cost_usd": 0.196869,
+      "label": "article:TOEIC 勉強 アプリ"
+    },
+    {
+      "timestamp": "2026-05-06T23:46:18.434170+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T23",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 85,
+      "cost_usd": 0.00043,
+      "label": "lsi:TOEIC 勉強 アプリ"
+    },
+    {
+      "timestamp": "2026-05-06T23:46:22.766356+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T23",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 613,
+      "cost_usd": 0.002595,
+      "label": "kw_research:TOEIC 勉強 アプリ"
+    },
+    {
+      "timestamp": "2026-05-06T23:49:28.881083+00:00",
+      "date": "2026-05-06",
+      "hour": "2026-05-06T23",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5728,
+      "output_tokens": 13563,
+      "cost_usd": 0.220629,
+      "label": "article:TOEIC 勉強 アプリ"
+    },
+    {
+      "timestamp": "2026-05-07T00:29:28.697252+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 98,
+      "cost_usd": 0.000479,
+      "label": "lsi:保育士 転職 異業種"
+    },
+    {
+      "timestamp": "2026-05-07T00:29:32.398270+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 550,
+      "cost_usd": 0.002341,
+      "label": "kw_research:保育士 転職 異業種"
+    },
+    {
+      "timestamp": "2026-05-07T00:32:39.293612+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5832,
+      "output_tokens": 13480,
+      "cost_usd": 0.219696,
+      "label": "article:保育士 転職 異業種"
+    },
+    {
+      "timestamp": "2026-05-07T00:33:23.862280+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 95,
+      "cost_usd": 0.000471,
+      "label": "lsi:副業 社会 保険 入り たく ない"
+    },
+    {
+      "timestamp": "2026-05-07T00:33:27.332461+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 509,
+      "cost_usd": 0.002181,
+      "label": "kw_research:副業 社会 保険 入り たく ない"
+    },
+    {
+      "timestamp": "2026-05-07T00:34:47.983280+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 95,
+      "cost_usd": 0.000471,
+      "label": "lsi:副業 社会 保険 入り たく ない"
+    },
+    {
+      "timestamp": "2026-05-07T00:34:52.462060+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 582,
+      "cost_usd": 0.002473,
+      "label": "kw_research:副業 社会 保険 入り たく ない"
+    },
+    {
+      "timestamp": "2026-05-07T00:35:34.546484+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5917,
+      "output_tokens": 9967,
+      "cost_usd": 0.167256,
+      "label": "article:副業 社会 保険 入り たく ない"
+    },
+    {
+      "timestamp": "2026-05-07T00:36:16.661467+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 118,
+      "output_tokens": 102,
+      "cost_usd": 0.000502,
+      "label": "lsi:メンタル 弱い 仕事 続かない 30代"
+    },
+    {
+      "timestamp": "2026-05-07T00:36:21.041364+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 185,
+      "output_tokens": 564,
+      "cost_usd": 0.002404,
+      "label": "kw_research:メンタル 弱い 仕事 続かない 30代"
+    },
+    {
+      "timestamp": "2026-05-07T00:37:16.983233+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5982,
+      "output_tokens": 10300,
+      "cost_usd": 0.172446,
+      "label": "article:副業 社会 保険 入り たく ない"
+    },
+    {
+      "timestamp": "2026-05-07T00:37:52.298286+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 118,
+      "output_tokens": 87,
+      "cost_usd": 0.000442,
+      "label": "lsi:メンタル 弱い 仕事 続かない 30代"
+    },
+    {
+      "timestamp": "2026-05-07T00:37:56.242110+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 185,
+      "output_tokens": 568,
+      "cost_usd": 0.00242,
+      "label": "kw_research:メンタル 弱い 仕事 続かない 30代"
+    },
+    {
+      "timestamp": "2026-05-07T00:39:09.013046+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6014,
+      "output_tokens": 12000,
+      "cost_usd": 0.198042,
+      "label": "article:メンタル 弱い 仕事 続かない 30代"
+    },
+    {
+      "timestamp": "2026-05-07T00:39:15.794781+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 148,
+      "cost_usd": 0.000684,
+      "label": "lsi:AI記事 量産 ペナルティ 対策"
+    },
+    {
+      "timestamp": "2026-05-07T00:39:20.386173+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 540,
+      "cost_usd": 0.002306,
+      "label": "kw_research:AI記事 量産 ペナルティ 対策"
+    },
+    {
+      "timestamp": "2026-05-07T00:40:12.382451+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6003,
+      "output_tokens": 10032,
+      "cost_usd": 0.168489,
+      "label": "article:メンタル 弱い 仕事 続かない 30代"
+    },
+    {
+      "timestamp": "2026-05-07T00:40:52.631469+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 103,
+      "cost_usd": 0.0005,
+      "label": "lsi:フリーター 就職エージェント"
+    },
+    {
+      "timestamp": "2026-05-07T00:40:57.008979+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 667,
+      "cost_usd": 0.00281,
+      "label": "kw_research:フリーター 就職エージェント"
+    },
+    {
+      "timestamp": "2026-05-07T00:41:40.866594+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5638,
+      "output_tokens": 9768,
+      "cost_usd": 0.163434,
+      "label": "article:AI記事 量産 ペナルティ 対策"
+    },
+    {
+      "timestamp": "2026-05-07T00:41:52.463446+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 107,
+      "cost_usd": 0.000515,
+      "label": "lsi:AI記事 リライト やり方"
+    },
+    {
+      "timestamp": "2026-05-07T00:41:56.172210+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 518,
+      "cost_usd": 0.002213,
+      "label": "kw_research:AI記事 リライト やり方"
+    },
+    {
+      "timestamp": "2026-05-07T00:43:30.273896+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6049,
+      "output_tokens": 12000,
+      "cost_usd": 0.198147,
+      "label": "article:フリーター 就職エージェント"
+    },
+    {
+      "timestamp": "2026-05-07T00:43:36.258043+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 106,
+      "cost_usd": 0.000513,
+      "label": "lsi:ノーコード ツール 自動化"
+    },
+    {
+      "timestamp": "2026-05-07T00:43:39.905453+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 544,
+      "cost_usd": 0.002318,
+      "label": "kw_research:ノーコード ツール 自動化"
+    },
+    {
+      "timestamp": "2026-05-07T00:46:18.328451+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 85,
+      "cost_usd": 0.00043,
+      "label": "lsi:TOEIC 勉強 アプリ"
+    },
+    {
+      "timestamp": "2026-05-07T00:46:23.066813+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 672,
+      "cost_usd": 0.002831,
+      "label": "kw_research:TOEIC 勉強 アプリ"
+    },
+    {
+      "timestamp": "2026-05-07T00:49:29.526406+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5921,
+      "output_tokens": 11892,
+      "cost_usd": 0.196143,
+      "label": "article:TOEIC 勉強 アプリ"
+    },
+    {
+      "timestamp": "2026-05-07T02:30:13.526009+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 110,
+      "cost_usd": 0.000528,
+      "label": "lsi:海外旅行 安い 方法"
+    },
+    {
+      "timestamp": "2026-05-07T02:30:17.317389+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 520,
+      "cost_usd": 0.002222,
+      "label": "kw_research:海外旅行 安い 方法"
+    },
+    {
+      "timestamp": "2026-05-07T02:32:36.667008+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5437,
+      "output_tokens": 10090,
+      "cost_usd": 0.167661,
+      "label": "article:海外旅行 安い 方法"
+    },
+    {
+      "timestamp": "2026-05-07T03:00:13.444164+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 77,
+      "cost_usd": 0.000401,
+      "label": "lsi:ヒロインメイク マスカラ 販売店"
+    },
+    {
+      "timestamp": "2026-05-07T03:00:21.828277+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 691,
+      "cost_usd": 0.00291,
+      "label": "kw_research:ヒロインメイク マスカラ 販売店"
+    },
+    {
+      "timestamp": "2026-05-07T03:02:49.358379+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5318,
+      "output_tokens": 10509,
+      "cost_usd": 0.173589,
+      "label": "article:ヒロインメイク マスカラ 販売店"
+    },
+    {
+      "timestamp": "2026-05-07T03:30:12.080334+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 73,
+      "cost_usd": 0.000379,
+      "label": "lsi:資格 取得 通信教育"
+    },
+    {
+      "timestamp": "2026-05-07T03:30:16.197013+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 603,
+      "cost_usd": 0.002553,
+      "label": "kw_research:資格 取得 通信教育"
+    },
+    {
+      "timestamp": "2026-05-07T03:32:52.375642+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5817,
+      "output_tokens": 9982,
+      "cost_usd": 0.167181,
+      "label": "article:資格 取得 通信教育"
+    },
+    {
+      "timestamp": "2026-05-07T03:51:47.933159+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 135,
+      "cost_usd": 0.000629,
+      "label": "lsi:プログラミング 独学 無理？"
+    },
+    {
+      "timestamp": "2026-05-07T03:51:51.271704+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 505,
+      "cost_usd": 0.002162,
+      "label": "kw_research:プログラミング 独学 無理？"
+    },
+    {
+      "timestamp": "2026-05-07T03:54:41.181767+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5788,
+      "output_tokens": 10433,
+      "cost_usd": 0.173859,
+      "label": "article:プログラミング 独学 無理？"
+    },
+    {
+      "timestamp": "2026-05-07T03:55:35.171776+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 105,
+      "cost_usd": 0.00051,
+      "label": "lsi:オンライン学習 集中できない 対策"
+    },
+    {
+      "timestamp": "2026-05-07T03:55:39.298402+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 582,
+      "cost_usd": 0.002472,
+      "label": "kw_research:オンライン学習 集中できない 対策"
+    },
+    {
+      "timestamp": "2026-05-07T03:58:38.174413+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5831,
+      "output_tokens": 10905,
+      "cost_usd": 0.181068,
+      "label": "article:オンライン学習 集中できない 対策"
+    },
+    {
+      "timestamp": "2026-05-07T03:59:07.016685+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 89,
+      "cost_usd": 0.000448,
+      "label": "lsi:英語 苦手 克服 小学生 方法"
+    },
+    {
+      "timestamp": "2026-05-07T03:59:11.227004+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 609,
+      "cost_usd": 0.002582,
+      "label": "kw_research:英語 苦手 克服 小学生 方法"
+    },
+    {
+      "timestamp": "2026-05-07T04:02:19.917103+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T04",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6067,
+      "output_tokens": 12000,
+      "cost_usd": 0.198201,
+      "label": "article:英語 苦手 克服 小学生 方法"
+    },
+    {
+      "timestamp": "2026-05-07T04:40:07.774283+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 98,
+      "cost_usd": 0.000484,
+      "label": "lsi:子ども プログラミング教室 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-07T04:40:11.864997+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 668,
+      "cost_usd": 0.002818,
+      "label": "kw_research:子ども プログラミング教室 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-07T04:42:23.057582+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T04",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5141,
+      "output_tokens": 9881,
+      "cost_usd": 0.163638,
+      "label": "article:子ども プログラミング教室 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-07T04:43:00.402094+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 107,
+      "cost_usd": 0.000518,
+      "label": "lsi:Webデザインスクール おすすめ"
+    },
+    {
+      "timestamp": "2026-05-07T04:43:04.229353+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 596,
+      "cost_usd": 0.002527,
+      "label": "kw_research:Webデザインスクール おすすめ"
+    },
+    {
+      "timestamp": "2026-05-07T04:45:24.646757+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T04",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5075,
+      "output_tokens": 10076,
+      "cost_usd": 0.166365,
+      "label": "article:Webデザインスクール おすすめ"
+    },
+    {
+      "timestamp": "2026-05-07T04:45:59.776455+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 114,
+      "cost_usd": 0.000546,
+      "label": "lsi:動画編集ソフト おすすめ"
+    },
+    {
+      "timestamp": "2026-05-07T04:46:03.660470+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 623,
+      "cost_usd": 0.002635,
+      "label": "kw_research:動画編集ソフト おすすめ"
+    },
+    {
+      "timestamp": "2026-05-07T04:48:45.562275+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T04",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5110,
+      "output_tokens": 12000,
+      "cost_usd": 0.19533,
+      "label": "article:動画編集ソフト おすすめ"
+    },
+    {
+      "timestamp": "2026-05-07T05:11:14.778080+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 92,
+      "cost_usd": 0.000461,
+      "label": "lsi:発達障害 子供 勉強 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-07T05:11:19.451888+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T05",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 679,
+      "cost_usd": 0.002862,
+      "label": "kw_research:発達障害 子供 勉強 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-07T05:13:33.779045+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T05",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5148,
+      "output_tokens": 9558,
+      "cost_usd": 0.158814,
+      "label": "article:発達障害 子供 勉強 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-07T11:18:31.505175+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 118,
+      "output_tokens": 157,
+      "cost_usd": 0.000722,
+      "label": "lsi:子ども プログラミング教室 おすすめ 比較"
+    },
+    {
+      "timestamp": "2026-05-07T11:18:35.862040+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 185,
+      "output_tokens": 610,
+      "cost_usd": 0.002588,
+      "label": "kw_research:子ども プログラミング教室 おすすめ 比較"
+    },
+    {
+      "timestamp": "2026-05-07T11:23:07.492466+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10020,
+      "output_tokens": 16023,
+      "cost_usd": 0.270405,
+      "label": "article:子ども プログラミング教室 おすすめ 比較"
+    },
+    {
+      "timestamp": "2026-05-07T14:38:05.897030+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 112,
+      "cost_usd": 0.000538,
+      "label": "lsi:転職したいけど不安 何から始める"
+    },
+    {
+      "timestamp": "2026-05-07T14:38:10.646354+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 470,
+      "cost_usd": 0.002023,
+      "label": "kw_research:転職したいけど不安 何から始める"
+    },
+    {
+      "timestamp": "2026-05-07T14:42:10.596491+00:00",
+      "date": "2026-05-07",
+      "hour": "2026-05-07T14",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 9570,
+      "output_tokens": 16429,
+      "cost_usd": 0.275145,
+      "label": "article:転職したいけど不安 何から始める"
     }
   ],
   "events": [
