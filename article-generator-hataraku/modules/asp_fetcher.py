@@ -135,6 +135,11 @@ def fetch_asp_links(
         if not name or not raw_link:
             continue
 
+        # 未設定・申請中など無効なURLをスキップ
+        _INVALID_URLS = {"未定系", "申請中", "未定", "確認中", "tbd", "-", "－"}
+        if raw_link.strip().lower() in {v.lower() for v in _INVALID_URLS}:
+            continue
+
         # D列がHTMLタグかURLかを判定
         if _is_html_tag(raw_link):
             html_tag = raw_link

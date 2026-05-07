@@ -566,6 +566,7 @@ def post_article_with_image(
         )
         published = get_published_articles()
         if published:
+            cat_id = article.get("category_id")
             related = select_related_articles(
                 keyword=keyword,
                 article_title=article.get("title", ""),
@@ -573,6 +574,7 @@ def post_article_with_image(
                 asp_links=asp_links or {},
                 article_content=article.get("content", ""),
                 stop_words=stop_words or [],
+                article_category_ids=[cat_id] if cat_id else [],
             )
             if related:
                 article["content"] = inject_internal_links(

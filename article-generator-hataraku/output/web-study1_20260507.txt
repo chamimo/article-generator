@@ -1,0 +1,231 @@
+===== [WEB-STUDY1] 実行開始: 2026-05-07 05:10:00 =====
+2026-05-07 05:10:03 [INFO] ============================================================
+2026-05-07 05:10:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-07 05:10:03 [INFO] ============================================================
+2026-05-07 05:10:03 [INFO] 対象ブログ: ['web-study1']
+2026-05-07 05:10:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-07 05:10:05 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-05-07 05:10:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-07 05:10:05 [INFO]   genre            : オンライン学習・プログラミング・資格・スキルアップ
+2026-05-07 05:10:05 [INFO]   fact_check       : True
+2026-05-07 05:10:05 [INFO]   article_type_mix : True
+2026-05-07 05:10:05 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-07 05:10:05 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'AIVice'}（オンライン学習ナビ のSSを確認してください）
+[asp_fetcher] ⚠️  別ブログ案件を除外: 18件除外 → 0件に絞り込み
+[asp_fetcher] オンライン学習ナビ / 「ASP案件マスター」: 0件
+2026-05-07 05:10:10 [INFO] [wp] 記事取得: 計19件 (publish=19)
+2026-05-07 05:10:10 [INFO] [web-study1] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.2, 'monetize': 0.3})
+2026-05-07 05:10:12 [INFO] [fetch] サブKW紐付け: 76件 → 30記事に統合
+2026-05-07 05:10:12 [INFO] [fetch] [キーワード] メインKW: 14件（vol≥30 or N/A）  サブKW除外: 76件（統合対象）  投稿済みスキップ: 78件  テーマ外除外: 66件  aim内訳: [aim:73, claude:3, add:4]
+2026-05-07 05:10:12 [INFO] [dup_check] 優先候補: 14件 {'claude': 3, 'add': 1, 'aim': 10} を先頭評価
+2026-05-07 05:10:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=14件, 要求=1件)
+2026-05-07 05:10:12 [INFO] [select] 1件選定 (要求=1件)
+2026-05-07 05:10:12 [INFO] [select]   1. 「TOEIC 勉強 アプリ」 vol=0 seo=N/A comp=N/A
+2026-05-07 05:10:12 [INFO] [web-study1] LONGTAIL選定: 1件
+2026-05-07 05:10:12 [INFO] [web-study1] 候補: 14件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $2.4281 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $2.5935(¥389) / 15記事
+2026-05-07 05:10:12 [INFO] [api_guard] 本日の使用量: $2.4281 / ¥364 (52回呼び出し)
+2026-05-07 05:10:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-07 05:10:12 [INFO] [web-study1] [1/1] [LONGTAIL] 「TOEIC 勉強 アプリ」 vol=0 ★CLAUDE
+2026-05-07 05:10:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-07 05:10:12 [INFO] [generate] 生成開始: 「TOEIC 勉強 アプリ」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「TOEIC 勉強 アプリ」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $2.4281 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $2.5935(¥389) / 15記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=112 out=80 → $0.0004  (lsi:TOEIC 勉強 アプリ)
+[api_guard] 本日の使用量: $2.4285 / ¥364 (602回呼び出し)
+[article_generator] 共起語: スコアアップ、単語帳、リスニング、リーディング、模試、無料アプリ、有料アプリ、勉強法、効果的、継続、学習時間、初心者、目...
+[api_guard] ✅ 本日: $2.4285 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $2.5939(¥389) / 15記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=179 out=690 → $0.0029  (kw_research:TOEIC 勉強 アプリ)
+[api_guard] 本日の使用量: $2.4314 / ¥364 (603回呼び出し)
+[article_generator] サジェスト: TOEIC 勉強 アプリ 無料・TOEIC 勉強 アプリ おすすめ・TOEIC 勉強 アプリ 効果...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $2.4314 / 1時間: $0.0033  (上限 日次$10.00 / 時間$5.00)  全体: $2.5968(¥390) / 15記事
+[api_guard] 記録: claude-sonnet-4-6 in=4998 out=11106 → $0.1816  (article:TOEIC 勉強 アプリ)
+[api_guard] 本日の使用量: $2.6130 / ¥391 (604回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of smartphone, speech bubbles, sta
+[imagefx] タイトル(英): Top TOEIC Study Apps Compared
+[article_generator] 完了: 「TOEIC勉強アプリおすすめ9選！無料・有料を徹底比較してスコアアップを狙う」 カテゴリ: 未設定(-) タグ: ['TOEIC', '英語学習アプリ', 'スコアアップ', 'リスニング対策', '英語勉強法']
+2026-05-07 05:13:17 [INFO] [generate] 完了: 「TOEIC勉強アプリおすすめ9選！無料・有料を徹底比較してスコアアップを狙う」
+2026-05-07 05:13:17 [INFO] [post] 投稿方式: draft
+[image_generator] アイキャッチ生成 (フラットイラスト): Smartphone displaying TOEIC exam prep app interface with flo...
+[image_generator] 完了 (74KB, 1216x832)
+2026-05-07 05:13:21 [INFO] [post] 画像生成完了: 76,305 bytes
+[category_selector] カテゴリ取得: 13件
+[category_selector] 「TOEIC 勉強 アプリ」→ 勉強方法(92) score=2
+[wordpress] メディアアップロード完了 (ID: 298)
+[wordpress] アイキャッチ キャプションタグ付与: #toeic
+[wordpress] H2画像処理: 3枚
+[image_generator] H2画像生成 (テーマ反映): Mobile phone displaying TOEIC app interface with colorful ch...
+[image_generator] 完了 (67KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 299)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: TOEIC勉強アプリの選び方｜失敗しない4つのポイント
+[image_generator] H2画像生成 (テーマ反映): Colorful smartphone displaying language learning app interfa...
+[image_generator] 完了 (49KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 300)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: TOEIC勉強アプリおすすめ9選を徹底比較
+[image_generator] H2画像生成 (テーマ反映): Smartphone displaying TOEIC study app with floating vocabula...
+[image_generator] 完了 (94KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 301)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: TOEIC勉強アプリを効果的に使う方法｜スコアを伸ばすコツ
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 19件
+[internal_linker] キーワードトークンマッチ: 3件選定（ルールベース）
+[internal_linker] 内部リンク選定完了: 計3件 (成約:0 / 案件関連:0 / 同親KW+補完:3)
+[internal_linker] 注意: 内部リンク3件（目標5件未達）
+[internal_linker] 内部リンク挿入完了: 計3件 (本文H3:3 / 末尾リスト:0)
+[internal_linker] 内部リンク 3件 挿入: ['幼児向け知育アプリ無料おすすめ10選！2歳〜5歳の発達に合う', '小学生のプログラミング学習の始め方完全ガイド！おすすめ教材・', 'JavaScript学習を無料で始める方法！初心者向けサイト']
+[wordpress] タグ設定: ['TOEIC', '英語学習アプリ', 'スコアアップ', 'リスニング対策', '英語勉強法']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 302) → https://web-study1.com/wp-admin/post.php?post=302&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行64 「TOEIC 勉強 アプリ」→ 投稿済み (2026/05/07, ID:302) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「TOEIC勉強アプリおすすめ9選！無料・有料を徹底比較してス」
+2026-05-07 05:13:45 [INFO] [post] WP投稿完了: ID=302 → https://web-study1.com/wp-admin/post.php?post=302&action=edit
+2026-05-07 05:13:45 [INFO] [web-study1] [1/1] ✅ 完了: 「TOEIC勉強アプリおすすめ9選！無料・有料を徹底比較してスコアアップを狙う」
+2026-05-07 05:13:45 [INFO] [web-study1] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-07 05:13:45 [INFO] 
+============================================================
+2026-05-07 05:13:45 [INFO] 【全体サマリー】
+2026-05-07 05:13:45 [INFO]   ブログ数  : 1件
+2026-05-07 05:13:45 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-07 05:13:45 [INFO]   所要時間  : 222.5秒
+2026-05-07 05:13:45 [INFO]   ✅ [web-study1] TOEIC 勉強 アプリ → TOEIC勉強アプリおすすめ9選！無料・有料を徹底比較してスコアアップを狙う
+2026-05-07 05:13:45 [INFO]        https://web-study1.com/wp-admin/post.php?post=302&action=edit
+2026-05-07 05:13:45 [INFO] ============================================================
+===== [WEB-STUDY1] 記事生成終了: 2026-05-07 05:13:46 / exit=0 =====
+===== [WEB-STUDY1] 実行開始: 2026-05-07 12:30:00 =====
+2026-05-07 12:30:03 [INFO] ============================================================
+2026-05-07 12:30:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-07 12:30:03 [INFO] ============================================================
+2026-05-07 12:30:03 [INFO] 対象ブログ: ['web-study1']
+2026-05-07 12:30:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-07 12:30:05 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-05-07 12:30:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-07 12:30:05 [INFO]   genre            : オンライン学習・プログラミング・資格・スキルアップ
+2026-05-07 12:30:05 [INFO]   fact_check       : True
+2026-05-07 12:30:05 [INFO]   article_type_mix : True
+2026-05-07 12:30:05 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-07 12:30:05 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] オンライン学習ナビ / 「ASP案件マスター」: 24件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://web-study1.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [999] こどもチャレンジ → https://web-study1.com/shimajiro
+[asp_fetcher]   [999] 無学年式オンライン教材 のすらら → https://web-study1.com/surara
+[asp_fetcher]   [999] スマイルゼミ → https://web-study1.com/smile-zemi
+[asp_fetcher]   [999] 【RISU算数】(19-1031) → https://web-study1.com/risu
+[asp_fetcher]   [999] 進研ゼミ　高校講座 → https://web-study1.com/sinkenzemi-koukou
+[asp_fetcher]   [999] こどもチャレンジ baby → https://web-study1.com/shimajiro-baby
+[asp_fetcher]   [999] 進研ゼミ　中学講座 → https://web-study1.com/sinkenzem-cyugaku
+2026-05-07 12:30:07 [INFO] [web-study1] アフィリ案件: 24件（スプレッドシート）
+2026-05-07 12:30:07 [INFO] [web-study1]   [S] ヒューマンアカデミー → https://web-study1.com/haa.athuman
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] こどもチャレンジ → https://web-study1.com/shimajiro
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] 無学年式オンライン教材 のすらら → https://web-study1.com/surara
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] スマイルゼミ → https://web-study1.com/smile-zemi
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] 【RISU算数】(19-1031) → https://web-study1.com/risu
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] 進研ゼミ　高校講座 → https://web-study1.com/sinkenzemi-koukou
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] こどもチャレンジ baby → https://web-study1.com/shimajiro-baby
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] 進研ゼミ　中学講座 → https://web-study1.com/sinkenzem-cyugaku
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] 進研ゼミ　小学講座 → https://web-study1.com/shinkenzemi-syougakukouza
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] スタディサプリENGLISH（新日常英会話コース） → https://web-study1.com/eigosapuri
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] スタディサプリ中学講座 → https://web-study1.com/studysapuri-chugaku
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] スタディサプリEnglish　ビジネス英語コース → https://web-study1.com/eigosapuri
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] スタディサプリ高校・大学 受験講座 → https://web-study1.com/studysapur-koukou
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] Tech Kids School → https://web-study1.com/tech-kids
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] DMM WEBCAMP WEBデザインコース → https://web-study1.com/dmm_webcamp
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] DMM WEBCAMP プログラミングコース → https://web-study1.com/web-camp_programing
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] DMM WEBCAMP Pythonコース → https://web-study1.com/dmm_webcamp_python
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] DMM WEBCAMP  学習コース_大学生向け就活対策コース → https://web-study1.com/dmm_webcamp_shukatu
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] Udemy → https://web-study1.com/udemy
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] Filmora → https://web-study1.com/filmora
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] freenance → https://web-study1.com/freenance
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] Z会 → https://web-study1.com/zkai
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] すらら → https://web-study1.com/surara
+2026-05-07 12:30:07 [INFO] [web-study1]   [?] AI英会話アプリ【スピーク】 → https://px.a8.net/svt/ejp?a8mat=45GBDI+E9TN4Q+5PZU+5YRHE
+2026-05-07 12:30:09 [INFO] [wp] 記事取得: 計21件 (draft=2 / publish=19)
+2026-05-07 12:30:09 [INFO] [web-study1] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.2, 'monetize': 0.3})
+2026-05-07 12:30:10 [INFO] [fetch] サブKW紐付け: 76件 → 30記事に統合
+2026-05-07 12:30:10 [INFO] [fetch] [キーワード] メインKW: 14件（vol≥30 or N/A）  サブKW除外: 76件（統合対象）  投稿済みスキップ: 79件  テーマ外除外: 65件  aim内訳: [now:1, aim:72, claude:2, add:4]
+2026-05-07 12:30:10 [INFO] [dup_check] 優先候補: 14件 {'now': 1, 'claude': 2, 'add': 1, 'aim': 10} を先頭評価
+2026-05-07 12:30:10 [INFO] [dup_check] 除外: 「タブレット学習 小学生 比較」 → カニバリ(2/3語重複 ['小学生', '比較']): 「小学生のオンライン学習おすすめ10選！無料・有料・英語・中学受験まで徹底比較」
+2026-05-07 12:30:10 [INFO] [dup_check] 完了: 選定=1件 / 除外=1件 (pool=14件, 要求=1件)
+2026-05-07 12:30:10 [INFO] [select] 1件選定 (要求=1件)
+2026-05-07 12:30:10 [INFO] [select]   1. 「資格 取得 通信教育」 vol=0 seo=N/A comp=N/A
+2026-05-07 12:30:10 [INFO] [web-study1] LONGTAIL選定: 1件
+2026-05-07 12:30:10 [INFO] [web-study1] 候補: 14件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.8603 / 1時間: $0.1769  (上限 日次$10.00 / 時間$5.00)  全体: $1.8603(¥279) / 10記事
+2026-05-07 12:30:10 [INFO] [api_guard] 本日の使用量: $1.8603 / ¥279 (34回呼び出し)
+2026-05-07 12:30:10 [INFO] ────────────────────────────────────────────────────────────
+2026-05-07 12:30:10 [INFO] [web-study1] [1/1] [LONGTAIL] 「資格 取得 通信教育」 vol=0 ★CLAUDE
+2026-05-07 12:30:10 [INFO] ────────────────────────────────────────────────────────────
+2026-05-07 12:30:10 [INFO] [generate] 生成開始: 「資格 取得 通信教育」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「資格 取得 通信教育」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $1.8603 / 1時間: $0.1769  (上限 日次$10.00 / 時間$5.00)  全体: $1.8603(¥279) / 10記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=109 out=73 → $0.0004  (lsi:資格 取得 通信教育)
+[api_guard] 本日の使用量: $1.8606 / ¥279 (648回呼び出し)
+[article_generator] 共起語: 通信講座、独学、合格率、勉強時間、費用、教材、オンライン学習、資格試験、スクール、学習期間、サポート体制、実績、受講者、...
+[api_guard] ✅ 本日: $1.8606 / 1時間: $0.1773  (上限 日次$10.00 / 時間$5.00)  全体: $1.8606(¥279) / 10記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=176 out=603 → $0.0026  (kw_research:資格 取得 通信教育)
+[api_guard] 本日の使用量: $1.8632 / ¥279 (649回呼び出し)
+[article_generator] サジェスト: 資格 取得 通信教育 おすすめ・資格 取得 通信教育 安い・資格 取得 通信教育 人気...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $1.8632 / 1時間: $0.1798  (上限 日次$10.00 / 時間$5.00)  全体: $1.8632(¥279) / 10記事
+[api_guard] 記録: claude-sonnet-4-6 in=5817 out=9982 → $0.1672  (article:資格 取得 通信教育)
+[api_guard] 本日の使用量: $2.0304 / ¥304 (650回呼び出し)
+[imagefx] 背景:B / ビジュアル:Cute flat icons of laptop, graduation cap, calenda
+[imagefx] タイトル(英): Distance Learning For Qualifications
+[article_generator] 完了: 「資格取得に通信教育はおすすめ？費用・期間・選び方を徹底解説」 カテゴリ: 未設定(-) タグ: ['通信教育', '資格取得', '社会人学習', 'オンライン学習', '通信講座']
+2026-05-07 12:32:54 [INFO] [generate] パターンCTA挿入: 「DMM WEBCAMP  学習コース_大学生向け就活対策コース」(ID:151)
+2026-05-07 12:32:56 [INFO] [link_check] 死リンク除去: 3件 / チェック: 5件
+2026-05-07 12:32:56 [INFO] [generate] 完了: 「資格取得に通信教育はおすすめ？費用・期間・選び方を徹底解説」
+2026-05-07 12:32:56 [INFO] [post] 投稿方式: draft
+[image_generator] アイキャッチ生成 (フラットイラスト): Flat design illustration of open book, diploma certificate, ...
+[image_generator] 完了 (55KB, 1216x832)
+2026-05-07 12:33:01 [INFO] [post] 画像生成完了: 56,651 bytes
+[category_selector] カテゴリ取得: 13件
+[category_selector] 「資格 取得 通信教育」→ 通信教育(91) score=12
+[wordpress] メディアアップロード完了 (ID: 310)
+[wordpress] アイキャッチ キャプションタグ付与: #資格 取得
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#資格): shikaku-tsushin-koza-osusume-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 通信教育で資格取得するメリットと独学との違いのイメージ画像
+[image_generator] H2画像生成 (テーマ反映): Flat design illustration featuring study materials, certific...
+[image_generator] 完了 (68KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 311)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 資格取得の通信教育を選ぶときに確認すべきポイント
+[image_generator] H2画像生成 (テーマ反映): A collection of colorful certificate badges, textbooks, and ...
+[image_generator] 完了 (131KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 312)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 社会人に人気の資格取得向け通信教育おすすめ講座を比較
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 19件
+[internal_linker] 「Udemy」関連記事: 1件追加
+[internal_linker] 同カテゴリー: 2件選定（ルールベース）
+[internal_linker] 関連補完（親KW絞り込み）: 1件選定（ルールベース）
+[internal_linker] 内部リンク選定完了: 計4件 (成約:0 / 案件関連:1 / 同親KW+補完:3)
+[internal_linker] 低関連性 1件をフッターへ: ['資格通信講座おすすめ比較2026！安くて合格率が高']
+[internal_linker] 製品名マッチ「Udemy」→ セクション12に割り当て
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 1件追加
+[internal_linker] 注意: 内部リンク4件（目標5件未達）
+[internal_linker] 内部リンク挿入完了: 計4件 (本文H3:3 / 末尾リスト:1)
+[internal_linker] 内部リンク 4件 挿入: ['Udemyおすすめコース2026年版！初心者からプロまで使え', '高校生向け通信教育おすすめ5選！費用・大学受験・続け方まで徹', '通信教育 中学生おすすめ比較7選！安い・効果あり・不登校対応', '資格通信講座おすすめ比較2026！安くて合格率が高い人気講座']
+[wordpress] タグ設定: ['通信教育', '資格取得', '社会人学習', 'オンライン学習', '通信講座']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 313) → https://web-study1.com/wp-admin/post.php?post=313&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行65 「資格 取得 通信教育」→ 投稿済み (2026/05/07, ID:313) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「資格取得に通信教育はおすすめ？費用・期間・選び方を徹底解説」
+2026-05-07 12:33:23 [INFO] [post] WP投稿完了: ID=313 → https://web-study1.com/wp-admin/post.php?post=313&action=edit
+2026-05-07 12:33:23 [INFO] [web-study1] [1/1] ✅ 完了: 「資格取得に通信教育はおすすめ？費用・期間・選び方を徹底解説」
+2026-05-07 12:33:23 [INFO] [web-study1] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-07 12:33:23 [INFO] 
+============================================================
+2026-05-07 12:33:23 [INFO] 【全体サマリー】
+2026-05-07 12:33:23 [INFO]   ブログ数  : 1件
+2026-05-07 12:33:23 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-07 12:33:23 [INFO]   所要時間  : 200.4秒
+2026-05-07 12:33:23 [INFO]   ✅ [web-study1] 資格 取得 通信教育 → 資格取得に通信教育はおすすめ？費用・期間・選び方を徹底解説
+2026-05-07 12:33:23 [INFO]        https://web-study1.com/wp-admin/post.php?post=313&action=edit
+2026-05-07 12:33:23 [INFO] ============================================================
+===== [WEB-STUDY1] 記事生成終了: 2026-05-07 12:33:24 / exit=0 =====
