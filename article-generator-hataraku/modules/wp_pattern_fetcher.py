@@ -269,9 +269,10 @@ _SECTION_BLOCK_END = re.compile(
 
 
 def _make_cta_block(pattern: PatternItem) -> str:
-    """パターンの CTA ブロック HTML 文字列を生成する。"""
-    if pattern.html.strip().startswith("<!-- wp:"):
-        return f"\n{pattern.html.strip()}\n"
+    """パターンの CTA ブロック HTML 文字列を生成する。
+    ref形式を常に使用することで、rawブロックHTMLの直接埋め込みによる
+    Gutenbergブロック検証エラーを防ぐ。
+    """
     return f'\n<!-- wp:block {{"ref":{pattern.id}}} /-->\n'
 
 

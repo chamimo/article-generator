@@ -1,0 +1,138 @@
+===== [HATARAKU] 実行開始: 2026-05-08 05:40:01 =====
+2026-05-08 05:40:03 [INFO] ============================================================
+2026-05-08 05:40:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-08 05:40:03 [INFO] ============================================================
+2026-05-08 05:40:03 [INFO] 対象ブログ: ['hataraku']
+2026-05-08 05:40:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-08 05:40:06 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-08 05:40:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-08 05:40:06 [INFO]   genre            : 転職・副業・キャリア
+2026-05-08 05:40:06 [INFO]   fact_check       : True
+2026-05-08 05:40:06 [INFO]   article_type_mix : True
+2026-05-08 05:40:06 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-08 05:40:06 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] はた楽ナビ / 「ASP案件マスター」: 16件
+[asp_fetcher]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive / 発達障害×IT就労支援・在宅・スキル習得
+[asp_fetcher]   [S] ラボル → https://hataraku-navi.com/labol / フリーランス資金繰り・即日入金・請求書買取
+[asp_fetcher]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it / 未経験IT転職・ブラック回避・手厚い支援
+[asp_fetcher]   [S] TechGo → https://hataraku-navi.com/techgo / IT転職・年収アップ・ハイクラス
+[asp_fetcher]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi / 転職不安・無料相談・高確定率
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen / 就活・既卒支援・高EPC
+[asp_fetcher]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo / 既卒・フリーター・高卒支援
+2026-05-08 05:40:08 [INFO] [hataraku] アフィリ案件: 16件（スプレッドシート）
+2026-05-08 05:40:08 [INFO] [hataraku]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive
+2026-05-08 05:40:08 [INFO] [hataraku]   [S] ラボル → https://hataraku-navi.com/labol
+2026-05-08 05:40:08 [INFO] [hataraku]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it
+2026-05-08 05:40:08 [INFO] [hataraku]   [S] TechGo → https://hataraku-navi.com/techgo
+2026-05-08 05:40:08 [INFO] [hataraku]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi
+2026-05-08 05:40:08 [INFO] [hataraku]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy
+2026-05-08 05:40:08 [INFO] [hataraku]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen
+2026-05-08 05:40:08 [INFO] [hataraku]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo
+2026-05-08 05:40:08 [INFO] [hataraku]   [A] FREENANCE → https://hataraku-navi.com/freenance
+2026-05-08 05:40:08 [INFO] [hataraku]   [A] Midworks → https://hataraku-navi.com/midworks
+2026-05-08 05:40:08 [INFO] [hataraku]   [A] マスメディアン → https://hataraku-navi.com/massmedia
+2026-05-08 05:40:08 [INFO] [hataraku]   [A] atGP → https://hataraku-navi.com/atgp
+2026-05-08 05:40:08 [INFO] [hataraku]   [A] atGPジョブトレ IT・Web → https://hataraku-navi.com/atgp_job
+2026-05-08 05:40:08 [INFO] [hataraku]   [A] リゾートバイトダイブ → https://hataraku-navi.com/dive
+2026-05-08 05:40:08 [INFO] [hataraku]   [A] 日本マンパワー → https://hataraku-navi.com/manpower
+2026-05-08 05:40:08 [INFO] [hataraku]   [A] クラウドワークス → https://hataraku-navi.com/crowdworks
+2026-05-08 05:40:09 [INFO] [wp] 記事取得: 計43件 (draft=4 / publish=39)
+2026-05-08 05:40:09 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-08 05:40:11 [INFO] [fetch] サブKW紐付け: 6968件 → 226記事に統合
+2026-05-08 05:40:11 [INFO] [fetch] [キーワード] メインKW: 220件（vol≥30 or N/A）  サブKW除外: 6968件（統合対象）  投稿済みスキップ: 883件  テーマ外除外: 311件  aim内訳: [now:6, claude:359, aim:156, add:10]
+2026-05-08 05:40:11 [INFO] [dup_check] 優先候補: 220件 {'now': 6, 'claude': 129, 'aim': 76, 'add': 9} を先頭評価
+2026-05-08 05:40:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=220件, 要求=1件)
+2026-05-08 05:40:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-08 05:40:11 [INFO] [select]   1. 「働けない どうやって生きる」 vol=0 seo=N/A comp=N/A
+2026-05-08 05:40:11 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-08 05:40:11 [INFO] [hataraku] 候補: 220件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $4.3408 / 1時間: $0.1730  (上限 日次$10.00 / 時間$5.00)  全体: $4.3408(¥651) / 23記事
+2026-05-08 05:40:11 [INFO] [api_guard] 本日の使用量: $4.3408 / ¥651 (73回呼び出し)
+2026-05-08 05:40:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-08 05:40:11 [INFO] [hataraku] [1/1] [LONGTAIL] 「働けない どうやって生きる」 vol=0 ★NOW
+2026-05-08 05:40:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-08 05:40:11 [INFO] [generate] 生成開始: 「働けない どうやって生きる」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「働けない どうやって生きる」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $4.3408 / 1時間: $0.1730  (上限 日次$10.00 / 時間$5.00)  全体: $4.3408(¥651) / 23記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=109 out=99 → $0.0005  (lsi:働けない どうやって生きる)
+[api_guard] 本日の使用量: $4.3413 / ¥651 (687回呼び出し)
+[article_generator] 共起語: 働けない理由、生活保護申請、障害年金、失業保険、親に頼る、貯金取り崩し、生活費節約、無職期間、心身の不調、働きたくない、...
+[api_guard] ✅ 本日: $4.3413 / 1時間: $0.1735  (上限 日次$10.00 / 時間$5.00)  全体: $4.3413(¥651) / 23記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=176 out=443 → $0.0019  (kw_research:働けない どうやって生きる)
+[api_guard] 本日の使用量: $4.3432 / ¥651 (688回呼び出し)
+[article_generator] サジェスト: 働けない どうやって生きる・働けない 生活保護・働けない 親に頼る...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $4.3432 / 1時間: $0.1754  (上限 日次$10.00 / 時間$5.00)  全体: $4.3432(¥651) / 23記事
+[api_guard] 記録: claude-sonnet-4-6 in=5375 out=9943 → $0.1653  (article:働けない どうやって生きる)
+[api_guard] 本日の使用量: $4.5085 / ¥676 (689回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons: laptop, coin stacks, calendar, li
+[imagefx] タイトル(英): Unable To Work Support Guide
+[article_generator] 完了: 「働けないどうやって生きる？お金・支援制度・回復まで全対策」 カテゴリ: 未設定(-) タグ: ['働けない', '生活保護', '失業保険', '支援制度', '社会復帰']
+2026-05-08 05:42:48 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-08 05:42:48 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「TechGo」(ID:491)
+2026-05-08 05:42:49 [INFO] [generate] 完了: 「働けないどうやって生きる？お金・支援制度・回復まで全対策」
+2026-05-08 05:42:49 [INFO] [post] 投稿方式: draft
+[image_generator] アイキャッチ生成 (フラットイラスト): Flat design illustration with pastel gradient background fea...
+[image_generator] 完了 (50KB, 1216x832)
+2026-05-08 05:42:55 [INFO] [post] 画像生成完了: 51,745 bytes
+[category_selector] カテゴリ取得: 21件
+[category_selector] 「働けない どうやって生きる」→ お金・給与(286) score=10
+[wordpress] メディアアップロード完了 (ID: 540)
+[wordpress] アイキャッチ キャプションタグ付与: #働けない
+[wordpress] H2画像処理: 3枚
+[image_generator] H2画像生成 (テーマ反映): Pastel flat design illustration featuring soft gradient back...
+[image_generator] 完了 (51KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 541)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: 働けない時に頼れる支援制度と生活費の作り方
+[image_generator] H2画像生成 (テーマ反映): Flat design illustration featuring stacked colorful blocks, ...
+[image_generator] 完了 (47KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 542)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 働けない理由別・状況を立て直すための具体的な行動
+[image_generator] H2画像生成 (テーマ反映): Illustration of a winding staircase with floating stepping s...
+[image_generator] 完了 (33KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 543)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 働けない状況から社会復帰するためのステップと心構え
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 39件
+[internal_linker] 「クラウドワークス」関連記事: 1件追加
+[internal_linker] 同カテゴリー: 1件選定（ルールベース）
+[internal_linker] 内部リンク選定完了: 計2件 (成約:0 / 案件関連:1 / 同親KW+補完:1)
+[internal_linker] 製品名マッチ「クラウドワークス」→ セクション9に割り当て
+[internal_linker] 注意: 内部リンク2件（目標5件未達）
+[internal_linker] 内部リンク挿入完了: 計2件 (本文H3:2 / 末尾リスト:0)
+[internal_linker] 内部リンク 2件 挿入: ['クラウドワークス初心者の始め方・稼ぎ方完全ガイド！登録から最', '仕事できない人の特徴15選！原因・改善方法・転職まで徹底解説']
+[wordpress] タグ設定: ['働けない', '生活保護', '失業保険', '支援制度', '社会復帰']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 544) → https://hataraku-navi.com/wp-admin/post.php?post=544&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons: laptop, coin stacks, calendar, lightbulb, checkmark, speech bubble, upward chart, support symbol, soft pastel pink, mint, lavender, minimal style.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Unable To Work Support Guide" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行1621 「働けない どうやって生きる」→ 投稿済み (2026/05/08, ID:544) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「働けないどうやって生きる？お金・支援制度・回復まで全対策」
+2026-05-08 05:43:30 [INFO] [post] WP投稿完了: ID=544 → https://hataraku-navi.com/wp-admin/post.php?post=544&action=edit
+2026-05-08 05:43:30 [INFO] [hataraku] [1/1] ✅ 完了: 「働けないどうやって生きる？お金・支援制度・回復まで全対策」
+2026-05-08 05:43:30 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-08 05:43:30 [INFO] 
+============================================================
+2026-05-08 05:43:30 [INFO] 【全体サマリー】
+2026-05-08 05:43:30 [INFO]   ブログ数  : 1件
+2026-05-08 05:43:30 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-08 05:43:30 [INFO]   所要時間  : 206.6秒
+2026-05-08 05:43:30 [INFO]   ✅ [hataraku] 働けない どうやって生きる → 働けないどうやって生きる？お金・支援制度・回復まで全対策
+2026-05-08 05:43:30 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=544&action=edit
+2026-05-08 05:43:30 [INFO] ============================================================
+===== [HATARAKU] 記事生成終了: 2026-05-08 05:43:31 / exit=0 =====

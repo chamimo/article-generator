@@ -1,0 +1,132 @@
+===== [HIDA-NO-OMOIDE] 実行開始: 2026-05-08 06:00:00 =====
+2026-05-08 06:00:03 [INFO] ============================================================
+2026-05-08 06:00:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-08 06:00:03 [INFO] ============================================================
+2026-05-08 06:00:03 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-08 06:00:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-08 06:00:05 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-08 06:00:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-08 06:00:05 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-08 06:00:05 [INFO]   fact_check       : True
+2026-05-08 06:00:05 [INFO]   article_type_mix : True
+2026-05-08 06:00:05 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-08 06:00:05 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] 飛騨の思い出 / 「ASP案件マスター 」: 3件
+[asp_fetcher]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+[asp_fetcher]   [999] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+[asp_fetcher]   [999] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+2026-05-08 06:00:08 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-08 06:00:08 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-08 06:00:08 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-08 06:00:08 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-08 06:00:10 [INFO] [wp] 記事取得: 計26件 (draft=2 / publish=24)
+2026-05-08 06:00:10 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-08 06:00:12 [INFO] [fetch] サブKW紐付け: 58件 → 15記事に統合
+2026-05-08 06:00:12 [INFO] [fetch] [キーワード] メインKW: 48件（vol≥30 or N/A）  サブKW除外: 58件（統合対象）  投稿済みスキップ: 34件  テーマ外除外: 13件  aim内訳: [now:3, aim:32, claude:21, add:5]
+2026-05-08 06:00:12 [INFO] [dup_check] 優先候補: 48件 {'now': 3, 'aim': 24, 'claude': 16, 'add': 5} を先頭評価
+2026-05-08 06:00:12 [INFO] [dup_check] 除外: 「五平餅 お土産 できる？」 → カニバリ(3/3語重複 ['五平餅', 'お土産', 'できる？']): 「五平餅はお土産にできる？日持ち・通販・買える場所を徹底解説」
+2026-05-08 06:00:12 [INFO] [dup_check] 除外: 「朴葉味噌 お土産 日持ちする？」 → カニバリ(3/3語重複 ['朴葉味噌', 'お土産', '日持ちする？']): 「朴葉味噌のお土産は日持ちする？賞味期限・保存方法を徹底解説」
+2026-05-08 06:00:12 [INFO] [dup_check] 除外: 「赤かぶ漬け お土産 日持ち」 → カニバリ(2/3語重複 ['お土産', '日持ち']): 「朴葉味噌のお土産は日持ちする？賞味期限・保存方法を徹底解説」
+2026-05-08 06:00:12 [INFO] [dup_check] 除外: 「高山 雪 朝 写真 撮れる場所」 → カニバリ(2/3語重複 ['高山', '写真']): 「高山の冬写真スポット9選！静かな雪景色と古い町並みを早朝に撮る」
+2026-05-08 06:00:12 [INFO] [dup_check] 除外: 「飛騨 空がきれいに見える場所」 → カニバリ(2/2語重複 ['飛騨', '空がきれいに見える場所']): 「飛騨で空がきれいに見える場所9選！星空・天の川・夜景の絶景スポット完全ガイド」
+2026-05-08 06:00:12 [INFO] [dup_check] 除外: 「飛騨 山に囲まれた景色 見どころ」 → カニバリ(2/3語重複 ['飛騨', '見どころ']): 「飛騨古川 昔の町並み見どころ完全ガイド｜散策・カフェ・朝市まで」
+2026-05-08 06:00:12 [INFO] [dup_check] 除外: 「飛騨 民芸 見学 できる場所」 → カニバリ(4/4語重複 ['飛騨', '民芸', '見学', 'できる場所']): 「飛騨民芸を見学できる場所7選！工房・博物館・体験施設まとめ」
+2026-05-08 06:00:12 [INFO] [dup_check] 除外: 「高山 お土産 ネット 購入 方法」 → カニバリ(4/4語重複 ['高山', 'お土産', 'ネット', '購入']): 「高山のお土産をネットで購入する方法・おすすめ通販サイト完全ガイド」
+2026-05-08 06:00:12 [INFO] [dup_check] 除外: 「春慶塗 お土産 人気商品」 → カニバリ(3/3語重複 ['春慶塗', 'お土産', '人気商品']): 「春慶塗のお土産人気商品おすすめ7選｜高山・岐阜で選ぶ伝統漆工芸の贈り物」
+2026-05-08 06:00:12 [INFO] [dup_check] 除外: 「奥飛騨温泉郷 日帰り 駐車場 情報」 → カニバリ(4/4語重複 ['奥飛騨温泉郷', '日帰り', '駐車場', '情報']): 「奥飛騨温泉郷の日帰り駐車場情報まとめ！無料・有料・混雑回避のコツも解説」
+2026-05-08 06:00:12 [INFO] [dup_check] 除外: 「平湯温泉 足湯 場所 アクセス」 → カニバリ(4/4語重複 ['平湯温泉', '足湯', '場所', 'アクセス']): 「平湯温泉の足湯｜場所・アクセス・無料で楽しむ完全ガイド」
+2026-05-08 06:00:12 [INFO] [dup_check] 除外: 「平湯温泉 日帰り バスターミナル 近く」 → カニバリ(4/4語重複 ['平湯温泉', '日帰り', 'バスターミナル', '近く']): 「平湯温泉バスターミナル近くで日帰り入浴できる温泉施設5選！料金・営業時間まとめ」
+2026-05-08 06:00:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=12件 (pool=48件, 要求=1件)
+2026-05-08 06:00:12 [INFO] [select] 1件選定 (要求=1件)
+2026-05-08 06:00:12 [INFO] [select]   1. 「平湯温泉 空いてる時間帯 目安」 vol=0 seo=N/A comp=N/A
+2026-05-08 06:00:12 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-08 06:00:12 [INFO] [hida-no-omoide] 候補: 48件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $4.5085 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $4.5085(¥676) / 24記事
+2026-05-08 06:00:12 [INFO] [api_guard] 本日の使用量: $4.5085 / ¥676 (76回呼び出し)
+2026-05-08 06:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-08 06:00:12 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「平湯温泉 空いてる時間帯 目安」 vol=0 ★AIM
+2026-05-08 06:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-08 06:00:12 [INFO] [generate] 生成開始: 「平湯温泉 空いてる時間帯 目安」(vol:0) fact_check=True target_length=6,000字  サブKW:2件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「平湯温泉 空いてる時間帯 目安」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $4.5085 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $4.5085(¥676) / 24記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=117 out=75 → $0.0004  (lsi:平湯温泉 空いてる時間帯 目安)
+[api_guard] 本日の使用量: $4.5089 / ¥676 (690回呼び出し)
+[article_generator] 共起語: 平湯温泉、混雑状況、朝風呂、夕方、午前中、予約、駐車場、混雑回避、露天風呂、日帰り入浴、観光地、GW、連休、平日、早朝...
+[article_generator] サブKW候補: 2件 (新穂高温泉 空いてる時間帯〜)
+[api_guard] ✅ 本日: $4.5089 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $4.5089(¥676) / 24記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=184 out=609 → $0.0026  (kw_research:平湯温泉 空いてる時間帯 目安)
+[api_guard] 本日の使用量: $4.5115 / ¥676 (691回呼び出し)
+[article_generator] サジェスト: 平湯温泉 空いてる時間帯・平湯温泉 混雑状況・平湯温泉 混雑 時間...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $4.5115 / 1時間: $0.0030  (上限 日次$10.00 / 時間$5.00)  全体: $4.5115(¥677) / 24記事
+[api_guard] 記録: claude-sonnet-4-6 in=5492 out=10191 → $0.1693  (article:平湯温泉 空いてる時間帯 目安)
+[api_guard] 本日の使用量: $4.6808 / ¥702 (692回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of calendar, clock, hot spring sym
+[imagefx] タイトル(英): Hirayu Hot Spring Best Times
+[article_generator] 完了: 「平湯温泉が空いてる時間帯の目安は？混雑を避けるベストタイミング完全ガイド」 カテゴリ: 未設定(-) タグ: ['平湯温泉', '温泉混雑情報', '日帰り入浴', '温泉旅行', '奥飛騨温泉郷']
+2026-05-08 06:02:43 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-08 06:02:43 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「楽天トラベル」(ID:168)
+[api_guard] ✅ 本日: $4.6808 / 1時間: $0.1723  (上限 日次$10.00 / 時間$5.00)  全体: $4.6808(¥702) / 25記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=386 out=29 → $0.0004  (maps:平湯温泉 空いてる時間帯 目安)
+[api_guard] 本日の使用量: $4.6812 / ¥702 (693回呼び出し)
+[maps_embedder] ✅ 地図挿入: mode=place / query=平湯温泉 高山市
+2026-05-08 06:02:45 [INFO] [generate] 完了: 「平湯温泉が空いてる時間帯の目安は？混雑を避けるベストタイミング完全ガイド」
+2026-05-08 06:02:45 [INFO] [post] 投稿方式: draft
+[image_generator] アイキャッチ生成 (フラットイラスト): Serene hot spring resort bathed in soft pastel light, featur...
+[image_generator] 完了 (75KB, 1216x832)
+2026-05-08 06:02:52 [INFO] [post] 画像生成完了: 76,917 bytes
+[category_selector] カテゴリ取得: 72件
+[category_selector] 「平湯温泉 空いてる時間帯 目安」→ 温泉・宿泊(41) score=4
+[wordpress] メディアアップロード完了 (ID: 276)
+[wordpress] アイキャッチ キャプションタグ付与: #平湯温泉
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#平湯温泉): hirayuonsen-ashiyu-access-guide-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 平湯温泉が空いてる時間帯の目安｜時間・曜日別に徹底解説のイメージ画像
+[wordpress] H2画像[2] ライブラリ選択 (#平湯温泉): hirayuonsen-day-trip-bus-terminal-nearby-eyecatch.jpg
+[wordpress] H2画像[2] ライブラリALT更新: 平湯温泉の混雑しやすい季節と混雑回避のコツのイメージ画像
+[image_generator] H2画像生成 (テーマ反映): A serene hot spring scene with a clock showing quiet hours, ...
+[image_generator] 完了 (52KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 277)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 平湯温泉の混雑状況を事前に把握する方法とおすすめの使い方
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 24件
+[internal_linker] 同カテゴリー: 1件選定（ルールベース）
+[internal_linker] 同親KW「平湯温泉」: 1件選定（ルールベース）
+[internal_linker] 内部リンク選定完了: 計2件 (成約:0 / 案件関連:0 / 同親KW+補完:2)
+[internal_linker] 注意: 内部リンク2件（目標5件未達）
+[internal_linker] 内部リンク挿入完了: 計2件 (本文H3:2 / 末尾リスト:0)
+[internal_linker] 内部リンク 2件 挿入: ['飛騨高山の温泉宿おすすめ9選！露天風呂・食事・カップル向けま', '平湯温泉の足湯｜場所・アクセス・無料で楽しむ完全ガイド']
+[wordpress] タグ設定: ['平湯温泉', '温泉混雑情報', '日帰り入浴', '温泉旅行', '奥飛騨温泉郷']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 278) → https://hida-no-omoide.com/wp-admin/post.php?post=278&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of calendar, clock, hot spring symbol, and checkmarks in soft pink, mint, and lavender pastels with minimal line details.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Hirayu Hot Spring Best Times" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行32 「平湯温泉 空いてる時間帯 目安」→ 投稿済み (2026/05/08, ID:278) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「平湯温泉が空いてる時間帯の目安は？混雑を避けるベストタイミン」
+2026-05-08 06:03:13 [INFO] [post] WP投稿完了: ID=278 → https://hida-no-omoide.com/wp-admin/post.php?post=278&action=edit
+2026-05-08 06:03:13 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「平湯温泉が空いてる時間帯の目安は？混雑を避けるベストタイミング完全ガイド」
+2026-05-08 06:03:13 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-08 06:03:13 [INFO] 
+============================================================
+2026-05-08 06:03:13 [INFO] 【全体サマリー】
+2026-05-08 06:03:13 [INFO]   ブログ数  : 1件
+2026-05-08 06:03:13 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-08 06:03:13 [INFO]   所要時間  : 190.4秒
+2026-05-08 06:03:13 [INFO]   ✅ [hida-no-omoide] 平湯温泉 空いてる時間帯 目安 → 平湯温泉が空いてる時間帯の目安は？混雑を避けるベストタイミング完全ガイド
+2026-05-08 06:03:13 [INFO]        https://hida-no-omoide.com/wp-admin/post.php?post=278&action=edit
+2026-05-08 06:03:13 [INFO] ============================================================
+===== [HIDA-NO-OMOIDE] 記事生成終了: 2026-05-08 06:03:14 / exit=0 =====

@@ -522,7 +522,7 @@ USER_PROMPT_TEMPLATE = """\
 
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{tone_section}{testimonial_section}{trusted_external_links_section}{forced_title_section}
+{asp_hint_section}{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{tone_section}{testimonial_section}{trusted_external_links_section}{forced_title_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
@@ -547,7 +547,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    enable_fact_check: bool = True,
                    target_length: int = 9000,
                    asp_links: dict | None = None,
-                   forced_title: str | None = None) -> dict:
+                   forced_title: str | None = None,
+                   asp_hint: list[str] | None = None) -> dict:
     """
     記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
 
@@ -669,6 +670,28 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     except Exception:
         pass
 
+    # 訴求案件指定セクション（スプレッドシートで手動指定された場合のみ）
+    asp_hint_section = ""
+    if asp_hint:
+        hint_lines = []
+        for h in asp_hint:
+            url = ""
+            if asp_links:
+                for name, u in asp_links.items():
+                    n = name.lower().replace(" ", "").replace("　", "")
+                    q = h.lower().replace(" ", "").replace("　", "")
+                    if q in n or n in q:
+                        url = u
+                        break
+            hint_lines.append(f"- {h}" + (f": {url}" if url else ""))
+        asp_hint_section = (
+            "## 訴求案件指定（最優先・必須）\n"
+            "以下の案件を記事の中心的な訴求対象として積極的に紹介してください。\n"
+            "各H2のメインテーマとして取り上げ、H3でも詳しく解説することを推奨します:\n"
+            + "\n".join(hint_lines) + "\n\n"
+        )
+        print(f"[article_generator] 訴求案件指定: {asp_hint}")
+
     # タイトル強制指定セクション
     forced_title_section = ""
     if forced_title:
@@ -689,6 +712,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                 current_date=date.today().strftime("%Y年%m月%d日"),
                 keyword=keyword,
                 volume=volume,
+                asp_hint_section=asp_hint_section,
                 blog_context_section=blog_context_section,
                 related_section=related_section,
                 theme_section=theme_section,
@@ -781,7 +805,8 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                      article_type: str = "longtail",
                      asp_list: list | None = None,
                      guide_links: dict | None = None,
-                     forced_title: str | None = None) -> dict:
+                     forced_title: str | None = None,
+                     asp_hint: list[str] | None = None) -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
@@ -805,7 +830,7 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
     return _build_article(keyword, volume, differentiation_note,
                           sub_keywords=sub_keywords, enable_fact_check=enable_fact_check,
                           target_length=target_length, asp_links=asp_links,
-                          forced_title=forced_title)
+                          forced_title=forced_title, asp_hint=asp_hint)
 
 
 def generate_article_from_cluster(cluster: dict, sub_keywords: list[str] | None = None) -> dict:
