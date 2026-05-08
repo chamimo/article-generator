@@ -657,6 +657,7 @@ def fetch_candidates(
     status_idx    = col(["投稿ステータス", "ステータス", "status"])  # 投稿済み除外用
     hantei_idx    = col(["判定"])       # D列: 親KW / サブKW （新フォーマット）
     togo_saki_idx = col(["統合先KW"])   # E列: 統合先KW （新フォーマット）
+    asp_hint_idx  = col(["訴求案件"])   # 訴求する案件を手動指定する列（カンマ区切り複数可）
     is_new_format = hantei_idx >= 0    # 判定列の有無で新旧フォーマットを判別
 
     # aim列の値 → 優先度レベル（高いほど先に評価）
@@ -691,6 +692,8 @@ def fetch_candidates(
         post_status  = cell(status_idx).strip()    if status_idx    >= 0 else ""
         hantei       = cell(hantei_idx).strip()    if hantei_idx    >= 0 else ""
         togo_saki    = cell(togo_saki_idx).strip() if togo_saki_idx >= 0 else ""
+        asp_hint_raw = cell(asp_hint_idx).strip()  if asp_hint_idx  >= 0 else ""
+        asp_hint     = [h.strip() for h in _re.split(r"[,、\n]", asp_hint_raw) if h.strip()] if asp_hint_raw else []
 
         if not kw:
             continue
@@ -736,6 +739,7 @@ def fetch_candidates(
             "priority":        aim == "now",
             "_aim":            aim,
             "_priority_level": _AIM_PRIORITY.get(aim, 0),
+            "_asp_hint":       asp_hint,   # 訴求案件指定（空リスト = 指定なし）
         })
 
     # 新フォーマット: 各候補にサブKWを直接紐付け
@@ -1382,6 +1386,16 @@ def _resolve_target_length(target_length: int | dict, article_type: str) -> int:
 
 # 既存の generate_article() をそのまま利用
 # ═══════════════════════════════════════════════════════════════
+def _filter_asp_by_hint(asp_list: list[dict], hints: list[str]) -> list[dict]:
+    """asp_list からヒント文字列に部分一致する案件のみ返す（大小文字・空白無視）。"""
+    result = []
+    for item in asp_list:
+        name = item.get("name", "").lower().replace(" ", "").replace("　", "")
+        if any(h.lower().replace(" ", "") in name or name in h.lower().replace(" ", "") for h in hints):
+            result.append(item)
+    return result
+
+
 def generate(
     keyword: str,
     volume: int,
@@ -1390,6 +1404,7 @@ def generate(
     article_type: str = "longtail",
     asp_list: list[dict] | None = None,
     forced_title: str | None = None,
+    asp_hint: list[str] | None = None,
 ) -> dict:
     """
     記事を生成して dict で返す。
@@ -1425,7 +1440,8 @@ def generate(
                                article_type=article_type,
                                asp_list=asp_list,
                                guide_links=guide_links or None,
-                               forced_title=forced_title)
+                               forced_title=forced_title,
+                               asp_hint=asp_hint or None)
 
     # ── マイパターン CTA 挿入（ブログにパターンがある場合のみ）──
     if blog_cfg:
@@ -1438,16 +1454,27 @@ def generate(
                 _wp_patterns_cache[blog_name] = []
         patterns = _wp_patterns_cache[blog_name]
         if patterns:
-            # ① 各案件H3末尾へのCTA挿入（案件名 ↔ パターンタイトルマッチ）
+            # ① 各案件H3末尾へのCTA挿入
+            # 訴求案件指定あり → 指定案件のみ挿入。なし → 全案件（従来通り）
+            h3_asp = _filter_asp_by_hint(asp_list or [], asp_hint) if asp_hint else (asp_list or [])
             article["content"], n_h3 = insert_per_h3_cta(
-                article["content"], patterns, asp_list or []
+                article["content"], patterns, h3_asp
             )
             if n_h3 > 0:
                 log.info(f"[generate] パターンCTA挿入（H3末尾）: {n_h3}件")
 
             # ② キーワードマッチパターンを「この記事のポイント」直後と末尾に挿入
-            asp_names = [item["name"] for item in (asp_list or [])]
-            matched = match_pattern(keyword, patterns, asp_names=asp_names)
+            # 訴求案件指定あり → 指定案件名でパターン検索（なければKWマッチにフォールバック）
+            matched = None
+            if asp_hint:
+                for hint in asp_hint:
+                    matched = match_pattern(hint, patterns)
+                    if matched:
+                        log.info(f"[generate] パターンCTA: 訴求案件指定マッチ「{matched.title}」← hint=「{hint}」")
+                        break
+            if not matched:
+                asp_names = [item["name"] for item in (asp_list or [])]
+                matched = match_pattern(keyword, patterns, asp_names=asp_names)
             if matched:
                 # H3末尾挿入済みの場合は②言及段落をスキップして重複を避ける
                 article["content"] = insert_pattern_cta(
@@ -1756,11 +1783,15 @@ def run_blog(
                     if kw_core and kw_core in s.lower()
                 ][:20]
 
+            kw_asp_hint = chosen.get("_asp_hint") or None
+            if kw_asp_hint:
+                log.info(f"[generate] 訴求案件指定: {kw_asp_hint}")
             article     = generate(chosen["keyword"], chosen["volume"],
                                    blog_cfg=blog_cfg, sub_keywords=related_sub or None,
                                    article_type=article_type_label,
                                    asp_list=asp_list or None,
-                                   forced_title=forced_title)
+                                   forced_title=forced_title,
+                                   asp_hint=kw_asp_hint)
             # 記事タイプ・KWステータスを article dict に付与（シート書き込み用）
             article["_article_type"] = article_type_label
             article["_kw_status"]    = chosen.get("_aim", "")
