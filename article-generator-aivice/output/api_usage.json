@@ -2599,6 +2599,36 @@
       "output_tokens": 9626,
       "cost_usd": 0.162813,
       "label": "article:AIエージェント 何ができる 初心者"
+    },
+    {
+      "timestamp": "2026-05-09T15:05:16.827235+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 107,
+      "cost_usd": 0.000515,
+      "label": "lsi:plaud note pro オンライン会議"
+    },
+    {
+      "timestamp": "2026-05-09T15:05:21.275102+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 553,
+      "cost_usd": 0.002353,
+      "label": "kw_research:plaud note pro オンライン会議"
+    },
+    {
+      "timestamp": "2026-05-09T15:07:38.518501+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T15",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6346,
+      "output_tokens": 9970,
+      "cost_usd": 0.168588,
+      "label": "article:plaud note pro オンライン会議"
     }
   ],
   "events": [
