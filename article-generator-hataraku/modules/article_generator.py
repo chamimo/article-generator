@@ -32,6 +32,7 @@ __SITE_INFO__
 - 本文トーン: 読者に寄り添うやさしい表現、専門語はカッコで補足
 - 各H3の本文は合計400〜500字・段落2〜3つ（1段落120〜150字）に分け、「結論→詳細→具体例」の流れで書く
 - 各段落はそれぞれ個別の<!-- wp:paragraph -->ブロックで囲む
+- **H3本文の文頭（1文目）にキーワードを羅列・詰め込まないこと。** LSIキーワード・サジェストキーワードは文章の流れの中に自然に溶け込ませる。スペース区切りのキーワード列挙（例：「幼児 知育 アプリ 無料 英語 おすすめの筆頭は〜」）は厳禁。自然な文体にならない場合はキーワードを無理に文頭に入れない。
 - 本文内で①②③のような番号付き列挙が必要な場合は、テキスト内に書かずWordPressの番号付きリストブロックで出力する（段落ブロックとリストブロックを分けて出力）
 - FAQは8〜10問（各回答200字以上）
 - 結論ファーストな構成
@@ -607,7 +608,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     try:
         lsi_words = _get_lsi_keywords(keyword)
         lsi_section = (
-            f"共起語・LSIキーワード（H3本文・FAQ・まとめに自然に散りばめること）: {lsi_words}\n"
+            f"共起語・LSIキーワード（H3本文・FAQ・まとめの文脈の中に自然に溶け込ませること。文頭への羅列・スペース区切りの列挙は厳禁）: {lsi_words}\n"
         ) if lsi_words else ""
         if lsi_words:
             print(f"[article_generator] 共起語: {lsi_words[:60]}...")
@@ -634,11 +635,11 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
         kw_research = _get_keyword_research(keyword)
         parts = []
         if kw_research["suggest"]:
-            parts.append("サジェストキーワード（H3見出しや本文に自然に使う）: " + "・".join(kw_research["suggest"]))
+            parts.append("サジェストキーワード（H3見出しや本文の文脈に自然に溶け込ませる。文頭への羅列・詰め込み禁止）: " + "・".join(kw_research["suggest"]))
         if kw_research["paa"]:
             parts.append("関連質問PAA（FAQの質問文やH3見出しに活用する）: " + "・".join(kw_research["paa"]))
         if kw_research["longtail"]:
-            parts.append("ロングテールキーワード（本文中に自然に散りばめる）: " + "・".join(kw_research["longtail"]))
+            parts.append("ロングテールキーワード（本文中の文脈に自然に溶け込ませる。文頭への羅列・詰め込み禁止）: " + "・".join(kw_research["longtail"]))
         if parts:
             keyword_research_section = "\n".join(parts) + "\n"
             suggest_preview = "・".join(kw_research["suggest"][:3])

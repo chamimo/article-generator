@@ -7309,6 +7309,276 @@
       "output_tokens": 9551,
       "cost_usd": 0.158424,
       "label": "article:AI 副業 稼ぎ方 初心者"
+    },
+    {
+      "timestamp": "2026-05-08T19:10:14.444933+00:00",
+      "date": "2026-05-08",
+      "hour": "2026-05-08T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 90,
+      "cost_usd": 0.00045,
+      "label": "lsi:格安SIM 審査 ゆるい"
+    },
+    {
+      "timestamp": "2026-05-08T19:10:18.188294+00:00",
+      "date": "2026-05-08",
+      "hour": "2026-05-08T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 493,
+      "cost_usd": 0.002115,
+      "label": "kw_research:格安SIM 審査 ゆるい"
+    },
+    {
+      "timestamp": "2026-05-08T19:12:20.062888+00:00",
+      "date": "2026-05-08",
+      "hour": "2026-05-08T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5371,
+      "output_tokens": 9433,
+      "cost_usd": 0.157608,
+      "label": "article:格安SIM 審査 ゆるい"
+    },
+    {
+      "timestamp": "2026-05-08T19:40:13.687472+00:00",
+      "date": "2026-05-08",
+      "hour": "2026-05-08T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 91,
+      "cost_usd": 0.000454,
+      "label": "lsi:シャインマスカットボンボン 通販"
+    },
+    {
+      "timestamp": "2026-05-08T19:40:17.494717+00:00",
+      "date": "2026-05-08",
+      "hour": "2026-05-08T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 614,
+      "cost_usd": 0.0026,
+      "label": "kw_research:シャインマスカットボンボン 通販"
+    },
+    {
+      "timestamp": "2026-05-08T19:42:33.346475+00:00",
+      "date": "2026-05-08",
+      "hour": "2026-05-08T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5189,
+      "output_tokens": 10034,
+      "cost_usd": 0.166077,
+      "label": "article:シャインマスカットボンボン 通販"
+    },
+    {
+      "timestamp": "2026-05-08T20:10:16.103466+00:00",
+      "date": "2026-05-08",
+      "hour": "2026-05-08T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 139,
+      "cost_usd": 0.000648,
+      "label": "lsi:オンライン学習 親 サポート 必要？"
+    },
+    {
+      "timestamp": "2026-05-08T20:10:20.226945+00:00",
+      "date": "2026-05-08",
+      "hour": "2026-05-08T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 623,
+      "cost_usd": 0.002638,
+      "label": "kw_research:オンライン学習 親 サポート 必要？"
+    },
+    {
+      "timestamp": "2026-05-08T20:12:45.242645+00:00",
+      "date": "2026-05-08",
+      "hour": "2026-05-08T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5134,
+      "output_tokens": 10221,
+      "cost_usd": 0.168717,
+      "label": "article:オンライン学習 親 サポート 必要？"
+    },
+    {
+      "timestamp": "2026-05-09T02:26:24.036799+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 88,
+      "cost_usd": 0.000442,
+      "label": "lsi:不登校 通信教育 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-09T02:26:27.926063+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 543,
+      "cost_usd": 0.002316,
+      "label": "kw_research:不登校 通信教育 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-09T02:30:09.336957+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 8759,
+      "output_tokens": 13613,
+      "cost_usd": 0.230472,
+      "label": "article:不登校 通信教育 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-09T02:30:12.813708+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 89,
+      "cost_usd": 0.000446,
+      "label": "lsi:在宅勤務 WiFi おすすめ"
+    },
+    {
+      "timestamp": "2026-05-09T02:30:16.660637+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 568,
+      "cost_usd": 0.002416,
+      "label": "kw_research:在宅勤務 WiFi おすすめ"
+    },
+    {
+      "timestamp": "2026-05-09T02:32:57.825726+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5363,
+      "output_tokens": 10386,
+      "cost_usd": 0.171879,
+      "label": "article:在宅勤務 WiFi おすすめ"
+    },
+    {
+      "timestamp": "2026-05-09T03:45:25.792844+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 81,
+      "cost_usd": 0.000414,
+      "label": "lsi:タブレット学習 小学生 比較"
+    },
+    {
+      "timestamp": "2026-05-09T03:45:29.870884+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 661,
+      "cost_usd": 0.002787,
+      "label": "kw_research:タブレット学習 小学生 比較"
+    },
+    {
+      "timestamp": "2026-05-09T03:49:38.001395+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11309,
+      "output_tokens": 14741,
+      "cost_usd": 0.255042,
+      "label": "article:タブレット学習 小学生 比較"
+    },
+    {
+      "timestamp": "2026-05-09T07:00:17.384352+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 123,
+      "output_tokens": 85,
+      "cost_usd": 0.000438,
+      "label": "lsi:宅配食 無添加 おすすめ 一人暮らし 女性"
+    },
+    {
+      "timestamp": "2026-05-09T07:00:21.189551+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 190,
+      "output_tokens": 592,
+      "cost_usd": 0.00252,
+      "label": "kw_research:宅配食 無添加 おすすめ 一人暮らし 女性"
+    },
+    {
+      "timestamp": "2026-05-09T07:03:05.866928+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T07",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5517,
+      "output_tokens": 10911,
+      "cost_usd": 0.180216,
+      "label": "article:宅配食 無添加 おすすめ 一人暮らし 女性"
+    },
+    {
+      "timestamp": "2026-05-09T12:29:33.385875+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 92,
+      "cost_usd": 0.000459,
+      "label": "lsi:発達障害 通信教育 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-09T12:29:36.855175+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 554,
+      "cost_usd": 0.002361,
+      "label": "kw_research:発達障害 通信教育 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-09T12:33:21.133045+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T12",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 9504,
+      "output_tokens": 15267,
+      "cost_usd": 0.257517,
+      "label": "article:発達障害 通信教育 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-09T12:47:05.721180+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 85,
+      "cost_usd": 0.000429,
+      "label": "lsi:プログラミング 子供 いつから"
+    },
+    {
+      "timestamp": "2026-05-09T12:47:10.142127+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 539,
+      "cost_usd": 0.002298,
+      "label": "kw_research:プログラミング 子供 いつから"
+    },
+    {
+      "timestamp": "2026-05-09T12:50:02.649890+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T12",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5237,
+      "output_tokens": 10603,
+      "cost_usd": 0.174756,
+      "label": "article:プログラミング 子供 いつから"
     }
   ],
   "events": [

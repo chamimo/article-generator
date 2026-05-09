@@ -42,13 +42,22 @@ def _open_main_worksheet(sheet_name: str | None = None, worksheet_index: int = 0
     return ss.get_worksheet(worksheet_index)
 
 
-def get_aim_keywords(sheet_name: str | None = None, worksheet_index: int = 0) -> list[dict]:
+def get_aim_keywords(
+    sheet_name: str | None = None,
+    worksheet_index: int = 0,
+    extra_aim_values: set[str] | None = None,
+) -> list[dict]:
     """
     スプレッドシートからAIM判定あり かつ 検索ボリューム≥MIN_SEARCH_VOLUME のキーワードを返す。
+
+    Args:
+        extra_aim_values: AIM_POSITIVE_VALUES に追加で受け入れる値（例: {'add', 'now'}）
 
     Returns:
         [{"キーワード": "xxx", "検索ボリューム": 100}, ...]
     """
+    effective_aim_values = AIM_POSITIVE_VALUES | (extra_aim_values or set())
+
     ws = _open_main_worksheet(sheet_name, worksheet_index)
 
     # ヘッダー重複があるため get_all_values() で生データ取得
@@ -102,7 +111,7 @@ def get_aim_keywords(sheet_name: str | None = None, worksheet_index: int = 0) ->
             volume = 0
 
         # AIM='aim' のキーワードはボリューム条件を無視して採用
-        if aim_val in AIM_POSITIVE_VALUES:
+        if aim_val in effective_aim_values:
             aim_keywords.append({"キーワード": keyword, "検索ボリューム": volume})
 
     print(f"[sheets_fetcher] AIM判定キーワード: {len(aim_keywords)}件 (ボリューム条件: AIMありは無条件採用)")
