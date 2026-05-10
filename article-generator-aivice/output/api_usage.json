@@ -2629,6 +2629,36 @@
       "output_tokens": 9970,
       "cost_usd": 0.168588,
       "label": "article:plaud note pro オンライン会議"
+    },
+    {
+      "timestamp": "2026-05-10T15:05:13.927739+00:00",
+      "date": "2026-05-10",
+      "hour": "2026-05-10T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 127,
+      "cost_usd": 0.000594,
+      "label": "lsi:youtube 競合 分析 ai"
+    },
+    {
+      "timestamp": "2026-05-10T15:05:17.054233+00:00",
+      "date": "2026-05-10",
+      "hour": "2026-05-10T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 461,
+      "cost_usd": 0.001984,
+      "label": "kw_research:youtube 競合 分析 ai"
+    },
+    {
+      "timestamp": "2026-05-10T15:08:04.789436+00:00",
+      "date": "2026-05-10",
+      "hour": "2026-05-10T15",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6276,
+      "output_tokens": 10861,
+      "cost_usd": 0.181743,
+      "label": "article:youtube 競合 分析 ai"
     }
   ],
   "events": [
