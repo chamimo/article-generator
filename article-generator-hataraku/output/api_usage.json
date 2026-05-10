@@ -7579,6 +7579,226 @@
       "output_tokens": 10603,
       "cost_usd": 0.174756,
       "label": "article:プログラミング 子供 いつから"
+    },
+    {
+      "timestamp": "2026-05-09T19:10:12.048820+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 117,
+      "output_tokens": 90,
+      "cost_usd": 0.000454,
+      "label": "lsi:睡眠の質 上げる 方法 グッズ"
+    },
+    {
+      "timestamp": "2026-05-09T19:10:16.290747+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 184,
+      "output_tokens": 605,
+      "cost_usd": 0.002567,
+      "label": "kw_research:睡眠の質 上げる 方法 グッズ"
+    },
+    {
+      "timestamp": "2026-05-09T19:12:47.758378+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5742,
+      "output_tokens": 10965,
+      "cost_usd": 0.181701,
+      "label": "article:睡眠の質 上げる 方法 グッズ"
+    },
+    {
+      "timestamp": "2026-05-09T20:10:15.822291+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 125,
+      "cost_usd": 0.000593,
+      "label": "lsi:通信教育 キャンペーン いつ多い？"
+    },
+    {
+      "timestamp": "2026-05-09T20:10:20.023056+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 604,
+      "cost_usd": 0.002562,
+      "label": "kw_research:通信教育 キャンペーン いつ多い？"
+    },
+    {
+      "timestamp": "2026-05-09T20:12:59.538022+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5347,
+      "output_tokens": 9931,
+      "cost_usd": 0.165006,
+      "label": "article:通信教育 キャンペーン いつ多い？"
+    },
+    {
+      "timestamp": "2026-05-09T20:40:14.542518+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 106,
+      "cost_usd": 0.000515,
+      "label": "lsi:在宅ワーク 未経験 始め方"
+    },
+    {
+      "timestamp": "2026-05-09T20:40:18.791003+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 631,
+      "cost_usd": 0.002669,
+      "label": "kw_research:在宅ワーク 未経験 始め方"
+    },
+    {
+      "timestamp": "2026-05-09T20:42:55.384373+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5566,
+      "output_tokens": 11161,
+      "cost_usd": 0.184113,
+      "label": "article:在宅ワーク 未経験 始め方"
+    },
+    {
+      "timestamp": "2026-05-09T21:00:13.014172+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 105,
+      "cost_usd": 0.000511,
+      "label": "lsi:福地温泉 静かな宿 特徴"
+    },
+    {
+      "timestamp": "2026-05-09T21:00:17.239939+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 693,
+      "cost_usd": 0.002917,
+      "label": "kw_research:福地温泉 静かな宿 特徴"
+    },
+    {
+      "timestamp": "2026-05-09T21:02:45.496793+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T21",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5711,
+      "output_tokens": 10501,
+      "cost_usd": 0.174648,
+      "label": "article:福地温泉 静かな宿 特徴"
+    },
+    {
+      "timestamp": "2026-05-09T21:02:50.814283+00:00",
+      "date": "2026-05-09",
+      "hour": "2026-05-09T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 390,
+      "output_tokens": 28,
+      "cost_usd": 0.000424,
+      "label": "maps:福地温泉 静かな宿 特徴"
+    },
+    {
+      "timestamp": "2026-05-10T02:30:14.707966+00:00",
+      "date": "2026-05-10",
+      "hour": "2026-05-10T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 93,
+      "cost_usd": 0.000462,
+      "label": "lsi:宅食 一人暮らし 男性"
+    },
+    {
+      "timestamp": "2026-05-10T02:30:18.534178+00:00",
+      "date": "2026-05-10",
+      "hour": "2026-05-10T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 613,
+      "cost_usd": 0.002595,
+      "label": "kw_research:宅食 一人暮らし 男性"
+    },
+    {
+      "timestamp": "2026-05-10T02:32:39.548532+00:00",
+      "date": "2026-05-10",
+      "hour": "2026-05-10T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5531,
+      "output_tokens": 10340,
+      "cost_usd": 0.171693,
+      "label": "article:宅食 一人暮らし 男性"
+    },
+    {
+      "timestamp": "2026-05-10T03:30:12.519327+00:00",
+      "date": "2026-05-10",
+      "hour": "2026-05-10T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 107,
+      "cost_usd": 0.00052,
+      "label": "lsi:通信制大学 大卒資格 取れる？"
+    },
+    {
+      "timestamp": "2026-05-10T03:30:16.452547+00:00",
+      "date": "2026-05-10",
+      "hour": "2026-05-10T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 508,
+      "cost_usd": 0.002178,
+      "label": "kw_research:通信制大学 大卒資格 取れる？"
+    },
+    {
+      "timestamp": "2026-05-10T03:32:59.344476+00:00",
+      "date": "2026-05-10",
+      "hour": "2026-05-10T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5232,
+      "output_tokens": 9904,
+      "cost_usd": 0.164256,
+      "label": "article:通信制大学 大卒資格 取れる？"
+    },
+    {
+      "timestamp": "2026-05-10T07:00:12.695714+00:00",
+      "date": "2026-05-10",
+      "hour": "2026-05-10T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 89,
+      "cost_usd": 0.000447,
+      "label": "lsi:夏休み お金かけない 過ごし方"
+    },
+    {
+      "timestamp": "2026-05-10T07:00:17.118914+00:00",
+      "date": "2026-05-10",
+      "hour": "2026-05-10T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 603,
+      "cost_usd": 0.002557,
+      "label": "kw_research:夏休み お金かけない 過ごし方"
+    },
+    {
+      "timestamp": "2026-05-10T07:03:19.816937+00:00",
+      "date": "2026-05-10",
+      "hour": "2026-05-10T07",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5622,
+      "output_tokens": 12279,
+      "cost_usd": 0.201051,
+      "label": "article:夏休み お金かけない 過ごし方"
     }
   ],
   "events": [

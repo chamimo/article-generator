@@ -1,0 +1,114 @@
+===== [HATARAKU] 実行開始: 2026-05-10 05:40:01 =====
+2026-05-10 05:40:04 [INFO] ============================================================
+2026-05-10 05:40:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-10 05:40:04 [INFO] ============================================================
+2026-05-10 05:40:04 [INFO] 対象ブログ: ['hataraku']
+2026-05-10 05:40:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-10 05:40:06 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-10 05:40:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-10 05:40:06 [INFO]   genre            : 転職・副業・キャリア
+2026-05-10 05:40:06 [INFO]   fact_check       : True
+2026-05-10 05:40:06 [INFO]   article_type_mix : True
+2026-05-10 05:40:06 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-10 05:40:06 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'保育エイド', 'ウズウズIT', 'ラボル', 'ヒューマンアカデミー', '20代の転職相談所', 'クラウドワークス', '転職AGENT Navi', 'Neuro Dive', '第二新卒エージェントneo', 'マスメディアン', '保育専門求人サイト ほいく畑', 'キャリセン就活エージェント', 'Midworks', '日本マンパワー', 'リゾートバイトダイブ', '保育バランス', 'atGP', '保育メトロ', 'TechGo', 'atGPジョブトレ IT・Web', 'FREENANCE'}（はた楽ナビ のSSを確認してください）
+[asp_fetcher] ⚠️  別ブログ案件を除外: 21件除外 → 0件に絞り込み
+[asp_fetcher] はた楽ナビ / 「ASP案件マスター」: 0件
+2026-05-10 05:40:09 [WARNING] [hataraku] ⚠️  アフィリ案件: 0件 — 登録がないため汎用記事を生成します
+2026-05-10 05:40:11 [INFO] [wp] 記事取得: 計45件 (publish=45)
+2026-05-10 05:40:11 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-10 05:40:12 [INFO] [fetch] サブKW紐付け: 6968件 → 189記事に統合
+2026-05-10 05:40:12 [INFO] [fetch] [キーワード] メインKW: 181件（vol≥30 or N/A）  サブKW除外: 6968件（統合対象）  投稿済みスキップ: 885件  テーマ外除外: 198件  aim内訳: [now:6, claude:235, aim:131, add:7]
+2026-05-10 05:40:12 [INFO] [dup_check] 優先候補: 181件 {'now': 6, 'claude': 102, 'aim': 67, 'add': 6} を先頭評価
+2026-05-10 05:40:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=181件, 要求=1件)
+2026-05-10 05:40:12 [INFO] [select] 1件選定 (要求=1件)
+2026-05-10 05:40:12 [INFO] [select]   1. 「在宅ワーク 未経験 始め方」 vol=0 seo=N/A comp=N/A
+2026-05-10 05:40:12 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-10 05:40:12 [INFO] [hataraku] 候補: 181件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.6401 / 1時間: $0.1682  (上限 日次$10.00 / 時間$5.00)  全体: $1.8115(¥272) / 9記事
+2026-05-10 05:40:12 [INFO] [api_guard] 本日の使用量: $1.6401 / ¥246 (24回呼び出し)
+2026-05-10 05:40:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-10 05:40:12 [INFO] [hataraku] [1/1] [LONGTAIL] 「在宅ワーク 未経験 始め方」 vol=0 ★NOW
+2026-05-10 05:40:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-10 05:40:12 [INFO] [generate] 生成開始: 「在宅ワーク 未経験 始め方」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「在宅ワーク 未経験 始め方」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $1.6401 / 1時間: $0.1682  (上限 日次$10.00 / 時間$5.00)  全体: $1.8115(¥272) / 9記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=114 out=106 → $0.0005  (lsi:在宅ワーク 未経験 始め方)
+[api_guard] 本日の使用量: $1.6406 / ¥246 (765回呼び出し)
+[article_generator] 共起語: 在宅ワーク求人、パソコンスキル、副業初心者、自宅で稼ぐ、クラウドソーシング、時間管理、必要な準備、職種一覧、単価相場、確...
+[api_guard] ✅ 本日: $1.6406 / 1時間: $0.1687  (上限 日次$10.00 / 時間$5.00)  全体: $1.8121(¥272) / 9記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=181 out=631 → $0.0027  (kw_research:在宅ワーク 未経験 始め方)
+[api_guard] 本日の使用量: $1.6433 / ¥246 (766回呼び出し)
+[article_generator] サジェスト: 在宅ワーク 未経験 始め方・在宅ワーク 未経験 おすすめ・在宅ワーク 未経験 初心者...
+[article_generator] 検索意図: 購買直前 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $1.6433 / 1時間: $0.1713  (上限 日次$10.00 / 時間$5.00)  全体: $1.8147(¥272) / 9記事
+[api_guard] 記録: claude-sonnet-4-6 in=5566 out=11161 → $0.1841  (article:在宅ワーク 未経験 始め方)
+[api_guard] 本日の使用量: $1.8274 / ¥274 (767回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of laptop, speech bubbles, coins, 
+[imagefx] タイトル(英): Work From Home Beginner Guide
+[article_generator] 完了: 「在宅ワーク未経験から始める方法7選！スキルなしでも稼げる仕事を徹底解説」 カテゴリ: 未設定(-) タグ: ['在宅ワーク', '副業初心者', 'クラウドソーシング', 'スキルなし副業', '在宅ワーク始め方']
+2026-05-10 05:43:01 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「クラウドワークス」(ID:575)
+2026-05-10 05:43:01 [INFO] [generate] 完了: 「在宅ワーク未経験から始める方法7選！スキルなしでも稼げる仕事を徹底解説」
+2026-05-10 05:43:01 [INFO] [post] 投稿方式: draft
+[image_generator] アイキャッチ生成 (フラットイラスト): Remote work setup with desk essentials, computer monitor, co...
+[image_generator] 完了 (72KB, 1216x832)
+2026-05-10 05:43:07 [INFO] [post] 画像生成完了: 74,156 bytes
+[category_selector] カテゴリ取得: 21件
+[category_selector] 「在宅ワーク 未経験 始め方」→ 副業・フリーランス(277) score=21
+[wordpress] メディアアップロード完了 (ID: 644)
+[wordpress] アイキャッチ キャプションタグ付与: #在宅ワーク
+[wordpress] H2画像処理: 3枚
+[image_generator] H2画像生成 (テーマ反映): Colorful flat design icons representing seven beginner-frien...
+[image_generator] 完了 (73KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 645)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: 在宅ワーク未経験でも始められる仕事7選
+[image_generator] H2画像生成 (テーマ反映): Beginners home workspace setup with safety checklist, securi...
+[image_generator] 完了 (79KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 646)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 在宅ワークを未経験から安全に始めるための準備と注意点
+[image_generator] H2画像生成 (テーマ反映): Beginner remote work setup with calendar, checklist, lightbu...
+[image_generator] 完了 (46KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 647)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 在宅ワーク未経験者が最初の1ヶ月で結果を出す実践ステップ
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 45件
+[internal_linker] キーワードトークンマッチ: 8件選定（ルールベース）
+[internal_linker] 低関連性 8件をフッターへ: ['経理派遣のリアルを徹底解説！時給・仕事内容・未経験', '転職で事務の志望動機を書くコツ7選！未経験・例文・', '簿記1級転職で有利になる理由と年収・求人・未経験か', '経理に転職！未経験から成功する5つのポイントと必要', 'クラウドワークス初心者の始め方・稼ぎ方完全ガイド！', '経理に転職！未経験でも採用される7つのポイントと資', 'IT転職は未経験30代でも現実的？成功するための完', 'AI副業の稼ぎ方【初心者向け】ChatGPTで月5']
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 8件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:0 / 末尾リスト:8)
+[internal_linker] 内部リンク 8件 挿入: ['経理派遣のリアルを徹底解説！時給・仕事内容・未経験でも働ける', '転職で事務の志望動機を書くコツ7選！未経験・例文・NG例まで', '簿記1級転職で有利になる理由と年収・求人・未経験からの可能性', '経理に転職！未経験から成功する5つのポイントと必要な資格・勉', 'クラウドワークス初心者の始め方・稼ぎ方完全ガイド！登録から最', '経理に転職！未経験でも採用される7つのポイントと資格・志望動', 'IT転職は未経験30代でも現実的？成功するための完全ロードマ', 'AI副業の稼ぎ方【初心者向け】ChatGPTで月5万円を目指']
+[wordpress] タグ設定: ['在宅ワーク', '副業初心者', 'クラウドソーシング', 'スキルなし副業', '在宅ワーク始め方']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 648) → https://hataraku-navi.com/wp-admin/post.php?post=648&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, speech bubbles, coins, checkmarks, lightbulbs and upward charts in soft pink, mint and lavender pastel tones with stars and calendar elements.
+Elegant lifestyle background: soft morning light with warm neutrals, gentle depth-of-field effect, clean and airy ambiance, muted earth tones.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Work From Home Beginner Guide" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行4 「在宅ワーク 未経験 始め方」→ 投稿済み (2026/05/10, ID:648) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「在宅ワーク未経験から始める方法7選！スキルなしでも稼げる仕事」
+2026-05-10 05:43:46 [INFO] [post] WP投稿完了: ID=648 → https://hataraku-navi.com/wp-admin/post.php?post=648&action=edit
+2026-05-10 05:43:46 [INFO] [hataraku] [1/1] ✅ 完了: 「在宅ワーク未経験から始める方法7選！スキルなしでも稼げる仕事を徹底解説」
+2026-05-10 05:43:46 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-10 05:43:46 [INFO] 
+============================================================
+2026-05-10 05:43:46 [INFO] 【全体サマリー】
+2026-05-10 05:43:46 [INFO]   ブログ数  : 1件
+2026-05-10 05:43:46 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-10 05:43:46 [INFO]   所要時間  : 222.6秒
+2026-05-10 05:43:46 [INFO]   ✅ [hataraku] 在宅ワーク 未経験 始め方 → 在宅ワーク未経験から始める方法7選！スキルなしでも稼げる仕事を徹底解説
+2026-05-10 05:43:46 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=648&action=edit
+2026-05-10 05:43:46 [INFO] ============================================================
+===== [HATARAKU] 記事生成終了: 2026-05-10 05:43:47 / exit=0 =====

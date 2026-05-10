@@ -1,0 +1,218 @@
+===== 週次順位同期開始: 2026-05-10 07:00:01 =====
+
+----- [sync/hataraku] 開始: 07:00:01 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-05-07 (5/7)
+[sync_ranks] GSC データ: 5ページ / 17クエリ
+[sync_ranks] ⚠ 「記事URL」列が見つかりません。
+----- [sync/hataraku] 終了: 07:00:08 / exit=0 -----
+
+----- [sync/workup-ai] 開始: 07:00:14 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-05-07 (5/7)
+[sync_ranks] GSC データ: 486ページ / 1576クエリ
+[sync_ranks] 投稿済みキーワード（URL記録あり）: 3件
+[sync_ranks] WP API で記事情報を取得中（3件）...
+  ⚠ 未解決（下書き?）: https://workup-ai.com/?p=9875
+  ✓ youtube ai ナレーション → https://workup-ai.com/youtube-ai-narration-guide/
+  ✓ AIエージェント 何ができる 初心者 → https://workup-ai.com/ai-agent-what-can-do-beginners-2/
+[sync_ranks] 解決済み: 2件
+[sync_ranks] 新しい日付列を追加: 列5〜8 (5/7)
+
+[sync_ranks] GSCマッチ: 0件 / データなし: 2件
+  ※ データなしの主な原因:
+     - 新規投稿記事（Googleインデックスまで数週間かかる場合あり）
+     - GSCデータの遅延（約2〜3日）
+     - 検索順位が圏外または表示回数ゼロ
+     - youtube ai ナレーション
+     - AIエージェント 何ができる 初心者
+[sync_ranks] 新規行: 1件 / 既存行更新: 1件
+
+[sync_ranks] ✅ 「順位トラッキング」シートに書き込みました。
+  新規行: 1件 / 更新: 0セル / GSCマッチ: 0件
+----- [sync/workup-ai] 終了: 07:00:24 / exit=0 -----
+
+----- [sync/ys-trend] 開始: 07:00:29 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-05-07 (5/7)
+[sync_ranks] GSC データ: 10ページ / 18クエリ
+[sync_ranks] 投稿済みキーワード（URL記録あり）: 7件
+[sync_ranks] WP API で記事情報を取得中（7件）...
+[sync_ranks] 解決済み: 7件
+[sync_ranks] 新しい日付列を追加: 列5〜8 (5/7)
+
+[sync_ranks] GSCマッチ: 0件 / データなし: 7件
+  ※ データなしの主な原因:
+     - 新規投稿記事（Googleインデックスまで数週間かかる場合あり）
+     - GSCデータの遅延（約2〜3日）
+     - 検索順位が圏外または表示回数ゼロ
+     - 漫画 買取 ダンボール 無料
+     - 梅雨コーデ 高校生
+     - 梅雨 健康 ネタ
+     - 電気 代 節約 コンセント 抜く
+     - 節約速報 プライチ
+     - 節約 類義語
+     - 節約 ブログ 農家の嫁
+[sync_ranks] 新規行: 2件 / 既存行更新: 5件
+
+[sync_ranks] ✅ 「順位トラッキング」シートに書き込みました。
+  新規行: 2件 / 更新: 5セル / GSCマッチ: 0件
+----- [sync/ys-trend] 終了: 07:00:40 / exit=0 -----
+
+----- [sync/kaerudoko] 開始: 07:00:45 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-05-07 (5/7)
+[sync_ranks] GSC データ: 16ページ / 33クエリ
+[sync_ranks] 投稿済みキーワード（URL記録あり）: 3件
+[sync_ranks] WP API で記事情報を取得中（3件）...
+[sync_ranks] 解決済み: 3件
+[sync_ranks] 新しい日付列を追加: 列5〜8 (5/7)
+
+[sync_ranks] GSCマッチ: 0件 / データなし: 3件
+  ※ データなしの主な原因:
+     - 新規投稿記事（Googleインデックスまで数週間かかる場合あり）
+     - GSCデータの遅延（約2〜3日）
+     - 検索順位が圏外または表示回数ゼロ
+     - グミッツェル どこで売ってる
+     - グミッツェル コンビニ
+     - 地球グミ どこで売ってる
+[sync_ranks] 新規行: 0件 / 既存行更新: 3件
+
+[sync_ranks] ✅ 「順位トラッキング」シートに書き込みました。
+  新規行: 0件 / 更新: 3セル / GSCマッチ: 0件
+----- [sync/kaerudoko] 終了: 07:00:55 / exit=0 -----
+
+----- [sync/hapipo8] 開始: 07:01:00 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-05-07 (5/7)
+[sync_ranks] GSC データ: 9ページ / 10クエリ
+[sync_ranks] 投稿済みキーワード（URL記録あり）: 2件
+[sync_ranks] WP API で記事情報を取得中（2件）...
+[sync_ranks] 解決済み: 2件
+[sync_ranks] 新しい日付列を追加: 列5〜8 (5/7)
+
+[sync_ranks] GSCマッチ: 0件 / データなし: 2件
+  ※ データなしの主な原因:
+     - 新規投稿記事（Googleインデックスまで数週間かかる場合あり）
+     - GSCデータの遅延（約2〜3日）
+     - 検索順位が圏外または表示回数ゼロ
+     - ゴールデンウィーク 車なし 旅行
+     - ゴールデンウィーク ホテル 安く予約 方法
+[sync_ranks] 新規行: 0件 / 既存行更新: 2件
+
+[sync_ranks] ✅ 「順位トラッキング」シートに書き込みました。
+  新規行: 0件 / 更新: 2セル / GSCマッチ: 0件
+----- [sync/hapipo8] 終了: 07:01:08 / exit=0 -----
+
+----- [sync/hida-no-omoide] 開始: 07:01:13 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-05-07 (5/7)
+[sync_ranks] GSC データ: 2ページ / 3クエリ
+[sync_ranks] 投稿済みキーワード（URL記録あり）: 6件
+[sync_ranks] WP API で記事情報を取得中（6件）...
+  ✓ 高山 懐かしい町並み 見どころ → https://hida-no-omoide.com/takayama-nostalgic-townscape-highlights/
+  ✓ 高山 変わらない風景 スポット → https://hida-no-omoide.com/takayama-fuwaranai-keshiki-spots/
+  ✓ 飛騨古川 昔の町並み 見どころ → https://hida-no-omoide.com/hida-furukawa-old-townscape-highlights/
+  ✓ 高山 赤い橋 由来 簡単 → https://hida-no-omoide.com/takayama-red-bridge-origin/
+  ✓ 高山 中橋 歴史 わかりやすく → https://hida-no-omoide.com/takayama-nakabashi-history-2/
+  ✓ 高山 写真スポット 冬 静か → https://hida-no-omoide.com/takayama-winter-photo-spots-quiet/
+[sync_ranks] 解決済み: 6件
+[sync_ranks] 新しい日付列を追加: 列38〜41 (5/7)
+
+[sync_ranks] GSCマッチ: 0件 / データなし: 6件
+  ※ データなしの主な原因:
+     - 新規投稿記事（Googleインデックスまで数週間かかる場合あり）
+     - GSCデータの遅延（約2〜3日）
+     - 検索順位が圏外または表示回数ゼロ
+     - 高山 懐かしい町並み 見どころ
+     - 高山 変わらない風景 スポット
+     - 飛騨古川 昔の町並み 見どころ
+     - 高山 赤い橋 由来 簡単
+     - 高山 中橋 歴史 わかりやすく
+     - 高山 写真スポット 冬 静か
+[sync_ranks] 新規行: 6件 / 既存行更新: 0件
+
+[sync_ranks] ✅ 「順位トラッキング」シートに書き込みました。
+  新規行: 6件 / 更新: 0セル / GSCマッチ: 0件
+----- [sync/hida-no-omoide] 終了: 07:01:24 / exit=0 -----
+
+----- [sync/web-study1] 開始: 07:01:30 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-05-07 (5/7)
+[sync_ranks] GSC データ: 4ページ / 6クエリ
+[sync_ranks] ⚠ 「記事URL」列が見つかりません。
+----- [sync/web-study1] 終了: 07:01:36 / exit=0 -----
+
+===== 順位同期完了 / フラグチェック開始: 2026-05-10 07:01:41 =====
+
+----- [flag/hataraku] 開始: 07:01:41 -----
+[check_rank_drop] サイト: hataraku
+[check_rank_drop] 比較: 4/13順位 → 4/14順位
+[check_rank_drop] 「要リライトフラグ」列を追加: AL列
+[check_rank_drop] 「優先度スコア」列: AM列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/hataraku] 終了: 07:01:46 / exit=0 -----
+
+----- [flag/workup-ai] 開始: 07:01:49 -----
+[check_rank_drop] サイト: workup-ai
+[check_rank_drop] 比較: 4/30順位 → 5/7順位
+[check_rank_drop] 「要リライトフラグ」列を追加: F列
+[check_rank_drop] 「優先度スコア」列: G列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/workup-ai] 終了: 07:01:52 / exit=0 -----
+
+----- [flag/ys-trend] 開始: 07:01:55 -----
+[check_rank_drop] サイト: ys-trend
+[check_rank_drop] 比較: 4/30順位 → 5/7順位
+[check_rank_drop] 「要リライトフラグ」列を追加: F列
+[check_rank_drop] 「優先度スコア」列: G列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/ys-trend] 終了: 07:01:59 / exit=0 -----
+
+----- [flag/kaerudoko] 開始: 07:02:02 -----
+[check_rank_drop] サイト: kaerudoko
+[check_rank_drop] 比較: 4/30順位 → 5/7順位
+[check_rank_drop] 「要リライトフラグ」列を追加: F列
+[check_rank_drop] 「優先度スコア」列: G列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/kaerudoko] 終了: 07:02:05 / exit=0 -----
+
+----- [flag/hapipo8] 開始: 07:02:08 -----
+[check_rank_drop] サイト: hapipo8
+[check_rank_drop] 比較: 4/30順位 → 5/7順位
+[check_rank_drop] 「要リライトフラグ」列を追加: F列
+[check_rank_drop] 「優先度スコア」列: G列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/hapipo8] 終了: 07:02:12 / exit=0 -----
+
+----- [flag/hida-no-omoide] 開始: 07:02:15 -----
+[check_rank_drop] サイト: hida-no-omoide
+[check_rank_drop] 比較: 4/14順位 → 5/7順位
+[check_rank_drop] 「要リライトフラグ」列を追加: AM列
+[check_rank_drop] 「優先度スコア」列: AN列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/hida-no-omoide] 終了: 07:02:18 / exit=0 -----
+
+----- [flag/web-study1] 開始: 07:02:21 -----
+[check_rank_drop] サイト: web-study1
+[check_rank_drop] 比較: 4/13順位 → 4/14順位
+[check_rank_drop] 「要リライトフラグ」列を追加: AL列
+[check_rank_drop] 「優先度スコア」列: AM列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/web-study1] 終了: 07:02:24 / exit=0 -----
+
+===== 週次処理完了: 2026-05-10 07:02:27 =====
