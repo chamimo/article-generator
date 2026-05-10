@@ -1,0 +1,135 @@
+===== [HIDA-NO-OMOIDE] 実行開始: 2026-05-10 06:00:00 =====
+2026-05-10 06:00:03 [INFO] ============================================================
+2026-05-10 06:00:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-10 06:00:03 [INFO] ============================================================
+2026-05-10 06:00:03 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-10 06:00:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-10 06:00:05 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-10 06:00:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-10 06:00:05 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-10 06:00:05 [INFO]   fact_check       : True
+2026-05-10 06:00:05 [INFO]   article_type_mix : True
+2026-05-10 06:00:05 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-10 06:00:05 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] 飛騨の思い出 / 「ASP案件マスター 」: 3件
+[asp_fetcher]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+[asp_fetcher]   [999] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+[asp_fetcher]   [999] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+2026-05-10 06:00:08 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-10 06:00:08 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-10 06:00:08 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-10 06:00:08 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-10 06:00:09 [INFO] [wp] 記事取得: 計27件 (publish=27)
+2026-05-10 06:00:09 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-10 06:00:11 [INFO] [fetch] サブKW紐付け: 58件 → 15記事に統合
+2026-05-10 06:00:11 [INFO] [fetch] [キーワード] メインKW: 48件（vol≥30 or N/A）  サブKW除外: 58件（統合対象）  投稿済みスキップ: 34件  テーマ外除外: 13件  aim内訳: [now:3, aim:32, claude:21, add:5]
+2026-05-10 06:00:11 [INFO] [dup_check] 優先候補: 48件 {'now': 3, 'aim': 24, 'claude': 16, 'add': 5} を先頭評価
+2026-05-10 06:00:11 [INFO] [dup_check] 除外: 「五平餅 お土産 できる？」 → カニバリ(3/3語重複 ['五平餅', 'お土産', 'できる？']): 「五平餅はお土産にできる？日持ち・通販・買える場所を徹底解説」
+2026-05-10 06:00:11 [INFO] [dup_check] 除外: 「朴葉味噌 お土産 日持ちする？」 → カニバリ(3/3語重複 ['朴葉味噌', 'お土産', '日持ちする？']): 「朴葉味噌のお土産は日持ちする？賞味期限・保存方法を徹底解説」
+2026-05-10 06:00:11 [INFO] [dup_check] 除外: 「赤かぶ漬け お土産 日持ち」 → カニバリ(2/3語重複 ['お土産', '日持ち']): 「朴葉味噌のお土産は日持ちする？賞味期限・保存方法を徹底解説」
+2026-05-10 06:00:11 [INFO] [dup_check] 除外: 「高山 雪 朝 写真 撮れる場所」 → カニバリ(2/3語重複 ['高山', '写真']): 「高山の冬写真スポット9選！静かな雪景色と古い町並みを早朝に撮る」
+2026-05-10 06:00:11 [INFO] [dup_check] 除外: 「飛騨 空がきれいに見える場所」 → カニバリ(2/2語重複 ['飛騨', '空がきれいに見える場所']): 「飛騨で空がきれいに見える場所9選！星空・天の川・夜景の絶景スポット完全ガイド」
+2026-05-10 06:00:11 [INFO] [dup_check] 除外: 「飛騨 山に囲まれた景色 見どころ」 → カニバリ(2/3語重複 ['飛騨', '見どころ']): 「飛騨古川 昔の町並み見どころ完全ガイド｜散策・カフェ・朝市まで」
+2026-05-10 06:00:11 [INFO] [dup_check] 除外: 「飛騨 民芸 見学 できる場所」 → カニバリ(4/4語重複 ['飛騨', '民芸', '見学', 'できる場所']): 「飛騨民芸を見学できる場所7選！工房・博物館・体験施設まとめ」
+2026-05-10 06:00:11 [INFO] [dup_check] 除外: 「高山 お土産 ネット 購入 方法」 → カニバリ(4/4語重複 ['高山', 'お土産', 'ネット', '購入']): 「高山のお土産をネットで購入する方法・おすすめ通販サイト完全ガイド」
+2026-05-10 06:00:11 [INFO] [dup_check] 除外: 「春慶塗 お土産 人気商品」 → カニバリ(3/3語重複 ['春慶塗', 'お土産', '人気商品']): 「春慶塗のお土産人気商品おすすめ7選｜高山・岐阜で選ぶ伝統漆工芸の贈り物」
+2026-05-10 06:00:11 [INFO] [dup_check] 除外: 「奥飛騨温泉郷 日帰り 駐車場 情報」 → カニバリ(4/4語重複 ['奥飛騨温泉郷', '日帰り', '駐車場', '情報']): 「奥飛騨温泉郷の日帰り駐車場情報まとめ！無料・有料・混雑回避のコツも解説」
+2026-05-10 06:00:11 [INFO] [dup_check] 除外: 「平湯温泉 足湯 場所 アクセス」 → カニバリ(4/4語重複 ['平湯温泉', '足湯', '場所', 'アクセス']): 「平湯温泉の足湯｜場所・アクセス・無料で楽しむ完全ガイド」
+2026-05-10 06:00:11 [INFO] [dup_check] 除外: 「平湯温泉 日帰り バスターミナル 近く」 → カニバリ(4/4語重複 ['平湯温泉', '日帰り', 'バスターミナル', '近く']): 「平湯温泉バスターミナル近くで日帰り入浴できる温泉施設5選！料金・営業時間まとめ」
+2026-05-10 06:00:11 [INFO] [dup_check] 除外: 「平湯温泉 空いてる時間帯 目安」 → カニバリ(3/3語重複 ['平湯温泉', '空いてる時間帯', '目安']): 「平湯温泉が空いてる時間帯の目安は？混雑を避けるベストタイミング完全ガイド」
+2026-05-10 06:00:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=13件 (pool=48件, 要求=1件)
+2026-05-10 06:00:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-10 06:00:11 [INFO] [select]   1. 「福地温泉 静かな宿 特徴」 vol=0 seo=N/A comp=N/A
+2026-05-10 06:00:11 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-10 06:00:11 [INFO] [hida-no-omoide] 候補: 48件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.8274 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.9988(¥300) / 10記事
+2026-05-10 06:00:11 [INFO] [api_guard] 本日の使用量: $1.8274 / ¥274 (27回呼び出し)
+2026-05-10 06:00:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-10 06:00:11 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「福地温泉 静かな宿 特徴」 vol=0 ★AIM
+2026-05-10 06:00:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-10 06:00:11 [INFO] [generate] 生成開始: 「福地温泉 静かな宿 特徴」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「福地温泉 静かな宿 特徴」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $1.8274 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.9988(¥300) / 10記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=114 out=105 → $0.0005  (lsi:福地温泉 静かな宿 特徴)
+[api_guard] 本日の使用量: $1.8279 / ¥274 (768回呼び出し)
+[article_generator] 共起語: 福地温泉、静かな温泉宿、源泉かけ流し、貸切風呂、露天風呂、飛騨高山、北アルプス、温泉旅館、少人数向け、隠れ宿、癒しの宿、...
+[api_guard] ✅ 本日: $1.8279 / 1時間: $0.0005  (上限 日次$10.00 / 時間$5.00)  全体: $1.9994(¥300) / 10記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=181 out=693 → $0.0029  (kw_research:福地温泉 静かな宿 特徴)
+[api_guard] 本日の使用量: $1.8308 / ¥274 (769回呼び出し)
+[article_generator] サジェスト: 福地温泉 静かな宿 おすすめ・福地温泉 静かな宿 秘湯・福地温泉 静かな宿 源泉掛け流し...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $1.8308 / 1時間: $0.0034  (上限 日次$10.00 / 時間$5.00)  全体: $2.0023(¥300) / 10記事
+[api_guard] 記録: claude-sonnet-4-6 in=5711 out=10501 → $0.1746  (article:福地温泉 静かな宿 特徴)
+[api_guard] 本日の使用量: $2.0055 / ¥300 (770回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of hot spring, peaceful house, sta
+[imagefx] タイトル(英): Fukuchi Hot Spring Quiet Inn Guide
+[article_generator] 完了: 「福地温泉の静かな宿おすすめ完全ガイド！秘湯・源泉かけ流しで癒される宿の選び方」 カテゴリ: 未設定(-) タグ: ['福地温泉', '静かな温泉宿', '源泉かけ流し', '秘湯', '飛騨高山']
+2026-05-10 06:02:48 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-10 06:02:48 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「楽天トラベル」(ID:168)
+[api_guard] ✅ 本日: $2.0055 / 1時間: $0.1781  (上限 日次$10.00 / 時間$5.00)  全体: $2.1769(¥327) / 11記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=390 out=28 → $0.0004  (maps:福地温泉 静かな宿 特徴)
+[api_guard] 本日の使用量: $2.0059 / ¥300 (771回呼び出し)
+[maps_embedder] ✅ 地図挿入: mode=place / query=福地温泉 高山市
+2026-05-10 06:02:50 [INFO] [generate] 完了: 「福地温泉の静かな宿おすすめ完全ガイド！秘湯・源泉かけ流しで癒される宿の選び方」
+2026-05-10 06:02:50 [INFO] [post] 投稿方式: draft
+[image_generator] アイキャッチ生成 (フラットイラスト): A serene hot spring resort nestled in misty mountains, featu...
+[image_generator] 完了 (148KB, 1216x832)
+2026-05-10 06:02:56 [INFO] [post] 画像生成完了: 152,482 bytes
+[category_selector] カテゴリ取得: 72件
+[category_selector] 「福地温泉 静かな宿 特徴」→ 温泉・宿泊(41) score=4
+[wordpress] メディアアップロード完了 (ID: 285)
+[wordpress] アイキャッチ キャプションタグ付与: #福地温泉
+[wordpress] H2画像処理: 3枚
+[image_generator] H2画像生成 (テーマ反映): Serene hot spring resort illustration with traditional Japan...
+[image_generator] 完了 (183KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 286)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: 福地温泉の静かな宿が持つ唯一無二の特徴とは
+[image_generator] H2画像生成 (テーマ反映): Serene mountain hot spring resort with three floating select...
+[image_generator] 完了 (77KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 287)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 福地温泉の静かな宿を目的別に選ぶための3つの軸
+[image_generator] H2画像生成 (テーマ反映): Serene hot spring resort with peaceful elements: onsen bath,...
+[image_generator] 完了 (184KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 288)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 福地温泉の静かな宿を選ぶ前に知っておきたい注意点と比較ポイン
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 27件
+[internal_linker] 同カテゴリー: 2件選定（ルールベース）
+[internal_linker] 内部リンク選定完了: 計2件 (成約:0 / 案件関連:0 / 同親KW+補完:2)
+[internal_linker] 注意: 内部リンク2件（目標5件未達）
+[internal_linker] 内部リンク挿入完了: 計2件 (本文H3:2 / 末尾リスト:0)
+[internal_linker] 内部リンク 2件 挿入: ['飛騨高山の温泉宿おすすめ9選！露天風呂・食事・カップル向けま', '平湯温泉が空いてる時間帯の目安は？混雑を避けるベストタイミン']
+[wordpress] タグ設定: ['福地温泉', '静かな温泉宿', '源泉かけ流し', '秘湯', '飛騨高山']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 289) → https://hida-no-omoide.com/wp-admin/post.php?post=289&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of hot spring, peaceful house, stars, hearts, checkmarks, calendar, and coins in soft pink, mint, and lavender pastels with minimal design style.
+Elegant lifestyle background: soft morning light with warm neutrals, gentle depth-of-field effect, clean and airy ambiance, muted earth tones.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Fukuchi Hot Spring Quiet Inn Guide" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行33 「福地温泉 静かな宿 特徴」→ 投稿済み (2026/05/10, ID:289) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「福地温泉の静かな宿おすすめ完全ガイド！秘湯・源泉かけ流しで癒」
+2026-05-10 06:03:27 [INFO] [post] WP投稿完了: ID=289 → https://hida-no-omoide.com/wp-admin/post.php?post=289&action=edit
+2026-05-10 06:03:27 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「福地温泉の静かな宿おすすめ完全ガイド！秘湯・源泉かけ流しで癒される宿の選び方」
+2026-05-10 06:03:27 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-10 06:03:27 [INFO] 
+============================================================
+2026-05-10 06:03:27 [INFO] 【全体サマリー】
+2026-05-10 06:03:27 [INFO]   ブログ数  : 1件
+2026-05-10 06:03:27 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-10 06:03:27 [INFO]   所要時間  : 204.0秒
+2026-05-10 06:03:27 [INFO]   ✅ [hida-no-omoide] 福地温泉 静かな宿 特徴 → 福地温泉の静かな宿おすすめ完全ガイド！秘湯・源泉かけ流しで癒される宿の選び方
+2026-05-10 06:03:27 [INFO]        https://hida-no-omoide.com/wp-admin/post.php?post=289&action=edit
+2026-05-10 06:03:27 [INFO] ============================================================
+===== [HIDA-NO-OMOIDE] 記事生成終了: 2026-05-10 06:03:28 / exit=0 =====
