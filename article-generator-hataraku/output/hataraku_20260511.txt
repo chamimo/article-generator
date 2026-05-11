@@ -1,0 +1,118 @@
+===== [HATARAKU] 実行開始: 2026-05-11 05:40:00 =====
+2026-05-11 05:40:02 [INFO] ============================================================
+2026-05-11 05:40:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-11 05:40:02 [INFO] ============================================================
+2026-05-11 05:40:02 [INFO] 対象ブログ: ['hataraku']
+2026-05-11 05:40:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-11 05:40:05 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-11 05:40:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-11 05:40:05 [INFO]   genre            : 転職・副業・キャリア
+2026-05-11 05:40:05 [INFO]   fact_check       : True
+2026-05-11 05:40:05 [INFO]   article_type_mix : True
+2026-05-11 05:40:05 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-11 05:40:05 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'Neuro Dive', '保育エイド', 'ラボル', 'ウズウズIT', 'クラウドワークス', 'FREENANCE', 'ヒューマンアカデミー', 'マスメディアン', '第二新卒エージェントneo', '20代の転職相談所', '保育メトロ', '保育バランス', 'atGPジョブトレ IT・Web', 'Midworks', '保育専門求人サイト ほいく畑', 'リゾートバイトダイブ', 'キャリセン就活エージェント', 'atGP', '日本マンパワー', '転職AGENT Navi', 'TechGo'}（はた楽ナビ のSSを確認してください）
+[asp_fetcher] ⚠️  別ブログ案件を除外: 21件除外 → 0件に絞り込み
+[asp_fetcher] はた楽ナビ / 「ASP案件マスター」: 0件
+2026-05-11 05:40:08 [WARNING] [hataraku] ⚠️  アフィリ案件: 0件 — 登録がないため汎用記事を生成します
+2026-05-11 05:40:09 [INFO] [wp] 記事取得: 計46件 (draft=1 / publish=45)
+2026-05-11 05:40:09 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-11 05:40:11 [INFO] [fetch] サブKW紐付け: 6968件 → 189記事に統合
+2026-05-11 05:40:11 [INFO] [fetch] [キーワード] メインKW: 180件（vol≥30 or N/A）  サブKW除外: 6968件（統合対象）  投稿済みスキップ: 886件  テーマ外除外: 198件  aim内訳: [now:5, claude:235, aim:131, add:7]
+2026-05-11 05:40:11 [INFO] [dup_check] 優先候補: 180件 {'now': 5, 'claude': 102, 'aim': 67, 'add': 6} を先頭評価
+2026-05-11 05:40:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=180件, 要求=1件)
+2026-05-11 05:40:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-11 05:40:11 [INFO] [select]   1. 「保育士 転職サイト 口コミ」 vol=0 seo=N/A comp=N/A
+2026-05-11 05:40:11 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-11 05:40:11 [INFO] [hataraku] 候補: 180件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.0591 / 1時間: $0.1606  (上限 日次$10.00 / 時間$5.00)  全体: $1.2434(¥187) / 7記事
+2026-05-11 05:40:11 [INFO] [api_guard] 本日の使用量: $1.0591 / ¥159 (18回呼び出し)
+2026-05-11 05:40:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-11 05:40:11 [INFO] [hataraku] [1/1] [LONGTAIL] 「保育士 転職サイト 口コミ」 vol=0 ★NOW
+2026-05-11 05:40:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-11 05:40:11 [INFO] [generate] 生成開始: 「保育士 転職サイト 口コミ」(vol:0) fact_check=True target_length=6,000字  サブKW:2件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「保育士 転職サイト 口コミ」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[article_generator] 事実確認中: 「保育士 転職サイト 口コミ」
+[article_generator] 事実確認完了: 確認済み7件 / 不確か3件 / 注意5件
+  ⚠️  求人数は常に変動するため、記事作成時点での具体的な数字を引用する場合は「2026年◯月時点」と時期を明記すること。
+  ⚠️  各転職サイトの満足度や口コミを記載する際は、その情報源（どのサイトの調査か、いつの調査か）を必ず明記すること。一部サイトは「公式サイトより」と記載されているため、その旨を記述に含めること。
+  ⚠️  保育士バンク、保育士ワーカーなど複数のサイトで同じサービス名の異なる企業が存在する可能性があるため、運営元企業名を正確に特定して記述すること。
+  ⚠️  保育士転職サイトに関する口コミは複数の紹介メディアで重複掲載されることが多いため、独自性を検証してから引用すること。
+  ⚠️  記事内で「おすすめ」ランキングを作成する場合、その順位付けの根拠（求人数、ユーザー数、口コミ評価など）を明確に示すこと。
+[api_guard] ✅ 本日: $1.0591 / 1時間: $0.1606  (上限 日次$10.00 / 時間$5.00)  全体: $1.2434(¥187) / 7記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=113 out=110 → $0.0005  (lsi:保育士 転職サイト 口コミ)
+[api_guard] 本日の使用量: $1.0596 / ¥158 (790回呼び出し)
+[article_generator] 共起語: 保育士転職の悩み、保育園の人間関係、給与・待遇改善、転職エージェント、保育士資格、非公開求人、転職サイト比較、保育士不足...
+[article_generator] サブKW候補: 2件 (保育士転職 アフィリエイト〜)
+[api_guard] ✅ 本日: $1.0596 / 1時間: $0.1611  (上限 日次$10.00 / 時間$5.00)  全体: $1.2439(¥187) / 7記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=180 out=651 → $0.0027  (kw_research:保育士 転職サイト 口コミ)
+[api_guard] 本日の使用量: $1.0624 / ¥159 (791回呼び出し)
+[article_generator] サジェスト: 保育士 転職サイト 口コミ ランキング・保育士 転職サイト 口コミ 評判・保育士 転職サイト 口コミ 比較...
+[article_generator] 検索意図: 購買直前 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $1.0624 / 1時間: $0.1638  (上限 日次$10.00 / 時間$5.00)  全体: $1.2467(¥187) / 7記事
+[api_guard] 記録: claude-sonnet-4-6 in=6793 out=11627 → $0.1948  (article:保育士 転職サイト 口コミ)
+[api_guard] 本日の使用量: $1.2572 / ¥188 (792回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of laptop, speech bubbles, stars, 
+[imagefx] タイトル(英): Childcare Worker Job Sites Reviews
+[article_generator] 完了: 「保育士転職サイト口コミ・評判おすすめ10選！選び方と注意点も解説」 カテゴリ: 未設定(-) タグ: ['保育士転職', '転職サイト口コミ', '保育士求人', '転職エージェント', '保育士キャリア']
+2026-05-11 05:43:14 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「保育専門求人サイト ほいく畑」(ID:577)
+2026-05-11 05:43:14 [INFO] [generate] 完了: 「保育士転職サイト口コミ・評判おすすめ10選！選び方と注意点も解説」
+2026-05-11 05:43:14 [INFO] [post] 投稿方式: draft
+[image_generator] アイキャッチ生成 (フラットイラスト): Colorful childcare badges and review stars floating on soft ...
+[image_generator] 完了 (66KB, 1216x832)
+2026-05-11 05:43:18 [INFO] [post] 画像生成完了: 68,169 bytes
+[category_selector] カテゴリ取得: 21件
+[category_selector] 「保育士 転職サイト 口コミ」→ 転職・就職(269) score=10
+[wordpress] メディアアップロード完了 (ID: 651)
+[wordpress] アイキャッチ キャプションタグ付与: #保育士 転職サイト
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#保育士): nursery-teacher-career-change-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 保育士転職サイトの口コミからわかる選び方の5つのポイントのイメージ画像
+[image_generator] H2画像生成 (テーマ反映): Colorful childcare job portal interface with star ratings, r...
+[image_generator] 完了 (77KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 652)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 保育士転職サイトおすすめ10選の口コミ・評判を比較
+[image_generator] H2画像生成 (テーマ反映): A flat design illustration with pastel colors and soft gradi...
+[image_generator] 完了 (43KB, 1216x832)
+[wordpress] メディアアップロード完了 (ID: 653)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 保育士転職サイトで失敗しないための使い方と転職タイミング
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 45件
+[internal_linker] 同カテゴリー: 8件選定（ルールベース）
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['キーネットワーク転職失敗の理由と対策｜口コミ・評判から学ぶ7', '転職後の自信喪失、30代なら誰でも経験する！原因と克服法を徹', '転職初日に気をつけること14選！挨拶・服装・自己紹介まで完全', '転職の本人希望欄の書き方完全ガイド！例文・給与・勤務地まで徹', '簿記1級転職で有利になる理由と年収・求人・未経験からの可能性', '転職したいけど不安で踏み出せない人へ｜何から始めるか、体験談', '40代転職失敗しても人生終わりじゃない！やり直す5つの方法', 'IT転職は未経験30代でも現実的？成功するための完全ロードマ']
+[wordpress] タグ設定: ['保育士転職', '転職サイト口コミ', '保育士求人', '転職エージェント', '保育士キャリア']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 654) → https://hataraku-navi.com/wp-admin/post.php?post=654&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, speech bubbles, stars, checkmarks, and coins in soft pink, mint, and lavender pastels with minimal design aesthetic.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Childcare Worker Job Sites Reviews" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行7 「保育士 転職サイト 口コミ」→ 投稿済み (2026/05/11, ID:654) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「保育士転職サイト口コミ・評判おすすめ10選！選び方と注意点も」
+2026-05-11 05:43:40 [INFO] [post] WP投稿完了: ID=654 → https://hataraku-navi.com/wp-admin/post.php?post=654&action=edit
+2026-05-11 05:43:40 [INFO] [hataraku] [1/1] ✅ 完了: 「保育士転職サイト口コミ・評判おすすめ10選！選び方と注意点も解説」
+2026-05-11 05:43:40 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-11 05:43:40 [INFO] 
+============================================================
+2026-05-11 05:43:40 [INFO] 【全体サマリー】
+2026-05-11 05:43:40 [INFO]   ブログ数  : 1件
+2026-05-11 05:43:40 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-11 05:43:40 [INFO]   所要時間  : 217.2秒
+2026-05-11 05:43:40 [INFO]   ✅ [hataraku] 保育士 転職サイト 口コミ → 保育士転職サイト口コミ・評判おすすめ10選！選び方と注意点も解説
+2026-05-11 05:43:40 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=654&action=edit
+2026-05-11 05:43:40 [INFO] ============================================================
+===== [HATARAKU] 記事生成終了: 2026-05-11 05:43:40 / exit=0 =====
