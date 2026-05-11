@@ -2659,6 +2659,36 @@
       "output_tokens": 10861,
       "cost_usd": 0.181743,
       "label": "article:youtube 競合 分析 ai"
+    },
+    {
+      "timestamp": "2026-05-11T15:05:20.681113+00:00",
+      "date": "2026-05-11",
+      "hour": "2026-05-11T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 89,
+      "cost_usd": 0.000445,
+      "label": "lsi:ChatGPT 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-11T15:05:26.498202+00:00",
+      "date": "2026-05-11",
+      "hour": "2026-05-11T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 603,
+      "cost_usd": 0.002554,
+      "label": "kw_research:ChatGPT 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-11T15:07:49.906232+00:00",
+      "date": "2026-05-11",
+      "hour": "2026-05-11T15",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6377,
+      "output_tokens": 10008,
+      "cost_usd": 0.169251,
+      "label": "article:ChatGPT 使い方 初心者"
     }
   ],
   "events": [
