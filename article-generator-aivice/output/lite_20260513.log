@@ -1,0 +1,59 @@
+2026-05-13 00:05:05 [INFO] ============================================================
+2026-05-13 00:05:05 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-13 00:05:05 [INFO] ============================================================
+2026-05-13 00:05:05 [INFO] 対象ブログ: ['workup-ai']
+2026-05-13 00:05:08 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-13 00:05:08 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-05-13 00:05:08 [INFO] ════════════════════════════════════════════════════════════
+2026-05-13 00:05:08 [INFO]   genre            : AI・副業・転職・キャリア
+2026-05-13 00:05:08 [INFO]   fact_check       : True
+2026-05-13 00:05:08 [INFO]   article_type_mix : True
+2026-05-13 00:05:08 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-05-13 00:05:08 [INFO]   article_count    : 1  dry_run: False
+2026-05-13 00:05:14 [INFO] [wp] 記事取得: 計396件 (private=7 / publish=389)
+2026-05-13 00:05:14 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-13 00:05:15 [DEBUG] [fetch] シート「絞り込みKW」: 183行 / ヘッダー: ['キーワード', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '投稿ステータス', '記事URL', '投稿ID', '使用サブKW', '既存記事URL', '既存記事ID']
+2026-05-13 00:05:15 [INFO] [fetch] [キーワード] メインKW: 95件（vol≥30 or N/A）  サブKW: 0件（vol<30）  投稿済みスキップ: 4件  テーマ外除外: 84件  aim内訳: [aim:121, claude:58]
+2026-05-13 00:05:15 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-13 00:05:15 [INFO] [dup_check] 優先候補: 95件 {'aim': 41, 'claude': 54} を先頭評価
+2026-05-13 00:05:15 [INFO] [dup_check] 除外: 「plaud note pro セキュリティ」 → 直近7日重複: 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-13 00:05:15 [INFO] [dup_check] 除外: 「plaud note pro デメリット」 → 直近7日重複: 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-13 00:05:15 [INFO] [dup_check] 除外: 「plaud note pro テンプレート」 → 直近7日重複: 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-13 00:05:15 [INFO] [dup_check] 除外: 「plaud note pro バッテリー」 → 直近7日重複: 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-13 00:05:15 [INFO] [dup_check] 除外: 「plaud note pro マルチモーダル」 → 直近7日重複: 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-13 00:05:15 [INFO] [dup_check] 除外: 「plaud note pro ヨドバシ」 → 直近7日重複: 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-13 00:05:15 [INFO] [dup_check] 除外: 「plaud note pro リアルタイム文字起こし」 → 直近7日重複: 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-13 00:05:15 [INFO] [dup_check] 除外: 「plaud note pro 議事録」 → 直近7日重複: 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-13 00:05:16 [INFO] [dup_check] 除外: 「plaud note pro 口コミ」 → 直近7日重複: 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-13 00:05:16 [INFO] [dup_check] 除外: 「plaud note pro 精度」 → 直近7日重複: 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-13 00:05:16 [INFO] [dup_check] 除外: 「plaud note pro 設定方法」 → 直近7日重複: 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-13 00:05:16 [INFO] [dup_check] 除外: 「plaud note pro 通話録音」 → 直近7日重複: 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-13 00:05:16 [INFO] [dup_check] 除外: 「plaud note pro 評判」 → 直近7日重複: 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-13 00:05:16 [INFO] [dup_check] 除外: 「plaud note pro 文字起こし」 → 直近7日重複: 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-13 00:05:16 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → 直近7日重複: 「YouTube競合分析AIツールおすすめ6選！無料から使える方法・やり方を徹底解」
+2026-05-13 00:05:16 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → 直近7日重複: 「YouTube競合分析AIツールおすすめ6選！無料から使える方法・やり方を徹底解」
+2026-05-13 00:05:16 [INFO] [dup_check] 除外: 「youtube 字幕 自動 生成 ai」 → 直近7日重複: 「YouTube競合分析AIツールおすすめ6選！無料から使える方法・やり方を徹底解」
+2026-05-13 00:05:16 [INFO] [dup_check] 除外: 「youtube 動画 編集 生成 ai」 → 直近7日重複: 「YouTube競合分析AIツールおすすめ6選！無料から使える方法・やり方を徹底解」
+2026-05-13 00:05:16 [INFO] [dup_check] 除外: 「youtube 文字 起こし ai ツール」 → 直近7日重複: 「YouTube競合分析AIツールおすすめ6選！無料から使える方法・やり方を徹底解」
+2026-05-13 00:05:16 [DEBUG] [dup_check] OK: 「ChatGPT 使い方 初心者」
+2026-05-13 00:05:16 [INFO] [dup_check] 完了: 選定=1件 / 除外=19件 (pool=95件, 要求=1件)
+2026-05-13 00:05:16 [INFO] [select] 1件選定 (要求=1件)
+2026-05-13 00:05:16 [INFO] [select]   1. 「ChatGPT 使い方 初心者」 vol=0 seo=N/A comp=N/A
+2026-05-13 00:05:16 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-13 00:05:16 [INFO] [workup-ai] 候補: 95件 / 選定: 1件 / 生成予定: 1件
+2026-05-13 00:05:16 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-13 00:05:16 [INFO] ────────────────────────────────────────────────────────────
+2026-05-13 00:05:16 [INFO] [workup-ai] [1/1] [LONGTAIL] 「ChatGPT 使い方 初心者」 vol=0 ★CLAUDE
+2026-05-13 00:05:16 [INFO] ────────────────────────────────────────────────────────────
+2026-05-13 00:05:16 [INFO] [generate] 生成開始: 「ChatGPT 使い方 初心者」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+2026-05-13 00:05:17 [ERROR] [workup-ai] [1/1] ❌ エラー（続行）: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Caxt45BmW7MWV8aYRZZbx'}
+2026-05-13 00:05:17 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-13 00:05:17 [INFO] 
+============================================================
+2026-05-13 00:05:17 [INFO] 【全体サマリー】
+2026-05-13 00:05:17 [INFO]   ブログ数  : 1件
+2026-05-13 00:05:17 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-13 00:05:17 [INFO]   所要時間  : 12.0秒
+2026-05-13 00:05:17 [INFO]   ❌ [workup-ai] ChatGPT 使い方 初心者 → (生成失敗)
+2026-05-13 00:05:17 [INFO] ============================================================
