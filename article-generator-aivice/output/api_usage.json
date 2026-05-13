@@ -2689,6 +2689,36 @@
       "output_tokens": 10008,
       "cost_usd": 0.169251,
       "label": "article:ChatGPT 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-13T15:05:16.292104+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 78,
+      "cost_usd": 0.000398,
+      "label": "lsi:画像生成 AI 無料"
+    },
+    {
+      "timestamp": "2026-05-13T15:05:19.832247+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 466,
+      "cost_usd": 0.002004,
+      "label": "kw_research:画像生成 AI 無料"
+    },
+    {
+      "timestamp": "2026-05-13T15:07:56.663644+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T15",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6236,
+      "output_tokens": 11327,
+      "cost_usd": 0.188613,
+      "label": "article:画像生成 AI 無料"
     }
   ],
   "events": [
