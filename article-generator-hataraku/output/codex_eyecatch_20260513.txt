@@ -1,0 +1,37 @@
+===== [CODEX EYECATCH] 巡回開始: 2026-05-13 23:57:38 / limit=--help =====
+----- [workup-ai] start: 2026-05-13 23:57:38 -----
+usage: codex_eyecatch.py [-h] [--blog BLOG] [--post-id POST_ID]
+                         [--limit LIMIT] [--overwrite] [--dry-run]
+codex_eyecatch.py: error: argument --limit: expected one argument
+----- [workup-ai] end: 2026-05-13 23:57:39 -----
+----- [ys-trend] start: 2026-05-13 23:57:39 -----
+usage: codex_eyecatch.py [-h] [--blog BLOG] [--post-id POST_ID]
+                         [--limit LIMIT] [--overwrite] [--dry-run]
+codex_eyecatch.py: error: argument --limit: expected one argument
+----- [ys-trend] end: 2026-05-13 23:57:39 -----
+----- [hapipo8] start: 2026-05-13 23:57:39 -----
+usage: codex_eyecatch.py [-h] [--blog BLOG] [--post-id POST_ID]
+                         [--limit LIMIT] [--overwrite] [--dry-run]
+codex_eyecatch.py: error: argument --limit: expected one argument
+----- [hapipo8] end: 2026-05-13 23:57:39 -----
+----- [kaerudoko] start: 2026-05-13 23:57:39 -----
+usage: codex_eyecatch.py [-h] [--blog BLOG] [--post-id POST_ID]
+                         [--limit LIMIT] [--overwrite] [--dry-run]
+codex_eyecatch.py: error: argument --limit: expected one argument
+----- [kaerudoko] end: 2026-05-13 23:57:39 -----
+----- [hataraku] start: 2026-05-13 23:57:39 -----
+usage: codex_eyecatch.py [-h] [--blog BLOG] [--post-id POST_ID]
+                         [--limit LIMIT] [--overwrite] [--dry-run]
+codex_eyecatch.py: error: argument --limit: expected one argument
+----- [hataraku] end: 2026-05-13 23:57:39 -----
+----- [hida-no-omoide] start: 2026-05-13 23:57:39 -----
+usage: codex_eyecatch.py [-h] [--blog BLOG] [--post-id POST_ID]
+                         [--limit LIMIT] [--overwrite] [--dry-run]
+codex_eyecatch.py: error: argument --limit: expected one argument
+----- [hida-no-omoide] end: 2026-05-13 23:57:39 -----
+----- [web-study1] start: 2026-05-13 23:57:39 -----
+usage: codex_eyecatch.py [-h] [--blog BLOG] [--post-id POST_ID]
+                         [--limit LIMIT] [--overwrite] [--dry-run]
+codex_eyecatch.py: error: argument --limit: expected one argument
+----- [web-study1] end: 2026-05-13 23:57:39 -----
+===== [CODEX EYECATCH] 巡回終了: 2026-05-13 23:57:39 =====

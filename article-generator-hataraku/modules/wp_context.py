@@ -27,34 +27,38 @@ _password:         str | None = None
 _post_status:      str | None = None
 _candidate_ss_id:  str | None = None
 _candidate_sheet:  str | None = None
-_image_style:      dict | None = None
-_blog_meta:        dict | None = None  # {site_purpose, target, writing_taste, genre_detail, search_intent}
-_asp_ss_id:        str  | None = None  # ASP専用SS（空ならcandidate_ss_idにフォールバック）
-_default_fallback_category: str = ""   # スコアゼロ時のフォールバックカテゴリ名
-_category_keywords: dict = {}          # カテゴリ名 → キーワードリスト のヒントマップ
-_trusted_external_links: list = []     # 記事に必ず1件挿入する信頼できる外部リンク
+_image_style:           dict | None = None
+_blog_meta:             dict | None = None  # {site_purpose, target, writing_taste, genre_detail, search_intent}
+_asp_ss_id:             str  | None = None  # ASP専用SS（空ならcandidate_ss_idにフォールバック）
+_default_fallback_category: str = ""        # スコアゼロ時のフォールバックカテゴリ名
+_category_keywords:     dict = {}           # カテゴリ名 → キーワードリスト のヒントマップ
+_trusted_external_links: list = []          # 記事に必ず1件挿入する信頼できる外部リンク
+_eyecatch_model:        str  = ""           # サムネ生成モデル（空=FLUX.1-schnell）
+_article_image_model:   str  = ""           # 記事内画像モデル（空=FLUX.1-schnell）
 
 
 def set_context(
-    wp_url:           str | None = None,
-    wp_username:      str | None = None,
-    wp_app_password:  str | None = None,
-    wp_post_status:   str | None = None,
-    candidate_ss_id:  str | None = None,
-    candidate_sheet:  str | None = None,
-    image_style:      dict | None = None,
-    blog_meta:        dict | None = None,
-    asp_ss_id:        str  | None = None,
+    wp_url:               str | None = None,
+    wp_username:          str | None = None,
+    wp_app_password:      str | None = None,
+    wp_post_status:       str | None = None,
+    candidate_ss_id:      str | None = None,
+    candidate_sheet:      str | None = None,
+    image_style:          dict | None = None,
+    blog_meta:            dict | None = None,
+    asp_ss_id:            str  | None = None,
     default_fallback_category: str = "",
-    category_keywords: dict | None = None,
+    category_keywords:    dict | None = None,
     trusted_external_links: list | None = None,
+    eyecatch_model:       str = "",
+    article_image_model:  str = "",
 ) -> None:
     """
     ブログ別の WP 認証情報をセットする。
     None を渡すと config.py のデフォルト値にフォールバックする。
     ブログ切り替え時はキャッシュもクリアする。
     """
-    global _url, _username, _password, _post_status, _candidate_ss_id, _candidate_sheet, _image_style, _blog_meta, _asp_ss_id, _default_fallback_category, _category_keywords, _trusted_external_links
+    global _url, _username, _password, _post_status, _candidate_ss_id, _candidate_sheet, _image_style, _blog_meta, _asp_ss_id, _default_fallback_category, _category_keywords, _trusted_external_links, _eyecatch_model, _article_image_model
     _url              = wp_url
     _username         = wp_username
     _password         = wp_app_password
@@ -67,6 +71,8 @@ def set_context(
     _default_fallback_category = default_fallback_category
     _category_keywords = category_keywords or {}
     _trusted_external_links = trusted_external_links or []
+    _eyecatch_model      = eyecatch_model or ""
+    _article_image_model = article_image_model or ""
     _clear_caches()
 
 
@@ -133,6 +139,16 @@ def get_category_keywords() -> dict:
 def get_trusted_external_links() -> list:
     """記事に必ず1件挿入する信頼できる外部リンクリスト。未設定なら空list。"""
     return _trusted_external_links
+
+
+def get_eyecatch_model() -> str:
+    """サムネ生成モデルを返す。未設定なら空文字（image_generatorがデフォルト使用）。"""
+    return _eyecatch_model or ""
+
+
+def get_article_image_model() -> str:
+    """記事内画像生成モデルを返す。未設定なら空文字（image_generatorがデフォルト使用）。"""
+    return _article_image_model or ""
 
 
 def get_auth() -> HTTPBasicAuth:
