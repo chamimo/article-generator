@@ -39,6 +39,7 @@ _spec.loader.exec_module(_m)
 
 # ── 全設定変数を再エクスポート ──────────────────────────────────────────
 ANTHROPIC_API_KEY      = _m.ANTHROPIC_API_KEY
+OPENAI_API_KEY         = getattr(_m, "OPENAI_API_KEY", "")
 WP_URL                 = _m.WP_URL
 WP_USERNAME            = _m.WP_USERNAME
 WP_APP_PASSWORD        = _m.WP_APP_PASSWORD

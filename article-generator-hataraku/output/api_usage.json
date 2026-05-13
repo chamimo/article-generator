@@ -8049,6 +8049,216 @@
       "output_tokens": 10106,
       "cost_usd": 0.168621,
       "label": "article:引きこもり 社会復帰 方法"
+    },
+    {
+      "timestamp": "2026-05-13T09:09:06.975650+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 69,
+      "cost_usd": 0.000365,
+      "label": "lsi:ChatGPT 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-13T09:09:10.545294+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 487,
+      "cost_usd": 0.00209,
+      "label": "kw_research:ChatGPT 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-13T09:11:21.977265+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6007,
+      "output_tokens": 9611,
+      "cost_usd": 0.162186,
+      "label": "article:ChatGPT 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-13T09:18:58.353751+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 105,
+      "cost_usd": 0.000509,
+      "label": "lsi:ChatGPT 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-13T09:19:01.913478+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 548,
+      "cost_usd": 0.002334,
+      "label": "kw_research:ChatGPT 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-13T09:21:07.848859+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6104,
+      "output_tokens": 9328,
+      "cost_usd": 0.158232,
+      "label": "article:ChatGPT 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-13T09:22:15.240227+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 104,
+      "output_tokens": 82,
+      "cost_usd": 0.000411,
+      "label": "lsi:Claude AI 活用"
+    },
+    {
+      "timestamp": "2026-05-13T09:22:19.004796+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 171,
+      "output_tokens": 482,
+      "cost_usd": 0.002065,
+      "label": "kw_research:Claude AI 活用"
+    },
+    {
+      "timestamp": "2026-05-13T09:24:51.974055+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5780,
+      "output_tokens": 10617,
+      "cost_usd": 0.176595,
+      "label": "article:Claude AI 活用"
+    },
+    {
+      "timestamp": "2026-05-13T14:01:57.545601+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 117,
+      "output_tokens": 120,
+      "cost_usd": 0.000574,
+      "label": "lsi:AI副業 主婦 在宅 稼ぐ"
+    },
+    {
+      "timestamp": "2026-05-13T14:02:01.521592+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 184,
+      "output_tokens": 496,
+      "cost_usd": 0.002131,
+      "label": "kw_research:AI副業 主婦 在宅 稼ぐ"
+    },
+    {
+      "timestamp": "2026-05-13T14:04:44.161046+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T14",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5953,
+      "output_tokens": 11429,
+      "cost_usd": 0.189294,
+      "label": "article:AI副業 主婦 在宅 稼ぐ"
+    },
+    {
+      "timestamp": "2026-05-13T15:49:28.654630+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 101,
+      "cost_usd": 0.000493,
+      "label": "lsi:AI副業 スマホだけ できる"
+    },
+    {
+      "timestamp": "2026-05-13T15:49:32.519507+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 546,
+      "cost_usd": 0.002326,
+      "label": "kw_research:AI副業 スマホだけ できる"
+    },
+    {
+      "timestamp": "2026-05-13T15:51:55.441818+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T15",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5871,
+      "output_tokens": 10155,
+      "cost_usd": 0.169938,
+      "label": "article:AI副業 スマホだけ できる"
+    },
+    {
+      "timestamp": "2026-05-13T16:06:44.719502+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T16",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 95,
+      "cost_usd": 0.000471,
+      "label": "lsi:AIアフィリエイト やり方 初心者"
+    },
+    {
+      "timestamp": "2026-05-13T16:06:48.457265+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T16",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 569,
+      "cost_usd": 0.002421,
+      "label": "kw_research:AIアフィリエイト やり方 初心者"
+    },
+    {
+      "timestamp": "2026-05-13T16:09:12.378845+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T16",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6227,
+      "output_tokens": 10182,
+      "cost_usd": 0.171411,
+      "label": "article:AIアフィリエイト やり方 初心者"
+    },
+    {
+      "timestamp": "2026-05-13T17:08:47.418373+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 107,
+      "cost_usd": 0.000519,
+      "label": "lsi:AIアフィリエイト やり方 初心者"
+    },
+    {
+      "timestamp": "2026-05-13T17:08:51.131253+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 552,
+      "cost_usd": 0.002353,
+      "label": "kw_research:AIアフィリエイト やり方 初心者"
+    },
+    {
+      "timestamp": "2026-05-13T17:11:15.957174+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T17",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6225,
+      "output_tokens": 10333,
+      "cost_usd": 0.17367,
+      "label": "article:AIアフィリエイト やり方 初心者"
     }
   ],
   "events": [

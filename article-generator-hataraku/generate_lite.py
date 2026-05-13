@@ -266,7 +266,7 @@ FEATURES: dict[str, bool] = {
     "trend_auto_fetch": False,  # キーワードシート外からのトレンドKW自動取得（無効=シートのみ使用）
     "article_type_mix": True,   # Phase 2: 記事タイプ配分制御（longtail/trend/monetize）
     "duplicate_check":  True,   # Phase 2: 投稿済み重複チェック
-    "image_generation": True,   # Phase 2: アイキャッチ画像生成
+    "image_generation": True,   # H2記事内画像生成（アイキャッチは生成しない）
     "multi_blog":       True,   # Phase 2: 複数ブログ対応
     "sheets_update":    False,  # Phase 2: 投稿済みフラグをシートに書き込む
 }
@@ -364,6 +364,8 @@ class BlogConfig:
     wp_post_status: str = "draft"                      # 投稿方式: "draft"（下書き）or "publish"（即公開）
     image_style: dict = field(default_factory=dict)    # 画像生成スタイル設定
     asp_ss_id:   str  = ""                             # ASP専用SS（空=candidate_ss_idを使用）
+    eyecatch_model:       str = ""                     # サムネ生成モデル（空=FLUX.1-schnell）
+    article_image_model:  str = ""                     # 記事内画像モデル（空=FLUX.1-schnell）
     # ブログ管理シートから動的取得（空 = Claude自動判断）
     site_purpose:  str = ""  # サイトの目的
     target:        str = ""  # ターゲット読者
@@ -445,8 +447,10 @@ def load_blog_config(blog_name: str) -> BlogConfig:
         affili_ss_id    = data.get("affili_ss_id", ""),
         guide_links     = data.get("guide_links", {}),
         wp_post_status  = data.get("wp_post_status", "draft"),
-        image_style     = data.get("image_style", {}),
-        asp_ss_id       = data.get("asp_ss_id", ""),
+        image_style          = data.get("image_style", {}),
+        asp_ss_id            = data.get("asp_ss_id", ""),
+        eyecatch_model       = data.get("eyecatch_model", ""),
+        article_image_model  = data.get("article_image_model", ""),
         extra           = {k: v for k, v in data.items()
                            if k not in ("name", "display_name", "genre", "target_length",
                                         "fact_check", "candidate_ss_id", "candidate_sheet",
@@ -455,18 +459,21 @@ def load_blog_config(blog_name: str) -> BlogConfig:
                                         "stop_words", "aliases", "allowed_themes",
                                         "ng_keywords", "asp_links", "affili_ss_id",
                                         "guide_links", "wp_post_status",
-                                        "image_style", "asp_ss_id", "_comment")
+                                        "image_style", "asp_ss_id",
+                                        "eyecatch_model", "article_image_model", "_comment")
                            and not k.endswith("_env")},
     )
     # ブログ管理シートから追加メタデータを補完
     try:
         from modules.blog_meta import load_blog_meta
         meta = load_blog_meta(blog_name, credentials_path=GOOGLE_CREDENTIALS_PATH)
-        if meta.get("site_purpose"):  cfg.site_purpose  = meta["site_purpose"]
-        if meta.get("target"):         cfg.target        = meta["target"]
-        if meta.get("writing_taste"):  cfg.writing_taste = meta["writing_taste"]
-        if meta.get("genre"):          cfg.genre_detail  = meta["genre"]
-        if meta.get("search_intent"):  cfg.search_intent = meta["search_intent"]
+        if meta.get("site_purpose"):        cfg.site_purpose         = meta["site_purpose"]
+        if meta.get("target"):              cfg.target               = meta["target"]
+        if meta.get("writing_taste"):       cfg.writing_taste        = meta["writing_taste"]
+        if meta.get("genre"):               cfg.genre_detail         = meta["genre"]
+        if meta.get("search_intent"):       cfg.search_intent        = meta["search_intent"]
+        if meta.get("eyecatch_model"):      cfg.eyecatch_model       = meta["eyecatch_model"]
+        if meta.get("article_image_model"): cfg.article_image_model  = meta["article_image_model"]
     except Exception:
         pass
     return cfg
@@ -1530,6 +1537,8 @@ def post(article: dict, dry_run: bool = False,
             candidate_sheet=blog_cfg.candidate_sheet,
             image_style=blog_cfg.image_style,
             asp_ss_id=blog_cfg.asp_ss_id,
+            eyecatch_model=blog_cfg.eyecatch_model,
+            article_image_model=blog_cfg.article_image_model,
             default_fallback_category=blog_cfg.extra.get("default_fallback_category", ""),
             category_keywords=blog_cfg.extra.get("category_keywords", {}),
             trusted_external_links=blog_cfg.extra.get("trusted_external_links", []),
@@ -1552,26 +1561,15 @@ def post(article: dict, dry_run: bool = False,
 
     try:
         if FEATURES["image_generation"]:
-            # 画像生成 → post_article_with_image（アイキャッチ設定・H2画像注入を含む）
-            image_bytes: bytes | None = None
-            keyword = article.get("keyword", "")
-            try:
-                image_bytes = generate_image_for_article(
-                    keyword=keyword,
-                    article_type=article.get("_article_type", ""),
-                )
-                log.info(f"[post] 画像生成完了: {len(image_bytes):,} bytes")
-            except Exception as img_err:
-                log.warning(f"[post] 画像生成スキップ（続行）: {img_err}")
-
-            # asp_links: blog_config.json の静的リンク + シートからの動的リンク をマージ
+            # アイキャッチ生成は行わない。H2画像・CTA・内部リンクのみ処理する。
             asp_links  = dict(blog_cfg.asp_links) if blog_cfg else {}
             if asp_list:
                 from modules.asp_fetcher import to_asp_dict
                 asp_links.update(to_asp_dict(asp_list))
             stop_words = blog_cfg.stop_words if blog_cfg else []
-            result = post_article_with_image(article, image_bytes=image_bytes,
-                                             asp_links=asp_links, stop_words=stop_words)
+            result = post_article_with_image(article, image_bytes=None,
+                                             asp_links=asp_links, stop_words=stop_words,
+                                             enable_eyecatch=False)
         else:
             result = create_post(article, featured_media_id=None)
     finally:

@@ -445,6 +445,7 @@ def post_article_with_image(
     image_bytes: bytes | None = None,
     asp_links: dict | None = None,
     stop_words: list[str] | None = None,
+    enable_eyecatch: bool = True,
 ) -> dict:
     """
     ① カテゴリ自動選択
@@ -465,11 +466,13 @@ def post_article_with_image(
         article_title=article["title"],
     )
 
-    # ② アイキャッチ（渡された image_bytes 優先 → なければライブラリ検索）
+    # ② アイキャッチ（Codex側で後付けする場合はスキップ）
     featured_media_id = None
     search_terms = _get_category_search_terms(keyword)
 
-    if image_bytes:
+    if not enable_eyecatch:
+        pass  # アイキャッチ生成・設定はしない
+    elif image_bytes:
         eyecatch_alt = f"{keyword}のイメージ画像"
         eyecatch_caption = _get_eyecatch_caption_tags(keyword)
         media_id, eyecatch_url = upload_media(

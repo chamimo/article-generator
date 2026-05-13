@@ -9,6 +9,7 @@ with open(os.path.join(_DIR, "blog_config.json"), encoding="utf-8") as _f:
     _c = json.load(_f)
 
 ANTHROPIC_API_KEY       = os.getenv("ANTHROPIC_API_KEY", "")
+OPENAI_API_KEY          = os.getenv("OPENAI_API_KEY", "")
 WP_URL                  = (os.getenv(_c.get("wp_url_env", "WP_URL")) or _c.get("wp_url", "")).rstrip("/")
 WP_USERNAME             = os.getenv(_c.get("wp_username_env", "WP_USERNAME"), "")
 WP_APP_PASSWORD         = os.getenv(_c.get("wp_app_password_env", "WP_APP_PASSWORD"), "")
