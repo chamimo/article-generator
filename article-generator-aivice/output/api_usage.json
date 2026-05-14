@@ -2719,6 +2719,36 @@
       "output_tokens": 11327,
       "cost_usd": 0.188613,
       "label": "article:画像生成 AI 無料"
+    },
+    {
+      "timestamp": "2026-05-14T15:05:15.852956+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 86,
+      "cost_usd": 0.000433,
+      "label": "lsi:生成AI 活用 ビジネス"
+    },
+    {
+      "timestamp": "2026-05-14T15:05:19.885687+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 503,
+      "cost_usd": 0.002154,
+      "label": "kw_research:生成AI 活用 ビジネス"
+    },
+    {
+      "timestamp": "2026-05-14T15:07:52.967667+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T15",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6290,
+      "output_tokens": 9899,
+      "cost_usd": 0.167355,
+      "label": "article:生成AI 活用 ビジネス"
     }
   ],
   "events": [
