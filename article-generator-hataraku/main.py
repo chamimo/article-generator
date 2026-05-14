@@ -136,17 +136,12 @@ def run_clusters_pipeline(
                     "status": "dry-run",
                 })
             else:
-                # 画像生成（失敗しても投稿は続行）
-                image_bytes = None
-                try:
-                    image_bytes = generate_image_for_article(
-                        keyword=main_kw,
-                        article_theme=cluster.get("article_theme", ""),
-                    )
-                except Exception as img_err:
-                    print(f"[image_generator] 画像生成スキップ（続行）: {img_err}")
-
-                post_result = post_article_with_image(article, image_bytes=image_bytes)
+                # アイキャッチはCodex後処理に委譲する。
+                post_result = post_article_with_image(
+                    article,
+                    image_bytes=None,
+                    enable_eyecatch=False,
+                )
                 results.append({
                     "keyword": main_kw,
                     "title": article["title"],
@@ -219,14 +214,12 @@ def run_pipeline(
                     "status": "dry-run",
                 })
             else:
-                # --- Step 5: 画像生成 → Step 6: WordPress投稿 ---
-                image_bytes = None
-                try:
-                    image_bytes = generate_image_for_article(keyword=keyword)
-                except Exception as img_err:
-                    print(f"[image_generator] 画像生成スキップ（続行）: {img_err}")
-
-                post_result = post_article_with_image(article, image_bytes=image_bytes)
+                # アイキャッチはCodex後処理に委譲する。
+                post_result = post_article_with_image(
+                    article,
+                    image_bytes=None,
+                    enable_eyecatch=False,
+                )
                 results.append({
                     "keyword": keyword,
                     "title": article["title"],

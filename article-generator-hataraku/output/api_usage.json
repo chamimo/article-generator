@@ -8259,6 +8259,376 @@
       "output_tokens": 10333,
       "cost_usd": 0.17367,
       "label": "article:AIアフィリエイト やり方 初心者"
+    },
+    {
+      "timestamp": "2026-05-13T19:10:14.987702+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 102,
+      "cost_usd": 0.000494,
+      "label": "lsi:副業 バレない 方法"
+    },
+    {
+      "timestamp": "2026-05-13T19:10:18.825551+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 499,
+      "cost_usd": 0.002136,
+      "label": "kw_research:副業 バレない 方法"
+    },
+    {
+      "timestamp": "2026-05-13T19:13:12.671880+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5762,
+      "output_tokens": 10998,
+      "cost_usd": 0.182256,
+      "label": "article:副業 バレない 方法"
+    },
+    {
+      "timestamp": "2026-05-13T20:10:16.226551+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 117,
+      "output_tokens": 84,
+      "cost_usd": 0.00043,
+      "label": "lsi:塾と通信教育 どっちがいい 小学生"
+    },
+    {
+      "timestamp": "2026-05-13T20:10:20.412302+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 184,
+      "output_tokens": 565,
+      "cost_usd": 0.002407,
+      "label": "kw_research:塾と通信教育 どっちがいい 小学生"
+    },
+    {
+      "timestamp": "2026-05-13T20:12:56.958959+00:00",
+      "date": "2026-05-13",
+      "hour": "2026-05-13T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5504,
+      "output_tokens": 9568,
+      "cost_usd": 0.160032,
+      "label": "article:塾と通信教育 どっちがいい 小学生"
+    },
+    {
+      "timestamp": "2026-05-14T01:39:26.227746+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 113,
+      "cost_usd": 0.000542,
+      "label": "lsi:AIライティング ブログ SEO 対策"
+    },
+    {
+      "timestamp": "2026-05-14T01:39:30.198010+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 569,
+      "cost_usd": 0.002419,
+      "label": "kw_research:AIライティング ブログ SEO 対策"
+    },
+    {
+      "timestamp": "2026-05-14T01:41:44.777263+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6010,
+      "output_tokens": 9573,
+      "cost_usd": 0.161625,
+      "label": "article:AIライティング ブログ SEO 対策"
+    },
+    {
+      "timestamp": "2026-05-14T01:45:54.399460+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 123,
+      "cost_usd": 0.000585,
+      "label": "lsi:AI記事 自動生成 SEO 大丈夫"
+    },
+    {
+      "timestamp": "2026-05-14T01:45:56.715058+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 125,
+      "cost_usd": 0.000593,
+      "label": "lsi:AI記事 自動生成 SEO 大丈夫"
+    },
+    {
+      "timestamp": "2026-05-14T01:45:58.028025+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 540,
+      "cost_usd": 0.002306,
+      "label": "kw_research:AI記事 自動生成 SEO 大丈夫"
+    },
+    {
+      "timestamp": "2026-05-14T01:46:00.846041+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 581,
+      "cost_usd": 0.00247,
+      "label": "kw_research:AI記事 自動生成 SEO 大丈夫"
+    },
+    {
+      "timestamp": "2026-05-14T01:48:46.295314+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5992,
+      "output_tokens": 10484,
+      "cost_usd": 0.175236,
+      "label": "article:AI記事 自動生成 SEO 大丈夫"
+    },
+    {
+      "timestamp": "2026-05-14T01:48:47.135306+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6035,
+      "output_tokens": 10178,
+      "cost_usd": 0.170775,
+      "label": "article:AI記事 自動生成 SEO 大丈夫"
+    },
+    {
+      "timestamp": "2026-05-14T02:06:59.628931+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 104,
+      "cost_usd": 0.000506,
+      "label": "lsi:AIライティング ブログ SEO 対策"
+    },
+    {
+      "timestamp": "2026-05-14T02:07:04.046656+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 509,
+      "cost_usd": 0.002179,
+      "label": "kw_research:AIライティング ブログ SEO 対策"
+    },
+    {
+      "timestamp": "2026-05-14T02:09:33.305529+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5944,
+      "output_tokens": 10638,
+      "cost_usd": 0.177402,
+      "label": "article:AIライティング ブログ SEO 対策"
+    },
+    {
+      "timestamp": "2026-05-14T02:30:14.823776+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 148,
+      "cost_usd": 0.000684,
+      "label": "lsi:算数 苦手 克服 方法 小学生"
+    },
+    {
+      "timestamp": "2026-05-14T02:30:19.383872+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 561,
+      "cost_usd": 0.00239,
+      "label": "kw_research:算数 苦手 克服 方法 小学生"
+    },
+    {
+      "timestamp": "2026-05-14T02:32:51.167753+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5877,
+      "output_tokens": 9395,
+      "cost_usd": 0.158556,
+      "label": "article:算数 苦手 克服 方法 小学生"
+    },
+    {
+      "timestamp": "2026-05-14T03:30:17.188807+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 83,
+      "cost_usd": 0.000423,
+      "label": "lsi:プログラミング スクール 高い 必要？"
+    },
+    {
+      "timestamp": "2026-05-14T03:30:20.793819+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 556,
+      "cost_usd": 0.002369,
+      "label": "kw_research:プログラミング スクール 高い 必要？"
+    },
+    {
+      "timestamp": "2026-05-14T03:32:32.180880+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5474,
+      "output_tokens": 9354,
+      "cost_usd": 0.156732,
+      "label": "article:プログラミング スクール 高い 必要？"
+    },
+    {
+      "timestamp": "2026-05-14T04:01:45.495807+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 135,
+      "cost_usd": 0.00063,
+      "label": "lsi:保育士 人間関係 疲れた"
+    },
+    {
+      "timestamp": "2026-05-14T04:01:49.254774+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 584,
+      "cost_usd": 0.002479,
+      "label": "kw_research:保育士 人間関係 疲れた"
+    },
+    {
+      "timestamp": "2026-05-14T04:04:31.251815+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T04",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5862,
+      "output_tokens": 9980,
+      "cost_usd": 0.167286,
+      "label": "article:保育士 人間関係 疲れた"
+    },
+    {
+      "timestamp": "2026-05-14T04:43:33.098156+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 115,
+      "cost_usd": 0.000552,
+      "label": "lsi:梅雨 仕事 やる気 出ない"
+    },
+    {
+      "timestamp": "2026-05-14T04:43:37.993025+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 645,
+      "cost_usd": 0.002726,
+      "label": "kw_research:梅雨 仕事 やる気 出ない"
+    },
+    {
+      "timestamp": "2026-05-14T04:46:30.264757+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T04",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5498,
+      "output_tokens": 10733,
+      "cost_usd": 0.177489,
+      "label": "article:梅雨 仕事 やる気 出ない"
+    },
+    {
+      "timestamp": "2026-05-14T06:24:15.367053+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 115,
+      "cost_usd": 0.000553,
+      "label": "lsi:高山 カフェ 古民家 静か 空間"
+    },
+    {
+      "timestamp": "2026-05-14T06:24:18.734458+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 538,
+      "cost_usd": 0.002298,
+      "label": "kw_research:高山 カフェ 古民家 静か 空間"
+    },
+    {
+      "timestamp": "2026-05-14T06:27:12.287845+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T06",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5821,
+      "output_tokens": 10736,
+      "cost_usd": 0.178503,
+      "label": "article:高山 カフェ 古民家 静か 空間"
+    },
+    {
+      "timestamp": "2026-05-14T06:27:16.499558+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 383,
+      "output_tokens": 33,
+      "cost_usd": 0.000438,
+      "label": "maps:高山 カフェ 古民家 静か 空間"
+    },
+    {
+      "timestamp": "2026-05-14T07:00:13.725653+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 86,
+      "cost_usd": 0.000434,
+      "label": "lsi:未経験 ITスキル 学習 方法"
+    },
+    {
+      "timestamp": "2026-05-14T07:00:17.914269+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 594,
+      "cost_usd": 0.00252,
+      "label": "kw_research:未経験 ITスキル 学習 方法"
+    },
+    {
+      "timestamp": "2026-05-14T07:03:13.129384+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T07",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5855,
+      "output_tokens": 10511,
+      "cost_usd": 0.17523,
+      "label": "article:未経験 ITスキル 学習 方法"
     }
   ],
   "events": [

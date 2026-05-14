@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import base64
 import io
+import json
 import os
 import pathlib
 import random
@@ -1662,11 +1663,41 @@ def _is_beginner_guide_title(title: str) -> bool:
 
 def _select_beginner_guide_template(title: str) -> str:
     """タイトル内容から初心者ガイド型バナーの構図テンプレートを選ぶ。"""
+    def _pick(pool: list[str]) -> str:
+        history_path = _OUTPUT_DIR.parent / "eyecatch_template_history.json"
+        recent: list[str] = []
+        try:
+            if history_path.exists():
+                data = json.loads(history_path.read_text(encoding="utf-8"))
+                recent = [str(x) for x in data.get("beginner_guide", [])][-4:]
+        except Exception:
+            recent = []
+
+        available = [tpl for tpl in pool if tpl not in recent[-2:]]
+        if not available:
+            available = [tpl for tpl in pool if tpl != (recent[-1] if recent else "")]
+        if not available:
+            available = pool
+
+        selected = random.choice(available)
+        try:
+            history_path.parent.mkdir(parents=True, exist_ok=True)
+            data = {}
+            if history_path.exists():
+                data = json.loads(history_path.read_text(encoding="utf-8"))
+            seq = [str(x) for x in data.get("beginner_guide", [])]
+            seq.append(selected)
+            data["beginner_guide"] = seq[-12:]
+            history_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+        except Exception:
+            pass
+        return selected
+
     if any(k in title for k in ("副業", "稼ぐ", "月収", "収益", "アフィリエイト", "在宅")):
-        return random.choice(["cafe_side", "right_person"])
+        return _pick(["cafe_side", "flatlay", "app_cards", "right_person"])
     if any(k in title for k in ("おすすめ", "比較", "無料", "選", "商用利用")):
-        return random.choice(["flatlay", "app_cards", "right_person"])
-    return random.choice(["right_person", "flatlay", "cafe_side"])
+        return _pick(["flatlay", "app_cards", "cafe_side", "right_person"])
+    return _pick(["right_person", "flatlay", "cafe_side", "app_cards"])
 
 
 def _build_beginner_guide_background_prompt(title: str, template: str = "right_person") -> str:
@@ -1745,7 +1776,8 @@ def _build_beginner_guide_background_prompt(title: str, template: str = "right_p
 
 def _guide_overlay_texts(title: str, texts: dict, template: str = "right_person") -> dict:
     """タイトルから初心者ガイド型に合う短い表示テキストへ整える。"""
-    main = texts.get("main_word", "").strip() or "AI活用"
+    head_kw = _extract_title_head_keyword(title)
+    main = texts.get("main_word", "").strip() or head_kw or "AI活用"
     accent = texts.get("accent_word", "").strip() or "入門ガイド"
     strip = texts.get("strip_label", "").strip() or "初心者OK"
 
@@ -1767,19 +1799,17 @@ def _guide_overlay_texts(title: str, texts: dict, template: str = "right_person"
         main = "Claude"
     elif "Gemini" in title:
         main = "Gemini"
+    elif head_kw and not any(x in main for x in ("AI", "ChatGPT", "Claude", "Gemini")):
+        main = head_kw
 
     if "商用利用" in title:
         strip = "商用利用OK"
     elif "初心者" in title or "入門" in title:
         strip = "初心者OK"
 
-    icon_sets = [
-        ["文章作成", "アイデア", "時短"],
-        ["はじめ方", "比較", "活用"],
-        ["スマホ", "副業", "効率化"],
-        ["無料", "商用利用", "日本語"],
-    ]
-    palette_name = random.choice(["blush", "sage", "sky", "peach"])
+    icon_sets = _select_icon_labels(title, site="aivice")
+    palette_name = random.choice(["blush", "sage", "sky", "peach", "pop_pink", "royal_blue", "mint_yellow"])
+    glyph_pool = ["search", "note", "sparkle", "check", "heart", "book", "yen"]
 
     return {
         "strip_label": strip,
@@ -1788,21 +1818,28 @@ def _guide_overlay_texts(title: str, texts: dict, template: str = "right_person"
         "accent_word": accent[:12],
         "supplement": "基本から使い方まで これ1本",
         "badge": random.choice([strip, "初心者OK", "やさしく解説"]),
-        "icon_labels": random.choice(icon_sets),
+        "icon_labels": icon_sets,
         "_palette_name": palette_name,
         "_template": template,
         "_panel_curve": random.choice(["soft", "wide", "diagonal"]),
         "_ribbon_x": random.choice([0.615, 0.645, 0.675]),
+        "_sub_layout": random.choice(["ribbon_top", "badge_circle", "sticky_note", "icon_cards"]),
+        "_text_side": random.choice(["left", "left", "right"]),
+        "_icon_style": "dynamic",
+        "_icon_glyphs": random.sample(glyph_pool, 3),
     }
 
 
 def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
     """添付サンプル寄せの初心者ガイド型バナー。16:9前提で安全余白を広めに取る。"""
-    from PIL import Image, ImageDraw, ImageFont
+    from PIL import Image, ImageDraw, ImageFont, ImageOps
     import io as _io
 
     img = Image.open(_io.BytesIO(img_bytes)).convert("RGBA")
     W, H = img.size
+    text_side = texts.get("_text_side", "left")
+    if text_side == "right":
+        img = ImageOps.mirror(img)
     font_bold_path = _find_font(_FONT_BOLD_CANDIDATES)
     font_reg_path = _find_font(_FONT_REG_CANDIDATES)
 
@@ -1843,13 +1880,25 @@ def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
     panel_w = {"soft": 0.58, "wide": 0.62, "diagonal": 0.55}.get(curve, 0.58)
     if template in ("flatlay", "app_cards"):
         panel_w = {"soft": 0.52, "wide": 0.56, "diagonal": 0.50}.get(curve, 0.52)
-    od.rectangle([0, 0, int(W * panel_w), H], fill=(255, 252, 246, 218))
-    if curve == "diagonal":
-        od.polygon([(int(W * 0.45), 0), (int(W * 0.66), 0), (int(W * 0.54), H), (int(W * 0.33), H)],
-                   fill=(255, 252, 246, 205))
+    if text_side == "right":
+        panel_x0 = W - int(W * panel_w)
+        od.rectangle([panel_x0, 0, W, H], fill=(255, 252, 246, 218))
     else:
-        od.pieslice([int(W * 0.34), -int(H * 0.22), int(W * 0.80), int(H * 1.22)],
-                    90, 270, fill=(255, 252, 246, 205))
+        od.rectangle([0, 0, int(W * panel_w), H], fill=(255, 252, 246, 218))
+    if curve == "diagonal":
+        if text_side == "right":
+            od.polygon([(int(W * 0.55), 0), (int(W * 0.34), 0), (int(W * 0.46), H), (int(W * 0.67), H)],
+                       fill=(255, 252, 246, 205))
+        else:
+            od.polygon([(int(W * 0.45), 0), (int(W * 0.66), 0), (int(W * 0.54), H), (int(W * 0.33), H)],
+                       fill=(255, 252, 246, 205))
+    else:
+        if text_side == "right":
+            od.pieslice([int(W * 0.20), -int(H * 0.22), int(W * 0.66), int(H * 1.22)],
+                        -90, 90, fill=(255, 252, 246, 205))
+        else:
+            od.pieslice([int(W * 0.34), -int(H * 0.22), int(W * 0.80), int(H * 1.22)],
+                        90, 270, fill=(255, 252, 246, 205))
     img = Image.alpha_composite(img, ov)
     draw = ImageDraw.Draw(img)
 
@@ -1858,6 +1907,9 @@ def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
         "sage":  {"navy": (20, 55, 54, 255), "blue": (80, 118, 110, 255), "coral": (194, 126, 112, 255), "soft": (172, 205, 187, 220), "cream": (250, 253, 246, 235), "yellow": (220, 177, 82, 255), "ribbon": (125, 166, 148, 228)},
         "sky":   {"navy": (16, 38, 78, 255), "blue": (54, 103, 151, 255), "coral": (218, 119, 137, 255), "soft": (165, 202, 232, 220), "cream": (250, 253, 255, 235), "yellow": (235, 190, 81, 255), "ribbon": (105, 154, 204, 228)},
         "peach": {"navy": (58, 42, 38, 255), "blue": (100, 91, 84, 255), "coral": (219, 125, 92, 255), "soft": (244, 181, 142, 220), "cream": (255, 251, 245, 235), "yellow": (231, 179, 76, 255), "ribbon": (223, 142, 108, 228)},
+        "pop_pink": {"navy": (35, 25, 55, 255), "blue": (95, 86, 180, 255), "coral": (236, 74, 117, 255), "soft": (246, 105, 143, 220), "cream": (255, 247, 251, 238), "yellow": (255, 214, 90, 255), "ribbon": (239, 76, 118, 232)},
+        "royal_blue": {"navy": (8, 32, 83, 255), "blue": (46, 92, 190, 255), "coral": (236, 92, 125, 255), "soft": (84, 127, 220, 220), "cream": (248, 251, 255, 238), "yellow": (255, 210, 85, 255), "ribbon": (48, 126, 204, 232)},
+        "mint_yellow": {"navy": (19, 61, 65, 255), "blue": (0, 137, 135, 255), "coral": (235, 112, 119, 255), "soft": (255, 230, 95, 220), "cream": (250, 255, 250, 238), "yellow": (255, 220, 64, 255), "ribbon": (0, 158, 147, 232)},
     }
     pal = palettes.get(texts.get("_palette_name", "blush"), palettes["blush"])
     navy = pal["navy"]
@@ -1866,33 +1918,58 @@ def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
     cream = pal["cream"]
     yellow = pal["yellow"]
 
-    safe_x = int(W * 0.045)
-    safe_y = int(H * 0.075)
+    safe_x = int(W * 0.045) if text_side == "left" else int(W * 0.455)
+    # 右上のWordPressカテゴリーバッジと競合しないよう、上部要素は少し下げる。
+    safe_y = int(H * 0.105)
     text_w = int(W * 0.52)
 
-    f_pre = _fit(texts["pre_title"], font_reg_path, int(H * 0.055), int(H * 0.037), text_w)
-    f_main = _fit(texts["main_word"], font_bold_path, int(H * 0.185), int(H * 0.105), text_w)
-    f_acc = _fit(texts["accent_word"], font_bold_path, int(H * 0.112), int(H * 0.070), text_w)
-    f_sup = _fit(texts["supplement"], font_bold_path, int(H * 0.043), int(H * 0.030), int(W * 0.42))
+    quiet_layout = bool(texts.get("_quiet_layout"))
+    f_pre = _fit(texts["pre_title"], font_reg_path, int(H * 0.050 if quiet_layout else H * 0.055), int(H * 0.034), text_w)
+    f_main = _fit(texts["main_word"], font_bold_path, int(H * 0.158 if quiet_layout else H * 0.185), int(H * 0.094), text_w)
+    f_acc = _fit(texts["accent_word"], font_bold_path, int(H * 0.092 if quiet_layout else H * 0.112), int(H * 0.060), text_w)
+    f_sup = _fit(texts["supplement"], font_bold_path, int(H * 0.040 if quiet_layout else H * 0.043), int(H * 0.028), int(W * 0.42))
     f_small = _load(font_bold_path, int(H * 0.030))
     f_badge = _load(font_bold_path, int(H * 0.036))
+    sub_layout = texts.get("_sub_layout", "ribbon_top")
 
-    # 小さな初心者マーク風アイコン
-    ix, iy = safe_x, safe_y - int(H * 0.012)
-    draw.polygon([(ix, iy + 28), (ix + 26, iy + 12), (ix + 26, iy + 62), (ix, iy + 48)],
-                 fill=(91, 168, 229, 255), outline=navy)
-    draw.polygon([(ix + 28, iy + 12), (ix + 55, iy + 28), (ix + 55, iy + 48), (ix + 28, iy + 62)],
-                 fill=(255, 209, 102, 255), outline=navy)
-
-    pre_x = safe_x + int(W * 0.055)
+    pre_x = safe_x
     pre_y = safe_y
+    if sub_layout in ("ribbon_top", "icon_cards"):
+        if not texts.get("_hide_top_icon"):
+            # 小さな初心者マーク風アイコン
+            ix, iy = safe_x, safe_y - int(H * 0.004)
+            draw.polygon([(ix, iy + 28), (ix + 26, iy + 12), (ix + 26, iy + 62), (ix, iy + 48)],
+                         fill=(91, 168, 229, 255), outline=navy)
+            draw.polygon([(ix + 28, iy + 12), (ix + 55, iy + 28), (ix + 55, iy + 48), (ix + 28, iy + 62)],
+                         fill=(255, 209, 102, 255), outline=navy)
+            pre_x = safe_x + int(W * 0.055)
+    elif sub_layout == "badge_circle":
+        strip_w, strip_h, _ = _bbox(texts["strip_label"], f_badge)
+        draw.rounded_rectangle(
+            [safe_x, safe_y - int(H * 0.020), safe_x + strip_w + int(W * 0.050), safe_y + strip_h + int(H * 0.020)],
+            radius=int(H * 0.018), fill=(*pal["ribbon"][:3], 220)
+        )
+        _text(draw, (safe_x + int(W * 0.020), safe_y), texts["strip_label"], f_badge, (255, 255, 255, 255))
+        pre_y = safe_y + int(H * 0.104)
+    else:
+        note_w = int(W * 0.245)
+        note_h = int(H * 0.070)
+        note_y = safe_y - int(H * 0.012)
+        draw.polygon(
+            [(safe_x, note_y), (safe_x + note_w, note_y - int(H * 0.016)),
+             (safe_x + note_w - int(W * 0.012), note_y + note_h), (safe_x + int(W * 0.010), note_y + note_h + int(H * 0.010))],
+            fill=(*pal["ribbon"][:3], 225)
+        )
+        _text(draw, (safe_x + int(W * 0.022), note_y + int(H * 0.026)), texts["strip_label"], f_badge, (255, 255, 255, 255))
+        pre_y = safe_y + int(H * 0.112)
+
     _text(draw, (pre_x, pre_y), texts["pre_title"], f_pre, (36, 34, 31, 245))
     tw, th, _ = _bbox(texts["pre_title"], f_pre)
     draw.line([(pre_x + int(tw * 0.04), pre_y + th + int(H * 0.010)),
                (pre_x + int(tw * 0.94), pre_y + th + int(H * 0.010))],
               fill=coral_soft, width=max(4, int(H * 0.006)))
 
-    main_y = int(H * 0.245)
+    main_y = int(H * (0.275 if quiet_layout else 0.245))
     shadow = (0, 0, 0, 34)
     _text(draw, (safe_x + 4, main_y + 4), texts["main_word"], f_main, shadow)
     _text(draw, (safe_x, main_y), texts["main_word"], f_main, navy)
@@ -1901,11 +1978,12 @@ def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
                (safe_x + int(main_w * 0.98), main_y + main_h + int(H * 0.018))],
               fill=coral_soft, width=max(6, int(H * 0.011)))
 
-    acc_y = int(H * 0.465)
+    acc_y = main_y + main_h + int(H * (0.090 if quiet_layout else 0.070))
     _text(draw, (safe_x, acc_y), texts["accent_word"], f_acc, blue, stroke=1)
+    _, acc_h, _ = _bbox(texts["accent_word"], f_acc)
 
     # 補足帯
-    sup_y = int(H * 0.660)
+    sup_y = acc_y + acc_h + int(H * (0.100 if quiet_layout else 0.080))
     sup_text = texts["supplement"]
     sw, sh, _ = _bbox(sup_text, f_sup)
     band_x = safe_x + int(W * 0.050)
@@ -1920,45 +1998,138 @@ def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
               fill=(230, 224, 214, 210), width=2)
     _text(draw, (band_x, sup_y), sup_text, f_sup, navy)
 
-    # 右上リボン
-    rib_w, rib_h = int(W * 0.118), int(H * 0.195)
-    rib_x, rib_y = int(W * float(texts.get("_ribbon_x", 0.640))), 0
-    ribbon = Image.new("RGBA", (rib_w, rib_h + int(H * 0.040)), (0, 0, 0, 0))
-    rd = ImageDraw.Draw(ribbon)
-    rd.polygon([(0, 0), (rib_w, 0), (rib_w, rib_h), (rib_w // 2, rib_h - int(H * 0.034)), (0, rib_h)],
-               fill=pal["ribbon"])
-    rd.line([(8, 0), (8, rib_h - 10), (rib_w // 2, rib_h - int(H * 0.050)),
-             (rib_w - 8, rib_h - 10), (rib_w - 8, 0)], fill=(255, 255, 255, 210), width=2)
-    img.paste(ribbon, (rib_x, rib_y), ribbon)
-    draw = ImageDraw.Draw(img)
-    bw, bh, _ = _bbox(texts["badge"], f_badge)
-    _text(draw, (rib_x + (rib_w - bw) // 2, int(H * 0.072)), texts["badge"], f_badge, (255, 255, 255, 255))
+    # バッジ装飾。旅ブログなど静かなレイアウトでは省略する。
+    if not texts.get("_hide_badge"):
+        bw, bh, _ = _bbox(texts["badge"], f_badge)
+        if sub_layout == "badge_circle":
+            cx = int(W * 0.812) if text_side == "left" else int(W * 0.185)
+            cy = int(H * 0.585)
+            rr = int(H * 0.083)
+            draw.ellipse([cx - rr, cy - rr, cx + rr, cy + rr], fill=(*pal["ribbon"][:3], 230),
+                         outline=(255, 255, 255, 230), width=3)
+            _text(draw, (cx - bw // 2, cy - bh // 2), texts["badge"], f_badge, (255, 255, 255, 255))
+        elif sub_layout == "sticky_note":
+            nx = int(W * 0.392) if text_side == "left" else int(W * 0.785)
+            ny = int(H * 0.710)
+            nw, nh = int(W * 0.168), int(H * 0.118)
+            draw.polygon([(nx, ny + 10), (nx + nw, ny), (nx + nw - 8, ny + nh), (nx + 10, ny + nh + 8)],
+                         fill=(255, 223, 111, 238), outline=(214, 172, 76, 190))
+            _text(draw, (nx + int(W * 0.022), ny + int(H * 0.036)), texts["badge"], f_badge, navy)
+        else:
+            rib_w, rib_h = int(W * 0.118), int(H * 0.195)
+            rib_x = int(W * float(texts.get("_ribbon_x", 0.640)))
+            if text_side == "right":
+                rib_x = int(W * 0.360)
+            # 右上カテゴリーバッジ用の領域を空けるため、リボンは中央寄りに少し下げる。
+            rib_y = int(H * 0.045)
+            ribbon = Image.new("RGBA", (rib_w, rib_h + int(H * 0.040)), (0, 0, 0, 0))
+            rd = ImageDraw.Draw(ribbon)
+            rd.polygon([(0, 0), (rib_w, 0), (rib_w, rib_h), (rib_w // 2, rib_h - int(H * 0.034)), (0, rib_h)],
+                       fill=pal["ribbon"])
+            rd.line([(8, 0), (8, rib_h - 10), (rib_w // 2, rib_h - int(H * 0.050)),
+                     (rib_w - 8, rib_h - 10), (rib_w - 8, 0)], fill=(255, 255, 255, 210), width=2)
+            img.paste(ribbon, (rib_x, rib_y), ribbon)
+            draw = ImageDraw.Draw(img)
+            _text(draw, (rib_x + (rib_w - bw) // 2, int(H * 0.072)), texts["badge"], f_badge, (255, 255, 255, 255))
 
     # 下部アイコン3つ
-    labels = texts.get("icon_labels", ["文章作成", "アイデア", "時短"])
-    centers = [int(W * 0.145), int(W * 0.295), int(W * 0.445)]
-    cy = int(H * 0.835)
-    r = int(H * 0.074)
-    for idx, (cx, label) in enumerate(zip(centers, labels)):
-        draw.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(255, 255, 255, 238),
-                     outline=(230, 225, 218, 255), width=2)
-        if idx == 0:
-            draw.line([(cx - 22, cy - 5), (cx + 14, cy - 38)], fill=navy, width=4)
-            draw.polygon([(cx + 14, cy - 38), (cx + 26, cy - 48), (cx + 21, cy - 31)], outline=navy, fill=(255, 255, 255, 0))
-            draw.line([(cx - 25, cy + 18), (cx + 22, cy + 8)], fill=yellow, width=3)
-        elif idx == 1:
-            draw.ellipse([cx - 22, cy - 42, cx + 22, cy + 2], outline=navy, width=4)
-            draw.rectangle([cx - 12, cy + 0, cx + 12, cy + 14], outline=navy, width=3)
-            draw.line([(cx, cy - 52), (cx, cy - 62)], fill=yellow, width=4)
-            draw.line([(cx - 30, cy - 30), (cx - 42, cy - 36)], fill=yellow, width=4)
-            draw.line([(cx + 30, cy - 30), (cx + 42, cy - 36)], fill=yellow, width=4)
+    if not texts.get("_hide_icons"):
+        labels = texts.get("icon_labels", ["文章作成", "アイデア", "時短"])
+        icon_style = texts.get("_icon_style", "default")
+        icon_glyphs = texts.get("_icon_glyphs", [])
+        if sub_layout == "icon_cards":
+            centers = [safe_x + int(W * 0.110), safe_x + int(W * 0.250), safe_x + int(W * 0.390)]
+            cy = int(H * 0.825)
+            r = int(H * 0.060)
         else:
-            draw.ellipse([cx - 34, cy - 44, cx + 34, cy + 24], outline=navy, width=4)
-            draw.line([(cx, cy - 38), (cx, cy - 5)], fill=navy, width=4)
-            draw.line([(cx, cy - 5), (cx + 24, cy - 22)], fill=navy, width=4)
-            draw.arc([cx - 38, cy - 48, cx + 38, cy + 28], 300, 45, fill=yellow, width=4)
-        lw, _, _ = _bbox(label, f_small)
-        _text(draw, (cx - lw // 2, cy + r + int(H * 0.020)), label, f_small, navy)
+            centers = [safe_x + int(W * 0.100), safe_x + int(W * 0.250), safe_x + int(W * 0.400)]
+            cy = int(H * 0.835)
+            r = int(H * 0.074)
+        for idx, (cx, label) in enumerate(zip(centers, labels)):
+            if sub_layout == "icon_cards":
+                card_w, card_h = int(W * 0.120), int(H * 0.120)
+                draw.rounded_rectangle([cx - card_w // 2, cy - card_h // 2, cx + card_w // 2, cy + card_h // 2],
+                                       radius=int(H * 0.016), fill=(255, 255, 255, 238),
+                                       outline=(230, 225, 218, 255), width=2)
+            else:
+                draw.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(255, 255, 255, 238),
+                             outline=(230, 225, 218, 255), width=2)
+            glyph = icon_glyphs[idx] if idx < len(icon_glyphs) else ""
+            if glyph == "search":
+                draw.ellipse([cx - 28, cy - 38, cx + 20, cy + 10], outline=navy, width=4)
+                draw.line([(cx + 16, cy + 6), (cx + 36, cy + 26)], fill=navy, width=4)
+                draw.ellipse([cx - 8, cy - 18, cx + 2, cy - 8], fill=yellow)
+            elif glyph == "note":
+                draw.rounded_rectangle([cx - 30, cy - 40, cx + 28, cy + 24], radius=8, outline=navy, width=4)
+                draw.line([(cx - 17, cy - 20), (cx + 15, cy - 20)], fill=yellow, width=4)
+                draw.line([(cx - 17, cy - 3), (cx + 18, cy - 3)], fill=navy, width=3)
+                draw.line([(cx - 17, cy + 13), (cx + 10, cy + 13)], fill=navy, width=3)
+            elif glyph == "sparkle":
+                draw.polygon([(cx, cy - 42), (cx + 10, cy - 10), (cx + 42, cy), (cx + 10, cy + 10), (cx, cy + 42), (cx - 10, cy + 10), (cx - 42, cy), (cx - 10, cy - 10)],
+                             fill=(255, 255, 255, 0), outline=navy)
+                draw.polygon([(cx, cy - 28), (cx + 7, cy - 7), (cx + 28, cy), (cx + 7, cy + 7), (cx, cy + 28), (cx - 7, cy + 7), (cx - 28, cy), (cx - 7, cy - 7)],
+                             fill=yellow)
+            elif glyph == "check":
+                draw.rounded_rectangle([cx - 34, cy - 34, cx + 34, cy + 34], radius=12, outline=navy, width=4)
+                draw.line([(cx - 20, cy + 2), (cx - 5, cy + 18), (cx + 24, cy - 18)], fill=yellow, width=6)
+            elif glyph == "heart":
+                draw.ellipse([cx - 24, cy - 24, cx - 2, cy - 2], fill=yellow, outline=navy, width=3)
+                draw.ellipse([cx + 2, cy - 24, cx + 24, cy - 2], fill=yellow, outline=navy, width=3)
+                draw.polygon([(cx - 26, cy - 10), (cx + 26, cy - 10), (cx, cy + 30)], fill=yellow, outline=navy)
+            elif glyph == "home":
+                draw.line([(cx - 32, cy + 4), (cx, cy - 34), (cx + 32, cy + 4)], fill=navy, width=5)
+                draw.rounded_rectangle([cx - 22, cy + 2, cx + 22, cy + 34], radius=4, outline=navy, width=4)
+                draw.rectangle([cx - 6, cy + 14, cx + 8, cy + 34], fill=yellow, outline=navy)
+            elif glyph == "book":
+                draw.rounded_rectangle([cx - 34, cy - 34, cx - 2, cy + 30], radius=6, outline=navy, width=4)
+                draw.rounded_rectangle([cx + 2, cy - 34, cx + 34, cy + 30], radius=6, outline=navy, width=4)
+                draw.line([(cx, cy - 28), (cx, cy + 34)], fill=navy, width=3)
+                draw.line([(cx - 24, cy - 12), (cx - 10, cy - 12)], fill=yellow, width=4)
+            elif glyph == "yen":
+                _text(draw, (cx - 18, cy - 34), "¥", _load(font_bold_path, int(H * 0.070)), navy)
+                draw.line([(cx - 28, cy + 16), (cx + 28, cy + 16)], fill=yellow, width=4)
+            elif icon_style == "curiosity":
+                if idx == 0:
+                    draw.ellipse([cx - 28, cy - 38, cx + 20, cy + 10], outline=navy, width=4)
+                    draw.line([(cx + 16, cy + 6), (cx + 36, cy + 26)], fill=navy, width=4)
+                    draw.ellipse([cx - 8, cy - 18, cx + 2, cy - 8], fill=yellow)
+                elif idx == 1:
+                    draw.rounded_rectangle([cx - 28, cy - 38, cx + 28, cy + 22], radius=8, outline=navy, width=4)
+                    draw.line([(cx - 16, cy - 18), (cx + 16, cy - 18)], fill=yellow, width=4)
+                    draw.line([(cx - 16, cy - 2), (cx + 12, cy - 2)], fill=navy, width=3)
+                    draw.line([(cx - 16, cy + 12), (cx + 18, cy + 12)], fill=navy, width=3)
+                else:
+                    draw.polygon([(cx, cy - 42), (cx + 10, cy - 10), (cx + 42, cy), (cx + 10, cy + 10), (cx, cy + 42), (cx - 10, cy + 10), (cx - 42, cy), (cx - 10, cy - 10)],
+                                 fill=(255, 255, 255, 0), outline=navy)
+                    draw.polygon([(cx, cy - 28), (cx + 7, cy - 7), (cx + 28, cy), (cx + 7, cy + 7), (cx, cy + 28), (cx - 7, cy + 7), (cx - 28, cy), (cx - 7, cy - 7)],
+                                 fill=yellow)
+            elif icon_style == "lifestyle":
+                if idx == 0:
+                    draw.arc([cx - 30, cy - 34, cx + 30, cy + 26], 210, 520, fill=navy, width=4)
+                    draw.polygon([(cx + 28, cy - 16), (cx + 42, cy - 26), (cx + 38, cy - 8)], fill=yellow)
+                elif idx == 1:
+                    draw.line([(cx - 24, cy + 12), (cx, cy - 30), (cx + 24, cy + 12)], fill=navy, width=4)
+                    draw.line([(cx - 14, cy + 12), (cx - 14, cy + 34), (cx + 14, cy + 34), (cx + 14, cy + 12)], fill=navy, width=4)
+                else:
+                    draw.ellipse([cx - 24, cy - 32, cx + 24, cy + 16], outline=navy, width=4)
+                    draw.arc([cx - 32, cy - 2, cx + 32, cy + 44], 200, 340, fill=yellow, width=4)
+            elif idx == 0:
+                draw.line([(cx - 22, cy - 5), (cx + 14, cy - 38)], fill=navy, width=4)
+                draw.polygon([(cx + 14, cy - 38), (cx + 26, cy - 48), (cx + 21, cy - 31)], outline=navy, fill=(255, 255, 255, 0))
+                draw.line([(cx - 25, cy + 18), (cx + 22, cy + 8)], fill=yellow, width=3)
+            elif idx == 1:
+                draw.ellipse([cx - 22, cy - 42, cx + 22, cy + 2], outline=navy, width=4)
+                draw.rectangle([cx - 12, cy + 0, cx + 12, cy + 14], outline=navy, width=3)
+                draw.line([(cx, cy - 52), (cx, cy - 62)], fill=yellow, width=4)
+                draw.line([(cx - 30, cy - 30), (cx - 42, cy - 36)], fill=yellow, width=4)
+                draw.line([(cx + 30, cy - 30), (cx + 42, cy - 36)], fill=yellow, width=4)
+            else:
+                draw.ellipse([cx - 34, cy - 44, cx + 34, cy + 24], outline=navy, width=4)
+                draw.line([(cx, cy - 38), (cx, cy - 5)], fill=navy, width=4)
+                draw.line([(cx, cy - 5), (cx + 24, cy - 22)], fill=navy, width=4)
+                draw.arc([cx - 38, cy - 48, cx + 38, cy + 28], 300, 45, fill=yellow, width=4)
+            lw, _, _ = _bbox(label, f_small)
+            _text(draw, (cx - lw // 2, cy + r + int(H * 0.020)), label, f_small, navy)
 
     # さりげない装飾
     for sx, sy in [(int(W * 0.525), int(H * 0.125)), (int(W * 0.545), int(H * 0.760)), (int(W * 0.205), int(H * 0.935))]:
@@ -1970,6 +2141,658 @@ def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
     buf = _io.BytesIO()
     out.save(buf, format="JPEG", quality=92)
     return buf.getvalue()
+
+
+def _is_career_site_theme(title: str, article_theme: str = "") -> bool:
+    """はた楽ナビ向けの転職・副業・キャリア領域かを判定する。"""
+    haystack = f"{title} {article_theme}"
+    keys = (
+        "転職", "副業", "キャリア", "仕事", "派遣", "フリーランス", "求人",
+        "給与", "職場", "就職", "面接", "履歴書", "職務経歴書", "メンタル",
+        "ストレス", "辞めたい", "社会復帰", "ブランク", "在宅ワーク",
+        "アルバイト", "パート", "正社員",
+    )
+    return any(k in haystack for k in keys)
+
+
+def _extract_title_head_keyword(title: str) -> str:
+    """タイトル冒頭の重要KWを短く抜き出す。"""
+    head = re.split(r'[がをにはでとの、。！!？?｜|:：・]', title.strip(), maxsplit=1)[0]
+    head = re.sub(r'[「」『』【】\[\]（）()]', '', head).strip()
+    if 2 <= len(head) <= 12:
+        return head
+    return head[:12] if len(head) > 12 else ""
+
+
+def _select_icon_labels(title: str, site: str = "aivice") -> list[str]:
+    """記事内容に応じて下部アイコンの文言を変える。"""
+    if site == "curiosity":
+        if any(k in title for k in ("なぜ", "理由", "意味", "由来", "違い")):
+            return random.choice([["理由", "違い", "豆知識"], ["なぜ？", "意味", "背景"]])
+        if any(k in title for k in ("グルメ", "食べ物", "料理", "レシピ", "スイーツ", "カフェ")):
+            return random.choice([["味", "選び方", "保存"], ["食べ方", "栄養", "比較"]])
+        if any(k in title for k in ("健康", "睡眠", "疲労", "ダイエット", "ストレス", "運動")):
+            return random.choice([["体調", "習慣", "注意点"], ["原因", "対策", "目安"]])
+        if any(k in title for k in ("節約", "お得", "料金", "値段", "口コミ", "評判")):
+            return random.choice([["料金", "比較", "口コミ"], ["お得", "注意点", "選び方"]])
+        if any(k in title for k in ("ドラマ", "映画", "アニメ", "配信", "キャスト", "声優")):
+            return random.choice([["配信", "見どころ", "順番"], ["作品", "人物", "話題"]])
+        if any(k in title for k in ("コスメ", "メイク", "スキンケア", "ファッション")):
+            return random.choice([["使い方", "選び方", "口コミ"], ["色味", "成分", "比較"]])
+        return random.choice([["理由", "方法", "注意点"], ["豆知識", "比較", "使い方"], ["気になる", "調べた", "まとめ"]])
+
+    if site == "hida":
+        if any(k in title for k in ("宿", "ホテル", "旅館", "民宿", "泊")):
+            return random.choice([["立地", "温泉", "予算"], ["部屋", "食事", "口コミ"]])
+        if any(k in title for k in ("温泉", "下呂", "露天風呂", "日帰り入浴")):
+            return random.choice([["湯めぐり", "効能", "日帰り"], ["宿", "料金", "癒し"]])
+        if any(k in title for k in ("グルメ", "ランチ", "カフェ", "食べ歩き", "飛騨牛", "名物")):
+            return random.choice([["名物", "お店", "予算"], ["食べ歩き", "ランチ", "お土産"]])
+        if any(k in title for k in ("白川郷", "古い町並", "高山", "古川", "観光", "モデルコース", "日帰り")):
+            return random.choice([["見どころ", "所要時間", "アクセス"], ["散策", "写真", "休憩"]])
+        if any(k in title for k in ("桜", "紅葉", "雪", "祭", "春", "夏", "秋", "冬")):
+            return random.choice([["季節", "服装", "写真"], ["行事", "景色", "時間"]])
+        return random.choice([["見どころ", "アクセス", "予算"], ["散策", "宿", "グルメ"], ["季節", "写真", "思い出"]])
+
+    if site == "career":
+        if any(k in title for k in ("保育士", "介護士", "看護師")):
+            return random.choice([["人間関係", "転職", "相談"], ["疲れ", "改善", "次の職場"]])
+        if any(k in title for k in ("面接", "選考")):
+            return random.choice([["質問対策", "逆質問", "印象"], ["準備", "受け答え", "内定"]])
+        if any(k in title for k in ("履歴書", "職務経歴書", "志望動機")):
+            return random.choice([["書き方", "自己PR", "添削"], ["実績", "強み", "応募"]])
+        if any(k in title for k in ("副業", "在宅", "フリーランス")):
+            return random.choice([["在宅", "収入", "継続"], ["案件", "単価", "時間"]])
+        if any(k in title for k in ("辞めたい", "ストレス", "メンタル", "疲れ")):
+            return random.choice([["不安", "整理", "相談"], ["休む", "守る", "次の一歩"]])
+        return random.choice([["準備", "比較", "行動"], ["不安", "整理", "一歩"], ["仕事", "お金", "将来"]])
+
+    if "画像生成" in title:
+        return random.choice([["無料", "商用利用", "日本語"], ["画質", "料金", "使い方"]])
+    if any(k in title for k in ("ブログ", "SEO", "ライティング")):
+        return random.choice([["構成", "執筆", "改善"], ["SEO", "時短", "品質"]])
+    if any(k in title for k in ("副業", "稼ぐ", "収益", "アフィリエイト")):
+        return random.choice([["案件", "収益", "継続"], ["始め方", "ツール", "収入"]])
+    if any(k in title for k in ("比較", "おすすめ", "選")):
+        return random.choice([["料金", "機能", "選び方"], ["比較", "無料", "用途"]])
+    return random.choice([["文章作成", "アイデア", "時短"], ["はじめ方", "比較", "活用"], ["スマホ", "副業", "効率化"]])
+
+
+def _is_hida_site_theme(title: str, article_theme: str = "") -> bool:
+    """飛騨の思い出向けの旅行・地域情報かを判定する。"""
+    haystack = f"{title} {article_theme}"
+    specific_keys = (
+        "飛騨", "高山", "白川郷", "古川", "下呂", "奥飛騨", "岐阜",
+        "古い町並", "飛騨牛", "朝市",
+    )
+    if any(k in haystack for k in specific_keys):
+        return True
+    if not any(k in article_theme for k in ("飛騨", "高山", "地域情報", "旅行・観光")):
+        return False
+    generic_keys = (
+        "観光", "旅行", "旅", "温泉", "宿", "ホテル", "旅館", "民宿",
+        "グルメ", "ランチ", "カフェ", "食べ歩き", "お土産",
+        "祭り", "世界遺産", "モデルコース", "日帰り",
+        "アクセス", "紅葉", "雪景色", "桜",
+    )
+    return any(k in haystack for k in generic_keys)
+
+
+def _is_curiosity_site_theme(title: str, article_theme: str = "") -> bool:
+    """気になることブログ向けの雑学・生活情報領域かを判定する。"""
+    haystack = f"{title} {article_theme}"
+    if any(k in article_theme for k in ("雑学", "エンタメ", "生活情報")):
+        return True
+    keys = (
+        "なぜ", "理由", "意味", "違い", "方法", "使い方", "豆知識",
+        "暮らし", "生活", "トレンド", "話題", "気になる", "調べてみた",
+        "食べ物", "健康", "お金", "ことば", "口コミ", "評判",
+    )
+    return any(k in haystack for k in keys)
+
+
+def _is_learning_site_theme(title: str, article_theme: str = "") -> bool:
+    """オンライン学習ナビ向けの学習・資格・スキルアップ領域かを判定する。"""
+    haystack = f"{title} {article_theme}"
+    if any(k in article_theme for k in ("オンライン学習", "プログラミング", "資格", "スキルアップ")):
+        return True
+    keys = (
+        "オンライン学習", "プログラミング", "資格", "スキルアップ", "独学",
+        "通信教育", "スクール", "学習", "勉強", "塾", "小学生",
+        "Python", "JavaScript", "TOEIC", "ITパスポート", "Web制作",
+    )
+    return any(k in haystack for k in keys)
+
+
+def _select_learning_template(title: str) -> str:
+    """オンライン学習ナビ用アイキャッチの構図をタイトルから選ぶ。"""
+    if any(k in title for k in ("プログラミング", "Python", "JavaScript", "Web制作", "IT")):
+        return random.choice(["coding_desk", "study_compare", "online_lesson"])
+    if any(k in title for k in ("塾", "通信教育", "小学生", "算数", "英語", "国語")):
+        return random.choice(["kids_study", "study_compare", "notebook_learning"])
+    if any(k in title for k in ("資格", "TOEIC", "ITパスポート")):
+        return random.choice(["notebook_learning", "online_lesson", "study_compare"])
+    return random.choice(["online_lesson", "notebook_learning", "study_compare"])
+
+
+def _build_learning_background_prompt(title: str, template: str) -> str:
+    """オンライン学習ナビ向けの背景写真プロンプト。文字はPillowで後合成する。"""
+    base = (
+        "16:9 horizontal Japanese online learning media thumbnail background. "
+        "Calm, trustworthy, practical study lifestyle, clean editorial style, not flashy advertising. "
+        "Keep one side clean for large Japanese typography and keep key objects away from outer 8% edges. "
+        "Palette: clean white, soft blue, pale yellow, warm wood, gentle green, deep navy accents. "
+        "ABSOLUTELY NO text, no letters, no numbers, no logos, no watermark. "
+        f"Topic feeling: {title}. "
+    )
+    if template == "coding_desk":
+        return base + "Bright desk with laptop showing abstract blank code-like blocks, notebook, coffee, plant, morning light. No readable screen text."
+    if template == "kids_study":
+        return base + "Warm home study desk for a child: open notebook, pencils, tablet corner, parent support feeling, soft daylight, no faces needed."
+    if template == "study_compare":
+        return base + "Organized comparison desk with laptop, tablet, notebook, blank cards, pen, calm learning decision mood."
+    if template == "notebook_learning":
+        return base + "Close-up of notebook, tablet, pen, sticky notes as blank shapes, tea cup, soft natural light, focused study mood."
+    return base + "Online lesson scene at a clean desk with laptop, headphones, notebook, tablet, warm natural light, generous negative space."
+
+
+def _learning_overlay_texts(title: str, texts: dict, template: str) -> dict:
+    """オンライン学習ナビ向けにタイトル文字を短く整える。"""
+    head_kw = _extract_title_head_keyword(title)
+    main = head_kw or texts.get("main_word", "").strip() or "オンライン学習"
+    accent = "学び方ガイド"
+    strip = "学習ナビ"
+
+    if "プログラミングスクール" in title:
+        main = "プログラミング"
+        accent = "スクール比較"
+    elif "塾" in title and "通信教育" in title:
+        main = "塾と通信教育"
+        accent = "選び方ガイド"
+    elif "算数" in title and "苦手" in title:
+        main = "算数苦手を"
+        accent = "克服する方法"
+    elif "独学" in title:
+        accent = "独学の進め方"
+    elif "資格" in title:
+        accent = "資格の始め方"
+
+    glyph_pool = ["book", "note", "check", "search", "sparkle", "home"]
+    return {
+        "strip_label": strip,
+        "pre_title": random.choice(["迷わない学び方", "挫折しない学習法", "次の一歩を整理"]),
+        "main_word": main[:12],
+        "accent_word": accent[:12],
+        "supplement": random.choice(["自分に合う学び方を選ぶ", "独学とスクールを整理", "続けやすい方法を見つける"]),
+        "badge": random.choice(["保存版", "やさしく解説", "比較"]),
+        "icon_labels": random.choice([["独学", "費用", "比較"], ["教材", "時間", "継続"], ["学習法", "料金", "選び方"]]),
+        "_palette_name": random.choice(["sky", "mint_yellow", "sage", "royal_blue"]),
+        "_template": template,
+        "_panel_curve": random.choice(["soft", "wide", "diagonal"]),
+        "_ribbon_x": random.choice([0.610, 0.640, 0.670]),
+        "_sub_layout": random.choice(["ribbon_top", "icon_cards"]),
+        "_text_side": random.choice(["left", "left", "right"]),
+        "_hide_badge": random.choice([True, False]),
+        "_hide_icons": random.choice([True, False, False]),
+        "_hide_top_icon": True,
+        "_quiet_layout": True,
+        "_icon_style": "dynamic",
+        "_icon_glyphs": random.sample(glyph_pool, 3),
+    }
+
+
+def _select_curiosity_template(title: str) -> str:
+    """気になることブログ用アイキャッチの構図をタイトルから選ぶ。"""
+    if any(k in title for k in ("なぜ", "理由", "意味", "由来", "違い", "豆知識", "ことば")):
+        pool = ["question_flatlay", "notebook_closeup", "soft_illustration"]
+    elif any(k in title for k in ("グルメ", "食べ物", "料理", "レシピ", "スイーツ", "カフェ")):
+        pool = ["food_table", "kitchen_lifestyle", "question_flatlay"]
+    elif any(k in title for k in ("健康", "睡眠", "疲労", "ダイエット", "ストレス", "運動")):
+        pool = ["wellness_morning", "notebook_closeup", "home_lifestyle"]
+    elif any(k in title for k in ("節約", "お得", "料金", "値段", "口コミ", "評判", "比較")):
+        pool = ["desk_compare", "notebook_closeup", "home_lifestyle"]
+    elif any(k in title for k in ("ドラマ", "映画", "アニメ", "配信", "キャスト", "声優")):
+        pool = ["living_entertainment", "soft_illustration", "question_flatlay"]
+    elif any(k in title for k in ("コスメ", "メイク", "スキンケア", "ファッション")):
+        pool = ["beauty_flatlay", "home_lifestyle", "desk_compare"]
+    else:
+        pool = ["question_flatlay", "notebook_closeup", "home_lifestyle", "soft_illustration"]
+
+    history_path = _OUTPUT_DIR.parent / "eyecatch_template_history.json"
+    recent: list[str] = []
+    try:
+        if history_path.exists():
+            data = json.loads(history_path.read_text(encoding="utf-8"))
+            recent = [str(x) for x in data.get("curiosity", [])][-4:]
+    except Exception:
+        recent = []
+
+    available = [tpl for tpl in pool if tpl not in recent[-2:]] or pool
+    selected = random.choice(available)
+    try:
+        history_path.parent.mkdir(parents=True, exist_ok=True)
+        data = {}
+        if history_path.exists():
+            data = json.loads(history_path.read_text(encoding="utf-8"))
+        seq = [str(x) for x in data.get("curiosity", [])]
+        seq.append(selected)
+        data["curiosity"] = seq[-12:]
+        history_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    except Exception:
+        pass
+    return selected
+
+
+def _build_curiosity_background_prompt(title: str, template: str) -> str:
+    """気になることブログ向けの背景写真プロンプト。文字はPillowで後合成する。"""
+    palette = random.choice([
+        "warm ivory, soft yellow, dusty blue, sage green, natural wood",
+        "clean white, pale mint, muted coral, light beige, ink navy",
+        "cream, soft sky blue, apricot, warm gray, botanical green",
+        "linen white, butter yellow, light teal, soft pink, charcoal",
+    ])
+    base = (
+        "16:9 horizontal Japanese curiosity lifestyle blog thumbnail background. "
+        "Friendly magazine editorial style, everyday question, helpful and approachable, not flashy YouTube thumbnail. "
+        "Keep all important objects away from the outer 8% edges and keep one side clean for large Japanese typography. "
+        f"Palette: {palette}. ABSOLUTELY NO text, no letters, no numbers, no logos, no watermark. "
+        f"Topic feeling: {title}. "
+    )
+    if template == "question_flatlay":
+        return (
+            base +
+            "A bright desk flatlay with notebook, blank colorful sticky notes, mug, pen, small plant, magnifying glass, soft daylight. "
+            "Curious everyday research mood with clean negative space."
+        )
+    if template == "notebook_closeup":
+        return (
+            base +
+            "Close-up of hands writing in a notebook beside a smartphone, tea cup, small household object related to the topic, warm natural light. "
+            "No readable writing, calm and useful mood, generous negative space."
+        )
+    if template == "food_table":
+        return (
+            base +
+            "Cozy kitchen or dining table with simple food, plate, cup, napkin, small ingredients, natural morning light. "
+            "Editorial lifestyle food scene, clean negative space for typography."
+        )
+    if template == "kitchen_lifestyle":
+        return (
+            base +
+            "A warm home kitchen counter with utensils, ingredients, towel, small plant, soft sunlight, everyday practical atmosphere. "
+            "No people or hands only, no readable labels, clean negative space."
+        )
+    if template == "wellness_morning":
+        return (
+            base +
+            "Calm wellness morning scene: glass of water, towel, simple breakfast, notebook, soft curtain light, fresh and reassuring mood. "
+            "Clean negative space for typography."
+        )
+    if template == "desk_compare":
+        return (
+            base +
+            "Organized comparison desk with laptop corner, calculator, receipt-like blank paper, pen, small household item, coffee. "
+            "No readable text, practical and trustworthy, clean negative space."
+        )
+    if template == "living_entertainment":
+        return (
+            base +
+            "Cozy living room entertainment scene: sofa, tablet or TV remote, blanket, tea, soft lamp light, relaxed curiosity mood. "
+            "No screens with readable content, clean negative space."
+        )
+    if template == "beauty_flatlay":
+        return (
+            base +
+            "Soft beauty and lifestyle flatlay with skincare bottles without labels, compact mirror, towel, flowers, warm daylight. "
+            "Clean and gentle, one side empty for typography."
+        )
+    return (
+        base +
+        "Bright home lifestyle desk with notebook, phone, mug, small plant, and a few blank pastel cards, everyday curiosity mood. "
+        "Clean negative space for typography."
+    )
+
+
+def _curiosity_overlay_texts(title: str, texts: dict, template: str) -> dict:
+    """気になることブログ向けにタイトル文字を短く整える。"""
+    head_kw = _extract_title_head_keyword(title)
+    main = head_kw or texts.get("main_word", "").strip() or "気になる"
+    accent = texts.get("accent_word", "").strip() or "やさしく解説"
+    strip = "気になる話"
+    hide_icons = random.choice([True, True, False])
+    hide_badge = random.choice([True, True, False])
+
+    if any(k in title for k in ("なぜ", "理由", "意味", "由来", "違い")):
+        accent = "理由をやさしく解説"
+        strip = "なるほど豆知識"
+    elif any(k in title for k in ("グルメ", "食べ物", "料理", "レシピ", "スイーツ", "カフェ")):
+        accent = "おいしい豆知識"
+        strip = "暮らしのグルメ"
+    elif any(k in title for k in ("健康", "睡眠", "疲労", "ダイエット", "ストレス", "運動")):
+        accent = "毎日を整えるヒント"
+        strip = "生活習慣メモ"
+    elif any(k in title for k in ("節約", "お得", "料金", "値段", "口コミ", "評判", "比較")):
+        accent = "損しない選び方"
+        strip = "お得メモ"
+    elif any(k in title for k in ("ドラマ", "映画", "アニメ", "配信", "キャスト", "声優")):
+        accent = "話題をチェック"
+        strip = "エンタメメモ"
+    elif any(k in title for k in ("コスメ", "メイク", "スキンケア", "ファッション")):
+        accent = "選び方ガイド"
+        strip = "美容メモ"
+
+    if "算数" in title and "苦手" in title and "克服" in title:
+        main = "算数苦手を"
+        accent = "克服する方法"
+        strip = "学びのメモ"
+    elif "国語" in title and "苦手" in title and "克服" in title:
+        main = "国語苦手を"
+        accent = "克服する方法"
+        strip = "学びのメモ"
+    elif "英語" in title and "苦手" in title and "克服" in title:
+        main = "英語苦手を"
+        accent = "克服する方法"
+        strip = "学びのメモ"
+    elif "ITスキル" in title:
+        main = "ITスキル"
+        accent = "学び方ガイド"
+        strip = "学びのメモ"
+    elif "未経験" in title and any(k in title for k in ("学ぶ", "独学", "スクール")):
+        main = "未経験から"
+        accent = "学び方ガイド"
+        strip = "学びのメモ"
+
+    sub_layout = random.choice(["ribbon_top", "icon_cards"]) if not hide_icons else "ribbon_top"
+    glyph_pool = ["search", "note", "sparkle", "check", "heart", "home", "book", "yen"]
+    return {
+        "strip_label": strip[:9],
+        "pre_title": random.choice(["ふと気になる疑問", "暮らしの小さな発見", "知ると少し楽しい"]),
+        "main_word": main[:12],
+        "accent_word": accent[:12],
+        "supplement": random.choice(["日常の疑問をすっきり整理", "知っておくと少し便利", "読みやすくまとめました"]),
+        "badge": random.choice(["へぇ！", "保存版", "やさしく解説"]),
+        "icon_labels": _select_icon_labels(title, site="curiosity"),
+        "_palette_name": random.choice(["sky", "peach", "mint_yellow", "blush"]),
+        "_template": template,
+        "_panel_curve": random.choice(["soft", "wide", "diagonal"]),
+        "_ribbon_x": random.choice([0.610, 0.640, 0.670]),
+        "_sub_layout": sub_layout,
+        "_text_side": random.choice(["left", "left", "right"]),
+        "_hide_badge": hide_badge,
+        "_hide_icons": hide_icons,
+        "_hide_top_icon": True,
+        "_quiet_layout": True,
+        "_icon_style": "dynamic",
+        "_icon_glyphs": random.sample(glyph_pool, 3),
+    }
+
+
+def _select_hida_template(title: str) -> str:
+    """飛騨の思い出用アイキャッチの構図をタイトルから選ぶ。"""
+    if any(k in title for k in ("宿", "ホテル", "旅館", "民宿", "泊", "温泉", "下呂", "奥飛騨")):
+        pool = ["ryokan_room", "onsen_morning", "town_evening", "travel_flatlay"]
+    elif any(k in title for k in ("グルメ", "ランチ", "カフェ", "食べ歩き", "飛騨牛", "名物", "お土産")):
+        pool = ["local_food", "market_walk", "travel_flatlay", "town_morning"]
+    elif any(k in title for k in ("白川郷", "古い町並", "高山", "古川", "観光", "モデルコース", "日帰り", "朝市")):
+        pool = ["town_morning", "market_walk", "town_evening", "travel_flatlay"]
+    elif any(k in title for k in ("桜", "紅葉", "雪", "祭", "春", "夏", "秋", "冬")):
+        pool = ["seasonal_path", "town_evening", "ryokan_room", "market_walk"]
+    else:
+        pool = ["town_morning", "travel_flatlay", "ryokan_room", "market_walk"]
+
+    history_path = _OUTPUT_DIR.parent / "eyecatch_template_history.json"
+    recent: list[str] = []
+    try:
+        if history_path.exists():
+            data = json.loads(history_path.read_text(encoding="utf-8"))
+            recent = [str(x) for x in data.get("hida", [])][-4:]
+    except Exception:
+        recent = []
+
+    available = [tpl for tpl in pool if tpl not in recent[-2:]] or pool
+    selected = random.choice(available)
+    try:
+        history_path.parent.mkdir(parents=True, exist_ok=True)
+        data = {}
+        if history_path.exists():
+            data = json.loads(history_path.read_text(encoding="utf-8"))
+        seq = [str(x) for x in data.get("hida", [])]
+        seq.append(selected)
+        data["hida"] = seq[-12:]
+        history_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    except Exception:
+        pass
+    return selected
+
+
+def _build_hida_background_prompt(title: str, template: str) -> str:
+    """飛騨の思い出向けの背景写真プロンプト。文字はPillowで後合成する。"""
+    palette = random.choice([
+        "warm ivory, natural wood brown, moss green, muted indigo, soft morning gold",
+        "snow white, cedar wood, quiet charcoal, pale blue gray, warm lantern amber",
+        "rice paper ivory, old town brown, river green, dusty rose, soft beige",
+        "cream, hinoki wood, deep forest green, warm gray, subdued terracotta",
+    ])
+    base = (
+        "16:9 horizontal Japanese local travel magazine thumbnail background. "
+        "A quiet Hida Takayama travel memory mood, editorial lifestyle photography, warm and trustworthy, not a sales banner. "
+        "Keep all important scenery and people away from the outer 8% edges so WordPress crops will not cut them. "
+        f"Palette: {palette}. ABSOLUTELY NO text, no letters, no numbers, no logos, no watermark. "
+        f"Topic feeling: {title}. "
+    )
+    if template == "ryokan_room":
+        return (
+            base +
+            "A calm Japanese ryokan room with tatami, low wooden table, tea set, yukata fabric, shoji window, soft morning light. "
+            "A hint of mountain scenery outside the window. Left or right side has clean negative space for Japanese typography."
+        )
+    if template == "onsen_morning":
+        return (
+            base +
+            "A serene hot spring travel atmosphere: wooden bath entrance, steam, hand towel, warm lantern light, natural stone and greenery. "
+            "No visible nudity, no crowded people. Large clean negative space for typography."
+        )
+    if template == "local_food":
+        return (
+            base +
+            "A cozy Hida local food table: simple Japanese set meal, Hida beef skewer or local sweets, ceramic dishes, wooden tray, tea. "
+            "Natural window light, inviting but calm. One side has clean negative space for typography."
+        )
+    if template == "market_walk":
+        return (
+            base +
+            "Morning market and old town walk in Hida Takayama: wooden storefronts, noren curtains, small local goods, soft pedestrians blurred in background. "
+            "Warm daylight, gentle travel snapshot feeling. One side has clean negative space for typography."
+        )
+    if template == "town_evening":
+        return (
+            base +
+            "Hida old town street at quiet golden hour, wooden machiya houses, warm lanterns beginning to glow, stone path slightly wet, nostalgic atmosphere. "
+            "No readable signs. Large clean negative space for typography."
+        )
+    if template == "seasonal_path":
+        season = random.choice([
+            "autumn red leaves along a quiet river path",
+            "soft winter snow on wooden roofs and a calm street",
+            "fresh summer green mountains and a clear river",
+            "spring blossoms near a traditional wooden street",
+        ])
+        return (
+            base +
+            f"A seasonal Hida travel scene: {season}, quiet and poetic, natural light, local landscape. "
+            "One side has clean negative space for typography."
+        )
+    return (
+        base +
+        "A neat travel flatlay on a wooden table: map, notebook, camera, train ticket-like blank paper, tea cup, small local souvenir. "
+        "No readable text. Calm natural light and generous negative space for typography."
+    )
+
+
+def _hida_overlay_texts(title: str, texts: dict, template: str) -> dict:
+    """飛騨の思い出向けにタイトル文字を短く整える。"""
+    head_kw = _extract_title_head_keyword(title)
+    main = head_kw or texts.get("main_word", "").strip() or "飛騨旅"
+    accent = texts.get("accent_word", "").strip() or "旅のしおり"
+    strip = "飛騨の思い出"
+
+    if "白川郷" in title:
+        main = "白川郷"
+        accent = "やさしい旅ガイド"
+        strip = "世界遺産さんぽ"
+    elif "高山" in title:
+        main = "飛騨高山" if "飛騨" in title else "高山"
+        accent = "町歩きガイド"
+        strip = "高山さんぽ"
+    elif "下呂" in title or "温泉" in title:
+        main = "温泉旅" if not head_kw else head_kw
+        accent = "癒しの過ごし方"
+        strip = "湯けむり旅"
+    elif any(k in title for k in ("宿", "ホテル", "旅館", "民宿")):
+        main = head_kw or "宿選び"
+        accent = "失敗しない選び方"
+        strip = "宿のしおり"
+    elif any(k in title for k in ("グルメ", "ランチ", "カフェ", "食べ歩き", "飛騨牛", "名物")):
+        main = head_kw or "飛騨グルメ"
+        accent = "味わう旅"
+        strip = "おいしい飛騨"
+    elif any(k in title for k in ("モデルコース", "日帰り", "観光")):
+        main = head_kw or "飛騨観光"
+        accent = "迷わない歩き方"
+        strip = "旅の道しるべ"
+
+    return {
+        "strip_label": strip[:9],
+        "pre_title": random.choice(["旅の記憶", "静かな町歩き", "飛騨の一日"]),
+        "main_word": main[:12],
+        "accent_word": accent[:12],
+        "supplement": random.choice(["土地の空気まで楽しむ", "静かに過ごす旅時間", "思い出に残る旅の準備"]),
+        "badge": "",
+        "icon_labels": [],
+        "_palette_name": random.choice(["sage", "peach", "sky", "mint_yellow"]),
+        "_template": template,
+        "_panel_curve": random.choice(["soft", "wide", "diagonal"]),
+        "_ribbon_x": random.choice([0.595, 0.625, 0.655]),
+        "_sub_layout": "ribbon_top",
+        "_text_side": random.choice(["left", "left", "right"]),
+        "_hide_badge": True,
+        "_hide_icons": True,
+        "_quiet_layout": True,
+    }
+
+
+def _select_career_template(title: str) -> str:
+    """はた楽ナビ用アイキャッチの構図をタイトルから選ぶ。"""
+    if any(k in title for k in ("面接", "履歴書", "職務経歴書", "志望動機", "選考")):
+        return random.choice(["document_desk", "office_person", "interview"])
+    if any(k in title for k in ("辞めたい", "ストレス", "メンタル", "疲れ", "職場", "人間関係")):
+        return random.choice(["window_thinking", "cafe_calm", "document_desk"])
+    if any(k in title for k in ("副業", "フリーランス", "在宅", "収入", "給与", "稼ぐ")):
+        return random.choice(["home_work", "cafe_calm", "document_desk"])
+    return random.choice(["office_person", "document_desk", "cafe_calm", "home_work"])
+
+
+def _build_career_background_prompt(title: str, template: str) -> str:
+    """はた楽ナビ向けの背景写真プロンプト。文字はPillowで後合成する。"""
+    palette = random.choice([
+        "warm ivory, navy, soft green, natural wood, muted coral accents",
+        "clean white, slate blue, pale yellow, warm gray, soft beige",
+        "cream, forest green, dusty blue, light wood, gentle peach",
+        "off-white, charcoal navy, sage, muted gold, linen beige",
+    ])
+    base = (
+        "16:9 horizontal Japanese career lifestyle blog thumbnail background. "
+        "Polished but human editorial style, trustworthy career media, not corporate stock. "
+        "Keep all key objects away from outer 8% edges. "
+        f"Palette: {palette}. ABSOLUTELY NO text, no letters, no numbers, no logos, no watermark. "
+        f"Topic feeling: {title}. "
+    )
+    if template == "document_desk":
+        return (
+            base +
+            "Top-down desk flatlay with resume-like blank papers, notebook, pen, laptop corner, coffee cup, small plant. "
+            "Calm natural daylight, organized but lived-in. One side has clean negative space for Japanese typography."
+        )
+    if template == "interview":
+        return (
+            base +
+            "Soft office meeting room, two people implied by hands and notebooks only, no clear faces, interview preparation atmosphere. "
+            "Warm window light, tidy table, subtle plant. Left or right side has clean negative space for typography."
+        )
+    if template == "window_thinking":
+        return (
+            base +
+            "A Japanese adult in their late 20s to 30s, side/back view by a bright window, holding a mug, thoughtful but hopeful. "
+            "Cozy room, soft morning light, notebook and laptop nearby. Large clean negative space for typography."
+        )
+    if template == "home_work":
+        return (
+            base +
+            "Home workspace with laptop, planner, smartphone, warm tea, soft linen curtain, relaxed remote work atmosphere. "
+            "Japanese adult hands or back view only, practical and calm. Clean negative space for typography."
+        )
+    if template == "cafe_calm":
+        return (
+            base +
+            "Quiet cafe table near a window, laptop, notebook, coffee, soft greenery, calm career planning mood. "
+            "Japanese adult in soft side profile or hands only, natural and not glamorous. Clean negative space for typography."
+        )
+    return (
+        base +
+        "Bright modern office corner, Japanese adult in business casual, side profile or back view, laptop and notebook. "
+        "Natural window light, plants, calm and hopeful career change atmosphere. Clean negative space for typography."
+    )
+
+
+def _career_overlay_texts(title: str, texts: dict, template: str) -> dict:
+    """はた楽ナビ向けにタイトル文字を短く整える。"""
+    head_kw = _extract_title_head_keyword(title)
+    main = head_kw or texts.get("main_word", "").strip() or "働き方"
+    accent = texts.get("accent_word", "").strip() or "完全ガイド"
+    strip = texts.get("strip_label", "").strip() or "はた楽ナビ"
+    glyph_pool = ["note", "check", "home", "heart", "search", "book", "yen"]
+
+    if head_kw:
+        main = head_kw
+
+    if "転職" in title:
+        main = head_kw or "転職"
+        accent = "失敗しない進め方"
+        strip = "転職ガイド"
+    elif "副業" in title:
+        main = "副業"
+        accent = "はじめ方ガイド"
+        strip = "副業・在宅"
+    elif "面接" in title:
+        main = "面接対策"
+        accent = "よくある不安を整理"
+        strip = "選考対策"
+    elif "履歴書" in title or "職務経歴書" in title:
+        main = "書類作成"
+        accent = "伝わる書き方"
+        strip = "応募準備"
+    elif "辞めたい" in title or "ストレス" in title or "メンタル" in title:
+        main = head_kw or "仕事の悩み"
+        accent = "ひとりで抱えない"
+        strip = "心を整える"
+
+    return {
+        "strip_label": strip[:8],
+        "pre_title": random.choice(["迷ったときの道しるべ", "働き方を整える", "次の一歩を考える"]),
+        "main_word": main[:12],
+        "accent_word": accent[:12],
+        "supplement": random.choice(["不安を整理して次へ進む", "リアルな悩みに寄り添う", "自分に合う働き方を探す"]),
+        "badge": random.choice(["やさしく解説", "保存版", "迷わない"]),
+        "icon_labels": _select_icon_labels(title, site="career"),
+        "_palette_name": random.choice(["sage", "sky", "peach", "royal_blue", "mint_yellow"]),
+        "_template": template,
+        "_panel_curve": random.choice(["soft", "wide", "diagonal"]),
+        "_ribbon_x": random.choice([0.615, 0.645, 0.675]),
+        "_sub_layout": random.choice(["ribbon_top", "badge_circle", "sticky_note", "icon_cards"]),
+        "_text_side": random.choice(["left", "right"]),
+        "_icon_style": "dynamic",
+        "_icon_glyphs": random.sample(glyph_pool, 3),
+    }
 
 
 def _save_debug_image(img_bytes: bytes, image_type: str, model: str) -> None:
@@ -2078,6 +2901,50 @@ def generate_lifestyle_eyecatch_image(
     model = wp_context.get_eyecatch_model() or _DEFAULT_HF_MODEL
     topic = keyword or title
     print(f"[IMAGE] lifestyle eyecatch model: {model}")
+
+    if _is_hida_site_theme(title, article_theme):
+        print("[IMAGE] 飛騨の思い出向け・旅メディア型バナーで生成します")
+        hida_template = _select_hida_template(title)
+        print(f"[IMAGE] hida template: {hida_template}")
+        bg_prompt = _build_hida_background_prompt(title, hida_template)
+        bg_bytes = _call_model(model, bg_prompt, W_EYECATCH, H_EYECATCH)
+        texts = _hida_overlay_texts(title, _generate_overlay_texts(title), hida_template)
+        final_bytes = _overlay_beginner_guide_banner(bg_bytes, texts)
+        _save_debug_image(final_bytes, "codex_hida_travel_eyecatch", model)
+        return final_bytes
+
+    if _is_learning_site_theme(title, article_theme):
+        print("[IMAGE] オンライン学習ナビ向け・学習メディア型バナーで生成します")
+        learning_template = _select_learning_template(title)
+        print(f"[IMAGE] learning template: {learning_template}")
+        bg_prompt = _build_learning_background_prompt(title, learning_template)
+        bg_bytes = _call_model(model, bg_prompt, W_EYECATCH, H_EYECATCH)
+        texts = _learning_overlay_texts(title, _generate_overlay_texts(title), learning_template)
+        final_bytes = _overlay_beginner_guide_banner(bg_bytes, texts)
+        _save_debug_image(final_bytes, "codex_webstudy_learning_eyecatch", model)
+        return final_bytes
+
+    if _is_curiosity_site_theme(title, article_theme):
+        print("[IMAGE] 気になることブログ向け・雑学ライフ型バナーで生成します")
+        curiosity_template = _select_curiosity_template(title)
+        print(f"[IMAGE] curiosity template: {curiosity_template}")
+        bg_prompt = _build_curiosity_background_prompt(title, curiosity_template)
+        bg_bytes = _call_model(model, bg_prompt, W_EYECATCH, H_EYECATCH)
+        texts = _curiosity_overlay_texts(title, _generate_overlay_texts(title), curiosity_template)
+        final_bytes = _overlay_beginner_guide_banner(bg_bytes, texts)
+        _save_debug_image(final_bytes, "codex_hapipo8_curiosity_eyecatch", model)
+        return final_bytes
+
+    if _is_career_site_theme(title, article_theme):
+        print("[IMAGE] はた楽ナビ向けキャリア型バナーで生成します")
+        career_template = _select_career_template(title)
+        print(f"[IMAGE] career template: {career_template}")
+        bg_prompt = _build_career_background_prompt(title, career_template)
+        bg_bytes = _call_model(model, bg_prompt, W_EYECATCH, H_EYECATCH)
+        texts = _career_overlay_texts(title, _generate_overlay_texts(title), career_template)
+        final_bytes = _overlay_beginner_guide_banner(bg_bytes, texts)
+        _save_debug_image(final_bytes, "codex_hataraku_career_eyecatch", model)
+        return final_bytes
 
     if _is_beginner_guide_title(title):
         print("[IMAGE] 初心者ガイド型バナーで生成します")
