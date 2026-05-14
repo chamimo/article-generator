@@ -379,13 +379,13 @@ def create_post(article: dict, featured_media_id: int | None = None) -> dict:
         "categories": [category_id],
         "meta": {
             # SEO SIMPLE PACK（全ブログ共通・要 functions.php スニペット）
-            "ssp_meta_title":        article.get("seo_title") or article.get("title", ""),
+            "ssp_meta_title":        article.get("title", ""),
             "ssp_meta_description":  article.get("meta_description", ""),
             # Yoast SEO（インストール済みの場合は自動で有効）
-            "_yoast_wpseo_title":    article.get("seo_title") or article.get("title", ""),
+            "_yoast_wpseo_title":    article.get("title", ""),
             "_yoast_wpseo_metadesc": article.get("meta_description", ""),
             # Rank Math（インストール済みの場合は自動で有効）
-            "rank_math_title":       article.get("seo_title") or article.get("title", ""),
+            "rank_math_title":       article.get("title", ""),
             "rank_math_description": article.get("meta_description", ""),
             # OGP / その他
             "ssp_meta_ogimage_url":      article.get("eyecatch_url", ""),

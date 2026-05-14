@@ -1,0 +1,335 @@
+===== [HAPIPO8] 実行開始: 2026-05-14 04:10:01 =====
+2026-05-14 04:10:04 [INFO] ============================================================
+2026-05-14 04:10:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-14 04:10:04 [INFO] ============================================================
+2026-05-14 04:10:04 [INFO] 対象ブログ: ['hapipo8']
+2026-05-14 04:10:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-14 04:10:06 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-14 04:10:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-14 04:10:06 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-05-14 04:10:06 [INFO]   fact_check       : True
+2026-05-14 04:10:06 [INFO]   article_type_mix : True
+2026-05-14 04:10:06 [INFO]   stop_words       : ['2026']
+2026-05-14 04:10:06 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'もぐワン ペットフード', 'エアトリ 夜行・高速バス', 'オーケンウォーター', 'トリア', 'ダイブ', 'NELL マットレス', '工場求人ワールド', 'DMM 生成AI CAMP', '咲夜レアルマットレス', 'GMOとくとくBB', 'だれでもモバイル', 'フレッツ光', 'ソフトバンク光', 'フクウロ', 'リゾバ', 'ORBIS AMBER(オルビス アンバー)', '快眠タイムズストア', 'トラベル・スタンダード・ジャパン', 'ヒューマンアカデミー', 'メディカルフードサービス', '福ちゃん', 'DELIPICKS', 'every frecious（エブリィフレシャス）', 'Dr.つるかめキッチン', 'ポニークリーニング', 'BIGLOBE WiMAX +5G', 'Amazon Prime Video', 'nosh - ナッシュ', 'AI英会話アプリ【スピーク】', 'シェフの無添つくりおき', '楽器の買取屋さん', '食楽膳', '体験型カタログギフト【EXETIME】', 'BIGLOBE光'}（気になることブログ のSSを確認してください）
+[asp_fetcher] ⚠️  別ブログ案件を除外: 35件除外 → 0件に絞り込み
+[asp_fetcher] 気になることブログ / 「ASP案件マスター」: 0件
+2026-05-14 04:10:08 [INFO] [hapipo8] アフィリ案件: 6件（blog_config.json）
+2026-05-14 04:10:08 [INFO] [hapipo8]   メディカルフードサービス → https://hapipo8.com/medical_food
+2026-05-14 04:10:08 [INFO] [hapipo8]   シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-05-14 04:10:08 [INFO] [hapipo8]   nosh - ナッシュ → https://hapipo8.com/nosh
+2026-05-14 04:10:08 [INFO] [hapipo8]   DELIPICKS → https://hapipo8.com/delipicks
+2026-05-14 04:10:08 [INFO] [hapipo8]   Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-05-14 04:10:08 [INFO] [hapipo8]   食楽膳 → https://hapipo8.com/shokurakuzen
+2026-05-14 04:10:11 [INFO] [wp] 記事取得: 計161件 (publish=161)
+2026-05-14 04:10:11 [INFO] [hapipo8] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.4, 'monetize': 0.1})
+2026-05-14 04:10:12 [INFO] [fetch] サブKW紐付け: 170件 → 49記事に統合
+2026-05-14 04:10:12 [INFO] [fetch] [キーワード] メインKW: 27件（vol≥30 or N/A）  サブKW除外: 170件（統合対象）  投稿済みスキップ: 125件  テーマ外除外: 283件  aim内訳: [now:1, aim:61, claude:25, add:223]
+2026-05-14 04:10:12 [INFO] [dup_check] 優先候補: 27件 {'now': 1, 'aim': 2, 'add': 24} を先頭評価
+2026-05-14 04:10:13 [INFO] [dup_check] 除外: 「シェフの無添つくりおき 口コミ 評判」 → カニバリ(2/3語重複 ['口コミ', '評判']): 「もぐワンの口コミ・評判を徹底検証！成分・価格・食いつきのリアルな声」
+2026-05-14 04:10:13 [INFO] [dup_check] 除外: 「睡眠の質 上げる 方法 グッズ」 → カニバリ(3/3語重複 ['睡眠の質', '上げる', 'グッズ']): 「睡眠の質を上げる方法・グッズ完全ガイド！今夜から熟睡できる12選」
+2026-05-14 04:10:13 [INFO] [dup_check] 除外: 「宅食 一人暮らし 男性」 → カニバリ(3/3語重複 ['宅食', '一人暮らし', '男性']): 「宅食 一人暮らし男性おすすめ6選！栄養・コスト・時短を徹底比較」
+2026-05-14 04:10:13 [INFO] [dup_check] 除外: 「夏休み お金かけない 過ごし方」 → カニバリ(3/3語重複 ['夏休み', 'お金かけない', '過ごし方']): 「夏休みお金かけない過ごし方20選！子どもも家族も無料で楽しむアイデア集」
+2026-05-14 04:10:13 [INFO] [dup_check] 除外: 「AIで稼ぐ方法」 → コアKW重複: 「AIで稼ぐ方法10選！初心者でも副業で月収を上げる具体的なやり方」(core: 'aiで稼ぐ方法')
+2026-05-14 04:10:13 [INFO] [dup_check] 完了: 選定=1件 / 除外=5件 (pool=27件, 要求=1件)
+2026-05-14 04:10:13 [INFO] [select] 1件選定 (要求=1件)
+2026-05-14 04:10:13 [INFO] [select]   1. 「副業 バレない 方法」 vol=0 seo=N/A comp=N/A
+2026-05-14 04:10:13 [INFO] [hapipo8] LONGTAIL選定: 1件
+2026-05-14 04:10:13 [INFO] [hapipo8] 候補: 27件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.2204 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.4114(¥212) / 8記事
+2026-05-14 04:10:13 [INFO] [api_guard] 本日の使用量: $1.2204 / ¥183 (21回呼び出し)
+2026-05-14 04:10:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-14 04:10:13 [INFO] [hapipo8] [1/1] [LONGTAIL] 「副業 バレない 方法」 vol=0 ★ADD
+2026-05-14 04:10:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-14 04:10:13 [INFO] [generate] 生成開始: 「副業 バレない 方法」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「副業 バレない 方法」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $1.2204 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.4114(¥212) / 8記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=108 out=102 → $0.0005  (lsi:副業 バレない 方法)
+[api_guard] 本日の使用量: $1.2209 / ¥183 (827回呼び出し)
+[article_generator] 共起語: 副業禁止、給与所得以外の所得、確定申告、住民税、マイナンバー、源泉徴収、会社にバレる理由、副業がバレた場合、税務調査、雑...
+[api_guard] ✅ 本日: $1.2209 / 1時間: $0.0005  (上限 日次$10.00 / 時間$5.00)  全体: $1.4119(¥212) / 8記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=175 out=499 → $0.0021  (kw_research:副業 バレない 方法)
+[api_guard] 本日の使用量: $1.2230 / ¥183 (828回呼び出し)
+[article_generator] サジェスト: 副業 バレない 方法・副業 バレない 確定申告・副業 バレない 給与所得...
+[article_generator] 検索意図: 購買直前 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $1.2230 / 1時間: $0.0026  (上限 日次$10.00 / 時間$5.00)  全体: $1.4140(¥212) / 8記事
+[api_guard] 記録: claude-sonnet-4-6 in=5762 out=10998 → $0.1823  (article:副業 バレない 方法)
+[api_guard] 本日の使用量: $1.4053 / ¥210 (829回呼び出し)
+[imagefx] 背景:B / ビジュアル:Cute flat icons of laptop, coins, calendar, lightb
+[imagefx] タイトル(英): Seven Ways Hide Side Income
+[article_generator] 完了: 「副業がバレない方法7つ！確定申告・住民税の対策を会社員向けに解説」 カテゴリ: 未設定(-) タグ: ['副業', '確定申告', '住民税', '会社員の副業', '副業バレない対策']
+2026-05-14 04:13:16 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「nosh - ナッシュ」(ID:3979)
+2026-05-14 04:13:16 [INFO] [generate] 完了: 「副業がバレない方法7つ！確定申告・住民税の対策を会社員向けに解説」
+2026-05-14 04:13:16 [INFO] [post] 投稿方式: publish
+[category_selector] カテゴリ取得: 36件
+[category_selector] 「副業 バレない 方法」→ マッチなし、設定フォールバック: ライフ(102)
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#副業): fukugyo-barenai-houhou-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 副業が会社にバレる主な理由と仕組みを知っておこうのイメージ画像
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration featuring a locked briefcase, tax documents with chec...
+[image_generator] 完了 (66KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_041328_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4188)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 副業がバレない方法7選｜確定申告・住民税の具体的な対策
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A soft flat design illustration featuring a locked folder, hidden envelope, and ...
+[image_generator] 完了 (49KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_041340_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4189)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: バレにくい在宅副業の選び方と始め方のポイント
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 161件
+[internal_linker] 古い記事を除外: 123件（2年以上前）→ 38件で選定
+[internal_linker] 同カテゴリー: 8件選定（ルールベース）
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['ゴールデンウィークのホテルを安く予約する方法7選！格安で泊ま', 'AIで稼ぐ方法10選！初心者でも副業で月収を上げる具体的なや', '引きこもりから社会復帰する方法7ステップ！段階的に自信を取り', '夏休みお金かけない過ごし方20選！子どもも家族も無料で楽しむ', 'ゴールデンウィーク車なし旅行おすすめ10選！電車・新幹線・飛', 'もぐワンの口コミ・評判を徹底検証！成分・価格・食いつきのリア', 'ゴールデンウィークに空いてる温泉はどこ？穴場・混雑回避・日帰', 'ゴールデンウィーク カップル穴場デート15選！混雑なし・安い']
+[wordpress] タグ設定: ['副業', '確定申告', '住民税', '会社員の副業', '副業バレない対策']
+[wordpress] 投稿方式: publish
+[wordpress] 投稿完了 (ID: 4190) → https://hapipo8.com/wp-admin/post.php?post=4190&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行375 「副業 バレない 方法」→ 投稿済み (2026/05/14, ID:4190) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「副業がバレない方法7つ！確定申告・住民税の対策を会社員向けに」
+2026-05-14 04:13:55 [INFO] [post] WP投稿完了: ID=4190 → https://hapipo8.com/wp-admin/post.php?post=4190&action=edit
+2026-05-14 04:13:55 [INFO] [hapipo8] [1/1] ✅ 完了: 「副業がバレない方法7つ！確定申告・住民税の対策を会社員向けに解説」
+2026-05-14 04:13:55 [INFO] [hapipo8] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-14 04:13:55 [INFO] 
+============================================================
+2026-05-14 04:13:55 [INFO] 【全体サマリー】
+2026-05-14 04:13:55 [INFO]   ブログ数  : 1件
+2026-05-14 04:13:55 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-14 04:13:55 [INFO]   所要時間  : 231.9秒
+2026-05-14 04:13:55 [INFO]   ✅ [hapipo8] 副業 バレない 方法 → 副業がバレない方法7つ！確定申告・住民税の対策を会社員向けに解説
+2026-05-14 04:13:55 [INFO]        https://hapipo8.com/wp-admin/post.php?post=4190&action=edit
+2026-05-14 04:13:55 [INFO] ============================================================
+===== [HAPIPO8] 記事生成終了: 2026-05-14 04:13:56 / exit=0 =====
+===== [HAPIPO8] 実行開始: 2026-05-14 11:30:01 =====
+2026-05-14 11:30:04 [INFO] ============================================================
+2026-05-14 11:30:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-14 11:30:04 [INFO] ============================================================
+2026-05-14 11:30:04 [INFO] 対象ブログ: ['hapipo8']
+2026-05-14 11:30:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-14 11:30:06 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-14 11:30:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-14 11:30:06 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-05-14 11:30:06 [INFO]   fact_check       : True
+2026-05-14 11:30:06 [INFO]   article_type_mix : True
+2026-05-14 11:30:06 [INFO]   stop_words       : ['2026']
+2026-05-14 11:30:06 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'ORBIS AMBER(オルビス アンバー)', 'もぐワン ペットフード', 'GMOとくとくBB', 'DMM 生成AI CAMP', 'every frecious（エブリィフレシャス）', 'トリア', 'トラベル・スタンダード・ジャパン', 'オーケンウォーター', 'エアトリ 夜行・高速バス', 'シェフの無添つくりおき', 'フレッツ光', '工場求人ワールド', 'ソフトバンク光', '食楽膳', '体験型カタログギフト【EXETIME】', 'BIGLOBE光', 'AI英会話アプリ【スピーク】', 'メディカルフードサービス', '咲夜レアルマットレス', 'ヒューマンアカデミー', '快眠タイムズストア', 'Amazon Prime Video', '楽器の買取屋さん', 'BIGLOBE WiMAX +5G', 'だれでもモバイル', 'ダイブ', 'Dr.つるかめキッチン', 'nosh - ナッシュ', '福ちゃん', 'NELL マットレス', 'DELIPICKS', 'リゾバ', 'フクウロ', 'ポニークリーニング'}（気になることブログ のSSを確認してください）
+[asp_fetcher] ⚠️  別ブログ案件を除外: 35件除外 → 0件に絞り込み
+[asp_fetcher] 気になることブログ / 「ASP案件マスター」: 0件
+2026-05-14 11:30:08 [INFO] [hapipo8] アフィリ案件: 6件（blog_config.json）
+2026-05-14 11:30:08 [INFO] [hapipo8]   メディカルフードサービス → https://hapipo8.com/medical_food
+2026-05-14 11:30:08 [INFO] [hapipo8]   シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-05-14 11:30:08 [INFO] [hapipo8]   nosh - ナッシュ → https://hapipo8.com/nosh
+2026-05-14 11:30:08 [INFO] [hapipo8]   DELIPICKS → https://hapipo8.com/delipicks
+2026-05-14 11:30:08 [INFO] [hapipo8]   Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-05-14 11:30:08 [INFO] [hapipo8]   食楽膳 → https://hapipo8.com/shokurakuzen
+2026-05-14 11:30:10 [INFO] [wp] 記事取得: 計162件 (publish=162)
+2026-05-14 11:30:10 [INFO] [hapipo8] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.4, 'monetize': 0.1})
+2026-05-14 11:30:12 [INFO] [fetch] サブKW紐付け: 170件 → 49記事に統合
+2026-05-14 11:30:12 [INFO] [fetch] [キーワード] メインKW: 27件（vol≥30 or N/A）  サブKW除外: 170件（統合対象）  投稿済みスキップ: 125件  テーマ外除外: 283件  aim内訳: [now:1, aim:61, claude:25, add:223]
+2026-05-14 11:30:12 [INFO] [dup_check] 優先候補: 27件 {'now': 1, 'aim': 2, 'add': 24} を先頭評価
+2026-05-14 11:30:12 [INFO] [dup_check] 除外: 「シェフの無添つくりおき 口コミ 評判」 → カニバリ(2/3語重複 ['口コミ', '評判']): 「もぐワンの口コミ・評判を徹底検証！成分・価格・食いつきのリアルな声」
+2026-05-14 11:30:12 [INFO] [dup_check] 除外: 「睡眠の質 上げる 方法 グッズ」 → カニバリ(3/3語重複 ['睡眠の質', '上げる', 'グッズ']): 「睡眠の質を上げる方法・グッズ完全ガイド！今夜から熟睡できる12選」
+2026-05-14 11:30:12 [INFO] [dup_check] 除外: 「宅食 一人暮らし 男性」 → カニバリ(3/3語重複 ['宅食', '一人暮らし', '男性']): 「宅食 一人暮らし男性おすすめ6選！栄養・コスト・時短を徹底比較」
+2026-05-14 11:30:12 [INFO] [dup_check] 除外: 「夏休み お金かけない 過ごし方」 → カニバリ(3/3語重複 ['夏休み', 'お金かけない', '過ごし方']): 「夏休みお金かけない過ごし方20選！子どもも家族も無料で楽しむアイデア集」
+2026-05-14 11:30:12 [INFO] [dup_check] 除外: 「AIで稼ぐ方法」 → コアKW重複: 「AIで稼ぐ方法10選！初心者でも副業で月収を上げる具体的なやり方」(core: 'aiで稼ぐ方法')
+2026-05-14 11:30:12 [INFO] [dup_check] 除外: 「副業 バレない 方法」 → カニバリ(2/2語重複 ['副業', 'バレない']): 「副業がバレない方法7つ！確定申告・住民税の対策を会社員向けに解説」
+2026-05-14 11:30:12 [INFO] [dup_check] 除外: 「引きこもり 社会復帰 方法」 → カニバリ(2/2語重複 ['引きこもり', '社会復帰']): 「引きこもりから社会復帰する方法7ステップ！段階的に自信を取り戻すには」
+2026-05-14 11:30:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=7件 (pool=27件, 要求=1件)
+2026-05-14 11:30:12 [INFO] [select] 1件選定 (要求=1件)
+2026-05-14 11:30:12 [INFO] [select]   1. 「算数 苦手 克服 方法 小学生」 vol=0 seo=N/A comp=N/A
+2026-05-14 11:30:12 [INFO] [hapipo8] LONGTAIL選定: 1件
+2026-05-14 11:30:12 [INFO] [hapipo8] 候補: 27件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.6966 / 1時間: $0.1801  (上限 日次$10.00 / 時間$5.00)  全体: $0.6966(¥104) / 4記事
+2026-05-14 11:30:12 [INFO] [api_guard] 本日の使用量: $0.6966 / ¥104 (12回呼び出し)
+2026-05-14 11:30:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-14 11:30:12 [INFO] [hapipo8] [1/1] [LONGTAIL] 「算数 苦手 克服 方法 小学生」 vol=0 ★ADD
+2026-05-14 11:30:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-14 11:30:12 [INFO] [generate] 生成開始: 「算数 苦手 克服 方法 小学生」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「算数 苦手 克服 方法 小学生」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.6966 / 1時間: $0.1801  (上限 日次$10.00 / 時間$5.00)  全体: $0.6966(¥104) / 4記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=115 out=148 → $0.0007  (lsi:算数 苦手 克服 方法 小学生)
+[api_guard] 本日の使用量: $0.6973 / ¥104 (845回呼び出し)
+[article_generator] 共起語: 算数が苦手な理由、計算力を鍛える方法、図形問題の解き方、文章問題の読解力、九九の覚え方、分数の理解、繰り上がり繰り下がり...
+[api_guard] ✅ 本日: $0.6973 / 1時間: $0.1808  (上限 日次$10.00 / 時間$5.00)  全体: $0.6973(¥105) / 4記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=182 out=561 → $0.0024  (kw_research:算数 苦手 克服 方法 小学生)
+[api_guard] 本日の使用量: $0.6997 / ¥104 (846回呼び出し)
+[article_generator] サジェスト: 算数 苦手 克服 方法 小学生・算数 苦手 理由 小学生・算数 得意になる方法 小学生...
+[article_generator] 検索意図: 購買直前 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.6997 / 1時間: $0.1832  (上限 日次$10.00 / 時間$5.00)  全体: $0.6997(¥105) / 4記事
+[api_guard] 記録: claude-sonnet-4-6 in=5877 out=9395 → $0.1586  (article:算数 苦手 克服 方法 小学生)
+[api_guard] 本日の使用量: $0.8583 / ¥128 (847回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of calculator, lightbulb, checkmar
+[imagefx] タイトル(英): Overcoming Elementary Math Difficulties
+[article_generator] 完了: 「小学生の算数苦手を克服する方法7選！親が教えるコツと効果的な勉強法」 カテゴリ: 未設定(-) タグ: ['算数苦手克服', '小学生勉強法', '家庭学習', '算数教え方', 'つまずき単元']
+2026-05-14 11:32:56 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「nosh - ナッシュ」(ID:3979)
+2026-05-14 11:32:56 [INFO] [generate] 完了: 「小学生の算数苦手を克服する方法7選！親が教えるコツと効果的な勉強法」
+2026-05-14 11:32:56 [INFO] [post] 投稿方式: publish
+[category_selector] カテゴリ取得: 36件
+[category_selector] 「算数 苦手 克服 方法 小学生」→ マッチなし、設定フォールバック: ライフ(102)
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful math symbols and number blocks floating on soft pastel gradient backgro...
+[image_generator] 完了 (64KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_113307_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4192)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: 小学生が算数を苦手になる理由とつまずきやすい単元
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful math books, pencils, and geometric shapes arranged in a flat design sty...
+[image_generator] 完了 (80KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_113321_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4193)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 算数苦手を克服する効果的な勉強法と親の教え方
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful math textbooks, pencils, and educational blocks arranged in soft pastel...
+[image_generator] 完了 (90KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_113332_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4194)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 算数苦手な小学生におすすめの教材と塾の選び方
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 162件
+[internal_linker] 古い記事を除外: 123件（2年以上前）→ 39件で選定
+[internal_linker] 同カテゴリー: 8件選定（ルールベース）
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['ゴールデンウィークのホテルを安く予約する方法7選！格安で泊ま', '引きこもりから社会復帰する方法7ステップ！段階的に自信を取り', 'AIで稼ぐ方法10選！初心者でも副業で月収を上げる具体的なや', '副業がバレない方法7つ！確定申告・住民税の対策を会社員向けに', 'ゴールデンウィーク車なし旅行おすすめ10選！電車・新幹線・飛', '夏休みお金かけない過ごし方20選！子どもも家族も無料で楽しむ', 'ゴールデンウィーク東京日帰りおすすめ15選！穴場・子連れ・混', 'ゴールデンウィーク カップル穴場デート15選！混雑なし・安い']
+[wordpress] タグ設定: ['算数苦手克服', '小学生勉強法', '家庭学習', '算数教え方', 'つまずき単元']
+[wordpress] 投稿方式: publish
+[wordpress] 投稿完了 (ID: 4195) → https://hapipo8.com/wp-admin/post.php?post=4195&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行385 「算数 苦手 克服 方法 小学生」→ 投稿済み (2026/05/14, ID:4195) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「小学生の算数苦手を克服する方法7選！親が教えるコツと効果的な」
+2026-05-14 11:33:54 [INFO] [post] WP投稿完了: ID=4195 → https://hapipo8.com/wp-admin/post.php?post=4195&action=edit
+2026-05-14 11:33:54 [INFO] [hapipo8] [1/1] ✅ 完了: 「小学生の算数苦手を克服する方法7選！親が教えるコツと効果的な勉強法」
+2026-05-14 11:33:54 [INFO] [hapipo8] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-14 11:33:54 [INFO] 
+============================================================
+2026-05-14 11:33:54 [INFO] 【全体サマリー】
+2026-05-14 11:33:54 [INFO]   ブログ数  : 1件
+2026-05-14 11:33:54 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-14 11:33:54 [INFO]   所要時間  : 230.2秒
+2026-05-14 11:33:54 [INFO]   ✅ [hapipo8] 算数 苦手 克服 方法 小学生 → 小学生の算数苦手を克服する方法7選！親が教えるコツと効果的な勉強法
+2026-05-14 11:33:54 [INFO]        https://hapipo8.com/wp-admin/post.php?post=4195&action=edit
+2026-05-14 11:33:54 [INFO] ============================================================
+===== [HAPIPO8] 記事生成終了: 2026-05-14 11:33:56 / exit=0 =====
+===== [HAPIPO8] 実行開始: 2026-05-14 16:00:00 =====
+2026-05-14 16:00:04 [INFO] ============================================================
+2026-05-14 16:00:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-14 16:00:04 [INFO] ============================================================
+2026-05-14 16:00:04 [INFO] 対象ブログ: ['hapipo8']
+2026-05-14 16:00:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-14 16:00:06 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-14 16:00:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-14 16:00:06 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-05-14 16:00:06 [INFO]   fact_check       : True
+2026-05-14 16:00:06 [INFO]   article_type_mix : True
+2026-05-14 16:00:06 [INFO]   stop_words       : ['2026']
+2026-05-14 16:00:06 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'オーケンウォーター', '快眠タイムズストア', '体験型カタログギフト【EXETIME】', 'ダイブ', 'フクウロ', 'ソフトバンク光', '咲夜レアルマットレス', '食楽膳', 'every frecious（エブリィフレシャス）', 'トリア', 'だれでもモバイル', 'フレッツ光', 'ポニークリーニング', 'トラベル・スタンダード・ジャパン', 'Amazon Prime Video', 'nosh - ナッシュ', 'エアトリ 夜行・高速バス', 'BIGLOBE光', '福ちゃん', 'リゾバ', 'AI英会話アプリ【スピーク】', 'DMM 生成AI CAMP', 'Dr.つるかめキッチン', 'DELIPICKS', '楽器の買取屋さん', 'シェフの無添つくりおき', 'NELL マットレス', 'ヒューマンアカデミー', 'ORBIS AMBER(オルビス アンバー)', 'メディカルフードサービス', 'GMOとくとくBB', 'BIGLOBE WiMAX +5G', '工場求人ワールド', 'もぐワン ペットフード'}（気になることブログ のSSを確認してください）
+[asp_fetcher] ⚠️  別ブログ案件を除外: 35件除外 → 0件に絞り込み
+[asp_fetcher] 気になることブログ / 「ASP案件マスター」: 0件
+2026-05-14 16:00:08 [INFO] [hapipo8] アフィリ案件: 6件（blog_config.json）
+2026-05-14 16:00:08 [INFO] [hapipo8]   メディカルフードサービス → https://hapipo8.com/medical_food
+2026-05-14 16:00:08 [INFO] [hapipo8]   シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-05-14 16:00:08 [INFO] [hapipo8]   nosh - ナッシュ → https://hapipo8.com/nosh
+2026-05-14 16:00:08 [INFO] [hapipo8]   DELIPICKS → https://hapipo8.com/delipicks
+2026-05-14 16:00:08 [INFO] [hapipo8]   Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-05-14 16:00:08 [INFO] [hapipo8]   食楽膳 → https://hapipo8.com/shokurakuzen
+2026-05-14 16:00:09 [INFO] [wp] 記事取得: 計163件 (publish=163)
+2026-05-14 16:00:09 [INFO] [hapipo8] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.4, 'monetize': 0.1})
+2026-05-14 16:00:11 [INFO] [fetch] サブKW紐付け: 170件 → 49記事に統合
+2026-05-14 16:00:11 [INFO] [fetch] [キーワード] メインKW: 27件（vol≥30 or N/A）  サブKW除外: 170件（統合対象）  投稿済みスキップ: 125件  テーマ外除外: 283件  aim内訳: [now:1, aim:61, claude:25, add:223]
+2026-05-14 16:00:11 [INFO] [dup_check] 優先候補: 27件 {'now': 1, 'aim': 2, 'add': 24} を先頭評価
+2026-05-14 16:00:11 [INFO] [dup_check] 除外: 「シェフの無添つくりおき 口コミ 評判」 → カニバリ(2/3語重複 ['口コミ', '評判']): 「もぐワンの口コミ・評判を徹底検証！成分・価格・食いつきのリアルな声」
+2026-05-14 16:00:11 [INFO] [dup_check] 除外: 「睡眠の質 上げる 方法 グッズ」 → カニバリ(3/3語重複 ['睡眠の質', '上げる', 'グッズ']): 「睡眠の質を上げる方法・グッズ完全ガイド！今夜から熟睡できる12選」
+2026-05-14 16:00:11 [INFO] [dup_check] 除外: 「宅食 一人暮らし 男性」 → カニバリ(3/3語重複 ['宅食', '一人暮らし', '男性']): 「宅食 一人暮らし男性おすすめ6選！栄養・コスト・時短を徹底比較」
+2026-05-14 16:00:11 [INFO] [dup_check] 除外: 「夏休み お金かけない 過ごし方」 → カニバリ(3/3語重複 ['夏休み', 'お金かけない', '過ごし方']): 「夏休みお金かけない過ごし方20選！子どもも家族も無料で楽しむアイデア集」
+2026-05-14 16:00:11 [INFO] [dup_check] 除外: 「AIで稼ぐ方法」 → コアKW重複: 「AIで稼ぐ方法10選！初心者でも副業で月収を上げる具体的なやり方」(core: 'aiで稼ぐ方法')
+2026-05-14 16:00:11 [INFO] [dup_check] 除外: 「副業 バレない 方法」 → カニバリ(2/2語重複 ['副業', 'バレない']): 「副業がバレない方法7つ！確定申告・住民税の対策を会社員向けに解説」
+2026-05-14 16:00:11 [INFO] [dup_check] 除外: 「引きこもり 社会復帰 方法」 → カニバリ(2/2語重複 ['引きこもり', '社会復帰']): 「引きこもりから社会復帰する方法7ステップ！段階的に自信を取り戻すには」
+2026-05-14 16:00:11 [INFO] [dup_check] 除外: 「算数 苦手 克服 方法 小学生」 → カニバリ(4/4語重複 ['算数', '苦手', '克服', '小学生']): 「小学生の算数苦手を克服する方法7選！親が教えるコツと効果的な勉強法」
+2026-05-14 16:00:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=8件 (pool=27件, 要求=1件)
+2026-05-14 16:00:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-14 16:00:11 [INFO] [select]   1. 「未経験 ITスキル 学習 方法」 vol=0 seo=N/A comp=N/A
+2026-05-14 16:00:11 [INFO] [hapipo8] LONGTAIL選定: 1件
+2026-05-14 16:00:11 [INFO] [hapipo8] 候補: 27件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.5507 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.5507(¥233) / 9記事
+2026-05-14 16:00:11 [INFO] [api_guard] 本日の使用量: $1.5507 / ¥233 (28回呼び出し)
+2026-05-14 16:00:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-14 16:00:11 [INFO] [hapipo8] [1/1] [LONGTAIL] 「未経験 ITスキル 学習 方法」 vol=0 ★ADD
+2026-05-14 16:00:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-14 16:00:11 [INFO] [generate] 生成開始: 「未経験 ITスキル 学習 方法」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「未経験 ITスキル 学習 方法」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $1.5507 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.5507(¥233) / 9記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=113 out=86 → $0.0004  (lsi:未経験 ITスキル 学習 方法)
+[api_guard] 本日の使用量: $1.5512 / ¥232 (861回呼び出し)
+[article_generator] 共起語: プログラミング言語、独学方法、オンライン講座、資格取得、開発環境、HTML CSS、JavaScript、Python、...
+[api_guard] ✅ 本日: $1.5512 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $1.5512(¥233) / 9記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=180 out=594 → $0.0025  (kw_research:未経験 ITスキル 学習 方法)
+[api_guard] 本日の使用量: $1.5537 / ¥233 (862回呼び出し)
+[article_generator] サジェスト: 未経験 ITスキル 学習 方法 独学・未経験 ITスキル 学習 方法 おすすめ・未経験 ITスキル 学習 方法 期間...
+[article_generator] 検索意図: 購買直前 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $1.5537 / 1時間: $0.0030  (上限 日次$10.00 / 時間$5.00)  全体: $1.5537(¥233) / 9記事
+[api_guard] 記録: claude-sonnet-4-6 in=5855 out=10511 → $0.1752  (article:未経験 ITスキル 学習 方法)
+[api_guard] 本日の使用量: $1.7289 / ¥259 (863回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of laptop, lightbulb, checkmark, c
+[imagefx] タイトル(英): Learn IT Skills From Zero
+[article_generator] 完了: 「未経験からITスキルを学ぶ方法7ステップ！独学・スクール徹底比較」 カテゴリ: 未設定(-) タグ: ['ITスキル学習', '未経験プログラミング', '独学方法', 'キャリアチェンジ', 'プログラミング初心者']
+2026-05-14 16:03:17 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「nosh - ナッシュ」(ID:3979)
+2026-05-14 16:03:17 [INFO] [generate] 完了: 「未経験からITスキルを学ぶ方法7ステップ！独学・スクール徹底比較」
+2026-05-14 16:03:17 [INFO] [post] 投稿方式: publish
+[category_selector] カテゴリ取得: 36件
+[category_selector] 「未経験 ITスキル 学習 方法」→ 節約・お得情報(678) score=6
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Beginners IT learning foundation: colorful books, graduation cap, lightbulb, gro...
+[image_generator] 完了 (84KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_160328_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4197)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: 未経験からITスキルを学ぶ前に知っておきたい基礎知識
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Beginner learning journey with stacked books, climbing ladder, glowing lightbulb...
+[image_generator] 完了 (53KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_160342_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4198)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: ITスキルを着実に身につける学習方法の選び方と進め方
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration featuring stacked books, climbing arrows, light bulbs...
+[image_generator] 完了 (61KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_160353_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4199)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: ITスキル学習で挫折しないコツと転職への活かし方
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 163件
+[internal_linker] 古い記事を除外: 123件（2年以上前）→ 40件で選定
+[internal_linker] 同カテゴリー: 5件選定（ルールベース）
+[internal_linker] 内部リンク選定完了: 計5件 (成約:0 / 案件関連:0 / 同親KW+補完:5)
+[internal_linker] 内部リンク挿入完了: 計5件 (本文H3:5 / 末尾リスト:0)
+[internal_linker] 内部リンク 5件 挿入: ['エアコン電気代を節約する方法10選！設定温度からフィルター掃', 'フレッツ光とビッグローブ光の違いを徹底比較！料金・速度・乗り', '海外旅行を安くする方法15選！航空券・ホテル・時期まで徹底解', '携帯料金を滞納すると契約できない？解決策と審査を通す方法を徹', '楽器の買取屋さん比較2026年版｜どれがいい？おすすめ業者6']
+[wordpress] タグ設定: ['ITスキル学習', '未経験プログラミング', '独学方法', 'キャリアチェンジ', 'プログラミング初心者']
+[wordpress] 投稿方式: publish
+[wordpress] 投稿完了 (ID: 4200) → https://hapipo8.com/wp-admin/post.php?post=4200&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行387 「未経験 ITスキル 学習 方法」→ 投稿済み (2026/05/14, ID:4200) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「未経験からITスキルを学ぶ方法7ステップ！独学・スクール徹底」
+2026-05-14 16:04:12 [INFO] [post] WP投稿完了: ID=4200 → https://hapipo8.com/wp-admin/post.php?post=4200&action=edit
+2026-05-14 16:04:12 [INFO] [hapipo8] [1/1] ✅ 完了: 「未経験からITスキルを学ぶ方法7ステップ！独学・スクール徹底比較」
+2026-05-14 16:04:12 [INFO] [hapipo8] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-14 16:04:12 [INFO] 
+============================================================
+2026-05-14 16:04:12 [INFO] 【全体サマリー】
+2026-05-14 16:04:12 [INFO]   ブログ数  : 1件
+2026-05-14 16:04:12 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-14 16:04:12 [INFO]   所要時間  : 248.1秒
+2026-05-14 16:04:12 [INFO]   ✅ [hapipo8] 未経験 ITスキル 学習 方法 → 未経験からITスキルを学ぶ方法7ステップ！独学・スクール徹底比較
+2026-05-14 16:04:12 [INFO]        https://hapipo8.com/wp-admin/post.php?post=4200&action=edit
+2026-05-14 16:04:12 [INFO] ============================================================
+===== [HAPIPO8] 記事生成終了: 2026-05-14 16:04:13 / exit=0 =====

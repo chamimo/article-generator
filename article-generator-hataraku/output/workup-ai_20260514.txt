@@ -1,0 +1,592 @@
+===== [WORKUP-AI] 実行開始: 2026-05-14 10:39:07 =====
+2026-05-14 10:39:09 [INFO] ============================================================
+2026-05-14 10:39:09 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-14 10:39:09 [INFO] ============================================================
+2026-05-14 10:39:09 [INFO] 対象ブログ: ['workup-ai']
+2026-05-14 10:39:11 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-14 10:39:11 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-14 10:39:11 [INFO] ════════════════════════════════════════════════════════════
+2026-05-14 10:39:11 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-14 10:39:11 [INFO]   fact_check       : True
+2026-05-14 10:39:11 [INFO]   article_type_mix : True
+2026-05-14 10:39:11 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-14 10:39:11 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-14 10:39:13 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-14 10:39:13 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-14 10:39:13 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-14 10:39:13 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-14 10:39:13 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-14 10:39:13 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-14 10:39:13 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-14 10:39:13 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-14 10:39:13 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-14 10:39:13 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-14 10:39:13 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-14 10:39:13 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-14 10:39:13 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-14 10:39:13 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-14 10:39:13 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-14 10:39:13 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-14 10:39:13 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-14 10:39:13 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-14 10:39:13 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-14 10:39:22 [INFO] [wp] 記事取得: 計401件 (draft=1 / private=7 / publish=393)
+2026-05-14 10:39:22 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-14 10:39:24 [INFO] [fetch] サブKW紐付け: 104件 → 8記事に統合
+2026-05-14 10:39:24 [INFO] [fetch] [キーワード] メインKW: 11件（vol≥30 or N/A）  サブKW除外: 104件（統合対象）  投稿済みスキップ: 62件  テーマ外除外: 6件  aim内訳: [aim:6, claude:11]
+2026-05-14 10:39:24 [INFO] [dup_check] 優先候補: 11件 {'claude': 10, 'aim': 1} を先頭評価
+2026-05-14 10:39:24 [INFO] [dup_check] 除外: 「Claude AI 活用」 → カニバリ(3/3語重複 ['claude', 'ai', '活用']): 「Claude AI活用ガイド！ビジネス効率を上げる使い方と事例を徹底解説」
+2026-05-14 10:39:24 [INFO] [dup_check] 除外: 「AI自動化 業務効率」 → カニバリ(2/2語重複 ['ai自動化', '業務効率']): 「AI自動化で業務効率を劇的に上げる方法！RPAとの違い・導入事例・おすすめツール」
+2026-05-14 10:39:24 [INFO] [dup_check] 除外: 「ノーコード ツール 自動化」 → カニバリ(3/3語重複 ['ノーコード', 'ツール', '自動化']): 「ノーコードツール自動化おすすめ7選！初心者でも業務効率化できる比較ガイド」
+2026-05-14 10:39:24 [INFO] [dup_check] 除外: 「AI副業 主婦 在宅 稼ぐ」 → カニバリ(4/4語重複 ['ai副業', '主婦', '在宅', '稼ぐ']): 「AI副業で主婦が在宅で稼ぐ方法7選！月5万円も夢じゃない始め方」
+2026-05-14 10:39:24 [INFO] [dup_check] 除外: 「AI副業 スマホだけ できる」 → カニバリ(2/2語重複 ['ai副業', 'スマホだけ']): 「AI副業はスマホだけでできる！初心者が月5万円を目指すおすすめ7選」
+2026-05-14 10:39:24 [INFO] [dup_check] 除外: 「AIアフィリエイト やり方 初心者」 → カニバリ(2/2語重複 ['aiアフィリエイト', '初心者']): 「AIアフィリエイトのやり方を初心者向けに解説！ChatGPTで稼ぐ手順と稼げるコ」
+2026-05-14 10:39:24 [INFO] [dup_check] 完了: 選定=1件 / 除外=6件 (pool=11件, 要求=1件)
+2026-05-14 10:39:24 [INFO] [select] 1件選定 (要求=1件)
+2026-05-14 10:39:24 [INFO] [select]   1. 「AIライティング ブログ SEO 対策」 vol=0 seo=N/A comp=N/A
+2026-05-14 10:39:24 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-14 10:39:24 [INFO] [workup-ai] 候補: 11件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+2026-05-14 10:39:24 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-14 10:39:24 [INFO] ────────────────────────────────────────────────────────────
+2026-05-14 10:39:24 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AIライティング ブログ SEO 対策」 vol=0 ★CLAUDE
+2026-05-14 10:39:24 [INFO] ────────────────────────────────────────────────────────────
+2026-05-14 10:39:24 [INFO] [generate] 生成開始: 「AIライティング ブログ SEO 対策」(vol:0) fact_check=True target_length=6,000字  サブKW:1件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「AIライティング ブログ SEO 対策」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=112 out=113 → $0.0005  (lsi:AIライティング ブログ SEO 対策)
+[api_guard] 本日の使用量: $0.0005 / ¥0 (833回呼び出し)
+[article_generator] 共起語: AIライティングツール、自動生成、コンテンツ作成、検索順位、キーワード選定、内部リンク、メタディスクリプション、ユーザー...
+[article_generator] サブKW候補: 1件 (AIコンテンツ SEO 対策 2026〜)
+[api_guard] ✅ 本日: $0.0005 / 1時間: $0.0005  (上限 日次$10.00 / 時間$5.00)  全体: $0.0005(¥0) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=179 out=569 → $0.0024  (kw_research:AIライティング ブログ SEO 対策)
+[api_guard] 本日の使用量: $0.0030 / ¥0 (834回呼び出し)
+[article_generator] サジェスト: AIライティング ブログ SEO対策 やり方・AIライティング ブログ SEO対策 ツール・AIライティング ブログ SEO対策 効果...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.0030 / 1時間: $0.0030  (上限 日次$10.00 / 時間$5.00)  全体: $0.0030(¥0) / 0記事
+[api_guard] 記録: claude-sonnet-4-6 in=6010 out=9573 → $0.1616  (article:AIライティング ブログ SEO 対策)
+[api_guard] 本日の使用量: $0.1646 / ¥24 (835回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of laptop, speech bubbles, stars, 
+[imagefx] タイトル(英): AI Writing Strengthens Blog SEO
+[article_generator] 完了: 「AIライティングでブログSEO対策を強化する方法と注意点を徹底解説」 カテゴリ: 未設定(-) タグ: ['AIライティング', 'ブログSEO対策', 'コンテンツ作成', '検索順位', 'AIツール活用']
+2026-05-14 10:41:48 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-14 10:41:48 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「ConoHa AI Canvas」(ID:9805)
+2026-05-14 10:41:48 [INFO] [generate] 完了: 「AIライティングでブログSEO対策を強化する方法と注意点を徹底解説」
+2026-05-14 10:41:48 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 30件
+[category_selector] 「AIライティング ブログ SEO 対策」→ AIライティング(1373) score=24
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#AIライティング): ai-writing-cannot-earn-truth-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: AIライティングとSEOライティングの関係を正しく理解するのイメージ画像
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration with pastel colors showing interconnected icons: a gl...
+[image_generator] 完了 (45KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_104159_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10144)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: AIライティングツールを使ったブログSEO対策の具体的なやり
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: AI writing optimization dashboard with magnifying glass, checkmarks, and analyti...
+[image_generator] 完了 (68KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_104212_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10145)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: AIライティングのSEO対策で失敗しないための注意点と効果測
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 393件
+[internal_linker] タイトル重複除去: 2件の旧記事を除外
+[internal_linker] 「Notta」関連記事: 2件追加
+[internal_linker] 同カテゴリー: 6件選定（ルールベース）
+[internal_linker] 製品名マッチ「Notta」→ セクション5に割り当て
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 1件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:7 / 末尾リスト:1)
+[internal_linker] 内部リンク 8件 挿入: ['Notta使い方完全ガイド！無料登録から文字起こし・議事録作', 'PLAUD NOTEとNottaの比較｜スペックで選ぶと失敗', 'AIライティングは本当に稼げない？現実と稼ぐコツを徹底解説', 'AIライティング×アフィリエイトで記事作成が3時間→20分に', 'Galaxy AIで文章作成はどこまで使える？無料機能と活用', 'AIライターに向いてない人の特徴9選！失敗する前に適性を確認', '読書感想文 AIのアプリだからこそできる自然な文章の作り方', 'AI副業が時間かかりすぎる原因と解決策！初心者が効率よく稼ぐ']
+[wordpress] タグ設定: ['AIライティング', 'ブログSEO対策', 'コンテンツ作成', '検索順位', 'AIツール活用']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 10146) → https://workup-ai.com/wp-admin/post.php?post=10146&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, speech bubbles, stars, checkmarks, lightbulbs, and upward charts in soft pastel pink, mint, and lavender with minimal line details.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "AI Writing Strengthens Blog SEO" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行111 「AIライティング ブログ SEO 対策」→ 投稿済み (2026/05/14, ID:10146) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「AIライティングでブログSEO対策を強化する方法と注意点を徹」
+2026-05-14 10:42:27 [INFO] [post] WP投稿完了: ID=10146 → https://workup-ai.com/wp-admin/post.php?post=10146&action=edit
+2026-05-14 10:42:27 [INFO] [workup-ai] [1/1] ✅ 完了: 「AIライティングでブログSEO対策を強化する方法と注意点を徹底解説」
+2026-05-14 10:42:27 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-14 10:42:27 [INFO] 
+============================================================
+2026-05-14 10:42:27 [INFO] 【全体サマリー】
+2026-05-14 10:42:27 [INFO]   ブログ数  : 1件
+2026-05-14 10:42:27 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-14 10:42:27 [INFO]   所要時間  : 197.8秒
+2026-05-14 10:42:27 [INFO]   ✅ [workup-ai] AIライティング ブログ SEO 対策 → AIライティングでブログSEO対策を強化する方法と注意点を徹底解説
+2026-05-14 10:42:27 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10146&action=edit
+2026-05-14 10:42:27 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-14 10:42:27 / exit=0 =====
+===== [WORKUP-AI] 実行開始: 2026-05-14 10:45:44 =====
+2026-05-14 10:45:45 [INFO] ============================================================
+2026-05-14 10:45:45 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-14 10:45:45 [INFO] ============================================================
+2026-05-14 10:45:45 [INFO] 対象ブログ: ['workup-ai']
+2026-05-14 10:45:48 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-14 10:45:48 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-14 10:45:48 [INFO] ════════════════════════════════════════════════════════════
+2026-05-14 10:45:48 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-14 10:45:48 [INFO]   fact_check       : True
+2026-05-14 10:45:48 [INFO]   article_type_mix : True
+2026-05-14 10:45:48 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-14 10:45:48 [INFO]   article_count    : 1  dry_run: False
+===== [WORKUP-AI] 実行開始: 2026-05-14 10:45:48 =====
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-14 10:45:49 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-14 10:45:49 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-14 10:45:49 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-14 10:45:49 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-14 10:45:49 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-14 10:45:49 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-14 10:45:49 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-14 10:45:49 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-14 10:45:49 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-14 10:45:49 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-14 10:45:49 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-14 10:45:49 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-14 10:45:49 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-14 10:45:49 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-14 10:45:49 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-14 10:45:49 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-14 10:45:49 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-14 10:45:49 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-14 10:45:49 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-14 10:45:49 [INFO] ============================================================
+2026-05-14 10:45:49 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-14 10:45:49 [INFO] ============================================================
+2026-05-14 10:45:49 [INFO] 対象ブログ: ['workup-ai']
+2026-05-14 10:45:50 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-14 10:45:50 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-14 10:45:50 [INFO] ════════════════════════════════════════════════════════════
+2026-05-14 10:45:50 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-14 10:45:50 [INFO]   fact_check       : True
+2026-05-14 10:45:50 [INFO]   article_type_mix : True
+2026-05-14 10:45:50 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-14 10:45:50 [INFO]   article_count    : 1  dry_run: False
+2026-05-14 10:45:51 [INFO] [wp] 記事取得: 計402件 (draft=2 / private=7 / publish=393)
+2026-05-14 10:45:51 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-14 10:45:52 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-14 10:45:52 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-14 10:45:52 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-14 10:45:52 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-14 10:45:52 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-14 10:45:52 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-14 10:45:52 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-14 10:45:52 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-14 10:45:52 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-14 10:45:52 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-14 10:45:52 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-14 10:45:52 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-14 10:45:52 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-14 10:45:52 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-14 10:45:52 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-14 10:45:52 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-14 10:45:52 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-14 10:45:52 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-14 10:45:52 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-14 10:45:52 [INFO] [fetch] サブKW紐付け: 104件 → 8記事に統合
+2026-05-14 10:45:52 [INFO] [fetch] [キーワード] メインKW: 11件（vol≥30 or N/A）  サブKW除外: 104件（統合対象）  投稿済みスキップ: 62件  テーマ外除外: 6件  aim内訳: [aim:6, claude:11]
+2026-05-14 10:45:52 [INFO] [dup_check] 優先候補: 11件 {'claude': 10, 'aim': 1} を先頭評価
+2026-05-14 10:45:52 [INFO] [dup_check] 除外: 「Claude AI 活用」 → カニバリ(3/3語重複 ['claude', 'ai', '活用']): 「Claude AI活用ガイド！ビジネス効率を上げる使い方と事例を徹底解説」
+2026-05-14 10:45:52 [INFO] [dup_check] 除外: 「AI自動化 業務効率」 → カニバリ(2/2語重複 ['ai自動化', '業務効率']): 「AI自動化で業務効率を劇的に上げる方法！RPAとの違い・導入事例・おすすめツール」
+2026-05-14 10:45:52 [INFO] [dup_check] 除外: 「ノーコード ツール 自動化」 → カニバリ(3/3語重複 ['ノーコード', 'ツール', '自動化']): 「ノーコードツール自動化おすすめ7選！初心者でも業務効率化できる比較ガイド」
+2026-05-14 10:45:52 [INFO] [dup_check] 除外: 「AI副業 主婦 在宅 稼ぐ」 → カニバリ(4/4語重複 ['ai副業', '主婦', '在宅', '稼ぐ']): 「AI副業で主婦が在宅で稼ぐ方法7選！月5万円も夢じゃない始め方」
+2026-05-14 10:45:52 [INFO] [dup_check] 除外: 「AI副業 スマホだけ できる」 → カニバリ(2/2語重複 ['ai副業', 'スマホだけ']): 「AI副業はスマホだけでできる！初心者が月5万円を目指すおすすめ7選」
+2026-05-14 10:45:52 [INFO] [dup_check] 除外: 「AIアフィリエイト やり方 初心者」 → カニバリ(2/2語重複 ['aiアフィリエイト', '初心者']): 「AIアフィリエイトのやり方を初心者向けに解説！ChatGPTで稼ぐ手順と稼げるコ」
+2026-05-14 10:45:52 [INFO] [dup_check] 除外: 「AIライティング ブログ SEO 対策」 → カニバリ(4/4語重複 ['aiライティング', 'ブログ', 'seo', '対策']): 「AIライティングでブログSEO対策を強化する方法と注意点を徹底解説」
+2026-05-14 10:45:52 [INFO] [dup_check] 完了: 選定=1件 / 除外=7件 (pool=11件, 要求=1件)
+2026-05-14 10:45:52 [INFO] [select] 1件選定 (要求=1件)
+2026-05-14 10:45:52 [INFO] [select]   1. 「AI記事 自動生成 SEO 大丈夫」 vol=0 seo=N/A comp=N/A
+2026-05-14 10:45:52 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-14 10:45:52 [INFO] [workup-ai] 候補: 11件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.1646 / 1時間: $0.1646  (上限 日次$10.00 / 時間$5.00)  全体: $0.1646(¥25) / 1記事
+2026-05-14 10:45:52 [INFO] [api_guard] 本日の使用量: $0.1646 / ¥25 (3回呼び出し)
+2026-05-14 10:45:52 [INFO] ────────────────────────────────────────────────────────────
+2026-05-14 10:45:52 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AI記事 自動生成 SEO 大丈夫」 vol=0 ★CLAUDE
+2026-05-14 10:45:52 [INFO] ────────────────────────────────────────────────────────────
+2026-05-14 10:45:52 [INFO] [generate] 生成開始: 「AI記事 自動生成 SEO 大丈夫」(vol:0) fact_check=True target_length=6,000字  サブKW:1件  誘導リンク:0件
+2026-05-14 10:45:53 [INFO] [wp] 記事取得: 計402件 (draft=2 / private=7 / publish=393)
+2026-05-14 10:45:53 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-14 10:45:54 [INFO] [fetch] サブKW紐付け: 104件 → 8記事に統合
+2026-05-14 10:45:54 [INFO] [fetch] [キーワード] メインKW: 11件（vol≥30 or N/A）  サブKW除外: 104件（統合対象）  投稿済みスキップ: 62件  テーマ外除外: 6件  aim内訳: [aim:6, claude:11]
+2026-05-14 10:45:54 [INFO] [dup_check] 優先候補: 11件 {'claude': 10, 'aim': 1} を先頭評価
+2026-05-14 10:45:54 [INFO] [dup_check] 除外: 「Claude AI 活用」 → カニバリ(3/3語重複 ['claude', 'ai', '活用']): 「Claude AI活用ガイド！ビジネス効率を上げる使い方と事例を徹底解説」
+2026-05-14 10:45:54 [INFO] [dup_check] 除外: 「AI自動化 業務効率」 → カニバリ(2/2語重複 ['ai自動化', '業務効率']): 「AI自動化で業務効率を劇的に上げる方法！RPAとの違い・導入事例・おすすめツール」
+2026-05-14 10:45:54 [INFO] [dup_check] 除外: 「ノーコード ツール 自動化」 → カニバリ(3/3語重複 ['ノーコード', 'ツール', '自動化']): 「ノーコードツール自動化おすすめ7選！初心者でも業務効率化できる比較ガイド」
+2026-05-14 10:45:54 [INFO] [dup_check] 除外: 「AI副業 主婦 在宅 稼ぐ」 → カニバリ(4/4語重複 ['ai副業', '主婦', '在宅', '稼ぐ']): 「AI副業で主婦が在宅で稼ぐ方法7選！月5万円も夢じゃない始め方」
+2026-05-14 10:45:54 [INFO] [dup_check] 除外: 「AI副業 スマホだけ できる」 → カニバリ(2/2語重複 ['ai副業', 'スマホだけ']): 「AI副業はスマホだけでできる！初心者が月5万円を目指すおすすめ7選」
+2026-05-14 10:45:54 [INFO] [dup_check] 除外: 「AIアフィリエイト やり方 初心者」 → カニバリ(2/2語重複 ['aiアフィリエイト', '初心者']): 「AIアフィリエイトのやり方を初心者向けに解説！ChatGPTで稼ぐ手順と稼げるコ」
+2026-05-14 10:45:54 [INFO] [dup_check] 除外: 「AIライティング ブログ SEO 対策」 → カニバリ(4/4語重複 ['aiライティング', 'ブログ', 'seo', '対策']): 「AIライティングでブログSEO対策を強化する方法と注意点を徹底解説」
+2026-05-14 10:45:54 [INFO] [dup_check] 完了: 選定=1件 / 除外=7件 (pool=11件, 要求=1件)
+2026-05-14 10:45:54 [INFO] [select] 1件選定 (要求=1件)
+2026-05-14 10:45:54 [INFO] [select]   1. 「AI記事 自動生成 SEO 大丈夫」 vol=0 seo=N/A comp=N/A
+2026-05-14 10:45:54 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-14 10:45:54 [INFO] [workup-ai] 候補: 11件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.1652 / 1時間: $0.1652  (上限 日次$10.00 / 時間$5.00)  全体: $0.1652(¥25) / 1記事
+2026-05-14 10:45:54 [INFO] [api_guard] 本日の使用量: $0.1652 / ¥25 (4回呼び出し)
+2026-05-14 10:45:54 [INFO] ────────────────────────────────────────────────────────────
+2026-05-14 10:45:54 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AI記事 自動生成 SEO 大丈夫」 vol=0 ★CLAUDE
+2026-05-14 10:45:54 [INFO] ────────────────────────────────────────────────────────────
+2026-05-14 10:45:54 [INFO] [generate] 生成開始: 「AI記事 自動生成 SEO 大丈夫」(vol:0) fact_check=True target_length=6,000字  サブKW:1件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「AI記事 自動生成 SEO 大丈夫」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.1646 / 1時間: $0.1646  (上限 日次$10.00 / 時間$5.00)  全体: $0.1646(¥25) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=116 out=123 → $0.0006  (lsi:AI記事 自動生成 SEO 大丈夫)
+[api_guard] 本日の使用量: $0.1652 / ¥24 (836回呼び出し)
+[article_generator] 共起語: AI記事自動生成、SEO対策、コンテンツマーケティング、Googleペナルティ、検索順位、品質ガイドライン、ユーザー体験...
+[article_generator] サブKW候補: 1件 (AI検索時代 SEO どうなる〜)
+[api_guard] ✅ 本日: $0.1652 / 1時間: $0.1652  (上限 日次$10.00 / 時間$5.00)  全体: $0.1652(¥25) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=183 out=540 → $0.0023  (kw_research:AI記事 自動生成 SEO 大丈夫)
+[api_guard] 本日の使用量: $0.1681 / ¥25 (838回呼び出し)
+[article_generator] サジェスト: AI記事自動生成 SEO・AI記事自動生成 デメリット・AI記事自動生成 ツール...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.1681 / 1時間: $0.1681  (上限 日次$10.00 / 時間$5.00)  全体: $0.1681(¥25) / 1記事
+[api_guard] 記録: claude-sonnet-4-6 in=5992 out=10484 → $0.1752  (article:AI記事 自動生成 SEO 大丈夫)
+[api_guard] 本日の使用量: $0.3458 / ¥51 (840回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of laptop, magnifying glass, and c
+[imagefx] タイトル(英): AI Generated Content SEO Guide
+[article_generator] 完了: 「AI記事自動生成はSEO大丈夫？ペナルティリスクと正しい活用法を解説」 カテゴリ: 未設定(-) タグ: ['AI記事自動生成', 'SEO対策', 'Googleペナルティ', 'AIライティング', 'コンテンツマーケティング']
+2026-05-14 10:48:49 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-14 10:48:49 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「ConoHa AI Canvas」(ID:9805)
+2026-05-14 10:48:49 [INFO] [generate] 完了: 「AI記事自動生成はSEO大丈夫？ペナルティリスクと正しい活用法を解説」
+2026-05-14 10:48:49 [INFO] [post] 投稿方式: draft
+[article_generator] 記事構成生成中: 「AI記事 自動生成 SEO 大丈夫」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.1652 / 1時間: $0.1652  (上限 日次$10.00 / 時間$5.00)  全体: $0.1652(¥25) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=116 out=125 → $0.0006  (lsi:AI記事 自動生成 SEO 大丈夫)
+[api_guard] 本日の使用量: $0.1658 / ¥24 (837回呼び出し)
+[article_generator] 共起語: AI記事自動生成、SEO対策、コンテンツ品質、検索エンジン評価、ペナルティリスク、オリジナルコンテンツ、ユーザー体験、信...
+[article_generator] サブKW候補: 1件 (AI検索時代 SEO どうなる〜)
+[api_guard] ✅ 本日: $0.1658 / 1時間: $0.1658  (上限 日次$10.00 / 時間$5.00)  全体: $0.1658(¥25) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=183 out=581 → $0.0025  (kw_research:AI記事 自動生成 SEO 大丈夫)
+[api_guard] 本日の使用量: $0.1705 / ¥25 (839回呼び出し)
+[article_generator] サジェスト: AI記事 自動生成 SEO・AI記事 自動生成 デメリット・AI記事 自動生成 品質...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.1705 / 1時間: $0.1705  (上限 日次$10.00 / 時間$5.00)  全体: $0.1705(¥26) / 1記事
+[api_guard] 記録: claude-sonnet-4-6 in=6035 out=10178 → $0.1708  (article:AI記事 自動生成 SEO 大丈夫)
+[api_guard] 本日の使用量: $0.5166 / ¥77 (841回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of laptop, magnifying glass, and u
+[imagefx] タイトル(英): AI Articles SEO Risks Quality
+[article_generator] 完了: 「AI記事自動生成はSEO的に大丈夫？本当のリスクと品質を高める方法」 カテゴリ: 未設定(-) タグ: ['AI記事自動生成', 'SEO対策', 'Googleガイドライン', 'コンテンツ品質', 'E-E-A-T']
+2026-05-14 10:48:50 [INFO] [generate] パターンCTA挿入（H3末尾）: 3件
+2026-05-14 10:48:50 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「ConoHa AI Canvas」(ID:9805)
+2026-05-14 10:48:50 [INFO] [generate] 完了: 「AI記事自動生成はSEO的に大丈夫？本当のリスクと品質を高める方法」
+2026-05-14 10:48:50 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 30件
+[category_selector] 「AI記事 自動生成 SEO 大丈夫」→ マッチなし、フォールバック: 生成AI・チャット・仕事術(1397)
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: AI-generated content meeting SEO standards: magnifying glass, checkmark badge, s...
+[image_generator] 完了 (53KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_104858_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10147)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: AI記事自動生成とSEO——Googleはどう評価しているの
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration featuring warning signs, tangled code blocks, and sea...
+[image_generator] 完了 (112KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_104911_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10149)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: AI記事自動生成のペナルティリスクと注意すべきデメリット
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: AI-generated article quality optimization with SEO metrics rising upward, featur...
+[image_generator] 完了 (66KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_104923_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10151)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: SEO評価を下げずにAI記事自動生成を使いこなす実践的な方法
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 393件
+[internal_linker] タイトル重複除去: 2件の旧記事を除外
+[internal_linker] 「Notta」関連記事: 2件追加
+[internal_linker] 「Udemy」関連記事: 2件追加
+[internal_linker] 同カテゴリー: 6件選定（ルールベース）
+[internal_linker] 製品名マッチ「Notta」→ セクション11に割り当て
+[internal_linker] 製品名マッチ「Notta」→ セクション13に割り当て
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['Notta使い方完全ガイド！無料登録から文字起こし・議事録作', 'PLAUD NOTEとNottaの比較｜スペックで選ぶと失敗', 'Notion AIは無料でどこまで使える？制限と活用法を徹底', 'Galaxy AIで文章作成はどこまで使える？無料機能と活用', '宿題の代行 AIはどこまでOK？サービスの特徴と正しい使い方', 'NotebookLMの情報漏洩リスクとは？安全に使うための注', 'AIブラウザ「dia」の使い方｜日本語対応の特徴と活用法をわ', 'Google AI Studioとは？最新Gemini連携と']
+[wordpress] タグ設定: ['AI記事自動生成', 'SEO対策', 'Googleペナルティ', 'AIライティング', 'コンテンツマーケティング']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 10153) → https://workup-ai.com/wp-admin/post.php?post=10153&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, magnifying glass, and checkmark with floating stars, soft pastel pink, mint, and lavender tones, minimal design style.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "AI Generated Content SEO Guide" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行112 「AI記事 自動生成 SEO 大丈夫」→ 投稿済み (2026/05/14, ID:10153) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「AI記事自動生成はSEO大丈夫？ペナルティリスクと正しい活用」
+2026-05-14 10:49:34 [INFO] [post] WP投稿完了: ID=10153 → https://workup-ai.com/wp-admin/post.php?post=10153&action=edit
+2026-05-14 10:49:34 [INFO] [workup-ai] [1/1] ✅ 完了: 「AI記事自動生成はSEO大丈夫？ペナルティリスクと正しい活用法を解説」
+2026-05-14 10:49:34 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-14 10:49:34 [INFO] 
+============================================================
+2026-05-14 10:49:34 [INFO] 【全体サマリー】
+2026-05-14 10:49:34 [INFO]   ブログ数  : 1件
+2026-05-14 10:49:34 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-14 10:49:34 [INFO]   所要時間  : 228.7秒
+2026-05-14 10:49:34 [INFO]   ✅ [workup-ai] AI記事 自動生成 SEO 大丈夫 → AI記事自動生成はSEO大丈夫？ペナルティリスクと正しい活用法を解説
+2026-05-14 10:49:34 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10153&action=edit
+2026-05-14 10:49:34 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-14 10:49:35 / exit=0 =====
+[category_selector] カテゴリ取得: 30件
+[category_selector] 「AI記事 自動生成 SEO 大丈夫」→ マッチなし、フォールバック: 生成AI・チャット・仕事術(1397)
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: AI-generated article concept with interconnected gears, magnifying glass examini...
+[image_generator] 完了 (46KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_104901_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10148)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: AI記事自動生成とSEOの関係——Googleはどう評価する
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring warning signs, broken chains, and tangled thr...
+[image_generator] 完了 (66KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_104914_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10150)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: AI記事自動生成のデメリットと見落とされがちなリスク
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Abstract flowchart showing quality improvement steps with upward arrow, magnifyi...
+[image_generator] 完了 (38KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_104925_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10152)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: AI記事自動生成でSEO効果を出すための品質改善ステップ
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 393件
+[internal_linker] タイトル重複除去: 2件の旧記事を除外
+[internal_linker] 「Notta」関連記事: 2件追加
+[internal_linker] 同カテゴリー: 6件選定（ルールベース）
+[internal_linker] 製品名マッチ「Notta」→ セクション9に割り当て
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 1件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:7 / 末尾リスト:1)
+[internal_linker] 内部リンク 8件 挿入: ['Notta使い方完全ガイド！無料登録から文字起こし・議事録作', 'PLAUD NOTEとNottaの比較｜スペックで選ぶと失敗', 'AI自動化で業務効率を劇的に上げる方法！RPAとの違い・導入', 'ケモ耳のイラストの描き方｜プロンプト指定でAIイラストを生成', 'gamma aiを日本語にする方法｜日本語化の手順・使い方・', 'Galaxy AIで文章作成はどこまで使える？無料機能と活用', 'ネガティブプロンプトで指の違和感を防ぐ方法とは？｜AI画像生', 'AIブログの始め方｜発信が苦手でも静かに続けられる方法']
+[wordpress] タグ設定: ['AI記事自動生成', 'SEO対策', 'Googleガイドライン', 'コンテンツ品質', 'E-E-A-T']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 10154) → https://workup-ai.com/wp-admin/post.php?post=10154&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, magnifying glass, and upward chart with stars and checkmarks, soft pastel pink, mint, and cream tones, minimal style.
+Elegant lifestyle background: soft morning light with warm neutrals, gentle depth-of-field effect, clean and airy ambiance, muted earth tones.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "AI Articles SEO Risks Quality" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行112 「AI記事 自動生成 SEO 大丈夫」→ 投稿済み (2026/05/14, ID:10154) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「AI記事自動生成はSEO的に大丈夫？本当のリスクと品質を高め」
+2026-05-14 10:49:36 [INFO] [post] WP投稿完了: ID=10154 → https://workup-ai.com/wp-admin/post.php?post=10154&action=edit
+2026-05-14 10:49:36 [INFO] [workup-ai] [1/1] ✅ 完了: 「AI記事自動生成はSEO的に大丈夫？本当のリスクと品質を高める方法」
+2026-05-14 10:49:36 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-14 10:49:36 [INFO] 
+============================================================
+2026-05-14 10:49:36 [INFO] 【全体サマリー】
+2026-05-14 10:49:36 [INFO]   ブログ数  : 1件
+2026-05-14 10:49:36 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-14 10:49:36 [INFO]   所要時間  : 226.8秒
+2026-05-14 10:49:36 [INFO]   ✅ [workup-ai] AI記事 自動生成 SEO 大丈夫 → AI記事自動生成はSEO的に大丈夫？本当のリスクと品質を高める方法
+2026-05-14 10:49:36 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10154&action=edit
+2026-05-14 10:49:36 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-14 10:49:37 / exit=0 =====
+2026-05-14 11:06:51 [INFO] ============================================================
+2026-05-14 11:06:51 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-14 11:06:51 [INFO] ============================================================
+2026-05-14 11:06:51 [INFO] 対象ブログ: ['workup-ai']
+2026-05-14 11:06:53 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-14 11:06:53 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-14 11:06:53 [INFO] ════════════════════════════════════════════════════════════
+2026-05-14 11:06:53 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-14 11:06:53 [INFO]   fact_check       : True
+2026-05-14 11:06:53 [INFO]   article_type_mix : True
+2026-05-14 11:06:53 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-14 11:06:53 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-14 11:06:54 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-14 11:06:54 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-14 11:06:54 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-14 11:06:54 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-14 11:06:54 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-14 11:06:54 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-14 11:06:54 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-14 11:06:54 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-14 11:06:54 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-14 11:06:54 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-14 11:06:54 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-14 11:06:54 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-14 11:06:54 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-14 11:06:54 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-14 11:06:54 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-14 11:06:54 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-14 11:06:54 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-14 11:06:54 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-14 11:06:54 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-14 11:06:56 [INFO] [wp] 記事取得: 計394件 (draft=1 / publish=393)
+2026-05-14 11:06:56 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-14 11:06:57 [INFO] [fetch] サブKW紐付け: 104件 → 8記事に統合
+2026-05-14 11:06:57 [INFO] [fetch] [キーワード] メインKW: 11件（vol≥30 or N/A）  サブKW除外: 104件（統合対象）  投稿済みスキップ: 62件  テーマ外除外: 6件  aim内訳: [aim:6, claude:11]
+2026-05-14 11:06:57 [INFO] [dup_check] 優先候補: 11件 {'claude': 10, 'aim': 1} を先頭評価
+2026-05-14 11:06:57 [INFO] [dup_check] 除外: 「Claude AI 活用」 → カニバリ(3/3語重複 ['claude', 'ai', '活用']): 「Claude AI活用ガイド！ビジネス効率を上げる使い方と事例を徹底解説」
+2026-05-14 11:06:57 [INFO] [dup_check] 除外: 「AI自動化 業務効率」 → カニバリ(2/2語重複 ['ai自動化', '業務効率']): 「AI自動化で業務効率を劇的に上げる方法！RPAとの違い・導入事例・おすすめツール」
+2026-05-14 11:06:57 [INFO] [dup_check] 除外: 「ノーコード ツール 自動化」 → カニバリ(3/3語重複 ['ノーコード', 'ツール', '自動化']): 「ノーコードツール自動化おすすめ7選！初心者でも業務効率化できる比較ガイド」
+2026-05-14 11:06:57 [INFO] [dup_check] 除外: 「AI副業 主婦 在宅 稼ぐ」 → カニバリ(4/4語重複 ['ai副業', '主婦', '在宅', '稼ぐ']): 「AI副業で主婦が在宅で稼ぐ方法7選！月5万円も夢じゃない始め方」
+2026-05-14 11:06:57 [INFO] [dup_check] 除外: 「AI副業 スマホだけ できる」 → カニバリ(2/2語重複 ['ai副業', 'スマホだけ']): 「AI副業はスマホだけでできる！初心者が月5万円を目指すおすすめ7選」
+2026-05-14 11:06:57 [INFO] [dup_check] 除外: 「AIアフィリエイト やり方 初心者」 → カニバリ(2/2語重複 ['aiアフィリエイト', '初心者']): 「AIアフィリエイトのやり方を初心者向けに解説！ChatGPTで稼ぐ手順と稼げるコ」
+2026-05-14 11:06:57 [INFO] [dup_check] 完了: 選定=1件 / 除外=6件 (pool=11件, 要求=1件)
+2026-05-14 11:06:57 [INFO] [select] 1件選定 (要求=1件)
+2026-05-14 11:06:57 [INFO] [select]   1. 「AIライティング ブログ SEO 対策」 vol=0 seo=N/A comp=N/A
+2026-05-14 11:06:57 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-14 11:06:57 [INFO] [workup-ai] 候補: 11件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.5166 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.5166(¥77) / 3記事
+2026-05-14 11:06:57 [INFO] [api_guard] 本日の使用量: $0.5166 / ¥77 (9回呼び出し)
+2026-05-14 11:06:57 [INFO] ────────────────────────────────────────────────────────────
+2026-05-14 11:06:57 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AIライティング ブログ SEO 対策」 vol=0 ★CLAUDE
+2026-05-14 11:06:57 [INFO] ────────────────────────────────────────────────────────────
+2026-05-14 11:06:57 [INFO] [generate] 生成開始: 「AIライティング ブログ SEO 対策」(vol:0) fact_check=True target_length=6,000字  サブKW:1件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「AIライティング ブログ SEO 対策」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.5166 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.5166(¥77) / 3記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=112 out=104 → $0.0005  (lsi:AIライティング ブログ SEO 対策)
+[api_guard] 本日の使用量: $0.5171 / ¥77 (842回呼び出し)
+[article_generator] 共起語: AIライティングツール、コンテンツマーケティング、検索順位、キーワード選定、内部リンク、メタディスクリプション、ユーザー...
+[article_generator] サブKW候補: 1件 (AIコンテンツ SEO 対策 2026〜)
+[api_guard] ✅ 本日: $0.5171 / 1時間: $0.0005  (上限 日次$10.00 / 時間$5.00)  全体: $0.5171(¥78) / 3記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=179 out=509 → $0.0022  (kw_research:AIライティング ブログ SEO 対策)
+[api_guard] 本日の使用量: $0.5192 / ¥77 (843回呼び出し)
+[article_generator] サジェスト: AIライティング ブログ SEO対策 やり方・AIライティング ツール SEO・AIライティング SEO効果...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.5192 / 1時間: $0.0027  (上限 日次$10.00 / 時間$5.00)  全体: $0.5192(¥78) / 3記事
+[api_guard] 記録: claude-sonnet-4-6 in=5944 out=10638 → $0.1774  (article:AIライティング ブログ SEO 対策)
+[api_guard] 本日の使用量: $0.6966 / ¥104 (844回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of laptop, speech bubbles, stars, 
+[imagefx] タイトル(英): AI Writing Boosts Blog SEO
+[article_generator] 完了: 「AIライティングでブログSEO対策を強化する方法｜2026年最新ガイド」 カテゴリ: 未設定(-) タグ: ['AIライティング', 'ブログSEO対策', 'コンテンツSEO', 'AIライティングツール', '検索順位']
+2026-05-14 11:09:36 [INFO] [generate] パターンCTA挿入（H3末尾）: 3件
+2026-05-14 11:09:36 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「ConoHa AI Canvas」(ID:9805)
+2026-05-14 11:09:36 [INFO] [generate] 完了: 「AIライティングでブログSEO対策を強化する方法｜2026年最新ガイド」
+2026-05-14 11:09:36 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 30件
+[category_selector] 「AIライティング ブログ SEO 対策」→ AIライティング(1373) score=24
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration with pastel colors showing an open book, magnifying g...
+[image_generator] 完了 (72KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_110945_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10162)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: AIライティングでブログSEO対策を始める前に知っておきたい
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: AI-powered writing tools optimizing blog content for search engines, featuring f...
+[image_generator] 完了 (85KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_110957_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10163)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: AIライティングでブログSEO対策を実践する具体的な手順
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A serene flat design illustration featuring magnifying glass, checkmark icons, a...
+[image_generator] 完了 (52KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260514_111007_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10164)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: AIライティングツール選びとSEO対策で失敗しないためのポイ
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 393件
+[internal_linker] タイトル重複除去: 2件の旧記事を除外
+[internal_linker] 「Notta」関連記事: 2件追加
+[internal_linker] 「Neuro Dive」関連記事: 3件追加
+[internal_linker] 「Udemy」関連記事: 3件追加
+[internal_linker] 同カテゴリー: 5件選定（ルールベース）
+[internal_linker] 製品名マッチ「Notta」→ セクション4に割り当て
+[internal_linker] 製品名マッチ「Neuro Dive」→ セクション12に割り当て
+[internal_linker] 製品名マッチ「Notta」→ セクション13に割り当て
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['Notta使い方完全ガイド！無料登録から文字起こし・議事録作', 'PLAUD NOTEとNottaの比較｜スペックで選ぶと失敗', 'Neuro Dive Onlineの費用は高い？料金と支援内', 'AIライティング×アフィリエイトで記事作成が3時間→20分に', 'AIライティングは本当に稼げない？現実と稼ぐコツを徹底解説', 'AIライターに向いてない人の特徴9選！失敗する前に適性を確認', 'Galaxy AIで文章作成はどこまで使える？無料機能と活用', '読書感想文 AIのアプリだからこそできる自然な文章の作り方']
+[wordpress] タグ設定: ['AIライティング', 'ブログSEO対策', 'コンテンツSEO', 'AIライティングツール', '検索順位']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 10165) → https://workup-ai.com/wp-admin/post.php?post=10165&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, speech bubbles, stars, lightbulbs, checkmarks, upward chart arrows in soft pink, mint, and lavender pastel tones with minimal design.
+Elegant lifestyle background: soft morning light with warm neutrals, gentle depth-of-field effect, clean and airy ambiance, muted earth tones.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "AI Writing Boosts Blog SEO" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行111 「AIライティング ブログ SEO 対策」→ 投稿済み (2026/05/14, ID:10165) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「AIライティングでブログSEO対策を強化する方法｜2026年」
+2026-05-14 11:10:20 [INFO] [post] WP投稿完了: ID=10165 → https://workup-ai.com/wp-admin/post.php?post=10165&action=edit
+2026-05-14 11:10:20 [INFO] [workup-ai] [1/1] ✅ 完了: 「AIライティングでブログSEO対策を強化する方法｜2026年最新ガイド」
+2026-05-14 11:10:20 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-14 11:10:20 [INFO] 
+============================================================
+2026-05-14 11:10:20 [INFO] 【全体サマリー】
+2026-05-14 11:10:20 [INFO]   ブログ数  : 1件
+2026-05-14 11:10:20 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-14 11:10:20 [INFO]   所要時間  : 208.9秒
+2026-05-14 11:10:20 [INFO]   ✅ [workup-ai] AIライティング ブログ SEO 対策 → AIライティングでブログSEO対策を強化する方法｜2026年最新ガイド
+2026-05-14 11:10:20 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10165&action=edit
+2026-05-14 11:10:20 [INFO] ============================================================

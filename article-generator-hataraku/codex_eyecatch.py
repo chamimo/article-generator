@@ -40,12 +40,13 @@ def _parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def _fetch_target_drafts(
+def _fetch_target_posts(
     wp_url: str,
     auth: HTTPBasicAuth,
     post_id: int | None,
     limit: int,
     overwrite: bool,
+    status: str = "draft",
 ) -> list[dict]:
     base = wp_url.rstrip("/")
     fields = "id,title,slug,status,featured_media,link,modified"
@@ -65,7 +66,7 @@ def _fetch_target_drafts(
         f"{base}/wp-json/wp/v2/posts",
         auth=auth,
         params={
-            "status": "draft",
+            "status": status or "draft",
             "orderby": "modified",
             "order": "desc",
             "per_page": min(max(limit * 3, 3), 50),
@@ -144,16 +145,17 @@ def main() -> int:
     )
 
     auth = HTTPBasicAuth(cfg.wp_username, cfg.wp_app_password)
-    posts = _fetch_target_drafts(
+    posts = _fetch_target_posts(
         cfg.wp_url,
         auth,
         post_id=args.post_id,
         limit=args.limit,
         overwrite=args.overwrite,
+        status=cfg.wp_post_status or "draft",
     )
 
     if not posts:
-        print("[codex-eyecatch] 対象の下書きがありません")
+        print(f"[codex-eyecatch] 対象の投稿がありません status={cfg.wp_post_status or 'draft'}")
         return 0
 
     print(f"[codex-eyecatch] 対象: {len(posts)}件")

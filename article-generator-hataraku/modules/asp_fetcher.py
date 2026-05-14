@@ -121,16 +121,49 @@ def fetch_asp_links(
         log.debug(f"[asp_fetcher] 「{used}」にデータがありません")
         return []
 
+    # ── ヘッダー行から列インデックスを動的に検出 ──────────────────────────
+    # シートによって先頭に「ジャンル」列があるなど構造が異なるため、列名で解決する
+    _COL_ALIASES = {
+        "name":     ["案件名"],
+        "blog":     ["ブログ", "ブログ名"],
+        "priority": ["優先度"],
+        "link":     ["アフィリリンク", "リンク", "url", "URL"],
+        "appeal":   ["訴求軸", "訴求軸（SEO・CVポイント）", "訴求"],
+    }
+    header = [h.strip() for h in rows[0]]
+
+    def _find_col(aliases: list[str]) -> int:
+        for alias in aliases:
+            if alias in header:
+                return header.index(alias)
+        return -1
+
+    col_name     = _find_col(_COL_ALIASES["name"])
+    col_blog     = _find_col(_COL_ALIASES["blog"])
+    col_priority = _find_col(_COL_ALIASES["priority"])
+    col_link     = _find_col(_COL_ALIASES["link"])
+    col_appeal   = _find_col(_COL_ALIASES["appeal"])
+
+    # ヘッダー検出できない場合は旧来の固定インデックスにフォールバック
+    if col_name < 0 or col_link < 0:
+        log.warning(f"[asp_fetcher] ヘッダー検出失敗 → 固定インデックスにフォールバック: {header}")
+        col_name, col_blog, col_priority, col_link, col_appeal = 0, 1, 2, 3, 4
+
+    log.debug(
+        f"[asp_fetcher] 列マッピング: 案件名={col_name} ブログ={col_blog} "
+        f"優先度={col_priority} リンク={col_link} 訴求軸={col_appeal}"
+    )
+
     results: list[dict] = []
     for row in rows[1:]:  # ヘッダー除外
         def cell(i: int) -> str:
-            return row[i].strip() if i < len(row) else ""
+            return row[i].strip() if 0 <= i < len(row) else ""
 
-        name     = cell(0)  # A列: 案件名
-        blog     = cell(1)  # B列: ブログ名（ログ用）
-        pri      = cell(2)  # C列: 優先度
-        raw_link = cell(3)  # D列: アフィリリンク（URLまたはHTMLタグ）
-        appeal   = cell(4)  # E列: 訴求軸
+        name     = cell(col_name)
+        blog     = cell(col_blog)
+        pri      = cell(col_priority)
+        raw_link = cell(col_link)
+        appeal   = cell(col_appeal)
 
         if not name or not raw_link:
             continue
