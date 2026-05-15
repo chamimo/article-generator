@@ -2749,6 +2749,36 @@
       "output_tokens": 9899,
       "cost_usd": 0.167355,
       "label": "article:生成AI 活用 ビジネス"
+    },
+    {
+      "timestamp": "2026-05-14T19:00:22.016043+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 84,
+      "cost_usd": 0.000423,
+      "label": "lsi:Gemini 使い方 日本"
+    },
+    {
+      "timestamp": "2026-05-14T19:00:25.824475+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 462,
+      "cost_usd": 0.001989,
+      "label": "kw_research:Gemini 使い方 日本"
+    },
+    {
+      "timestamp": "2026-05-14T19:02:33.704732+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6232,
+      "output_tokens": 8576,
+      "cost_usd": 0.147336,
+      "label": "article:Gemini 使い方 日本"
     }
   ],
   "events": [
