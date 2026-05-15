@@ -4,9 +4,26 @@
   "display_name": "オンライン学習ナビ",
   "genre": "オンライン学習・プログラミング・資格・スキルアップ",
   "target_length": {
-    "MONETIZE": 9000,
-    "LONGTAIL": 6000,
-    "FUTURE": 3000
+    "MONETIZE": [
+      8000,
+      12000
+    ],
+    "LONGTAIL": [
+      5000,
+      8000
+    ],
+    "FUTURE": [
+      3000,
+      5000
+    ],
+    "NEWS": [
+      2000,
+      3500
+    ],
+    "TRIAL": [
+      2000,
+      3500
+    ]
   },
   "fact_check": true,
   "candidate_ss_id": "1oRQdKWPBsy6f9N9rJORPzn59T4V4qBbh4KtMR4dCcqk",

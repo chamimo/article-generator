@@ -59,3 +59,412 @@
 2026-05-15 03:00:24 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
 2026-05-15 03:00:24 [INFO]   所要時間  : 19.9秒
 2026-05-15 03:00:24 [INFO] ============================================================
+2026-05-15 04:20:02 [INFO] ============================================================
+2026-05-15 04:20:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-15 04:20:02 [INFO] ============================================================
+2026-05-15 04:20:02 [INFO] 対象ブログ: ['hapipo8']
+2026-05-15 04:20:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-15 04:20:05 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-15 04:20:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-15 04:20:05 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-05-15 04:20:05 [INFO]   fact_check       : True
+2026-05-15 04:20:05 [INFO]   article_type_mix : True
+2026-05-15 04:20:05 [INFO]   stop_words       : ['2026']
+2026-05-15 04:20:05 [INFO]   article_count    : 1  dry_run: False
+2026-05-15 04:20:07 [INFO] [hapipo8] アフィリ案件: 50件（スプレッドシート）
+2026-05-15 04:20:07 [INFO] [hapipo8]   [S] 福ちゃん → https://hapipo8.com/fukuchan
+2026-05-15 04:20:07 [INFO] [hapipo8]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori
+2026-05-15 04:20:07 [INFO] [hapipo8]   [S] フクウロ → https://hapipo8.com/fukuuro
+2026-05-15 04:20:07 [INFO] [hapipo8]   [S] メディカルフードサービス → https://hapipo8.com/medical_food
+2026-05-15 04:20:07 [INFO] [hapipo8]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-05-15 04:20:07 [INFO] [hapipo8]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman
+2026-05-15 04:20:07 [INFO] [hapipo8]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] トラベル・スタンダード・ジャパン → https://px.a8.net/svt/ejp?a8mat=4B1THV+17H122+5LKE+5ZU29
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] ORBIS AMBER(オルビス アンバー) → https://px.a8.net/svt/ejp?a8mat=4B1THX+DDO2AI+1USQ+4ASX02
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] トリア → https://hapipo8.com/tria
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] nosh - ナッシュ → https://hapipo8.com/nosh
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] 快眠タイムズストア → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DRYGT6+4UHE+TRVYQ
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] NELL マットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6M5RVE+4KD8+5ZMCI
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] 咲夜レアルマットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6LKC9M+4MRW+61Z81
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] オーケンウォーター → https://px.a8.net/svt/ejp?a8mat=4B1THX+CRN0WQ+1LOO+6NMJL
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] every frecious（エブリィフレシャス） → https://px.a8.net/svt/ejp?a8mat=4B1THX+CS8GII+2B8Y+15OK2A
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] リゾバ → https://hapipo8.com/rizoba
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] ダイブ → https://hapipo8.com/dive
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] 工場求人ワールド → https://px.a8.net/svt/ejp?a8mat=4B1O1T+EGYV5U+5S9S+5YJRM
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] ソフトバンク光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KARLU+3HKU+25FF81
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] BIGLOBE WiMAX +5G → https://px.a8.net/svt/ejp?a8mat=4B1THS+2TTMYY+B4+2BDBUB
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] フレッツ光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KW4WA+348K+1TJE9U
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] AI英会話アプリ【スピーク】 → https://hapipo8.com/speak
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] もぐワン ペットフード → https://hapipo8.com/moguwan
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] DMM 生成AI CAMP → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] ポニークリーニング → https://px.a8.net/svt/ejp?a8mat=4B1THV+5QLST6+4N08+5Z6WY
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] 体験型カタログギフト【EXETIME】 → https://hapipo8.com/exetime
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] GMOとくとくBB → https://px.a8.net/svt/ejp?a8mat=4B1THS+2UF2KQ+50+3H48S2
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] Amazon Prime Video → https://amzn.to/4tbKPVa
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] Pollet → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] カレントボディ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DFGD3U+54TM+5YJRM
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] アプリ接客キャスト → https://px.a8.net/svt/ejp?a8mat=4B1O1T+FKUWOY+3P1G+NTRMQ
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] ヴィーナスウォーカー → https://px.a8.net/svt/ejp?a8mat=4B1THV+6632JE+58KC+5YRHE
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] WEBCOACH → https://px.a8.net/svt/ejp?a8mat=4B1V1W+DW4O7U+5EVK+5YZ75
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] ポケットリサーチ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DUXMU2+58KC+BWVTE
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] ラボル カード払い → https://px.a8.net/svt/ejp?a8mat=4B1THS+3TJN9M+40JM+1NJZN5
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] クロスワンルーム → https://px.a8.net/svt/ejp?a8mat=4B1THX+DPKQE2+4EZ2+BYLJL
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] Mr.シリーズ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CLOOUY+1USQ+2Z8T76
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] IBJ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CF4X7E+FOG+4MPSTE
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] ユアマイスター → https://px.a8.net/svt/ejp?a8mat=4B1THX+BZNNH6+4HQS+5YJRM
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] TOSSY → https://px.a8.net/svt/ejp?a8mat=4B1THS+2V0I6I+1WP2+1HLNLE
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] ABLENET VPS → https://px.a8.net/svt/ejp?a8mat=4B1THS+2VLXSA+4NIK+5Z6WX
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-15 04:20:07 [INFO] [hapipo8]   [A] BIGLOBE光 → https://px.a8.net/svt/ejp?a8mat=4B3LMR+4JQL96+3SPO+7LW1F7
+2026-05-15 04:20:07 [INFO] [hapipo8]   [B] 食楽膳 → https://hapipo8.com/shokurakuzen
+2026-05-15 04:20:07 [INFO] [hapipo8]   [?] 楽器買取 福ちゃん → https://hapipo8.com/gakki-fukucyan
+2026-05-15 04:20:07 [INFO] [hapipo8]   [?] ニーゴ・リユース → https://hapipo8.com/25reuse
+2026-05-15 04:20:09 [INFO] [wp] 記事取得: 計164件 (publish=164)
+2026-05-15 04:20:09 [INFO] [hapipo8] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.4, 'monetize': 0.1})
+2026-05-15 04:20:10 [DEBUG] [fetch] シート「絞り込みKW」: 609行 / ヘッダー: ['キーワード', '親KW', '訴求案件', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '投稿ステータス', '記事URL', '投稿ID', '使用サブKW', '既存記事URL', '既存記事ID']
+2026-05-15 04:20:10 [INFO] [fetch] サブKW紐付け: 170件 → 49記事に統合
+2026-05-15 04:20:10 [INFO] [fetch] [キーワード] メインKW: 27件（vol≥30 or N/A）  サブKW除外: 170件（統合対象）  投稿済みスキップ: 125件  テーマ外除外: 283件  aim内訳: [now:1, aim:61, claude:25, add:223]
+2026-05-15 04:20:10 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-15 04:20:10 [INFO] [dup_check] 優先候補: 27件 {'now': 1, 'aim': 2, 'add': 24} を先頭評価
+2026-05-15 04:20:10 [INFO] [dup_check] 除外: 「シェフの無添つくりおき 口コミ 評判」 → カニバリ(2/3語重複 ['口コミ', '評判']): 「もぐワンの口コミ・評判を徹底検証！成分・価格・食いつきのリアルな声」
+2026-05-15 04:20:10 [INFO] [dup_check] 除外: 「睡眠の質 上げる 方法 グッズ」 → カニバリ(3/3語重複 ['睡眠の質', '上げる', 'グッズ']): 「睡眠の質を上げる方法・グッズ完全ガイド！今夜から熟睡できる12選」
+2026-05-15 04:20:10 [INFO] [dup_check] 除外: 「宅食 一人暮らし 男性」 → カニバリ(3/3語重複 ['宅食', '一人暮らし', '男性']): 「宅食 一人暮らし男性おすすめ6選！栄養・コスト・時短を徹底比較」
+2026-05-15 04:20:10 [INFO] [dup_check] 除外: 「夏休み お金かけない 過ごし方」 → カニバリ(3/3語重複 ['夏休み', 'お金かけない', '過ごし方']): 「夏休みお金かけない過ごし方20選！子どもも家族も無料で楽しむアイデア集」
+2026-05-15 04:20:10 [INFO] [dup_check] 除外: 「AIで稼ぐ方法」 → コアKW重複: 「AIで稼ぐ方法10選！初心者でも副業で月収を上げる具体的なやり方」(core: 'aiで稼ぐ方法')
+2026-05-15 04:20:10 [INFO] [dup_check] 除外: 「副業 バレない 方法」 → カニバリ(2/2語重複 ['副業', 'バレない']): 「副業がバレない方法7つ！確定申告・住民税の対策を会社員向けに解説」
+2026-05-15 04:20:10 [INFO] [dup_check] 除外: 「引きこもり 社会復帰 方法」 → カニバリ(2/2語重複 ['引きこもり', '社会復帰']): 「引きこもりから社会復帰する方法7ステップ！段階的に自信を取り戻すには」
+2026-05-15 04:20:10 [INFO] [dup_check] 除外: 「算数 苦手 克服 方法 小学生」 → カニバリ(4/4語重複 ['算数', '苦手', '克服', '小学生']): 「小学生の算数苦手を克服する方法7選！親が教えるコツと効果的な勉強法」
+2026-05-15 04:20:10 [INFO] [dup_check] 除外: 「未経験 ITスキル 学習 方法」 → カニバリ(2/3語重複 ['未経験', 'itスキル']): 「未経験からITスキルを学ぶ方法7ステップ！独学・スクール徹底比較」
+2026-05-15 04:20:10 [DEBUG] [dup_check] OK: 「生活保護 スマホ契約」
+2026-05-15 04:20:10 [INFO] [dup_check] 完了: 選定=1件 / 除外=9件 (pool=27件, 要求=1件)
+2026-05-15 04:20:10 [INFO] [select] 1件選定 (要求=1件)
+2026-05-15 04:20:10 [INFO] [select]   1. 「生活保護 スマホ契約」 vol=0 seo=N/A comp=N/A
+2026-05-15 04:20:10 [INFO] [hapipo8] LONGTAIL選定: 1件
+2026-05-15 04:20:10 [INFO] [hapipo8] 候補: 27件 / 選定: 1件 / 生成予定: 1件
+2026-05-15 04:20:10 [INFO] [api_guard] 本日の使用量: $1.7289 / ¥259 (31回呼び出し)
+2026-05-15 04:20:10 [INFO] ────────────────────────────────────────────────────────────
+2026-05-15 04:20:10 [INFO] [hapipo8] [1/1] [LONGTAIL] 「生活保護 スマホ契約」 vol=0 ★ADD
+2026-05-15 04:20:10 [INFO] ────────────────────────────────────────────────────────────
+2026-05-15 04:20:10 [INFO] [generate] 訴求案件指定: ['だれでもモバイル']
+2026-05-15 04:20:10 [INFO] [generate] 生成開始: 「生活保護 スマホ契約」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+2026-05-15 04:22:26 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-15 04:22:26 [INFO] [generate] パターンCTA: 訴求案件指定マッチ「だれでもモバイル」← hint=「だれでもモバイル」
+2026-05-15 04:22:26 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「だれでもモバイル」(ID:3753)
+2026-05-15 04:22:27 [INFO] [generate] 完了: 「生活保護でもスマホ契約できる！審査・手続き・おすすめプランを完全解説」
+2026-05-15 04:22:27 [INFO] [post] 投稿方式: publish
+2026-05-15 04:23:14 [INFO] [post] WP投稿完了: ID=4225 → https://hapipo8.com/wp-admin/post.php?post=4225&action=edit
+2026-05-15 04:23:14 [INFO] [hapipo8] [1/1] ✅ 完了: 「生活保護でもスマホ契約できる！審査・手続き・おすすめプランを完全解説」
+2026-05-15 04:23:14 [INFO] [hapipo8] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-15 04:23:14 [INFO] 
+============================================================
+2026-05-15 04:23:14 [INFO] 【全体サマリー】
+2026-05-15 04:23:14 [INFO]   ブログ数  : 1件
+2026-05-15 04:23:14 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-15 04:23:14 [INFO]   所要時間  : 191.8秒
+2026-05-15 04:23:14 [INFO]   ✅ [hapipo8] 生活保護 スマホ契約 → 生活保護でもスマホ契約できる！審査・手続き・おすすめプランを完全解説
+2026-05-15 04:23:14 [INFO]        https://hapipo8.com/wp-admin/post.php?post=4225&action=edit
+2026-05-15 04:23:14 [INFO] ============================================================
+2026-05-15 05:00:04 [INFO] ============================================================
+2026-05-15 05:00:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-15 05:00:04 [INFO] ============================================================
+2026-05-15 05:00:04 [INFO] 対象ブログ: ['hataraku']
+2026-05-15 05:00:07 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-15 05:00:07 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-15 05:00:07 [INFO] ════════════════════════════════════════════════════════════
+2026-05-15 05:00:07 [INFO]   genre            : 転職・副業・キャリア
+2026-05-15 05:00:07 [INFO]   fact_check       : True
+2026-05-15 05:00:07 [INFO]   article_type_mix : True
+2026-05-15 05:00:07 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-15 05:00:07 [INFO]   article_count    : 1  dry_run: False
+2026-05-15 05:00:09 [INFO] [hataraku] アフィリ案件: 21件（スプレッドシート）
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] ラボル → https://hataraku-navi.com/labol
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] TechGo → https://hataraku-navi.com/techgo
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] 保育専門求人サイト ほいく畑 → https://hataraku-navi.com/hoikubatake
+2026-05-15 05:00:09 [INFO] [hataraku]   [A] FREENANCE → https://hataraku-navi.com/freenance
+2026-05-15 05:00:09 [INFO] [hataraku]   [A] Midworks → https://hataraku-navi.com/midworks
+2026-05-15 05:00:09 [INFO] [hataraku]   [A] マスメディアン → https://hataraku-navi.com/massmedia
+2026-05-15 05:00:09 [INFO] [hataraku]   [A] atGP → https://hataraku-navi.com/atgp
+2026-05-15 05:00:09 [INFO] [hataraku]   [A] atGPジョブトレ IT・Web → https://hataraku-navi.com/atgp_job
+2026-05-15 05:00:09 [INFO] [hataraku]   [A] リゾートバイトダイブ → https://hataraku-navi.com/dive
+2026-05-15 05:00:09 [INFO] [hataraku]   [A] 日本マンパワー → https://hataraku-navi.com/manpower
+2026-05-15 05:00:09 [INFO] [hataraku]   [A] クラウドワークス → https://hataraku-navi.com/crowdworks
+2026-05-15 05:00:09 [INFO] [hataraku]   [?] 保育エイド → https://hataraku-navi.com/hoiku-aid
+2026-05-15 05:00:09 [INFO] [hataraku]   [?] 保育バランス → https://hataraku-navi.com/hoiku-balance
+2026-05-15 05:00:09 [INFO] [hataraku]   [?] 保育メトロ → https://hataraku-navi.com/hoiku-metro
+2026-05-15 05:00:09 [INFO] [hataraku]   [?] 20代の転職相談所 → https://hataraku-navi.com/20tensyoku
+2026-05-15 05:00:11 [INFO] [wp] 記事取得: 計49件 (publish=49)
+2026-05-15 05:00:11 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-15 05:00:13 [DEBUG] [fetch] シート「絞り込みKW」: 8379行 / ヘッダー: ['キーワード', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID']
+2026-05-15 05:00:13 [INFO] [fetch] サブKW紐付け: 6968件 → 187記事に統合
+2026-05-15 05:00:13 [INFO] [fetch] [キーワード] メインKW: 177件（vol≥30 or N/A）  サブKW除外: 6968件（統合対象）  投稿済みスキップ: 889件  テーマ外除外: 198件  aim内訳: [now:2, claude:235, aim:131, add:7]
+2026-05-15 05:00:13 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-15 05:00:13 [INFO] [dup_check] 優先候補: 177件 {'now': 2, 'claude': 102, 'aim': 67, 'add': 6} を先頭評価
+2026-05-15 05:00:13 [DEBUG] [dup_check] OK: 「仕事 行きたくない 5月 病気」
+2026-05-15 05:00:13 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=177件, 要求=1件)
+2026-05-15 05:00:13 [INFO] [select] 1件選定 (要求=1件)
+2026-05-15 05:00:13 [INFO] [select]   1. 「仕事 行きたくない 5月 病気」 vol=0 seo=N/A comp=N/A
+2026-05-15 05:00:13 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-15 05:00:13 [INFO] [hataraku] 候補: 177件 / 選定: 1件 / 生成予定: 1件
+2026-05-15 05:00:13 [INFO] [api_guard] 本日の使用量: $1.8979 / ¥285 (34回呼び出し)
+2026-05-15 05:00:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-15 05:00:13 [INFO] [hataraku] [1/1] [LONGTAIL] 「仕事 行きたくない 5月 病気」 vol=0 ★NOW
+2026-05-15 05:00:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-15 05:00:13 [INFO] [generate] 生成開始: 「仕事 行きたくない 5月 病気」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+2026-05-15 05:03:00 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-15 05:03:00 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「atGPジョブトレ IT・Web」(ID:569)
+2026-05-15 05:03:01 [INFO] [generate] 完了: 「仕事行きたくない5月は病気のサイン？原因・症状・対処法を徹底解説」
+2026-05-15 05:03:01 [INFO] [post] 投稿方式: draft
+2026-05-15 05:03:09 [INFO] [post] WP投稿完了: ID=670 → https://hataraku-navi.com/wp-admin/post.php?post=670&action=edit
+2026-05-15 05:03:09 [INFO] [hataraku] [1/1] ✅ 完了: 「仕事行きたくない5月は病気のサイン？原因・症状・対処法を徹底解説」
+2026-05-15 05:03:09 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-15 05:03:09 [INFO] 
+============================================================
+2026-05-15 05:03:09 [INFO] 【全体サマリー】
+2026-05-15 05:03:09 [INFO]   ブログ数  : 1件
+2026-05-15 05:03:09 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-15 05:03:09 [INFO]   所要時間  : 185.1秒
+2026-05-15 05:03:09 [INFO]   ✅ [hataraku] 仕事 行きたくない 5月 病気 → 仕事行きたくない5月は病気のサイン？原因・症状・対処法を徹底解説
+2026-05-15 05:03:09 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=670&action=edit
+2026-05-15 05:03:09 [INFO] ============================================================
+2026-05-15 05:30:03 [INFO] ============================================================
+2026-05-15 05:30:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-15 05:30:03 [INFO] ============================================================
+2026-05-15 05:30:03 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-15 05:30:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-15 05:30:06 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-15 05:30:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-15 05:30:06 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-15 05:30:06 [INFO]   fact_check       : True
+2026-05-15 05:30:06 [INFO]   article_type_mix : True
+2026-05-15 05:30:06 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-15 05:30:06 [INFO]   article_count    : 1  dry_run: False
+2026-05-15 05:30:08 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-15 05:30:08 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-15 05:30:08 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-15 05:30:08 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-15 05:30:10 [INFO] [wp] 記事取得: 計30件 (draft=1 / publish=29)
+2026-05-15 05:30:10 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-15 05:30:11 [DEBUG] [fetch] シート「絞り込みKW」: 202行 / ヘッダー: ['キーワード', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '投稿ステータス', '記事URL', '投稿ID', '使用サブKW', '既存記事URL', '既存記事ID']
+2026-05-15 05:30:11 [INFO] [fetch] サブKW紐付け: 58件 → 15記事に統合
+2026-05-15 05:30:11 [INFO] [fetch] [キーワード] メインKW: 48件（vol≥30 or N/A）  サブKW除外: 58件（統合対象）  投稿済みスキップ: 34件  テーマ外除外: 13件  aim内訳: [now:3, aim:32, claude:21, add:5]
+2026-05-15 05:30:11 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-15 05:30:11 [INFO] [dup_check] 優先候補: 48件 {'now': 3, 'aim': 24, 'claude': 16, 'add': 5} を先頭評価
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「五平餅 お土産 できる？」 → カニバリ(3/3語重複 ['五平餅', 'お土産', 'できる？']): 「五平餅はお土産にできる？日持ち・通販・買える場所を徹底解説」
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「朴葉味噌 お土産 日持ちする？」 → カニバリ(3/3語重複 ['朴葉味噌', 'お土産', '日持ちする？']): 「朴葉味噌のお土産は日持ちする？賞味期限・保存方法を徹底解説」
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「赤かぶ漬け お土産 日持ち」 → カニバリ(2/3語重複 ['お土産', '日持ち']): 「朴葉味噌のお土産は日持ちする？賞味期限・保存方法を徹底解説」
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「高山 雪 朝 写真 撮れる場所」 → カニバリ(2/3語重複 ['高山', '写真']): 「高山の冬写真スポット9選！静かな雪景色と古い町並みを早朝に撮る」
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「飛騨 空がきれいに見える場所」 → カニバリ(2/2語重複 ['飛騨', '空がきれいに見える場所']): 「飛騨で空がきれいに見える場所9選！星空・天の川・夜景の絶景スポット完全ガイド」
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「飛騨 山に囲まれた景色 見どころ」 → カニバリ(2/3語重複 ['飛騨', '見どころ']): 「飛騨古川 昔の町並み見どころ完全ガイド｜散策・カフェ・朝市まで」
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「飛騨 民芸 見学 できる場所」 → カニバリ(4/4語重複 ['飛騨', '民芸', '見学', 'できる場所']): 「飛騨民芸を見学できる場所7選！工房・博物館・体験施設まとめ」
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「高山 お土産 ネット 購入 方法」 → カニバリ(4/4語重複 ['高山', 'お土産', 'ネット', '購入']): 「高山のお土産をネットで購入する方法・おすすめ通販サイト完全ガイド」
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「春慶塗 お土産 人気商品」 → カニバリ(3/3語重複 ['春慶塗', 'お土産', '人気商品']): 「春慶塗のお土産人気商品おすすめ7選｜高山・岐阜で選ぶ伝統漆工芸の贈り物」
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「奥飛騨温泉郷 日帰り 駐車場 情報」 → カニバリ(4/4語重複 ['奥飛騨温泉郷', '日帰り', '駐車場', '情報']): 「奥飛騨温泉郷の日帰り駐車場情報まとめ！無料・有料・混雑回避のコツも解説」
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「平湯温泉 足湯 場所 アクセス」 → カニバリ(4/4語重複 ['平湯温泉', '足湯', '場所', 'アクセス']): 「平湯温泉の足湯｜場所・アクセス・無料で楽しむ完全ガイド」
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「平湯温泉 日帰り バスターミナル 近く」 → カニバリ(4/4語重複 ['平湯温泉', '日帰り', 'バスターミナル', '近く']): 「平湯温泉バスターミナル近くで日帰り入浴できる温泉施設5選！料金・営業時間まとめ」
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「平湯温泉 空いてる時間帯 目安」 → カニバリ(3/3語重複 ['平湯温泉', '空いてる時間帯', '目安']): 「平湯温泉が空いてる時間帯の目安は？混雑を避けるベストタイミング完全ガイド」
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「福地温泉 静かな宿 特徴」 → カニバリ(2/3語重複 ['福地温泉', '静かな宿']): 「福地温泉の静かな宿おすすめ完全ガイド！秘湯・源泉かけ流しで癒される宿の選び方」
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「高山 ランチ 地元民 人気店」 → カニバリ(4/4語重複 ['高山', 'ランチ', '地元民', '人気店']): 「高山ランチ地元民おすすめ人気店10選！飛騨牛・蕎麦・郷土料理の隠れた名店」
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「高山 カフェ 古民家 静か 空間」 → カニバリ(5/5語重複 ['高山', 'カフェ', '古民家', '静か', '空間']): 「高山の古民家カフェおすすめ３選｜静かで落ち着いた空間で過ごすひととき」
+2026-05-15 05:30:11 [INFO] [dup_check] 除外: 「高山 観光 徒歩で回れる範囲」 → カニバリ(2/3語重複 ['高山', '観光']): 「高山の赤い橋の名前と由来を簡単に解説！飛騨高山を代表する観光スポット」
+2026-05-15 05:30:11 [DEBUG] [dup_check] OK: 「高山 冬 タイヤ 必要条件」
+2026-05-15 05:30:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=17件 (pool=48件, 要求=1件)
+2026-05-15 05:30:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-15 05:30:11 [INFO] [select]   1. 「高山 冬 タイヤ 必要条件」 vol=0 seo=N/A comp=N/A
+2026-05-15 05:30:11 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-15 05:30:11 [INFO] [hida-no-omoide] 候補: 48件 / 選定: 1件 / 生成予定: 1件
+2026-05-15 05:30:11 [INFO] [api_guard] 本日の使用量: $2.0746 / ¥311 (37回呼び出し)
+2026-05-15 05:30:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-15 05:30:11 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「高山 冬 タイヤ 必要条件」 vol=0 ★AIM
+2026-05-15 05:30:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-15 05:30:11 [INFO] [generate] 生成開始: 「高山 冬 タイヤ 必要条件」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+2026-05-15 05:33:19 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「【Googleマップ】飛騨高山 カフェ」(ID:226)
+2026-05-15 05:33:21 [INFO] [generate] 完了: 「高山の冬タイヤ必要条件を完全解説！標高・気温・規制まとめ」
+2026-05-15 05:33:21 [INFO] [post] 投稿方式: draft
+2026-05-15 05:33:31 [INFO] [post] WP投稿完了: ID=304 → https://hida-no-omoide.com/wp-admin/post.php?post=304&action=edit
+2026-05-15 05:33:31 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「高山の冬タイヤ必要条件を完全解説！標高・気温・規制まとめ」
+2026-05-15 05:33:31 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-15 05:33:31 [INFO] 
+============================================================
+2026-05-15 05:33:31 [INFO] 【全体サマリー】
+2026-05-15 05:33:31 [INFO]   ブログ数  : 1件
+2026-05-15 05:33:31 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-15 05:33:31 [INFO]   所要時間  : 208.0秒
+2026-05-15 05:33:31 [INFO]   ✅ [hida-no-omoide] 高山 冬 タイヤ 必要条件 → 高山の冬タイヤ必要条件を完全解説！標高・気温・規制まとめ
+2026-05-15 05:33:31 [INFO]        https://hida-no-omoide.com/wp-admin/post.php?post=304&action=edit
+2026-05-15 05:33:31 [INFO] ============================================================
+2026-05-15 06:00:04 [INFO] ============================================================
+2026-05-15 06:00:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-15 06:00:04 [INFO] ============================================================
+2026-05-15 06:00:04 [INFO] 対象ブログ: ['web-study1']
+2026-05-15 06:00:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-15 06:00:06 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-05-15 06:00:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-15 06:00:06 [INFO]   genre            : オンライン学習・プログラミング・資格・スキルアップ
+2026-05-15 06:00:06 [INFO]   fact_check       : True
+2026-05-15 06:00:06 [INFO]   article_type_mix : True
+2026-05-15 06:00:06 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-15 06:00:06 [INFO]   article_count    : 1  dry_run: False
+2026-05-15 06:00:08 [INFO] [web-study1] アフィリ案件: 27件（スプレッドシート）
+2026-05-15 06:00:08 [INFO] [web-study1]   [S] 無学年式オンライン教材 のすらら → https://web-study1.com/surara
+2026-05-15 06:00:08 [INFO] [web-study1]   [S] ヒューマンアカデミー → https://web-study1.com/haa.athuman
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] こどもチャレンジ → https://web-study1.com/shimajiro
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] こどもチャレンジ baby → https://web-study1.com/shimajiro-baby
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] Filmora → https://web-study1.com/filmora
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] スマイルゼミ → https://web-study1.com/smile-zemi
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] 進研ゼミ　高校講座 → https://web-study1.com/sinkenzemi-koukou
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] 進研ゼミ　中学講座 → https://web-study1.com/sinkenzem-cyugaku
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] 進研ゼミ　小学講座 → https://web-study1.com/shinkenzemi-syougakukouza
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] スタディサプリ中学講座 → https://web-study1.com/studysapuri-chugaku
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] Z会 → https://web-study1.com/zkai
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] スタディサプリ高校・大学 受験講座 → https://web-study1.com/studysapur-koukou
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP  学習コース_大学生向け就活対策コース → https://web-study1.com/dmm_webcamp_shukatu
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] Tech Kids School → https://web-study1.com/tech-kids
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] 【RISU算数】(19-1031) → https://web-study1.com/risu
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] スタディサプリENGLISH（新日常英会話コース） → https://web-study1.com/eigosapuri
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] スタディサプリEnglish　ビジネス英語コース → https://web-study1.com/eigosapuri
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP プログラミングコース → https://web-study1.com/web-camp_programing
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] freenance → https://web-study1.com/freenance
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] Udemy → https://web-study1.com/udemy
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP WEBデザインコース → https://web-study1.com/dmm_webcamp
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP Pythonコース → https://web-study1.com/dmm_webcamp_python
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] AI英会話アプリ【スピーク】 → https://web-study1.com/speak
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] スタディサプリ小学講座 → https://web-study1.com/sutasapu-syougaku
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] スタディサプリENGLISH（TOEIC対策コース） → https://web-study1.com/human-english-toeic
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] アンズテック → https://web-study1.com/anzutech
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP 学習コース → https://web-study1.com/dmm-webcamp-gakusyu
+2026-05-15 06:00:10 [INFO] [wp] 記事取得: 計34件 (draft=1 / publish=33)
+2026-05-15 06:00:10 [INFO] [web-study1] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.2, 'monetize': 0.3})
+2026-05-15 06:00:12 [DEBUG] [fetch] シート「絞り込みKW」: 268行 / ヘッダー: ['キーワード', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '体験談']
+2026-05-15 06:00:12 [INFO] [fetch] サブKW紐付け: 78件 → 29記事に統合
+2026-05-15 06:00:12 [INFO] [fetch] [キーワード] メインKW: 14件（vol≥30 or N/A）  サブKW除外: 78件（統合対象）  投稿済みスキップ: 45件  テーマ外除外: 130件  aim内訳: [claude:1, aim:131, add:12]
+2026-05-15 06:00:12 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-15 06:00:12 [INFO] [dup_check] 優先候補: 14件 {'claude': 1, 'aim': 9, 'add': 4} を先頭評価
+2026-05-15 06:00:12 [INFO] [dup_check] 除外: 「Web制作 学習 独学」 → カニバリ(2/3語重複 ['学習', '独学']): 「プログラミング独学は無理？挫折しない学習ロードマップと成功のコツを解説」
+2026-05-15 06:00:12 [INFO] [dup_check] 除外: 「中学生 通信教育 おすすめ」 → カニバリ(2/3語重複 ['通信教育', 'おすすめ']): 「不登校の子に通信教育は有効？すらら体験談とおすすめ教材を徹底解説」
+2026-05-15 06:00:12 [INFO] [dup_check] 除外: 「高校生 通信教育 おすすめ」 → カニバリ(2/3語重複 ['通信教育', 'おすすめ']): 「不登校の子に通信教育は有効？すらら体験談とおすすめ教材を徹底解説」
+2026-05-15 06:00:12 [INFO] [dup_check] 除外: 「家庭教師 通信教育 どっちがいい」 → カニバリ(2/3語重複 ['通信教育', 'どっちがいい']): 「塾と通信教育どっちがいい？小学生に合う学習方法の選び方を徹底解説」
+2026-05-15 06:00:12 [DEBUG] [dup_check] OK: 「通信教育 兄弟 割引 ある？」
+2026-05-15 06:00:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=4件 (pool=14件, 要求=1件)
+2026-05-15 06:00:12 [INFO] [select] 1件選定 (要求=1件)
+2026-05-15 06:00:12 [INFO] [select]   1. 「通信教育 兄弟 割引 ある？」 vol=0 seo=N/A comp=N/A
+2026-05-15 06:00:12 [INFO] [web-study1] LONGTAIL選定: 1件
+2026-05-15 06:00:12 [INFO] [web-study1] 候補: 14件 / 選定: 1件 / 生成予定: 1件
+2026-05-15 06:00:12 [INFO] [api_guard] 本日の使用量: $2.2570 / ¥339 (41回呼び出し)
+2026-05-15 06:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-15 06:00:12 [INFO] [web-study1] [1/1] [LONGTAIL] 「通信教育 兄弟 割引 ある？」 vol=0 ★AIM
+2026-05-15 06:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-15 06:00:12 [INFO] [generate] 生成開始: 「通信教育 兄弟 割引 ある？」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+2026-05-15 06:02:52 [INFO] [generate] パターンCTA挿入（H3末尾）: 4件
+2026-05-15 06:02:52 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「DMM WEBCAMP  学習コース_大学生向け就活対策コース」(ID:151)
+2026-05-15 06:02:54 [INFO] [link_check] 死リンク除去: 3件 / チェック: 10件
+2026-05-15 06:02:54 [DEBUG] [link_check]   削除: https://web-study1.com/sutasapu-syougaku
+2026-05-15 06:02:54 [DEBUG] [link_check]   削除: https://web-study1.com/studysapuri-chugaku
+2026-05-15 06:02:54 [DEBUG] [link_check]   削除: https://web-study1.com/studysapur-koukou
+2026-05-15 06:02:54 [INFO] [generate] 完了: 「通信教育の兄弟割引はある？主要5社の割引率・条件を徹底比較」
+2026-05-15 06:02:54 [INFO] [post] 投稿方式: draft
+2026-05-15 06:03:02 [INFO] [post] WP投稿完了: ID=509 → https://web-study1.com/wp-admin/post.php?post=509&action=edit
+2026-05-15 06:03:02 [INFO] [web-study1] [1/1] ✅ 完了: 「通信教育の兄弟割引はある？主要5社の割引率・条件を徹底比較」
+2026-05-15 06:03:02 [INFO] [web-study1] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-15 06:03:02 [INFO] 
+============================================================
+2026-05-15 06:03:02 [INFO] 【全体サマリー】
+2026-05-15 06:03:02 [INFO]   ブログ数  : 1件
+2026-05-15 06:03:02 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-15 06:03:02 [INFO]   所要時間  : 178.7秒
+2026-05-15 06:03:02 [INFO]   ✅ [web-study1] 通信教育 兄弟 割引 ある？ → 通信教育の兄弟割引はある？主要5社の割引率・条件を徹底比較
+2026-05-15 06:03:02 [INFO]        https://web-study1.com/wp-admin/post.php?post=509&action=edit
+2026-05-15 06:03:02 [INFO] ============================================================
+2026-05-15 17:47:11 [INFO] ============================================================
+2026-05-15 17:47:11 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-15 17:47:11 [INFO] ============================================================
+2026-05-15 17:47:11 [INFO] 対象ブログ: ['hapipo8']
+2026-05-15 17:47:14 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-15 17:47:14 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-15 17:47:14 [INFO] ════════════════════════════════════════════════════════════
+2026-05-15 17:47:14 [INFO] [kanikabari] 開始: 気になることブログ / シート「キーワード」
+2026-05-15 17:47:16 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-15 17:47:16 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-15 17:47:16 [INFO] 
+============================================================
+2026-05-15 17:47:16 [INFO] 【全体サマリー】
+2026-05-15 17:47:16 [INFO]   ブログ数  : 1件
+2026-05-15 17:47:16 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-15 17:47:16 [INFO]   所要時間  : 4.5秒
+2026-05-15 17:47:16 [INFO] ============================================================
+2026-05-15 17:50:07 [INFO] ============================================================
+2026-05-15 17:50:07 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-15 17:50:07 [INFO] ============================================================
+2026-05-15 17:50:07 [INFO] 対象ブログ: ['workup-ai']
+2026-05-15 17:50:09 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-15 17:50:09 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-15 17:50:09 [INFO] ════════════════════════════════════════════════════════════
+2026-05-15 17:50:09 [INFO] [kanikabari] 開始: AIVice / シート「キーワード」
+2026-05-15 17:50:10 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-15 17:50:10 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-15 17:50:10 [INFO] 
+============================================================
+2026-05-15 17:50:10 [INFO] 【全体サマリー】
+2026-05-15 17:50:10 [INFO]   ブログ数  : 1件
+2026-05-15 17:50:10 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-15 17:50:10 [INFO]   所要時間  : 2.5秒
+2026-05-15 17:50:10 [INFO] ============================================================
+2026-05-15 18:06:13 [INFO] ============================================================
+2026-05-15 18:06:13 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-15 18:06:13 [INFO] ============================================================
+2026-05-15 18:06:13 [INFO] 対象ブログ: ['workup-ai']
+2026-05-15 18:06:15 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-15 18:06:15 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-15 18:06:15 [INFO] ════════════════════════════════════════════════════════════
+2026-05-15 18:06:15 [INFO] [kanikabari] 開始: AIVice / シート「キーワード」
+2026-05-15 18:06:17 [INFO] [kanikabari] 未判定AIMキーワード: 503件
+2026-05-15 18:06:17 [INFO] [kanikabari] クラスタリング結果: 1クラスター
+2026-05-15 18:06:17 [INFO]   親KW: 「claude skills 使い方」[base='claude skills']  サブKW: 「claudecode skills 使い方」(Jaccard=0.84)  「claudecode skills おすすめ」(Jaccard=0.57)  「claude code skills 一覧」(Jaccard=0.62)  「claude skills おすすめ」(ベースKW一致('claude skills'))  「claude skills 例」(ベースKW一致('claude skills'))  「claudecode skillsとは」(Jaccard=0.57)  「claudecode skills 作り方」(Jaccard=0.59)  「claude skills 作り方」(ベースKW一致('claude skills'))  「claudecode skills 公式」(Jaccard=0.62)  「claude skills 公式」(ベースKW一致('claude skills'))  「claude skills mcp 違い」(ベースKW一致('claude skills'))  「claude skillsとは」(ベースKW部分一致('claude skills'↔'claude skillsとは'))  「claude skills 一覧」(ベースKW一致('claude skills'))  「claude skills 介绍」(ベースKW一致('claude skills'))  「claude code skills ベストプラクティス」(Jaccard=0.46)  「claude code skills 使用」(Jaccard=0.70)  「claude code skills 教程」(Jaccard=0.62)  「claude code skills インストール」(Jaccard=0.52)  「claude skills 使用」(ベースKW一致('claude skills'))  「claude skills 推荐」(ベースKW一致('claude skills'))  「claudeのskills」(Jaccard=0.56)  「claude code skills 推荐」(Jaccard=0.62)  「claude skills ベストプラクティス」(ベースKW一致('claude skills'))  「claude code skills 作成」(Jaccard=0.62)  「claude code skills 確認」(Jaccard=0.62)  「claude code skills 配置」(Jaccard=0.62)  「claude code skills 如何使用」(Jaccard=0.57)  「claude skills ダウンロード」(ベースKW一致('claude skills'))  「claude code skills コマンド」(Jaccard=0.57)  「claude code skills サブエージェント」(Jaccard=0.48)  「claude code skills subagent 違い」(Jaccard=0.45)  「claude code skills 用法」(Jaccard=0.62)  「claude code デザイン skills」(Jaccard=0.50)  「claude skills 無料」(ベースKW一致('claude skills'))  [要確認] 「codex 使用 claude skills」(ブランド競合('claude'≠'codex') Jaccard=0.57)  「claude code skills 介绍」(Jaccard=0.62)  「claude code skills commands 違い」(Jaccard=0.48)  「claude code skills rules 違い」(Jaccard=0.50)  「claude code skills 場所」(Jaccard=0.62)  「claude code agent skills 違い」(Jaccard=0.48)  「claude code skills ディレクトリ」(Jaccard=0.52)  「claude code skills 推薦」(Jaccard=0.62)  「claude code skills 検索」(Jaccard=0.62)  「claude code skills 排行 榜」(Jaccard=0.57)  「claude おすすめ skills」(Jaccard=0.57)  「claude 公式 skills」(Jaccard=0.63)  「claude skills ディレクトリ」(ベースKW一致('claude skills'))  「claude code skills 怎么 使用」(Jaccard=0.61)  「claude code agent skills 使い方」(Jaccard=0.64)  「claude code 公式skills」(Jaccard=0.50)  「claude code skills 市场」(Jaccard=0.62)  「claude code 的 skills」(Jaccard=0.57)  「claude skills 場所」(ベースKW一致('claude skills'))  「claude code 官方 skills」(Jaccard=0.55)  「claude code skills 教學」(Jaccard=0.62)  「claude code skills 書き方」(Jaccard=0.59)  「claude code skills セキュリティ」(Jaccard=0.52)  「claude code 必 装 skills」(Jaccard=0.52)  「claude code 配置 skills」(Jaccard=0.55)  「claude code おすすめ skills」(Jaccard=0.50)  「claude code添加skills」(Jaccard=0.50)  [要確認] 「claude code の frontend design の skills」(広ジャンル('claude'系) ベースKW相違 Jaccard=0.33)  「claude codeのskills」(Jaccard=0.52)  「claude code skills 怎么 用」(Jaccard=0.57)  「claude code skills 導入」(Jaccard=0.62)  「claude code skills 追加方法」(Jaccard=0.57)  「claude code 自 定义 skills」(Jaccard=0.50)  「claude code skills agent 違い」(Jaccard=0.48)  「claude code skills インストール方法」(Jaccard=0.48)  「claude code skills 官方」(Jaccard=0.62)  「claude code 使用 skills」(Jaccard=0.62)  「claude code skills 入れ方」(Jaccard=0.59)  「claude code skills 大全」(Jaccard=0.62)  「claude skills 知 乎」(ベースKW一致('claude skills'))  「claude skills 安裝」(ベースKW一致('claude skills'))  「claude code 前端skills」(Jaccard=0.50)  「claude code skills コードレビュー」(Jaccard=0.50)  「claude code skills フロントエンド」(Jaccard=0.50)  「claude code 安装 skills」(Jaccard=0.55)  「claude skills 教學」(ベースKW一致('claude skills'))  [要確認] 「the complete guide to building skills for claude 日本語」(ブランド競合('claude'≠'the') Jaccard=0.28)  「claude code subagent skills 違い」(Jaccard=0.45)  「claude code skills 目录」(Jaccard=0.62)  「claude code skills 例」(Jaccard=0.65)  「claude code skills レビュー」(Jaccard=0.57)  「claude code skills是什么」(Jaccard=0.55)  「claude code skills サンプル」(Jaccard=0.57)  「claude code skills 設定」(Jaccard=0.62)  「claude code 常用 skills」(Jaccard=0.55)  「claude skills 怎么 用」(ベースKW一致('claude skills'))  「claude code 安装 官方 skills」(Jaccard=0.48)  「claude skills 市场」(ベースKW一致('claude skills'))  「claude skills フォルダ」(ベースKW一致('claude skills'))  「claude skills 安装」(ベースKW一致('claude skills'))  「claude code skills 管理」(Jaccard=0.62)  「claude code skills 共有」(Jaccard=0.62)  「claude code skills 追加」(Jaccard=0.62)  「claude code 如何 添加 skills」(Jaccard=0.48)  「claude skills 是什么」(ベースKW一致('claude skills'))  「claude skills 教程」(ベースKW一致('claude skills'))  「claude skills 如何 使用」(ベースKW一致('claude skills'))  「claude skills インストール」(ベースKW一致('claude skills'))  「claude skills マーケットプレイス」(ベースKW一致('claude skills'))  「claude code skills 官方 文档」(Jaccard=0.54)  「claude code skills コンテキスト」(Jaccard=0.52)  「claude code agent skills 作り方」(Jaccard=0.46)  「claude code skills 合集」(Jaccard=0.62)  「claude code skills 是什麼」(Jaccard=0.59)  「claude skills パワポ」(ベースKW一致('claude skills'))  「claude code skills 実行方法」(Jaccard=0.57)  「claude code skills 自動化」(Jaccard=0.59)  「claude code skills ドキュメント」(Jaccard=0.52)  「claude skills 解説」(ベースKW一致('claude skills'))  「claude skills 検索」(ベースKW一致('claude skills'))  「claude skills 経理」(ベースKW一致('claude skills'))  「claude skills 大全」(ベースKW一致('claude skills'))  「claude skills テンプレート」(ベースKW一致('claude skills'))  「claude skills 日本語」(ベースKW一致('claude skills'))  「claude skills デザイナー」(ベースKW一致('claude skills'))  「claude skills デザインシステム」(ベースKW一致('claude skills'))  「claude agent skillsとは」(Jaccard=0.50)  「claude agent skills 使い方」(Jaccard=0.73)  「claude code skills 便利」(Jaccard=0.62)  「claude codeのagent skills」(Jaccard=0.46)  「claude skills 範例」(ベースKW一致('claude skills'))  [要確認] 「skills claude とは」(ブランド競合('claude'≠'skills') Jaccard=0.63)  「claude skills 始め方」(ベースKW一致('claude skills'))  「claude skills 管理」(ベースKW一致('claude skills'))  「claude skills 小説」(ベースKW一致('claude skills'))  「claude skills 違い」(ベースKW一致('claude skills'))  「claude skills 平台」(ベースKW一致('claude skills'))  「claude skills メリット」(ベースKW一致('claude skills'))  「claude skills 導入」(ベースKW一致('claude skills'))  「claude skills 分析」(ベースKW一致('claude skills'))  「claude skills 呼び出し方」(ベースKW一致('claude skills'))  「claude skillsのcookbooks」(ベースKW部分一致('claude skills'↔'claude skillsのcookbooks'))  「claude skills 存放 位置」(ベースKW一致('claude skills'))  「claude skills 吴恩达」(ベースKW一致('claude skills'))  「claude skills トークン」(ベースKW一致('claude skills'))  「claude skills 中文 版」(ベースKW一致('claude skills'))  「awesome-claude-skills 使い方」(Jaccard=0.56)  「claude code 最 佳 skills」(Jaccard=0.52)  「claude code skills 統合」(Jaccard=0.62)  「claude code skills 格式」(Jaccard=0.62)  「claude skills トリガー」(ベースKW一致('claude skills'))  [要確認] 「cursor 使用 claude code skills」(ブランド競合('claude'≠'cursor') Jaccard=0.48)  「claude code skills スライド作成」(Jaccard=0.52)  「claude code skills 配置場所」(Jaccard=0.57)  「claude code 前端 开发 skills」(Jaccard=0.48)  「claude code skills 文件 夹」(Jaccard=0.57)  「claude code skills 入門」(Jaccard=0.62)  「claude code agent skills教學」(Jaccard=0.44)  「claude code skills プロジェクト」(Jaccard=0.52)  「claude code skills パワポ」(Jaccard=0.59)  「claude skills 追加方法」(ベースKW一致('claude skills'))  「claude skills 公開」(ベースKW一致('claude skills'))  「claude skills サンプル」(ベースKW一致('claude skills'))  「claude skills 中文」(ベースKW一致('claude skills'))  「claude skills commands 違い」(ベースKW一致('claude skills'))  「claude skills 定義」(ベースKW一致('claude skills'))  「claude skills 流程 图」(ベースKW一致('claude skills'))  「claude skills 自作」(ベースKW一致('claude skills'))  「claude skills 前端」(ベースKW一致('claude skills'))  「claude skills 導入方法」(ベースKW一致('claude skills'))  「claude skills スライド作成」(ベースKW一致('claude skills'))  「claude code skills 導入方法」(Jaccard=0.57)  「claude code 禁用 skills」(Jaccard=0.55)  「claude code skills 認識されない」(Jaccard=0.52)  「claude code skills 削除」(Jaccard=0.62)  「claude code skills グローバル」(Jaccard=0.54)  「claude code skills plugin 違い」(Jaccard=0.46)  「claudeのskills完全ガイド」(Jaccard=0.43)  「claude code 前端 设计 skills」(Jaccard=0.48)  「claude code skills 分享」(Jaccard=0.62)  [要確認] 「skills と はclaude」(ブランド競合('claude'≠'skills') Jaccard=0.55)  「claude 怎么 装 skills」(Jaccard=0.57)  「claude skills 怎么 使用」(ベースKW一致('claude skills'))  「claude 確定申告 skills」(Jaccard=0.57)  「claude skills 介紹」(ベースKW一致('claude skills'))  「claude skills コードレビュー」(ベースKW一致('claude skills'))  「claude的skills」(Jaccard=0.56)  「claude code commands skills 違い」(Jaccard=0.48)  「claude skills 教学」(ベースKW一致('claude skills'))  「claude md skills 違い」(Jaccard=0.62)  「claude skills 是」(ベースKW一致('claude skills'))  「claude デスクトップ skills」(Jaccard=0.52)  「claude skills 作成」(ベースKW一致('claude skills'))  「claude skills 配置」(ベースKW一致('claude skills'))  「claude skills 引数」(ベースKW一致('claude skills'))  「claude skills フォーマット」(ベースKW一致('claude skills'))  「claude skills 和 subagent」(ベースKW一致('claude skills'))  「claude skills github 管理」(ベースKW一致('claude skills'))  「claude skills 前端开发」(ベースKW一致('claude skills'))  「claude skills デザイン」(ベースKW一致('claude skills'))  「claude skills ドキュメント」(ベースKW一致('claude skills'))  「claude skills プロンプト」(ベースKW一致('claude skills'))  「claude agent skills 入门 指南」(Jaccard=0.48)  「claude 金融skills」(Jaccard=0.58)  「claude アプリ skills」(Jaccard=0.60)  「claude code skills 本」(Jaccard=0.65)  「claude code skills パワーポイント」(Jaccard=0.50)  「claude skills プラグイン」(ベースKW一致('claude skills'))  「claude code skills 仕組み」(Jaccard=0.59)  「claude code skills 例子」(Jaccard=0.62)  「claude code skills 安裝」(Jaccard=0.62)  「claude code skills 原理」(Jaccard=0.62)  「claude skills マーケティング」(ベースKW一致('claude skills'))  「claude skills 解析」(ベースKW一致('claude skills'))  「claude skills 分享」(ベースKW一致('claude skills'))  「claude のための skills 構築の完全ガイド」(Jaccard=0.45)  「claude 的 agent skills」(Jaccard=0.50)  「claude skills 的 使用」(ベースKW一致('claude skills'))  「claude 中文 skills」(Jaccard=0.63)  「claude skills スマホ」(ベースKW一致('claude skills'))  「claude skills 在 哪」(ベースKW一致('claude skills'))  「claude skills 更新」(ベースKW一致('claude skills'))  「claude skills 市場調査」(ベースKW一致('claude skills'))  「claude skills 階層」(ベースKW一致('claude skills'))  「claude skills 共有」(ベースKW一致('claude skills'))  「claude skills 最 佳 实践」(ベースKW一致('claude skills'))  「claude skills模板」(ベースKW部分一致('claude skills'↔'claude skills模板'))  「claude skills リポジトリ」(ベースKW一致('claude skills'))  「claude skills ローカル」(ベースKW一致('claude skills'))  「claude skills 在 哪里」(ベースKW一致('claude skills'))  「claude skills 公式ドキュメント」(ベースKW一致('claude skills'))  「claude code skills 入門ガイド」(Jaccard=0.54)  「claude code skills 非エンジニア」(Jaccard=0.52)  「claude code skills 安装 目录」(Jaccard=0.54)  「claude cowork skills 作り方」(Jaccard=0.50)  「claude code 如何 配置 skills」(Jaccard=0.48)  「claude code 的 skills 怎么 使用」(Jaccard=0.56)  「claude code agent skills 使い分け」(Jaccard=0.56)  「claude agent skills 使用」(Jaccard=0.61)  「claude skills 小 红 书」(ベースKW一致('claude skills'))  「claude skills マーケット」(ベースKW一致('claude skills'))  「claude code skills フロントマター」(Jaccard=0.50)  「claude code skills フォルダ」(Jaccard=0.57)  「claude code skills 呼び出し 方」(Jaccard=0.52)  「claude code スラッシュコマンド skills」(Jaccard=0.41)  「claude code rules skills 違い」(Jaccard=0.50)  「claude skills 書き方」(ベースKW一致('claude skills'))  「claude skills 書籍」(ベースKW一致('claude skills'))  「claude skills 費用」(ベースKW一致('claude skills'))  「claude skills フロントエンド」(ベースKW一致('claude skills'))  「claude skills 路径」(ベースKW一致('claude skills'))  「claude skills 有 哪些」(ベースKW一致('claude skills'))  「claude skills 論文」(ベースKW一致('claude skills'))  「claude md 和 skills」(Jaccard=0.57)  「claude skills 前端 设计」(ベースKW一致('claude skills'))  「claudecode skills デザイン」(Jaccard=0.57)  「claude code skills ハッカソン」(Jaccard=0.54)  「claude code skills メリット」(Jaccard=0.57)  「claude skills 和 mcp」(ベースKW一致('claude skills'))  「claude code skills和mcp区别」(Jaccard=0.48)  「claude のための skills 構築の完全ガイド非公式日本語訳版」(Jaccard=0.35)  「claude skills 構築完全ガイド」(ベースKW一致('claude skills'))  「claude agents skills 違い」(Jaccard=0.54)  「claude skills アプリ」(ベースKW一致('claude skills'))  「claude skills 確認」(ベースKW一致('claude skills'))  「claude skills コンテキスト」(ベースKW一致('claude skills'))  「claude skills 追加」(ベースKW一致('claude skills'))  「claude skills 排名」(ベースKW一致('claude skills'))  「claude skills まとめ」(ベースKW一致('claude skills'))  「claude skills 何ができる」(ベースKW一致('claude skills'))  「claude skills できること」(ベースKW一致('claude skills'))  「claude skills どこ」(ベースKW一致('claude skills'))  「claude skills agent 違い」(ベースKW一致('claude skills'))  [要確認] 「agent skills 指南 claude code 版」(ブランド競合('claude'≠'agent') Jaccard=0.46)  「claude code skills 資料作成」(Jaccard=0.57)  「claude code skills 使用 方法」(Jaccard=0.61)  「claude code skills ランキング」(Jaccard=0.54)  「claude code skills 实现原理」(Jaccard=0.57)  「claude code skills プラグイン」(Jaccard=0.54)  「claude code 流程 图 skills」(Jaccard=0.50)  「claude code skills 知 乎」(Jaccard=0.59)  「claude code skills 解説」(Jaccard=0.62)  「claude code skills 呼び出し」(Jaccard=0.57)  「claude code skills リポジトリ」(Jaccard=0.54)  「claude skills フォルダ構成」(ベースKW一致('claude skills'))  [要確認] 「cursor 使用 claude skills」(ブランド競合('claude'≠'cursor') Jaccard=0.52)  「claude 添加 skills」(Jaccard=0.63)  「claude agent skills 介绍」(Jaccard=0.54)  「claude skills 放 在 哪里」(ベースKW一致('claude skills'))  [要確認] 「skills claude 作り方」(ブランド競合('claude'≠'skills') Jaccard=0.60)  「claude skills 怎麼用」(ベースKW一致('claude skills'))  「claude code 必 装 的 skills」(Jaccard=0.48)  「claude code 如何 使用 agent skills」(Jaccard=0.43)  「claude skills 完全ガイド」(ベースKW一致('claude skills'))  「claude skills 設定」(ベースKW一致('claude skills'))  「claude skills 好 用 的」(ベースKW一致('claude skills'))  「claude skills 具体例」(ベースKW一致('claude skills'))  「claude skills 文档」(ベースKW一致('claude skills'))  「claude agent skills 設計パターン集」(Jaccard=0.45)  「claude skills 中文 手册」(ベースKW一致('claude skills'))  「claude skills コンサル」(ベースKW一致('claude skills'))  「claude skills 投資」(ベースKW一致('claude skills'))  「claude code で学ぶ agent skills 入門」(Jaccard=0.42)  「claude code skills 命令」(Jaccard=0.62)  「claude code skills 実践」(Jaccard=0.62)  「claude code skills ドキュメント作成」(Jaccard=0.48)  「claude code skills 登録」(Jaccard=0.62)  「claude code skills いつから」(Jaccard=0.57)  「claude code skills エクセル」(Jaccard=0.57)  「claude code skills 開発」(Jaccard=0.62)  「claude code skills 完全活用ガイド」(Jaccard=0.50)  「claude code skills 使用 技巧」(Jaccard=0.61)  「claude code skills 作る」(Jaccard=0.62)  「claude code skills 配布」(Jaccard=0.62)  「claude code skills ガイド」(Jaccard=0.59)  [要確認] 「antigravity 使用 claude skills」(ブランド競合('claude'≠'antigravity') Jaccard=0.43)  「claude code skills 自 定义」(Jaccard=0.57)  「claude code skills 中文」(Jaccard=0.62)  「claude code skills 模板」(Jaccard=0.62)  「claude code skills 有効化」(Jaccard=0.59)  「claude code skills 料金」(Jaccard=0.62)  「claude agent skills 是 什么」(Jaccard=0.50)  「claude code skills 20選」(Jaccard=0.59)  「claude code skills 作成方法」(Jaccard=0.57)  「claude code skills テスト」(Jaccard=0.59)  「claude code skills 人気」(Jaccard=0.62)  「claude codeのskillsとは」(Jaccard=0.48)  「claude code skills できること」(Jaccard=0.54)  「claude code skills 公式 github」(Jaccard=0.46)  「claude スマホ skills」(Jaccard=0.60)  「claude skills 確定申告」(ベースKW一致('claude skills'))  「claude 法律 skills」(Jaccard=0.63)  「claude code skills 最 佳 实践」(Jaccard=0.52)  「claude code skills 入门」(Jaccard=0.62)  「claude code skills 文档」(Jaccard=0.62)  「claude skills 添加」(ベースKW一致('claude skills'))  「如何 给 claude code 添加 skills」(Jaccard=0.46)  「claude skills 作用」(ベースKW一致('claude skills'))  「claude skills 編集」(ベースKW一致('claude skills'))  「claude skills ランキング」(ベースKW一致('claude skills'))  「claude 全局 skills」(Jaccard=0.63)  「claude skills 和 mcp 的 区别」(ベースKW一致('claude skills'))  「claude skills パワーポイント」(ベースKW一致('claude skills'))  「claude skills 生成」(ベースKW一致('claude skills'))  「claude skills 放 在 哪」(ベースKW一致('claude skills'))  「claude skills 实现 原理」(ベースKW一致('claude skills'))  「claude skills 代码审计」(ベースKW一致('claude skills'))  [要確認] 「skills claude 公式」(ブランド競合('claude'≠'skills') Jaccard=0.63)  「claude skills テスト」(ベースKW一致('claude skills'))  「claude skills ファイル」(ベースKW一致('claude skills'))  「claude skills 本」(ベースKW一致('claude skills'))  「claude skills リサーチ」(ベースKW一致('claude skills'))  「claude skills rules 違い」(ベースKW一致('claude skills'))  「claude skills 自動化」(ベースKW一致('claude skills'))  「claude skills 是什麼」(ベースKW一致('claude skills'))  「claude skills 例子」(ベースKW一致('claude skills'))  「claude skills creator 使用」(ベースKW一致('claude skills'))  [要確認] 「codex claude skills 共有」(ブランド競合('claude'≠'codex') Jaccard=0.57)  「claude skills 中文 手册 吴恩达」(ベースKW一致('claude skills'))  「claude skills 構成」(ベースKW一致('claude skills'))  「claude agent sdk 使用 skills」(Jaccard=0.48)  「claude skills プラン」(ベースKW一致('claude skills'))  「claude code skills ダウンロード」(Jaccard=0.52)  「claude code agent skills 教学」(Jaccard=0.48)  「claude code如何用skills」(Jaccard=0.48)  「claude code画图skills」(Jaccard=0.50)  「claude code 設定 skills」(Jaccard=0.55)  「claude skills ブラウザ操作」(ベースKW一致('claude skills'))  「claude skills セキュリティ」(ベースKW一致('claude skills'))  「claude code skills 結局どれを入れる」(Jaccard=0.48)  「claude code skills 無料」(Jaccard=0.62)  「claude code和skills」(Jaccard=0.52)  「claudeのskillsとは」(Jaccard=0.50)  「claude skillsの使い方」(ベースKW部分一致('claude skills'↔'claude skillsの使い方'))  「claude code 数据 分析 skills」(Jaccard=0.48)  「claude code 怎么配置 skills」(Jaccard=0.50)  「claude code skills command 違い」(Jaccard=0.48)  「claude skills agents 違い」(ベースKW一致('claude skills'))  「claude skills スラッシュコマンド」(ベースKW一致('claude skills'))  「claude skills 配布」(ベースKW一致('claude skills'))  「claude skills 有料」(ベースKW一致('claude skills'))  「claude skills 読み方」(ベースKW一致('claude skills'))  「claude skills 用途」(ベースKW一致('claude skills'))  「claude skills 料金」(ベースKW一致('claude skills'))  「claude skills ブラウザ」(ベースKW一致('claude skills'))  「claude skills エージェント」(ベースKW一致('claude skills'))  「claude skills 行数」(ベースKW一致('claude skills'))  「claude skills 要件定義」(ベースKW一致('claude skills'))  「claude code 怎么 装 skills」(Jaccard=0.50)  「claude code agent skills とは」(Jaccard=0.48)  「claude code skills 平台」(Jaccard=0.62)  「claude code skills ファイル」(Jaccard=0.57)  「claude code skills 自作」(Jaccard=0.62)  「claude code skills 設定方法」(Jaccard=0.57)  「claude code skills 文件」(Jaccard=0.62)  「claude code skills プロンプト」(Jaccard=0.54)  「claude code skills 置き場所」(Jaccard=0.57)  「claude code skills スライド」(Jaccard=0.57)  「claude code skills 引数」(Jaccard=0.62)  「claude code skills の使い方」(Jaccard=0.71)  「claude code skills 読み込み」(Jaccard=0.57)  「claude code skills 自動」(Jaccard=0.62)  「claude code skills 脆弱性」(Jaccard=0.59)  「claude code skills 完全ガイド」(Jaccard=0.54)  「claude code skills 公開」(Jaccard=0.62)  「claude code skills サブディレクトリ」(Jaccard=0.48)  「claude code plugin skills 違い」(Jaccard=0.46)  「claude code 代码review skills」(Jaccard=0.43)  「claude code skills 使い方 vscode」(Jaccard=0.70)  「claude code skills 怎么 写」(Jaccard=0.57)  「claude code agent skills 使用」(Jaccard=0.54)  「claude code skills テンプレート」(Jaccard=0.52)  「claude code skills 実行」(Jaccard=0.62)  「claude code skills マーケットプレイス」(Jaccard=0.46)  [要確認] 「skills claude.md 違い」(ブランド競合('claude'≠'skills') Jaccard=0.48)  「claude code skills 常用」(Jaccard=0.62)  「claude skills 是 甚麼」(ベースKW一致('claude skills'))  [要確認] 「skills claude 使い方」(ブランド競合('claude'≠'skills') Jaccard=0.88)  「skills claude おすすめ」(Jaccard=0.57)  「claude skills 官方」(ベースKW一致('claude skills'))  「claude.md skills 違い」(Jaccard=0.55)  「claude skills 入れ方」(ベースKW一致('claude skills'))  「claude skills 開発」(ベースKW一致('claude skills'))  「claude skills 作成方法」(ベースKW一致('claude skills'))  「claude skills スライド」(ベースKW一致('claude skills'))  「claude skills 販売」(ベースKW一致('claude skills'))  「claude skills 合集」(ベースKW一致('claude skills'))  「claude skills 実例」(ベースKW一致('claude skills'))  「claude skills 探し方」(ベースKW一致('claude skills'))  「claude skills 有什么用」(ベースKW一致('claude skills'))  「claude skills 事例」(ベースKW一致('claude skills'))  「claude skills 議事録」(ベースKW一致('claude skills'))  「claude code 安装 skills creator」(Jaccard=0.46)  「claude skills 集」(ベースKW一致('claude skills'))  「claude skills 種類」(ベースKW一致('claude skills'))  「claude skills subagent 違い」(ベースKW一致('claude skills'))  「claude skills 登録」(ベースKW一致('claude skills'))  「claude skills 非エンジニア」(ベースKW一致('claude skills'))  「claude skills ガイド」(ベースKW一致('claude skills'))  「claude skills 配置場所」(ベースKW一致('claude skills'))  「claude code skills 株スクリーニング」(Jaccard=0.48)  「claude code skills 違い」(Jaccard=0.62)  「claude code skills フォルダ構成」(Jaccard=0.52)  「claude code skills 前端」(Jaccard=0.62)  [要確認] 「claude codeで記憶領域を持つための独自のagent skillsを使っている」(広ジャンル('claude'系) ベースKW相違 Jaccard=0.27)  「claude code 中 使用 skills」(Jaccard=0.57)  「claude code skills 路径」(Jaccard=0.62)  「claude code skills 有哪些」(Jaccard=0.59)  「claude code 如何 加载 skills」(Jaccard=0.48)  「claude code 常用 的 skills」(Jaccard=0.50)  「claude デザイン skills」(Jaccard=0.57)  「claude skills和mcp区别」(ベースKW部分一致('claude skills'↔'claude skills和mcp区别'))  「claude code skills mcp 違い」(Jaccard=0.52)  「claude code skills 使用 教程」(Jaccard=0.61)  「claude code skills 日本語」(Jaccard=0.59)  「claude code skills 要件定義」(Jaccard=0.57)  「claude code 的 skills 怎么 用」(Jaccard=0.52)  「claude code skills 学习」(Jaccard=0.62)  「claude code 的 skills 是 什么」(Jaccard=0.52)  「claude code 全局 skills」(Jaccard=0.55)  「claude code skills 使えない」(Jaccard=0.64)  「claude の agent skills」(Jaccard=0.50)  「claude skills 和 agent」(ベースKW一致('claude skills'))  「claude agent skills 違い」(Jaccard=0.54)  「claude skills 使用 教程」(ベースKW一致('claude skills'))  「claude skills 目录 结构」(ベースKW一致('claude skills'))  「claude skills 用法」(ベースKW一致('claude skills'))  「claude skills 学习」(ベースKW一致('claude skills'))  「claude skills 自 定义」(ベースKW一致('claude skills'))  「claude skills入门」(ベースKW部分一致('claude skills'↔'claude skills入门'))  「claude code agent に 入れる べき skills」(Jaccard=0.35)  「claude skills 仕組み」(ベースKW一致('claude skills'))  「claude skills 設定方法」(ベースKW一致('claude skills'))  「claude skills 入門」(ベースKW一致('claude skills'))  「claude skills を作るskills」(ベースKW一致('claude skills'))  「claude skills 原理」(ベースKW一致('claude skills'))  「claude code skills マーケティング」(Jaccard=0.50)  「claude skills 区别」(ベースKW一致('claude skills'))  「claude skills 官方 文档」(ベースKW一致('claude skills'))  「claude skills 平 替」(ベースKW一致('claude skills'))  「claude skills データ分析」(ベースKW一致('claude skills'))  「claude code skills 集」(Jaccard=0.65)  「claude code skills 活用」(Jaccard=0.62)  「claude code skills 初心者」(Jaccard=0.59)  「claude code skills スラッシュコマンド」(Jaccard=0.46)  「claude code skills 設計」(Jaccard=0.62)  「claude code skills 法務」(Jaccard=0.62)  「claude code skills 放 在 哪里」(Jaccard=0.52)  「claude code skills まとめ」(Jaccard=0.59)  「claude code 源码 skills」(Jaccard=0.55)  「claude code skills 目录 结构」(Jaccard=0.54)  「claude code 好 用 skills」(Jaccard=0.52)  「claude code skills 保存場所」(Jaccard=0.57)  「claude skills 活用事例」(ベースKW一致('claude skills'))  「claude skills コマンド」(ベースKW一致('claude skills'))  「claude skills 使用 方法」(ベースKW一致('claude skills'))  「claude skills 設計」(ベースKW一致('claude skills'))  「claude skills 目录」(ベースKW一致('claude skills'))  「claude skills わかりやすく」(ベースKW一致('claude skills'))  「claude skills レビュー」(ベースKW一致('claude skills'))  「claude skills デスクトップ」(ベースKW一致('claude skills'))  「claude skills プロジェクト」(ベースKW一致('claude skills'))  「claude skills 样 例」(ベースKW一致('claude skills'))  「claude code skills 構成」(Jaccard=0.62)  「claude code skills トリガー」(Jaccard=0.57)  「claude skills 資料作成」(ベースKW一致('claude skills'))  「claude code skills マーケット」(Jaccard=0.54)  [要確認] 「claude codeの「frontend-design」のskills」(広ジャンル('claude'系) ベースKW相違 Jaccard=0.29)
+2026-05-15 18:06:19 [INFO] [wp] 記事取得: 計397件 (publish=397)
+2026-05-15 18:06:19 [INFO] [kanikabari] WP既存記事: 397件取得 (公開=397 / 下書き=0)
+2026-05-15 18:06:19 [INFO] [kanikabari] 書き込み対象: 503件
+2026-05-15 18:06:22 [INFO] [kanikabari] 完了: 親KW生成待ち=0件 / シート内サブKW=0件 / WP統合対象=487件 / カニバリスキップ=0件 / 要確認=16件
+2026-05-15 18:06:22 [INFO]   [サブKW] 「claude skills 使い方」→ 統合対象 / WP「claude skills 使い方」
+2026-05-15 18:06:22 [INFO]   [サブKW] 「claudecode skills 使い方」→ 統合対象 / WP「claude skills 使い方」
+2026-05-15 18:06:22 [INFO]   [要確認] 「codex 使用 claude skills」→ 要確認
+2026-05-15 18:06:22 [INFO]   [要確認] 「claude code の frontend design の skills」→ 要確認
+2026-05-15 18:06:22 [INFO] 
+============================================================
+2026-05-15 18:06:22 [INFO] 【全体サマリー】
+2026-05-15 18:06:22 [INFO]   ブログ数  : 1件
+2026-05-15 18:06:22 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-15 18:06:22 [INFO]   所要時間  : 9.2秒
+2026-05-15 18:06:22 [INFO] ============================================================
+2026-05-15 20:15:12 [INFO] ============================================================
+2026-05-15 20:15:12 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-15 20:15:12 [INFO] ============================================================
+2026-05-15 20:15:12 [INFO] 対象ブログ: ['workup-ai']
+2026-05-15 20:15:14 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-15 20:15:14 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-15 20:15:14 [INFO] ════════════════════════════════════════════════════════════
+2026-05-15 20:15:14 [INFO] [kanikabari] 開始: AIVice / シート「キーワード」
+2026-05-15 20:15:16 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-15 20:15:16 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-15 20:15:16 [INFO] 
+============================================================
+2026-05-15 20:15:16 [INFO] 【全体サマリー】
+2026-05-15 20:15:16 [INFO]   ブログ数  : 1件
+2026-05-15 20:15:16 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-15 20:15:16 [INFO]   所要時間  : 3.3秒
+2026-05-15 20:15:16 [INFO] ============================================================

@@ -1,0 +1,131 @@
+===== [WEB-STUDY1] 実行開始: 2026-05-15 06:00:01 =====
+2026-05-15 06:00:04 [INFO] ============================================================
+2026-05-15 06:00:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-15 06:00:04 [INFO] ============================================================
+2026-05-15 06:00:04 [INFO] 対象ブログ: ['web-study1']
+2026-05-15 06:00:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-15 06:00:06 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-05-15 06:00:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-15 06:00:06 [INFO]   genre            : オンライン学習・プログラミング・資格・スキルアップ
+2026-05-15 06:00:06 [INFO]   fact_check       : True
+2026-05-15 06:00:06 [INFO]   article_type_mix : True
+2026-05-15 06:00:06 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-15 06:00:06 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] オンライン学習ナビ / 「ASP案件マスター」: 27件
+[asp_fetcher]   [S] 無学年式オンライン教材 のすらら → https://web-study1.com/surara
+[asp_fetcher]   [S] ヒューマンアカデミー → https://web-study1.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [999] こどもチャレンジ → https://web-study1.com/shimajiro
+[asp_fetcher]   [999] こどもチャレンジ baby → https://web-study1.com/shimajiro-baby
+[asp_fetcher]   [999] Filmora → https://web-study1.com/filmora
+[asp_fetcher]   [999] スマイルゼミ → https://web-study1.com/smile-zemi
+[asp_fetcher]   [999] 進研ゼミ　高校講座 → https://web-study1.com/sinkenzemi-koukou
+[asp_fetcher]   [999] 進研ゼミ　中学講座 → https://web-study1.com/sinkenzem-cyugaku
+2026-05-15 06:00:08 [INFO] [web-study1] アフィリ案件: 27件（スプレッドシート）
+2026-05-15 06:00:08 [INFO] [web-study1]   [S] 無学年式オンライン教材 のすらら → https://web-study1.com/surara
+2026-05-15 06:00:08 [INFO] [web-study1]   [S] ヒューマンアカデミー → https://web-study1.com/haa.athuman
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] こどもチャレンジ → https://web-study1.com/shimajiro
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] こどもチャレンジ baby → https://web-study1.com/shimajiro-baby
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] Filmora → https://web-study1.com/filmora
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] スマイルゼミ → https://web-study1.com/smile-zemi
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] 進研ゼミ　高校講座 → https://web-study1.com/sinkenzemi-koukou
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] 進研ゼミ　中学講座 → https://web-study1.com/sinkenzem-cyugaku
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] 進研ゼミ　小学講座 → https://web-study1.com/shinkenzemi-syougakukouza
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] スタディサプリ中学講座 → https://web-study1.com/studysapuri-chugaku
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] Z会 → https://web-study1.com/zkai
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] スタディサプリ高校・大学 受験講座 → https://web-study1.com/studysapur-koukou
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP  学習コース_大学生向け就活対策コース → https://web-study1.com/dmm_webcamp_shukatu
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] Tech Kids School → https://web-study1.com/tech-kids
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] 【RISU算数】(19-1031) → https://web-study1.com/risu
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] スタディサプリENGLISH（新日常英会話コース） → https://web-study1.com/eigosapuri
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] スタディサプリEnglish　ビジネス英語コース → https://web-study1.com/eigosapuri
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP プログラミングコース → https://web-study1.com/web-camp_programing
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] freenance → https://web-study1.com/freenance
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] Udemy → https://web-study1.com/udemy
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP WEBデザインコース → https://web-study1.com/dmm_webcamp
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP Pythonコース → https://web-study1.com/dmm_webcamp_python
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] AI英会話アプリ【スピーク】 → https://web-study1.com/speak
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] スタディサプリ小学講座 → https://web-study1.com/sutasapu-syougaku
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] スタディサプリENGLISH（TOEIC対策コース） → https://web-study1.com/human-english-toeic
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] アンズテック → https://web-study1.com/anzutech
+2026-05-15 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP 学習コース → https://web-study1.com/dmm-webcamp-gakusyu
+2026-05-15 06:00:10 [INFO] [wp] 記事取得: 計34件 (draft=1 / publish=33)
+2026-05-15 06:00:10 [INFO] [web-study1] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.2, 'monetize': 0.3})
+2026-05-15 06:00:12 [INFO] [fetch] サブKW紐付け: 78件 → 29記事に統合
+2026-05-15 06:00:12 [INFO] [fetch] [キーワード] メインKW: 14件（vol≥30 or N/A）  サブKW除外: 78件（統合対象）  投稿済みスキップ: 45件  テーマ外除外: 130件  aim内訳: [claude:1, aim:131, add:12]
+2026-05-15 06:00:12 [INFO] [dup_check] 優先候補: 14件 {'claude': 1, 'aim': 9, 'add': 4} を先頭評価
+2026-05-15 06:00:12 [INFO] [dup_check] 除外: 「Web制作 学習 独学」 → カニバリ(2/3語重複 ['学習', '独学']): 「プログラミング独学は無理？挫折しない学習ロードマップと成功のコツを解説」
+2026-05-15 06:00:12 [INFO] [dup_check] 除外: 「中学生 通信教育 おすすめ」 → カニバリ(2/3語重複 ['通信教育', 'おすすめ']): 「不登校の子に通信教育は有効？すらら体験談とおすすめ教材を徹底解説」
+2026-05-15 06:00:12 [INFO] [dup_check] 除外: 「高校生 通信教育 おすすめ」 → カニバリ(2/3語重複 ['通信教育', 'おすすめ']): 「不登校の子に通信教育は有効？すらら体験談とおすすめ教材を徹底解説」
+2026-05-15 06:00:12 [INFO] [dup_check] 除外: 「家庭教師 通信教育 どっちがいい」 → カニバリ(2/3語重複 ['通信教育', 'どっちがいい']): 「塾と通信教育どっちがいい？小学生に合う学習方法の選び方を徹底解説」
+2026-05-15 06:00:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=4件 (pool=14件, 要求=1件)
+2026-05-15 06:00:12 [INFO] [select] 1件選定 (要求=1件)
+2026-05-15 06:00:12 [INFO] [select]   1. 「通信教育 兄弟 割引 ある？」 vol=0 seo=N/A comp=N/A
+2026-05-15 06:00:12 [INFO] [web-study1] LONGTAIL選定: 1件
+2026-05-15 06:00:12 [INFO] [web-study1] 候補: 14件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $2.2570 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $2.5767(¥387) / 15記事
+2026-05-15 06:00:12 [INFO] [api_guard] 本日の使用量: $2.2570 / ¥339 (41回呼び出し)
+2026-05-15 06:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-15 06:00:12 [INFO] [web-study1] [1/1] [LONGTAIL] 「通信教育 兄弟 割引 ある？」 vol=0 ★AIM
+2026-05-15 06:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-15 06:00:12 [INFO] [generate] 生成開始: 「通信教育 兄弟 割引 ある？」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「通信教育 兄弟 割引 ある？」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $2.2570 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $2.5767(¥387) / 15記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=115 out=135 → $0.0006  (lsi:通信教育 兄弟 割引 ある？)
+[api_guard] 本日の使用量: $2.2577 / ¥338 (874回呼び出し)
+[article_generator] 共起語: 通信教育費用割引、兄弟姉妹割引、家族割引、複数受講割引、通信教育比較、Z会割引、進研ゼミ割引、スタディサプリ家族プラン、...
+[api_guard] ✅ 本日: $2.2577 / 1時間: $0.0006  (上限 日次$10.00 / 時間$5.00)  全体: $2.5774(¥387) / 15記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=182 out=579 → $0.0025  (kw_research:通信教育 兄弟 割引 ある？)
+[api_guard] 本日の使用量: $2.2601 / ¥339 (875回呼び出し)
+[article_generator] サジェスト: 通信教育 兄弟 割引・通信教育 兄弟割引・通信教育 複数人 割引...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $2.2601 / 1時間: $0.0031  (上限 日次$10.00 / 時間$5.00)  全体: $2.5798(¥387) / 15記事
+[api_guard] 記録: claude-sonnet-4-6 in=6295 out=10922 → $0.1827  (article:通信教育 兄弟 割引 ある？)
+[api_guard] 本日の使用量: $2.4428 / ¥366 (876回呼び出し)
+[imagefx] 背景:C / ビジュアル:Minimal flat icons: laptop, two connected circles,
+[imagefx] タイトル(英): Correspondence Education Sibling Discounts Comparison
+[article_generator] 完了: 「通信教育の兄弟割引はある？主要5社の割引率・条件を徹底比較」 カテゴリ: 未設定(-) タグ: ['通信教育', '兄弟割引', '進研ゼミ', 'スマイルゼミ', 'Z会']
+2026-05-15 06:02:52 [INFO] [generate] パターンCTA挿入（H3末尾）: 4件
+2026-05-15 06:02:52 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「DMM WEBCAMP  学習コース_大学生向け就活対策コース」(ID:151)
+2026-05-15 06:02:54 [INFO] [link_check] 死リンク除去: 3件 / チェック: 10件
+2026-05-15 06:02:54 [INFO] [generate] 完了: 「通信教育の兄弟割引はある？主要5社の割引率・条件を徹底比較」
+2026-05-15 06:02:54 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 12件
+[category_selector] 「通信教育 兄弟 割引 ある？」→ 通信教育(84) score=12
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#通信教育): correspondence-education-high-school-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 通信教育の兄弟割引がある主要サービスと割引内容を比較のイメージ画像
+[wordpress] H2画像[2] ライブラリ選択 (#通信教育): correspondence-education-campaign-timing-eyecatch.jpg
+[wordpress] H2画像[2] ライブラリALT更新: 通信教育の兄弟割引を受けるための条件と手続き方法のイメージ画像
+[wordpress] H2画像[3] ライブラリ選択 (#通信教育): correspondence-education-junior-high-school-eyecatch.jpg
+[wordpress] H2画像[3] ライブラリALT更新: 通信教育の兄弟割引で最もお得なサービスの選び方のイメージ画像
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 33件
+[internal_linker] 「スマイルゼミ」関連記事: 1件追加
+[internal_linker] 「スタディサプリ中学講座」関連記事: 1件追加
+[internal_linker] 「Z会」関連記事: 1件追加
+[internal_linker] 「スタディサプリ小学講座」関連記事: 1件追加
+[internal_linker] 同カテゴリー: 6件選定（ルールベース）
+[internal_linker] 同親KW「通信教育」: 1件選定（ルールベース）
+[internal_linker] 製品名マッチ「スマイルゼミ」→ セクション2に割り当て
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['小学生タブレット学習6社を徹底比較！すらら・スマイルゼミ・進', '通信教育の最安値を徹底比較！安くても質が高いおすすめ講座10', '通信教育のキャンペーンはいつが多い？割引時期と賢い入会タイミ', '通信教育 中学生おすすめ比較7選！安い・効果あり・不登校対応', '資格取得に通信教育はおすすめ？費用・期間・選び方を徹底解説', '不登校の子に通信教育は有効？すらら体験談とおすすめ教材を徹底', '高校生向け通信教育おすすめ5選！費用・大学受験・続け方まで徹', '塾と通信教育どっちがいい？小学生に合う学習方法の選び方を徹底']
+[wordpress] タグ設定: ['通信教育', '兄弟割引', '進研ゼミ', 'スマイルゼミ', 'Z会']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 509) → https://web-study1.com/wp-admin/post.php?post=509&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行127 「通信教育 兄弟 割引 ある？」→ 投稿済み (2026/05/15, ID:509) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「通信教育の兄弟割引はある？主要5社の割引率・条件を徹底比較」
+2026-05-15 06:03:02 [INFO] [post] WP投稿完了: ID=509 → https://web-study1.com/wp-admin/post.php?post=509&action=edit
+2026-05-15 06:03:02 [INFO] [web-study1] [1/1] ✅ 完了: 「通信教育の兄弟割引はある？主要5社の割引率・条件を徹底比較」
+2026-05-15 06:03:02 [INFO] [web-study1] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-15 06:03:02 [INFO] 
+============================================================
+2026-05-15 06:03:02 [INFO] 【全体サマリー】
+2026-05-15 06:03:02 [INFO]   ブログ数  : 1件
+2026-05-15 06:03:02 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-15 06:03:02 [INFO]   所要時間  : 178.7秒
+2026-05-15 06:03:02 [INFO]   ✅ [web-study1] 通信教育 兄弟 割引 ある？ → 通信教育の兄弟割引はある？主要5社の割引率・条件を徹底比較
+2026-05-15 06:03:02 [INFO]        https://web-study1.com/wp-admin/post.php?post=509&action=edit
+2026-05-15 06:03:02 [INFO] ============================================================
+===== [WEB-STUDY1] 記事生成終了: 2026-05-15 06:03:03 / exit=0 =====

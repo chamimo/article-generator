@@ -1,11 +1,15 @@
 {
   "beginner_guide": [
     "right_person",
+    "flatlay",
+    "cafe_side",
+    "right_person",
     "flatlay"
   ],
   "hida": [
     "town_morning",
-    "travel_flatlay"
+    "travel_flatlay",
+    "town_evening"
   ],
   "curiosity": [
     "notebook_closeup",
@@ -14,6 +18,9 @@
     "soft_illustration",
     "question_flatlay",
     "notebook_closeup",
+    "soft_illustration",
+    "home_lifestyle",
+    "question_flatlay",
     "soft_illustration",
     "home_lifestyle"
   ]

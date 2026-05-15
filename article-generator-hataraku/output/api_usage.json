@@ -8629,6 +8629,136 @@
       "output_tokens": 10511,
       "cost_usd": 0.17523,
       "label": "article:未経験 ITスキル 学習 方法"
+    },
+    {
+      "timestamp": "2026-05-14T19:20:12.729903+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 97,
+      "cost_usd": 0.000476,
+      "label": "lsi:生活保護 スマホ契約"
+    },
+    {
+      "timestamp": "2026-05-14T19:20:16.457355+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 560,
+      "cost_usd": 0.002382,
+      "label": "kw_research:生活保護 スマホ契約"
+    },
+    {
+      "timestamp": "2026-05-14T19:22:21.837995+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 7536,
+      "output_tokens": 9570,
+      "cost_usd": 0.166158,
+      "label": "article:生活保護 スマホ契約"
+    },
+    {
+      "timestamp": "2026-05-14T20:00:15.351478+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 71,
+      "cost_usd": 0.000375,
+      "label": "lsi:仕事 行きたくない 5月 病気"
+    },
+    {
+      "timestamp": "2026-05-14T20:00:19.888867+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 543,
+      "cost_usd": 0.002317,
+      "label": "kw_research:仕事 行きたくない 5月 病気"
+    },
+    {
+      "timestamp": "2026-05-14T20:02:55.068965+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5943,
+      "output_tokens": 10408,
+      "cost_usd": 0.173949,
+      "label": "article:仕事 行きたくない 5月 病気"
+    },
+    {
+      "timestamp": "2026-05-14T20:30:13.296694+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 86,
+      "cost_usd": 0.000436,
+      "label": "lsi:高山 冬 タイヤ 必要条件"
+    },
+    {
+      "timestamp": "2026-05-14T20:30:18.372378+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 644,
+      "cost_usd": 0.002722,
+      "label": "kw_research:高山 冬 タイヤ 必要条件"
+    },
+    {
+      "timestamp": "2026-05-14T20:33:16.180830+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5765,
+      "output_tokens": 10774,
+      "cost_usd": 0.178905,
+      "label": "article:高山 冬 タイヤ 必要条件"
+    },
+    {
+      "timestamp": "2026-05-14T20:33:21.252798+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 377,
+      "output_tokens": 19,
+      "cost_usd": 0.000378,
+      "label": "maps:高山 冬 タイヤ 必要条件"
+    },
+    {
+      "timestamp": "2026-05-14T21:00:14.686667+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 135,
+      "cost_usd": 0.000632,
+      "label": "lsi:通信教育 兄弟 割引 ある？"
+    },
+    {
+      "timestamp": "2026-05-14T21:00:19.100489+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 579,
+      "cost_usd": 0.002462,
+      "label": "kw_research:通信教育 兄弟 割引 ある？"
+    },
+    {
+      "timestamp": "2026-05-14T21:02:48.350113+00:00",
+      "date": "2026-05-14",
+      "hour": "2026-05-14T21",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6295,
+      "output_tokens": 10922,
+      "cost_usd": 0.182715,
+      "label": "article:通信教育 兄弟 割引 ある？"
     }
   ],
   "events": [

@@ -391,18 +391,23 @@ def insert_pattern_cta(article_html: str, pattern: PatternItem, skip_mention: bo
     mention_pos = None
     if not skip_mention:
         mention_pos = _find_mention_end(article_html, pattern.tokens)
-        # 末尾から 50 字以内（＝末尾挿入と隣接）はスキップ
-        if mention_pos is not None and mention_pos >= original_len - 50:
+        # 末尾から 2000 字以内は③末尾挿入と近接するためスキップ
+        if mention_pos is not None and mention_pos >= original_len - 2000:
             mention_pos = None
 
-    # 位置③: 末尾
+    # 位置③: 末尾（記事全体に同じ ref が既にある場合はスキップ）
     end_pos = original_len
+    _ref_marker = f'"ref":{pattern.id}'
+    _skip_end = _ref_marker in article_html
 
     # --- 後ろ→前の順に挿入（インデックスがずれない） ---
 
     # ③ 末尾
-    article_html = article_html[:end_pos] + cta_block + article_html[end_pos:]
-    log.debug("[wp_pattern_fetcher] 記事末尾に挿入")
+    if not _skip_end:
+        article_html = article_html[:end_pos] + cta_block + article_html[end_pos:]
+        log.debug("[wp_pattern_fetcher] 記事末尾に挿入")
+    else:
+        log.debug(f"[wp_pattern_fetcher] 末尾挿入スキップ（末尾付近に ref:{pattern.id} が既存）")
 
     # ② 言及段落直後（③より前なので safe）
     if mention_pos is not None:

@@ -5,9 +5,26 @@
   "display_name": "どこで売ってるナビ",
   "genre": "ショッピング・購入場所・買い物情報",
   "target_length": {
-    "MONETIZE": 9000,
-    "LONGTAIL": 6000,
-    "FUTURE": 3000
+    "MONETIZE": [
+      8000,
+      12000
+    ],
+    "LONGTAIL": [
+      5000,
+      8000
+    ],
+    "FUTURE": [
+      3000,
+      5000
+    ],
+    "NEWS": [
+      2000,
+      3500
+    ],
+    "TRIAL": [
+      2000,
+      3500
+    ]
   },
   "fact_check": true,
   "candidate_ss_id": "16h7aV0iHC8dsQR05xMeKTqUvMSXb2lGcNfxr6P6lp8I",
