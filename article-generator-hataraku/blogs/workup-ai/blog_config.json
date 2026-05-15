@@ -4,9 +4,26 @@
   "display_name": "AIVice",
   "genre": "AI・テクノロジー・副業ツール",
   "target_length": {
-    "MONETIZE": 9000,
-    "LONGTAIL": 6000,
-    "FUTURE": 3000
+    "MONETIZE": [
+      8000,
+      12000
+    ],
+    "LONGTAIL": [
+      5000,
+      8000
+    ],
+    "FUTURE": [
+      3000,
+      5000
+    ],
+    "NEWS": [
+      2000,
+      3500
+    ],
+    "TRIAL": [
+      2000,
+      3500
+    ]
   },
   "fact_check": true,
   "candidate_ss_id": "13f8HorKWHGKYpFF5svHF4Cxj5drZ2OKK39FamaVY9n4",

@@ -1,0 +1,131 @@
+===== [HATARAKU] 実行開始: 2026-05-15 05:00:01 =====
+2026-05-15 05:00:04 [INFO] ============================================================
+2026-05-15 05:00:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-15 05:00:04 [INFO] ============================================================
+2026-05-15 05:00:04 [INFO] 対象ブログ: ['hataraku']
+2026-05-15 05:00:07 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-15 05:00:07 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-15 05:00:07 [INFO] ════════════════════════════════════════════════════════════
+2026-05-15 05:00:07 [INFO]   genre            : 転職・副業・キャリア
+2026-05-15 05:00:07 [INFO]   fact_check       : True
+2026-05-15 05:00:07 [INFO]   article_type_mix : True
+2026-05-15 05:00:07 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-15 05:00:07 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] はた楽ナビ / 「ASP案件マスター」: 21件
+[asp_fetcher]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive / 発達障害×IT就労支援・在宅・スキル習得
+[asp_fetcher]   [S] ラボル → https://hataraku-navi.com/labol / フリーランス資金繰り・即日入金・請求書買取
+[asp_fetcher]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it / 未経験IT転職・ブラック回避・手厚い支援
+[asp_fetcher]   [S] TechGo → https://hataraku-navi.com/techgo / IT転職・年収アップ・ハイクラス
+[asp_fetcher]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi / 転職不安・無料相談・高確定率
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen / 就活・既卒支援・高EPC
+[asp_fetcher]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo / 既卒・フリーター・高卒支援
+2026-05-15 05:00:09 [INFO] [hataraku] アフィリ案件: 21件（スプレッドシート）
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] ラボル → https://hataraku-navi.com/labol
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] TechGo → https://hataraku-navi.com/techgo
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo
+2026-05-15 05:00:09 [INFO] [hataraku]   [S] 保育専門求人サイト ほいく畑 → https://hataraku-navi.com/hoikubatake
+2026-05-15 05:00:09 [INFO] [hataraku]   [A] FREENANCE → https://hataraku-navi.com/freenance
+2026-05-15 05:00:09 [INFO] [hataraku]   [A] Midworks → https://hataraku-navi.com/midworks
+2026-05-15 05:00:09 [INFO] [hataraku]   [A] マスメディアン → https://hataraku-navi.com/massmedia
+2026-05-15 05:00:09 [INFO] [hataraku]   [A] atGP → https://hataraku-navi.com/atgp
+2026-05-15 05:00:09 [INFO] [hataraku]   [A] atGPジョブトレ IT・Web → https://hataraku-navi.com/atgp_job
+2026-05-15 05:00:09 [INFO] [hataraku]   [A] リゾートバイトダイブ → https://hataraku-navi.com/dive
+2026-05-15 05:00:09 [INFO] [hataraku]   [A] 日本マンパワー → https://hataraku-navi.com/manpower
+2026-05-15 05:00:09 [INFO] [hataraku]   [A] クラウドワークス → https://hataraku-navi.com/crowdworks
+2026-05-15 05:00:09 [INFO] [hataraku]   [?] 保育エイド → https://hataraku-navi.com/hoiku-aid
+2026-05-15 05:00:09 [INFO] [hataraku]   [?] 保育バランス → https://hataraku-navi.com/hoiku-balance
+2026-05-15 05:00:09 [INFO] [hataraku]   [?] 保育メトロ → https://hataraku-navi.com/hoiku-metro
+2026-05-15 05:00:09 [INFO] [hataraku]   [?] 20代の転職相談所 → https://hataraku-navi.com/20tensyoku
+2026-05-15 05:00:11 [INFO] [wp] 記事取得: 計49件 (publish=49)
+2026-05-15 05:00:11 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-15 05:00:13 [INFO] [fetch] サブKW紐付け: 6968件 → 187記事に統合
+2026-05-15 05:00:13 [INFO] [fetch] [キーワード] メインKW: 177件（vol≥30 or N/A）  サブKW除外: 6968件（統合対象）  投稿済みスキップ: 889件  テーマ外除外: 198件  aim内訳: [now:2, claude:235, aim:131, add:7]
+2026-05-15 05:00:13 [INFO] [dup_check] 優先候補: 177件 {'now': 2, 'claude': 102, 'aim': 67, 'add': 6} を先頭評価
+2026-05-15 05:00:13 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=177件, 要求=1件)
+2026-05-15 05:00:13 [INFO] [select] 1件選定 (要求=1件)
+2026-05-15 05:00:13 [INFO] [select]   1. 「仕事 行きたくない 5月 病気」 vol=0 seo=N/A comp=N/A
+2026-05-15 05:00:13 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-15 05:00:13 [INFO] [hataraku] 候補: 177件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.8979 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $2.2176(¥333) / 13記事
+2026-05-15 05:00:13 [INFO] [api_guard] 本日の使用量: $1.8979 / ¥285 (34回呼び出し)
+2026-05-15 05:00:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-15 05:00:13 [INFO] [hataraku] [1/1] [LONGTAIL] 「仕事 行きたくない 5月 病気」 vol=0 ★NOW
+2026-05-15 05:00:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-15 05:00:13 [INFO] [generate] 生成開始: 「仕事 行きたくない 5月 病気」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「仕事 行きたくない 5月 病気」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $1.8979 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $2.2176(¥333) / 13記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=114 out=71 → $0.0004  (lsi:仕事 行きたくない 5月 病気)
+[api_guard] 本日の使用量: $1.8983 / ¥284 (867回呼び出し)
+[article_generator] 共起語: 五月病、原因、症状、対処法、休職、診断書、メンタルヘルス、うつ病、適応障害、新入社員、やる気が出ない、疲労、ストレス、病...
+[api_guard] ✅ 本日: $1.8983 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $2.2180(¥333) / 13記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=181 out=543 → $0.0023  (kw_research:仕事 行きたくない 5月 病気)
+[api_guard] 本日の使用量: $1.9006 / ¥285 (868回呼び出し)
+[article_generator] サジェスト: 仕事 行きたくない 5月病・仕事 行きたくない 理由・仕事 行きたくない 対策...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $1.9006 / 1時間: $0.0027  (上限 日次$10.00 / 時間$5.00)  全体: $2.2203(¥333) / 13記事
+[api_guard] 記録: claude-sonnet-4-6 in=5943 out=10408 → $0.1739  (article:仕事 行きたくない 5月 病気)
+[api_guard] 本日の使用量: $2.0746 / ¥311 (869回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of calendar, thermometer, laptop, 
+[imagefx] タイトル(英): May Work Aversion Illness Signs
+[article_generator] 完了: 「仕事行きたくない5月は病気のサイン？原因・症状・対処法を徹底解説」 カテゴリ: 未設定(-) タグ: ['五月病', 'メンタルヘルス', '適応障害', '仕事のストレス', '新入社員']
+2026-05-15 05:03:00 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-15 05:03:00 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「atGPジョブトレ IT・Web」(ID:569)
+2026-05-15 05:03:01 [INFO] [generate] 完了: 「仕事行きたくない5月は病気のサイン？原因・症状・対処法を徹底解説」
+2026-05-15 05:03:01 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 21件
+[category_selector] 「仕事 行きたくない 5月 病気」→ ストレス・メンタル(284) score=18
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#仕事): work-cannot-do-person-features-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 5月に仕事へ行きたくなくなる原因と五月病・適応障害の関係のイメージ画像
+[wordpress] H2画像[2] ライブラリ選択 (#仕事): work-dont-want-40s-eyecatch.jpg
+[wordpress] H2画像[2] ライブラリALT更新: 仕事に行きたくない5月の症状チェックと今日からできる対処法のイメージ画像
+[wordpress] H2画像[3] ライブラリ選択 (#仕事): work-depressing-dont-want-to-go-eyecatch.jpg
+[wordpress] H2画像[3] ライブラリALT更新: 仕事に行きたくない状態が続くときの病院・休職・退職の判断基準のイメージ画像
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 49件
+[internal_linker] 「atGP」関連記事: 1件追加
+[internal_linker] 「20代の転職相談所」関連記事: 1件追加
+[internal_linker] 同カテゴリー: 7件選定（ルールベース）
+[internal_linker] 製品名マッチ「atGP」→ セクション12に割り当て
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['AI副業の稼ぎ方【初心者向け】ChatGPTで月5万円を目指', '仕事したくない40代の本音と対処法！転職・副業・早期退職まで', '職場の教養8月号の内容・テーマを徹底解説！活用法と感想まとめ', '職場で急に休む人の理由と対応策｜上司・同僚が取るべき対処法を', '職場訓練校とは？料金・給付金・就職率まで徹底解説', '仕事帰りたい・鬱かも…毎日つらい人が知っておくべき対処法と回', '仕事ない暇な時間に何する？ストレスを成長に変える7つの過ごし', '職場までの距離の理想はどのくらい？通勤時間・引っ越し・転職の']
+[wordpress] タグ設定: ['五月病', 'メンタルヘルス', '適応障害', '仕事のストレス', '新入社員']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 670) → https://hataraku-navi.com/wp-admin/post.php?post=670&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of calendar, thermometer, laptop, lightbulb and checkmark with soft pastel pink, mint and lavender tones, minimal kawaii business style.
+Elegant lifestyle background: soft morning light with warm neutrals, gentle depth-of-field effect, clean and airy ambiance, muted earth tones.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "May Work Aversion Illness Signs" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行10 「仕事 行きたくない 5月 病気」→ 投稿済み (2026/05/15, ID:670) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「仕事行きたくない5月は病気のサイン？原因・症状・対処法を徹底」
+2026-05-15 05:03:09 [INFO] [post] WP投稿完了: ID=670 → https://hataraku-navi.com/wp-admin/post.php?post=670&action=edit
+2026-05-15 05:03:09 [INFO] [hataraku] [1/1] ✅ 完了: 「仕事行きたくない5月は病気のサイン？原因・症状・対処法を徹底解説」
+2026-05-15 05:03:09 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-15 05:03:09 [INFO] 
+============================================================
+2026-05-15 05:03:09 [INFO] 【全体サマリー】
+2026-05-15 05:03:09 [INFO]   ブログ数  : 1件
+2026-05-15 05:03:09 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-15 05:03:09 [INFO]   所要時間  : 185.1秒
+2026-05-15 05:03:09 [INFO]   ✅ [hataraku] 仕事 行きたくない 5月 病気 → 仕事行きたくない5月は病気のサイン？原因・症状・対処法を徹底解説
+2026-05-15 05:03:09 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=670&action=edit
+2026-05-15 05:03:09 [INFO] ============================================================
+===== [HATARAKU] 記事生成終了: 2026-05-15 05:03:09 / exit=0 =====

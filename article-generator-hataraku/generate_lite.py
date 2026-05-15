@@ -56,6 +56,39 @@ from modules.wp_pattern_fetcher import fetch_patterns, match_pattern, insert_pat
 _wp_patterns_cache: dict[str, list] = {}
 
 
+_SWELL_BORDER_OPEN  = '<!-- wp:group {"className":"has-border -border04","layout":{"type":"constrained"}} -->\n<div class="wp-block-group has-border -border04">'
+_SWELL_BORDER_CLOSE = '</div>\n<!-- /wp:group -->'
+
+def _dedup_block_patterns(content: str) -> str:
+    """同一 ref の wp:block パターンが連続重複している場合、1つに減らす。"""
+    import re
+    dedup = re.compile(
+        r'(<!-- wp:block \{"ref":(\d+)\} /-->)(\s*<!-- wp:block \{"ref":\2\} /-->)+',
+        re.DOTALL,
+    )
+    return dedup.sub(r'\1', content)
+
+
+def _wrap_lists_with_border(content: str) -> str:
+    """wp:list ブロックを SWELL の１重ボーダーグループで囲む。既に囲まれている場合はスキップ。"""
+    import re
+    # 開始タグ: <!-- wp:list で始まり最初の --> まで（属性にハイフンが含まれるため .*? を使用）
+    pattern = re.compile(
+        r'(<!-- wp:list\b.*?-->.*?<!-- /wp:list -->)',
+        re.DOTALL,
+    )
+
+    def _wrap(m: re.Match) -> str:
+        block = m.group(1)
+        start = max(0, m.start() - 120)
+        preceding = content[start:m.start()]
+        if 'has-border -border04' in preceding:
+            return block
+        return f'{_SWELL_BORDER_OPEN}\n{block}\n{_SWELL_BORDER_CLOSE}'
+
+    return pattern.sub(_wrap, content)
+
+
 def _remove_dead_external_links(content: str) -> str:
     """
     記事HTML内の外部リンクを検証し、存在しないURL（404・接続不可）の
@@ -665,6 +698,9 @@ def fetch_candidates(
     hantei_idx    = col(["判定"])       # D列: 親KW / サブKW （新フォーマット）
     togo_saki_idx = col(["統合先KW"])   # E列: 統合先KW （新フォーマット）
     asp_hint_idx  = col(["訴求案件"])   # 訴求する案件を手動指定する列（カンマ区切り複数可）
+    ref_web1_idx  = col(["参考WEB①"])
+    ref_web2_idx  = col(["参考WEB②"])
+    ref_web3_idx  = col(["参考WEB③"])
     is_new_format = hantei_idx >= 0    # 判定列の有無で新旧フォーマットを判別
 
     # aim列の値 → 優先度レベル（高いほど先に評価）
@@ -701,6 +737,9 @@ def fetch_candidates(
         togo_saki    = cell(togo_saki_idx).strip() if togo_saki_idx >= 0 else ""
         asp_hint_raw = cell(asp_hint_idx).strip()  if asp_hint_idx  >= 0 else ""
         asp_hint     = [h.strip() for h in _re.split(r"[,、\n]", asp_hint_raw) if h.strip()] if asp_hint_raw else []
+        ref_web1     = cell(ref_web1_idx).strip()  if ref_web1_idx  >= 0 else ""
+        ref_web2     = cell(ref_web2_idx).strip()  if ref_web2_idx  >= 0 else ""
+        ref_web3     = cell(ref_web3_idx).strip()  if ref_web3_idx  >= 0 else ""
 
         if not kw:
             continue
@@ -747,6 +786,9 @@ def fetch_candidates(
             "_aim":            aim,
             "_priority_level": _AIM_PRIORITY.get(aim, 0),
             "_asp_hint":       asp_hint,   # 訴求案件指定（空リスト = 指定なし）
+            "_ref_web1":       ref_web1,   # 参考WEB①
+            "_ref_web2":       ref_web2,   # 参考WEB②
+            "_ref_web3":       ref_web3,   # 参考WEB③
         })
 
     # 新フォーマット: 各候補にサブKWを直接紐付け
@@ -1371,24 +1413,35 @@ def _resolve_target_length(target_length: int | dict, article_type: str) -> int:
     BlogConfig.target_length（int or dict）と article_type から
     生成に使う目標文字数を返す。
 
-    dict の場合: キーは大文字 MONETIZE / LONGTAIL / FUTURE / TREND など。
-    "trend" は "FUTURE" にフォールバック（キーがなければ最大値）。
+    dict の場合: キーは大文字 MONETIZE / LONGTAIL / FUTURE / TREND / NEWS / TRIAL など。
+    値は int（固定）または [min, max] のリスト（範囲指定・ランダムサンプリング）。
+    "trend" は "FUTURE" にフォールバック、"trial" は "NEWS" にフォールバック。
     """
+    import random
+
+    def _resolve_value(v) -> int:
+        if isinstance(v, (list, tuple)) and len(v) == 2:
+            return random.randint(int(v[0]), int(v[1]))
+        return int(v)
+
     if isinstance(target_length, int):
         return target_length
     if not isinstance(target_length, dict):
         return 9000
 
     key = article_type.upper()
-    normalized = {k.upper(): int(v) for k, v in target_length.items()}
+    normalized = {k.upper(): v for k, v in target_length.items()}
 
     if key in normalized:
-        return normalized[key]
+        return _resolve_value(normalized[key])
     # TREND → FUTURE フォールバック（短め記事として扱う）
     if key == "TREND" and "FUTURE" in normalized:
-        return normalized["FUTURE"]
+        return _resolve_value(normalized["FUTURE"])
+    # TRIAL → NEWS フォールバック
+    if key == "TRIAL" and "NEWS" in normalized:
+        return _resolve_value(normalized["NEWS"])
     # どのキーにもマッチしなければ最大値（品質優先）
-    return max(normalized.values())
+    return max(_resolve_value(v) for v in normalized.values())
 
 
 # 既存の generate_article() をそのまま利用
@@ -1412,6 +1465,7 @@ def generate(
     asp_list: list[dict] | None = None,
     forced_title: str | None = None,
     asp_hint: list[str] | None = None,
+    ref_urls: dict | None = None,
 ) -> dict:
     """
     記事を生成して dict で返す。
@@ -1448,7 +1502,8 @@ def generate(
                                asp_list=asp_list,
                                guide_links=guide_links or None,
                                forced_title=forced_title,
-                               asp_hint=asp_hint or None)
+                               asp_hint=asp_hint or None,
+                               ref_urls=ref_urls or None)
 
     # ── マイパターン CTA 挿入（ブログにパターンがある場合のみ）──
     if blog_cfg:
@@ -1488,6 +1543,12 @@ def generate(
                     article["content"], matched, skip_mention=(n_h3 > 0)
                 )
                 log.info(f"[generate] パターンCTA挿入（KWマッチ）: 「{matched.title}」(ID:{matched.id})")
+
+    # 同一パターンの連続重複を除去（万が一の保険）
+    article["content"] = _dedup_block_patterns(article["content"])
+
+    # リストブロックを SWELL ボーダーグループで囲む
+    article["content"] = _wrap_lists_with_border(article["content"])
 
     # 外部リンク死活チェック（存在しないWikipedia等のリンクを除去）
     article["content"] = _remove_dead_external_links(article["content"])
@@ -1789,7 +1850,8 @@ def run_blog(
                                    article_type=article_type_label,
                                    asp_list=asp_list or None,
                                    forced_title=forced_title,
-                                   asp_hint=kw_asp_hint)
+                                   asp_hint=kw_asp_hint,
+                                   ref_urls={"web1": chosen.get("_ref_web1", ""), "web2": chosen.get("_ref_web2", ""), "web3": chosen.get("_ref_web3", "")} if (chosen.get("_ref_web1") or chosen.get("_ref_web2") or chosen.get("_ref_web3")) else None)
             # 記事タイプ・KWステータスを article dict に付与（シート書き込み用）
             article["_article_type"] = article_type_label
             article["_kw_status"]    = chosen.get("_aim", "")
@@ -2334,6 +2396,36 @@ def _classify_vs_wp(keyword: str, wp_articles: list[dict]) -> dict:
     return best
 
 
+def _repair_review_colors(ws, rows: list[list[str]], hantei_idx: int) -> None:
+    """
+    シート上で判定列が「要確認」になっている行の背景色を薄ブルーに修復する。
+    黄色など誤った色が付いていた場合に是正する。
+    """
+    import gspread
+    color_requests: list[dict] = []
+    for i, row in enumerate(rows[1:], start=2):
+        hantei = row[hantei_idx].strip() if hantei_idx < len(row) else ""
+        if hantei == "要確認":
+            color_requests.append({
+                "repeatCell": {
+                    "range": {
+                        "sheetId":       ws.id,
+                        "startRowIndex": i - 1,
+                        "endRowIndex":   i,
+                    },
+                    "cell": {
+                        "userEnteredFormat": {
+                            "backgroundColor": {"red": 0.8, "green": 0.9, "blue": 1.0}
+                        }
+                    },
+                    "fields": "userEnteredFormat.backgroundColor",
+                }
+            })
+    if color_requests:
+        ws.spreadsheet.batch_update({"requests": color_requests})
+        log.info(f"[kanikabari] 要確認行の色修復: {len(color_requests)}行を薄ブルーに更新")
+
+
 def run_kanikabari_check(blog_cfg: BlogConfig) -> None:
     """
     シートの未判定AIMキーワードに対してかにばりチェックを実行し、結果を書き込む。
@@ -2540,6 +2632,10 @@ def run_kanikabari_check(blog_cfg: BlogConfig) -> None:
 
     from modules.sheets_updater import mark_kanikabari_results_new_format
     mark_kanikabari_results_new_format(results, ws)
+
+    # ── 色修復パス：シート上のすべての「要確認」行を薄ブルーに揃える ──────────
+    # 過去の誤着色（黄色など）を是正する。判定列が「要確認」ならば必ず青に。
+    _repair_review_colors(ws, rows, hantei_idx)
 
     n_ok    = sum(1 for r in results if r["hantei"] == "親KW" and r["status"] == "生成待ち")
     n_togo  = sum(1 for r in results if r["status"] == "統合対象" and r["wp_id"])

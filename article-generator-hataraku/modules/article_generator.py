@@ -527,7 +527,7 @@ USER_PROMPT_TEMPLATE = """\
 
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{asp_hint_section}{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{tone_section}{testimonial_section}{trusted_external_links_section}{forced_title_section}
+{asp_hint_section}{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{tone_section}{testimonial_section}{trusted_external_links_section}{ref_urls_section}{forced_title_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
@@ -553,7 +553,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    target_length: int = 9000,
                    asp_links: dict | None = None,
                    forced_title: str | None = None,
-                   asp_hint: list[str] | None = None) -> dict:
+                   asp_hint: list[str] | None = None,
+                   ref_urls: dict | None = None) -> dict:
     """
     記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
 
@@ -706,6 +707,23 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
         )
         print(f"[article_generator] タイトル強制指定: 「{forced_title}」")
 
+    # 参考URLセクション（スプレッドシートで事前に取得済みのURL）
+    ref_urls_section = ""
+    if ref_urls:
+        parts = []
+        for key, label in [("web1", "①"), ("web2", "②"), ("web3", "③")]:
+            if ref_urls.get(key):
+                parts.append(f"- 参考WEB{label}: {ref_urls[key]}")
+        if parts:
+            ref_urls_section = (
+                "## 参考URL（事前調査済み）\n"
+                "以下のURLを参考資料として活用し、記事の正確性・具体性を高めてください。\n"
+                "URLの内容と一致した情報・表現を積極的に取り入れてください（リンクとして記事に挿入しても可）:\n"
+                + "\n".join(parts) + "\n"
+            )
+            filled = [ref_urls.get(k, "") for k in ("web1", "web2", "web3") if ref_urls.get(k)]
+            print(f"[article_generator] 参考URL: {len(filled)}件")
+
     check_stop()
     message = client.messages.create(
         model="claude-sonnet-4-6",
@@ -731,6 +749,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                 tone_section=tone_section,
                 testimonial_section=testimonial_section,
                 trusted_external_links_section=trusted_external_links_section,
+                ref_urls_section=ref_urls_section,
                 forced_title_section=forced_title_section,
             ),
         }],
@@ -811,7 +830,8 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                      asp_list: list | None = None,
                      guide_links: dict | None = None,
                      forced_title: str | None = None,
-                     asp_hint: list[str] | None = None) -> dict:
+                     asp_hint: list[str] | None = None,
+                     ref_urls: dict | None = None) -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
@@ -835,7 +855,8 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
     return _build_article(keyword, volume, differentiation_note,
                           sub_keywords=sub_keywords, enable_fact_check=enable_fact_check,
                           target_length=target_length, asp_links=asp_links,
-                          forced_title=forced_title, asp_hint=asp_hint)
+                          forced_title=forced_title, asp_hint=asp_hint,
+                          ref_urls=ref_urls)
 
 
 def generate_article_from_cluster(cluster: dict, sub_keywords: list[str] | None = None) -> dict:

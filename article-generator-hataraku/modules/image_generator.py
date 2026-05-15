@@ -1694,10 +1694,10 @@ def _select_beginner_guide_template(title: str) -> str:
         return selected
 
     if any(k in title for k in ("副業", "稼ぐ", "月収", "収益", "アフィリエイト", "在宅")):
-        return _pick(["cafe_side", "flatlay", "app_cards", "right_person"])
+        return _pick(["cafe_side", "flatlay", "app_cards", "right_person", "left_person", "hands_closeup", "dark_desk"])
     if any(k in title for k in ("おすすめ", "比較", "無料", "選", "商用利用")):
-        return _pick(["flatlay", "app_cards", "cafe_side", "right_person"])
-    return _pick(["right_person", "flatlay", "cafe_side", "app_cards"])
+        return _pick(["flatlay", "app_cards", "cafe_side", "right_person", "left_person", "hands_closeup", "dark_desk"])
+    return _pick(["right_person", "flatlay", "cafe_side", "app_cards", "left_person", "hands_closeup", "dark_desk", "no_person_room"])
 
 
 def _build_beginner_guide_background_prompt(title: str, template: str = "right_person") -> str:
@@ -1707,6 +1707,9 @@ def _build_beginner_guide_background_prompt(title: str, template: str = "right_p
         "warm cream, pale sage green, dusty rose, natural wood, soft charcoal accents",
         "clean white, pale sky blue, light beige, muted coral, deep navy accents",
         "linen ivory, soft peach, warm gray, botanical green, dark blue-gray accents",
+        "soft lavender, warm gray, muted navy, pale yellow, natural wood accents",
+        "deep teal, cream, muted gold, warm walnut wood, soft white accents",
+        "dusty blue, pale mint, warm beige, muted rose, charcoal navy accents",
     ])
     base = (
         "16:9 horizontal Japanese lifestyle blog thumbnail background, exact wide banner composition. "
@@ -1744,8 +1747,9 @@ def _build_beginner_guide_background_prompt(title: str, template: str = "right_p
 
     if template == "cafe_side":
         person = random.choice([
-            "a young Japanese woman in her early 20s, gentle side profile, shoulder-length brown hair, ivory blouse",
-            "a young Japanese woman in her 20s seen from behind at a cafe table, beige cardigan, relaxed posture",
+            "a young Japanese woman in her early 20s, gentle side profile, shoulder-length brown hair, dusty blue blouse",
+            "a young Japanese woman in her 20s seen from behind at a cafe table, sage green cardigan, relaxed posture",
+            "a young Japanese woman in her late 20s with short bob hair, muted pink knit top, calm smile",
             "hands-only close-up of a young person typing on a laptop beside coffee, no face visible",
         ])
         return (
@@ -1755,15 +1759,63 @@ def _build_beginner_guide_background_prompt(title: str, template: str = "right_p
             "LEFT 55% remains bright ivory negative space for large Japanese text overlay."
         )
 
+    if template == "left_person":
+        person = random.choice([
+            "a young Japanese woman in her early 20s with shoulder-length dark hair, navy cardigan over a white tee",
+            "a Japanese woman in her late 20s with short bob hair, muted terracotta sweater, natural makeup",
+            "a young Japanese man in his 20s, soft beige overshirt, calm focused expression",
+            "a young Japanese woman with low ponytail, pale blue shirt, relaxed profile",
+        ])
+        scene = random.choice([
+            "quiet home workspace with wood shelves and plants",
+            "small cafe table near a bright window",
+            "minimal studio desk with tablet, notebook, coffee, and soft shadows",
+        ])
+        return (
+            base +
+            f"LEFT 42%: {person}, using a laptop or tablet in a {scene}. "
+            "RIGHT 58% remains clean bright negative space for large Japanese typography. "
+            "Editorial composition, different from standard right-person thumbnails."
+        )
+
+    if template == "hands_closeup":
+        scene = random.choice([
+            "close-up of hands using a tablet with stylus, laptop edge, colored sticky notes, coffee cup",
+            "hands arranging notebook, smartphone, and small blank cards on a warm wooden desk",
+            "over-the-shoulder view with only hands visible, laptop and notebook, no face",
+        ])
+        return (
+            base +
+            f"Scene: {scene}. No visible face. Natural light, practical AI workflow mood. "
+            "Use a stronger composition with objects on one side and clean negative space on the other."
+        )
+
+    if template == "dark_desk":
+        return (
+            base +
+            "Evening calm workspace with deep teal wall, warm desk lamp, laptop, notebook, coffee, small plant, cozy but not dark. "
+            "No people or only hands visible. Premium magazine mood, muted navy and amber accents. "
+            "Large clean negative space for typography."
+        )
+
+    if template == "no_person_room":
+        return (
+            base +
+            "No people. A quiet Scandinavian room corner with laptop on wooden desk, open notebook, ceramic cup, plants, linen curtain, soft sunlight. "
+            "Lifestyle brand-ad mood with generous negative space and no face."
+        )
+
     scene = random.choice([
         "bright Scandinavian home workspace, soft morning natural window light, plants, ceramic mug, notebook",
         "minimal living room work corner, linen curtain, small plant, warm tea cup, relaxed afternoon light",
         "clean home study desk, open notebook, white wall, botanical accent, clear midday natural light",
     ])
     person = random.choice([
-        "a young Japanese woman in her early 20s, natural soft makeup, warm brown hair in a loose bun, cream knit sweater",
-        "a young Japanese woman in her early 20s, shoulder-length dark brown hair, ivory blouse, calm approachable smile",
-        "a young Japanese woman in her 20s seen in gentle side profile, beige cardigan, focused and relaxed",
+        "a young Japanese woman in her early 20s, natural soft makeup, warm brown hair in a loose bun, dusty blue knit sweater",
+        "a young Japanese woman in her early 20s, shoulder-length dark brown hair, sage green blouse, calm approachable smile",
+        "a young Japanese woman in her 20s seen in gentle side profile, muted pink cardigan, focused and relaxed",
+        "a Japanese woman in her late 20s with short bob hair, navy sweater, thoughtful expression",
+        "a young Japanese man in his 20s, light gray shirt, relaxed and focused at a laptop",
     ])
     return (
         base +
@@ -1810,6 +1862,12 @@ def _guide_overlay_texts(title: str, texts: dict, template: str = "right_person"
     icon_sets = _select_icon_labels(title, site="aivice")
     palette_name = random.choice(["blush", "sage", "sky", "peach", "pop_pink", "royal_blue", "mint_yellow"])
     glyph_pool = ["search", "note", "sparkle", "check", "heart", "book", "yen"]
+    if template == "left_person":
+        text_side = "right"
+    elif template in ("flatlay", "hands_closeup", "dark_desk", "no_person_room"):
+        text_side = random.choice(["left", "right"])
+    else:
+        text_side = random.choice(["left", "left", "right"])
 
     return {
         "strip_label": strip,
@@ -1824,9 +1882,12 @@ def _guide_overlay_texts(title: str, texts: dict, template: str = "right_person"
         "_panel_curve": random.choice(["soft", "wide", "diagonal"]),
         "_ribbon_x": random.choice([0.615, 0.645, 0.675]),
         "_sub_layout": random.choice(["ribbon_top", "badge_circle", "sticky_note", "icon_cards"]),
-        "_text_side": random.choice(["left", "left", "right"]),
+        "_text_side": text_side,
         "_icon_style": "dynamic",
         "_icon_glyphs": random.sample(glyph_pool, 3),
+        "_hide_top_icon": random.choice([True, False]),
+        "_hide_badge": random.choice([False, False, True]),
+        "_hide_icons": random.choice([False, False, True]),
     }
 
 
@@ -2146,6 +2207,8 @@ def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
 def _is_career_site_theme(title: str, article_theme: str = "") -> bool:
     """はた楽ナビ向けの転職・副業・キャリア領域かを判定する。"""
     haystack = f"{title} {article_theme}"
+    if any(k in article_theme for k in ("AI", "テクノロジー", "オンライン学習", "プログラミング", "資格", "スキルアップ", "雑学", "生活情報", "飛騨", "旅行・観光")):
+        return False
     keys = (
         "転職", "副業", "キャリア", "仕事", "派遣", "フリーランス", "求人",
         "給与", "職場", "就職", "面接", "履歴書", "職務経歴書", "メンタル",
@@ -2243,6 +2306,8 @@ def _is_curiosity_site_theme(title: str, article_theme: str = "") -> bool:
     haystack = f"{title} {article_theme}"
     if any(k in article_theme for k in ("雑学", "エンタメ", "生活情報")):
         return True
+    if any(k in article_theme for k in ("AI", "テクノロジー", "オンライン学習", "プログラミング", "資格", "スキルアップ", "転職", "キャリア", "飛騨", "旅行・観光")):
+        return False
     keys = (
         "なぜ", "理由", "意味", "違い", "方法", "使い方", "豆知識",
         "暮らし", "生活", "トレンド", "話題", "気になる", "調べてみた",
@@ -2771,27 +2836,36 @@ def _career_overlay_texts(title: str, texts: dict, template: str) -> dict:
         main = "書類作成"
         accent = "伝わる書き方"
         strip = "応募準備"
-    elif "辞めたい" in title or "ストレス" in title or "メンタル" in title:
-        main = head_kw or "仕事の悩み"
-        accent = "ひとりで抱えない"
+    elif "仕事行きたくない" in title:
+        main = "仕事行きたくない"
+        accent = "5月の不調サイン" if "5月" in title else "原因と対処法"
+        strip = "心を整える"
+    elif "辞めたい" in title or "ストレス" in title or "メンタル" in title or "病気" in title:
+        main = "仕事の悩み"
+        accent = "原因と対処法"
         strip = "心を整える"
 
+    quiet = any(k in title for k in ("仕事行きたくない", "辞めたい", "ストレス", "メンタル", "病気", "疲れ"))
     return {
         "strip_label": strip[:8],
-        "pre_title": random.choice(["迷ったときの道しるべ", "働き方を整える", "次の一歩を考える"]),
+        "pre_title": random.choice(["ひとりで抱えない", "心と働き方を整える", "無理しないために"]) if quiet else random.choice(["迷ったときの道しるべ", "働き方を整える", "次の一歩を考える"]),
         "main_word": main[:12],
         "accent_word": accent[:12],
-        "supplement": random.choice(["不安を整理して次へ進む", "リアルな悩みに寄り添う", "自分に合う働き方を探す"]),
+        "supplement": random.choice(["症状を整理して早めに休む", "無理せず状態を見直す", "つらさを言葉にして整理"]) if quiet else random.choice(["不安を整理して次へ進む", "リアルな悩みに寄り添う", "自分に合う働き方を探す"]),
         "badge": random.choice(["やさしく解説", "保存版", "迷わない"]),
         "icon_labels": _select_icon_labels(title, site="career"),
         "_palette_name": random.choice(["sage", "sky", "peach", "royal_blue", "mint_yellow"]),
         "_template": template,
         "_panel_curve": random.choice(["soft", "wide", "diagonal"]),
         "_ribbon_x": random.choice([0.615, 0.645, 0.675]),
-        "_sub_layout": random.choice(["ribbon_top", "badge_circle", "sticky_note", "icon_cards"]),
+        "_sub_layout": "ribbon_top" if quiet else random.choice(["ribbon_top", "badge_circle", "sticky_note", "icon_cards"]),
         "_text_side": random.choice(["left", "right"]),
         "_icon_style": "dynamic",
         "_icon_glyphs": random.sample(glyph_pool, 3),
+        "_quiet_layout": quiet,
+        "_hide_badge": quiet,
+        "_hide_icons": random.choice([True, False]) if quiet else False,
+        "_hide_top_icon": quiet,
     }
 
 
@@ -2924,17 +2998,6 @@ def generate_lifestyle_eyecatch_image(
         _save_debug_image(final_bytes, "codex_webstudy_learning_eyecatch", model)
         return final_bytes
 
-    if _is_curiosity_site_theme(title, article_theme):
-        print("[IMAGE] 気になることブログ向け・雑学ライフ型バナーで生成します")
-        curiosity_template = _select_curiosity_template(title)
-        print(f"[IMAGE] curiosity template: {curiosity_template}")
-        bg_prompt = _build_curiosity_background_prompt(title, curiosity_template)
-        bg_bytes = _call_model(model, bg_prompt, W_EYECATCH, H_EYECATCH)
-        texts = _curiosity_overlay_texts(title, _generate_overlay_texts(title), curiosity_template)
-        final_bytes = _overlay_beginner_guide_banner(bg_bytes, texts)
-        _save_debug_image(final_bytes, "codex_hapipo8_curiosity_eyecatch", model)
-        return final_bytes
-
     if _is_career_site_theme(title, article_theme):
         print("[IMAGE] はた楽ナビ向けキャリア型バナーで生成します")
         career_template = _select_career_template(title)
@@ -2944,6 +3007,17 @@ def generate_lifestyle_eyecatch_image(
         texts = _career_overlay_texts(title, _generate_overlay_texts(title), career_template)
         final_bytes = _overlay_beginner_guide_banner(bg_bytes, texts)
         _save_debug_image(final_bytes, "codex_hataraku_career_eyecatch", model)
+        return final_bytes
+
+    if _is_curiosity_site_theme(title, article_theme):
+        print("[IMAGE] 気になることブログ向け・雑学ライフ型バナーで生成します")
+        curiosity_template = _select_curiosity_template(title)
+        print(f"[IMAGE] curiosity template: {curiosity_template}")
+        bg_prompt = _build_curiosity_background_prompt(title, curiosity_template)
+        bg_bytes = _call_model(model, bg_prompt, W_EYECATCH, H_EYECATCH)
+        texts = _curiosity_overlay_texts(title, _generate_overlay_texts(title), curiosity_template)
+        final_bytes = _overlay_beginner_guide_banner(bg_bytes, texts)
+        _save_debug_image(final_bytes, "codex_hapipo8_curiosity_eyecatch", model)
         return final_bytes
 
     if _is_beginner_guide_title(title):

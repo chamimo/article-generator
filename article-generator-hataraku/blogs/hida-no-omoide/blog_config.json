@@ -4,9 +4,26 @@
   "display_name": "飛騨の思い出",
   "genre": "旅行・観光・飛騨・地域情報",
   "target_length": {
-    "MONETIZE": 9000,
-    "LONGTAIL": 6000,
-    "FUTURE": 3000
+    "MONETIZE": [
+      8000,
+      12000
+    ],
+    "LONGTAIL": [
+      5000,
+      8000
+    ],
+    "FUTURE": [
+      3000,
+      5000
+    ],
+    "NEWS": [
+      2000,
+      3500
+    ],
+    "TRIAL": [
+      2000,
+      3500
+    ]
   },
   "fact_check": true,
   "candidate_ss_id": "16DZ0M_EbviPRhZBNwV_FpEJL2SjsuZw9BLKwAJE9AWE",
@@ -82,11 +99,29 @@
   "wp_url": "https://hida-no-omoide.com",
   "kanikabari_include_no_aim": true,
   "trusted_external_links": [
-    {"name": "飛騨・高山観光公式サイト（一般社団法人飛騨・高山観光コンベンション協会）", "url": "https://www.hida.jp/"},
-    {"name": "高山市公式サイト", "url": "https://www.city.takayama.lg.jp/"},
-    {"name": "白川郷観光協会公式サイト", "url": "https://shirakawa-go.gr.jp/"},
-    {"name": "飛騨古川観光協会公式サイト", "url": "https://www.hida-furukawa.or.jp/"},
-    {"name": "飛騨の里（飛騨民俗村）公式サイト", "url": "https://www.hidanosato-tpo.jp/"},
-    {"name": "高山陣屋公式サイト", "url": "https://jinya.gifu.jp/"}
+    {
+      "name": "飛騨・高山観光公式サイト（一般社団法人飛騨・高山観光コンベンション協会）",
+      "url": "https://www.hida.jp/"
+    },
+    {
+      "name": "高山市公式サイト",
+      "url": "https://www.city.takayama.lg.jp/"
+    },
+    {
+      "name": "白川郷観光協会公式サイト",
+      "url": "https://shirakawa-go.gr.jp/"
+    },
+    {
+      "name": "飛騨古川観光協会公式サイト",
+      "url": "https://www.hida-furukawa.or.jp/"
+    },
+    {
+      "name": "飛騨の里（飛騨民俗村）公式サイト",
+      "url": "https://www.hidanosato-tpo.jp/"
+    },
+    {
+      "name": "高山陣屋公式サイト",
+      "url": "https://jinya.gifu.jp/"
+    }
   ]
 }

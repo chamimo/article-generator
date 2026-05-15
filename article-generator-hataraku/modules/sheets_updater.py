@@ -390,10 +390,10 @@ def mark_cannibal_results_bulk(
                 if row is None:
                     continue
 
-                # 投稿済み行はステータス・色ともに上書きしない
+                # 投稿済み・要確認行はステータス・色ともに上書きしない
                 current_status = col_status[row - 1].strip() if row - 1 < len(col_status) else ""
-                if current_status == "投稿済み":
-                    print(f"[sheets_updater] スキップ（投稿済み行は保護）: 行{row} 「{kw}」")
+                if current_status in ("投稿済み", "要確認"):
+                    print(f"[sheets_updater] スキップ（保護行）: 行{row} 「{kw}」({current_status})")
                     continue
 
                 if is_skip:

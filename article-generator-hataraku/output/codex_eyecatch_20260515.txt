@@ -1,0 +1,67 @@
+===== [CODEX EYECATCH] 巡回開始: 2026-05-15 17:47:38 / limit=3 =====
+----- [workup-ai] start: 2026-05-15 17:47:38 -----
+[codex-eyecatch] 対象の投稿がありません status=draft
+----- [workup-ai] end: 2026-05-15 17:47:42 -----
+----- [ys-trend] start: 2026-05-15 17:47:42 -----
+[codex-eyecatch] 対象の投稿がありません status=publish
+----- [ys-trend] end: 2026-05-15 17:47:46 -----
+----- [hapipo8] start: 2026-05-15 17:47:46 -----
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #4225 生活保護でもスマホ契約できる！審査・手続き・おすすめプランを完全解説
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 初心者ガイド型バナーで生成します
+[IMAGE] guide template: flatlay
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (2048KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260515_174846_codex_beginner_guide_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 4227)
+[codex-eyecatch] featured image 設定完了: media_id=4227
+[codex-eyecatch] 編集URL: https://hapipo8.com/wp-admin/post.php?post=4225&action=edit
+----- [hapipo8] end: 2026-05-15 17:48:53 -----
+----- [kaerudoko] start: 2026-05-15 17:48:53 -----
+[codex-eyecatch] 対象の投稿がありません status=publish
+----- [kaerudoko] end: 2026-05-15 17:48:56 -----
+----- [hataraku] start: 2026-05-15 17:48:56 -----
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #670 仕事行きたくない5月は病気のサイン？原因・症状・対処法を徹底解説
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] はた楽ナビ向けキャリア型バナーで生成します
+[IMAGE] career template: home_work
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1753KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260515_174950_codex_hataraku_career_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 671)
+[codex-eyecatch] featured image 設定完了: media_id=671
+[codex-eyecatch] 編集URL: https://hataraku-navi.com/wp-admin/post.php?post=670&action=edit
+----- [hataraku] end: 2026-05-15 17:49:56 -----
+----- [hida-no-omoide] start: 2026-05-15 17:49:56 -----
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #304 高山の冬タイヤ必要条件を完全解説！標高・気温・規制まとめ
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 飛騨の思い出向け・旅メディア型バナーで生成します
+[IMAGE] hida template: town_evening
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1949KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260515_175054_codex_hida_travel_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 305)
+[codex-eyecatch] featured image 設定完了: media_id=305
+[codex-eyecatch] 編集URL: https://hida-no-omoide.com/wp-admin/post.php?post=304&action=edit
+----- [hida-no-omoide] end: 2026-05-15 17:50:58 -----
+----- [web-study1] start: 2026-05-15 17:50:58 -----
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #509 通信教育の兄弟割引はある？主要5社の割引率・条件を徹底比較
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] オンライン学習ナビ向け・学習メディア型バナーで生成します
+[IMAGE] learning template: kids_study
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1501KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260515_175340_codex_webstudy_learning_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 511)
+[codex-eyecatch] featured image 設定完了: media_id=511
+[codex-eyecatch] 編集URL: https://web-study1.com/wp-admin/post.php?post=509&action=edit
+----- [web-study1] end: 2026-05-15 17:53:44 -----
+===== [CODEX EYECATCH] 巡回終了: 2026-05-15 17:53:44 =====
