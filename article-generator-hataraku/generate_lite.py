@@ -25,6 +25,7 @@ import argparse
 import json
 import logging
 import os
+import subprocess
 import sys
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -632,6 +633,26 @@ def _setup_logger(name: str = "generate_lite") -> logging.Logger:
 
 
 log = _setup_logger()
+
+CODEX_EYECATCH_SCRIPT = Path("/Users/yama/article-generator-hataraku/run_codex_eyecatch.sh")
+
+
+def run_codex_eyecatch_after_generation(blog_name: str, limit: int) -> None:
+    """記事生成後にCodex側のアイキャッチ後付け処理を起動する。失敗しても記事生成は成功扱いにする。"""
+    if limit <= 0:
+        return
+    if not CODEX_EYECATCH_SCRIPT.exists():
+        log.warning(f"[codex-eyecatch] スクリプトが見つかりません: {CODEX_EYECATCH_SCRIPT}")
+        return
+    try:
+        log.info(f"[codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog={blog_name} limit={limit}")
+        subprocess.run(
+            [str(CODEX_EYECATCH_SCRIPT), "--blog", blog_name, "--limit", str(limit)],
+            cwd=str(CODEX_EYECATCH_SCRIPT.parent),
+            check=False,
+        )
+    except Exception as e:
+        log.warning(f"[codex-eyecatch] 起動失敗（記事生成は続行）: {e}")
 
 
 def _log_result(result: dict) -> None:
@@ -1479,6 +1500,13 @@ def generate(
     target_length = _resolve_target_length(raw_tl, article_type)
     guide_links   = blog_cfg.guide_links if blog_cfg is not None else {}
 
+    # 手順解説型キーワードは target_length を 1.3 倍にブースト（上限12,000字）
+    from modules.article_generator import _is_howto_keyword
+    if _is_howto_keyword(keyword):
+        boosted = min(int(target_length * 1.3), 12000)
+        log.info(f"[generate] 手順解説型ブースト: {target_length:,}字 → {boosted:,}字")
+        target_length = boosted
+
     # blog_cfg.asp_links（blog_config.json の静的案件）を asp_list にマージ
     # スプレッドシートから0件の場合でもプロンプトに案件情報が渡るようにする
     merged_asp: list[dict] = list(asp_list or [])
@@ -1964,7 +1992,7 @@ _BASE_KW_MODIFIER_SUFFIXES: tuple[str, ...] = (
 # ③ 検索意図カテゴリ — 同一主語でも意図が異なれば別クラスター確定
 _INTENT_CATEGORIES: dict[str, frozenset[str]] = {
     "基礎":  frozenset({"とは", "わかりやすく", "初心者", "入門", "基礎", "基本"}),
-    "方法":  frozenset({"方法", "やり方", "仕方", "手順", "手続", "手続き", "始め方", "手法"}),
+    "方法":  frozenset({"方法", "やり方", "仕方", "手順", "手続", "手続き", "始め方", "手法", "使い方"}),
     "評判":  frozenset({"評判", "口コミ", "レビュー", "体験談", "感想", "評価"}),
     "比較":  frozenset({"比較", "おすすめ", "ランキング", "一覧", "まとめ", "違い", "選び方"}),
     "税務":  frozenset({"税金", "確定申告", "申告", "課税", "納税", "etax", "e-tax",
@@ -2076,7 +2104,7 @@ def _extract_base_kw(keyword: str) -> str:
     return " ".join(tokens)
 
 
-def _cluster_keywords_intra(kws: list[dict]) -> list[dict]:
+def _cluster_keywords_intra(kws: list[dict], loose: bool = False) -> list[dict]:
     """
     グリーディークラスタリングで 親KW / サブKW を決定する。
 
@@ -2139,6 +2167,21 @@ def _cluster_keywords_intra(kws: list[dict]) -> list[dict]:
 
             reason:     str | None = None
             confidence: str        = "strong"
+
+            # ── 双方が固有コンテンツ語を持つ場合はグループ化しない ────────
+            # 例: "claude code skills インストール" と "claude code skills ドキュメント"
+            # → 互いに相手に含まれない意味語を持つ → 別記事候補 → スキップ
+            # ただし: "ドキュメント" vs "ドキュメント作成" → 前者が後者に含まれる → グループ化OK
+            _stp = frozenset({"の","は","が","を","に","で","と","から","まで","も","や","か","な"})
+            _aim_m = frozenset(m for ms in _INTENT_CATEGORIES.values() for m in ms)
+            _m_nfkc = unicodedata.normalize("NFKC", main_cand["keyword"]).lower()
+            _o_nfkc = unicodedata.normalize("NFKC", other["keyword"]).lower()
+            _m_uniq = {t for t in _m_nfkc.split()
+                       if len(t) >= 2 and t not in _stp and t not in _aim_m and t not in _o_nfkc}
+            _o_uniq = {t for t in _o_nfkc.split()
+                       if len(t) >= 2 and t not in _stp and t not in _aim_m and t not in _m_nfkc}
+            if not loose and _m_uniq and _o_uniq:
+                continue  # 双方に固有語あり → 別クラスター（loose時はスキップして積極統合）
 
             # 1. ベースKW完全一致（最優先）
             if main_base and other_base and main_base == other_base:
@@ -2312,6 +2355,25 @@ def _classify_vs_wp(keyword: str, wp_articles: list[dict]) -> dict:
             if len(kw_base_compact) >= 2 and kw_base_compact in _title_stripped:
                 sim = max(sim, 0.55)
 
+        # ── KWが WP記事にない固有コンテンツ語を持つ場合は別記事扱い ──────
+        # 例: "claude code skills インストール" vs WP "claude code skills 使い方"
+        # → "インストール" はWP記事に存在しない → 別角度の記事 → sim抑制
+        # ガード: KWがタイトルに部分文字列として含まれる場合は抑制しない
+        if kw_l not in title_nfkc:
+            _stopish = frozenset({"の", "は", "が", "を", "に", "で", "と",
+                                   "から", "まで", "も", "や", "か", "な"})
+            _all_im = frozenset(m for ms in _INTENT_CATEGORIES.values() for m in ms)
+            _kw_unique = {
+                t for t in kw_nfkc.split()
+                if len(t) >= 2
+                and t not in _stopish
+                and t not in _all_im
+                and t not in title_nfkc  # タイトル文字列中にも存在しない
+            }
+            if _kw_unique:
+                # KW固有のコンテンツ語あり → review閾値(0.20)未満に抑制してokへ
+                sim = min(sim, 0.19)
+
         # ── 意図・ベースKW・ブランドを評価 ──
         title_intent = _extract_intent(title)
         title_base   = _extract_base_kw(title)
@@ -2426,7 +2488,7 @@ def _repair_review_colors(ws, rows: list[list[str]], hantei_idx: int) -> None:
         log.info(f"[kanikabari] 要確認行の色修復: {len(color_requests)}行を薄ブルーに更新")
 
 
-def run_kanikabari_check(blog_cfg: BlogConfig) -> None:
+def run_kanikabari_check(blog_cfg: BlogConfig, force: bool = False) -> None:
     """
     シートの未判定AIMキーワードに対してかにばりチェックを実行し、結果を書き込む。
 
@@ -2434,6 +2496,8 @@ def run_kanikabari_check(blog_cfg: BlogConfig) -> None:
     Step 2: キーワード間クラスタリング（intra-sheet）→ 親KW / サブKW 決定
     Step 3: 親KWについて WP既存記事との重複チェック
     Step 4: シートに書き込む（D=判定, E=統合先KW, G=ステータス, H=メモ）
+
+    force=True: 既判定キーワードも含めて全件再チェック（シートをリセットしてから書き込む）
     """
     import gspread
     from google.oauth2.service_account import Credentials
@@ -2462,6 +2526,7 @@ def run_kanikabari_check(blog_cfg: BlogConfig) -> None:
 
     kw_idx     = col(["キーワード", "Keyword"])
     vol_idx    = col(["月間検索数", "検索ボリューム", "volume"])
+    seo_idx    = col(["SEO難易度", "seo_difficulty"])
     aim_idx    = col(["aim", "AIM", "Aim"])
     hantei_idx = col(["判定"])
 
@@ -2495,13 +2560,14 @@ def run_kanikabari_check(blog_cfg: BlogConfig) -> None:
             continue
         if not include_no_aim and aim not in ("aim", "claude", "add", "now", "future", "monetize"):
             continue
-        if hantei:  # 既に判定済みはスキップ
+        if hantei and not force:  # 既に判定済みはスキップ（forceなら含める）
             continue
 
         unjudged.append({
-            "keyword": kw,
-            "volume":  to_int(cell(vol_idx)),
-            "_row":    row_idx,
+            "keyword":    kw,
+            "volume":     to_int(cell(vol_idx)),
+            "seo":        to_int(cell(seo_idx)) if seo_idx >= 0 else 0,
+            "_row":       row_idx,
         })
 
     log.info(f"[kanikabari] 未判定AIMキーワード: {len(unjudged)}件")
@@ -2567,20 +2633,53 @@ def run_kanikabari_check(blog_cfg: BlogConfig) -> None:
 
         if wp["verdict"] == "skip":
             # ── カニバリスキップ ─────────────────────────────────────
-            # togo_saki はシート上のKW（記事タイトルではなくキーワードで揃える）
             results.append({
                 "keyword":   main_kw["keyword"],
                 "row":       main_kw["_row"],
                 "hantei":    "カニバリスキップ",
                 "togo_saki": main_kw["keyword"],
                 "status":    "カニバリスキップ",
-                "memo":      wp["title"],   # タイトルはメモへ
+                "memo":      wp["title"],
                 "wp_url":    wp["url"],
                 "wp_id":     str(wp["post_id"]),
             })
-            # サブKWは同じ親KW（キーワード）への統合対象とする
+            # サブKWはWP記事に対して個別再チェック:
+            # 競合あり → 統合対象、競合なし → 昇格候補へ蓄積
+            _promoted: list[dict] = []
             for sub in cluster["subs"]:
-                results.append(_sub_result(sub, main_kw["keyword"], wp["url"], str(wp["post_id"])))
+                sub_wp = _classify_vs_wp(sub["keyword"], wp_articles)
+                if sub_wp["verdict"] in ("skip", "togo"):
+                    results.append(_sub_result(sub, main_kw["keyword"], sub_wp["url"], str(sub_wp["post_id"])))
+                elif sub_wp["verdict"] == "review":
+                    results.append({
+                        "keyword":   sub["keyword"],
+                        "row":       sub["_row"],
+                        "hantei":    "要確認",
+                        "togo_saki": "",
+                        "status":    "要確認",
+                        "memo":      sub_wp["memo"],
+                        "wp_url":    sub_wp["url"],
+                        "wp_id":     str(sub_wp["post_id"]),
+                    })
+                else:
+                    _promoted.append(sub)
+
+            # 昇格候補を再クラスタリング → 同一ベース系はlooseモードで積極的に統合
+            if _promoted:
+                _sub_clusters = _cluster_keywords_intra(_promoted, loose=True)
+                for _sc in _sub_clusters:
+                    results.append({
+                        "keyword":   _sc["main"]["keyword"],
+                        "row":       _sc["main"]["_row"],
+                        "hantei":    "親KW",
+                        "togo_saki": "",
+                        "status":    "生成待ち",
+                        "memo":      "",
+                        "wp_url":    "",
+                        "wp_id":     "",
+                    })
+                    for _sc_sub in _sc["subs"]:
+                        results.append(_sub_result(_sc_sub, _sc["main"]["keyword"]))
 
         elif wp["verdict"] == "togo":
             # ── 統合対象（既存WP記事への追記候補）──────────────────────
@@ -2682,6 +2781,8 @@ def main() -> None:
                         help="テスト生成モード: 1記事のみ生成・下書き保存（--count 1 と同等）")
     parser.add_argument("--kanikabari", action="store_true",
                         help="かにばりチェックを実行してシートに判定を書き込む（記事生成はしない）")
+    parser.add_argument("--force-kanikabari", action="store_true",
+                        help="既判定キーワードも含めて全件再チェック（--kanikabari と組み合わせて使用）")
     args = parser.parse_args()
 
     # --test フラグ: count=1 を強制（--count と同時指定時は --count を優先）
@@ -2758,7 +2859,7 @@ def main() -> None:
             continue
 
         if args.kanikabari:
-            run_kanikabari_check(blog_cfg)
+            run_kanikabari_check(blog_cfg, force=getattr(args, "force_kanikabari", False))
         else:
             results = run_blog(
                 blog_cfg,
@@ -2769,6 +2870,9 @@ def main() -> None:
                 forced_title=args.title,
             )
             all_results.extend(results)
+            generated_count = sum(1 for r in results if r.get("status") == "success")
+            if generated_count and not args.dry_run:
+                run_codex_eyecatch_after_generation(blog_cfg.name, generated_count)
 
     # ── 全体サマリー ──────────────────────────────────────
     elapsed   = (datetime.now() - started_at).total_seconds()

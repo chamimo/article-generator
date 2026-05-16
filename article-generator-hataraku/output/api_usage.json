@@ -8759,6 +8759,226 @@
       "output_tokens": 10922,
       "cost_usd": 0.182715,
       "label": "article:通信教育 兄弟 割引 ある？"
+    },
+    {
+      "timestamp": "2026-05-15T19:20:13.875719+00:00",
+      "date": "2026-05-15",
+      "hour": "2026-05-15T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 94,
+      "cost_usd": 0.000468,
+      "label": "lsi:宅食 一人暮らし 女性 安い"
+    },
+    {
+      "timestamp": "2026-05-15T19:20:18.473178+00:00",
+      "date": "2026-05-15",
+      "hour": "2026-05-15T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 745,
+      "cost_usd": 0.003126,
+      "label": "kw_research:宅食 一人暮らし 女性 安い"
+    },
+    {
+      "timestamp": "2026-05-15T19:22:47.399933+00:00",
+      "date": "2026-05-15",
+      "hour": "2026-05-15T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 7607,
+      "output_tokens": 10766,
+      "cost_usd": 0.184311,
+      "label": "article:宅食 一人暮らし 女性 安い"
+    },
+    {
+      "timestamp": "2026-05-15T20:00:12.054643+00:00",
+      "date": "2026-05-15",
+      "hour": "2026-05-15T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 90,
+      "cost_usd": 0.000448,
+      "label": "lsi:夏 バイト おすすめ"
+    },
+    {
+      "timestamp": "2026-05-15T20:00:15.672571+00:00",
+      "date": "2026-05-15",
+      "hour": "2026-05-15T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 564,
+      "cost_usd": 0.002398,
+      "label": "kw_research:夏 バイト おすすめ"
+    },
+    {
+      "timestamp": "2026-05-15T20:03:48.576537+00:00",
+      "date": "2026-05-15",
+      "hour": "2026-05-15T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5985,
+      "output_tokens": 13007,
+      "cost_usd": 0.21306,
+      "label": "article:夏 バイト おすすめ"
+    },
+    {
+      "timestamp": "2026-05-15T20:30:15.107755+00:00",
+      "date": "2026-05-15",
+      "hour": "2026-05-15T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 117,
+      "output_tokens": 107,
+      "cost_usd": 0.000522,
+      "label": "lsi:飛騨高山 まつりの森 犬連れ"
+    },
+    {
+      "timestamp": "2026-05-15T20:30:19.228085+00:00",
+      "date": "2026-05-15",
+      "hour": "2026-05-15T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 184,
+      "output_tokens": 634,
+      "cost_usd": 0.002683,
+      "label": "kw_research:飛騨高山 まつりの森 犬連れ"
+    },
+    {
+      "timestamp": "2026-05-15T20:32:31.966691+00:00",
+      "date": "2026-05-15",
+      "hour": "2026-05-15T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 5914,
+      "output_tokens": 9846,
+      "cost_usd": 0.165432,
+      "label": "article:飛騨高山 まつりの森 犬連れ"
+    },
+    {
+      "timestamp": "2026-05-15T20:32:37.014345+00:00",
+      "date": "2026-05-15",
+      "hour": "2026-05-15T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 389,
+      "output_tokens": 34,
+      "cost_usd": 0.000447,
+      "label": "maps:飛騨高山 まつりの森 犬連れ"
+    },
+    {
+      "timestamp": "2026-05-15T21:00:14.202128+00:00",
+      "date": "2026-05-15",
+      "hour": "2026-05-15T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 122,
+      "cost_usd": 0.000578,
+      "label": "lsi:通信教育 途中 解約 損？"
+    },
+    {
+      "timestamp": "2026-05-15T21:00:18.021380+00:00",
+      "date": "2026-05-15",
+      "hour": "2026-05-15T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 519,
+      "cost_usd": 0.002219,
+      "label": "kw_research:通信教育 途中 解約 損？"
+    },
+    {
+      "timestamp": "2026-05-15T21:02:42.687270+00:00",
+      "date": "2026-05-15",
+      "hour": "2026-05-15T21",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6225,
+      "output_tokens": 10183,
+      "cost_usd": 0.17142,
+      "label": "article:通信教育 途中 解約 損？"
+    },
+    {
+      "timestamp": "2026-05-16T07:07:42.839817+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 102,
+      "cost_usd": 0.000494,
+      "label": "lsi:cyberlink photodirector とは"
+    },
+    {
+      "timestamp": "2026-05-16T07:07:46.564499+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 469,
+      "cost_usd": 0.002016,
+      "label": "kw_research:cyberlink photodirector とは"
+    },
+    {
+      "timestamp": "2026-05-16T07:10:21.543498+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T07",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6751,
+      "output_tokens": 10068,
+      "cost_usd": 0.171273,
+      "label": "article:cyberlink photodirector とは"
+    },
+    {
+      "timestamp": "2026-05-16T07:11:26.054892+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 142,
+      "cost_usd": 0.000654,
+      "label": "lsi:photodirector 安全 性"
+    },
+    {
+      "timestamp": "2026-05-16T07:11:29.709047+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 494,
+      "cost_usd": 0.002116,
+      "label": "kw_research:photodirector 安全 性"
+    },
+    {
+      "timestamp": "2026-05-16T07:14:09.638558+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T07",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6593,
+      "output_tokens": 10104,
+      "cost_usd": 0.171339,
+      "label": "article:photodirector 安全 性"
+    },
+    {
+      "timestamp": "2026-05-16T07:51:32.488396+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 110,
+      "cost_usd": 0.000526,
+      "label": "lsi:photodirector 買い切り"
+    },
+    {
+      "timestamp": "2026-05-16T07:51:35.899557+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 549,
+      "cost_usd": 0.002336,
+      "label": "kw_research:photodirector 買い切り"
+    },
+    {
+      "timestamp": "2026-05-16T07:54:18.874436+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T07",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6708,
+      "output_tokens": 10330,
+      "cost_usd": 0.175074,
+      "label": "article:photodirector 買い切り"
     }
   ],
   "events": [

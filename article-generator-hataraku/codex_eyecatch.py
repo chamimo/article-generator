@@ -10,12 +10,15 @@ from __future__ import annotations
 import argparse
 import html
 import os
+import random
 import re
 import sys
 from pathlib import Path
 
 import requests
 from requests.auth import HTTPBasicAuth
+
+_LIBRARY_EYECATCH_BLOGS = {"hapipo8", "kaerudoko", "ys-trend"}
 
 
 def _plain_title(raw: str) -> str:
@@ -112,6 +115,71 @@ def _set_featured_media(
     resp.raise_for_status()
 
 
+def _fetch_media_candidates(
+    wp_url: str,
+    auth: HTTPBasicAuth,
+    search_term: str = "",
+    per_page: int = 50,
+) -> list[dict]:
+    params = {
+        "media_type": "image",
+        "per_page": per_page,
+        "_fields": "id,source_url,alt_text,caption,date",
+    }
+    if search_term:
+        params["search"] = search_term
+
+    try:
+        resp = requests.get(
+            f"{wp_url.rstrip('/')}/wp-json/wp/v2/media",
+            auth=auth,
+            params=params,
+            timeout=20,
+        )
+        if resp.status_code != 200:
+            return []
+        return resp.json()
+    except Exception:
+        return []
+
+
+def _select_library_media(
+    wp_url: str,
+    auth: HTTPBasicAuth,
+    title: str,
+) -> dict | None:
+    """
+    OpenAI画像生成を使わないブログ用に、既存メディアライブラリから1枚選ぶ。
+
+    まず記事タイトル由来の語で探し、見つからなければ直近の画像から選ぶ。
+    これにより対象ブログでは有料の gpt-image-2 を呼ばず、以前の無料画像運用に戻す。
+    """
+    search_terms: list[str] = []
+    plain = _plain_title(title)
+    if plain:
+        search_terms.append(plain)
+        search_terms.extend([part for part in re.split(r"[\s　・｜|／/、。!！?？:：]+", plain) if len(part) >= 2][:4])
+
+    seen_terms: set[str] = set()
+    for term in search_terms:
+        if term in seen_terms:
+            continue
+        seen_terms.add(term)
+        candidates = _fetch_media_candidates(wp_url, auth, search_term=term)
+        if candidates:
+            chosen = random.choice(candidates)
+            print(f"[codex-eyecatch] 既存ライブラリ画像を選択: search={term} media_id={chosen.get('id')}")
+            return chosen
+
+    candidates = _fetch_media_candidates(wp_url, auth, search_term="")
+    if candidates:
+        chosen = random.choice(candidates)
+        print(f"[codex-eyecatch] 既存ライブラリ画像を選択: recent media_id={chosen.get('id')}")
+        return chosen
+
+    return None
+
+
 def main() -> int:
     args = _parse_args()
 
@@ -120,8 +188,8 @@ def main() -> int:
 
     from generate_lite import load_blog_config
     from modules import wp_context
-    from modules.image_generator import generate_lifestyle_eyecatch_image
     from modules.wordpress_poster import upload_media
+    from modules.image_generator import generate_lifestyle_eyecatch_image
 
     cfg = load_blog_config(args.blog)
     wp_context.set_context(
@@ -166,6 +234,20 @@ def main() -> int:
         print(f"\n[codex-eyecatch] #{post_id} {title}")
 
         if args.dry_run:
+            continue
+
+        if args.blog in _LIBRARY_EYECATCH_BLOGS:
+            media = _select_library_media(cfg.wp_url, auth, title)
+            if not media:
+                print("[codex-eyecatch] 既存ライブラリ画像が見つからないためスキップ")
+                continue
+
+            media_id = int(media["id"])
+            source_url = media.get("source_url", "")
+            _set_featured_media(cfg.wp_url, auth, post_id, media_id, source_url, title)
+            edit_url = f"{cfg.wp_url.rstrip('/')}/wp-admin/post.php?post={post_id}&action=edit"
+            print(f"[codex-eyecatch] 既存ライブラリ画像を featured image に設定: media_id={media_id}")
+            print(f"[codex-eyecatch] 編集URL: {edit_url}")
             continue
 
         image_bytes = generate_lifestyle_eyecatch_image(

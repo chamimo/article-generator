@@ -4,12 +4,22 @@
     "flatlay",
     "cafe_side",
     "right_person",
-    "flatlay"
+    "flatlay",
+    "hands_closeup",
+    "cafe_side"
   ],
   "hida": [
     "town_morning",
     "travel_flatlay",
-    "town_evening"
+    "town_evening",
+    "town_morning",
+    "market_walk",
+    "travel_flatlay",
+    "town_morning",
+    "market_walk",
+    "travel_flatlay",
+    "town_morning",
+    "poor_old_town"
   ],
   "curiosity": [
     "notebook_closeup",
@@ -22,6 +32,7 @@
     "home_lifestyle",
     "question_flatlay",
     "soft_illustration",
-    "home_lifestyle"
+    "home_lifestyle",
+    "notebook_closeup"
   ]
 }

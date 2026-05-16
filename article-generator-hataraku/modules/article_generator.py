@@ -37,6 +37,8 @@ __SITE_INFO__
 - FAQは8〜10問（各回答200字以上）
 - 結論ファーストな構成
 - タグは最大5個（重要度の高いものを厳選）
+- **「完全ガイド」はタイトル・H2・H3・本文すべてで使用禁止。** 代替表現：「方法」「やり方」「手順」「解説」「まとめ」など検索意図に合ったワードを使うこと
+- **【手順解説型H3の充実ルール】** キーワードに「使い方」「方法」「手順」「やり方」「始め方」「設定」「手続き」が含まれる場合、手順・操作を説明するH3は通常より詳しく書くこと。各ステップを「①何をするか → ②具体的な操作（画面や入力内容まで含む） → ③結果・確認ポイント・よくあるつまずき」の流れで展開し、H3本文は600〜800字を目安にする（概要・まとめ系のH3は400〜500字でよい）。読者がその場でそのまま実行できるレベルの具体性を保つこと
 - まとめチェックリストの直後に締めの文章（150〜200字）を1段落追加する。2〜3文構成で書くこと。構成例：①読者が感じているであろう迷いや苦労に共感する一文（「〜って、慣れるまでどれを選べばいいか本当に迷いますよね」など自然な表現で）→②やさしく背中を押す一文（「気になったものがあれば、まず公式サイトでスペックだけでも確認してみるのがおすすめです」など）。「まず〇〇を試してみてください」「〇〇を選べば間違いありません」のような押しつけがましい表現は使わないこと。キーワードに関連するアフィリリンク登録済みツールがあれば1つだけ自然な文脈で組み込む（リンクのために文章を歪めない）。該当ツールがない場合はリンクなしでよい（登録済みツール以外の公式リンクは不可）
 
 # リンク挿入ルール（厳守）
@@ -317,6 +319,33 @@ def _build_system_prompt(
     return prompt
 
 
+_HOWTO_MARKERS = frozenset({
+    "使い方", "方法", "手順", "やり方", "始め方", "設定", "手続き",
+    "使用方法", "操作方法", "導入方法", "登録方法", "利用方法",
+    "how to", "tutorial",
+})
+
+def _is_howto_keyword(keyword: str) -> bool:
+    """使い方・手順解説型のキーワードかどうかを判定する。"""
+    kw_l = keyword.lower()
+    return any(m in kw_l for m in _HOWTO_MARKERS)
+
+
+def _build_howto_section(keyword: str) -> str:
+    """手順解説型キーワード向けの追加指示セクションを返す。"""
+    if not _is_howto_keyword(keyword):
+        return ""
+    return (
+        "## 【重要】手順解説型記事の追加指示\n"
+        "このキーワードは「使い方・手順解説型」です。以下のルールを厳守してください:\n"
+        "- 手順・操作を説明するH3は1ステップずつ丁寧に展開し、H3本文は600〜800字を目標にする\n"
+        "- 各ステップの構成: ①何をするか（1文で明確に）→ ②具体的な操作（クリック先・入力値・設定名まで）→ ③期待できる結果と確認方法、注意点やつまずきやすいポイント\n"
+        "- 操作の順序は番号付きリストブロック（<!-- wp:list {\"ordered\":true} -->）で出力する\n"
+        "- 「概要」「まとめ」「とは」系のH3は400〜500字で構わない\n"
+        "- 読者がその場でそのまま実行できるレベルの具体性を保つこと\n"
+    )
+
+
 def _get_keyword_research(keyword: str) -> dict:
     """
     Claude Haiku でキーワードリサーチを一括生成する。
@@ -527,7 +556,7 @@ USER_PROMPT_TEMPLATE = """\
 
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{asp_hint_section}{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{tone_section}{testimonial_section}{trusted_external_links_section}{ref_urls_section}{forced_title_section}
+{asp_hint_section}{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{tone_section}{testimonial_section}{trusted_external_links_section}{ref_urls_section}{forced_title_section}{howto_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
@@ -716,13 +745,18 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                 parts.append(f"- 参考WEB{label}: {ref_urls[key]}")
         if parts:
             ref_urls_section = (
-                "## 参考URL（事前調査済み）\n"
-                "以下のURLを参考資料として活用し、記事の正確性・具体性を高めてください。\n"
-                "URLの内容と一致した情報・表現を積極的に取り入れてください（リンクとして記事に挿入しても可）:\n"
+                "## 参考URL（事前調査済み・内部資料）\n"
+                "以下のURLは制作用の内部参考資料です。内容を参考に記事の正確性・具体性を高めてください。\n"
+                "**重要: 記事本文中に「参考WEB①」「参考URL」などの表現は絶対に使わないこと。これらは非公開の内部資料です。**\n"
                 + "\n".join(parts) + "\n"
             )
             filled = [ref_urls.get(k, "") for k in ("web1", "web2", "web3") if ref_urls.get(k)]
             print(f"[article_generator] 参考URL: {len(filled)}件")
+
+    # 手順解説型キーワード向け追加指示
+    howto_section = _build_howto_section(keyword)
+    if howto_section:
+        print(f"[article_generator] 手順解説型モード: 「{keyword}」")
 
     check_stop()
     message = client.messages.create(
@@ -751,6 +785,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                 trusted_external_links_section=trusted_external_links_section,
                 ref_urls_section=ref_urls_section,
                 forced_title_section=forced_title_section,
+                howto_section=howto_section,
             ),
         }],
     )

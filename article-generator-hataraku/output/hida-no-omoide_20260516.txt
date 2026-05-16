@@ -1,0 +1,115 @@
+===== [HIDA-NO-OMOIDE] 実行開始: 2026-05-16 05:30:01 =====
+2026-05-16 05:30:03 [INFO] ============================================================
+2026-05-16 05:30:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 05:30:03 [INFO] ============================================================
+2026-05-16 05:30:03 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-16 05:30:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 05:30:05 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-16 05:30:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 05:30:05 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-16 05:30:05 [INFO]   fact_check       : True
+2026-05-16 05:30:05 [INFO]   article_type_mix : True
+2026-05-16 05:30:05 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-16 05:30:05 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] 飛騨の思い出 / 「ASP案件マスター 」: 3件
+[asp_fetcher]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+[asp_fetcher]   [999] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+[asp_fetcher]   [999] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+2026-05-16 05:30:08 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-16 05:30:08 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-16 05:30:08 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-16 05:30:08 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-16 05:30:12 [INFO] [wp] 記事取得: 計31件 (draft=2 / publish=29)
+2026-05-16 05:30:12 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-16 05:30:13 [INFO] [fetch] サブKW紐付け: 58件 → 9記事に統合
+2026-05-16 05:30:13 [INFO] [fetch] [キーワード] メインKW: 34件（vol≥30 or N/A）  サブKW除外: 58件（統合対象）  投稿済みスキップ: 48件  テーマ外除外: 13件  aim内訳: [now:1, aim:20, claude:21, add:5]
+2026-05-16 05:30:13 [INFO] [dup_check] 優先候補: 34件 {'now': 1, 'aim': 12, 'claude': 16, 'add': 5} を先頭評価
+2026-05-16 05:30:13 [INFO] [dup_check] 除外: 「赤かぶ漬け お土産 日持ち」 → カニバリ(2/3語重複 ['お土産', '日持ち']): 「朴葉味噌のお土産は日持ちする？賞味期限・保存方法を徹底解説」
+2026-05-16 05:30:13 [INFO] [dup_check] 除外: 「高山 雪 朝 写真 撮れる場所」 → カニバリ(2/3語重複 ['高山', '写真']): 「高山の冬写真スポット9選！静かな雪景色と古い町並みを早朝に撮る」
+2026-05-16 05:30:13 [INFO] [dup_check] 除外: 「飛騨 山に囲まれた景色 見どころ」 → カニバリ(2/3語重複 ['飛騨', '見どころ']): 「飛騨古川 昔の町並み見どころ完全ガイド｜散策・カフェ・朝市まで」
+2026-05-16 05:30:13 [INFO] [dup_check] 除外: 「高山 観光 徒歩で回れる範囲」 → カニバリ(2/3語重複 ['高山', '観光']): 「高山の赤い橋の名前と由来を簡単に解説！飛騨高山を代表する観光スポット」
+2026-05-16 05:30:13 [INFO] [dup_check] 完了: 選定=1件 / 除外=4件 (pool=34件, 要求=1件)
+2026-05-16 05:30:13 [INFO] [select] 1件選定 (要求=1件)
+2026-05-16 05:30:13 [INFO] [select]   1. 「飛騨高山 まつりの森 犬連れ」 vol=0 seo=N/A comp=N/A
+2026-05-16 05:30:13 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-16 05:30:13 [INFO] [hida-no-omoide] 候補: 34件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.4038 / 1時間: $0.2159  (上限 日次$10.00 / 時間$5.00)  全体: $0.5687(¥85) / 3記事
+2026-05-16 05:30:13 [INFO] [api_guard] 本日の使用量: $0.4038 / ¥61 (6回呼び出し)
+2026-05-16 05:30:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 05:30:13 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「飛騨高山 まつりの森 犬連れ」 vol=0 ★AIM
+2026-05-16 05:30:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 05:30:13 [INFO] [generate] 生成開始: 「飛騨高山 まつりの森 犬連れ」(vol:0) fact_check=True target_length=5,544字  サブKW:2件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「飛騨高山 まつりの森 犬連れ」(vol:0) [5,544字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.4038 / 1時間: $0.2159  (上限 日次$10.00 / 時間$5.00)  全体: $0.5687(¥85) / 3記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=117 out=107 → $0.0005  (lsi:飛騨高山 まつりの森 犬連れ)
+[api_guard] 本日の使用量: $0.4043 / ¥60 (883回呼び出し)
+[article_generator] 共起語: 飛騨高山観光、高山祭り、ペット同伴、犬連れ旅行、高山市、歴史的建造物、古い町並み、ペット可施設、犬同伴可、旅行プラン、岐...
+[article_generator] サブKW候補: 2件 (飛騨高山 まつりの森 メニュー〜)
+[api_guard] ✅ 本日: $0.4043 / 1時間: $0.2164  (上限 日次$10.00 / 時間$5.00)  全体: $0.5692(¥85) / 3記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=184 out=634 → $0.0027  (kw_research:飛騨高山 まつりの森 犬連れ)
+[api_guard] 本日の使用量: $0.4070 / ¥61 (884回呼び出し)
+[article_generator] サジェスト: 飛騨高山 まつりの森 犬・飛騨高山 まつりの森 ペット・飛騨高山 まつりの森 営業時間...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.4070 / 1時間: $0.2191  (上限 日次$10.00 / 時間$5.00)  全体: $0.5719(¥86) / 3記事
+[api_guard] 記録: claude-sonnet-4-6 in=5914 out=9846 → $0.1654  (article:飛騨高山 まつりの森 犬連れ)
+[api_guard] 本日の使用量: $0.5724 / ¥85 (885回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of dog, torii gate, festival lante
+[imagefx] タイトル(英): Dogs Welcome Hida Takayama Festival
+[article_generator] 完了: 「飛騨高山まつりの森は犬連れOK？ペット同伴ルールと楽しみ方を完全ガイド」 カテゴリ: 未設定(-) タグ: ['飛騨高山観光', '犬連れ旅行', 'ペット同伴', '岐阜県観光', 'まつりの森']
+2026-05-16 05:32:35 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-16 05:32:35 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「【Googleマップ】飛騨高山 カフェ」(ID:226)
+[api_guard] ✅ 本日: $0.5724 / 1時間: $0.3845  (上限 日次$10.00 / 時間$5.00)  全体: $0.7374(¥111) / 4記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=389 out=34 → $0.0004  (maps:飛騨高山 まつりの森 犬連れ)
+[api_guard] 本日の使用量: $0.5729 / ¥85 (886回呼び出し)
+[maps_embedder] ✅ 地図挿入: mode=place / query=飛騨高山まつりの森 高山市
+2026-05-16 05:32:37 [INFO] [generate] 完了: 「飛騨高山まつりの森は犬連れOK？ペット同伴ルールと楽しみ方を完全ガイド」
+2026-05-16 05:32:37 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 72件
+[category_selector] 「飛騨高山 まつりの森 犬連れ」→ マッチなし、フォールバック: 古い町並み(21)
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#飛騨高山): hida-takayama-garyubashi-sakura-best-season-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 飛騨高山まつりの森の犬連れ・ペット同伴ルールを知っておこうのイメージ画像
+[wordpress] H2画像[2] ライブラリ選択 (#飛騨高山): hida-takayama-onsen-yado-recommended-eyecatch.jpg
+[wordpress] H2画像[2] ライブラリALT更新: 飛騨高山まつりの森の基本情報｜料金・営業時間・アクセス・駐車場のイメージ画像
+[wordpress] H2画像[3] ライブラリ選択 (#飛騨高山): hida-takayama-asaichi-guide-eyecatch.jpg
+[wordpress] H2画像[3] ライブラリALT更新: 犬連れで飛騨高山観光をもっと楽しむ周辺スポットとプランニング術のイメージ画像
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 29件
+[internal_linker] 同カテゴリー: 4件選定（ルールベース）
+[internal_linker] 同親KW「飛騨高山」: 4件選定（ルールベース）
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['飛騨高山 古い町並み散策の完全ガイド｜モデルコース・グルメ・', '飛騨の路地をのんびり散策！古い町並みを歩くおすすめコース完全', '飛騨高山の変わらない風景スポット7選｜江戸時代の古い町並みを', '高山の冬写真スポット9選！静かな雪景色と古い町並みを早朝に撮', '飛騨高山朝市の楽しみ方完全ガイド｜時間・グルメ・お土産まで徹', '飛騨高山・臥龍桜の見頃はいつ？2024年春の開花情報とアクセ', '高山の赤い橋の名前と由来を簡単に解説！飛騨高山を代表する観光', '飛騨高山の温泉宿おすすめ9選！露天風呂・食事・カップル向けま']
+[wordpress] タグ設定: ['飛騨高山観光', '犬連れ旅行', 'ペット同伴', '岐阜県観光', 'まつりの森']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 307) → https://hida-no-omoide.com/wp-admin/post.php?post=307&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of dog, torii gate, festival lantern, calendar, checkmark, and stars in soft pink, mint, and cream pastel tones with minimal line details.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Dogs Welcome Hida Takayama Festival" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行72 「飛騨高山 まつりの森 犬連れ」→ 投稿済み (2026/05/16, ID:307) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「飛騨高山まつりの森は犬連れOK？ペット同伴ルールと楽しみ方を」
+2026-05-16 05:32:45 [INFO] [post] WP投稿完了: ID=307 → https://hida-no-omoide.com/wp-admin/post.php?post=307&action=edit
+2026-05-16 05:32:45 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「飛騨高山まつりの森は犬連れOK？ペット同伴ルールと楽しみ方を完全ガイド」
+2026-05-16 05:32:45 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-16 05:32:45 [INFO] 
+============================================================
+2026-05-16 05:32:45 [INFO] 【全体サマリー】
+2026-05-16 05:32:45 [INFO]   ブログ数  : 1件
+2026-05-16 05:32:45 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-16 05:32:45 [INFO]   所要時間  : 162.2秒
+2026-05-16 05:32:45 [INFO]   ✅ [hida-no-omoide] 飛騨高山 まつりの森 犬連れ → 飛騨高山まつりの森は犬連れOK？ペット同伴ルールと楽しみ方を完全ガイド
+2026-05-16 05:32:45 [INFO]        https://hida-no-omoide.com/wp-admin/post.php?post=307&action=edit
+2026-05-16 05:32:45 [INFO] ============================================================
+===== [HIDA-NO-OMOIDE] 記事生成終了: 2026-05-16 05:32:46 / exit=0 =====
