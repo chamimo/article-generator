@@ -65,3 +65,1518 @@
 2026-05-16 03:00:30 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
 2026-05-16 03:00:30 [INFO]   所要時間  : 26.1秒
 2026-05-16 03:00:30 [INFO] ============================================================
+2026-05-16 04:20:03 [INFO] ============================================================
+2026-05-16 04:20:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 04:20:03 [INFO] ============================================================
+2026-05-16 04:20:03 [INFO] 対象ブログ: ['hapipo8']
+2026-05-16 04:20:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 04:20:05 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-16 04:20:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 04:20:05 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-05-16 04:20:05 [INFO]   fact_check       : True
+2026-05-16 04:20:05 [INFO]   article_type_mix : True
+2026-05-16 04:20:05 [INFO]   stop_words       : ['2026']
+2026-05-16 04:20:05 [INFO]   article_count    : 1  dry_run: False
+2026-05-16 04:20:07 [INFO] [hapipo8] アフィリ案件: 50件（スプレッドシート）
+2026-05-16 04:20:07 [INFO] [hapipo8]   [S] 福ちゃん → https://hapipo8.com/fukuchan
+2026-05-16 04:20:07 [INFO] [hapipo8]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori
+2026-05-16 04:20:07 [INFO] [hapipo8]   [S] フクウロ → https://hapipo8.com/fukuuro
+2026-05-16 04:20:07 [INFO] [hapipo8]   [S] メディカルフードサービス → https://hapipo8.com/medical_food
+2026-05-16 04:20:07 [INFO] [hapipo8]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-05-16 04:20:07 [INFO] [hapipo8]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman
+2026-05-16 04:20:07 [INFO] [hapipo8]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] トラベル・スタンダード・ジャパン → https://px.a8.net/svt/ejp?a8mat=4B1THV+17H122+5LKE+5ZU29
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ORBIS AMBER(オルビス アンバー) → https://px.a8.net/svt/ejp?a8mat=4B1THX+DDO2AI+1USQ+4ASX02
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] トリア → https://hapipo8.com/tria
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] nosh - ナッシュ → https://hapipo8.com/nosh
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] 快眠タイムズストア → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DRYGT6+4UHE+TRVYQ
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] NELL マットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6M5RVE+4KD8+5ZMCI
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] 咲夜レアルマットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6LKC9M+4MRW+61Z81
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] オーケンウォーター → https://px.a8.net/svt/ejp?a8mat=4B1THX+CRN0WQ+1LOO+6NMJL
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] every frecious（エブリィフレシャス） → https://px.a8.net/svt/ejp?a8mat=4B1THX+CS8GII+2B8Y+15OK2A
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] リゾバ → https://hapipo8.com/rizoba
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ダイブ → https://hapipo8.com/dive
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] 工場求人ワールド → https://px.a8.net/svt/ejp?a8mat=4B1O1T+EGYV5U+5S9S+5YJRM
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ソフトバンク光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KARLU+3HKU+25FF81
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] BIGLOBE WiMAX +5G → https://px.a8.net/svt/ejp?a8mat=4B1THS+2TTMYY+B4+2BDBUB
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] フレッツ光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KW4WA+348K+1TJE9U
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] AI英会話アプリ【スピーク】 → https://hapipo8.com/speak
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] もぐワン ペットフード → https://hapipo8.com/moguwan
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] DMM 生成AI CAMP → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ポニークリーニング → https://px.a8.net/svt/ejp?a8mat=4B1THV+5QLST6+4N08+5Z6WY
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] 体験型カタログギフト【EXETIME】 → https://hapipo8.com/exetime
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] GMOとくとくBB → https://px.a8.net/svt/ejp?a8mat=4B1THS+2UF2KQ+50+3H48S2
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] Amazon Prime Video → https://amzn.to/4tbKPVa
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] Pollet → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] カレントボディ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DFGD3U+54TM+5YJRM
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] アプリ接客キャスト → https://px.a8.net/svt/ejp?a8mat=4B1O1T+FKUWOY+3P1G+NTRMQ
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ヴィーナスウォーカー → https://px.a8.net/svt/ejp?a8mat=4B1THV+6632JE+58KC+5YRHE
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] WEBCOACH → https://px.a8.net/svt/ejp?a8mat=4B1V1W+DW4O7U+5EVK+5YZ75
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ポケットリサーチ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DUXMU2+58KC+BWVTE
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ラボル カード払い → https://px.a8.net/svt/ejp?a8mat=4B1THS+3TJN9M+40JM+1NJZN5
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] クロスワンルーム → https://px.a8.net/svt/ejp?a8mat=4B1THX+DPKQE2+4EZ2+BYLJL
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] Mr.シリーズ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CLOOUY+1USQ+2Z8T76
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] IBJ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CF4X7E+FOG+4MPSTE
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ユアマイスター → https://px.a8.net/svt/ejp?a8mat=4B1THX+BZNNH6+4HQS+5YJRM
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] TOSSY → https://px.a8.net/svt/ejp?a8mat=4B1THS+2V0I6I+1WP2+1HLNLE
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ABLENET VPS → https://px.a8.net/svt/ejp?a8mat=4B1THS+2VLXSA+4NIK+5Z6WX
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] BIGLOBE光 → https://px.a8.net/svt/ejp?a8mat=4B3LMR+4JQL96+3SPO+7LW1F7
+2026-05-16 04:20:07 [INFO] [hapipo8]   [B] 食楽膳 → https://hapipo8.com/shokurakuzen
+2026-05-16 04:20:07 [INFO] [hapipo8]   [?] 楽器買取 福ちゃん → https://hapipo8.com/gakki-fukucyan
+2026-05-16 04:20:07 [INFO] [hapipo8]   [?] ニーゴ・リユース → https://hapipo8.com/25reuse
+2026-05-16 04:20:10 [INFO] [wp] 記事取得: 計165件 (publish=165)
+2026-05-16 04:20:10 [INFO] [hapipo8] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.4, 'monetize': 0.1})
+2026-05-16 04:20:11 [DEBUG] [fetch] シート「絞り込みKW」: 604行 / ヘッダー: ['キーワード', '親KW', '訴求案件', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③']
+2026-05-16 04:20:11 [INFO] [fetch] サブKW紐付け: 165件 → 50記事に統合
+2026-05-16 04:20:11 [INFO] [fetch] [キーワード] メインKW: 19件（vol≥30 or N/A）  サブKW除外: 165件（統合対象）  投稿済みスキップ: 130件  テーマ外除外: 285件  aim内訳: [now:1, aim:61, claude:25, add:217]
+2026-05-16 04:20:11 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-16 04:20:11 [INFO] [dup_check] 優先候補: 19件 {'now': 1, 'aim': 1, 'add': 17} を先頭評価
+2026-05-16 04:20:11 [INFO] [dup_check] 除外: 「シェフの無添つくりおき 口コミ 評判」 → カニバリ(2/3語重複 ['口コミ', '評判']): 「もぐワンの口コミ・評判を徹底検証！成分・価格・食いつきのリアルな声」
+2026-05-16 04:20:11 [DEBUG] [dup_check] OK: 「宅食 一人暮らし 女性 安い」
+2026-05-16 04:20:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=1件 (pool=19件, 要求=1件)
+2026-05-16 04:20:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-16 04:20:11 [INFO] [select]   1. 「宅食 一人暮らし 女性 安い」 vol=0 seo=N/A comp=N/A
+2026-05-16 04:20:11 [INFO] [hapipo8] LONGTAIL選定: 1件
+2026-05-16 04:20:11 [INFO] [hapipo8] 候補: 19件 / 選定: 1件 / 生成予定: 1件
+2026-05-16 04:20:11 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-16 04:20:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 04:20:11 [INFO] [hapipo8] [1/1] [LONGTAIL] 「宅食 一人暮らし 女性 安い」 vol=0 ★AIM
+2026-05-16 04:20:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 04:20:11 [INFO] [generate] 生成開始: 「宅食 一人暮らし 女性 安い」(vol:0) fact_check=True target_length=5,226字  誘導リンク:0件
+2026-05-16 04:22:51 [INFO] [generate] パターンCTA挿入（H3末尾）: 5件
+2026-05-16 04:22:51 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「nosh - ナッシュ」(ID:3979)
+2026-05-16 04:22:53 [INFO] [link_check] 死リンク除去: 1件 / チェック: 5件
+2026-05-16 04:22:53 [DEBUG] [link_check]   削除: https://hapipo8.com/nosh
+2026-05-16 04:22:53 [INFO] [generate] 完了: 「宅食おすすめ5選！一人暮らし女性でも安く栄養バランスが取れる選び方」
+2026-05-16 04:22:53 [INFO] [post] 投稿方式: publish
+2026-05-16 04:23:07 [INFO] [post] WP投稿完了: ID=4241 → https://hapipo8.com/wp-admin/post.php?post=4241&action=edit
+2026-05-16 04:23:07 [INFO] [hapipo8] [1/1] ✅ 完了: 「宅食おすすめ5選！一人暮らし女性でも安く栄養バランスが取れる選び方」
+2026-05-16 04:23:07 [INFO] [hapipo8] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-16 04:23:07 [INFO] 
+============================================================
+2026-05-16 04:23:07 [INFO] 【全体サマリー】
+2026-05-16 04:23:07 [INFO]   ブログ数  : 1件
+2026-05-16 04:23:07 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-16 04:23:07 [INFO]   所要時間  : 183.9秒
+2026-05-16 04:23:07 [INFO]   ✅ [hapipo8] 宅食 一人暮らし 女性 安い → 宅食おすすめ5選！一人暮らし女性でも安く栄養バランスが取れる選び方
+2026-05-16 04:23:07 [INFO]        https://hapipo8.com/wp-admin/post.php?post=4241&action=edit
+2026-05-16 04:23:07 [INFO] ============================================================
+2026-05-16 05:00:03 [INFO] ============================================================
+2026-05-16 05:00:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 05:00:03 [INFO] ============================================================
+2026-05-16 05:00:03 [INFO] 対象ブログ: ['hataraku']
+2026-05-16 05:00:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 05:00:05 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-16 05:00:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 05:00:05 [INFO]   genre            : 転職・副業・キャリア
+2026-05-16 05:00:05 [INFO]   fact_check       : True
+2026-05-16 05:00:05 [INFO]   article_type_mix : True
+2026-05-16 05:00:05 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-16 05:00:05 [INFO]   article_count    : 1  dry_run: False
+2026-05-16 05:00:07 [INFO] [hataraku] アフィリ案件: 21件（スプレッドシート）
+2026-05-16 05:00:07 [INFO] [hataraku]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive
+2026-05-16 05:00:07 [INFO] [hataraku]   [S] ラボル → https://hataraku-navi.com/labol
+2026-05-16 05:00:07 [INFO] [hataraku]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it
+2026-05-16 05:00:07 [INFO] [hataraku]   [S] TechGo → https://hataraku-navi.com/techgo
+2026-05-16 05:00:07 [INFO] [hataraku]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi
+2026-05-16 05:00:07 [INFO] [hataraku]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy
+2026-05-16 05:00:07 [INFO] [hataraku]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen
+2026-05-16 05:00:07 [INFO] [hataraku]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo
+2026-05-16 05:00:07 [INFO] [hataraku]   [S] 保育専門求人サイト ほいく畑 → https://hataraku-navi.com/hoikubatake
+2026-05-16 05:00:07 [INFO] [hataraku]   [A] FREENANCE → https://hataraku-navi.com/freenance
+2026-05-16 05:00:07 [INFO] [hataraku]   [A] Midworks → https://hataraku-navi.com/midworks
+2026-05-16 05:00:07 [INFO] [hataraku]   [A] マスメディアン → https://hataraku-navi.com/massmedia
+2026-05-16 05:00:07 [INFO] [hataraku]   [A] atGP → https://hataraku-navi.com/atgp
+2026-05-16 05:00:07 [INFO] [hataraku]   [A] atGPジョブトレ IT・Web → https://hataraku-navi.com/atgp_job
+2026-05-16 05:00:07 [INFO] [hataraku]   [A] リゾートバイトダイブ → https://hataraku-navi.com/dive
+2026-05-16 05:00:07 [INFO] [hataraku]   [A] 日本マンパワー → https://hataraku-navi.com/manpower
+2026-05-16 05:00:07 [INFO] [hataraku]   [A] クラウドワークス → https://hataraku-navi.com/crowdworks
+2026-05-16 05:00:07 [INFO] [hataraku]   [?] 保育エイド → https://hataraku-navi.com/hoiku-aid
+2026-05-16 05:00:07 [INFO] [hataraku]   [?] 保育バランス → https://hataraku-navi.com/hoiku-balance
+2026-05-16 05:00:07 [INFO] [hataraku]   [?] 保育メトロ → https://hataraku-navi.com/hoiku-metro
+2026-05-16 05:00:07 [INFO] [hataraku]   [?] 20代の転職相談所 → https://hataraku-navi.com/20tensyoku
+2026-05-16 05:00:08 [INFO] [wp] 記事取得: 計50件 (draft=1 / publish=49)
+2026-05-16 05:00:08 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-16 05:00:10 [DEBUG] [fetch] シート「絞り込みKW」: 8379行 / ヘッダー: ['キーワード', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考URL（WEB）', '参考URL（YouTube）', '参考WEB①', '参考WEB②', '参考WEB③']
+2026-05-16 05:00:10 [INFO] [fetch] サブKW紐付け: 6968件 → 187記事に統合
+2026-05-16 05:00:10 [INFO] [fetch] [キーワード] メインKW: 176件（vol≥30 or N/A）  サブKW除外: 6968件（統合対象）  投稿済みスキップ: 890件  テーマ外除外: 198件  aim内訳: [now:1, claude:235, aim:131, add:7]
+2026-05-16 05:00:10 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-16 05:00:10 [INFO] [dup_check] 優先候補: 176件 {'now': 1, 'claude': 102, 'aim': 67, 'add': 6} を先頭評価
+2026-05-16 05:00:10 [DEBUG] [dup_check] OK: 「夏 バイト おすすめ」
+2026-05-16 05:00:10 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=176件, 要求=1件)
+2026-05-16 05:00:10 [INFO] [select] 1件選定 (要求=1件)
+2026-05-16 05:00:10 [INFO] [select]   1. 「夏 バイト おすすめ」 vol=0 seo=N/A comp=N/A
+2026-05-16 05:00:10 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-16 05:00:10 [INFO] [hataraku] 候補: 176件 / 選定: 1件 / 生成予定: 1件
+2026-05-16 05:00:10 [INFO] [api_guard] 本日の使用量: $0.1879 / ¥28 (3回呼び出し)
+2026-05-16 05:00:10 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 05:00:10 [INFO] [hataraku] [1/1] [LONGTAIL] 「夏 バイト おすすめ」 vol=0 ★NOW
+2026-05-16 05:00:10 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 05:00:10 [INFO] [generate] 生成開始: 「夏 バイト おすすめ」(vol:0) fact_check=True target_length=5,474字  誘導リンク:0件
+2026-05-16 05:03:56 [INFO] [generate] パターンCTA挿入（H3末尾）: 3件
+2026-05-16 05:03:56 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「リゾートバイトダイブ」(ID:571)
+2026-05-16 05:03:57 [INFO] [generate] 完了: 「夏バイトおすすめ15選！大学生・高校生が稼げる職種を徹底解説」
+2026-05-16 05:03:57 [INFO] [post] 投稿方式: draft
+2026-05-16 05:04:41 [INFO] [post] WP投稿完了: ID=677 → https://hataraku-navi.com/wp-admin/post.php?post=677&action=edit
+2026-05-16 05:04:41 [INFO] [hataraku] [1/1] ✅ 完了: 「夏バイトおすすめ15選！大学生・高校生が稼げる職種を徹底解説」
+2026-05-16 05:04:41 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-16 05:04:41 [INFO] 
+============================================================
+2026-05-16 05:04:41 [INFO] 【全体サマリー】
+2026-05-16 05:04:41 [INFO]   ブログ数  : 1件
+2026-05-16 05:04:41 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-16 05:04:41 [INFO]   所要時間  : 277.8秒
+2026-05-16 05:04:41 [INFO]   ✅ [hataraku] 夏 バイト おすすめ → 夏バイトおすすめ15選！大学生・高校生が稼げる職種を徹底解説
+2026-05-16 05:04:41 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=677&action=edit
+2026-05-16 05:04:41 [INFO] ============================================================
+2026-05-16 05:30:03 [INFO] ============================================================
+2026-05-16 05:30:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 05:30:03 [INFO] ============================================================
+2026-05-16 05:30:03 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-16 05:30:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 05:30:05 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-16 05:30:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 05:30:05 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-16 05:30:05 [INFO]   fact_check       : True
+2026-05-16 05:30:05 [INFO]   article_type_mix : True
+2026-05-16 05:30:05 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-16 05:30:05 [INFO]   article_count    : 1  dry_run: False
+2026-05-16 05:30:08 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-16 05:30:08 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-16 05:30:08 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-16 05:30:08 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-16 05:30:12 [INFO] [wp] 記事取得: 計31件 (draft=2 / publish=29)
+2026-05-16 05:30:12 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-16 05:30:13 [DEBUG] [fetch] シート「絞り込みKW」: 202行 / ヘッダー: ['キーワード', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③']
+2026-05-16 05:30:13 [INFO] [fetch] サブKW紐付け: 58件 → 9記事に統合
+2026-05-16 05:30:13 [INFO] [fetch] [キーワード] メインKW: 34件（vol≥30 or N/A）  サブKW除外: 58件（統合対象）  投稿済みスキップ: 48件  テーマ外除外: 13件  aim内訳: [now:1, aim:20, claude:21, add:5]
+2026-05-16 05:30:13 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-16 05:30:13 [INFO] [dup_check] 優先候補: 34件 {'now': 1, 'aim': 12, 'claude': 16, 'add': 5} を先頭評価
+2026-05-16 05:30:13 [INFO] [dup_check] 除外: 「赤かぶ漬け お土産 日持ち」 → カニバリ(2/3語重複 ['お土産', '日持ち']): 「朴葉味噌のお土産は日持ちする？賞味期限・保存方法を徹底解説」
+2026-05-16 05:30:13 [INFO] [dup_check] 除外: 「高山 雪 朝 写真 撮れる場所」 → カニバリ(2/3語重複 ['高山', '写真']): 「高山の冬写真スポット9選！静かな雪景色と古い町並みを早朝に撮る」
+2026-05-16 05:30:13 [INFO] [dup_check] 除外: 「飛騨 山に囲まれた景色 見どころ」 → カニバリ(2/3語重複 ['飛騨', '見どころ']): 「飛騨古川 昔の町並み見どころ完全ガイド｜散策・カフェ・朝市まで」
+2026-05-16 05:30:13 [INFO] [dup_check] 除外: 「高山 観光 徒歩で回れる範囲」 → カニバリ(2/3語重複 ['高山', '観光']): 「高山の赤い橋の名前と由来を簡単に解説！飛騨高山を代表する観光スポット」
+2026-05-16 05:30:13 [DEBUG] [dup_check] OK: 「飛騨高山 まつりの森 犬連れ」
+2026-05-16 05:30:13 [INFO] [dup_check] 完了: 選定=1件 / 除外=4件 (pool=34件, 要求=1件)
+2026-05-16 05:30:13 [INFO] [select] 1件選定 (要求=1件)
+2026-05-16 05:30:13 [INFO] [select]   1. 「飛騨高山 まつりの森 犬連れ」 vol=0 seo=N/A comp=N/A
+2026-05-16 05:30:13 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-16 05:30:13 [INFO] [hida-no-omoide] 候補: 34件 / 選定: 1件 / 生成予定: 1件
+2026-05-16 05:30:13 [INFO] [api_guard] 本日の使用量: $0.4038 / ¥61 (6回呼び出し)
+2026-05-16 05:30:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 05:30:13 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「飛騨高山 まつりの森 犬連れ」 vol=0 ★AIM
+2026-05-16 05:30:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 05:30:13 [INFO] [generate] 生成開始: 「飛騨高山 まつりの森 犬連れ」(vol:0) fact_check=True target_length=5,544字  サブKW:2件  誘導リンク:0件
+2026-05-16 05:32:35 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-16 05:32:35 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「【Googleマップ】飛騨高山 カフェ」(ID:226)
+2026-05-16 05:32:37 [INFO] [generate] 完了: 「飛騨高山まつりの森は犬連れOK？ペット同伴ルールと楽しみ方を完全ガイド」
+2026-05-16 05:32:37 [INFO] [post] 投稿方式: draft
+2026-05-16 05:32:45 [INFO] [post] WP投稿完了: ID=307 → https://hida-no-omoide.com/wp-admin/post.php?post=307&action=edit
+2026-05-16 05:32:45 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「飛騨高山まつりの森は犬連れOK？ペット同伴ルールと楽しみ方を完全ガイド」
+2026-05-16 05:32:45 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-16 05:32:45 [INFO] 
+============================================================
+2026-05-16 05:32:45 [INFO] 【全体サマリー】
+2026-05-16 05:32:45 [INFO]   ブログ数  : 1件
+2026-05-16 05:32:45 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-16 05:32:45 [INFO]   所要時間  : 162.2秒
+2026-05-16 05:32:45 [INFO]   ✅ [hida-no-omoide] 飛騨高山 まつりの森 犬連れ → 飛騨高山まつりの森は犬連れOK？ペット同伴ルールと楽しみ方を完全ガイド
+2026-05-16 05:32:45 [INFO]        https://hida-no-omoide.com/wp-admin/post.php?post=307&action=edit
+2026-05-16 05:32:45 [INFO] ============================================================
+2026-05-16 06:00:03 [INFO] ============================================================
+2026-05-16 06:00:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 06:00:03 [INFO] ============================================================
+2026-05-16 06:00:03 [INFO] 対象ブログ: ['web-study1']
+2026-05-16 06:00:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 06:00:06 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-05-16 06:00:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 06:00:06 [INFO]   genre            : オンライン学習・プログラミング・資格・スキルアップ
+2026-05-16 06:00:06 [INFO]   fact_check       : True
+2026-05-16 06:00:06 [INFO]   article_type_mix : True
+2026-05-16 06:00:06 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-16 06:00:06 [INFO]   article_count    : 1  dry_run: False
+2026-05-16 06:00:08 [INFO] [web-study1] アフィリ案件: 27件（スプレッドシート）
+2026-05-16 06:00:08 [INFO] [web-study1]   [S] 無学年式オンライン教材 のすらら → https://web-study1.com/surara
+2026-05-16 06:00:08 [INFO] [web-study1]   [S] ヒューマンアカデミー → https://web-study1.com/haa.athuman
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] こどもチャレンジ → https://web-study1.com/shimajiro
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] こどもチャレンジ baby → https://web-study1.com/shimajiro-baby
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] Filmora → https://web-study1.com/filmora
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] スマイルゼミ → https://web-study1.com/smile-zemi
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] 進研ゼミ　高校講座 → https://web-study1.com/sinkenzemi-koukou
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] 進研ゼミ　中学講座 → https://web-study1.com/sinkenzem-cyugaku
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] 進研ゼミ　小学講座 → https://web-study1.com/shinkenzemi-syougakukouza
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] スタディサプリ中学講座 → https://web-study1.com/studysapuri-chugaku
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] Z会 → https://web-study1.com/zkai
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] スタディサプリ高校・大学 受験講座 → https://web-study1.com/studysapur-koukou
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP  学習コース_大学生向け就活対策コース → https://web-study1.com/dmm_webcamp_shukatu
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] Tech Kids School → https://web-study1.com/tech-kids
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] 【RISU算数】(19-1031) → https://web-study1.com/risu
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] スタディサプリENGLISH（新日常英会話コース） → https://web-study1.com/eigosapuri
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] スタディサプリEnglish　ビジネス英語コース → https://web-study1.com/eigosapuri
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP プログラミングコース → https://web-study1.com/web-camp_programing
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] freenance → https://web-study1.com/freenance
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] Udemy → https://web-study1.com/udemy
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP WEBデザインコース → https://web-study1.com/dmm_webcamp
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP Pythonコース → https://web-study1.com/dmm_webcamp_python
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] AI英会話アプリ【スピーク】 → https://web-study1.com/speak
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] スタディサプリ小学講座 → https://web-study1.com/sutasapu-syougaku
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] スタディサプリENGLISH（TOEIC対策コース） → https://web-study1.com/human-english-toeic
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] アンズテック → https://web-study1.com/anzutech
+2026-05-16 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP 学習コース → https://web-study1.com/dmm-webcamp-gakusyu
+2026-05-16 06:00:10 [INFO] [wp] 記事取得: 計35件 (draft=1 / publish=34)
+2026-05-16 06:00:10 [INFO] [web-study1] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.2, 'monetize': 0.3})
+2026-05-16 06:00:12 [DEBUG] [fetch] シート「絞り込みKW」: 268行 / ヘッダー: ['キーワード', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '体験談']
+2026-05-16 06:00:12 [INFO] [fetch] サブKW紐付け: 78件 → 29記事に統合
+2026-05-16 06:00:12 [INFO] [fetch] [キーワード] メインKW: 13件（vol≥30 or N/A）  サブKW除外: 78件（統合対象）  投稿済みスキップ: 46件  テーマ外除外: 130件  aim内訳: [claude:1, aim:130, add:12]
+2026-05-16 06:00:12 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-16 06:00:12 [INFO] [dup_check] 優先候補: 13件 {'claude': 1, 'aim': 8, 'add': 4} を先頭評価
+2026-05-16 06:00:12 [INFO] [dup_check] 除外: 「Web制作 学習 独学」 → カニバリ(2/3語重複 ['学習', '独学']): 「プログラミング独学は無理？挫折しない学習ロードマップと成功のコツを解説」
+2026-05-16 06:00:12 [INFO] [dup_check] 除外: 「中学生 通信教育 おすすめ」 → カニバリ(2/3語重複 ['通信教育', 'おすすめ']): 「不登校の子に通信教育は有効？すらら体験談とおすすめ教材を徹底解説」
+2026-05-16 06:00:12 [INFO] [dup_check] 除外: 「高校生 通信教育 おすすめ」 → カニバリ(2/3語重複 ['通信教育', 'おすすめ']): 「不登校の子に通信教育は有効？すらら体験談とおすすめ教材を徹底解説」
+2026-05-16 06:00:12 [INFO] [dup_check] 除外: 「家庭教師 通信教育 どっちがいい」 → カニバリ(2/3語重複 ['通信教育', 'どっちがいい']): 「塾と通信教育どっちがいい？小学生に合う学習方法の選び方を徹底解説」
+2026-05-16 06:00:12 [DEBUG] [dup_check] OK: 「通信教育 途中 解約 損？」
+2026-05-16 06:00:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=4件 (pool=13件, 要求=1件)
+2026-05-16 06:00:12 [INFO] [select] 1件選定 (要求=1件)
+2026-05-16 06:00:12 [INFO] [select]   1. 「通信教育 途中 解約 損？」 vol=0 seo=N/A comp=N/A
+2026-05-16 06:00:12 [INFO] [web-study1] LONGTAIL選定: 1件
+2026-05-16 06:00:12 [INFO] [web-study1] 候補: 13件 / 選定: 1件 / 生成予定: 1件
+2026-05-16 06:00:12 [INFO] [api_guard] 本日の使用量: $0.5729 / ¥86 (10回呼び出し)
+2026-05-16 06:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 06:00:12 [INFO] [web-study1] [1/1] [LONGTAIL] 「通信教育 途中 解約 損？」 vol=0 ★AIM
+2026-05-16 06:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 06:00:12 [INFO] [generate] 生成開始: 「通信教育 途中 解約 損？」(vol:0) fact_check=True target_length=7,105字  誘導リンク:0件
+2026-05-16 06:02:46 [INFO] [generate] パターンCTA挿入（H3末尾）: 4件
+2026-05-16 06:02:46 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「DMM WEBCAMP  学習コース_大学生向け就活対策コース」(ID:151)
+2026-05-16 06:02:47 [INFO] [link_check] 死リンク除去: 1件 / チェック: 5件
+2026-05-16 06:02:47 [DEBUG] [link_check]   削除: https://web-study1.com/studysapuri-chugaku
+2026-05-16 06:02:47 [INFO] [generate] 完了: 「通信教育を途中解約すると損？返金額・違約金・手続きを徹底解説」
+2026-05-16 06:02:47 [INFO] [post] 投稿方式: draft
+2026-05-16 06:02:55 [INFO] [post] WP投稿完了: ID=513 → https://web-study1.com/wp-admin/post.php?post=513&action=edit
+2026-05-16 06:02:55 [INFO] [web-study1] [1/1] ✅ 完了: 「通信教育を途中解約すると損？返金額・違約金・手続きを徹底解説」
+2026-05-16 06:02:55 [INFO] [web-study1] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-16 06:02:55 [INFO] 
+============================================================
+2026-05-16 06:02:55 [INFO] 【全体サマリー】
+2026-05-16 06:02:55 [INFO]   ブログ数  : 1件
+2026-05-16 06:02:55 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-16 06:02:55 [INFO]   所要時間  : 171.2秒
+2026-05-16 06:02:55 [INFO]   ✅ [web-study1] 通信教育 途中 解約 損？ → 通信教育を途中解約すると損？返金額・違約金・手続きを徹底解説
+2026-05-16 06:02:55 [INFO]        https://web-study1.com/wp-admin/post.php?post=513&action=edit
+2026-05-16 06:02:55 [INFO] ============================================================
+2026-05-16 11:57:15 [INFO] ============================================================
+2026-05-16 11:57:15 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 11:57:15 [INFO] ============================================================
+2026-05-16 11:57:15 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 11:57:17 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 11:57:17 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 11:57:17 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 11:57:17 [INFO] [kanikabari] 開始: AIVice / シート「キーワード」
+2026-05-16 11:57:19 [INFO] [kanikabari] 未判定AIMキーワード: 70件
+2026-05-16 11:57:19 [INFO] [kanikabari] クラスタリング結果: 2クラスター
+2026-05-16 11:57:19 [INFO]   親KW: 「claude code skills 使い方」[base='claude code']  サブKW: 「claude code skills 一覧」(ベースKW一致('claude code'))  「claude code skills おすすめ」(ベースKW一致('claude code'))  「claude code skillsとは」(ベースKW一致('claude code'))  「claude code skills とは」(ベースKW一致('claude code'))  「claude code skills と は」(ベースKW一致('claude code'))  「claude code skills 作り方」(ベースKW一致('claude code'))  「claude code skills 公式」(ベースKW一致('claude code'))  「claude code skills ベストプラクティス」(ベースKW一致('claude code'))  「claude code skills ベスト プラクティス」(ベースKW一致('claude code'))  「claude code skills インストール」(ベースKW一致('claude code'))  「claude code skills 作成」(ベースKW一致('claude code'))  「claudecode skills 公式」(Jaccard=0.68)  「claude skills 一覧」(Jaccard=0.62)  「claude code skills インストール」(ベースKW一致('claude code'))  [要確認] 「Codex vs Claude Code」(ブランド競合('claude'≠'codex') Jaccard=0.43)  「Claude Code vs Cursor」(ベースKW一致('claude code'))  [要確認] 「Claude SEO vs ChatGPT」(広ジャンル('claude'系) ベースKW相違 Jaccard=0.30)  「Claude CodeとCodexどっちがいい？」(ベースKW部分一致('claude code'↔'claude codeとcodexどっちがいい?'))  「claude code skills 使い方 vscode」(ベースKW一致('claude code'))  「claude code agent skills 作り方」(ベースKW一致('claude code'))  「claude code skills 公式 github」(ベースKW一致('claude code'))  「claude code skills 20選」(ベースKW一致('claude code'))  「claude code skills 置き場所」(ベースKW一致('claude code'))  「claude code skills 完全ガイド」(ベースKW一致('claude code'))  「claude code skills 完全活用ガイド」(ベースKW一致('claude code'))  「claude code 最 佳 skills」(ベースKW一致('claude code'))  「claude code skills 公開」(ベースKW一致('claude code'))  「claude code skills 削除」(ベースKW一致('claude code'))  「claude code skills 初心者」(ベースKW一致('claude code'))  「claude code skills 集」(ベースKW一致('claude code'))  「claude code skills 資料 作成」(ベースKW一致('claude code'))  「claude code skills 仕組み」(ベースKW一致('claude code'))  「claude code skills スライド作成」(ベースKW一致('claude code'))  「claude code skills 使えない」(ベースKW一致('claude code'))  「claude code skills 登録」(ベースKW一致('claude code'))  「claude code skills 統合」(ベースKW一致('claude code'))  「claude code skills 人気」(ベースKW一致('claude code'))  「claude code skills 入門ガイド」(ベースKW一致('claude code'))  「claude code skills 認識されない」(ベースKW一致('claude code'))  「claude code skills の使い方」(ベースKW一致('claude code'))  「claude code skills 配置場所」(ベースKW一致('claude code'))  「claude code skills 非エンジニア」(ベースKW一致('claude code'))  「claude code skills ファイル」(ベースKW一致('claude code'))  「claude code skills フロントマター」(ベースKW一致('claude code'))  「claude code skills 保存場所」(ベースKW一致('claude code'))  「claude code skills 本」(ベースKW一致('claude code'))  「claude code skills 法務」(ベースKW一致('claude code'))  「claude code skills マーケティング」(ベースKW一致('claude code'))  「claude code skills 読み込み」(ベースKW一致('claude code'))  「claude code skills 呼び出し 方」(ベースKW一致('claude code'))  「claude code skills ランキング」(ベースKW一致('claude code'))  「claude code 流程 图 skills」(ベースKW一致('claude code'))  「claude code skills ガイド」(ベースKW一致('claude code'))  「claude code skills グローバル」(ベースKW一致('claude code'))  「claude code skills 実行方法」(ベースKW一致('claude code'))  「claude code skills 自動化」(ベースKW一致('claude code'))  「claude code skills 実践」(ベースKW一致('claude code'))  「claude code skills 常用」(ベースKW一致('claude code'))  「claude code skills 脆弱性」(ベースKW一致('claude code'))  「claude code skills ダウンロード」(ベースKW一致('claude code'))  「claude code skills できること」(ベースKW一致('claude code'))  「claude code skills ドキュメント作成」(ベースKW一致('claude code'))  「claude code skills ドキュメント」(ベースKW一致('claude code'))  「claude code skills 導入方法」(ベースKW一致('claude code'))  「claude code skills 保存 場所」(ベースKW一致('claude code'))  「claude code skills プロンプト」(ベースKW一致('claude code'))  「claude code skills プラグイン」(ベースKW一致('claude code'))  「claude code skills plugin 違い」(ベースKW一致('claude code'))
+2026-05-16 11:57:19 [INFO]   親KW: 「Codexで記事生成してみた」[base='codexで記事生成してみた']  (サブKWなし)
+2026-05-16 11:57:21 [INFO] [wp] 記事取得: 計398件 (draft=1 / publish=397)
+2026-05-16 11:57:21 [INFO] [kanikabari] WP既存記事: 398件取得 (公開=397 / 下書き=1)
+2026-05-16 11:57:22 [INFO] [kanikabari] 書き込み対象: 70件
+2026-05-16 11:57:24 [INFO] [kanikabari] 要確認行の色修復: 56行を薄ブルーに更新
+2026-05-16 11:57:24 [INFO] [kanikabari] 完了: 親KW生成待ち=1件 / シート内サブKW=0件 / WP統合対象=66件 / カニバリスキップ=1件 / 要確認=2件
+2026-05-16 11:57:24 [INFO]   [カニバリスキップ] 「claude code skills 使い方」→ カニバリスキップ / WP「claude code skills 使い方」
+2026-05-16 11:57:24 [INFO]   [サブKW] 「claude code skills 一覧」→ 統合対象 / WP「claude code skills 使い方」
+2026-05-16 11:57:24 [INFO]   [サブKW] 「claude code skills おすすめ」→ 統合対象 / WP「claude code skills 使い方」
+2026-05-16 11:57:24 [INFO]   [要確認] 「Codex vs Claude Code」→ 要確認
+2026-05-16 11:57:24 [INFO]   [要確認] 「Claude SEO vs ChatGPT」→ 要確認
+2026-05-16 11:57:24 [INFO] 
+============================================================
+2026-05-16 11:57:24 [INFO] 【全体サマリー】
+2026-05-16 11:57:24 [INFO]   ブログ数  : 1件
+2026-05-16 11:57:24 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-16 11:57:24 [INFO]   所要時間  : 9.6秒
+2026-05-16 11:57:24 [INFO] ============================================================
+2026-05-16 12:03:42 [INFO] ============================================================
+2026-05-16 12:03:42 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 12:03:42 [INFO] ============================================================
+2026-05-16 12:03:42 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 12:03:44 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 12:03:44 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 12:03:44 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 12:03:44 [INFO] [kanikabari] 開始: AIVice / シート「キーワード」
+2026-05-16 12:03:45 [INFO] [kanikabari] 未判定AIMキーワード: 249件
+2026-05-16 12:03:45 [INFO] [kanikabari] クラスタリング結果: 48クラスター
+2026-05-16 12:03:45 [INFO]   親KW: 「claude code skills 使い方」[base='claude code']  サブKW: 「claude code skills 一覧」(ベースKW一致('claude code'))  「claude code skills おすすめ」(ベースKW一致('claude code'))  「claude code skillsとは」(ベースKW一致('claude code'))  「claude code skills とは」(ベースKW一致('claude code'))  「claude code skills と は」(ベースKW一致('claude code'))  「claude code skills 作り方」(ベースKW一致('claude code'))  「claude code skills 公式」(ベースKW一致('claude code'))  「claude code skills ベストプラクティス」(ベースKW一致('claude code'))  「claude code skills ベスト プラクティス」(ベースKW一致('claude code'))  「claude code skills インストール」(ベースKW一致('claude code'))  「claude code skills 作成」(ベースKW一致('claude code'))  [要確認] 「Claude AI 活用」(広ジャンル('claude'系) ベースKW相違 Jaccard=0.25)  「Claude Code 副業 ブログ」(ベースKW一致('claude code'))  「Claude Code 自動化 何ができる」(ベースKW一致('claude code'))  「Claude Code 使い方 初心者」(ベースKW一致('claude code'))  「Claude Code ブログ生成 やり方」(ベースKW一致('claude code'))  「Claude Code リライト 自動化」(ベースKW一致('claude code'))  「Claude Code ChatGPT 違い わかりやすく」(ベースKW一致('claude code'))  「Claude Code Cursor 比較 どっち」(ベースKW一致('claude code'))  「Claude Code 稼ぐ 方法」(ベースKW一致('claude code'))  「Claude Code API できること」(ベースKW一致('claude code'))  「claudecode skills 使い方」(Jaccard=0.90)  「claudecode skills 公式」(Jaccard=0.68)  「claude skills 一覧」(Jaccard=0.62)  「claude code skills インストール」(ベースKW一致('claude code'))  [要確認] 「Codex vs Claude Code」(ブランド競合('claude'≠'codex') Jaccard=0.43)  「Claude Code vs Cursor」(ベースKW一致('claude code'))  [要確認] 「Claude SEO vs ChatGPT」(広ジャンル('claude'系) ベースKW相違 Jaccard=0.30)  「Claude CodeとCodexどっちがいい？」(ベースKW部分一致('claude code'↔'claude codeとcodexどっちがいい?'))  「claude code skills 使い方 vscode」(ベースKW一致('claude code'))  「claude code agent skills 作り方」(ベースKW一致('claude code'))  「claude code skills 公式 github」(ベースKW一致('claude code'))  「claude code skills 20選」(ベースKW一致('claude code'))  「claude code skills 置き場所」(ベースKW一致('claude code'))  「claude code skills 完全ガイド」(ベースKW一致('claude code'))  「claude code skills 完全活用ガイド」(ベースKW一致('claude code'))  「claude code 最 佳 skills」(ベースKW一致('claude code'))  「claude code skills 公開」(ベースKW一致('claude code'))  「claude code skills 削除」(ベースKW一致('claude code'))  「claude code skills 初心者」(ベースKW一致('claude code'))  「claude code skills 集」(ベースKW一致('claude code'))  「claude code skills 資料 作成」(ベースKW一致('claude code'))  「claude code skills 仕組み」(ベースKW一致('claude code'))  「claude code skills スライド作成」(ベースKW一致('claude code'))  「claude code skills 使えない」(ベースKW一致('claude code'))  「claude code skills 登録」(ベースKW一致('claude code'))  「claude code skills 統合」(ベースKW一致('claude code'))  「claude code skills 人気」(ベースKW一致('claude code'))  「claude code skills 入門ガイド」(ベースKW一致('claude code'))  「claude code skills 認識されない」(ベースKW一致('claude code'))  「claude code skills の使い方」(ベースKW一致('claude code'))  「claude code skills 配置場所」(ベースKW一致('claude code'))  「claude code skills 非エンジニア」(ベースKW一致('claude code'))  「claude code skills ファイル」(ベースKW一致('claude code'))  「claude code skills フロントマター」(ベースKW一致('claude code'))  「claude code skills 保存場所」(ベースKW一致('claude code'))  「claude code skills 本」(ベースKW一致('claude code'))  「claude code skills 法務」(ベースKW一致('claude code'))  「claude code skills マーケティング」(ベースKW一致('claude code'))  「claude code skills 読み込み」(ベースKW一致('claude code'))  「claude code skills 呼び出し 方」(ベースKW一致('claude code'))  「claude code skills ランキング」(ベースKW一致('claude code'))  「claude code 流程 图 skills」(ベースKW一致('claude code'))  「claude code skills ガイド」(ベースKW一致('claude code'))  「claude code skills グローバル」(ベースKW一致('claude code'))  「claude code skills 実行方法」(ベースKW一致('claude code'))  「claude code skills 自動化」(ベースKW一致('claude code'))  「claude code skills 実践」(ベースKW一致('claude code'))  「claude code skills 常用」(ベースKW一致('claude code'))  「claude code skills 脆弱性」(ベースKW一致('claude code'))  「claude code skills ダウンロード」(ベースKW一致('claude code'))  「claude code skills できること」(ベースKW一致('claude code'))  「claude code skills ドキュメント作成」(ベースKW一致('claude code'))  「claude code skills ドキュメント」(ベースKW一致('claude code'))  「claude code skills 導入方法」(ベースKW一致('claude code'))  「claude code skills 保存 場所」(ベースKW一致('claude code'))  「claude code skills プロンプト」(ベースKW一致('claude code'))  「claude code skills プラグイン」(ベースKW一致('claude code'))  「claude code skills plugin 違い」(ベースKW一致('claude code'))
+2026-05-16 12:03:45 [INFO]   親KW: 「cyberlink photodirector とは」[base='cyberlink photodirector']  サブKW: [要確認] 「director suite 365 使い方」(ブランド競合('cyberlink'≠'director') Jaccard=0.22)  [要確認] 「director suite 365 商用 利用」(ブランド競合('cyberlink'≠'director') Jaccard=0.21)  [要確認] 「director suite 365 買い切り」(ブランド競合('cyberlink'≠'director') Jaccard=0.21)  [要確認] 「photodirector できること」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.41)  [要確認] 「photodirector 安全 性」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.43)  [要確認] 「photodirector 画像 合成」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.41)  [要確認] 「photodirector 高 画質 化」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.40)  [要確認] 「photodirector 買い切り」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.43)  「cyberlink photodirector とは」(ベースKW一致('cyberlink photodirector'))  [要確認] 「director suite 365 使い方」(ブランド競合('cyberlink'≠'director') Jaccard=0.22)  [要確認] 「director suite 365 商用 利用」(ブランド競合('cyberlink'≠'director') Jaccard=0.21)  [要確認] 「director suite 365 買い切り」(ブランド競合('cyberlink'≠'director') Jaccard=0.21)  [要確認] 「photodirector できること」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.41)  [要確認] 「photodirector 安全 性」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.43)  [要確認] 「photodirector 画像 合成」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.41)  [要確認] 「photodirector 高 画質 化」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.40)  [要確認] 「photodirector 買い切り」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.43)
+2026-05-16 12:03:45 [INFO]   親KW: 「director suite 365 クーポン」[base='director suite']  サブKW: 「photodirector 365 クーポン」(Jaccard=0.62)  「photodirector クーポン コード」(Jaccard=0.40)  「photodirector 値段」(Jaccard=0.29)  「photodirector 無料 で できること」(Jaccard=0.23)  「photodirector 無料 版 いつまで」(Jaccard=0.23)  「photodirector 無料 版 保存 できない」(Jaccard=0.21)  「photodirector2025」(Jaccard=0.23)  「director suite 365 クーポン」(ベースKW一致('director suite'))  「photodirector 365 クーポン」(Jaccard=0.62)  「photodirector クーポン コード」(Jaccard=0.40)  「photodirector 値段」(Jaccard=0.29)  「photodirector 無料 で できること」(Jaccard=0.23)  「photodirector 無料 版 いつまで」(Jaccard=0.23)  「photodirector 無料 版 保存 できない」(Jaccard=0.21)  「photodirector2025」(Jaccard=0.23)
+2026-05-16 12:03:45 [INFO]   親KW: 「director suite 365 解約」[base='director suite']  サブKW: 「director suite 365 解約」(ベースKW一致('director suite'))
+2026-05-16 12:03:45 [INFO]   親KW: 「director suite 365 評判」[base='director suite']  サブKW: 「director suite 365 評判」(ベースKW一致('director suite'))
+2026-05-16 12:03:45 [INFO]   親KW: 「director suite 365 無料 版 違い」[base='director suite']  サブKW: 「photodirector photoshop 比較」(Jaccard=0.22)  「powerdirector 365 director suite 365 違い」(Jaccard=0.65)  「director suite 365 無料 版 違い」(ベースKW一致('director suite'))  「photodirector photoshop 比較」(Jaccard=0.22)  「powerdirector 365 director suite 365 違い」(Jaccard=0.65)
+2026-05-16 12:03:45 [INFO]   親KW: 「photodirector 解約 方法」[base='photodirector 解約']  サブKW: 「photodirector 解約 方法」(ベースKW一致('photodirector 解約'))
+2026-05-16 12:03:45 [INFO]   親KW: 「plaud note pro オンライン会議」[base='plaud note']  サブKW: 「plaud note pro セキュリティ」(ベースKW一致('plaud note'))  「plaud note pro デメリット」(ベースKW一致('plaud note'))  「plaud note pro テンプレート」(ベースKW一致('plaud note'))  「plaud note pro バッテリー」(ベースKW一致('plaud note'))  「plaud note pro マルチモーダル」(ベースKW一致('plaud note'))  「plaud note pro ヨドバシ」(ベースKW一致('plaud note'))  「plaud note pro リアルタイム文字起こし」(ベースKW一致('plaud note'))  「plaud note pro 議事録」(ベースKW一致('plaud note'))  「plaud note pro 口コミ」(ベースKW一致('plaud note'))  「plaud note pro 精度」(ベースKW一致('plaud note'))  「plaud note pro 設定方法」(ベースKW一致('plaud note'))  「plaud note pro 通話録音」(ベースKW一致('plaud note'))  「plaud note pro 評判」(ベースKW一致('plaud note'))  「plaud note pro 文字起こし」(ベースKW一致('plaud note'))  「plaud note pro オンライン会議」(ベースKW一致('plaud note'))  「plaud note pro セキュリティ」(ベースKW一致('plaud note'))  「plaud note pro デメリット」(ベースKW一致('plaud note'))  「plaud note pro テンプレート」(ベースKW一致('plaud note'))  「plaud note pro バッテリー」(ベースKW一致('plaud note'))  「plaud note pro マルチモーダル」(ベースKW一致('plaud note'))  「plaud note pro ヨドバシ」(ベースKW一致('plaud note'))  「plaud note pro リアルタイム文字起こし」(ベースKW一致('plaud note'))  「plaud note pro 議事録」(ベースKW一致('plaud note'))  「plaud note pro 口コミ」(ベースKW一致('plaud note'))  「plaud note pro 精度」(ベースKW一致('plaud note'))  「plaud note pro 通話録音」(ベースKW一致('plaud note'))  「plaud note pro 評判」(ベースKW一致('plaud note'))  「plaud note pro 文字起こし」(ベースKW一致('plaud note'))
+2026-05-16 12:03:45 [INFO]   親KW: 「powerdvd 22 無料 版」[base='powerdvd 22']  サブKW: [要確認] 「powerdvd 23 ultra アップグレード & 乗換え 版 条件」(広ジャンル('powerdvd'系) ベースKW相違 Jaccard=0.25)  [要確認] 「powerdvd 23 ultra クーポン コード」(広ジャンル('powerdvd'系) ベースKW相違 Jaccard=0.29)  「powerdvd 安く 買う」(Jaccard=0.40)  「powerdvd 22 無料 版」(ベースKW一致('powerdvd 22'))  [要確認] 「powerdvd 23 ultra アップグレード & 乗換え 版 条件」(広ジャンル('powerdvd'系) ベースKW相違 Jaccard=0.25)  [要確認] 「powerdvd 23 ultra クーポン コード」(広ジャンル('powerdvd'系) ベースKW相違 Jaccard=0.29)  「powerdvd 安く 買う」(Jaccard=0.40)
+2026-05-16 12:03:45 [INFO]   親KW: 「powerdvd 23 24 違い」[base='powerdvd 23']  サブKW: 「powerdvd 23 無料 版 違い」(ベースKW一致('powerdvd 23'))  「powerdvd pro ultra 違い」(Jaccard=0.40)  「powerdvd 23 24 違い」(ベースKW一致('powerdvd 23'))  「powerdvd 23 無料 版 違い」(ベースKW一致('powerdvd 23'))  「powerdvd pro ultra 違い」(Jaccard=0.40)
+2026-05-16 12:03:45 [INFO]   親KW: 「speak プレミアムプラス 違い」[base='speak プレミアムプラス']  サブKW: 「speak プレミアムプラス 違い」(ベースKW一致('speak プレミアムプラス'))
+2026-05-16 12:03:45 [INFO]   親KW: 「youtube ai ナレーション」[base='youtube ai']  サブKW: 「youtube 競合 分析 ai」(Jaccard=0.41)  「youtube 広告 ai イラスト」(Jaccard=0.43)  「youtube 雑学 ai」(Jaccard=0.47)  「youtube 字幕 自動 生成 ai」(Jaccard=0.36)  [要確認] 「youtube 小さい画面 できない アイフォン」(広ジャンル('youtube'系) ベースKW相違 Jaccard=0.22)  「youtube 動画 編集 生成 ai」(Jaccard=0.36)  「youtube 文字 起こし ai ツール」(Jaccard=0.38)  「youtube ai ナレーション」(ベースKW一致('youtube ai'))  「youtube 競合 分析 ai」(Jaccard=0.41)  「youtube 広告 ai イラスト」(Jaccard=0.43)  「youtube 雑学 ai」(Jaccard=0.47)  「youtube 字幕 自動 生成 ai」(Jaccard=0.36)  [要確認] 「youtube 小さい画面 できない アイフォン」(広ジャンル('youtube'系) ベースKW相違 Jaccard=0.22)  「youtube 動画 編集 生成 ai」(Jaccard=0.36)  「youtube 文字 起こし ai ツール」(Jaccard=0.38)
+2026-05-16 12:03:45 [INFO]   親KW: 「スピーク プラン 違い」[base='スピーク プラン']  サブKW: 「スピーク プレミアム プレミアムプラス 違い」(Jaccard=0.44)  「スピーク プレミアムプラス 違い」(Jaccard=0.47)  「スピーク プラン 違い」(ベースKW一致('スピーク プラン'))  「スピーク プレミアム プレミアムプラス 違い」(Jaccard=0.44)  「スピーク プレミアムプラス 違い」(Jaccard=0.47)
+2026-05-16 12:03:45 [INFO]   親KW: 「スピーク 月額」[base='スピーク 月額']  サブKW: [要確認] 「スピーク 料金 キャンペーン」(広ジャンル('スピーク'系) ベースKW相違 Jaccard=0.27)  「スピーク 月額」(ベースKW一致('スピーク 月額'))  [要確認] 「スピーク 料金 キャンペーン」(広ジャンル('スピーク'系) ベースKW相違 Jaccard=0.27)
+2026-05-16 12:03:45 [INFO]   親KW: 「スピーク 無料期間 解約」[base='スピーク 無料期間']  サブKW: 「スピーク 無料期間 解約」(ベースKW一致('スピーク 無料期間'))
+2026-05-16 12:03:45 [INFO]   親KW: 「ChatGPT 使い方 初心者」[base='chatgpt 使い方']  サブKW: [要確認] 「ChatGPT Claude どっちがいい 2026」(広ジャンル('chatgpt'系) ベースKW相違 Jaccard=0.22)
+2026-05-16 12:03:45 [INFO]   親KW: 「画像生成 AI 無料」[base='画像生成 ai']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「プロンプト 書き方 コツ」[base='プロンプト']  サブKW: [要確認] 「プロンプトエンジニアリング 資格」(ベースKW部分一致('プロンプト'↔'プロンプトエンジニアリング 資格') ※Jaccard=0.18/共有=0語)
+2026-05-16 12:03:45 [INFO]   親KW: 「生成AI 活用 ビジネス」[base='生成ai 活用']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「Gemini 使い方 日本」[base='gemini 使い方']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「AI自動化 業務効率」[base='ai自動化 業務効率']  サブKW: [要確認] 「AI自動化 副業 初心者」(広ジャンル('ai自動化'系) ベースKW相違 Jaccard=0.33)  [要確認] 「AI自動化 ブログ 稼ぐ 方法」(広ジャンル('ai自動化'系) ベースKW相違 Jaccard=0.28)  [要確認] 「AI自動化 在宅ワーク やり方」(広ジャンル('ai自動化'系) ベースKW相違 Jaccard=0.28)
+2026-05-16 12:03:45 [INFO]   親KW: 「ノーコード ツール 自動化」[base='ノーコード ツール']  サブKW: [要確認] 「ノーコード AI アプリ 作り方」(広ジャンル('ノーコード'系) ベースKW相違 Jaccard=0.23)
+2026-05-16 12:03:45 [INFO]   親KW: 「フリーランス AI 活用 在宅」[base='フリーランス ai']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「nano banana pro 無料」[base='nano banana']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「AIエージェント 副業 とは」[base='aiエージェント 副業']  サブKW: 「AIエージェント 何ができる 初心者」(Jaccard=0.36)  「AIエージェント 仕事 効率化 事例」(Jaccard=0.36)
+2026-05-16 12:03:45 [INFO]   親KW: 「AI副業 ブログ 自動化 やり方」[base='ai副業 ブログ']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「AI副業 稼ぎ方 初心者 安全」[base='ai副業 稼ぎ方']  サブKW: [要確認] 「AI副業 主婦 在宅 稼ぐ」(広ジャンル('ai副業'系) ベースKW相違 Jaccard=0.24)
+2026-05-16 12:03:45 [INFO]   親KW: 「AI副業 スマホだけ できる」[base='ai副業 スマホだけ']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「AIブログ 自動化 稼ぐ 方法」[base='aiブログ 自動化']  サブKW: [要確認] 「AIブログ 稼げない 理由 対策」(広ジャンル('aiブログ'系) ベースKW相違 Jaccard=0.26)  [要確認] 「AIブログ 収益化 どのくらい」(広ジャンル('aiブログ'系) ベースKW相違 Jaccard=0.27)  [要確認] 「AIブログ 記事 自動生成 やり方」(広ジャンル('aiブログ'系) ベースKW相違 Jaccard=0.30)
+2026-05-16 12:03:45 [INFO]   親KW: 「AIブログ 初心者 始め方」[base='aiブログ 初心者']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「AIツール 比較 初心者 おすすめ」[base='aiツール 比較']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「AIツール 無料 副業 使い方」[base='aiツール 無料']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「AIツール 仕事 効率化 おすすめ」[base='aiツール 仕事']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「AIアプリ 開発 初心者 無料」[base='aiアプリ 開発']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「AIで仕事を自動化 具体例」[base='aiで仕事を自動化 具体例']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「AIで稼ぐ 方法 在宅 初心者」[base='aiで稼ぐ 方法']  サブKW: [要確認] 「AIで稼ぐ ブログ 仕組み」(広ジャンル('aiで稼ぐ'系) ベースKW相違 Jaccard=0.24)
+2026-05-16 12:03:45 [INFO]   親KW: 「AIアフィリエイト やり方 初心者」[base='aiアフィリエイト やり方']  サブKW: 「AIアフィリエイト 稼げるか」(Jaccard=0.45)
+2026-05-16 12:03:45 [INFO]   親KW: 「AIライティング 稼ぐ 方法」[base='aiライティング 稼ぐ']  サブKW: 「AIライティング ブログ SEO 対策」(Jaccard=0.36)
+2026-05-16 12:03:45 [INFO]   親KW: 「AI記事 自動生成 SEO 大丈夫」[base='ai記事 自動生成']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「AI記事 量産 ペナルティ 対策」[base='ai記事 量産']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「AI記事 リライト やり方」[base='ai記事 リライト']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「AIコンテンツ SEO 対策 2026」[base='aiコンテンツ seo']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「AI検索時代 SEO どうなる」[base='ai検索時代 seo']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「AI時代 ブログ 稼げるか」[base='ai時代 ブログ']  サブKW: [要確認] 「AI時代 副業 何がいい」(広ジャンル('ai時代'系) ベースKW相違 Jaccard=0.21)
+2026-05-16 12:03:45 [INFO]   親KW: 「vibe coding とは わかりやすく」[base='vibe coding']  サブKW: 「vibe coding 副業 できるか」(ベースKW一致('vibe coding'))
+2026-05-16 12:03:45 [INFO]   親KW: 「AIプログラミング 初心者 やり方」[base='aiプログラミング 初心者']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「AIプログラミング ツール おすすめ」[base='aiプログラミング ツール']  (サブKWなし)
+2026-05-16 12:03:45 [INFO]   親KW: 「Codexで記事生成してみた」[base='codexで記事生成してみた']  (サブKWなし)
+2026-05-16 12:03:47 [INFO] [wp] 記事取得: 計398件 (draft=1 / publish=397)
+2026-05-16 12:03:47 [INFO] [kanikabari] WP既存記事: 398件取得 (公開=397 / 下書き=1)
+2026-05-16 12:03:49 [INFO] [kanikabari] 書き込み対象: 249件
+2026-05-16 12:03:52 [INFO] [kanikabari] 完了: 親KW生成待ち=21件 / シート内サブKW=36件 / WP統合対象=133件 / カニバリスキップ=7件 / 要確認=52件
+2026-05-16 12:03:52 [INFO]   [カニバリスキップ] 「claude code skills 使い方」→ カニバリスキップ / WP「claude code skills 使い方」
+2026-05-16 12:03:52 [INFO]   [カニバリスキップ] 「plaud note pro オンライン会議」→ カニバリスキップ / WP「plaud note pro オンライン会議」
+2026-05-16 12:03:52 [INFO]   [サブKW] 「claude code skills 一覧」→ 統合対象 / WP「claude code skills 使い方」
+2026-05-16 12:03:52 [INFO]   [サブKW] 「claude code skills おすすめ」→ 統合対象 / WP「claude code skills 使い方」
+2026-05-16 12:03:52 [INFO]   [要確認] 「Claude AI 活用」→ 要確認
+2026-05-16 12:03:52 [INFO]   [要確認] 「claudecode skills 使い方」→ 要確認
+2026-05-16 12:03:52 [INFO] 
+============================================================
+2026-05-16 12:03:52 [INFO] 【全体サマリー】
+2026-05-16 12:03:52 [INFO]   ブログ数  : 1件
+2026-05-16 12:03:52 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-16 12:03:52 [INFO]   所要時間  : 9.6秒
+2026-05-16 12:03:52 [INFO] ============================================================
+2026-05-16 12:09:42 [INFO] ============================================================
+2026-05-16 12:09:42 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 12:09:42 [INFO] ============================================================
+2026-05-16 12:09:42 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 12:09:44 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 12:09:44 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 12:09:44 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 12:09:44 [INFO] [kanikabari] 開始: AIVice / シート「キーワード」
+2026-05-16 12:09:45 [INFO] [kanikabari] 未判定AIMキーワード: 249件
+2026-05-16 12:09:45 [INFO] [kanikabari] クラスタリング結果: 51クラスター
+2026-05-16 12:09:45 [INFO]   親KW: 「claude code skills 使い方」[base='claude code']  サブKW: 「claude code skillsとは」(ベースKW一致('claude code'))  「claude code skills と は」(ベースKW一致('claude code'))  「claude code skills 公式」(ベースKW一致('claude code'))  「claude code skills ベストプラクティス」(ベースKW一致('claude code'))  「claude code skills ベスト プラクティス」(ベースKW一致('claude code'))  「claude code skills インストール」(ベースKW一致('claude code'))  「claude code skills 作成」(ベースKW一致('claude code'))  [要確認] 「Claude AI 活用」(広ジャンル('claude'系) ベースKW相違 Jaccard=0.25)  「Claude Code 副業 ブログ」(ベースKW一致('claude code'))  「Claude Code 自動化 何ができる」(ベースKW一致('claude code'))  「Claude Code ブログ生成 やり方」(ベースKW一致('claude code'))  「Claude Code リライト 自動化」(ベースKW一致('claude code'))  「Claude Code 稼ぐ 方法」(ベースKW一致('claude code'))  「Claude Code API できること」(ベースKW一致('claude code'))  「claudecode skills 使い方」(Jaccard=0.90)  「claudecode skills 公式」(Jaccard=0.68)  「claude code skills インストール」(ベースKW一致('claude code'))  [要確認] 「Codex vs Claude Code」(ブランド競合('claude'≠'codex') Jaccard=0.43)  「Claude Code vs Cursor」(ベースKW一致('claude code'))  [要確認] 「Claude SEO vs ChatGPT」(広ジャンル('claude'系) ベースKW相違 Jaccard=0.30)  「Claude CodeとCodexどっちがいい？」(ベースKW部分一致('claude code'↔'claude codeとcodexどっちがいい?'))  「claude code skills 使い方 vscode」(ベースKW一致('claude code'))  「claude code skills 公式 github」(ベースKW一致('claude code'))  「claude code skills 20選」(ベースKW一致('claude code'))  「claude code skills 置き場所」(ベースKW一致('claude code'))  「claude code skills 完全ガイド」(ベースKW一致('claude code'))  「claude code skills 完全活用ガイド」(ベースKW一致('claude code'))  「claude code 最 佳 skills」(ベースKW一致('claude code'))  「claude code skills 公開」(ベースKW一致('claude code'))  「claude code skills 削除」(ベースKW一致('claude code'))  「claude code skills 集」(ベースKW一致('claude code'))  「claude code skills 資料 作成」(ベースKW一致('claude code'))  「claude code skills 仕組み」(ベースKW一致('claude code'))  「claude code skills スライド作成」(ベースKW一致('claude code'))  「claude code skills 使えない」(ベースKW一致('claude code'))  「claude code skills 統合」(ベースKW一致('claude code'))  「claude code skills 人気」(ベースKW一致('claude code'))  「claude code skills 入門ガイド」(ベースKW一致('claude code'))  「claude code skills 認識されない」(ベースKW一致('claude code'))  「claude code skills の使い方」(ベースKW一致('claude code'))  「claude code skills 配置場所」(ベースKW一致('claude code'))  「claude code skills 非エンジニア」(ベースKW一致('claude code'))  「claude code skills ファイル」(ベースKW一致('claude code'))  「claude code skills フロントマター」(ベースKW一致('claude code'))  「claude code skills 保存場所」(ベースKW一致('claude code'))  「claude code skills 本」(ベースKW一致('claude code'))  「claude code skills 法務」(ベースKW一致('claude code'))  「claude code skills マーケティング」(ベースKW一致('claude code'))  「claude code skills 読み込み」(ベースKW一致('claude code'))  「claude code skills 呼び出し 方」(ベースKW一致('claude code'))  「claude code 流程 图 skills」(ベースKW一致('claude code'))  「claude code skills ガイド」(ベースKW一致('claude code'))  「claude code skills グローバル」(ベースKW一致('claude code'))  「claude code skills 実行方法」(ベースKW一致('claude code'))  「claude code skills 自動化」(ベースKW一致('claude code'))  「claude code skills 実践」(ベースKW一致('claude code'))  「claude code skills 常用」(ベースKW一致('claude code'))  「claude code skills 脆弱性」(ベースKW一致('claude code'))  「claude code skills ダウンロード」(ベースKW一致('claude code'))  「claude code skills できること」(ベースKW一致('claude code'))  「claude code skills ドキュメント作成」(ベースKW一致('claude code'))  「claude code skills ドキュメント」(ベースKW一致('claude code'))  「claude code skills 導入方法」(ベースKW一致('claude code'))  「claude code skills 保存 場所」(ベースKW一致('claude code'))  「claude code skills プロンプト」(ベースKW一致('claude code'))  「claude code skills プラグイン」(ベースKW一致('claude code'))
+2026-05-16 12:09:45 [INFO]   親KW: 「claude code skills 一覧」[base='claude code']  サブKW: 「claude code skills おすすめ」(ベースKW一致('claude code'))  「Claude Code Cursor 比較 どっち」(ベースKW一致('claude code'))  「claude skills 一覧」(Jaccard=0.83)  「claude code skills ランキング」(ベースKW一致('claude code'))  「claude code skills plugin 違い」(ベースKW一致('claude code'))
+2026-05-16 12:09:45 [INFO]   親KW: 「claude code skills とは」[base='claude code']  サブKW: 「Claude Code 使い方 初心者」(ベースKW一致('claude code'))  「Claude Code ChatGPT 違い わかりやすく」(ベースKW一致('claude code'))  「claude code skills 初心者」(ベースKW一致('claude code'))
+2026-05-16 12:09:45 [INFO]   親KW: 「claude code skills 作り方」[base='claude code']  サブKW: 「claude code agent skills 作り方」(ベースKW一致('claude code'))  「claude code skills 登録」(ベースKW一致('claude code'))
+2026-05-16 12:09:45 [INFO]   親KW: 「cyberlink photodirector とは」[base='cyberlink photodirector']  サブKW: [要確認] 「director suite 365 商用 利用」(ブランド競合('cyberlink'≠'director') Jaccard=0.21)  [要確認] 「director suite 365 買い切り」(ブランド競合('cyberlink'≠'director') Jaccard=0.21)  [要確認] 「photodirector できること」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.41)  [要確認] 「photodirector 安全 性」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.43)  [要確認] 「photodirector 画像 合成」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.41)  [要確認] 「photodirector 高 画質 化」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.40)  [要確認] 「photodirector 買い切り」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.43)  「cyberlink photodirector とは」(ベースKW一致('cyberlink photodirector'))  [要確認] 「director suite 365 商用 利用」(ブランド競合('cyberlink'≠'director') Jaccard=0.21)  [要確認] 「director suite 365 買い切り」(ブランド競合('cyberlink'≠'director') Jaccard=0.21)  [要確認] 「photodirector できること」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.41)  [要確認] 「photodirector 安全 性」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.43)  [要確認] 「photodirector 画像 合成」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.41)  [要確認] 「photodirector 高 画質 化」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.40)  [要確認] 「photodirector 買い切り」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.43)
+2026-05-16 12:09:45 [INFO]   親KW: 「director suite 365 クーポン」[base='director suite']  サブKW: 「photodirector 365 クーポン」(Jaccard=0.62)  「photodirector クーポン コード」(Jaccard=0.40)  「photodirector 値段」(Jaccard=0.29)  「photodirector 無料 で できること」(Jaccard=0.23)  「photodirector 無料 版 いつまで」(Jaccard=0.23)  「photodirector 無料 版 保存 できない」(Jaccard=0.21)  「photodirector2025」(Jaccard=0.23)  「director suite 365 クーポン」(ベースKW一致('director suite'))  「photodirector 365 クーポン」(Jaccard=0.62)  「photodirector クーポン コード」(Jaccard=0.40)  「photodirector 値段」(Jaccard=0.29)  「photodirector 無料 で できること」(Jaccard=0.23)  「photodirector 無料 版 いつまで」(Jaccard=0.23)  「photodirector 無料 版 保存 できない」(Jaccard=0.21)  「photodirector2025」(Jaccard=0.23)
+2026-05-16 12:09:45 [INFO]   親KW: 「director suite 365 解約」[base='director suite']  サブKW: 「director suite 365 解約」(ベースKW一致('director suite'))
+2026-05-16 12:09:45 [INFO]   親KW: 「director suite 365 使い方」[base='director suite']  サブKW: 「photodirector 解約 方法」(Jaccard=0.27)  「director suite 365 使い方」(ベースKW一致('director suite'))  「photodirector 解約 方法」(Jaccard=0.27)
+2026-05-16 12:09:45 [INFO]   親KW: 「director suite 365 評判」[base='director suite']  サブKW: 「director suite 365 評判」(ベースKW一致('director suite'))
+2026-05-16 12:09:45 [INFO]   親KW: 「director suite 365 無料 版 違い」[base='director suite']  サブKW: 「photodirector photoshop 比較」(Jaccard=0.22)  「powerdirector 365 director suite 365 違い」(Jaccard=0.65)  「director suite 365 無料 版 違い」(ベースKW一致('director suite'))  「photodirector photoshop 比較」(Jaccard=0.22)  「powerdirector 365 director suite 365 違い」(Jaccard=0.65)
+2026-05-16 12:09:45 [INFO]   親KW: 「plaud note pro オンライン会議」[base='plaud note']  サブKW: 「plaud note pro セキュリティ」(ベースKW一致('plaud note'))  「plaud note pro デメリット」(ベースKW一致('plaud note'))  「plaud note pro テンプレート」(ベースKW一致('plaud note'))  「plaud note pro バッテリー」(ベースKW一致('plaud note'))  「plaud note pro マルチモーダル」(ベースKW一致('plaud note'))  「plaud note pro ヨドバシ」(ベースKW一致('plaud note'))  「plaud note pro リアルタイム文字起こし」(ベースKW一致('plaud note'))  「plaud note pro 議事録」(ベースKW一致('plaud note'))  「plaud note pro 口コミ」(ベースKW一致('plaud note'))  「plaud note pro 精度」(ベースKW一致('plaud note'))  「plaud note pro 設定方法」(ベースKW一致('plaud note'))  「plaud note pro 通話録音」(ベースKW一致('plaud note'))  「plaud note pro 評判」(ベースKW一致('plaud note'))  「plaud note pro 文字起こし」(ベースKW一致('plaud note'))  「plaud note pro オンライン会議」(ベースKW一致('plaud note'))  「plaud note pro セキュリティ」(ベースKW一致('plaud note'))  「plaud note pro デメリット」(ベースKW一致('plaud note'))  「plaud note pro テンプレート」(ベースKW一致('plaud note'))  「plaud note pro バッテリー」(ベースKW一致('plaud note'))  「plaud note pro マルチモーダル」(ベースKW一致('plaud note'))  「plaud note pro ヨドバシ」(ベースKW一致('plaud note'))  「plaud note pro リアルタイム文字起こし」(ベースKW一致('plaud note'))  「plaud note pro 議事録」(ベースKW一致('plaud note'))  「plaud note pro 口コミ」(ベースKW一致('plaud note'))  「plaud note pro 精度」(ベースKW一致('plaud note'))  「plaud note pro 通話録音」(ベースKW一致('plaud note'))  「plaud note pro 評判」(ベースKW一致('plaud note'))  「plaud note pro 文字起こし」(ベースKW一致('plaud note'))
+2026-05-16 12:09:45 [INFO]   親KW: 「powerdvd 22 無料 版」[base='powerdvd 22']  サブKW: [要確認] 「powerdvd 23 ultra アップグレード & 乗換え 版 条件」(広ジャンル('powerdvd'系) ベースKW相違 Jaccard=0.25)  [要確認] 「powerdvd 23 ultra クーポン コード」(広ジャンル('powerdvd'系) ベースKW相違 Jaccard=0.29)  「powerdvd 安く 買う」(Jaccard=0.40)  「powerdvd 22 無料 版」(ベースKW一致('powerdvd 22'))  [要確認] 「powerdvd 23 ultra アップグレード & 乗換え 版 条件」(広ジャンル('powerdvd'系) ベースKW相違 Jaccard=0.25)  [要確認] 「powerdvd 23 ultra クーポン コード」(広ジャンル('powerdvd'系) ベースKW相違 Jaccard=0.29)  「powerdvd 安く 買う」(Jaccard=0.40)
+2026-05-16 12:09:45 [INFO]   親KW: 「powerdvd 23 24 違い」[base='powerdvd 23']  サブKW: 「powerdvd 23 無料 版 違い」(ベースKW一致('powerdvd 23'))  「powerdvd pro ultra 違い」(Jaccard=0.40)  「powerdvd 23 24 違い」(ベースKW一致('powerdvd 23'))  「powerdvd 23 無料 版 違い」(ベースKW一致('powerdvd 23'))  「powerdvd pro ultra 違い」(Jaccard=0.40)
+2026-05-16 12:09:45 [INFO]   親KW: 「speak プレミアムプラス 違い」[base='speak プレミアムプラス']  サブKW: 「speak プレミアムプラス 違い」(ベースKW一致('speak プレミアムプラス'))
+2026-05-16 12:09:45 [INFO]   親KW: 「youtube ai ナレーション」[base='youtube ai']  サブKW: 「youtube 競合 分析 ai」(Jaccard=0.41)  「youtube 広告 ai イラスト」(Jaccard=0.43)  「youtube 雑学 ai」(Jaccard=0.47)  「youtube 字幕 自動 生成 ai」(Jaccard=0.36)  [要確認] 「youtube 小さい画面 できない アイフォン」(広ジャンル('youtube'系) ベースKW相違 Jaccard=0.22)  「youtube 動画 編集 生成 ai」(Jaccard=0.36)  「youtube 文字 起こし ai ツール」(Jaccard=0.38)  「youtube ai ナレーション」(ベースKW一致('youtube ai'))  「youtube 競合 分析 ai」(Jaccard=0.41)  「youtube 広告 ai イラスト」(Jaccard=0.43)  「youtube 雑学 ai」(Jaccard=0.47)  「youtube 字幕 自動 生成 ai」(Jaccard=0.36)  [要確認] 「youtube 小さい画面 できない アイフォン」(広ジャンル('youtube'系) ベースKW相違 Jaccard=0.22)  「youtube 動画 編集 生成 ai」(Jaccard=0.36)  「youtube 文字 起こし ai ツール」(Jaccard=0.38)
+2026-05-16 12:09:45 [INFO]   親KW: 「スピーク プラン 違い」[base='スピーク プラン']  サブKW: 「スピーク プレミアム プレミアムプラス 違い」(Jaccard=0.44)  「スピーク プレミアムプラス 違い」(Jaccard=0.47)  「スピーク プラン 違い」(ベースKW一致('スピーク プラン'))  「スピーク プレミアム プレミアムプラス 違い」(Jaccard=0.44)  「スピーク プレミアムプラス 違い」(Jaccard=0.47)
+2026-05-16 12:09:45 [INFO]   親KW: 「スピーク 月額」[base='スピーク 月額']  サブKW: [要確認] 「スピーク 料金 キャンペーン」(広ジャンル('スピーク'系) ベースKW相違 Jaccard=0.27)  「スピーク 月額」(ベースKW一致('スピーク 月額'))  [要確認] 「スピーク 料金 キャンペーン」(広ジャンル('スピーク'系) ベースKW相違 Jaccard=0.27)
+2026-05-16 12:09:45 [INFO]   親KW: 「スピーク 無料期間 解約」[base='スピーク 無料期間']  サブKW: 「スピーク 無料期間 解約」(ベースKW一致('スピーク 無料期間'))
+2026-05-16 12:09:45 [INFO]   親KW: 「ChatGPT 使い方 初心者」[base='chatgpt 使い方']  サブKW: [要確認] 「ChatGPT Claude どっちがいい 2026」(広ジャンル('chatgpt'系) ベースKW相違 Jaccard=0.22)
+2026-05-16 12:09:45 [INFO]   親KW: 「画像生成 AI 無料」[base='画像生成 ai']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「プロンプト 書き方 コツ」[base='プロンプト']  サブKW: [要確認] 「プロンプトエンジニアリング 資格」(ベースKW部分一致('プロンプト'↔'プロンプトエンジニアリング 資格') ※Jaccard=0.18/共有=0語)
+2026-05-16 12:09:45 [INFO]   親KW: 「生成AI 活用 ビジネス」[base='生成ai 活用']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「Gemini 使い方 日本」[base='gemini 使い方']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「AI自動化 業務効率」[base='ai自動化 業務効率']  サブKW: [要確認] 「AI自動化 副業 初心者」(広ジャンル('ai自動化'系) ベースKW相違 Jaccard=0.33)  [要確認] 「AI自動化 ブログ 稼ぐ 方法」(広ジャンル('ai自動化'系) ベースKW相違 Jaccard=0.28)  [要確認] 「AI自動化 在宅ワーク やり方」(広ジャンル('ai自動化'系) ベースKW相違 Jaccard=0.28)
+2026-05-16 12:09:45 [INFO]   親KW: 「ノーコード ツール 自動化」[base='ノーコード ツール']  サブKW: [要確認] 「ノーコード AI アプリ 作り方」(広ジャンル('ノーコード'系) ベースKW相違 Jaccard=0.23)
+2026-05-16 12:09:45 [INFO]   親KW: 「フリーランス AI 活用 在宅」[base='フリーランス ai']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「nano banana pro 無料」[base='nano banana']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「AIエージェント 副業 とは」[base='aiエージェント 副業']  サブKW: 「AIエージェント 何ができる 初心者」(Jaccard=0.36)  「AIエージェント 仕事 効率化 事例」(Jaccard=0.36)
+2026-05-16 12:09:45 [INFO]   親KW: 「AI副業 ブログ 自動化 やり方」[base='ai副業 ブログ']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「AI副業 稼ぎ方 初心者 安全」[base='ai副業 稼ぎ方']  サブKW: [要確認] 「AI副業 主婦 在宅 稼ぐ」(広ジャンル('ai副業'系) ベースKW相違 Jaccard=0.24)
+2026-05-16 12:09:45 [INFO]   親KW: 「AI副業 スマホだけ できる」[base='ai副業 スマホだけ']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「AIブログ 自動化 稼ぐ 方法」[base='aiブログ 自動化']  サブKW: [要確認] 「AIブログ 稼げない 理由 対策」(広ジャンル('aiブログ'系) ベースKW相違 Jaccard=0.26)  [要確認] 「AIブログ 収益化 どのくらい」(広ジャンル('aiブログ'系) ベースKW相違 Jaccard=0.27)  [要確認] 「AIブログ 記事 自動生成 やり方」(広ジャンル('aiブログ'系) ベースKW相違 Jaccard=0.30)
+2026-05-16 12:09:45 [INFO]   親KW: 「AIブログ 初心者 始め方」[base='aiブログ 初心者']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「AIツール 比較 初心者 おすすめ」[base='aiツール 比較']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「AIツール 無料 副業 使い方」[base='aiツール 無料']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「AIツール 仕事 効率化 おすすめ」[base='aiツール 仕事']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「AIアプリ 開発 初心者 無料」[base='aiアプリ 開発']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「AIで仕事を自動化 具体例」[base='aiで仕事を自動化 具体例']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「AIで稼ぐ 方法 在宅 初心者」[base='aiで稼ぐ 方法']  サブKW: [要確認] 「AIで稼ぐ ブログ 仕組み」(広ジャンル('aiで稼ぐ'系) ベースKW相違 Jaccard=0.24)
+2026-05-16 12:09:45 [INFO]   親KW: 「AIアフィリエイト やり方 初心者」[base='aiアフィリエイト やり方']  サブKW: 「AIアフィリエイト 稼げるか」(Jaccard=0.45)
+2026-05-16 12:09:45 [INFO]   親KW: 「AIライティング 稼ぐ 方法」[base='aiライティング 稼ぐ']  サブKW: 「AIライティング ブログ SEO 対策」(Jaccard=0.36)
+2026-05-16 12:09:45 [INFO]   親KW: 「AI記事 自動生成 SEO 大丈夫」[base='ai記事 自動生成']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「AI記事 量産 ペナルティ 対策」[base='ai記事 量産']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「AI記事 リライト やり方」[base='ai記事 リライト']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「AIコンテンツ SEO 対策 2026」[base='aiコンテンツ seo']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「AI検索時代 SEO どうなる」[base='ai検索時代 seo']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「AI時代 ブログ 稼げるか」[base='ai時代 ブログ']  サブKW: [要確認] 「AI時代 副業 何がいい」(広ジャンル('ai時代'系) ベースKW相違 Jaccard=0.21)
+2026-05-16 12:09:45 [INFO]   親KW: 「vibe coding とは わかりやすく」[base='vibe coding']  サブKW: 「vibe coding 副業 できるか」(ベースKW一致('vibe coding'))
+2026-05-16 12:09:45 [INFO]   親KW: 「AIプログラミング 初心者 やり方」[base='aiプログラミング 初心者']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「AIプログラミング ツール おすすめ」[base='aiプログラミング ツール']  (サブKWなし)
+2026-05-16 12:09:45 [INFO]   親KW: 「Codexで記事生成してみた」[base='codexで記事生成してみた']  (サブKWなし)
+2026-05-16 12:09:47 [INFO] [wp] 記事取得: 計398件 (draft=1 / publish=397)
+2026-05-16 12:09:47 [INFO] [kanikabari] WP既存記事: 398件取得 (公開=397 / 下書き=1)
+2026-05-16 12:09:48 [INFO] [kanikabari] 書き込み対象: 249件
+2026-05-16 12:09:50 [INFO] [kanikabari] 完了: 親KW生成待ち=50件 / シート内サブKW=161件 / WP統合対象=1件 / カニバリスキップ=0件 / 要確認=37件
+2026-05-16 12:09:50 [INFO]   [サブKW] 「ChatGPT 使い方 初心者」→ 統合対象 / WP「ChatGPT 使い方 初心者」
+2026-05-16 12:09:50 [INFO]   [要確認] 「ChatGPT Claude どっちがいい 2026」→ 要確認
+2026-05-16 12:09:50 [INFO] 
+============================================================
+2026-05-16 12:09:50 [INFO] 【全体サマリー】
+2026-05-16 12:09:50 [INFO]   ブログ数  : 1件
+2026-05-16 12:09:50 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-16 12:09:50 [INFO]   所要時間  : 8.1秒
+2026-05-16 12:09:50 [INFO] ============================================================
+2026-05-16 12:11:51 [INFO] ============================================================
+2026-05-16 12:11:51 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 12:11:51 [INFO] ============================================================
+2026-05-16 12:11:51 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 12:11:52 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 12:11:52 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 12:11:52 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 12:11:52 [INFO] [kanikabari] 開始: AIVice / シート「キーワード」
+2026-05-16 12:11:53 [INFO] [kanikabari] 未判定AIMキーワード: 249件
+2026-05-16 12:11:53 [INFO] [kanikabari] クラスタリング結果: 51クラスター
+2026-05-16 12:11:53 [INFO]   親KW: 「claude code skills 使い方」[base='claude code']  サブKW: 「claude code skillsとは」(ベースKW一致('claude code'))  「claude code skills と は」(ベースKW一致('claude code'))  「claude code skills 公式」(ベースKW一致('claude code'))  「claude code skills ベストプラクティス」(ベースKW一致('claude code'))  「claude code skills ベスト プラクティス」(ベースKW一致('claude code'))  「claude code skills インストール」(ベースKW一致('claude code'))  「claude code skills 作成」(ベースKW一致('claude code'))  [要確認] 「Claude AI 活用」(広ジャンル('claude'系) ベースKW相違 Jaccard=0.25)  「Claude Code 副業 ブログ」(ベースKW一致('claude code'))  「Claude Code 自動化 何ができる」(ベースKW一致('claude code'))  「Claude Code ブログ生成 やり方」(ベースKW一致('claude code'))  「Claude Code リライト 自動化」(ベースKW一致('claude code'))  「Claude Code 稼ぐ 方法」(ベースKW一致('claude code'))  「Claude Code API できること」(ベースKW一致('claude code'))  「claudecode skills 使い方」(Jaccard=0.90)  「claudecode skills 公式」(Jaccard=0.68)  「claude code skills インストール」(ベースKW一致('claude code'))  [要確認] 「Codex vs Claude Code」(ブランド競合('claude'≠'codex') Jaccard=0.43)  「Claude Code vs Cursor」(ベースKW一致('claude code'))  [要確認] 「Claude SEO vs ChatGPT」(広ジャンル('claude'系) ベースKW相違 Jaccard=0.30)  「Claude CodeとCodexどっちがいい？」(ベースKW部分一致('claude code'↔'claude codeとcodexどっちがいい?'))  「claude code skills 使い方 vscode」(ベースKW一致('claude code'))  「claude code skills 公式 github」(ベースKW一致('claude code'))  「claude code skills 20選」(ベースKW一致('claude code'))  「claude code skills 置き場所」(ベースKW一致('claude code'))  「claude code skills 完全ガイド」(ベースKW一致('claude code'))  「claude code skills 完全活用ガイド」(ベースKW一致('claude code'))  「claude code 最 佳 skills」(ベースKW一致('claude code'))  「claude code skills 公開」(ベースKW一致('claude code'))  「claude code skills 削除」(ベースKW一致('claude code'))  「claude code skills 集」(ベースKW一致('claude code'))  「claude code skills 資料 作成」(ベースKW一致('claude code'))  「claude code skills 仕組み」(ベースKW一致('claude code'))  「claude code skills スライド作成」(ベースKW一致('claude code'))  「claude code skills 使えない」(ベースKW一致('claude code'))  「claude code skills 統合」(ベースKW一致('claude code'))  「claude code skills 人気」(ベースKW一致('claude code'))  「claude code skills 入門ガイド」(ベースKW一致('claude code'))  「claude code skills 認識されない」(ベースKW一致('claude code'))  「claude code skills の使い方」(ベースKW一致('claude code'))  「claude code skills 配置場所」(ベースKW一致('claude code'))  「claude code skills 非エンジニア」(ベースKW一致('claude code'))  「claude code skills ファイル」(ベースKW一致('claude code'))  「claude code skills フロントマター」(ベースKW一致('claude code'))  「claude code skills 保存場所」(ベースKW一致('claude code'))  「claude code skills 本」(ベースKW一致('claude code'))  「claude code skills 法務」(ベースKW一致('claude code'))  「claude code skills マーケティング」(ベースKW一致('claude code'))  「claude code skills 読み込み」(ベースKW一致('claude code'))  「claude code skills 呼び出し 方」(ベースKW一致('claude code'))  「claude code 流程 图 skills」(ベースKW一致('claude code'))  「claude code skills ガイド」(ベースKW一致('claude code'))  「claude code skills グローバル」(ベースKW一致('claude code'))  「claude code skills 実行方法」(ベースKW一致('claude code'))  「claude code skills 自動化」(ベースKW一致('claude code'))  「claude code skills 実践」(ベースKW一致('claude code'))  「claude code skills 常用」(ベースKW一致('claude code'))  「claude code skills 脆弱性」(ベースKW一致('claude code'))  「claude code skills ダウンロード」(ベースKW一致('claude code'))  「claude code skills できること」(ベースKW一致('claude code'))  「claude code skills ドキュメント作成」(ベースKW一致('claude code'))  「claude code skills ドキュメント」(ベースKW一致('claude code'))  「claude code skills 導入方法」(ベースKW一致('claude code'))  「claude code skills 保存 場所」(ベースKW一致('claude code'))  「claude code skills プロンプト」(ベースKW一致('claude code'))  「claude code skills プラグイン」(ベースKW一致('claude code'))
+2026-05-16 12:11:53 [INFO]   親KW: 「claude code skills 一覧」[base='claude code']  サブKW: 「claude code skills おすすめ」(ベースKW一致('claude code'))  「Claude Code Cursor 比較 どっち」(ベースKW一致('claude code'))  「claude skills 一覧」(Jaccard=0.83)  「claude code skills ランキング」(ベースKW一致('claude code'))  「claude code skills plugin 違い」(ベースKW一致('claude code'))
+2026-05-16 12:11:53 [INFO]   親KW: 「claude code skills とは」[base='claude code']  サブKW: 「Claude Code 使い方 初心者」(ベースKW一致('claude code'))  「Claude Code ChatGPT 違い わかりやすく」(ベースKW一致('claude code'))  「claude code skills 初心者」(ベースKW一致('claude code'))
+2026-05-16 12:11:53 [INFO]   親KW: 「claude code skills 作り方」[base='claude code']  サブKW: 「claude code agent skills 作り方」(ベースKW一致('claude code'))  「claude code skills 登録」(ベースKW一致('claude code'))
+2026-05-16 12:11:53 [INFO]   親KW: 「cyberlink photodirector とは」[base='cyberlink photodirector']  サブKW: [要確認] 「director suite 365 商用 利用」(ブランド競合('cyberlink'≠'director') Jaccard=0.21)  [要確認] 「director suite 365 買い切り」(ブランド競合('cyberlink'≠'director') Jaccard=0.21)  [要確認] 「photodirector できること」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.41)  [要確認] 「photodirector 安全 性」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.43)  [要確認] 「photodirector 画像 合成」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.41)  [要確認] 「photodirector 高 画質 化」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.40)  [要確認] 「photodirector 買い切り」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.43)  「cyberlink photodirector とは」(ベースKW一致('cyberlink photodirector'))  [要確認] 「director suite 365 商用 利用」(ブランド競合('cyberlink'≠'director') Jaccard=0.21)  [要確認] 「director suite 365 買い切り」(ブランド競合('cyberlink'≠'director') Jaccard=0.21)  [要確認] 「photodirector できること」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.41)  [要確認] 「photodirector 安全 性」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.43)  [要確認] 「photodirector 画像 合成」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.41)  [要確認] 「photodirector 高 画質 化」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.40)  [要確認] 「photodirector 買い切り」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.43)
+2026-05-16 12:11:53 [INFO]   親KW: 「director suite 365 クーポン」[base='director suite']  サブKW: 「photodirector 365 クーポン」(Jaccard=0.62)  「photodirector クーポン コード」(Jaccard=0.40)  「photodirector 値段」(Jaccard=0.29)  「photodirector 無料 で できること」(Jaccard=0.23)  「photodirector 無料 版 いつまで」(Jaccard=0.23)  「photodirector 無料 版 保存 できない」(Jaccard=0.21)  「photodirector2025」(Jaccard=0.23)  「director suite 365 クーポン」(ベースKW一致('director suite'))  「photodirector 365 クーポン」(Jaccard=0.62)  「photodirector クーポン コード」(Jaccard=0.40)  「photodirector 値段」(Jaccard=0.29)  「photodirector 無料 で できること」(Jaccard=0.23)  「photodirector 無料 版 いつまで」(Jaccard=0.23)  「photodirector 無料 版 保存 できない」(Jaccard=0.21)  「photodirector2025」(Jaccard=0.23)
+2026-05-16 12:11:53 [INFO]   親KW: 「director suite 365 解約」[base='director suite']  サブKW: 「director suite 365 解約」(ベースKW一致('director suite'))
+2026-05-16 12:11:53 [INFO]   親KW: 「director suite 365 使い方」[base='director suite']  サブKW: 「photodirector 解約 方法」(Jaccard=0.27)  「director suite 365 使い方」(ベースKW一致('director suite'))  「photodirector 解約 方法」(Jaccard=0.27)
+2026-05-16 12:11:53 [INFO]   親KW: 「director suite 365 評判」[base='director suite']  サブKW: 「director suite 365 評判」(ベースKW一致('director suite'))
+2026-05-16 12:11:53 [INFO]   親KW: 「director suite 365 無料 版 違い」[base='director suite']  サブKW: 「photodirector photoshop 比較」(Jaccard=0.22)  「powerdirector 365 director suite 365 違い」(Jaccard=0.65)  「director suite 365 無料 版 違い」(ベースKW一致('director suite'))  「photodirector photoshop 比較」(Jaccard=0.22)  「powerdirector 365 director suite 365 違い」(Jaccard=0.65)
+2026-05-16 12:11:53 [INFO]   親KW: 「plaud note pro オンライン会議」[base='plaud note']  サブKW: 「plaud note pro セキュリティ」(ベースKW一致('plaud note'))  「plaud note pro デメリット」(ベースKW一致('plaud note'))  「plaud note pro テンプレート」(ベースKW一致('plaud note'))  「plaud note pro バッテリー」(ベースKW一致('plaud note'))  「plaud note pro マルチモーダル」(ベースKW一致('plaud note'))  「plaud note pro ヨドバシ」(ベースKW一致('plaud note'))  「plaud note pro リアルタイム文字起こし」(ベースKW一致('plaud note'))  「plaud note pro 議事録」(ベースKW一致('plaud note'))  「plaud note pro 口コミ」(ベースKW一致('plaud note'))  「plaud note pro 精度」(ベースKW一致('plaud note'))  「plaud note pro 設定方法」(ベースKW一致('plaud note'))  「plaud note pro 通話録音」(ベースKW一致('plaud note'))  「plaud note pro 評判」(ベースKW一致('plaud note'))  「plaud note pro 文字起こし」(ベースKW一致('plaud note'))  「plaud note pro オンライン会議」(ベースKW一致('plaud note'))  「plaud note pro セキュリティ」(ベースKW一致('plaud note'))  「plaud note pro デメリット」(ベースKW一致('plaud note'))  「plaud note pro テンプレート」(ベースKW一致('plaud note'))  「plaud note pro バッテリー」(ベースKW一致('plaud note'))  「plaud note pro マルチモーダル」(ベースKW一致('plaud note'))  「plaud note pro ヨドバシ」(ベースKW一致('plaud note'))  「plaud note pro リアルタイム文字起こし」(ベースKW一致('plaud note'))  「plaud note pro 議事録」(ベースKW一致('plaud note'))  「plaud note pro 口コミ」(ベースKW一致('plaud note'))  「plaud note pro 精度」(ベースKW一致('plaud note'))  「plaud note pro 通話録音」(ベースKW一致('plaud note'))  「plaud note pro 評判」(ベースKW一致('plaud note'))  「plaud note pro 文字起こし」(ベースKW一致('plaud note'))
+2026-05-16 12:11:53 [INFO]   親KW: 「powerdvd 22 無料 版」[base='powerdvd 22']  サブKW: [要確認] 「powerdvd 23 ultra アップグレード & 乗換え 版 条件」(広ジャンル('powerdvd'系) ベースKW相違 Jaccard=0.25)  [要確認] 「powerdvd 23 ultra クーポン コード」(広ジャンル('powerdvd'系) ベースKW相違 Jaccard=0.29)  「powerdvd 安く 買う」(Jaccard=0.40)  「powerdvd 22 無料 版」(ベースKW一致('powerdvd 22'))  [要確認] 「powerdvd 23 ultra アップグレード & 乗換え 版 条件」(広ジャンル('powerdvd'系) ベースKW相違 Jaccard=0.25)  [要確認] 「powerdvd 23 ultra クーポン コード」(広ジャンル('powerdvd'系) ベースKW相違 Jaccard=0.29)  「powerdvd 安く 買う」(Jaccard=0.40)
+2026-05-16 12:11:53 [INFO]   親KW: 「powerdvd 23 24 違い」[base='powerdvd 23']  サブKW: 「powerdvd 23 無料 版 違い」(ベースKW一致('powerdvd 23'))  「powerdvd pro ultra 違い」(Jaccard=0.40)  「powerdvd 23 24 違い」(ベースKW一致('powerdvd 23'))  「powerdvd 23 無料 版 違い」(ベースKW一致('powerdvd 23'))  「powerdvd pro ultra 違い」(Jaccard=0.40)
+2026-05-16 12:11:53 [INFO]   親KW: 「speak プレミアムプラス 違い」[base='speak プレミアムプラス']  サブKW: 「speak プレミアムプラス 違い」(ベースKW一致('speak プレミアムプラス'))
+2026-05-16 12:11:53 [INFO]   親KW: 「youtube ai ナレーション」[base='youtube ai']  サブKW: 「youtube 競合 分析 ai」(Jaccard=0.41)  「youtube 広告 ai イラスト」(Jaccard=0.43)  「youtube 雑学 ai」(Jaccard=0.47)  「youtube 字幕 自動 生成 ai」(Jaccard=0.36)  [要確認] 「youtube 小さい画面 できない アイフォン」(広ジャンル('youtube'系) ベースKW相違 Jaccard=0.22)  「youtube 動画 編集 生成 ai」(Jaccard=0.36)  「youtube 文字 起こし ai ツール」(Jaccard=0.38)  「youtube ai ナレーション」(ベースKW一致('youtube ai'))  「youtube 競合 分析 ai」(Jaccard=0.41)  「youtube 広告 ai イラスト」(Jaccard=0.43)  「youtube 雑学 ai」(Jaccard=0.47)  「youtube 字幕 自動 生成 ai」(Jaccard=0.36)  [要確認] 「youtube 小さい画面 できない アイフォン」(広ジャンル('youtube'系) ベースKW相違 Jaccard=0.22)  「youtube 動画 編集 生成 ai」(Jaccard=0.36)  「youtube 文字 起こし ai ツール」(Jaccard=0.38)
+2026-05-16 12:11:53 [INFO]   親KW: 「スピーク プラン 違い」[base='スピーク プラン']  サブKW: 「スピーク プレミアム プレミアムプラス 違い」(Jaccard=0.44)  「スピーク プレミアムプラス 違い」(Jaccard=0.47)  「スピーク プラン 違い」(ベースKW一致('スピーク プラン'))  「スピーク プレミアム プレミアムプラス 違い」(Jaccard=0.44)  「スピーク プレミアムプラス 違い」(Jaccard=0.47)
+2026-05-16 12:11:53 [INFO]   親KW: 「スピーク 月額」[base='スピーク 月額']  サブKW: [要確認] 「スピーク 料金 キャンペーン」(広ジャンル('スピーク'系) ベースKW相違 Jaccard=0.27)  「スピーク 月額」(ベースKW一致('スピーク 月額'))  [要確認] 「スピーク 料金 キャンペーン」(広ジャンル('スピーク'系) ベースKW相違 Jaccard=0.27)
+2026-05-16 12:11:53 [INFO]   親KW: 「スピーク 無料期間 解約」[base='スピーク 無料期間']  サブKW: 「スピーク 無料期間 解約」(ベースKW一致('スピーク 無料期間'))
+2026-05-16 12:11:53 [INFO]   親KW: 「ChatGPT 使い方 初心者」[base='chatgpt 使い方']  サブKW: [要確認] 「ChatGPT Claude どっちがいい 2026」(広ジャンル('chatgpt'系) ベースKW相違 Jaccard=0.22)
+2026-05-16 12:11:53 [INFO]   親KW: 「画像生成 AI 無料」[base='画像生成 ai']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「プロンプト 書き方 コツ」[base='プロンプト']  サブKW: [要確認] 「プロンプトエンジニアリング 資格」(ベースKW部分一致('プロンプト'↔'プロンプトエンジニアリング 資格') ※Jaccard=0.18/共有=0語)
+2026-05-16 12:11:53 [INFO]   親KW: 「生成AI 活用 ビジネス」[base='生成ai 活用']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「Gemini 使い方 日本」[base='gemini 使い方']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「AI自動化 業務効率」[base='ai自動化 業務効率']  サブKW: [要確認] 「AI自動化 副業 初心者」(広ジャンル('ai自動化'系) ベースKW相違 Jaccard=0.33)  [要確認] 「AI自動化 ブログ 稼ぐ 方法」(広ジャンル('ai自動化'系) ベースKW相違 Jaccard=0.28)  [要確認] 「AI自動化 在宅ワーク やり方」(広ジャンル('ai自動化'系) ベースKW相違 Jaccard=0.28)
+2026-05-16 12:11:53 [INFO]   親KW: 「ノーコード ツール 自動化」[base='ノーコード ツール']  サブKW: [要確認] 「ノーコード AI アプリ 作り方」(広ジャンル('ノーコード'系) ベースKW相違 Jaccard=0.23)
+2026-05-16 12:11:53 [INFO]   親KW: 「フリーランス AI 活用 在宅」[base='フリーランス ai']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「nano banana pro 無料」[base='nano banana']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「AIエージェント 副業 とは」[base='aiエージェント 副業']  サブKW: 「AIエージェント 何ができる 初心者」(Jaccard=0.36)  「AIエージェント 仕事 効率化 事例」(Jaccard=0.36)
+2026-05-16 12:11:53 [INFO]   親KW: 「AI副業 ブログ 自動化 やり方」[base='ai副業 ブログ']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「AI副業 稼ぎ方 初心者 安全」[base='ai副業 稼ぎ方']  サブKW: [要確認] 「AI副業 主婦 在宅 稼ぐ」(広ジャンル('ai副業'系) ベースKW相違 Jaccard=0.24)
+2026-05-16 12:11:53 [INFO]   親KW: 「AI副業 スマホだけ できる」[base='ai副業 スマホだけ']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「AIブログ 自動化 稼ぐ 方法」[base='aiブログ 自動化']  サブKW: [要確認] 「AIブログ 稼げない 理由 対策」(広ジャンル('aiブログ'系) ベースKW相違 Jaccard=0.26)  [要確認] 「AIブログ 収益化 どのくらい」(広ジャンル('aiブログ'系) ベースKW相違 Jaccard=0.27)  [要確認] 「AIブログ 記事 自動生成 やり方」(広ジャンル('aiブログ'系) ベースKW相違 Jaccard=0.30)
+2026-05-16 12:11:53 [INFO]   親KW: 「AIブログ 初心者 始め方」[base='aiブログ 初心者']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「AIツール 比較 初心者 おすすめ」[base='aiツール 比較']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「AIツール 無料 副業 使い方」[base='aiツール 無料']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「AIツール 仕事 効率化 おすすめ」[base='aiツール 仕事']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「AIアプリ 開発 初心者 無料」[base='aiアプリ 開発']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「AIで仕事を自動化 具体例」[base='aiで仕事を自動化 具体例']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「AIで稼ぐ 方法 在宅 初心者」[base='aiで稼ぐ 方法']  サブKW: [要確認] 「AIで稼ぐ ブログ 仕組み」(広ジャンル('aiで稼ぐ'系) ベースKW相違 Jaccard=0.24)
+2026-05-16 12:11:53 [INFO]   親KW: 「AIアフィリエイト やり方 初心者」[base='aiアフィリエイト やり方']  サブKW: 「AIアフィリエイト 稼げるか」(Jaccard=0.45)
+2026-05-16 12:11:53 [INFO]   親KW: 「AIライティング 稼ぐ 方法」[base='aiライティング 稼ぐ']  サブKW: 「AIライティング ブログ SEO 対策」(Jaccard=0.36)
+2026-05-16 12:11:53 [INFO]   親KW: 「AI記事 自動生成 SEO 大丈夫」[base='ai記事 自動生成']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「AI記事 量産 ペナルティ 対策」[base='ai記事 量産']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「AI記事 リライト やり方」[base='ai記事 リライト']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「AIコンテンツ SEO 対策 2026」[base='aiコンテンツ seo']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「AI検索時代 SEO どうなる」[base='ai検索時代 seo']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「AI時代 ブログ 稼げるか」[base='ai時代 ブログ']  サブKW: [要確認] 「AI時代 副業 何がいい」(広ジャンル('ai時代'系) ベースKW相違 Jaccard=0.21)
+2026-05-16 12:11:53 [INFO]   親KW: 「vibe coding とは わかりやすく」[base='vibe coding']  サブKW: 「vibe coding 副業 できるか」(ベースKW一致('vibe coding'))
+2026-05-16 12:11:53 [INFO]   親KW: 「AIプログラミング 初心者 やり方」[base='aiプログラミング 初心者']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「AIプログラミング ツール おすすめ」[base='aiプログラミング ツール']  (サブKWなし)
+2026-05-16 12:11:53 [INFO]   親KW: 「Codexで記事生成してみた」[base='codexで記事生成してみた']  (サブKWなし)
+2026-05-16 12:11:56 [INFO] [wp] 記事取得: 計398件 (draft=1 / publish=397)
+2026-05-16 12:11:56 [INFO] [kanikabari] WP既存記事: 398件取得 (公開=397 / 下書き=1)
+2026-05-16 12:11:58 [INFO] [kanikabari] 書き込み対象: 249件
+2026-05-16 12:12:00 [INFO] [kanikabari] 完了: 親KW生成待ち=118件 / シート内サブKW=44件 / WP統合対象=43件 / カニバリスキップ=7件 / 要確認=37件
+2026-05-16 12:12:00 [INFO]   [カニバリスキップ] 「claude code skills 使い方」→ カニバリスキップ / WP「claude code skills 使い方」
+2026-05-16 12:12:00 [INFO]   [カニバリスキップ] 「plaud note pro オンライン会議」→ カニバリスキップ / WP「plaud note pro オンライン会議」
+2026-05-16 12:12:00 [INFO]   [サブKW] 「claude code skills と は」→ 統合対象 / WP「claude code skills 使い方」
+2026-05-16 12:12:00 [INFO]   [サブKW] 「claude code skills 完全ガイド」→ 統合対象 / WP「claude code skills 使い方」
+2026-05-16 12:12:00 [INFO]   [要確認] 「Claude AI 活用」→ 要確認
+2026-05-16 12:12:00 [INFO]   [要確認] 「スピーク プラン 違い」→ 要確認
+2026-05-16 12:12:00 [INFO] 
+============================================================
+2026-05-16 12:12:00 [INFO] 【全体サマリー】
+2026-05-16 12:12:00 [INFO]   ブログ数  : 1件
+2026-05-16 12:12:00 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-16 12:12:00 [INFO]   所要時間  : 9.6秒
+2026-05-16 12:12:00 [INFO] ============================================================
+2026-05-16 12:19:32 [INFO] ============================================================
+2026-05-16 12:19:32 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 12:19:32 [INFO] ============================================================
+2026-05-16 12:19:32 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 12:19:34 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 12:19:34 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 12:19:34 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 12:19:34 [INFO] [kanikabari] 開始: AIVice / シート「キーワード」
+2026-05-16 12:19:36 [INFO] [kanikabari] 未判定AIMキーワード: 249件
+2026-05-16 12:19:36 [INFO] [kanikabari] クラスタリング結果: 51クラスター
+2026-05-16 12:19:36 [INFO]   親KW: 「claude code skills 使い方」[base='claude code']  サブKW: 「claude code skillsとは」(ベースKW一致('claude code'))  「claude code skills と は」(ベースKW一致('claude code'))  「claude code skills 公式」(ベースKW一致('claude code'))  「claude code skills ベストプラクティス」(ベースKW一致('claude code'))  「claude code skills ベスト プラクティス」(ベースKW一致('claude code'))  「claude code skills インストール」(ベースKW一致('claude code'))  「claude code skills 作成」(ベースKW一致('claude code'))  [要確認] 「Claude AI 活用」(広ジャンル('claude'系) ベースKW相違 Jaccard=0.25)  「Claude Code 副業 ブログ」(ベースKW一致('claude code'))  「Claude Code 自動化 何ができる」(ベースKW一致('claude code'))  「Claude Code ブログ生成 やり方」(ベースKW一致('claude code'))  「Claude Code リライト 自動化」(ベースKW一致('claude code'))  「Claude Code 稼ぐ 方法」(ベースKW一致('claude code'))  「Claude Code API できること」(ベースKW一致('claude code'))  「claudecode skills 使い方」(Jaccard=0.90)  「claudecode skills 公式」(Jaccard=0.68)  「claude code skills インストール」(ベースKW一致('claude code'))  [要確認] 「Codex vs Claude Code」(ブランド競合('claude'≠'codex') Jaccard=0.43)  「Claude Code vs Cursor」(ベースKW一致('claude code'))  [要確認] 「Claude SEO vs ChatGPT」(広ジャンル('claude'系) ベースKW相違 Jaccard=0.30)  「Claude CodeとCodexどっちがいい？」(ベースKW部分一致('claude code'↔'claude codeとcodexどっちがいい?'))  「claude code skills 使い方 vscode」(ベースKW一致('claude code'))  「claude code skills 公式 github」(ベースKW一致('claude code'))  「claude code skills 20選」(ベースKW一致('claude code'))  「claude code skills 置き場所」(ベースKW一致('claude code'))  「claude code skills 完全ガイド」(ベースKW一致('claude code'))  「claude code skills 完全活用ガイド」(ベースKW一致('claude code'))  「claude code 最 佳 skills」(ベースKW一致('claude code'))  「claude code skills 公開」(ベースKW一致('claude code'))  「claude code skills 削除」(ベースKW一致('claude code'))  「claude code skills 集」(ベースKW一致('claude code'))  「claude code skills 資料 作成」(ベースKW一致('claude code'))  「claude code skills 仕組み」(ベースKW一致('claude code'))  「claude code skills スライド作成」(ベースKW一致('claude code'))  「claude code skills 使えない」(ベースKW一致('claude code'))  「claude code skills 統合」(ベースKW一致('claude code'))  「claude code skills 人気」(ベースKW一致('claude code'))  「claude code skills 入門ガイド」(ベースKW一致('claude code'))  「claude code skills 認識されない」(ベースKW一致('claude code'))  「claude code skills の使い方」(ベースKW一致('claude code'))  「claude code skills 配置場所」(ベースKW一致('claude code'))  「claude code skills 非エンジニア」(ベースKW一致('claude code'))  「claude code skills ファイル」(ベースKW一致('claude code'))  「claude code skills フロントマター」(ベースKW一致('claude code'))  「claude code skills 保存場所」(ベースKW一致('claude code'))  「claude code skills 本」(ベースKW一致('claude code'))  「claude code skills 法務」(ベースKW一致('claude code'))  「claude code skills マーケティング」(ベースKW一致('claude code'))  「claude code skills 読み込み」(ベースKW一致('claude code'))  「claude code skills 呼び出し 方」(ベースKW一致('claude code'))  「claude code 流程 图 skills」(ベースKW一致('claude code'))  「claude code skills ガイド」(ベースKW一致('claude code'))  「claude code skills グローバル」(ベースKW一致('claude code'))  「claude code skills 実行方法」(ベースKW一致('claude code'))  「claude code skills 自動化」(ベースKW一致('claude code'))  「claude code skills 実践」(ベースKW一致('claude code'))  「claude code skills 常用」(ベースKW一致('claude code'))  「claude code skills 脆弱性」(ベースKW一致('claude code'))  「claude code skills ダウンロード」(ベースKW一致('claude code'))  「claude code skills できること」(ベースKW一致('claude code'))  「claude code skills ドキュメント作成」(ベースKW一致('claude code'))  「claude code skills ドキュメント」(ベースKW一致('claude code'))  「claude code skills 導入方法」(ベースKW一致('claude code'))  「claude code skills 保存 場所」(ベースKW一致('claude code'))  「claude code skills プロンプト」(ベースKW一致('claude code'))  「claude code skills プラグイン」(ベースKW一致('claude code'))
+2026-05-16 12:19:36 [INFO]   親KW: 「claude code skills 一覧」[base='claude code']  サブKW: 「claude code skills おすすめ」(ベースKW一致('claude code'))  「Claude Code Cursor 比較 どっち」(ベースKW一致('claude code'))  「claude skills 一覧」(Jaccard=0.83)  「claude code skills ランキング」(ベースKW一致('claude code'))  「claude code skills plugin 違い」(ベースKW一致('claude code'))
+2026-05-16 12:19:36 [INFO]   親KW: 「claude code skills とは」[base='claude code']  サブKW: 「Claude Code 使い方 初心者」(ベースKW一致('claude code'))  「Claude Code ChatGPT 違い わかりやすく」(ベースKW一致('claude code'))  「claude code skills 初心者」(ベースKW一致('claude code'))
+2026-05-16 12:19:36 [INFO]   親KW: 「claude code skills 作り方」[base='claude code']  サブKW: 「claude code agent skills 作り方」(ベースKW一致('claude code'))  「claude code skills 登録」(ベースKW一致('claude code'))
+2026-05-16 12:19:36 [INFO]   親KW: 「cyberlink photodirector とは」[base='cyberlink photodirector']  サブKW: [要確認] 「director suite 365 商用 利用」(ブランド競合('cyberlink'≠'director') Jaccard=0.21)  [要確認] 「director suite 365 買い切り」(ブランド競合('cyberlink'≠'director') Jaccard=0.21)  [要確認] 「photodirector できること」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.41)  [要確認] 「photodirector 安全 性」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.43)  [要確認] 「photodirector 画像 合成」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.41)  [要確認] 「photodirector 高 画質 化」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.40)  [要確認] 「photodirector 買い切り」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.43)  「cyberlink photodirector とは」(ベースKW一致('cyberlink photodirector'))  [要確認] 「director suite 365 商用 利用」(ブランド競合('cyberlink'≠'director') Jaccard=0.21)  [要確認] 「director suite 365 買い切り」(ブランド競合('cyberlink'≠'director') Jaccard=0.21)  [要確認] 「photodirector できること」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.41)  [要確認] 「photodirector 安全 性」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.43)  [要確認] 「photodirector 画像 合成」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.41)  [要確認] 「photodirector 高 画質 化」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.40)  [要確認] 「photodirector 買い切り」(ブランド競合('cyberlink'≠'photodirector') Jaccard=0.43)
+2026-05-16 12:19:36 [INFO]   親KW: 「director suite 365 クーポン」[base='director suite']  サブKW: 「photodirector 365 クーポン」(Jaccard=0.62)  「photodirector クーポン コード」(Jaccard=0.40)  「photodirector 値段」(Jaccard=0.29)  「photodirector 無料 で できること」(Jaccard=0.23)  「photodirector 無料 版 いつまで」(Jaccard=0.23)  「photodirector 無料 版 保存 できない」(Jaccard=0.21)  「photodirector2025」(Jaccard=0.23)  「director suite 365 クーポン」(ベースKW一致('director suite'))  「photodirector 365 クーポン」(Jaccard=0.62)  「photodirector クーポン コード」(Jaccard=0.40)  「photodirector 値段」(Jaccard=0.29)  「photodirector 無料 で できること」(Jaccard=0.23)  「photodirector 無料 版 いつまで」(Jaccard=0.23)  「photodirector 無料 版 保存 できない」(Jaccard=0.21)  「photodirector2025」(Jaccard=0.23)
+2026-05-16 12:19:36 [INFO]   親KW: 「director suite 365 解約」[base='director suite']  サブKW: 「director suite 365 解約」(ベースKW一致('director suite'))
+2026-05-16 12:19:36 [INFO]   親KW: 「director suite 365 使い方」[base='director suite']  サブKW: 「photodirector 解約 方法」(Jaccard=0.27)  「director suite 365 使い方」(ベースKW一致('director suite'))  「photodirector 解約 方法」(Jaccard=0.27)
+2026-05-16 12:19:36 [INFO]   親KW: 「director suite 365 評判」[base='director suite']  サブKW: 「director suite 365 評判」(ベースKW一致('director suite'))
+2026-05-16 12:19:36 [INFO]   親KW: 「director suite 365 無料 版 違い」[base='director suite']  サブKW: 「photodirector photoshop 比較」(Jaccard=0.22)  「powerdirector 365 director suite 365 違い」(Jaccard=0.65)  「director suite 365 無料 版 違い」(ベースKW一致('director suite'))  「photodirector photoshop 比較」(Jaccard=0.22)  「powerdirector 365 director suite 365 違い」(Jaccard=0.65)
+2026-05-16 12:19:36 [INFO]   親KW: 「plaud note pro オンライン会議」[base='plaud note']  サブKW: 「plaud note pro セキュリティ」(ベースKW一致('plaud note'))  「plaud note pro デメリット」(ベースKW一致('plaud note'))  「plaud note pro テンプレート」(ベースKW一致('plaud note'))  「plaud note pro バッテリー」(ベースKW一致('plaud note'))  「plaud note pro マルチモーダル」(ベースKW一致('plaud note'))  「plaud note pro ヨドバシ」(ベースKW一致('plaud note'))  「plaud note pro リアルタイム文字起こし」(ベースKW一致('plaud note'))  「plaud note pro 議事録」(ベースKW一致('plaud note'))  「plaud note pro 口コミ」(ベースKW一致('plaud note'))  「plaud note pro 精度」(ベースKW一致('plaud note'))  「plaud note pro 設定方法」(ベースKW一致('plaud note'))  「plaud note pro 通話録音」(ベースKW一致('plaud note'))  「plaud note pro 評判」(ベースKW一致('plaud note'))  「plaud note pro 文字起こし」(ベースKW一致('plaud note'))  「plaud note pro オンライン会議」(ベースKW一致('plaud note'))  「plaud note pro セキュリティ」(ベースKW一致('plaud note'))  「plaud note pro デメリット」(ベースKW一致('plaud note'))  「plaud note pro テンプレート」(ベースKW一致('plaud note'))  「plaud note pro バッテリー」(ベースKW一致('plaud note'))  「plaud note pro マルチモーダル」(ベースKW一致('plaud note'))  「plaud note pro ヨドバシ」(ベースKW一致('plaud note'))  「plaud note pro リアルタイム文字起こし」(ベースKW一致('plaud note'))  「plaud note pro 議事録」(ベースKW一致('plaud note'))  「plaud note pro 口コミ」(ベースKW一致('plaud note'))  「plaud note pro 精度」(ベースKW一致('plaud note'))  「plaud note pro 通話録音」(ベースKW一致('plaud note'))  「plaud note pro 評判」(ベースKW一致('plaud note'))  「plaud note pro 文字起こし」(ベースKW一致('plaud note'))
+2026-05-16 12:19:36 [INFO]   親KW: 「powerdvd 22 無料 版」[base='powerdvd 22']  サブKW: [要確認] 「powerdvd 23 ultra アップグレード & 乗換え 版 条件」(広ジャンル('powerdvd'系) ベースKW相違 Jaccard=0.25)  [要確認] 「powerdvd 23 ultra クーポン コード」(広ジャンル('powerdvd'系) ベースKW相違 Jaccard=0.29)  「powerdvd 安く 買う」(Jaccard=0.40)  「powerdvd 22 無料 版」(ベースKW一致('powerdvd 22'))  [要確認] 「powerdvd 23 ultra アップグレード & 乗換え 版 条件」(広ジャンル('powerdvd'系) ベースKW相違 Jaccard=0.25)  [要確認] 「powerdvd 23 ultra クーポン コード」(広ジャンル('powerdvd'系) ベースKW相違 Jaccard=0.29)  「powerdvd 安く 買う」(Jaccard=0.40)
+2026-05-16 12:19:36 [INFO]   親KW: 「powerdvd 23 24 違い」[base='powerdvd 23']  サブKW: 「powerdvd 23 無料 版 違い」(ベースKW一致('powerdvd 23'))  「powerdvd pro ultra 違い」(Jaccard=0.40)  「powerdvd 23 24 違い」(ベースKW一致('powerdvd 23'))  「powerdvd 23 無料 版 違い」(ベースKW一致('powerdvd 23'))  「powerdvd pro ultra 違い」(Jaccard=0.40)
+2026-05-16 12:19:36 [INFO]   親KW: 「speak プレミアムプラス 違い」[base='speak プレミアムプラス']  サブKW: 「speak プレミアムプラス 違い」(ベースKW一致('speak プレミアムプラス'))
+2026-05-16 12:19:36 [INFO]   親KW: 「youtube ai ナレーション」[base='youtube ai']  サブKW: 「youtube 競合 分析 ai」(Jaccard=0.41)  「youtube 広告 ai イラスト」(Jaccard=0.43)  「youtube 雑学 ai」(Jaccard=0.47)  「youtube 字幕 自動 生成 ai」(Jaccard=0.36)  [要確認] 「youtube 小さい画面 できない アイフォン」(広ジャンル('youtube'系) ベースKW相違 Jaccard=0.22)  「youtube 動画 編集 生成 ai」(Jaccard=0.36)  「youtube 文字 起こし ai ツール」(Jaccard=0.38)  「youtube ai ナレーション」(ベースKW一致('youtube ai'))  「youtube 競合 分析 ai」(Jaccard=0.41)  「youtube 広告 ai イラスト」(Jaccard=0.43)  「youtube 雑学 ai」(Jaccard=0.47)  「youtube 字幕 自動 生成 ai」(Jaccard=0.36)  [要確認] 「youtube 小さい画面 できない アイフォン」(広ジャンル('youtube'系) ベースKW相違 Jaccard=0.22)  「youtube 動画 編集 生成 ai」(Jaccard=0.36)  「youtube 文字 起こし ai ツール」(Jaccard=0.38)
+2026-05-16 12:19:36 [INFO]   親KW: 「スピーク プラン 違い」[base='スピーク プラン']  サブKW: 「スピーク プレミアム プレミアムプラス 違い」(Jaccard=0.44)  「スピーク プレミアムプラス 違い」(Jaccard=0.47)  「スピーク プラン 違い」(ベースKW一致('スピーク プラン'))  「スピーク プレミアム プレミアムプラス 違い」(Jaccard=0.44)  「スピーク プレミアムプラス 違い」(Jaccard=0.47)
+2026-05-16 12:19:36 [INFO]   親KW: 「スピーク 月額」[base='スピーク 月額']  サブKW: [要確認] 「スピーク 料金 キャンペーン」(広ジャンル('スピーク'系) ベースKW相違 Jaccard=0.27)  「スピーク 月額」(ベースKW一致('スピーク 月額'))  [要確認] 「スピーク 料金 キャンペーン」(広ジャンル('スピーク'系) ベースKW相違 Jaccard=0.27)
+2026-05-16 12:19:36 [INFO]   親KW: 「スピーク 無料期間 解約」[base='スピーク 無料期間']  サブKW: 「スピーク 無料期間 解約」(ベースKW一致('スピーク 無料期間'))
+2026-05-16 12:19:36 [INFO]   親KW: 「ChatGPT 使い方 初心者」[base='chatgpt 使い方']  サブKW: [要確認] 「ChatGPT Claude どっちがいい 2026」(広ジャンル('chatgpt'系) ベースKW相違 Jaccard=0.22)
+2026-05-16 12:19:36 [INFO]   親KW: 「画像生成 AI 無料」[base='画像生成 ai']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「プロンプト 書き方 コツ」[base='プロンプト']  サブKW: [要確認] 「プロンプトエンジニアリング 資格」(ベースKW部分一致('プロンプト'↔'プロンプトエンジニアリング 資格') ※Jaccard=0.18/共有=0語)
+2026-05-16 12:19:36 [INFO]   親KW: 「生成AI 活用 ビジネス」[base='生成ai 活用']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「Gemini 使い方 日本」[base='gemini 使い方']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「AI自動化 業務効率」[base='ai自動化 業務効率']  サブKW: [要確認] 「AI自動化 副業 初心者」(広ジャンル('ai自動化'系) ベースKW相違 Jaccard=0.33)  [要確認] 「AI自動化 ブログ 稼ぐ 方法」(広ジャンル('ai自動化'系) ベースKW相違 Jaccard=0.28)  [要確認] 「AI自動化 在宅ワーク やり方」(広ジャンル('ai自動化'系) ベースKW相違 Jaccard=0.28)
+2026-05-16 12:19:36 [INFO]   親KW: 「ノーコード ツール 自動化」[base='ノーコード ツール']  サブKW: [要確認] 「ノーコード AI アプリ 作り方」(広ジャンル('ノーコード'系) ベースKW相違 Jaccard=0.23)
+2026-05-16 12:19:36 [INFO]   親KW: 「フリーランス AI 活用 在宅」[base='フリーランス ai']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「nano banana pro 無料」[base='nano banana']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「AIエージェント 副業 とは」[base='aiエージェント 副業']  サブKW: 「AIエージェント 何ができる 初心者」(Jaccard=0.36)  「AIエージェント 仕事 効率化 事例」(Jaccard=0.36)
+2026-05-16 12:19:36 [INFO]   親KW: 「AI副業 ブログ 自動化 やり方」[base='ai副業 ブログ']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「AI副業 稼ぎ方 初心者 安全」[base='ai副業 稼ぎ方']  サブKW: [要確認] 「AI副業 主婦 在宅 稼ぐ」(広ジャンル('ai副業'系) ベースKW相違 Jaccard=0.24)
+2026-05-16 12:19:36 [INFO]   親KW: 「AI副業 スマホだけ できる」[base='ai副業 スマホだけ']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「AIブログ 自動化 稼ぐ 方法」[base='aiブログ 自動化']  サブKW: [要確認] 「AIブログ 稼げない 理由 対策」(広ジャンル('aiブログ'系) ベースKW相違 Jaccard=0.26)  [要確認] 「AIブログ 収益化 どのくらい」(広ジャンル('aiブログ'系) ベースKW相違 Jaccard=0.27)  [要確認] 「AIブログ 記事 自動生成 やり方」(広ジャンル('aiブログ'系) ベースKW相違 Jaccard=0.30)
+2026-05-16 12:19:36 [INFO]   親KW: 「AIブログ 初心者 始め方」[base='aiブログ 初心者']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「AIツール 比較 初心者 おすすめ」[base='aiツール 比較']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「AIツール 無料 副業 使い方」[base='aiツール 無料']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「AIツール 仕事 効率化 おすすめ」[base='aiツール 仕事']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「AIアプリ 開発 初心者 無料」[base='aiアプリ 開発']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「AIで仕事を自動化 具体例」[base='aiで仕事を自動化 具体例']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「AIで稼ぐ 方法 在宅 初心者」[base='aiで稼ぐ 方法']  サブKW: [要確認] 「AIで稼ぐ ブログ 仕組み」(広ジャンル('aiで稼ぐ'系) ベースKW相違 Jaccard=0.24)
+2026-05-16 12:19:36 [INFO]   親KW: 「AIアフィリエイト やり方 初心者」[base='aiアフィリエイト やり方']  サブKW: 「AIアフィリエイト 稼げるか」(Jaccard=0.45)
+2026-05-16 12:19:36 [INFO]   親KW: 「AIライティング 稼ぐ 方法」[base='aiライティング 稼ぐ']  サブKW: 「AIライティング ブログ SEO 対策」(Jaccard=0.36)
+2026-05-16 12:19:36 [INFO]   親KW: 「AI記事 自動生成 SEO 大丈夫」[base='ai記事 自動生成']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「AI記事 量産 ペナルティ 対策」[base='ai記事 量産']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「AI記事 リライト やり方」[base='ai記事 リライト']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「AIコンテンツ SEO 対策 2026」[base='aiコンテンツ seo']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「AI検索時代 SEO どうなる」[base='ai検索時代 seo']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「AI時代 ブログ 稼げるか」[base='ai時代 ブログ']  サブKW: [要確認] 「AI時代 副業 何がいい」(広ジャンル('ai時代'系) ベースKW相違 Jaccard=0.21)
+2026-05-16 12:19:36 [INFO]   親KW: 「vibe coding とは わかりやすく」[base='vibe coding']  サブKW: 「vibe coding 副業 できるか」(ベースKW一致('vibe coding'))
+2026-05-16 12:19:36 [INFO]   親KW: 「AIプログラミング 初心者 やり方」[base='aiプログラミング 初心者']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「AIプログラミング ツール おすすめ」[base='aiプログラミング ツール']  (サブKWなし)
+2026-05-16 12:19:36 [INFO]   親KW: 「Codexで記事生成してみた」[base='codexで記事生成してみた']  (サブKWなし)
+2026-05-16 12:19:38 [INFO] [wp] 記事取得: 計398件 (draft=1 / publish=397)
+2026-05-16 12:19:38 [INFO] [kanikabari] WP既存記事: 398件取得 (公開=397 / 下書き=1)
+2026-05-16 12:19:41 [INFO] [kanikabari] 書き込み対象: 249件
+2026-05-16 12:19:43 [INFO] [kanikabari] 完了: 親KW生成待ち=36件 / シート内サブKW=120件 / WP統合対象=43件 / カニバリスキップ=7件 / 要確認=43件
+2026-05-16 12:19:43 [INFO]   [カニバリスキップ] 「claude code skills 使い方」→ カニバリスキップ / WP「claude code skills 使い方」
+2026-05-16 12:19:43 [INFO]   [カニバリスキップ] 「plaud note pro オンライン会議」→ カニバリスキップ / WP「plaud note pro オンライン会議」
+2026-05-16 12:19:43 [INFO]   [サブKW] 「claude code skills と は」→ 統合対象 / WP「claude code skills 使い方」
+2026-05-16 12:19:43 [INFO]   [サブKW] 「claude code skills 完全ガイド」→ 統合対象 / WP「claude code skills 使い方」
+2026-05-16 12:19:43 [INFO]   [要確認] 「Claude AI 活用」→ 要確認
+2026-05-16 12:19:43 [INFO]   [要確認] 「スピーク プラン 違い」→ 要確認
+2026-05-16 12:19:43 [INFO] 
+============================================================
+2026-05-16 12:19:43 [INFO] 【全体サマリー】
+2026-05-16 12:19:43 [INFO]   ブログ数  : 1件
+2026-05-16 12:19:43 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-16 12:19:43 [INFO]   所要時間  : 10.8秒
+2026-05-16 12:19:43 [INFO] ============================================================
+2026-05-16 12:21:12 [INFO] ============================================================
+2026-05-16 12:21:12 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 12:21:12 [INFO] ============================================================
+2026-05-16 12:21:12 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 12:21:13 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 12:21:13 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 12:21:13 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 12:21:13 [INFO] [kanikabari] 開始: AIVice / シート「キーワード」
+2026-05-16 12:21:15 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-16 12:21:15 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-16 12:21:15 [INFO] 
+============================================================
+2026-05-16 12:21:15 [INFO] 【全体サマリー】
+2026-05-16 12:21:15 [INFO]   ブログ数  : 1件
+2026-05-16 12:21:15 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-16 12:21:15 [INFO]   所要時間  : 2.3秒
+2026-05-16 12:21:15 [INFO] ============================================================
+2026-05-16 12:22:50 [INFO] ============================================================
+2026-05-16 12:22:50 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 12:22:50 [INFO] ============================================================
+2026-05-16 12:22:50 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 12:22:51 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 12:22:51 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 12:22:51 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 12:22:51 [INFO] [kanikabari] 開始: AIVice / シート「キーワード」
+2026-05-16 12:22:53 [INFO] [kanikabari] 未判定AIMキーワード: 249件
+2026-05-16 12:22:53 [INFO] [kanikabari] クラスタリング結果: 109クラスター
+2026-05-16 12:22:53 [INFO]   親KW: 「claude code skills 使い方」[base='claude code']  サブKW: 「claude code skillsとは」(ベースKW一致('claude code'))  「claude code skills と は」(ベースKW一致('claude code'))  「claude code skills 公式」(ベースKW一致('claude code'))  「claude code skills ベストプラクティス」(ベースKW一致('claude code'))  「claude code skills ベスト プラクティス」(ベースKW一致('claude code'))  「claude code skills インストール」(ベースKW一致('claude code'))  「claude code skills 作成」(ベースKW一致('claude code'))  「claudecode skills 使い方」(Jaccard=0.90)  「claudecode skills 公式」(Jaccard=0.68)  「claude code skills インストール」(ベースKW一致('claude code'))  「claude code skills 使い方 vscode」(ベースKW一致('claude code'))  「claude code skills 公式 github」(ベースKW一致('claude code'))  「claude code skills 20選」(ベースKW一致('claude code'))  「claude code skills 置き場所」(ベースKW一致('claude code'))  「claude code skills 完全ガイド」(ベースKW一致('claude code'))  「claude code skills 完全活用ガイド」(ベースKW一致('claude code'))  「claude code 最 佳 skills」(ベースKW一致('claude code'))  「claude code skills 公開」(ベースKW一致('claude code'))  「claude code skills 削除」(ベースKW一致('claude code'))  「claude code skills 集」(ベースKW一致('claude code'))  「claude code skills 資料 作成」(ベースKW一致('claude code'))  「claude code skills 仕組み」(ベースKW一致('claude code'))  「claude code skills スライド作成」(ベースKW一致('claude code'))  「claude code skills 使えない」(ベースKW一致('claude code'))  「claude code skills 統合」(ベースKW一致('claude code'))  「claude code skills 人気」(ベースKW一致('claude code'))  「claude code skills 入門ガイド」(ベースKW一致('claude code'))  「claude code skills 認識されない」(ベースKW一致('claude code'))  「claude code skills の使い方」(ベースKW一致('claude code'))  「claude code skills 配置場所」(ベースKW一致('claude code'))  「claude code skills 非エンジニア」(ベースKW一致('claude code'))  「claude code skills ファイル」(ベースKW一致('claude code'))  「claude code skills フロントマター」(ベースKW一致('claude code'))  「claude code skills 保存場所」(ベースKW一致('claude code'))  「claude code skills 本」(ベースKW一致('claude code'))  「claude code skills 法務」(ベースKW一致('claude code'))  「claude code skills マーケティング」(ベースKW一致('claude code'))  「claude code skills 読み込み」(ベースKW一致('claude code'))  「claude code skills 呼び出し 方」(ベースKW一致('claude code'))  「claude code 流程 图 skills」(ベースKW一致('claude code'))  「claude code skills ガイド」(ベースKW一致('claude code'))  「claude code skills グローバル」(ベースKW一致('claude code'))  「claude code skills 実行方法」(ベースKW一致('claude code'))  「claude code skills 自動化」(ベースKW一致('claude code'))  「claude code skills 実践」(ベースKW一致('claude code'))  「claude code skills 常用」(ベースKW一致('claude code'))  「claude code skills 脆弱性」(ベースKW一致('claude code'))  「claude code skills ダウンロード」(ベースKW一致('claude code'))  「claude code skills できること」(ベースKW一致('claude code'))  「claude code skills ドキュメント作成」(ベースKW一致('claude code'))  「claude code skills ドキュメント」(ベースKW一致('claude code'))  「claude code skills 導入方法」(ベースKW一致('claude code'))  「claude code skills 保存 場所」(ベースKW一致('claude code'))  「claude code skills プロンプト」(ベースKW一致('claude code'))  「claude code skills プラグイン」(ベースKW一致('claude code'))
+2026-05-16 12:22:53 [INFO]   親KW: 「claude code skills 一覧」[base='claude code']  サブKW: 「claude code skills おすすめ」(ベースKW一致('claude code'))  「claude skills 一覧」(Jaccard=0.83)  「claude code skills ランキング」(ベースKW一致('claude code'))  「claude code skills plugin 違い」(ベースKW一致('claude code'))
+2026-05-16 12:22:53 [INFO]   親KW: 「claude code skills とは」[base='claude code']  サブKW: 「Claude Code 使い方 初心者」(ベースKW一致('claude code'))  「claude code skills 初心者」(ベースKW一致('claude code'))
+2026-05-16 12:22:53 [INFO]   親KW: 「claude code skills 作り方」[base='claude code']  サブKW: 「claude code agent skills 作り方」(ベースKW一致('claude code'))  「claude code skills 登録」(ベースKW一致('claude code'))
+2026-05-16 12:22:53 [INFO]   親KW: 「cyberlink photodirector とは」[base='cyberlink photodirector']  サブKW: 「cyberlink photodirector とは」(ベースKW一致('cyberlink photodirector'))
+2026-05-16 12:22:53 [INFO]   親KW: 「director suite 365 クーポン」[base='director suite']  サブKW: 「director suite 365 商用 利用」(ベースKW一致('director suite'))  「director suite 365 買い切り」(ベースKW一致('director suite'))  「director suite 365 クーポン」(ベースKW一致('director suite'))  「director suite 365 商用 利用」(ベースKW一致('director suite'))  「director suite 365 買い切り」(ベースKW一致('director suite'))
+2026-05-16 12:22:53 [INFO]   親KW: 「director suite 365 解約」[base='director suite']  サブKW: 「director suite 365 解約」(ベースKW一致('director suite'))
+2026-05-16 12:22:53 [INFO]   親KW: 「director suite 365 使い方」[base='director suite']  サブKW: 「director suite 365 使い方」(ベースKW一致('director suite'))
+2026-05-16 12:22:53 [INFO]   親KW: 「director suite 365 評判」[base='director suite']  サブKW: 「director suite 365 評判」(ベースKW一致('director suite'))
+2026-05-16 12:22:53 [INFO]   親KW: 「director suite 365 無料 版 違い」[base='director suite']  サブKW: 「powerdirector 365 director suite 365 違い」(Jaccard=0.65)  「director suite 365 無料 版 違い」(ベースKW一致('director suite'))  「powerdirector 365 director suite 365 違い」(Jaccard=0.65)
+2026-05-16 12:22:53 [INFO]   親KW: 「photodirector 365 クーポン」[base='photodirector 365']  サブKW: 「photodirector 値段」(ベースKW部分一致('photodirector 365'↔'photodirector'))  「photodirector 365 クーポン」(ベースKW一致('photodirector 365'))  「photodirector 値段」(ベースKW部分一致('photodirector 365'↔'photodirector'))
+2026-05-16 12:22:53 [INFO]   親KW: 「photodirector photoshop 比較」[base='photodirector photoshop']  サブKW: 「photodirector photoshop 比較」(ベースKW一致('photodirector photoshop'))
+2026-05-16 12:22:53 [INFO]   親KW: 「photodirector クーポン コード」[base='photodirector クーポン']  サブKW: 「photodirector クーポン コード」(ベースKW一致('photodirector クーポン'))
+2026-05-16 12:22:53 [INFO]   親KW: 「photodirector できること」[base='photodirector できること']  サブKW: 「photodirector 解約 方法」(Jaccard=0.55)  「photodirector 無料 で できること」(Jaccard=0.81)  「photodirector できること」(ベースKW一致('photodirector できること'))  「photodirector 解約 方法」(Jaccard=0.55)  「photodirector 無料 で できること」(Jaccard=0.81)
+2026-05-16 12:22:53 [INFO]   親KW: 「photodirector 安全 性」[base='photodirector 安全']  サブKW: 「photodirector 安全 性」(ベースKW一致('photodirector 安全'))
+2026-05-16 12:22:53 [INFO]   親KW: 「photodirector 画像 合成」[base='photodirector 画像']  サブKW: 「photodirector 画像 合成」(ベースKW一致('photodirector 画像'))
+2026-05-16 12:22:53 [INFO]   親KW: 「photodirector 高 画質 化」[base='photodirector 高']  サブKW: 「photodirector 高 画質 化」(ベースKW一致('photodirector 高'))
+2026-05-16 12:22:53 [INFO]   親KW: 「photodirector 買い切り」[base='photodirector 買い切り']  サブKW: 「photodirector 買い切り」(ベースKW一致('photodirector 買い切り'))
+2026-05-16 12:22:53 [INFO]   親KW: 「photodirector 無料 版 いつまで」[base='photodirector 無料']  サブKW: 「photodirector 無料 版 いつまで」(ベースKW一致('photodirector 無料'))
+2026-05-16 12:22:53 [INFO]   親KW: 「photodirector 無料 版 保存 できない」[base='photodirector 無料']  サブKW: 「photodirector 無料 版 保存 できない」(ベースKW一致('photodirector 無料'))
+2026-05-16 12:22:53 [INFO]   親KW: 「photodirector2025」[base='photodirector2025']  サブKW: 「photodirector2025」(ベースKW一致('photodirector2025'))
+2026-05-16 12:22:53 [INFO]   親KW: 「plaud note pro オンライン会議」[base='plaud note']  サブKW: 「plaud note pro デメリット」(ベースKW一致('plaud note'))  「plaud note pro 口コミ」(ベースKW一致('plaud note'))  「plaud note pro 評判」(ベースKW一致('plaud note'))  「plaud note pro オンライン会議」(ベースKW一致('plaud note'))  「plaud note pro デメリット」(ベースKW一致('plaud note'))  「plaud note pro 口コミ」(ベースKW一致('plaud note'))  「plaud note pro 評判」(ベースKW一致('plaud note'))
+2026-05-16 12:22:53 [INFO]   親KW: 「plaud note pro セキュリティ」[base='plaud note']  サブKW: 「plaud note pro セキュリティ」(ベースKW一致('plaud note'))
+2026-05-16 12:22:53 [INFO]   親KW: 「plaud note pro テンプレート」[base='plaud note']  サブKW: 「plaud note pro テンプレート」(ベースKW一致('plaud note'))
+2026-05-16 12:22:53 [INFO]   親KW: 「plaud note pro バッテリー」[base='plaud note']  サブKW: 「plaud note pro バッテリー」(ベースKW一致('plaud note'))
+2026-05-16 12:22:53 [INFO]   親KW: 「plaud note pro マルチモーダル」[base='plaud note']  サブKW: 「plaud note pro マルチモーダル」(ベースKW一致('plaud note'))
+2026-05-16 12:22:53 [INFO]   親KW: 「plaud note pro ヨドバシ」[base='plaud note']  サブKW: 「plaud note pro ヨドバシ」(ベースKW一致('plaud note'))
+2026-05-16 12:22:53 [INFO]   親KW: 「plaud note pro リアルタイム文字起こし」[base='plaud note']  サブKW: 「plaud note pro 文字起こし」(ベースKW一致('plaud note'))  「plaud note pro リアルタイム文字起こし」(ベースKW一致('plaud note'))  「plaud note pro 文字起こし」(ベースKW一致('plaud note'))
+2026-05-16 12:22:53 [INFO]   親KW: 「plaud note pro 議事録」[base='plaud note']  サブKW: 「plaud note pro 議事録」(ベースKW一致('plaud note'))
+2026-05-16 12:22:53 [INFO]   親KW: 「plaud note pro 精度」[base='plaud note']  サブKW: 「plaud note pro 精度」(ベースKW一致('plaud note'))
+2026-05-16 12:22:53 [INFO]   親KW: 「plaud note pro 設定方法」[base='plaud note']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「plaud note pro 通話録音」[base='plaud note']  サブKW: 「plaud note pro 通話録音」(ベースKW一致('plaud note'))
+2026-05-16 12:22:53 [INFO]   親KW: 「powerdvd 22 無料 版」[base='powerdvd 22']  サブKW: 「powerdvd 22 無料 版」(ベースKW一致('powerdvd 22'))
+2026-05-16 12:22:53 [INFO]   親KW: 「powerdvd 23 24 違い」[base='powerdvd 23']  サブKW: 「powerdvd 23 無料 版 違い」(ベースKW一致('powerdvd 23'))  「powerdvd 23 24 違い」(ベースKW一致('powerdvd 23'))  「powerdvd 23 無料 版 違い」(ベースKW一致('powerdvd 23'))
+2026-05-16 12:22:53 [INFO]   親KW: 「powerdvd 23 ultra アップグレード & 乗換え 版 条件」[base='powerdvd 23']  サブKW: 「powerdvd 23 ultra アップグレード & 乗換え 版 条件」(ベースKW一致('powerdvd 23'))
+2026-05-16 12:22:53 [INFO]   親KW: 「powerdvd 23 ultra クーポン コード」[base='powerdvd 23']  サブKW: 「powerdvd 23 ultra クーポン コード」(ベースKW一致('powerdvd 23'))
+2026-05-16 12:22:53 [INFO]   親KW: 「powerdvd pro ultra 違い」[base='powerdvd pro']  サブKW: 「powerdvd pro ultra 違い」(ベースKW一致('powerdvd pro'))
+2026-05-16 12:22:53 [INFO]   親KW: 「powerdvd 安く 買う」[base='powerdvd 安く']  サブKW: 「powerdvd 安く 買う」(ベースKW一致('powerdvd 安く'))
+2026-05-16 12:22:53 [INFO]   親KW: 「speak プレミアムプラス 違い」[base='speak プレミアムプラス']  サブKW: 「speak プレミアムプラス 違い」(ベースKW一致('speak プレミアムプラス'))
+2026-05-16 12:22:53 [INFO]   親KW: 「youtube ai ナレーション」[base='youtube ai']  サブKW: 「youtube ai ナレーション」(ベースKW一致('youtube ai'))
+2026-05-16 12:22:53 [INFO]   親KW: 「youtube 競合 分析 ai」[base='youtube 競合']  サブKW: 「youtube 競合 分析 ai」(ベースKW一致('youtube 競合'))
+2026-05-16 12:22:53 [INFO]   親KW: 「youtube 広告 ai イラスト」[base='youtube 広告']  サブKW: 「youtube 広告 ai イラスト」(ベースKW一致('youtube 広告'))
+2026-05-16 12:22:53 [INFO]   親KW: 「youtube 雑学 ai」[base='youtube 雑学']  サブKW: 「youtube 雑学 ai」(ベースKW一致('youtube 雑学'))
+2026-05-16 12:22:53 [INFO]   親KW: 「youtube 字幕 自動 生成 ai」[base='youtube 字幕']  サブKW: 「youtube 字幕 自動 生成 ai」(ベースKW一致('youtube 字幕'))
+2026-05-16 12:22:53 [INFO]   親KW: 「youtube 小さい画面 できない アイフォン」[base='youtube 小さい画面']  サブKW: 「youtube 小さい画面 できない アイフォン」(ベースKW一致('youtube 小さい画面'))
+2026-05-16 12:22:53 [INFO]   親KW: 「youtube 動画 編集 生成 ai」[base='youtube 動画']  サブKW: 「youtube 動画 編集 生成 ai」(ベースKW一致('youtube 動画'))
+2026-05-16 12:22:53 [INFO]   親KW: 「youtube 文字 起こし ai ツール」[base='youtube 文字']  サブKW: 「youtube 文字 起こし ai ツール」(ベースKW一致('youtube 文字'))
+2026-05-16 12:22:53 [INFO]   親KW: 「スピーク プラン 違い」[base='スピーク プラン']  サブKW: 「スピーク プラン 違い」(ベースKW一致('スピーク プラン'))
+2026-05-16 12:22:53 [INFO]   親KW: 「スピーク プレミアム プレミアムプラス 違い」[base='スピーク プレミアム']  サブKW: 「スピーク プレミアム プレミアムプラス 違い」(ベースKW一致('スピーク プレミアム'))
+2026-05-16 12:22:53 [INFO]   親KW: 「スピーク プレミアムプラス 違い」[base='スピーク プレミアムプラス']  サブKW: 「スピーク プレミアムプラス 違い」(ベースKW一致('スピーク プレミアムプラス'))
+2026-05-16 12:22:53 [INFO]   親KW: 「スピーク 月額」[base='スピーク 月額']  サブKW: [要確認] 「スピーク 料金 キャンペーン」(広ジャンル('スピーク'系) ベースKW相違 Jaccard=0.27)  「スピーク 月額」(ベースKW一致('スピーク 月額'))  [要確認] 「スピーク 料金 キャンペーン」(広ジャンル('スピーク'系) ベースKW相違 Jaccard=0.27)
+2026-05-16 12:22:53 [INFO]   親KW: 「スピーク 無料期間 解約」[base='スピーク 無料期間']  サブKW: 「スピーク 無料期間 解約」(ベースKW一致('スピーク 無料期間'))
+2026-05-16 12:22:53 [INFO]   親KW: 「ChatGPT 使い方 初心者」[base='chatgpt 使い方']  サブKW: [要確認] 「Claude Code ChatGPT 違い わかりやすく」(ブランド競合('chatgpt'≠'claude') Jaccard=0.22)  [要確認] 「ChatGPT Claude どっちがいい 2026」(広ジャンル('chatgpt'系) ベースKW相違 Jaccard=0.22)  [要確認] 「Claude SEO vs ChatGPT」(ブランド競合('chatgpt'≠'claude') Jaccard=0.21)
+2026-05-16 12:22:53 [INFO]   親KW: 「Claude AI 活用」[base='claude ai']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「画像生成 AI 無料」[base='画像生成 ai']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「プロンプト 書き方 コツ」[base='プロンプト']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「生成AI 活用 ビジネス」[base='生成ai 活用']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「プロンプトエンジニアリング 資格」[base='プロンプトエンジニアリング 資格']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「Gemini 使い方 日本」[base='gemini 使い方']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AI自動化 業務効率」[base='ai自動化 業務効率']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「ノーコード ツール 自動化」[base='ノーコード ツール']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「フリーランス AI 活用 在宅」[base='フリーランス ai']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「nano banana pro 無料」[base='nano banana']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AI自動化 副業 初心者」[base='ai自動化 副業']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AI自動化 ブログ 稼ぐ 方法」[base='ai自動化 ブログ']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AI自動化 在宅ワーク やり方」[base='ai自動化 在宅ワーク']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIエージェント 副業 とは」[base='aiエージェント 副業']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIエージェント 何ができる 初心者」[base='aiエージェント 何ができる']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIエージェント 仕事 効率化 事例」[base='aiエージェント 仕事']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AI副業 ブログ 自動化 やり方」[base='ai副業 ブログ']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AI副業 稼ぎ方 初心者 安全」[base='ai副業 稼ぎ方']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AI副業 主婦 在宅 稼ぐ」[base='ai副業 主婦']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AI副業 スマホだけ できる」[base='ai副業 スマホだけ']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIブログ 自動化 稼ぐ 方法」[base='aiブログ 自動化']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIブログ 稼げない 理由 対策」[base='aiブログ 稼げない']  サブKW: [要確認] 「AIブログ 初心者 始め方」(広ジャンル('aiブログ'系) ベースKW相違 Jaccard=0.23)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIブログ 収益化 どのくらい」[base='aiブログ 収益化']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIブログ 記事 自動生成 やり方」[base='aiブログ 記事']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「Claude Code 副業 ブログ」[base='claude code']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「Claude Code 自動化 何ができる」[base='claude code']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「Claude Code ブログ生成 やり方」[base='claude code']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「Claude Code リライト 自動化」[base='claude code']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「Claude Code Cursor 比較 どっち」[base='claude code']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「Claude Code 稼ぐ 方法」[base='claude code']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「Claude Code API できること」[base='claude code']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIツール 比較 初心者 おすすめ」[base='aiツール 比較']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIツール 無料 副業 使い方」[base='aiツール 無料']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIツール 仕事 効率化 おすすめ」[base='aiツール 仕事']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「ノーコード AI アプリ 作り方」[base='ノーコード ai']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIアプリ 開発 初心者 無料」[base='aiアプリ 開発']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIで仕事を自動化 具体例」[base='aiで仕事を自動化 具体例']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIで稼ぐ 方法 在宅 初心者」[base='aiで稼ぐ 方法']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIで稼ぐ ブログ 仕組み」[base='aiで稼ぐ ブログ']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIアフィリエイト やり方 初心者」[base='aiアフィリエイト やり方']  サブKW: 「AIアフィリエイト 稼げるか」(Jaccard=0.45)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIライティング 稼ぐ 方法」[base='aiライティング 稼ぐ']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIライティング ブログ SEO 対策」[base='aiライティング ブログ']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AI記事 自動生成 SEO 大丈夫」[base='ai記事 自動生成']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AI記事 量産 ペナルティ 対策」[base='ai記事 量産']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AI記事 リライト やり方」[base='ai記事 リライト']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIコンテンツ SEO 対策 2026」[base='aiコンテンツ seo']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AI検索時代 SEO どうなる」[base='ai検索時代 seo']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AI時代 ブログ 稼げるか」[base='ai時代 ブログ']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AI時代 副業 何がいい」[base='ai時代 副業']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「vibe coding とは わかりやすく」[base='vibe coding']  サブKW: 「vibe coding 副業 できるか」(ベースKW一致('vibe coding'))
+2026-05-16 12:22:53 [INFO]   親KW: 「AIプログラミング 初心者 やり方」[base='aiプログラミング 初心者']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「AIプログラミング ツール おすすめ」[base='aiプログラミング ツール']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「Codex vs Claude Code」[base='codex vs']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「Claude Code vs Cursor」[base='claude code']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「Codexで記事生成してみた」[base='codexで記事生成してみた']  (サブKWなし)
+2026-05-16 12:22:53 [INFO]   親KW: 「Claude CodeとCodexどっちがいい？」[base='claude codeとcodexどっちがいい?']  (サブKWなし)
+2026-05-16 12:22:55 [INFO] [wp] 記事取得: 計398件 (draft=1 / publish=397)
+2026-05-16 12:22:55 [INFO] [kanikabari] WP既存記事: 398件取得 (公開=397 / 下書き=1)
+2026-05-16 12:22:58 [INFO] [kanikabari] 書き込み対象: 249件
+2026-05-16 12:23:00 [INFO] [kanikabari] 完了: 親KW生成待ち=125件 / シート内サブKW=64件 / WP統合対象=42件 / カニバリスキップ=10件 / 要確認=8件
+2026-05-16 12:23:00 [INFO]   [カニバリスキップ] 「claude code skills 使い方」→ カニバリスキップ / WP「claude code skills 使い方」
+2026-05-16 12:23:00 [INFO]   [カニバリスキップ] 「plaud note pro オンライン会議」→ カニバリスキップ / WP「plaud note pro オンライン会議」
+2026-05-16 12:23:00 [INFO]   [サブKW] 「claude code skills と は」→ 統合対象 / WP「claude code skills 使い方」
+2026-05-16 12:23:00 [INFO]   [サブKW] 「claude code skills 完全ガイド」→ 統合対象 / WP「claude code skills 使い方」
+2026-05-16 12:23:00 [INFO]   [要確認] 「スピーク プラン 違い」→ 要確認
+2026-05-16 12:23:00 [INFO]   [要確認] 「スピーク 月額」→ 要確認
+2026-05-16 12:23:00 [INFO] 
+============================================================
+2026-05-16 12:23:00 [INFO] 【全体サマリー】
+2026-05-16 12:23:00 [INFO]   ブログ数  : 1件
+2026-05-16 12:23:00 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-16 12:23:00 [INFO]   所要時間  : 9.6秒
+2026-05-16 12:23:00 [INFO] ============================================================
+2026-05-16 12:40:29 [INFO] ============================================================
+2026-05-16 12:40:29 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 12:40:29 [INFO] ============================================================
+2026-05-16 12:40:29 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 12:40:31 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 12:40:31 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 12:40:31 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 12:40:31 [INFO] [kanikabari] 開始: AIVice / シート「キーワード」
+2026-05-16 12:40:33 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-16 12:40:33 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-16 12:40:33 [INFO] 
+============================================================
+2026-05-16 12:40:33 [INFO] 【全体サマリー】
+2026-05-16 12:40:33 [INFO]   ブログ数  : 1件
+2026-05-16 12:40:33 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-16 12:40:33 [INFO]   所要時間  : 4.0秒
+2026-05-16 12:40:33 [INFO] ============================================================
+2026-05-16 12:42:03 [INFO] ============================================================
+2026-05-16 12:42:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 12:42:03 [INFO] ============================================================
+2026-05-16 12:42:03 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 12:42:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 12:42:04 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 12:42:04 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 12:42:04 [INFO] [kanikabari] 開始: AIVice / シート「キーワード」
+2026-05-16 12:42:05 [INFO] [kanikabari] 未判定AIMキーワード: 249件
+2026-05-16 12:42:05 [INFO] [kanikabari] クラスタリング結果: 109クラスター
+2026-05-16 12:42:05 [INFO]   親KW: 「claude code skills 使い方」[base='claude code']  サブKW: 「claude code skillsとは」(ベースKW一致('claude code'))  「claude code skills と は」(ベースKW一致('claude code'))  「claude code skills 公式」(ベースKW一致('claude code'))  「claude code skills ベストプラクティス」(ベースKW一致('claude code'))  「claude code skills ベスト プラクティス」(ベースKW一致('claude code'))  「claude code skills インストール」(ベースKW一致('claude code'))  「claude code skills 作成」(ベースKW一致('claude code'))  「claudecode skills 使い方」(Jaccard=0.90)  「claudecode skills 公式」(Jaccard=0.68)  「claude code skills インストール」(ベースKW一致('claude code'))  「claude code skills 使い方 vscode」(ベースKW一致('claude code'))  「claude code skills 公式 github」(ベースKW一致('claude code'))  「claude code skills 20選」(ベースKW一致('claude code'))  「claude code skills 置き場所」(ベースKW一致('claude code'))  「claude code skills 完全ガイド」(ベースKW一致('claude code'))  「claude code skills 完全活用ガイド」(ベースKW一致('claude code'))  「claude code 最 佳 skills」(ベースKW一致('claude code'))  「claude code skills 公開」(ベースKW一致('claude code'))  「claude code skills 削除」(ベースKW一致('claude code'))  「claude code skills 集」(ベースKW一致('claude code'))  「claude code skills 資料 作成」(ベースKW一致('claude code'))  「claude code skills 仕組み」(ベースKW一致('claude code'))  「claude code skills スライド作成」(ベースKW一致('claude code'))  「claude code skills 使えない」(ベースKW一致('claude code'))  「claude code skills 統合」(ベースKW一致('claude code'))  「claude code skills 人気」(ベースKW一致('claude code'))  「claude code skills 入門ガイド」(ベースKW一致('claude code'))  「claude code skills 認識されない」(ベースKW一致('claude code'))  「claude code skills の使い方」(ベースKW一致('claude code'))  「claude code skills 配置場所」(ベースKW一致('claude code'))  「claude code skills 非エンジニア」(ベースKW一致('claude code'))  「claude code skills ファイル」(ベースKW一致('claude code'))  「claude code skills フロントマター」(ベースKW一致('claude code'))  「claude code skills 保存場所」(ベースKW一致('claude code'))  「claude code skills 本」(ベースKW一致('claude code'))  「claude code skills 法務」(ベースKW一致('claude code'))  「claude code skills マーケティング」(ベースKW一致('claude code'))  「claude code skills 読み込み」(ベースKW一致('claude code'))  「claude code skills 呼び出し 方」(ベースKW一致('claude code'))  「claude code 流程 图 skills」(ベースKW一致('claude code'))  「claude code skills ガイド」(ベースKW一致('claude code'))  「claude code skills グローバル」(ベースKW一致('claude code'))  「claude code skills 実行方法」(ベースKW一致('claude code'))  「claude code skills 自動化」(ベースKW一致('claude code'))  「claude code skills 実践」(ベースKW一致('claude code'))  「claude code skills 常用」(ベースKW一致('claude code'))  「claude code skills 脆弱性」(ベースKW一致('claude code'))  「claude code skills ダウンロード」(ベースKW一致('claude code'))  「claude code skills できること」(ベースKW一致('claude code'))  「claude code skills ドキュメント作成」(ベースKW一致('claude code'))  「claude code skills ドキュメント」(ベースKW一致('claude code'))  「claude code skills 導入方法」(ベースKW一致('claude code'))  「claude code skills 保存 場所」(ベースKW一致('claude code'))  「claude code skills プロンプト」(ベースKW一致('claude code'))  「claude code skills プラグイン」(ベースKW一致('claude code'))
+2026-05-16 12:42:05 [INFO]   親KW: 「claude code skills 一覧」[base='claude code']  サブKW: 「claude code skills おすすめ」(ベースKW一致('claude code'))  「claude skills 一覧」(Jaccard=0.83)  「claude code skills ランキング」(ベースKW一致('claude code'))  「claude code skills plugin 違い」(ベースKW一致('claude code'))
+2026-05-16 12:42:05 [INFO]   親KW: 「claude code skills とは」[base='claude code']  サブKW: 「Claude Code 使い方 初心者」(ベースKW一致('claude code'))  「claude code skills 初心者」(ベースKW一致('claude code'))
+2026-05-16 12:42:05 [INFO]   親KW: 「claude code skills 作り方」[base='claude code']  サブKW: 「claude code agent skills 作り方」(ベースKW一致('claude code'))  「claude code skills 登録」(ベースKW一致('claude code'))
+2026-05-16 12:42:05 [INFO]   親KW: 「cyberlink photodirector とは」[base='cyberlink photodirector']  サブKW: 「cyberlink photodirector とは」(ベースKW一致('cyberlink photodirector'))
+2026-05-16 12:42:05 [INFO]   親KW: 「director suite 365 クーポン」[base='director suite']  サブKW: 「director suite 365 商用 利用」(ベースKW一致('director suite'))  「director suite 365 買い切り」(ベースKW一致('director suite'))  「director suite 365 クーポン」(ベースKW一致('director suite'))  「director suite 365 商用 利用」(ベースKW一致('director suite'))  「director suite 365 買い切り」(ベースKW一致('director suite'))
+2026-05-16 12:42:05 [INFO]   親KW: 「director suite 365 解約」[base='director suite']  サブKW: 「director suite 365 解約」(ベースKW一致('director suite'))
+2026-05-16 12:42:05 [INFO]   親KW: 「director suite 365 使い方」[base='director suite']  サブKW: 「director suite 365 使い方」(ベースKW一致('director suite'))
+2026-05-16 12:42:05 [INFO]   親KW: 「director suite 365 評判」[base='director suite']  サブKW: 「director suite 365 評判」(ベースKW一致('director suite'))
+2026-05-16 12:42:05 [INFO]   親KW: 「director suite 365 無料 版 違い」[base='director suite']  サブKW: 「powerdirector 365 director suite 365 違い」(Jaccard=0.65)  「director suite 365 無料 版 違い」(ベースKW一致('director suite'))  「powerdirector 365 director suite 365 違い」(Jaccard=0.65)
+2026-05-16 12:42:05 [INFO]   親KW: 「photodirector 365 クーポン」[base='photodirector 365']  サブKW: 「photodirector 値段」(ベースKW部分一致('photodirector 365'↔'photodirector'))  「photodirector 365 クーポン」(ベースKW一致('photodirector 365'))  「photodirector 値段」(ベースKW部分一致('photodirector 365'↔'photodirector'))
+2026-05-16 12:42:05 [INFO]   親KW: 「photodirector photoshop 比較」[base='photodirector photoshop']  サブKW: 「photodirector photoshop 比較」(ベースKW一致('photodirector photoshop'))
+2026-05-16 12:42:05 [INFO]   親KW: 「photodirector クーポン コード」[base='photodirector クーポン']  サブKW: 「photodirector クーポン コード」(ベースKW一致('photodirector クーポン'))
+2026-05-16 12:42:05 [INFO]   親KW: 「photodirector できること」[base='photodirector できること']  サブKW: 「photodirector 解約 方法」(Jaccard=0.55)  「photodirector 無料 で できること」(Jaccard=0.81)  「photodirector できること」(ベースKW一致('photodirector できること'))  「photodirector 解約 方法」(Jaccard=0.55)  「photodirector 無料 で できること」(Jaccard=0.81)
+2026-05-16 12:42:05 [INFO]   親KW: 「photodirector 安全 性」[base='photodirector 安全']  サブKW: 「photodirector 安全 性」(ベースKW一致('photodirector 安全'))
+2026-05-16 12:42:05 [INFO]   親KW: 「photodirector 画像 合成」[base='photodirector 画像']  サブKW: 「photodirector 画像 合成」(ベースKW一致('photodirector 画像'))
+2026-05-16 12:42:05 [INFO]   親KW: 「photodirector 高 画質 化」[base='photodirector 高']  サブKW: 「photodirector 高 画質 化」(ベースKW一致('photodirector 高'))
+2026-05-16 12:42:05 [INFO]   親KW: 「photodirector 買い切り」[base='photodirector 買い切り']  サブKW: 「photodirector 買い切り」(ベースKW一致('photodirector 買い切り'))
+2026-05-16 12:42:05 [INFO]   親KW: 「photodirector 無料 版 いつまで」[base='photodirector 無料']  サブKW: 「photodirector 無料 版 いつまで」(ベースKW一致('photodirector 無料'))
+2026-05-16 12:42:05 [INFO]   親KW: 「photodirector 無料 版 保存 できない」[base='photodirector 無料']  サブKW: 「photodirector 無料 版 保存 できない」(ベースKW一致('photodirector 無料'))
+2026-05-16 12:42:05 [INFO]   親KW: 「photodirector2025」[base='photodirector2025']  サブKW: 「photodirector2025」(ベースKW一致('photodirector2025'))
+2026-05-16 12:42:05 [INFO]   親KW: 「plaud note pro オンライン会議」[base='plaud note']  サブKW: 「plaud note pro デメリット」(ベースKW一致('plaud note'))  「plaud note pro 口コミ」(ベースKW一致('plaud note'))  「plaud note pro 評判」(ベースKW一致('plaud note'))  「plaud note pro オンライン会議」(ベースKW一致('plaud note'))  「plaud note pro デメリット」(ベースKW一致('plaud note'))  「plaud note pro 口コミ」(ベースKW一致('plaud note'))  「plaud note pro 評判」(ベースKW一致('plaud note'))
+2026-05-16 12:42:05 [INFO]   親KW: 「plaud note pro セキュリティ」[base='plaud note']  サブKW: 「plaud note pro セキュリティ」(ベースKW一致('plaud note'))
+2026-05-16 12:42:05 [INFO]   親KW: 「plaud note pro テンプレート」[base='plaud note']  サブKW: 「plaud note pro テンプレート」(ベースKW一致('plaud note'))
+2026-05-16 12:42:05 [INFO]   親KW: 「plaud note pro バッテリー」[base='plaud note']  サブKW: 「plaud note pro バッテリー」(ベースKW一致('plaud note'))
+2026-05-16 12:42:05 [INFO]   親KW: 「plaud note pro マルチモーダル」[base='plaud note']  サブKW: 「plaud note pro マルチモーダル」(ベースKW一致('plaud note'))
+2026-05-16 12:42:05 [INFO]   親KW: 「plaud note pro ヨドバシ」[base='plaud note']  サブKW: 「plaud note pro ヨドバシ」(ベースKW一致('plaud note'))
+2026-05-16 12:42:05 [INFO]   親KW: 「plaud note pro リアルタイム文字起こし」[base='plaud note']  サブKW: 「plaud note pro 文字起こし」(ベースKW一致('plaud note'))  「plaud note pro リアルタイム文字起こし」(ベースKW一致('plaud note'))  「plaud note pro 文字起こし」(ベースKW一致('plaud note'))
+2026-05-16 12:42:05 [INFO]   親KW: 「plaud note pro 議事録」[base='plaud note']  サブKW: 「plaud note pro 議事録」(ベースKW一致('plaud note'))
+2026-05-16 12:42:05 [INFO]   親KW: 「plaud note pro 精度」[base='plaud note']  サブKW: 「plaud note pro 精度」(ベースKW一致('plaud note'))
+2026-05-16 12:42:05 [INFO]   親KW: 「plaud note pro 設定方法」[base='plaud note']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「plaud note pro 通話録音」[base='plaud note']  サブKW: 「plaud note pro 通話録音」(ベースKW一致('plaud note'))
+2026-05-16 12:42:05 [INFO]   親KW: 「powerdvd 22 無料 版」[base='powerdvd 22']  サブKW: 「powerdvd 22 無料 版」(ベースKW一致('powerdvd 22'))
+2026-05-16 12:42:05 [INFO]   親KW: 「powerdvd 23 24 違い」[base='powerdvd 23']  サブKW: 「powerdvd 23 無料 版 違い」(ベースKW一致('powerdvd 23'))  「powerdvd 23 24 違い」(ベースKW一致('powerdvd 23'))  「powerdvd 23 無料 版 違い」(ベースKW一致('powerdvd 23'))
+2026-05-16 12:42:05 [INFO]   親KW: 「powerdvd 23 ultra アップグレード & 乗換え 版 条件」[base='powerdvd 23']  サブKW: 「powerdvd 23 ultra アップグレード & 乗換え 版 条件」(ベースKW一致('powerdvd 23'))
+2026-05-16 12:42:05 [INFO]   親KW: 「powerdvd 23 ultra クーポン コード」[base='powerdvd 23']  サブKW: 「powerdvd 23 ultra クーポン コード」(ベースKW一致('powerdvd 23'))
+2026-05-16 12:42:05 [INFO]   親KW: 「powerdvd pro ultra 違い」[base='powerdvd pro']  サブKW: 「powerdvd pro ultra 違い」(ベースKW一致('powerdvd pro'))
+2026-05-16 12:42:05 [INFO]   親KW: 「powerdvd 安く 買う」[base='powerdvd 安く']  サブKW: 「powerdvd 安く 買う」(ベースKW一致('powerdvd 安く'))
+2026-05-16 12:42:05 [INFO]   親KW: 「speak プレミアムプラス 違い」[base='speak プレミアムプラス']  サブKW: 「speak プレミアムプラス 違い」(ベースKW一致('speak プレミアムプラス'))
+2026-05-16 12:42:05 [INFO]   親KW: 「youtube ai ナレーション」[base='youtube ai']  サブKW: 「youtube ai ナレーション」(ベースKW一致('youtube ai'))
+2026-05-16 12:42:05 [INFO]   親KW: 「youtube 競合 分析 ai」[base='youtube 競合']  サブKW: 「youtube 競合 分析 ai」(ベースKW一致('youtube 競合'))
+2026-05-16 12:42:05 [INFO]   親KW: 「youtube 広告 ai イラスト」[base='youtube 広告']  サブKW: 「youtube 広告 ai イラスト」(ベースKW一致('youtube 広告'))
+2026-05-16 12:42:05 [INFO]   親KW: 「youtube 雑学 ai」[base='youtube 雑学']  サブKW: 「youtube 雑学 ai」(ベースKW一致('youtube 雑学'))
+2026-05-16 12:42:05 [INFO]   親KW: 「youtube 字幕 自動 生成 ai」[base='youtube 字幕']  サブKW: 「youtube 字幕 自動 生成 ai」(ベースKW一致('youtube 字幕'))
+2026-05-16 12:42:05 [INFO]   親KW: 「youtube 小さい画面 できない アイフォン」[base='youtube 小さい画面']  サブKW: 「youtube 小さい画面 できない アイフォン」(ベースKW一致('youtube 小さい画面'))
+2026-05-16 12:42:05 [INFO]   親KW: 「youtube 動画 編集 生成 ai」[base='youtube 動画']  サブKW: 「youtube 動画 編集 生成 ai」(ベースKW一致('youtube 動画'))
+2026-05-16 12:42:05 [INFO]   親KW: 「youtube 文字 起こし ai ツール」[base='youtube 文字']  サブKW: 「youtube 文字 起こし ai ツール」(ベースKW一致('youtube 文字'))
+2026-05-16 12:42:05 [INFO]   親KW: 「スピーク プラン 違い」[base='スピーク プラン']  サブKW: 「スピーク プラン 違い」(ベースKW一致('スピーク プラン'))
+2026-05-16 12:42:05 [INFO]   親KW: 「スピーク プレミアム プレミアムプラス 違い」[base='スピーク プレミアム']  サブKW: 「スピーク プレミアム プレミアムプラス 違い」(ベースKW一致('スピーク プレミアム'))
+2026-05-16 12:42:05 [INFO]   親KW: 「スピーク プレミアムプラス 違い」[base='スピーク プレミアムプラス']  サブKW: 「スピーク プレミアムプラス 違い」(ベースKW一致('スピーク プレミアムプラス'))
+2026-05-16 12:42:05 [INFO]   親KW: 「スピーク 月額」[base='スピーク 月額']  サブKW: [要確認] 「スピーク 料金 キャンペーン」(広ジャンル('スピーク'系) ベースKW相違 Jaccard=0.27)  「スピーク 月額」(ベースKW一致('スピーク 月額'))  [要確認] 「スピーク 料金 キャンペーン」(広ジャンル('スピーク'系) ベースKW相違 Jaccard=0.27)
+2026-05-16 12:42:05 [INFO]   親KW: 「スピーク 無料期間 解約」[base='スピーク 無料期間']  サブKW: 「スピーク 無料期間 解約」(ベースKW一致('スピーク 無料期間'))
+2026-05-16 12:42:05 [INFO]   親KW: 「ChatGPT 使い方 初心者」[base='chatgpt 使い方']  サブKW: [要確認] 「Claude Code ChatGPT 違い わかりやすく」(ブランド競合('chatgpt'≠'claude') Jaccard=0.22)  [要確認] 「ChatGPT Claude どっちがいい 2026」(広ジャンル('chatgpt'系) ベースKW相違 Jaccard=0.22)  [要確認] 「Claude SEO vs ChatGPT」(ブランド競合('chatgpt'≠'claude') Jaccard=0.21)
+2026-05-16 12:42:05 [INFO]   親KW: 「Claude AI 活用」[base='claude ai']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「画像生成 AI 無料」[base='画像生成 ai']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「プロンプト 書き方 コツ」[base='プロンプト']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「生成AI 活用 ビジネス」[base='生成ai 活用']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「プロンプトエンジニアリング 資格」[base='プロンプトエンジニアリング 資格']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「Gemini 使い方 日本」[base='gemini 使い方']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AI自動化 業務効率」[base='ai自動化 業務効率']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「ノーコード ツール 自動化」[base='ノーコード ツール']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「フリーランス AI 活用 在宅」[base='フリーランス ai']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「nano banana pro 無料」[base='nano banana']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AI自動化 副業 初心者」[base='ai自動化 副業']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AI自動化 ブログ 稼ぐ 方法」[base='ai自動化 ブログ']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AI自動化 在宅ワーク やり方」[base='ai自動化 在宅ワーク']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIエージェント 副業 とは」[base='aiエージェント 副業']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIエージェント 何ができる 初心者」[base='aiエージェント 何ができる']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIエージェント 仕事 効率化 事例」[base='aiエージェント 仕事']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AI副業 ブログ 自動化 やり方」[base='ai副業 ブログ']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AI副業 稼ぎ方 初心者 安全」[base='ai副業 稼ぎ方']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AI副業 主婦 在宅 稼ぐ」[base='ai副業 主婦']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AI副業 スマホだけ できる」[base='ai副業 スマホだけ']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIブログ 自動化 稼ぐ 方法」[base='aiブログ 自動化']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIブログ 稼げない 理由 対策」[base='aiブログ 稼げない']  サブKW: [要確認] 「AIブログ 初心者 始め方」(広ジャンル('aiブログ'系) ベースKW相違 Jaccard=0.23)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIブログ 収益化 どのくらい」[base='aiブログ 収益化']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIブログ 記事 自動生成 やり方」[base='aiブログ 記事']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「Claude Code 副業 ブログ」[base='claude code']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「Claude Code 自動化 何ができる」[base='claude code']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「Claude Code ブログ生成 やり方」[base='claude code']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「Claude Code リライト 自動化」[base='claude code']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「Claude Code Cursor 比較 どっち」[base='claude code']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「Claude Code 稼ぐ 方法」[base='claude code']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「Claude Code API できること」[base='claude code']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIツール 比較 初心者 おすすめ」[base='aiツール 比較']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIツール 無料 副業 使い方」[base='aiツール 無料']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIツール 仕事 効率化 おすすめ」[base='aiツール 仕事']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「ノーコード AI アプリ 作り方」[base='ノーコード ai']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIアプリ 開発 初心者 無料」[base='aiアプリ 開発']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIで仕事を自動化 具体例」[base='aiで仕事を自動化 具体例']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIで稼ぐ 方法 在宅 初心者」[base='aiで稼ぐ 方法']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIで稼ぐ ブログ 仕組み」[base='aiで稼ぐ ブログ']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIアフィリエイト やり方 初心者」[base='aiアフィリエイト やり方']  サブKW: 「AIアフィリエイト 稼げるか」(Jaccard=0.45)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIライティング 稼ぐ 方法」[base='aiライティング 稼ぐ']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIライティング ブログ SEO 対策」[base='aiライティング ブログ']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AI記事 自動生成 SEO 大丈夫」[base='ai記事 自動生成']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AI記事 量産 ペナルティ 対策」[base='ai記事 量産']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AI記事 リライト やり方」[base='ai記事 リライト']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIコンテンツ SEO 対策 2026」[base='aiコンテンツ seo']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AI検索時代 SEO どうなる」[base='ai検索時代 seo']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AI時代 ブログ 稼げるか」[base='ai時代 ブログ']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AI時代 副業 何がいい」[base='ai時代 副業']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「vibe coding とは わかりやすく」[base='vibe coding']  サブKW: 「vibe coding 副業 できるか」(ベースKW一致('vibe coding'))
+2026-05-16 12:42:05 [INFO]   親KW: 「AIプログラミング 初心者 やり方」[base='aiプログラミング 初心者']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「AIプログラミング ツール おすすめ」[base='aiプログラミング ツール']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「Codex vs Claude Code」[base='codex vs']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「Claude Code vs Cursor」[base='claude code']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「Codexで記事生成してみた」[base='codexで記事生成してみた']  (サブKWなし)
+2026-05-16 12:42:05 [INFO]   親KW: 「Claude CodeとCodexどっちがいい？」[base='claude codeとcodexどっちがいい?']  (サブKWなし)
+2026-05-16 12:42:08 [INFO] [wp] 記事取得: 計398件 (draft=1 / publish=397)
+2026-05-16 12:42:08 [INFO] [kanikabari] WP既存記事: 398件取得 (公開=397 / 下書き=1)
+2026-05-16 12:42:11 [INFO] [kanikabari] 書き込み対象: 249件
+2026-05-16 12:42:13 [INFO] [kanikabari] 要確認行の色修復: 8行を薄ブルーに更新
+2026-05-16 12:42:13 [INFO] [kanikabari] 完了: 親KW生成待ち=84件 / シート内サブKW=104件 / WP統合対象=42件 / カニバリスキップ=10件 / 要確認=9件
+2026-05-16 12:42:13 [INFO]   [カニバリスキップ] 「claude code skills 使い方」→ カニバリスキップ / WP「claude code skills 使い方」
+2026-05-16 12:42:13 [INFO]   [カニバリスキップ] 「plaud note pro オンライン会議」→ カニバリスキップ / WP「plaud note pro オンライン会議」
+2026-05-16 12:42:13 [INFO]   [サブKW] 「claude code skills と は」→ 統合対象 / WP「claude code skills 使い方」
+2026-05-16 12:42:13 [INFO]   [サブKW] 「claude code skills 完全ガイド」→ 統合対象 / WP「claude code skills 使い方」
+2026-05-16 12:42:13 [INFO]   [要確認] 「スピーク プラン 違い」→ 要確認
+2026-05-16 12:42:13 [INFO]   [要確認] 「スピーク 月額」→ 要確認
+2026-05-16 12:42:13 [INFO] 
+============================================================
+2026-05-16 12:42:13 [INFO] 【全体サマリー】
+2026-05-16 12:42:13 [INFO]   ブログ数  : 1件
+2026-05-16 12:42:13 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-16 12:42:13 [INFO]   所要時間  : 10.3秒
+2026-05-16 12:42:13 [INFO] ============================================================
+2026-05-16 16:07:33 [INFO] ============================================================
+2026-05-16 16:07:34 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 16:07:34 [INFO] ============================================================
+2026-05-16 16:07:34 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 16:07:36 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 16:07:36 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 16:07:36 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 16:07:36 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-16 16:07:36 [INFO]   fact_check       : True
+2026-05-16 16:07:36 [INFO]   article_type_mix : True
+2026-05-16 16:07:36 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-16 16:07:36 [INFO]   article_count    : 1  dry_run: False
+2026-05-16 16:07:38 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-16 16:07:38 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-16 16:07:38 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-16 16:07:38 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-16 16:07:38 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-16 16:07:38 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-16 16:07:39 [INFO] [wp] 記事取得: 計399件 (draft=1 / publish=398)
+2026-05-16 16:07:39 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-16 16:07:40 [DEBUG] [fetch] シート「絞り込みKW」: 203行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-16 16:07:40 [INFO] [fetch] サブKW紐付け: 146件 → 22記事に統合
+2026-05-16 16:07:40 [INFO] [fetch] [キーワード] メインKW: 21件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 19件  テーマ外除外: 15件  aim内訳: [now:4, aim:15, claude:14, add:3]
+2026-05-16 16:07:40 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-16 16:07:40 [INFO] [dup_check] 優先候補: 21件 {'now': 4, 'add': 2, 'aim': 2, 'claude': 13} を先頭評価
+2026-05-16 16:07:40 [DEBUG] [dup_check] OK: 「cyberlink photodirector とは」
+2026-05-16 16:07:40 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=21件, 要求=1件)
+2026-05-16 16:07:40 [INFO] [select] 1件選定 (要求=1件)
+2026-05-16 16:07:40 [INFO] [select]   1. 「cyberlink photodirector とは」 vol=0 seo=N/A comp=N/A
+2026-05-16 16:07:40 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-16 16:07:40 [INFO] [workup-ai] 候補: 21件 / 選定: 1件 / 生成予定: 1件
+2026-05-16 16:07:40 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-16 16:07:40 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:07:40 [INFO] [workup-ai] [1/1] [LONGTAIL] 「cyberlink photodirector とは」 vol=0 ★NOW
+2026-05-16 16:07:40 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:07:40 [INFO] [generate] 生成開始: 「cyberlink photodirector とは」(vol:0) fact_check=True target_length=6,629字  サブKW:1件  誘導リンク:0件
+2026-05-16 16:10:25 [INFO] [generate] パターンCTA挿入（H3末尾）: 3件
+2026-05-16 16:10:25 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「PhotoDirector 365」(ID:9815)
+2026-05-16 16:10:25 [INFO] [generate] 完了: 「CyberLink PhotoDirectorとは？機能・価格・無料版まで初心者向けに解説」
+2026-05-16 16:10:25 [INFO] [post] 投稿方式: draft
+2026-05-16 16:11:09 [INFO] [post] WP投稿完了: ID=10208 → https://workup-ai.com/wp-admin/post.php?post=10208&action=edit
+2026-05-16 16:11:09 [INFO] [workup-ai] [1/1] ✅ 完了: 「CyberLink PhotoDirectorとは？機能・価格・無料版まで初心者向けに解説」
+2026-05-16 16:11:09 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-16 16:11:09 [INFO] 
+============================================================
+2026-05-16 16:11:09 [INFO] 【全体サマリー】
+2026-05-16 16:11:09 [INFO]   ブログ数  : 1件
+2026-05-16 16:11:09 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-16 16:11:09 [INFO]   所要時間  : 215.7秒
+2026-05-16 16:11:09 [INFO]   ✅ [workup-ai] cyberlink photodirector とは → CyberLink PhotoDirectorとは？機能・価格・無料版まで初心者向けに解説
+2026-05-16 16:11:09 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10208&action=edit
+2026-05-16 16:11:09 [INFO] ============================================================
+2026-05-16 16:11:17 [INFO] ============================================================
+2026-05-16 16:11:17 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 16:11:17 [INFO] ============================================================
+2026-05-16 16:11:17 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 16:11:18 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 16:11:18 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 16:11:18 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 16:11:18 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-16 16:11:18 [INFO]   fact_check       : True
+2026-05-16 16:11:18 [INFO]   article_type_mix : True
+2026-05-16 16:11:18 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-16 16:11:18 [INFO]   article_count    : 1  dry_run: False
+2026-05-16 16:11:20 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-16 16:11:20 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-16 16:11:20 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-16 16:11:20 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-16 16:11:20 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-16 16:11:20 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-16 16:11:20 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-16 16:11:20 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-16 16:11:20 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-16 16:11:20 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-16 16:11:20 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-16 16:11:20 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-16 16:11:20 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-16 16:11:20 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-16 16:11:20 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-16 16:11:20 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-16 16:11:20 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-16 16:11:20 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-16 16:11:20 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-16 16:11:22 [INFO] [wp] 記事取得: 計400件 (draft=2 / publish=398)
+2026-05-16 16:11:22 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-16 16:11:24 [DEBUG] [fetch] シート「絞り込みKW」: 203行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-16 16:11:24 [INFO] [fetch] サブKW紐付け: 146件 → 21記事に統合
+2026-05-16 16:11:24 [INFO] [fetch] [キーワード] メインKW: 20件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 20件  テーマ外除外: 15件  aim内訳: [now:3, aim:15, claude:14, add:3]
+2026-05-16 16:11:24 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-16 16:11:24 [INFO] [dup_check] 優先候補: 20件 {'now': 3, 'add': 2, 'aim': 2, 'claude': 13} を先頭評価
+2026-05-16 16:11:24 [DEBUG] [dup_check] OK: 「photodirector 安全 性」
+2026-05-16 16:11:24 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=20件, 要求=1件)
+2026-05-16 16:11:24 [INFO] [select] 1件選定 (要求=1件)
+2026-05-16 16:11:24 [INFO] [select]   1. 「photodirector 安全 性」 vol=0 seo=N/A comp=N/A
+2026-05-16 16:11:24 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-16 16:11:24 [INFO] [workup-ai] 候補: 20件 / 選定: 1件 / 生成予定: 1件
+2026-05-16 16:11:24 [INFO] [api_guard] 本日の使用量: $0.1738 / ¥26 (3回呼び出し)
+2026-05-16 16:11:24 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:11:24 [INFO] [workup-ai] [1/1] [LONGTAIL] 「photodirector 安全 性」 vol=0 ★NOW
+2026-05-16 16:11:24 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:11:24 [INFO] [generate] 生成開始: 「photodirector 安全 性」(vol:0) fact_check=True target_length=5,028字  サブKW:1件  誘導リンク:0件
+2026-05-16 16:14:12 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-16 16:14:12 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「PhotoDirector 365」(ID:9815)
+2026-05-16 16:14:12 [INFO] [generate] 完了: 「PhotoDirectorは安全？ウイルス・危険性・個人情報の不安を解消」
+2026-05-16 16:14:12 [INFO] [post] 投稿方式: draft
+2026-05-16 16:14:58 [INFO] [post] WP投稿完了: ID=10212 → https://workup-ai.com/wp-admin/post.php?post=10212&action=edit
+2026-05-16 16:14:58 [INFO] [workup-ai] [1/1] ✅ 完了: 「PhotoDirectorは安全？ウイルス・危険性・個人情報の不安を解消」
+2026-05-16 16:14:58 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-16 16:14:58 [INFO] 
+============================================================
+2026-05-16 16:14:58 [INFO] 【全体サマリー】
+2026-05-16 16:14:58 [INFO]   ブログ数  : 1件
+2026-05-16 16:14:58 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-16 16:14:58 [INFO]   所要時間  : 221.2秒
+2026-05-16 16:14:58 [INFO]   ✅ [workup-ai] photodirector 安全 性 → PhotoDirectorは安全？ウイルス・危険性・個人情報の不安を解消
+2026-05-16 16:14:58 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10212&action=edit
+2026-05-16 16:14:58 [INFO] ============================================================
+2026-05-16 16:22:44 [INFO] ============================================================
+2026-05-16 16:22:44 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 16:22:44 [INFO] ============================================================
+2026-05-16 16:22:44 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 16:22:47 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 16:22:47 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 16:22:47 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 16:22:47 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-16 16:22:47 [INFO]   fact_check       : True
+2026-05-16 16:22:47 [INFO]   article_type_mix : True
+2026-05-16 16:22:47 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-16 16:22:47 [INFO]   article_count    : 1  dry_run: False
+2026-05-16 16:22:49 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-16 16:22:49 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-16 16:22:49 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-16 16:22:49 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-16 16:22:49 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-16 16:22:49 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-16 16:22:49 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-16 16:22:49 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-16 16:22:49 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-16 16:22:49 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-16 16:22:49 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-16 16:22:49 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-16 16:22:49 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-16 16:22:49 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-16 16:22:49 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-16 16:22:49 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-16 16:22:49 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-16 16:22:49 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-16 16:22:49 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-16 16:22:51 [INFO] [wp] 記事取得: 計401件 (draft=3 / publish=398)
+2026-05-16 16:22:51 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-16 16:22:52 [DEBUG] [fetch] シート「絞り込みKW」: 203行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-16 16:22:52 [INFO] [fetch] サブKW紐付け: 146件 → 20記事に統合
+2026-05-16 16:22:52 [INFO] [fetch] [キーワード] メインKW: 19件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 21件  テーマ外除外: 15件  aim内訳: [now:2, aim:15, claude:14, add:3]
+2026-05-16 16:22:52 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-16 16:22:52 [INFO] [dup_check] 優先候補: 19件 {'now': 2, 'add': 2, 'aim': 2, 'claude': 13} を先頭評価
+2026-05-16 16:22:52 [DEBUG] [dup_check] OK: 「photodirector 買い切り」
+2026-05-16 16:22:52 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=19件, 要求=1件)
+2026-05-16 16:22:52 [INFO] [select] 1件選定 (要求=1件)
+2026-05-16 16:22:52 [INFO] [select]   1. 「photodirector 買い切り」 vol=0 seo=N/A comp=N/A
+2026-05-16 16:22:52 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-16 16:22:52 [INFO] [workup-ai] 候補: 19件 / 選定: 1件 / 生成予定: 1件
+2026-05-16 16:22:52 [INFO] [api_guard] 本日の使用量: $0.3479 / ¥52 (6回呼び出し)
+2026-05-16 16:22:52 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:22:52 [INFO] [workup-ai] [1/1] [LONGTAIL] 「photodirector 買い切り」 vol=0 ★NOW
+2026-05-16 16:22:52 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:22:52 [INFO] [generate] 生成開始: 「photodirector 買い切り」(vol:0) fact_check=True target_length=7,463字  サブKW:1件  誘導リンク:0件
+2026-05-16 16:22:54 [ERROR] [workup-ai] [1/1] ❌ エラー（続行）: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cb5r2hVKCimG51t14eHt7'}
+2026-05-16 16:22:54 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-16 16:22:54 [INFO] 
+============================================================
+2026-05-16 16:22:54 [INFO] 【全体サマリー】
+2026-05-16 16:22:54 [INFO]   ブログ数  : 1件
+2026-05-16 16:22:54 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-16 16:22:54 [INFO]   所要時間  : 9.9秒
+2026-05-16 16:22:54 [INFO]   ❌ [workup-ai] photodirector 買い切り → (生成失敗)
+2026-05-16 16:22:54 [INFO] ============================================================
+2026-05-16 16:27:14 [INFO] ============================================================
+2026-05-16 16:27:14 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 16:27:14 [INFO] ============================================================
+2026-05-16 16:27:14 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 16:27:15 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 16:27:15 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 16:27:15 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 16:27:15 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-16 16:27:15 [INFO]   fact_check       : True
+2026-05-16 16:27:15 [INFO]   article_type_mix : True
+2026-05-16 16:27:15 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-16 16:27:15 [INFO]   article_count    : 1  dry_run: False
+2026-05-16 16:27:17 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-16 16:27:17 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-16 16:27:17 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-16 16:27:17 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-16 16:27:17 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-16 16:27:17 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-16 16:27:17 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-16 16:27:17 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-16 16:27:17 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-16 16:27:17 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-16 16:27:17 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-16 16:27:17 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-16 16:27:17 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-16 16:27:17 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-16 16:27:17 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-16 16:27:17 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-16 16:27:17 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-16 16:27:17 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-16 16:27:17 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-16 16:27:20 [INFO] [wp] 記事取得: 計401件 (draft=2 / publish=399)
+2026-05-16 16:27:20 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-16 16:27:21 [DEBUG] [fetch] シート「絞り込みKW」: 203行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-16 16:27:21 [INFO] [fetch] サブKW紐付け: 146件 → 20記事に統合
+2026-05-16 16:27:21 [INFO] [fetch] [キーワード] メインKW: 19件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 21件  テーマ外除外: 15件  aim内訳: [now:2, aim:15, claude:14, add:3]
+2026-05-16 16:27:21 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-16 16:27:21 [INFO] [dup_check] 優先候補: 19件 {'now': 2, 'add': 2, 'aim': 2, 'claude': 13} を先頭評価
+2026-05-16 16:27:21 [DEBUG] [dup_check] OK: 「photodirector 買い切り」
+2026-05-16 16:27:21 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=19件, 要求=1件)
+2026-05-16 16:27:21 [INFO] [select] 1件選定 (要求=1件)
+2026-05-16 16:27:21 [INFO] [select]   1. 「photodirector 買い切り」 vol=0 seo=N/A comp=N/A
+2026-05-16 16:27:21 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-16 16:27:21 [INFO] [workup-ai] 候補: 19件 / 選定: 1件 / 生成予定: 1件
+2026-05-16 16:27:21 [INFO] [api_guard] 本日の使用量: $0.3479 / ¥52 (6回呼び出し)
+2026-05-16 16:27:21 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:27:21 [INFO] [workup-ai] [1/1] [LONGTAIL] 「photodirector 買い切り」 vol=0 ★NOW
+2026-05-16 16:27:21 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:27:21 [INFO] [generate] 生成開始: 「photodirector 買い切り」(vol:0) fact_check=True target_length=7,534字  サブKW:1件  誘導リンク:0件
+2026-05-16 16:27:23 [ERROR] [workup-ai] [1/1] ❌ エラー（続行）: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cb5rNWSboCZhN5eXPEixd'}
+2026-05-16 16:27:23 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-16 16:27:23 [INFO] 
+============================================================
+2026-05-16 16:27:23 [INFO] 【全体サマリー】
+2026-05-16 16:27:23 [INFO]   ブログ数  : 1件
+2026-05-16 16:27:23 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-16 16:27:23 [INFO]   所要時間  : 9.1秒
+2026-05-16 16:27:23 [INFO]   ❌ [workup-ai] photodirector 買い切り → (生成失敗)
+2026-05-16 16:27:23 [INFO] ============================================================
+2026-05-16 16:33:51 [INFO] ============================================================
+2026-05-16 16:33:51 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 16:33:51 [INFO] ============================================================
+2026-05-16 16:33:51 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 16:33:53 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 16:33:53 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 16:33:53 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 16:33:53 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-16 16:33:53 [INFO]   fact_check       : True
+2026-05-16 16:33:53 [INFO]   article_type_mix : True
+2026-05-16 16:33:53 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-16 16:33:53 [INFO]   article_count    : 1  dry_run: False
+2026-05-16 16:33:55 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-16 16:33:55 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-16 16:33:55 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-16 16:33:55 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-16 16:33:55 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-16 16:33:55 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-16 16:33:55 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-16 16:33:55 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-16 16:33:55 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-16 16:33:55 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-16 16:33:55 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-16 16:33:55 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-16 16:33:55 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-16 16:33:55 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-16 16:33:55 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-16 16:33:55 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-16 16:33:55 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-16 16:33:55 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-16 16:33:55 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-16 16:33:57 [INFO] [wp] 記事取得: 計401件 (draft=2 / publish=399)
+2026-05-16 16:33:57 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-16 16:33:58 [DEBUG] [fetch] シート「絞り込みKW」: 203行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-16 16:33:58 [INFO] [fetch] サブKW紐付け: 146件 → 20記事に統合
+2026-05-16 16:33:58 [INFO] [fetch] [キーワード] メインKW: 19件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 21件  テーマ外除外: 15件  aim内訳: [now:2, aim:15, claude:14, add:3]
+2026-05-16 16:33:58 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-16 16:33:58 [INFO] [dup_check] 優先候補: 19件 {'now': 2, 'add': 2, 'aim': 2, 'claude': 13} を先頭評価
+2026-05-16 16:33:58 [DEBUG] [dup_check] OK: 「photodirector 買い切り」
+2026-05-16 16:33:58 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=19件, 要求=1件)
+2026-05-16 16:33:58 [INFO] [select] 1件選定 (要求=1件)
+2026-05-16 16:33:58 [INFO] [select]   1. 「photodirector 買い切り」 vol=0 seo=N/A comp=N/A
+2026-05-16 16:33:58 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-16 16:33:58 [INFO] [workup-ai] 候補: 19件 / 選定: 1件 / 生成予定: 1件
+2026-05-16 16:33:58 [INFO] [api_guard] 本日の使用量: $0.3479 / ¥52 (6回呼び出し)
+2026-05-16 16:33:58 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:33:58 [INFO] [workup-ai] [1/1] [LONGTAIL] 「photodirector 買い切り」 vol=0 ★NOW
+2026-05-16 16:33:58 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:33:58 [INFO] [generate] 生成開始: 「photodirector 買い切り」(vol:0) fact_check=True target_length=5,244字  サブKW:1件  誘導リンク:0件
+2026-05-16 16:34:00 [ERROR] [workup-ai] [1/1] ❌ エラー（続行）: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cb5rsmyJnn36RLnMJfKh9'}
+2026-05-16 16:34:00 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-16 16:34:00 [INFO] 
+============================================================
+2026-05-16 16:34:00 [INFO] 【全体サマリー】
+2026-05-16 16:34:00 [INFO]   ブログ数  : 1件
+2026-05-16 16:34:00 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-16 16:34:00 [INFO]   所要時間  : 9.2秒
+2026-05-16 16:34:00 [INFO]   ❌ [workup-ai] photodirector 買い切り → (生成失敗)
+2026-05-16 16:34:00 [INFO] ============================================================
+2026-05-16 16:36:02 [INFO] ============================================================
+2026-05-16 16:36:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 16:36:02 [INFO] ============================================================
+2026-05-16 16:36:02 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 16:36:03 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 16:36:03 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 16:36:03 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 16:36:03 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-16 16:36:03 [INFO]   fact_check       : True
+2026-05-16 16:36:03 [INFO]   article_type_mix : True
+2026-05-16 16:36:03 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-16 16:36:03 [INFO]   article_count    : 1  dry_run: False
+2026-05-16 16:36:05 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-16 16:36:05 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-16 16:36:05 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-16 16:36:05 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-16 16:36:05 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-16 16:36:05 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-16 16:36:05 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-16 16:36:05 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-16 16:36:05 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-16 16:36:05 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-16 16:36:05 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-16 16:36:05 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-16 16:36:05 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-16 16:36:05 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-16 16:36:05 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-16 16:36:05 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-16 16:36:05 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-16 16:36:05 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-16 16:36:05 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-16 16:36:08 [INFO] [wp] 記事取得: 計401件 (draft=2 / publish=399)
+2026-05-16 16:36:08 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-16 16:36:09 [DEBUG] [fetch] シート「絞り込みKW」: 203行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-16 16:36:09 [INFO] [fetch] サブKW紐付け: 146件 → 20記事に統合
+2026-05-16 16:36:09 [INFO] [fetch] [キーワード] メインKW: 19件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 21件  テーマ外除外: 15件  aim内訳: [now:2, aim:15, claude:14, add:3]
+2026-05-16 16:36:09 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-16 16:36:09 [INFO] [dup_check] 優先候補: 19件 {'now': 2, 'add': 2, 'aim': 2, 'claude': 13} を先頭評価
+2026-05-16 16:36:09 [DEBUG] [dup_check] OK: 「photodirector 買い切り」
+2026-05-16 16:36:09 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=19件, 要求=1件)
+2026-05-16 16:36:09 [INFO] [select] 1件選定 (要求=1件)
+2026-05-16 16:36:09 [INFO] [select]   1. 「photodirector 買い切り」 vol=0 seo=N/A comp=N/A
+2026-05-16 16:36:09 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-16 16:36:09 [INFO] [workup-ai] 候補: 19件 / 選定: 1件 / 生成予定: 1件
+2026-05-16 16:36:09 [INFO] [api_guard] 本日の使用量: $0.3479 / ¥52 (6回呼び出し)
+2026-05-16 16:36:09 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:36:09 [INFO] [workup-ai] [1/1] [LONGTAIL] 「photodirector 買い切り」 vol=0 ★NOW
+2026-05-16 16:36:09 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:36:09 [INFO] [generate] 生成開始: 「photodirector 買い切り」(vol:0) fact_check=True target_length=7,588字  サブKW:1件  誘導リンク:0件
+2026-05-16 16:36:11 [ERROR] [workup-ai] [1/1] ❌ エラー（続行）: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cb5s3RSoVATa8WdLoRYc6'}
+2026-05-16 16:36:11 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-16 16:36:11 [INFO] 
+============================================================
+2026-05-16 16:36:11 [INFO] 【全体サマリー】
+2026-05-16 16:36:11 [INFO]   ブログ数  : 1件
+2026-05-16 16:36:11 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-16 16:36:11 [INFO]   所要時間  : 9.2秒
+2026-05-16 16:36:11 [INFO]   ❌ [workup-ai] photodirector 買い切り → (生成失敗)
+2026-05-16 16:36:11 [INFO] ============================================================
+2026-05-16 16:41:33 [INFO] ============================================================
+2026-05-16 16:41:33 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 16:41:33 [INFO] ============================================================
+2026-05-16 16:41:33 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 16:41:35 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 16:41:35 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 16:41:35 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 16:41:35 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-16 16:41:35 [INFO]   fact_check       : True
+2026-05-16 16:41:35 [INFO]   article_type_mix : True
+2026-05-16 16:41:35 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-16 16:41:35 [INFO]   article_count    : 1  dry_run: False
+2026-05-16 16:41:37 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-16 16:41:37 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-16 16:41:37 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-16 16:41:37 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-16 16:41:37 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-16 16:41:37 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-16 16:41:37 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-16 16:41:37 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-16 16:41:37 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-16 16:41:37 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-16 16:41:37 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-16 16:41:37 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-16 16:41:37 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-16 16:41:37 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-16 16:41:37 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-16 16:41:37 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-16 16:41:37 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-16 16:41:37 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-16 16:41:37 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-16 16:41:39 [INFO] [wp] 記事取得: 計401件 (draft=2 / publish=399)
+2026-05-16 16:41:39 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-16 16:41:41 [DEBUG] [fetch] シート「絞り込みKW」: 203行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-16 16:41:41 [INFO] [fetch] サブKW紐付け: 146件 → 20記事に統合
+2026-05-16 16:41:41 [INFO] [fetch] [キーワード] メインKW: 19件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 21件  テーマ外除外: 15件  aim内訳: [now:2, aim:15, claude:14, add:3]
+2026-05-16 16:41:41 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-16 16:41:41 [INFO] [dup_check] 優先候補: 19件 {'now': 2, 'add': 2, 'aim': 2, 'claude': 13} を先頭評価
+2026-05-16 16:41:41 [DEBUG] [dup_check] OK: 「photodirector 買い切り」
+2026-05-16 16:41:41 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=19件, 要求=1件)
+2026-05-16 16:41:41 [INFO] [select] 1件選定 (要求=1件)
+2026-05-16 16:41:41 [INFO] [select]   1. 「photodirector 買い切り」 vol=0 seo=N/A comp=N/A
+2026-05-16 16:41:41 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-16 16:41:41 [INFO] [workup-ai] 候補: 19件 / 選定: 1件 / 生成予定: 1件
+2026-05-16 16:41:41 [INFO] [api_guard] 本日の使用量: $0.3479 / ¥52 (6回呼び出し)
+2026-05-16 16:41:41 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:41:41 [INFO] [workup-ai] [1/1] [LONGTAIL] 「photodirector 買い切り」 vol=0 ★NOW
+2026-05-16 16:41:41 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:41:41 [INFO] [generate] 生成開始: 「photodirector 買い切り」(vol:0) fact_check=True target_length=5,241字  サブKW:1件  誘導リンク:0件
+2026-05-16 16:41:43 [ERROR] [workup-ai] [1/1] ❌ エラー（続行）: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cb5sTsJEBgobTuGxLJRVz'}
+2026-05-16 16:41:43 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-16 16:41:43 [INFO] 
+============================================================
+2026-05-16 16:41:43 [INFO] 【全体サマリー】
+2026-05-16 16:41:43 [INFO]   ブログ数  : 1件
+2026-05-16 16:41:43 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-16 16:41:43 [INFO]   所要時間  : 9.7秒
+2026-05-16 16:41:43 [INFO]   ❌ [workup-ai] photodirector 買い切り → (生成失敗)
+2026-05-16 16:41:43 [INFO] ============================================================
+2026-05-16 16:42:33 [INFO] ============================================================
+2026-05-16 16:42:33 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 16:42:33 [INFO] ============================================================
+2026-05-16 16:42:33 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 16:42:34 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 16:42:34 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 16:42:34 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 16:42:34 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-16 16:42:34 [INFO]   fact_check       : True
+2026-05-16 16:42:34 [INFO]   article_type_mix : True
+2026-05-16 16:42:34 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-16 16:42:34 [INFO]   article_count    : 1  dry_run: False
+2026-05-16 16:42:35 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-16 16:42:35 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-16 16:42:35 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-16 16:42:35 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-16 16:42:35 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-16 16:42:35 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-16 16:42:35 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-16 16:42:35 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-16 16:42:35 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-16 16:42:35 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-16 16:42:35 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-16 16:42:35 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-16 16:42:35 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-16 16:42:35 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-16 16:42:35 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-16 16:42:35 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-16 16:42:35 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-16 16:42:35 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-16 16:42:35 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-16 16:42:38 [INFO] [wp] 記事取得: 計401件 (draft=2 / publish=399)
+2026-05-16 16:42:38 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-16 16:42:39 [DEBUG] [fetch] シート「絞り込みKW」: 203行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-16 16:42:39 [INFO] [fetch] サブKW紐付け: 146件 → 20記事に統合
+2026-05-16 16:42:39 [INFO] [fetch] [キーワード] メインKW: 19件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 21件  テーマ外除外: 15件  aim内訳: [now:2, aim:15, claude:14, add:3]
+2026-05-16 16:42:39 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-16 16:42:39 [INFO] [dup_check] 優先候補: 19件 {'now': 2, 'add': 2, 'aim': 2, 'claude': 13} を先頭評価
+2026-05-16 16:42:39 [DEBUG] [dup_check] OK: 「photodirector 買い切り」
+2026-05-16 16:42:39 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=19件, 要求=1件)
+2026-05-16 16:42:39 [INFO] [select] 1件選定 (要求=1件)
+2026-05-16 16:42:39 [INFO] [select]   1. 「photodirector 買い切り」 vol=0 seo=N/A comp=N/A
+2026-05-16 16:42:39 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-16 16:42:39 [INFO] [workup-ai] 候補: 19件 / 選定: 1件 / 生成予定: 1件
+2026-05-16 16:42:39 [INFO] [api_guard] 本日の使用量: $0.3479 / ¥52 (6回呼び出し)
+2026-05-16 16:42:39 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:42:39 [INFO] [workup-ai] [1/1] [LONGTAIL] 「photodirector 買い切り」 vol=0 ★NOW
+2026-05-16 16:42:39 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:42:39 [INFO] [generate] 生成開始: 「photodirector 買い切り」(vol:0) fact_check=True target_length=7,246字  サブKW:1件  誘導リンク:0件
+2026-05-16 16:42:41 [ERROR] [workup-ai] [1/1] ❌ エラー（続行）: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cb5sYDAvptSp9X2kBBcBL'}
+2026-05-16 16:42:41 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-16 16:42:41 [INFO] 
+============================================================
+2026-05-16 16:42:41 [INFO] 【全体サマリー】
+2026-05-16 16:42:41 [INFO]   ブログ数  : 1件
+2026-05-16 16:42:41 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-16 16:42:41 [INFO]   所要時間  : 8.9秒
+2026-05-16 16:42:41 [INFO]   ❌ [workup-ai] photodirector 買い切り → (生成失敗)
+2026-05-16 16:42:41 [INFO] ============================================================
+2026-05-16 16:51:22 [INFO] ============================================================
+2026-05-16 16:51:22 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 16:51:22 [INFO] ============================================================
+2026-05-16 16:51:22 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 16:51:24 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 16:51:24 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 16:51:24 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 16:51:24 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-16 16:51:24 [INFO]   fact_check       : True
+2026-05-16 16:51:24 [INFO]   article_type_mix : True
+2026-05-16 16:51:24 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-16 16:51:24 [INFO]   article_count    : 1  dry_run: False
+2026-05-16 16:51:26 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-16 16:51:26 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-16 16:51:26 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-16 16:51:26 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-16 16:51:26 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-16 16:51:26 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-16 16:51:26 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-16 16:51:26 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-16 16:51:26 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-16 16:51:26 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-16 16:51:26 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-16 16:51:26 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-16 16:51:26 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-16 16:51:26 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-16 16:51:26 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-16 16:51:26 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-16 16:51:26 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-16 16:51:26 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-16 16:51:26 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-16 16:51:28 [INFO] [wp] 記事取得: 計401件 (draft=2 / publish=399)
+2026-05-16 16:51:28 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-16 16:51:30 [DEBUG] [fetch] シート「絞り込みKW」: 203行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-16 16:51:30 [INFO] [fetch] サブKW紐付け: 146件 → 20記事に統合
+2026-05-16 16:51:30 [INFO] [fetch] [キーワード] メインKW: 19件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 21件  テーマ外除外: 15件  aim内訳: [now:2, aim:15, claude:14, add:3]
+2026-05-16 16:51:30 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-16 16:51:30 [INFO] [dup_check] 優先候補: 19件 {'now': 2, 'add': 2, 'aim': 2, 'claude': 13} を先頭評価
+2026-05-16 16:51:30 [DEBUG] [dup_check] OK: 「photodirector 買い切り」
+2026-05-16 16:51:30 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=19件, 要求=1件)
+2026-05-16 16:51:30 [INFO] [select] 1件選定 (要求=1件)
+2026-05-16 16:51:30 [INFO] [select]   1. 「photodirector 買い切り」 vol=0 seo=N/A comp=N/A
+2026-05-16 16:51:30 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-16 16:51:30 [INFO] [workup-ai] 候補: 19件 / 選定: 1件 / 生成予定: 1件
+2026-05-16 16:51:30 [INFO] [api_guard] 本日の使用量: $0.3479 / ¥52 (6回呼び出し)
+2026-05-16 16:51:30 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:51:30 [INFO] [workup-ai] [1/1] [LONGTAIL] 「photodirector 買い切り」 vol=0 ★NOW
+2026-05-16 16:51:30 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:51:30 [INFO] [generate] 生成開始: 「photodirector 買い切り」(vol:0) fact_check=True target_length=5,498字  サブKW:1件  誘導リンク:0件
+2026-05-16 16:54:22 [INFO] [generate] パターンCTA挿入（H3末尾）: 3件
+2026-05-16 16:54:22 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「PhotoDirector 365」(ID:9815)
+2026-05-16 16:54:22 [INFO] [generate] 完了: 「PhotoDirector買い切り版の価格・機能・サブスクとの違いを徹底解説」
+2026-05-16 16:54:22 [INFO] [post] 投稿方式: draft
+2026-05-16 16:55:08 [INFO] [post] WP投稿完了: ID=10218 → https://workup-ai.com/wp-admin/post.php?post=10218&action=edit
+2026-05-16 16:55:08 [INFO] [workup-ai] [1/1] ✅ 完了: 「PhotoDirector買い切り版の価格・機能・サブスクとの違いを徹底解説」
+2026-05-16 16:55:08 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-16 16:55:08 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+2026-05-16 16:56:01 [INFO] 
+============================================================
+2026-05-16 16:56:01 [INFO] 【全体サマリー】
+2026-05-16 16:56:01 [INFO]   ブログ数  : 1件
+2026-05-16 16:56:01 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-16 16:56:01 [INFO]   所要時間  : 279.2秒
+2026-05-16 16:56:01 [INFO]   ✅ [workup-ai] photodirector 買い切り → PhotoDirector買い切り版の価格・機能・サブスクとの違いを徹底解説
+2026-05-16 16:56:01 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10218&action=edit
+2026-05-16 16:56:01 [INFO] ============================================================

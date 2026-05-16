@@ -362,6 +362,11 @@ def mark_cannibal_results_bulk(
 
     try:
         ws = _get_worksheet()
+        # 新フォーマット（判定列あり）では旧形式列を追加しない
+        _header_check = ws.row_values(1)
+        if "判定" in _header_check:
+            print("[sheets_updater] 新フォーマットシートのため mark_cannibal_results_bulk をスキップ（run_kanikabari_check を使用してください）")
+            return
         col_map = _ensure_headers(ws)
         col_a = ws.col_values(1)  # A列（キーワード）を一括取得
 

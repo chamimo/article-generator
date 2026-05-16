@@ -1,0 +1,143 @@
+===== [WORKUP-AI] 実行開始: 2026-05-16 16:07:31 =====
+2026-05-16 16:07:33 [INFO] ============================================================
+2026-05-16 16:07:34 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 16:07:34 [INFO] ============================================================
+2026-05-16 16:07:34 [INFO] 対象ブログ: ['workup-ai']
+2026-05-16 16:07:36 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 16:07:36 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-16 16:07:36 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 16:07:36 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-16 16:07:36 [INFO]   fact_check       : True
+2026-05-16 16:07:36 [INFO]   article_type_mix : True
+2026-05-16 16:07:36 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-16 16:07:36 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-16 16:07:38 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-16 16:07:38 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-16 16:07:38 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-16 16:07:38 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-16 16:07:38 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-16 16:07:38 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-16 16:07:38 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-16 16:07:39 [INFO] [wp] 記事取得: 計399件 (draft=1 / publish=398)
+2026-05-16 16:07:39 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-16 16:07:40 [INFO] [fetch] サブKW紐付け: 146件 → 22記事に統合
+2026-05-16 16:07:40 [INFO] [fetch] [キーワード] メインKW: 21件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 19件  テーマ外除外: 15件  aim内訳: [now:4, aim:15, claude:14, add:3]
+2026-05-16 16:07:40 [INFO] [dup_check] 優先候補: 21件 {'now': 4, 'add': 2, 'aim': 2, 'claude': 13} を先頭評価
+2026-05-16 16:07:40 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=21件, 要求=1件)
+2026-05-16 16:07:40 [INFO] [select] 1件選定 (要求=1件)
+2026-05-16 16:07:40 [INFO] [select]   1. 「cyberlink photodirector とは」 vol=0 seo=N/A comp=N/A
+2026-05-16 16:07:40 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-16 16:07:40 [INFO] [workup-ai] 候補: 21件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+2026-05-16 16:07:40 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-16 16:07:40 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:07:40 [INFO] [workup-ai] [1/1] [LONGTAIL] 「cyberlink photodirector とは」 vol=0 ★NOW
+2026-05-16 16:07:40 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 16:07:40 [INFO] [generate] 生成開始: 「cyberlink photodirector とは」(vol:0) fact_check=True target_length=6,629字  サブKW:1件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「cyberlink photodirector とは」(vol:0) [6,629字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=108 out=102 → $0.0005  (lsi:cyberlink photodirector とは)
+[api_guard] 本日の使用量: $0.0005 / ¥0 (890回呼び出し)
+[article_generator] 共起語: 写真編集ソフト、画像加工、フォトレタッチ、AIフォトエンハンス、顔認識、スライドショー作成、フォトコラージュ、背景削除、...
+[api_guard] ✅ 本日: $0.0005 / 1時間: $0.0005  (上限 日次$10.00 / 時間$5.00)  全体: $0.0005(¥0) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=175 out=469 → $0.0020  (kw_research:cyberlink photodirector とは)
+[api_guard] 本日の使用量: $0.0025 / ¥0 (891回呼び出し)
+[article_generator] サジェスト: cyberlink photodirector 使い方・cyberlink photodirector 無料・cyberlink photodirector ダウンロード...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] 参考URL: 3件
+[api_guard] ✅ 本日: $0.0025 / 1時間: $0.0025  (上限 日次$10.00 / 時間$5.00)  全体: $0.0025(¥0) / 0記事
+[api_guard] 記録: claude-sonnet-4-6 in=6751 out=10068 → $0.1713  (article:cyberlink photodirector とは)
+[api_guard] 本日の使用量: $0.1738 / ¥26 (892回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of laptop, photo frame, star, coin
+[imagefx] タイトル(英): PhotoDirector Features And Pricing
+[article_generator] 完了: 「CyberLink PhotoDirectorとは？機能・価格・無料版まで初心者向けに解説」 カテゴリ: 未設定(-) タグ: ['PhotoDirector', '写真編集ソフト', 'CyberLink', 'AI画像編集', 'フォトレタッチ']
+2026-05-16 16:10:25 [INFO] [generate] パターンCTA挿入（H3末尾）: 3件
+2026-05-16 16:10:25 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「PhotoDirector 365」(ID:9815)
+2026-05-16 16:10:25 [INFO] [generate] 完了: 「CyberLink PhotoDirectorとは？機能・価格・無料版まで初心者向けに解説」
+2026-05-16 16:10:25 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 30件
+[category_selector] 「cyberlink photodirector とは」→ マッチなし、フォールバック: 生成AI・チャット・仕事術(1397)
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring PhotoDirector software icons, three distinct ...
+[image_generator] 完了 (33KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260516_161034_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10205)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: CyberLink PhotoDirectorの基本と3つの
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Floating photography and video editing icons with AI sparkles, film reels, color...
+[image_generator] 完了 (67KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260516_161046_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10206)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: PhotoDirectorの主要機能｜AI写真編集から動画編
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration with pastel colors showing price tags, beginner guide b...
+[image_generator] 完了 (80KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260516_161057_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10207)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: PhotoDirectorの価格と初心者向け使い方・購入前の
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 398件
+[internal_linker] タイトル重複除去: 2件の旧記事を除外
+[internal_linker] 「PowerDirecto」関連記事: 2件追加
+[internal_linker] 「PhotoDirector 365」関連記事: 2件追加
+[internal_linker] 同カテゴリー: 6件選定（ルールベース）
+[internal_linker] 製品名マッチ「PowerDirecto」→ セクション12に割り当て
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 1件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:7 / 末尾リスト:1)
+[internal_linker] 内部リンク 8件 挿入: ['PowerDirectorのダウンロード｜買い切り版の始め方', 'PowerDirectorの買い切り｜料金・導入手順と有料版', 'nano banana aiとは？使い方・料金・無料登録まで', 'supergrokとは何か？特徴・仕組み・活用方法を初心者向', 'Trello有料の評判は？機能・価格・他ツールと徹底比較', 'AIアフィリエイトのやり方を初心者向けに解説！稼ぎ方・ツール', 'imagefx プロンプトの書き方と成功例を初心者向けに解説', 'AIアフィリエイトのやり方を初心者向けに解説！ChatGPT']
+[wordpress] タグ設定: ['PhotoDirector', '写真編集ソフト', 'CyberLink', 'AI画像編集', 'フォトレタッチ']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 10208) → https://workup-ai.com/wp-admin/post.php?post=10208&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, photo frame, star, coin, checkmark, lightbulb, and chart, soft pink, mint, and lavender pastel tones, minimal style.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "PhotoDirector Features And Pricing" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行12 「cyberlink photodirector とは」→ 投稿済み (2026/05/16, ID:10208) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「CyberLink PhotoDirectorとは？機能・価」
+2026-05-16 16:11:09 [INFO] [post] WP投稿完了: ID=10208 → https://workup-ai.com/wp-admin/post.php?post=10208&action=edit
+2026-05-16 16:11:09 [INFO] [workup-ai] [1/1] ✅ 完了: 「CyberLink PhotoDirectorとは？機能・価格・無料版まで初心者向けに解説」
+2026-05-16 16:11:09 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-16 16:11:09 [INFO] 
+============================================================
+2026-05-16 16:11:09 [INFO] 【全体サマリー】
+2026-05-16 16:11:09 [INFO]   ブログ数  : 1件
+2026-05-16 16:11:09 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-16 16:11:09 [INFO]   所要時間  : 215.7秒
+2026-05-16 16:11:09 [INFO]   ✅ [workup-ai] cyberlink photodirector とは → CyberLink PhotoDirectorとは？機能・価格・無料版まで初心者向けに解説
+2026-05-16 16:11:09 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10208&action=edit
+2026-05-16 16:11:09 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-16 16:11:09 / exit=0 =====

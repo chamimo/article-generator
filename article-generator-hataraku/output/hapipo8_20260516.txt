@@ -1,0 +1,146 @@
+===== [HAPIPO8] 実行開始: 2026-05-16 04:20:00 =====
+2026-05-16 04:20:03 [INFO] ============================================================
+2026-05-16 04:20:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-16 04:20:03 [INFO] ============================================================
+2026-05-16 04:20:03 [INFO] 対象ブログ: ['hapipo8']
+2026-05-16 04:20:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-16 04:20:05 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-16 04:20:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-16 04:20:05 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-05-16 04:20:05 [INFO]   fact_check       : True
+2026-05-16 04:20:05 [INFO]   article_type_mix : True
+2026-05-16 04:20:05 [INFO]   stop_words       : ['2026']
+2026-05-16 04:20:05 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] 気になることブログ / 「ASP案件マスター」: 50件
+[asp_fetcher]   [S] 福ちゃん → https://hapipo8.com/fukuchan / 着物買取・女性
+[asp_fetcher]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori / 即現金化・出張査定
+[asp_fetcher]   [S] フクウロ → https://hapipo8.com/fukuuro / 洋服買取 / 断捨離 / ブランド買取
+[asp_fetcher]   [S] メディカルフードサービス → https://hapipo8.com/medical_food / 腎臓病 宅配食 / 健康管理
+[asp_fetcher]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki / 宅配食 おすすめ 忙しい / 料理 時間ない 共働き
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile / 審査なし・スマホ契約できない・ブラックOK
+[asp_fetcher]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+
+2026-05-16 04:20:07 [INFO] [hapipo8] アフィリ案件: 50件（スプレッドシート）
+2026-05-16 04:20:07 [INFO] [hapipo8]   [S] 福ちゃん → https://hapipo8.com/fukuchan
+2026-05-16 04:20:07 [INFO] [hapipo8]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori
+2026-05-16 04:20:07 [INFO] [hapipo8]   [S] フクウロ → https://hapipo8.com/fukuuro
+2026-05-16 04:20:07 [INFO] [hapipo8]   [S] メディカルフードサービス → https://hapipo8.com/medical_food
+2026-05-16 04:20:07 [INFO] [hapipo8]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-05-16 04:20:07 [INFO] [hapipo8]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman
+2026-05-16 04:20:07 [INFO] [hapipo8]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] トラベル・スタンダード・ジャパン → https://px.a8.net/svt/ejp?a8mat=4B1THV+17H122+5LKE+5ZU29
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ORBIS AMBER(オルビス アンバー) → https://px.a8.net/svt/ejp?a8mat=4B1THX+DDO2AI+1USQ+4ASX02
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] トリア → https://hapipo8.com/tria
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] nosh - ナッシュ → https://hapipo8.com/nosh
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] 快眠タイムズストア → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DRYGT6+4UHE+TRVYQ
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] NELL マットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6M5RVE+4KD8+5ZMCI
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] 咲夜レアルマットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6LKC9M+4MRW+61Z81
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] オーケンウォーター → https://px.a8.net/svt/ejp?a8mat=4B1THX+CRN0WQ+1LOO+6NMJL
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] every frecious（エブリィフレシャス） → https://px.a8.net/svt/ejp?a8mat=4B1THX+CS8GII+2B8Y+15OK2A
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] リゾバ → https://hapipo8.com/rizoba
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ダイブ → https://hapipo8.com/dive
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] 工場求人ワールド → https://px.a8.net/svt/ejp?a8mat=4B1O1T+EGYV5U+5S9S+5YJRM
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ソフトバンク光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KARLU+3HKU+25FF81
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] BIGLOBE WiMAX +5G → https://px.a8.net/svt/ejp?a8mat=4B1THS+2TTMYY+B4+2BDBUB
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] フレッツ光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KW4WA+348K+1TJE9U
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] AI英会話アプリ【スピーク】 → https://hapipo8.com/speak
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] もぐワン ペットフード → https://hapipo8.com/moguwan
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] DMM 生成AI CAMP → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ポニークリーニング → https://px.a8.net/svt/ejp?a8mat=4B1THV+5QLST6+4N08+5Z6WY
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] 体験型カタログギフト【EXETIME】 → https://hapipo8.com/exetime
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] GMOとくとくBB → https://px.a8.net/svt/ejp?a8mat=4B1THS+2UF2KQ+50+3H48S2
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] Amazon Prime Video → https://amzn.to/4tbKPVa
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] Pollet → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] カレントボディ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DFGD3U+54TM+5YJRM
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] アプリ接客キャスト → https://px.a8.net/svt/ejp?a8mat=4B1O1T+FKUWOY+3P1G+NTRMQ
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ヴィーナスウォーカー → https://px.a8.net/svt/ejp?a8mat=4B1THV+6632JE+58KC+5YRHE
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] WEBCOACH → https://px.a8.net/svt/ejp?a8mat=4B1V1W+DW4O7U+5EVK+5YZ75
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ポケットリサーチ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DUXMU2+58KC+BWVTE
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ラボル カード払い → https://px.a8.net/svt/ejp?a8mat=4B1THS+3TJN9M+40JM+1NJZN5
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] クロスワンルーム → https://px.a8.net/svt/ejp?a8mat=4B1THX+DPKQE2+4EZ2+BYLJL
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] Mr.シリーズ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CLOOUY+1USQ+2Z8T76
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] IBJ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CF4X7E+FOG+4MPSTE
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ユアマイスター → https://px.a8.net/svt/ejp?a8mat=4B1THX+BZNNH6+4HQS+5YJRM
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] TOSSY → https://px.a8.net/svt/ejp?a8mat=4B1THS+2V0I6I+1WP2+1HLNLE
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] ABLENET VPS → https://px.a8.net/svt/ejp?a8mat=4B1THS+2VLXSA+4NIK+5Z6WX
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-16 04:20:07 [INFO] [hapipo8]   [A] BIGLOBE光 → https://px.a8.net/svt/ejp?a8mat=4B3LMR+4JQL96+3SPO+7LW1F7
+2026-05-16 04:20:07 [INFO] [hapipo8]   [B] 食楽膳 → https://hapipo8.com/shokurakuzen
+2026-05-16 04:20:07 [INFO] [hapipo8]   [?] 楽器買取 福ちゃん → https://hapipo8.com/gakki-fukucyan
+2026-05-16 04:20:07 [INFO] [hapipo8]   [?] ニーゴ・リユース → https://hapipo8.com/25reuse
+2026-05-16 04:20:10 [INFO] [wp] 記事取得: 計165件 (publish=165)
+2026-05-16 04:20:10 [INFO] [hapipo8] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.4, 'monetize': 0.1})
+2026-05-16 04:20:11 [INFO] [fetch] サブKW紐付け: 165件 → 50記事に統合
+2026-05-16 04:20:11 [INFO] [fetch] [キーワード] メインKW: 19件（vol≥30 or N/A）  サブKW除外: 165件（統合対象）  投稿済みスキップ: 130件  テーマ外除外: 285件  aim内訳: [now:1, aim:61, claude:25, add:217]
+2026-05-16 04:20:11 [INFO] [dup_check] 優先候補: 19件 {'now': 1, 'aim': 1, 'add': 17} を先頭評価
+2026-05-16 04:20:11 [INFO] [dup_check] 除外: 「シェフの無添つくりおき 口コミ 評判」 → カニバリ(2/3語重複 ['口コミ', '評判']): 「もぐワンの口コミ・評判を徹底検証！成分・価格・食いつきのリアルな声」
+2026-05-16 04:20:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=1件 (pool=19件, 要求=1件)
+2026-05-16 04:20:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-16 04:20:11 [INFO] [select]   1. 「宅食 一人暮らし 女性 安い」 vol=0 seo=N/A comp=N/A
+2026-05-16 04:20:11 [INFO] [hapipo8] LONGTAIL選定: 1件
+2026-05-16 04:20:11 [INFO] [hapipo8] 候補: 19件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.1649(¥25) / 1記事
+2026-05-16 04:20:11 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-16 04:20:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 04:20:11 [INFO] [hapipo8] [1/1] [LONGTAIL] 「宅食 一人暮らし 女性 安い」 vol=0 ★AIM
+2026-05-16 04:20:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-16 04:20:11 [INFO] [generate] 生成開始: 「宅食 一人暮らし 女性 安い」(vol:0) fact_check=True target_length=5,226字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「宅食 一人暮らし 女性 安い」(vol:0) [5,226字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.1649(¥25) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=115 out=94 → $0.0005  (lsi:宅食 一人暮らし 女性 安い)
+[api_guard] 本日の使用量: $0.0005 / ¥0 (877回呼び出し)
+[article_generator] 共起語: 栄養バランス、冷凍弁当、食費節約、時短調理、健康食、配送料金、メニュー種類、口コミ評判、カロリー管理、調理不要、保存方法...
+[api_guard] ✅ 本日: $0.0005 / 1時間: $0.0005  (上限 日次$10.00 / 時間$5.00)  全体: $0.1654(¥25) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=182 out=745 → $0.0031  (kw_research:宅食 一人暮らし 女性 安い)
+[api_guard] 本日の使用量: $0.0036 / ¥0 (878回呼び出し)
+[article_generator] サジェスト: 宅食 一人暮らし 女性 安い おすすめ・宅食 一人暮らし 女性 安い 栄養・宅食 一人暮らし 女性 安い 弁当...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.0036 / 1時間: $0.0036  (上限 日次$10.00 / 時間$5.00)  全体: $0.1685(¥25) / 1記事
+[api_guard] 記録: claude-sonnet-4-6 in=7607 out=10766 → $0.1843  (article:宅食 一人暮らし 女性 安い)
+[api_guard] 本日の使用量: $0.1879 / ¥28 (879回呼び出し)
+[imagefx] 背景:B / ビジュアル:Cute flat icons of laptop, coins, checkmark, star,
+[imagefx] タイトル(英): Home Meal Delivery Five Picks
+[article_generator] 完了: 「宅食おすすめ5選！一人暮らし女性でも安く栄養バランスが取れる選び方」 カテゴリ: 未設定(-) タグ: ['宅食', '一人暮らし', '冷凍弁当', '食費節約', 'ダイエット']
+2026-05-16 04:22:51 [INFO] [generate] パターンCTA挿入（H3末尾）: 5件
+2026-05-16 04:22:51 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「nosh - ナッシュ」(ID:3979)
+2026-05-16 04:22:53 [INFO] [link_check] 死リンク除去: 1件 / チェック: 5件
+2026-05-16 04:22:53 [INFO] [generate] 完了: 「宅食おすすめ5選！一人暮らし女性でも安く栄養バランスが取れる選び方」
+2026-05-16 04:22:53 [INFO] [post] 投稿方式: publish
+[category_selector] カテゴリ取得: 36件
+[category_selector] 「宅食 一人暮らし 女性 安い」→ おすすめアイテム(677) score=12
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#宅食): takushoku-osusume-hikaku-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 一人暮らし女性が宅食で安く食費を抑えるための選び方のイメージ画像
+[wordpress] H2画像[2] ライブラリ選択 (#宅食): meal-delivery-solo-male-eyecatch.jpg
+[wordpress] H2画像[2] ライブラリALT更新: 一人暮らし女性向け安い宅食おすすめ5選を徹底比較のイメージ画像
+[wordpress] H2画像[3] ライブラリ選択 (#宅食): takushoku-osusume-hikaku-eyecatch-2.jpg
+[wordpress] H2画像[3] ライブラリALT更新: 宅食を一人暮らし女性が安く長く使い続けるコツのイメージ画像
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 165件
+[internal_linker] 古い記事を除外: 123件（2年以上前）→ 42件で選定
+[internal_linker] 同カテゴリー: 8件選定（ルールベース）
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['宅食 一人暮らし男性おすすめ6選！栄養・コスト・時短を徹底比', '宅配食 無添加おすすめ6選｜一人暮らし女性が選ぶ健康・時短ご', '宅食おすすめ比較6選！価格・栄養・味を徹底チェック【2026', '生活保護でもスマホ契約できる！審査・手続き・おすすめプランを', 'ヒューマンアカデミーおすすめ講座と使い方ガイド｜初心者でも迷', '敏感肌向け日焼け止めおすすめ2026年版！肌荒れしない選び方', '格安SIM審査がゆるいおすすめ3選！審査なし・ブラックOKも', '在宅勤務WiFiおすすめ3選！光回線・置き型・工事不要を徹底']
+[wordpress] タグ設定: ['宅食', '一人暮らし', '冷凍弁当', '食費節約', 'ダイエット']
+[wordpress] 投稿方式: publish
+[wordpress] 投稿完了 (ID: 4241) → https://hapipo8.com/wp-admin/post.php?post=4241&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行157 「宅食 一人暮らし 女性 安い」→ 投稿済み (2026/05/16, ID:4241) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「宅食おすすめ5選！一人暮らし女性でも安く栄養バランスが取れる」
+2026-05-16 04:23:07 [INFO] [post] WP投稿完了: ID=4241 → https://hapipo8.com/wp-admin/post.php?post=4241&action=edit
+2026-05-16 04:23:07 [INFO] [hapipo8] [1/1] ✅ 完了: 「宅食おすすめ5選！一人暮らし女性でも安く栄養バランスが取れる選び方」
+2026-05-16 04:23:07 [INFO] [hapipo8] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-16 04:23:07 [INFO] 
+============================================================
+2026-05-16 04:23:07 [INFO] 【全体サマリー】
+2026-05-16 04:23:07 [INFO]   ブログ数  : 1件
+2026-05-16 04:23:07 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-16 04:23:07 [INFO]   所要時間  : 183.9秒
+2026-05-16 04:23:07 [INFO]   ✅ [hapipo8] 宅食 一人暮らし 女性 安い → 宅食おすすめ5選！一人暮らし女性でも安く栄養バランスが取れる選び方
+2026-05-16 04:23:07 [INFO]        https://hapipo8.com/wp-admin/post.php?post=4241&action=edit
+2026-05-16 04:23:07 [INFO] ============================================================
+===== [HAPIPO8] 記事生成終了: 2026-05-16 04:23:07 / exit=0 =====

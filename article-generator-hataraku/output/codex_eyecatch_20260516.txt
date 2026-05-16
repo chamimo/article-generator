@@ -1,0 +1,67 @@
+===== [CODEX EYECATCH] 巡回開始: 2026-05-16 10:04:02 / limit=3 =====
+----- [workup-ai] start: 2026-05-16 10:04:02 -----
+[codex-eyecatch] 対象の投稿がありません status=draft
+----- [workup-ai] end: 2026-05-16 10:04:07 -----
+----- [ys-trend] start: 2026-05-16 10:04:07 -----
+[codex-eyecatch] 対象の投稿がありません status=publish
+----- [ys-trend] end: 2026-05-16 10:04:10 -----
+----- [hapipo8] start: 2026-05-16 10:04:10 -----
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #4241 宅食おすすめ5選！一人暮らし女性でも安く栄養バランスが取れる選び方
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 気になることブログ向け・雑学ライフ型バナーで生成します
+[IMAGE] curiosity template: notebook_closeup
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1625KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260516_100453_codex_hapipo8_curiosity_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 4243)
+[codex-eyecatch] featured image 設定完了: media_id=4243
+[codex-eyecatch] 編集URL: https://hapipo8.com/wp-admin/post.php?post=4241&action=edit
+----- [hapipo8] end: 2026-05-16 10:04:58 -----
+----- [kaerudoko] start: 2026-05-16 10:04:58 -----
+[codex-eyecatch] 対象の投稿がありません status=publish
+----- [kaerudoko] end: 2026-05-16 10:05:00 -----
+----- [hataraku] start: 2026-05-16 10:05:00 -----
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #677 夏バイトおすすめ15選！大学生・高校生が稼げる職種を徹底解説
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] はた楽ナビ向けキャリア型バナーで生成します
+[IMAGE] career template: office_person
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1605KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260516_100539_codex_hataraku_career_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 678)
+[codex-eyecatch] featured image 設定完了: media_id=678
+[codex-eyecatch] 編集URL: https://hataraku-navi.com/wp-admin/post.php?post=677&action=edit
+----- [hataraku] end: 2026-05-16 10:05:45 -----
+----- [hida-no-omoide] start: 2026-05-16 10:05:45 -----
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #307 飛騨高山まつりの森は犬連れOK？ペット同伴ルールと楽しみ方を完全ガイド
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 飛騨の思い出向け・旅メディア型バナーで生成します
+[IMAGE] hida template: town_morning
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (2265KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260516_100624_codex_hida_travel_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 308)
+[codex-eyecatch] featured image 設定完了: media_id=308
+[codex-eyecatch] 編集URL: https://hida-no-omoide.com/wp-admin/post.php?post=307&action=edit
+----- [hida-no-omoide] end: 2026-05-16 10:06:27 -----
+----- [web-study1] start: 2026-05-16 10:06:27 -----
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #513 通信教育を途中解約すると損？返金額・違約金・手続きを徹底解説
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] オンライン学習ナビ向け・学習メディア型バナーで生成します
+[IMAGE] learning template: notebook_learning
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1550KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260516_100707_codex_webstudy_learning_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 515)
+[codex-eyecatch] featured image 設定完了: media_id=515
+[codex-eyecatch] 編集URL: https://web-study1.com/wp-admin/post.php?post=513&action=edit
+----- [web-study1] end: 2026-05-16 10:07:10 -----
+===== [CODEX EYECATCH] 巡回終了: 2026-05-16 10:07:10 =====

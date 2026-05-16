@@ -531,18 +531,41 @@ def _generate_overlay_texts(keyword: str) -> dict:
         raw   = msg.content[0].text.strip()
         start = raw.find("{")
         end   = raw.rfind("}") + 1
-        return _json.loads(raw[start:end])
+        return _sanitize_overlay_texts(_json.loads(raw[start:end]))
     except Exception as e:
         print(f"[IMAGE] overlay text生成失敗、フォールバック使用: {e}")
-        return {
+        return _sanitize_overlay_texts({
             "strip_label": "初心者向け",
             "pre_title":   "5分でわかる！",
             "main_word":   keyword[:5],
             "accent_word": "使い方ガイド",
             "supplement":  "はじめてでも迷わない基本と活用法",
             "badge":       "無料",
-        }
+        })
 
+
+
+def _sanitize_overlay_phrase(value: str) -> str:
+    """アイキャッチで避けたい強い/冗長な表現を置き換える。"""
+    text = str(value or "")
+    replacements = {
+        "完全活用ガイド": "活用の基本",
+        "完全ガイド": "やさしく解説",
+        "完全攻略": "やさしく解説",
+        "完全解説": "基本解説",
+    }
+    for old, new in replacements.items():
+        text = text.replace(old, new)
+    return text.strip()
+
+
+def _sanitize_overlay_texts(texts: dict) -> dict:
+    if not isinstance(texts, dict):
+        return texts
+    for key in ("strip_label", "pre_title", "main_word", "accent_word", "supplement", "badge"):
+        if key in texts:
+            texts[key] = _sanitize_overlay_phrase(texts[key])
+    return texts
 
 
 # ─── アイキャッチ多様化ランダムプール ──────────────────────────────────────
@@ -1716,6 +1739,7 @@ def _build_beginner_guide_background_prompt(title: str, template: str = "right_p
         "Keep all important subjects away from the outer 8% edges so WordPress thumbnail crops will not cut them off. "
         "Style: polished lifestyle magazine cover, Pinterest, note header, friendly beginner guide, airy and warm. "
         f"Palette: {palette}. ABSOLUTELY NO text, no letters, no numbers, no logos, no watermark. "
+        "No decorative symbols, no sparkle marks, no star glyphs, no ✧-like ornaments anywhere. "
         f"Topic feeling: {title}. "
     )
 
@@ -1828,6 +1852,7 @@ def _build_beginner_guide_background_prompt(title: str, template: str = "right_p
 
 def _guide_overlay_texts(title: str, texts: dict, template: str = "right_person") -> dict:
     """タイトルから初心者ガイド型に合う短い表示テキストへ整える。"""
+    texts = _sanitize_overlay_texts(texts)
     head_kw = _extract_title_head_keyword(title)
     main = texts.get("main_word", "").strip() or head_kw or "AI活用"
     accent = texts.get("accent_word", "").strip() or "入門ガイド"
@@ -1869,7 +1894,7 @@ def _guide_overlay_texts(title: str, texts: dict, template: str = "right_person"
     else:
         text_side = random.choice(["left", "left", "right"])
 
-    return {
+    return _sanitize_overlay_texts({
         "strip_label": strip,
         "pre_title": texts.get("pre_title", "").strip() or "はじめてでも、やさしく学べる",
         "main_word": main[:12],
@@ -1888,7 +1913,7 @@ def _guide_overlay_texts(title: str, texts: dict, template: str = "right_person"
         "_hide_top_icon": random.choice([True, False]),
         "_hide_badge": random.choice([False, False, True]),
         "_hide_icons": random.choice([False, False, True]),
-    }
+    })
 
 
 def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
@@ -2594,7 +2619,9 @@ def _curiosity_overlay_texts(title: str, texts: dict, template: str) -> dict:
 
 def _select_hida_template(title: str) -> str:
     """飛騨の思い出用アイキャッチの構図をタイトルから選ぶ。"""
-    if any(k in title for k in ("宿", "ホテル", "旅館", "民宿", "泊", "温泉", "下呂", "奥飛騨")):
+    if any(k in title for k in ("鬼仏", "与平", "飢饉", "昔話", "民話", "再生物語", "鬼と呼ばれた")):
+        pool = ["old_mountain_village", "poor_old_town", "town_evening"]
+    elif any(k in title for k in ("宿", "ホテル", "旅館", "民宿", "泊", "温泉", "下呂", "奥飛騨")):
         pool = ["ryokan_room", "onsen_morning", "town_evening", "travel_flatlay"]
     elif any(k in title for k in ("グルメ", "ランチ", "カフェ", "食べ歩き", "飛騨牛", "名物", "お土産")):
         pool = ["local_food", "market_walk", "travel_flatlay", "town_morning"]
@@ -2643,6 +2670,7 @@ def _build_hida_background_prompt(title: str, template: str) -> str:
         "A quiet Hida Takayama travel memory mood, editorial lifestyle photography, warm and trustworthy, not a sales banner. "
         "Keep all important scenery and people away from the outer 8% edges so WordPress crops will not cut them. "
         f"Palette: {palette}. ABSOLUTELY NO text, no letters, no numbers, no logos, no watermark. "
+        "No decorative symbols, no sparkle marks, no star glyphs, no ✧-like ornaments anywhere. "
         f"Topic feeling: {title}. "
     )
     if template == "ryokan_room":
@@ -2675,6 +2703,20 @@ def _build_hida_background_prompt(title: str, template: str) -> str:
             "Hida old town street at quiet golden hour, wooden machiya houses, warm lanterns beginning to glow, stone path slightly wet, nostalgic atmosphere. "
             "No readable signs. Large clean negative space for typography."
         )
+    if template == "old_mountain_village":
+        return (
+            base +
+            "An old poor mountain village in historical Hida, weathered wooden houses, dark cedar walls, rough dirt path, distant snowy mountains, "
+            "cold wind atmosphere, muted winter light, no modern objects, no cars, no electric wires. "
+            "A humble and solemn human drama mood, with one side kept clean for Japanese typography."
+        )
+    if template == "poor_old_town":
+        return (
+            base +
+            "A narrow old Hida street from long ago, simple wooden houses with worn lattice doors, patched eaves, straw bundles, quiet poverty, "
+            "overcast light, earthy colors, no modern signs, no shop banners, no vehicles. "
+            "Nostalgic but severe atmosphere, clean negative space for Japanese typography."
+        )
     if template == "seasonal_path":
         season = random.choice([
             "autumn red leaves along a quiet river path",
@@ -2694,14 +2736,25 @@ def _build_hida_background_prompt(title: str, template: str) -> str:
     )
 
 
+def _extract_quoted_work_title(title: str) -> str:
+    """記事タイトル中の小説・作品名を抜き出す。例: 『ヘアピンと鼻水』。"""
+    m = re.search(r"[『「](.+?)[』」]", title or "")
+    return m.group(1).strip() if m else ""
+
+
 def _hida_overlay_texts(title: str, texts: dict, template: str) -> dict:
     """飛騨の思い出向けにタイトル文字を短く整える。"""
     head_kw = _extract_title_head_keyword(title)
+    work_title = _extract_quoted_work_title(title)
     main = head_kw or texts.get("main_word", "").strip() or "飛騨旅"
     accent = texts.get("accent_word", "").strip() or "旅のしおり"
     strip = "飛騨の思い出"
 
-    if "白川郷" in title:
+    if work_title and "小説" in title:
+        main = work_title
+        accent = "飛騨弁の短編小説" if "飛騨弁" in title else "短編小説"
+        strip = "ものがたり"
+    elif "白川郷" in title:
         main = "白川郷"
         accent = "やさしい旅ガイド"
         strip = "世界遺産さんぽ"
@@ -2726,12 +2779,24 @@ def _hida_overlay_texts(title: str, texts: dict, template: str) -> dict:
         accent = "迷わない歩き方"
         strip = "旅の道しるべ"
 
+    if work_title and "小説" in title:
+        pre_title = random.choice(["飛騨の物語", "心に残る短編", "語り継ぐ物語"])
+        if any(k in title for k in ("再生", "鬼仏", "与平", "鬼と呼ばれた")):
+            supplement = random.choice(["凍った心がほどけていく", "人との出会いが男を変える", "赦しと再生の物語"])
+        elif any(k in title for k in ("初恋", "恋", "想い")):
+            supplement = random.choice(["あの日の気持ちを物語に", "淡い想いをたどる", "静かに読める飛騨の短編"])
+        else:
+            supplement = random.choice(["人のぬくもりを描く短編", "胸に残る飛騨の物語", "静かに読める飛騨の短編"])
+    else:
+        pre_title = random.choice(["旅の記憶", "静かな町歩き", "飛騨の一日"])
+        supplement = random.choice(["土地の空気まで楽しむ", "静かに過ごす旅時間", "思い出に残る旅の準備"])
+
     return {
         "strip_label": strip[:9],
-        "pre_title": random.choice(["旅の記憶", "静かな町歩き", "飛騨の一日"]),
+        "pre_title": pre_title,
         "main_word": main[:12],
         "accent_word": accent[:12],
-        "supplement": random.choice(["土地の空気まで楽しむ", "静かに過ごす旅時間", "思い出に残る旅の準備"]),
+        "supplement": supplement,
         "badge": "",
         "icon_labels": [],
         "_palette_name": random.choice(["sage", "peach", "sky", "mint_yellow"]),
@@ -2813,7 +2878,7 @@ def _career_overlay_texts(title: str, texts: dict, template: str) -> dict:
     """はた楽ナビ向けにタイトル文字を短く整える。"""
     head_kw = _extract_title_head_keyword(title)
     main = head_kw or texts.get("main_word", "").strip() or "働き方"
-    accent = texts.get("accent_word", "").strip() or "完全ガイド"
+    accent = texts.get("accent_word", "").strip() or "解説"
     strip = texts.get("strip_label", "").strip() or "はた楽ナビ"
     glyph_pool = ["note", "check", "home", "heart", "search", "book", "yen"]
 
