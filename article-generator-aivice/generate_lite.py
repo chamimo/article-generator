@@ -25,6 +25,7 @@ import argparse
 import json
 import logging
 import os
+import subprocess
 import sys
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -367,6 +368,26 @@ def _setup_logger(name: str = "generate_lite") -> logging.Logger:
 
 
 log = _setup_logger()
+
+CODEX_EYECATCH_SCRIPT = Path("/Users/yama/article-generator-hataraku/run_codex_eyecatch.sh")
+
+
+def run_codex_eyecatch_after_generation(blog_name: str, limit: int) -> None:
+    """記事生成後にCodex側のアイキャッチ後付け処理を起動する。失敗しても記事生成は成功扱いにする。"""
+    if limit <= 0:
+        return
+    if not CODEX_EYECATCH_SCRIPT.exists():
+        log.warning(f"[codex-eyecatch] スクリプトが見つかりません: {CODEX_EYECATCH_SCRIPT}")
+        return
+    try:
+        log.info(f"[codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog={blog_name} limit={limit}")
+        subprocess.run(
+            [str(CODEX_EYECATCH_SCRIPT), "--blog", blog_name, "--limit", str(limit)],
+            cwd=str(CODEX_EYECATCH_SCRIPT.parent),
+            check=False,
+        )
+    except Exception as e:
+        log.warning(f"[codex-eyecatch] 起動失敗（記事生成は続行）: {e}")
 
 
 def _log_result(result: dict) -> None:
@@ -1171,26 +1192,16 @@ def post(article: dict, dry_run: bool = False,
 
     try:
         if FEATURES["image_generation"]:
-            # 画像生成 → post_article_with_image（アイキャッチ設定・H2画像注入を含む）
-            image_bytes: bytes | None = None
-            keyword = article.get("keyword", "")
-            try:
-                image_bytes = generate_image_for_article(
-                    keyword=keyword,
-                    article_type=article.get("_article_type", ""),
-                )
-                log.info(f"[post] 画像生成完了: {len(image_bytes):,} bytes")
-            except Exception as img_err:
-                log.warning(f"[post] 画像生成スキップ（続行）: {img_err}")
-
+            # アイキャッチはCodex後付けツールに任せる。ここではH2画像・CTA・内部リンクのみ処理する。
             # asp_links: blog_config.json の静的リンク + シートからの動的リンク をマージ
             asp_links  = dict(blog_cfg.asp_links) if blog_cfg else {}
             if asp_list:
                 from modules.asp_fetcher import to_asp_dict
                 asp_links.update(to_asp_dict(asp_list))
             stop_words = blog_cfg.stop_words if blog_cfg else []
-            result = post_article_with_image(article, image_bytes=image_bytes,
-                                             asp_links=asp_links, stop_words=stop_words)
+            result = post_article_with_image(article, image_bytes=None,
+                                             asp_links=asp_links, stop_words=stop_words,
+                                             enable_eyecatch=False)
         else:
             result = create_post(article, featured_media_id=None)
     finally:
@@ -1556,6 +1567,9 @@ def main() -> None:
             count=args.count,
         )
         all_results.extend(results)
+        generated_count = sum(1 for r in results if r.get("status") == "success")
+        if generated_count and not args.dry_run:
+            run_codex_eyecatch_after_generation(blog_cfg.name, generated_count)
 
     # ── 全体サマリー ──────────────────────────────────────
     elapsed   = (datetime.now() - started_at).total_seconds()
