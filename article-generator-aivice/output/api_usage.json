@@ -2779,6 +2779,36 @@
       "output_tokens": 8576,
       "cost_usd": 0.147336,
       "label": "article:Gemini 使い方 日本"
+    },
+    {
+      "timestamp": "2026-05-15T19:00:14.354731+00:00",
+      "date": "2026-05-15",
+      "hour": "2026-05-15T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 106,
+      "output_tokens": 115,
+      "cost_usd": 0.000545,
+      "label": "lsi:claudecode skills 使い方"
+    },
+    {
+      "timestamp": "2026-05-15T19:00:17.622318+00:00",
+      "date": "2026-05-15",
+      "hour": "2026-05-15T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 173,
+      "output_tokens": 380,
+      "cost_usd": 0.001658,
+      "label": "kw_research:claudecode skills 使い方"
+    },
+    {
+      "timestamp": "2026-05-15T19:02:26.080816+00:00",
+      "date": "2026-05-15",
+      "hour": "2026-05-15T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6184,
+      "output_tokens": 9610,
+      "cost_usd": 0.162702,
+      "label": "article:claudecode skills 使い方"
     }
   ],
   "events": [
