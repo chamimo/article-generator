@@ -1,0 +1,130 @@
+===== [HIDA-NO-OMOIDE] 実行開始: 2026-05-17 05:30:01 =====
+2026-05-17 05:30:03 [INFO] ============================================================
+2026-05-17 05:30:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-17 05:30:03 [INFO] ============================================================
+2026-05-17 05:30:03 [INFO] 対象ブログ: ['hida-no-omoide']
+[blog_meta] 管理シート読み込みエラー: APIError: [500]: Internal error encountered.
+2026-05-17 05:32:12 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-17 05:32:12 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-17 05:32:12 [INFO] ════════════════════════════════════════════════════════════
+2026-05-17 05:32:12 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-17 05:32:12 [INFO]   fact_check       : True
+2026-05-17 05:32:12 [INFO]   article_type_mix : True
+2026-05-17 05:32:12 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-17 05:32:12 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] 飛騨の思い出 / 「ASP案件マスター 」: 3件
+[asp_fetcher]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+[asp_fetcher]   [999] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+[asp_fetcher]   [999] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+2026-05-17 05:32:15 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-17 05:32:15 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-17 05:32:15 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-17 05:32:15 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-17 05:32:17 [INFO] [wp] 記事取得: 計38件 (draft=6 / publish=32)
+2026-05-17 05:32:17 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-17 05:32:18 [INFO] [fetch] サブKW紐付け: 58件 → 8記事に統合
+2026-05-17 05:32:18 [INFO] [fetch] [キーワード] メインKW: 33件（vol≥30 or N/A）  サブKW除外: 58件（統合対象）  投稿済みスキップ: 49件  テーマ外除外: 13件  aim内訳: [now:1, aim:19, claude:21, add:5]
+2026-05-17 05:32:18 [INFO] [dup_check] 優先候補: 33件 {'now': 1, 'aim': 11, 'claude': 16, 'add': 5} を先頭評価
+2026-05-17 05:32:18 [INFO] [dup_check] 除外: 「赤かぶ漬け お土産 日持ち」 → カニバリ(2/3語重複 ['お土産', '日持ち']): 「朴葉味噌のお土産は日持ちする？賞味期限・保存方法を徹底解説」
+2026-05-17 05:32:18 [INFO] [dup_check] 除外: 「高山 雪 朝 写真 撮れる場所」 → カニバリ(2/3語重複 ['高山', '写真']): 「高山の冬写真スポット9選！静かな雪景色と古い町並みを早朝に撮る」
+2026-05-17 05:32:18 [INFO] [dup_check] 除外: 「飛騨 山に囲まれた景色 見どころ」 → カニバリ(2/3語重複 ['飛騨', '見どころ']): 「飛騨古川 昔の町並み見どころ完全ガイド｜散策・カフェ・朝市まで」
+2026-05-17 05:32:18 [INFO] [dup_check] 除外: 「高山 観光 徒歩で回れる範囲」 → カニバリ(2/3語重複 ['高山', '観光']): 「高山の赤い橋の名前と由来を簡単に解説！飛騨高山を代表する観光スポット」
+2026-05-17 05:32:18 [INFO] [dup_check] 完了: 選定=1件 / 除外=4件 (pool=33件, 要求=1件)
+2026-05-17 05:32:18 [INFO] [select] 1件選定 (要求=1件)
+2026-05-17 05:32:18 [INFO] [select]   1. 「高山 老街 必買」 vol=0 seo=N/A comp=N/A
+2026-05-17 05:32:18 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-17 05:32:18 [INFO] [hida-no-omoide] 候補: 33件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.8833 / 1時間: $0.1762  (上限 日次$10.00 / 時間$5.00)  全体: $0.8833(¥133) / 5記事
+2026-05-17 05:32:19 [INFO] [api_guard] 本日の使用量: $0.8833 / ¥132 (15回呼び出し)
+2026-05-17 05:32:19 [INFO] ────────────────────────────────────────────────────────────
+2026-05-17 05:32:19 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「高山 老街 必買」 vol=0 ★AIM
+2026-05-17 05:32:19 [INFO] ────────────────────────────────────────────────────────────
+2026-05-17 05:32:19 [INFO] [generate] 生成開始: 「高山 老街 必買」(vol:0) fact_check=True target_length=5,729字  サブKW:2件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「高山 老街 必買」(vol:0) [5,729字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.8833 / 1時間: $0.1762  (上限 日次$10.00 / 時間$5.00)  全体: $0.8833(¥133) / 5記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=107 out=98 → $0.0005  (lsi:高山 老街 必買)
+[api_guard] 本日の使用量: $0.8838 / ¥132 (905回呼び出し)
+[article_generator] 共起語: 高山陣屋、飛騨の匠、さんまち通り、みたらし団子、朴葉味噌、古い町並み、飛騨高山、土産物、工芸品、赤かぶ漬け、酒蔵、温泉、...
+[article_generator] サブKW候補: 2件 (高山 老街 營業時間〜)
+[api_guard] ✅ 本日: $0.8838 / 1時間: $0.1767  (上限 日次$10.00 / 時間$5.00)  全体: $0.8838(¥133) / 5記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=174 out=564 → $0.0024  (kw_research:高山 老街 必買)
+[api_guard] 本日の使用量: $0.8862 / ¥132 (906回呼び出し)
+[article_generator] サジェスト: 高山 老街 必買 お土産・高山 老街 必買 食べ物・高山 老街 必買 雑貨...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.8862 / 1時間: $0.1791  (上限 日次$10.00 / 時間$5.00)  全体: $0.8862(¥133) / 5記事
+[api_guard] 記録: claude-sonnet-4-6 in=6092 out=11207 → $0.1864  (article:高山 老街 必買)
+[api_guard] 本日の使用量: $1.0726 / ¥160 (907回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of shopping bags, local treats, gi
+[imagefx] タイトル(英): Takayama Souvenir Gourmet Guide
+[article_generator] 完了: 「高山老街で必買のお土産・グルメ15選！さんまち通りで絶対に買うべき人気商品まとめ」 カテゴリ: 未設定(-) タグ: ['飛騨高山', '老街必買', 'さんまち通り', 'お土産', '観光グルメ']
+2026-05-17 05:35:39 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「【Googleマップ】飛騨高山 カフェ」(ID:226)
+[api_guard] ✅ 本日: $1.0726 / 1時間: $0.3655  (上限 日次$10.00 / 時間$5.00)  全体: $1.0726(¥161) / 6記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=379 out=32 → $0.0004  (maps:高山 老街 必買)
+[api_guard] 本日の使用量: $1.0730 / ¥160 (908回呼び出し)
+[maps_embedder] ✅ 地図挿入: mode=search / query=飛騨高山 さんまち通り
+2026-05-17 05:35:41 [INFO] [generate] 完了: 「高山老街で必買のお土産・グルメ15選！さんまち通りで絶対に買うべき人気商品まとめ」
+2026-05-17 05:35:41 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 74件
+[category_selector] 「高山 老街 必買」→ 冬の高山(52) score=2
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#高山): takayama-nakabashi-history-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 高山老街の必買お土産・グルメを徹底解説のイメージ画像
+[wordpress] H2画像[2] ライブラリ選択 (#高山): takayama-old-scenery-spots-eyecatch.jpg
+[wordpress] H2画像[2] ライブラリALT更新: 飛騨の匠が生んだ高山老街の必買工芸品・雑貨のイメージ画像
+[wordpress] H2画像[3] ライブラリ選択 (#高山): takayama-red-bridge-origin-eyecatch.jpg
+[wordpress] H2画像[3] ライブラリALT更新: 高山老街をもっと楽しむための訪問計画と混雑対策のイメージ画像
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 32件
+[internal_linker] 関連補完（親KW絞り込み）: 8件選定（ルールベース）
+[internal_linker] 内部リンク選定完了: 計8件 (成約:0 / 案件関連:0 / 同親KW+補完:8)
+[internal_linker] 低関連性 8件をフッターへ: ['春慶塗のお土産人気商品おすすめ7選｜高山・岐阜で選', '飛騨高山朝市の楽しみ方完全ガイド｜時間・グルメ・お', '飛騨高山 古い町並み散策の完全ガイド｜モデルコース', '高山のお土産をネットで購入する方法・おすすめ通販サ', '高山の川×夕方が落ち着く理由と絶景スポット5選｜飛', '高山の冬写真スポット9選！静かな雪景色と古い町並み', '飛騨高山の変わらない風景スポット7選｜江戸時代の古', '高山の古民家カフェのおすすめ｜静かで落ち着いた空間']
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 8件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:0 / 末尾リスト:8)
+[internal_linker] 内部リンク 8件 挿入: ['春慶塗のお土産人気商品おすすめ7選｜高山・岐阜で選ぶ伝統漆工', '飛騨高山朝市の楽しみ方完全ガイド｜時間・グルメ・お土産まで徹', '飛騨高山 古い町並み散策の完全ガイド｜モデルコース・グルメ・', '高山のお土産をネットで購入する方法・おすすめ通販サイト完全ガ', '高山の川×夕方が落ち着く理由と絶景スポット5選｜飛騨の癒し旅', '高山の冬写真スポット9選！静かな雪景色と古い町並みを早朝に撮', '飛騨高山の変わらない風景スポット7選｜江戸時代の古い町並みを', '高山の古民家カフェのおすすめ｜静かで落ち着いた空間で過ごすひ']
+[wordpress] タグ設定: ['飛騨高山', '老街必買', 'さんまち通り', 'お土産', '観光グルメ']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 348) → https://hida-no-omoide.com/wp-admin/post.php?post=348&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of shopping bags, local treats, gift boxes and stars, soft peach and mint pastel tones, minimal checkmarks and hearts scattered throughout.
+Elegant lifestyle background: soft morning light with warm neutrals, gentle depth-of-field effect, clean and airy ambiance, muted earth tones.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Takayama Souvenir Gourmet Guide" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行76 「高山 老街 必買」→ 投稿済み (2026/05/17, ID:348) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「高山老街で必買のお土産・グルメ15選！さんまち通りで絶対に買」
+2026-05-17 05:35:50 [INFO] [post] WP投稿完了: ID=348 → https://hida-no-omoide.com/wp-admin/post.php?post=348&action=edit
+2026-05-17 05:35:50 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「高山老街で必買のお土産・グルメ15選！さんまち通りで絶対に買うべき人気商品まとめ」
+2026-05-17 05:35:50 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-17 05:35:50 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hida-no-omoide limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #348 高山老街で必買のお土産・グルメ15選！さんまち通りで絶対に買うべき人気商品まとめ
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 飛騨の思い出向け・旅メディア型バナーで生成します
+[IMAGE] hida template: travel_flatlay
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (2249KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260517_053634_codex_hida_travel_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 349)
+[codex-eyecatch] featured image 設定完了: media_id=349
+[codex-eyecatch] 編集URL: https://hida-no-omoide.com/wp-admin/post.php?post=348&action=edit
+2026-05-17 05:36:37 [INFO] 
+============================================================
+2026-05-17 05:36:37 [INFO] 【全体サマリー】
+2026-05-17 05:36:37 [INFO]   ブログ数  : 1件
+2026-05-17 05:36:37 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-17 05:36:37 [INFO]   所要時間  : 393.9秒
+2026-05-17 05:36:37 [INFO]   ✅ [hida-no-omoide] 高山 老街 必買 → 高山老街で必買のお土産・グルメ15選！さんまち通りで絶対に買うべき人気商品まとめ
+2026-05-17 05:36:37 [INFO]        https://hida-no-omoide.com/wp-admin/post.php?post=348&action=edit
+2026-05-17 05:36:37 [INFO] ============================================================
+===== [HIDA-NO-OMOIDE] 記事生成終了: 2026-05-17 05:36:38 / exit=0 =====

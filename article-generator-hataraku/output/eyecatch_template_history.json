@@ -1,16 +1,19 @@
 {
   "beginner_guide": [
-    "right_person",
-    "flatlay",
-    "cafe_side",
-    "right_person",
-    "flatlay",
     "hands_closeup",
-    "cafe_side"
+    "left_person",
+    "dark_desk",
+    "app_cards",
+    "flatlay",
+    "dark_desk",
+    "app_cards",
+    "flatlay",
+    "dark_desk",
+    "cafe_side",
+    "left_person",
+    "right_person"
   ],
   "hida": [
-    "town_morning",
-    "travel_flatlay",
     "town_evening",
     "town_morning",
     "market_walk",
@@ -19,7 +22,10 @@
     "market_walk",
     "travel_flatlay",
     "town_morning",
-    "poor_old_town"
+    "poor_old_town",
+    "travel_flatlay",
+    "winter_road",
+    "ryokan_room"
   ],
   "curiosity": [
     "notebook_closeup",

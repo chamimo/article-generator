@@ -334,10 +334,11 @@ def post_to_wp(article: dict) -> dict:
 
     endpoint = f"{WP_URL.rstrip('/')}/wp-json/wp/v2/posts"
     payload = {
-        "title":   article["title"],
-        "content": article["content"],
-        "status":  "draft",
-        "slug":    article.get("slug", ""),
+        "title":      article["title"],
+        "content":    article["content"],
+        "status":     "draft",
+        "slug":       article.get("slug", ""),
+        "categories": [191],  # 飛騨高山弁の小説
         "meta": {
             "seo_simple_pack_title":       article.get("seo_title", ""),
             "seo_simple_pack_description": article.get("meta_description", ""),

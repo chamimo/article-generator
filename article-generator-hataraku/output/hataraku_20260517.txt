@@ -1,0 +1,153 @@
+===== [HATARAKU] 実行開始: 2026-05-17 05:00:01 =====
+2026-05-17 05:00:04 [INFO] ============================================================
+2026-05-17 05:00:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-17 05:00:04 [INFO] ============================================================
+2026-05-17 05:00:04 [INFO] 対象ブログ: ['hataraku']
+2026-05-17 05:00:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-17 05:00:06 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-17 05:00:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-17 05:00:06 [INFO]   genre            : 転職・副業・キャリア
+2026-05-17 05:00:06 [INFO]   fact_check       : True
+2026-05-17 05:00:06 [INFO]   article_type_mix : True
+2026-05-17 05:00:06 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-17 05:00:06 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] はた楽ナビ / 「ASP案件マスター」: 21件
+[asp_fetcher]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive / 発達障害×IT就労支援・在宅・スキル習得
+[asp_fetcher]   [S] ラボル → https://hataraku-navi.com/labol / フリーランス資金繰り・即日入金・請求書買取
+[asp_fetcher]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it / 未経験IT転職・ブラック回避・手厚い支援
+[asp_fetcher]   [S] TechGo → https://hataraku-navi.com/techgo / IT転職・年収アップ・ハイクラス
+[asp_fetcher]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi / 転職不安・無料相談・高確定率
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen / 就活・既卒支援・高EPC
+[asp_fetcher]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo / 既卒・フリーター・高卒支援
+2026-05-17 05:00:09 [INFO] [hataraku] アフィリ案件: 21件（スプレッドシート）
+2026-05-17 05:00:09 [INFO] [hataraku]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive
+2026-05-17 05:00:09 [INFO] [hataraku]   [S] ラボル → https://hataraku-navi.com/labol
+2026-05-17 05:00:09 [INFO] [hataraku]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it
+2026-05-17 05:00:09 [INFO] [hataraku]   [S] TechGo → https://hataraku-navi.com/techgo
+2026-05-17 05:00:09 [INFO] [hataraku]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi
+2026-05-17 05:00:09 [INFO] [hataraku]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy
+2026-05-17 05:00:09 [INFO] [hataraku]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen
+2026-05-17 05:00:09 [INFO] [hataraku]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo
+2026-05-17 05:00:09 [INFO] [hataraku]   [S] 保育専門求人サイト ほいく畑 → https://hataraku-navi.com/hoikubatake
+2026-05-17 05:00:09 [INFO] [hataraku]   [A] FREENANCE → https://hataraku-navi.com/freenance
+2026-05-17 05:00:09 [INFO] [hataraku]   [A] Midworks → https://hataraku-navi.com/midworks
+2026-05-17 05:00:09 [INFO] [hataraku]   [A] マスメディアン → https://hataraku-navi.com/massmedia
+2026-05-17 05:00:09 [INFO] [hataraku]   [A] atGP → https://hataraku-navi.com/atgp
+2026-05-17 05:00:09 [INFO] [hataraku]   [A] atGPジョブトレ IT・Web → https://hataraku-navi.com/atgp_job
+2026-05-17 05:00:09 [INFO] [hataraku]   [A] リゾートバイトダイブ → https://hataraku-navi.com/dive
+2026-05-17 05:00:09 [INFO] [hataraku]   [A] 日本マンパワー → https://hataraku-navi.com/manpower
+2026-05-17 05:00:09 [INFO] [hataraku]   [A] クラウドワークス → https://hataraku-navi.com/crowdworks
+2026-05-17 05:00:09 [INFO] [hataraku]   [?] 保育エイド → https://hataraku-navi.com/hoiku-aid
+2026-05-17 05:00:09 [INFO] [hataraku]   [?] 保育バランス → https://hataraku-navi.com/hoiku-balance
+2026-05-17 05:00:09 [INFO] [hataraku]   [?] 保育メトロ → https://hataraku-navi.com/hoiku-metro
+2026-05-17 05:00:09 [INFO] [hataraku]   [?] 20代の転職相談所 → https://hataraku-navi.com/20tensyoku
+2026-05-17 05:00:11 [INFO] [wp] 記事取得: 計51件 (draft=2 / publish=49)
+2026-05-17 05:00:11 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-17 05:00:13 [INFO] [fetch] サブKW紐付け: 6968件 → 187記事に統合
+2026-05-17 05:00:13 [INFO] [fetch] [キーワード] メインKW: 175件（vol≥30 or N/A）  サブKW除外: 6968件（統合対象）  投稿済みスキップ: 891件  テーマ外除外: 198件  aim内訳: [claude:235, aim:131, add:7]
+2026-05-17 05:00:13 [INFO] [dup_check] 優先候補: 175件 {'claude': 102, 'aim': 67, 'add': 6} を先頭評価
+2026-05-17 05:00:13 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=175件, 要求=1件)
+2026-05-17 05:00:13 [INFO] [select] 1件選定 (要求=1件)
+2026-05-17 05:00:13 [INFO] [select]   1. 「薬剤師 転職 相談」 vol=0 seo=N/A comp=N/A
+2026-05-17 05:00:13 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-17 05:00:13 [INFO] [hataraku] 候補: 175件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.7071 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.7071(¥106) / 4記事
+2026-05-17 05:00:13 [INFO] [api_guard] 本日の使用量: $0.7071 / ¥106 (12回呼び出し)
+2026-05-17 05:00:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-17 05:00:13 [INFO] [hataraku] [1/1] [LONGTAIL] 「薬剤師 転職 相談」 vol=0 ★CLAUDE
+2026-05-17 05:00:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-17 05:00:13 [INFO] [generate] 生成開始: 「薬剤師 転職 相談」(vol:0) fact_check=True target_length=5,163字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「薬剤師 転職 相談」(vol:0) [5,163字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.7071 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.7071(¥106) / 4記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=110 out=103 → $0.0005  (lsi:薬剤師 転職 相談)
+[api_guard] 本日の使用量: $0.7076 / ¥106 (902回呼び出し)
+[article_generator] 共起語: 薬剤師転職サイト、求人情報、年収アップ、職場環境、給与交渉、転職エージェント、キャリアチェンジ、調剤薬局、ドラッグストア...
+[api_guard] ✅ 本日: $0.7076 / 1時間: $0.0005  (上限 日次$10.00 / 時間$5.00)  全体: $0.7076(¥106) / 4記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=177 out=652 → $0.0027  (kw_research:薬剤師 転職 相談)
+[api_guard] 本日の使用量: $0.7104 / ¥106 (903回呼び出し)
+[article_generator] サジェスト: 薬剤師 転職 相談 無料・薬剤師 転職 相談 どこ・薬剤師 転職 相談 できるところ...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.7104 / 1時間: $0.0032  (上限 日次$10.00 / 時間$5.00)  全体: $0.7104(¥107) / 4記事
+[api_guard] 記録: claude-sonnet-4-6 in=6376 out=10255 → $0.1730  (article:薬剤師 転職 相談)
+[api_guard] 本日の使用量: $0.8833 / ¥132 (904回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of laptop, speech bubbles, checkma
+[imagefx] タイトル(英): Pharmacist Job Change Advice
+[article_generator] 完了: 「薬剤師の転職相談はどこでできる？無料で使えるサービスと成功のコツ」 カテゴリ: 未設定(-) タグ: ['薬剤師転職', '転職相談', '転職エージェント', '年収アップ', 'キャリアチェンジ']
+2026-05-17 05:02:54 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-17 05:02:54 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「20代の転職相談所」(ID:585)
+2026-05-17 05:02:56 [INFO] [generate] 完了: 「薬剤師の転職相談はどこでできる？無料で使えるサービスと成功のコツ」
+2026-05-17 05:02:56 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 21件
+[category_selector] 「薬剤師 転職 相談」→ 転職・就職(269) score=12
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Pharmacy professional consultation symbols with computer interface, filing docum...
+[image_generator] 完了 (53KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260517_050305_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 680)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: 薬剤師の転職相談ができる場所と無料サービスの使い方
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A pharmacy professional consultation scene with calendar, salary chart, and disc...
+[image_generator] 完了 (69KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260517_050318_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 681)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 薬剤師転職相談のタイミングと給料交渉を成功させる方法
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Pharmacist career consultation visual: resume documents, interview preparation c...
+[image_generator] 完了 (36KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260517_050329_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 682)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 薬剤師転職相談で面接・書類準備を一気に進める方法
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 49件
+[internal_linker] 同カテゴリー: 8件選定（ルールベース）
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['経理に転職！未経験から成功する5つのポイントと必要な資格・勉', '梅雨で仕事のやる気が出ない！原因と今日から使える対策7選', 'IT転職は未経験30代でも現実的？成功するための完全ロードマ', '転職後の自信喪失、30代なら誰でも経験する！原因と克服法を徹', '40代転職失敗しても人生終わりじゃない！やり直す5つの方法', '保育士転職サイト口コミ・評判おすすめ10選！選び方と注意点も', '転職初日に気をつけること14選！挨拶・服装・自己紹介まで完全', '転職の本人希望欄の書き方完全ガイド！例文・給与・勤務地まで徹']
+[wordpress] タグ設定: ['薬剤師転職', '転職相談', '転職エージェント', '年収アップ', 'キャリアチェンジ']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 683) → https://hataraku-navi.com/wp-admin/post.php?post=683&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, speech bubbles, checkmarks, lightbulbs and stars, soft pink, mint and lavender pastel tones, minimal style.
+Elegant lifestyle background: soft morning light with warm neutrals, gentle depth-of-field effect, clean and airy ambiance, muted earth tones.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Pharmacist Job Change Advice" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行685 「薬剤師 転職 相談」→ 投稿済み (2026/05/17, ID:683) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「薬剤師の転職相談はどこでできる？無料で使えるサービスと成功の」
+2026-05-17 05:03:39 [INFO] [post] WP投稿完了: ID=683 → https://hataraku-navi.com/wp-admin/post.php?post=683&action=edit
+2026-05-17 05:03:39 [INFO] [hataraku] [1/1] ✅ 完了: 「薬剤師の転職相談はどこでできる？無料で使えるサービスと成功のコツ」
+2026-05-17 05:03:39 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-17 05:03:39 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hataraku limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #683 薬剤師の転職相談はどこでできる？無料で使えるサービスと成功のコツ
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] はた楽ナビ向けキャリア型バナーで生成します
+[IMAGE] career template: office_person
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1526KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260517_050429_codex_hataraku_career_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 684)
+[codex-eyecatch] featured image 設定完了: media_id=684
+[codex-eyecatch] 編集URL: https://hataraku-navi.com/wp-admin/post.php?post=683&action=edit
+2026-05-17 05:04:35 [INFO] 
+============================================================
+2026-05-17 05:04:35 [INFO] 【全体サマリー】
+2026-05-17 05:04:35 [INFO]   ブログ数  : 1件
+2026-05-17 05:04:35 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-17 05:04:35 [INFO]   所要時間  : 271.1秒
+2026-05-17 05:04:35 [INFO]   ✅ [hataraku] 薬剤師 転職 相談 → 薬剤師の転職相談はどこでできる？無料で使えるサービスと成功のコツ
+2026-05-17 05:04:35 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=683&action=edit
+2026-05-17 05:04:35 [INFO] ============================================================
+===== [HATARAKU] 記事生成終了: 2026-05-17 05:04:36 / exit=0 =====
