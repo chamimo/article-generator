@@ -553,9 +553,14 @@ def _sanitize_overlay_phrase(value: str) -> str:
         "完全ガイド": "やさしく解説",
         "完全攻略": "やさしく解説",
         "完全解説": "基本解説",
+        "完全版": "保存版",
+        "完全比較": "比較",
+        "完全まとめ": "まとめ",
     }
     for old, new in replacements.items():
         text = text.replace(old, new)
+    text = text.replace("完全", "")
+    text = re.sub(r"\s+", " ", text)
     return text.strip()
 
 
@@ -1680,6 +1685,7 @@ def _is_beginner_guide_title(title: str) -> bool:
     triggers = (
         "初心者", "入門", "使い方", "始め方", "やり方", "おすすめ",
         "比較", "無料", "選", "ガイド", "解説", "できること",
+        "安全", "危険性", "個人情報", "ウイルス", "PhotoDirector",
     )
     return any(t in title for t in triggers)
 
@@ -1716,8 +1722,10 @@ def _select_beginner_guide_template(title: str) -> str:
             pass
         return selected
 
+    if any(k in title for k in ("Gemini", "ChatGPT", "Claude", "PhotoDirector", "AI自動化")):
+        return _pick(["right_person", "left_person", "cafe_side"])
     if any(k in title for k in ("副業", "稼ぐ", "月収", "収益", "アフィリエイト", "在宅")):
-        return _pick(["cafe_side", "flatlay", "app_cards", "right_person", "left_person", "hands_closeup", "dark_desk"])
+        return _pick(["cafe_side", "right_person", "left_person", "hands_closeup", "flatlay"])
     if any(k in title for k in ("おすすめ", "比較", "無料", "選", "商用利用")):
         return _pick(["flatlay", "app_cards", "cafe_side", "right_person", "left_person", "hands_closeup", "dark_desk"])
     return _pick(["right_person", "flatlay", "cafe_side", "app_cards", "left_person", "hands_closeup", "dark_desk", "no_person_room"])
@@ -1739,6 +1747,8 @@ def _build_beginner_guide_background_prompt(title: str, template: str = "right_p
         "Keep all important subjects away from the outer 8% edges so WordPress thumbnail crops will not cut them off. "
         "Style: polished lifestyle magazine cover, Pinterest, note header, friendly beginner guide, airy and warm. "
         f"Palette: {palette}. ABSOLUTELY NO text, no letters, no numbers, no logos, no watermark. "
+        "Background image only: no banners, no badges, no labels, no captions, no fake UI text, no word-like marks, no decorative typography. "
+        "All readable Japanese text will be added later by code, so keep the background clean and quiet. "
         "No decorative symbols, no sparkle marks, no star glyphs, no ✧-like ornaments anywhere. "
         f"Topic feeling: {title}. "
     )
@@ -1765,15 +1775,16 @@ def _build_beginner_guide_background_prompt(title: str, template: str = "right_p
         return (
             base +
             f"Scene: {scene}. The cards are blank shapes only, with absolutely no readable text. "
+            "Do not draw small lines or blocks that resemble text on the cards. "
             "RIGHT 48% contains the lifestyle tech objects and blank card shapes. "
             "LEFT 52% remains clear ivory negative space for typography."
         )
 
     if template == "cafe_side":
         person = random.choice([
-            "a young Japanese woman in her early 20s, gentle side profile, shoulder-length brown hair, dusty blue blouse",
-            "a young Japanese woman in her 20s seen from behind at a cafe table, sage green cardigan, relaxed posture",
-            "a young Japanese woman in her late 20s with short bob hair, muted pink knit top, calm smile",
+            "a young Japanese woman in her early 20s, gentle side profile, shoulder-length brown hair, off-white blouse with pale blue accents",
+            "a young Japanese woman in her 20s seen from behind at a cafe table, ivory cardigan with soft mint accents, relaxed posture",
+            "a young Japanese woman in her late 20s with short bob hair, white knit top with dusty pink scarf, calm smile",
             "hands-only close-up of a young person typing on a laptop beside coffee, no face visible",
         ])
         return (
@@ -1785,10 +1796,10 @@ def _build_beginner_guide_background_prompt(title: str, template: str = "right_p
 
     if template == "left_person":
         person = random.choice([
-            "a young Japanese woman in her early 20s with shoulder-length dark hair, navy cardigan over a white tee",
-            "a Japanese woman in her late 20s with short bob hair, muted terracotta sweater, natural makeup",
-            "a young Japanese man in his 20s, soft beige overshirt, calm focused expression",
-            "a young Japanese woman with low ponytail, pale blue shirt, relaxed profile",
+            "a young Japanese woman in her early 20s with shoulder-length dark hair, off-white cardigan over a pale blue tee",
+            "a Japanese woman in her late 20s with short bob hair, ivory sweater with muted peach accents, natural makeup",
+            "a young Japanese man in his 20s, soft white overshirt over a pastel sage tee, calm focused expression",
+            "a young Japanese woman with low ponytail, white blouse with pale lavender accents, relaxed profile",
         ])
         scene = random.choice([
             "quiet home workspace with wood shelves and plants",
@@ -1798,8 +1809,8 @@ def _build_beginner_guide_background_prompt(title: str, template: str = "right_p
         return (
             base +
             f"LEFT 42%: {person}, using a laptop or tablet in a {scene}. "
-            "RIGHT 58% remains clean bright negative space for large Japanese typography. "
-            "Editorial composition, different from standard right-person thumbnails."
+        "RIGHT 58% remains clean bright negative space for large Japanese typography, not empty-looking; add soft plants or warm decor near the edge only. "
+        "Editorial composition, different from standard right-person thumbnails."
         )
 
     if template == "hands_closeup":
@@ -1817,8 +1828,8 @@ def _build_beginner_guide_background_prompt(title: str, template: str = "right_p
     if template == "dark_desk":
         return (
             base +
-            "Evening calm workspace with deep teal wall, warm desk lamp, laptop, notebook, coffee, small plant, cozy but not dark. "
-            "No people or only hands visible. Premium magazine mood, muted navy and amber accents. "
+        "Evening calm workspace with a young Japanese adult in an off-white or ivory top with subtle pastel accents, warm desk lamp, laptop, notebook, coffee, small plant, cozy but not dark. "
+        "Side profile or hands only, premium magazine mood, muted navy and amber accents. "
             "Large clean negative space for typography."
         )
 
@@ -1876,6 +1887,17 @@ def _guide_overlay_texts(title: str, texts: dict, template: str = "right_person"
         main = "Claude"
     elif "Gemini" in title:
         main = "Gemini"
+    elif "PhotoDirector" in title:
+        main = "PhotoDirector"
+        if "買い切り" in title or "サブスク" in title:
+            accent = "買い切り版の価格"
+        elif "安全" in title or "危険性" in title or "個人情報" in title:
+            accent = "安全性チェック"
+        else:
+            accent = "機能と無料版"
+    elif "AI自動化" in title:
+        main = "AI自動化"
+        accent = "在宅ワーク手順"
     elif head_kw and not any(x in main for x in ("AI", "ChatGPT", "Claude", "Gemini")):
         main = head_kw
 
@@ -1894,25 +1916,29 @@ def _guide_overlay_texts(title: str, texts: dict, template: str = "right_person"
     else:
         text_side = random.choice(["left", "left", "right"])
 
+    compact_tool_guide = any(k in title for k in ("Gemini", "ChatGPT", "Claude", "PhotoDirector", "AI自動化", "使い方", "安全", "危険性"))
+
     return _sanitize_overlay_texts({
         "strip_label": strip,
-        "pre_title": texts.get("pre_title", "").strip() or "はじめてでも、やさしく学べる",
-        "main_word": main[:12],
+        "pre_title": "" if compact_tool_guide else (texts.get("pre_title", "").strip() or "はじめてでも、やさしく学べる"),
+        "main_word": main,
         "accent_word": accent[:12],
-        "supplement": "基本から使い方まで これ1本",
+        "supplement": "" if compact_tool_guide else "基本から使い方まで これ1本",
         "badge": random.choice([strip, "初心者OK", "やさしく解説"]),
         "icon_labels": icon_sets,
         "_palette_name": palette_name,
         "_template": template,
         "_panel_curve": random.choice(["soft", "wide", "diagonal"]),
         "_ribbon_x": random.choice([0.615, 0.645, 0.675]),
-        "_sub_layout": random.choice(["ribbon_top", "badge_circle", "sticky_note", "icon_cards"]),
+        "_sub_layout": "ribbon_top" if compact_tool_guide else random.choice(["ribbon_top", "badge_circle", "sticky_note", "icon_cards"]),
         "_text_side": text_side,
         "_icon_style": "dynamic",
         "_icon_glyphs": random.sample(glyph_pool, 3),
-        "_hide_top_icon": random.choice([True, False]),
-        "_hide_badge": random.choice([False, False, True]),
-        "_hide_icons": random.choice([False, False, True]),
+        "_hide_top_icon": compact_tool_guide or random.choice([True, False]),
+        "_hide_badge": True if compact_tool_guide else random.choice([False, False, True]),
+        "_hide_icons": compact_tool_guide or random.choice([False, False, True]),
+        "_compact_layout": compact_tool_guide,
+        "_quiet_layout": compact_tool_guide,
     })
 
 
@@ -1924,7 +1950,8 @@ def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
     img = Image.open(_io.BytesIO(img_bytes)).convert("RGBA")
     W, H = img.size
     text_side = texts.get("_text_side", "left")
-    if text_side == "right":
+    template = texts.get("_template", "right_person")
+    if text_side == "right" and template != "left_person":
         img = ImageOps.mirror(img)
     font_bold_path = _find_font(_FONT_BOLD_CANDIDATES)
     font_reg_path = _find_font(_FONT_REG_CANDIDATES)
@@ -1956,8 +1983,6 @@ def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
         x, y = xy
         draw.text((x, y - bb[1]), text, font=font, fill=fill,
                   stroke_width=stroke, stroke_fill=stroke_fill)
-
-    template = texts.get("_template", "right_person")
 
     # 読み取り面を生成。背景写真は残しつつ、文字を載せる面を作る。
     ov = Image.new("RGBA", (W, H), (0, 0, 0, 0))
@@ -2011,8 +2036,9 @@ def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
 
     quiet_layout = bool(texts.get("_quiet_layout"))
     f_pre = _fit(texts["pre_title"], font_reg_path, int(H * 0.050 if quiet_layout else H * 0.055), int(H * 0.034), text_w)
-    f_main = _fit(texts["main_word"], font_bold_path, int(H * 0.158 if quiet_layout else H * 0.185), int(H * 0.094), text_w)
-    f_acc = _fit(texts["accent_word"], font_bold_path, int(H * 0.092 if quiet_layout else H * 0.112), int(H * 0.060), text_w)
+    compact_layout = bool(texts.get("_compact_layout"))
+    f_main = _fit(texts["main_word"], font_bold_path, int(H * 0.120 if compact_layout else H * (0.158 if quiet_layout else 0.185)), int(H * 0.060 if compact_layout else H * 0.094), text_w)
+    f_acc = _fit(texts["accent_word"], font_bold_path, int(H * 0.058 if compact_layout else H * (0.092 if quiet_layout else 0.112)), int(H * 0.040 if compact_layout else H * 0.050), text_w)
     f_sup = _fit(texts["supplement"], font_bold_path, int(H * 0.040 if quiet_layout else H * 0.043), int(H * 0.028), int(W * 0.42))
     f_small = _load(font_bold_path, int(H * 0.030))
     f_badge = _load(font_bold_path, int(H * 0.036))
@@ -2049,13 +2075,17 @@ def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
         _text(draw, (safe_x + int(W * 0.022), note_y + int(H * 0.026)), texts["strip_label"], f_badge, (255, 255, 255, 255))
         pre_y = safe_y + int(H * 0.112)
 
-    _text(draw, (pre_x, pre_y), texts["pre_title"], f_pre, (36, 34, 31, 245))
-    tw, th, _ = _bbox(texts["pre_title"], f_pre)
-    draw.line([(pre_x + int(tw * 0.04), pre_y + th + int(H * 0.010)),
-               (pre_x + int(tw * 0.94), pre_y + th + int(H * 0.010))],
-              fill=coral_soft, width=max(4, int(H * 0.006)))
+    pre_text = texts.get("pre_title", "").strip()
+    if pre_text:
+        _text(draw, (pre_x, pre_y), pre_text, f_pre, (36, 34, 31, 245))
+        tw, th, _ = _bbox(pre_text, f_pre)
+        draw.line([(pre_x + int(tw * 0.04), pre_y + th + int(H * 0.010)),
+                   (pre_x + int(tw * 0.94), pre_y + th + int(H * 0.010))],
+                  fill=coral_soft, width=max(4, int(H * 0.006)))
+    else:
+        th = 0
 
-    main_y = int(H * (0.275 if quiet_layout else 0.245))
+    main_y = int(H * 0.285) if compact_layout else max(int(H * (0.285 if quiet_layout else 0.260)), pre_y + th + int(H * 0.065))
     shadow = (0, 0, 0, 34)
     _text(draw, (safe_x + 4, main_y + 4), texts["main_word"], f_main, shadow)
     _text(draw, (safe_x, main_y), texts["main_word"], f_main, navy)
@@ -2064,25 +2094,26 @@ def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
                (safe_x + int(main_w * 0.98), main_y + main_h + int(H * 0.018))],
               fill=coral_soft, width=max(6, int(H * 0.011)))
 
-    acc_y = main_y + main_h + int(H * (0.090 if quiet_layout else 0.070))
+    acc_y = main_y + main_h + int(H * (0.122 if compact_layout else (0.112 if quiet_layout else 0.092)))
     _text(draw, (safe_x, acc_y), texts["accent_word"], f_acc, blue, stroke=1)
     _, acc_h, _ = _bbox(texts["accent_word"], f_acc)
 
-    # 補足帯
-    sup_y = acc_y + acc_h + int(H * (0.100 if quiet_layout else 0.080))
-    sup_text = texts["supplement"]
-    sw, sh, _ = _bbox(sup_text, f_sup)
-    band_x = safe_x + int(W * 0.050)
-    band_pad_x = int(W * 0.022)
-    band_pad_y = int(H * 0.014)
-    draw.rounded_rectangle(
-        [band_x - band_pad_x, sup_y - band_pad_y, band_x + sw + band_pad_x, sup_y + sh + band_pad_y],
-        radius=int(H * 0.022), fill=cream,
-    )
-    draw.line([(band_x - band_pad_x + 6, sup_y + sh + band_pad_y - 2),
-               (band_x + sw + band_pad_x - 6, sup_y + sh + band_pad_y - 2)],
-              fill=(230, 224, 214, 210), width=2)
-    _text(draw, (band_x, sup_y), sup_text, f_sup, navy)
+    # 補足帯。空欄の場合は詰め込み防止のため描画しない。
+    sup_text = texts.get("supplement", "").strip()
+    if sup_text:
+        sup_y = acc_y + acc_h + int(H * (0.115 if quiet_layout else 0.100))
+        sw, sh, _ = _bbox(sup_text, f_sup)
+        band_x = safe_x + int(W * 0.050)
+        band_pad_x = int(W * 0.022)
+        band_pad_y = int(H * 0.014)
+        draw.rounded_rectangle(
+            [band_x - band_pad_x, sup_y - band_pad_y, band_x + sw + band_pad_x, sup_y + sh + band_pad_y],
+            radius=int(H * 0.022), fill=cream,
+        )
+        draw.line([(band_x - band_pad_x + 6, sup_y + sh + band_pad_y - 2),
+                   (band_x + sw + band_pad_x - 6, sup_y + sh + band_pad_y - 2)],
+                  fill=(230, 224, 214, 210), width=2)
+        _text(draw, (band_x, sup_y), sup_text, f_sup, navy)
 
     # バッジ装飾。旅ブログなど静かなレイアウトでは省略する。
     if not texts.get("_hide_badge"):
@@ -2619,7 +2650,9 @@ def _curiosity_overlay_texts(title: str, texts: dict, template: str) -> dict:
 
 def _select_hida_template(title: str) -> str:
     """飛騨の思い出用アイキャッチの構図をタイトルから選ぶ。"""
-    if any(k in title for k in ("鬼仏", "与平", "飢饉", "昔話", "民話", "再生物語", "鬼と呼ばれた")):
+    if any(k in title for k in ("冬タイヤ", "スタッドレス", "雪道", "道路規制", "チェーン規制", "凍結", "積雪")):
+        pool = ["winter_road", "snowy_mountain_road", "winter_car_check", "snowy_town_road"]
+    elif any(k in title for k in ("鬼仏", "与平", "飢饉", "昔話", "民話", "再生物語", "鬼と呼ばれた")):
         pool = ["old_mountain_village", "poor_old_town", "town_evening"]
     elif any(k in title for k in ("宿", "ホテル", "旅館", "民宿", "泊", "温泉", "下呂", "奥飛騨")):
         pool = ["ryokan_room", "onsen_morning", "town_evening", "travel_flatlay"]
@@ -2703,6 +2736,34 @@ def _build_hida_background_prompt(title: str, template: str) -> str:
             "Hida old town street at quiet golden hour, wooden machiya houses, warm lanterns beginning to glow, stone path slightly wet, nostalgic atmosphere. "
             "No readable signs. Large clean negative space for typography."
         )
+    if template == "winter_road":
+        return (
+            base +
+            "A realistic snowy road near Takayama in winter, compact snow on asphalt, roadside snowbanks, mountains in the distance, "
+            "a simple passenger car seen from behind at safe distance, cold overcast daylight. No readable road signs. "
+            "Practical winter driving mood with clean negative space for Japanese typography."
+        )
+    if template == "snowy_mountain_road":
+        return (
+            base +
+            "A winding mountain road in Hida winter, snow-covered shoulders, frozen guardrails, dark cedar forest, pale gray sky, "
+            "subtle tire tracks on packed snow, no people, no readable signs, no dramatic danger. "
+            "Useful travel safety mood with one side clean for Japanese typography."
+        )
+    if template == "winter_car_check":
+        return (
+            base +
+            "Close view of a parked car tire on a snowy roadside near an old Hida wooden street, winter tire tread visible, "
+            "soft snow, cold morning air, traditional wooden buildings blurred in the background. No logos, no readable license plate. "
+            "Clear practical mood for winter tire information, with clean negative space."
+        )
+    if template == "snowy_town_road":
+        return (
+            base +
+            "Takayama old town street in winter with snow on roofs and road edges, traditional wooden machiya houses, subdued morning light, "
+            "a quiet road surface with patches of snow and ice, no crowds, no readable shop signs. "
+            "Calm but practical winter travel mood, clean negative space for Japanese typography."
+        )
     if template == "old_mountain_village":
         return (
             base +
@@ -2754,6 +2815,10 @@ def _hida_overlay_texts(title: str, texts: dict, template: str) -> dict:
         main = work_title
         accent = "飛騨弁の短編小説" if "飛騨弁" in title else "短編小説"
         strip = "ものがたり"
+    elif any(k in title for k in ("冬タイヤ", "スタッドレス", "雪道", "道路規制", "チェーン規制", "凍結", "積雪")):
+        main = "冬タイヤ"
+        accent = "高山の必要条件"
+        strip = "冬の高山"
     elif "白川郷" in title:
         main = "白川郷"
         accent = "やさしい旅ガイド"
@@ -2779,7 +2844,10 @@ def _hida_overlay_texts(title: str, texts: dict, template: str) -> dict:
         accent = "迷わない歩き方"
         strip = "旅の道しるべ"
 
-    if work_title and "小説" in title:
+    if any(k in title for k in ("冬タイヤ", "スタッドレス", "雪道", "道路規制", "チェーン規制", "凍結", "積雪")):
+        pre_title = random.choice(["冬道の備え", "雪の高山へ行く前に", "車で行く高山"])
+        supplement = random.choice(["標高・気温・規制を確認", "雪道対策を出発前に整理", "スタッドレスの目安を確認"])
+    elif work_title and "小説" in title:
         pre_title = random.choice(["飛騨の物語", "心に残る短編", "語り継ぐ物語"])
         if any(k in title for k in ("再生", "鬼仏", "与平", "鬼と呼ばれた")):
             supplement = random.choice(["凍った心がほどけていく", "人との出会いが男を変える", "赦しと再生の物語"])

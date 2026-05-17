@@ -1,0 +1,117 @@
+===== 週次順位同期開始: 2026-05-17 07:00:00 =====
+
+----- [sync/hataraku] 開始: 07:00:00 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-05-14 (5/14)
+[sync_ranks] GSC データ: 4ページ / 7クエリ
+[sync_ranks] ⚠ 「記事URL」列が見つかりません。
+----- [sync/hataraku] 終了: 07:00:09 / exit=0 -----
+
+----- [sync/workup-ai] 開始: 07:00:14 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-05-14 (5/14)
+[sync_ranks] GSC データ: 504ページ / 1760クエリ
+[sync_ranks] ⚠ 「記事URL」列が見つかりません。
+----- [sync/workup-ai] 終了: 07:00:21 / exit=0 -----
+
+----- [sync/ys-trend] 開始: 07:00:26 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-05-14 (5/14)
+[sync_ranks] GSC データ: 8ページ / 19クエリ
+[sync_ranks] ⚠ 「記事URL」列が見つかりません。
+----- [sync/ys-trend] 終了: 07:00:32 / exit=0 -----
+
+----- [sync/kaerudoko] 開始: 07:00:37 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-05-14 (5/14)
+[sync_ranks] GSC データ: 14ページ / 37クエリ
+[sync_ranks] ⚠ 「記事URL」列が見つかりません。
+----- [sync/kaerudoko] 終了: 07:00:43 / exit=0 -----
+
+----- [sync/hapipo8] 開始: 07:00:48 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-05-14 (5/14)
+[sync_ranks] GSC データ: 6ページ / 11クエリ
+[sync_ranks] ⚠ 「記事URL」列が見つかりません。
+----- [sync/hapipo8] 終了: 07:00:54 / exit=0 -----
+
+----- [sync/hida-no-omoide] 開始: 07:00:59 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-05-14 (5/14)
+[sync_ranks] GSC データ: 3ページ / 4クエリ
+[sync_ranks] ⚠ 「記事URL」列が見つかりません。
+----- [sync/hida-no-omoide] 終了: 07:01:05 / exit=0 -----
+
+----- [sync/web-study1] 開始: 07:01:10 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-05-14 (5/14)
+[sync_ranks] GSC データ: 4ページ / 6クエリ
+[sync_ranks] ⚠ 「記事URL」列が見つかりません。
+----- [sync/web-study1] 終了: 07:01:17 / exit=0 -----
+
+===== 順位同期完了 / フラグチェック開始: 2026-05-17 07:01:22 =====
+
+----- [flag/hataraku] 開始: 07:01:22 -----
+[check_rank_drop] サイト: hataraku
+[check_rank_drop] 比較: 4/13順位 → 4/14順位
+[check_rank_drop] 「優先度スコア」列: AM列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/hataraku] 終了: 07:01:25 / exit=0 -----
+
+----- [flag/workup-ai] 開始: 07:01:28 -----
+[check_rank_drop] サイト: workup-ai
+[check_rank_drop] 比較: 4/30順位 → 5/7順位
+[check_rank_drop] 「優先度スコア」列: G列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/workup-ai] 終了: 07:01:30 / exit=0 -----
+
+----- [flag/ys-trend] 開始: 07:01:34 -----
+[check_rank_drop] サイト: ys-trend
+[check_rank_drop] 比較: 4/30順位 → 5/7順位
+[check_rank_drop] 「優先度スコア」列: G列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/ys-trend] 終了: 07:01:36 / exit=0 -----
+
+----- [flag/kaerudoko] 開始: 07:01:40 -----
+[check_rank_drop] サイト: kaerudoko
+[check_rank_drop] 比較: 4/30順位 → 5/7順位
+[check_rank_drop] 「優先度スコア」列: G列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/kaerudoko] 終了: 07:01:42 / exit=0 -----
+
+----- [flag/hapipo8] 開始: 07:01:45 -----
+[check_rank_drop] サイト: hapipo8
+[check_rank_drop] 比較: 4/30順位 → 5/7順位
+[check_rank_drop] 「優先度スコア」列: G列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/hapipo8] 終了: 07:01:47 / exit=0 -----
+
+----- [flag/hida-no-omoide] 開始: 07:01:50 -----
+[check_rank_drop] サイト: hida-no-omoide
+[check_rank_drop] 比較: 4/14順位 → 5/7順位
+[check_rank_drop] 「優先度スコア」列: AN列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/hida-no-omoide] 終了: 07:01:52 / exit=0 -----
+
+----- [flag/web-study1] 開始: 07:01:56 -----
+[check_rank_drop] サイト: web-study1
+[check_rank_drop] 比較: 4/13順位 → 4/14順位
+[check_rank_drop] 「優先度スコア」列: AM列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/web-study1] 終了: 07:01:58 / exit=0 -----
+
+===== 週次処理完了: 2026-05-17 07:02:01 =====

@@ -8979,6 +8979,266 @@
       "output_tokens": 10330,
       "cost_usd": 0.175074,
       "label": "article:photodirector 買い切り"
+    },
+    {
+      "timestamp": "2026-05-16T19:20:14.504179+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 106,
+      "cost_usd": 0.00051,
+      "label": "lsi:お金なくても備蓄"
+    },
+    {
+      "timestamp": "2026-05-16T19:20:18.543510+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 548,
+      "cost_usd": 0.002332,
+      "label": "kw_research:お金なくても備蓄"
+    },
+    {
+      "timestamp": "2026-05-16T19:23:10.630711+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 7713,
+      "output_tokens": 10355,
+      "cost_usd": 0.178464,
+      "label": "article:お金なくても備蓄"
+    },
+    {
+      "timestamp": "2026-05-16T20:00:15.295783+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 103,
+      "cost_usd": 0.0005,
+      "label": "lsi:薬剤師 転職 相談"
+    },
+    {
+      "timestamp": "2026-05-16T20:00:19.854380+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 652,
+      "cost_usd": 0.00275,
+      "label": "kw_research:薬剤師 転職 相談"
+    },
+    {
+      "timestamp": "2026-05-16T20:02:48.884629+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6376,
+      "output_tokens": 10255,
+      "cost_usd": 0.172953,
+      "label": "article:薬剤師 転職 相談"
+    },
+    {
+      "timestamp": "2026-05-16T20:32:21.045925+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 107,
+      "output_tokens": 98,
+      "cost_usd": 0.000478,
+      "label": "lsi:高山 老街 必買"
+    },
+    {
+      "timestamp": "2026-05-16T20:32:25.012989+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 174,
+      "output_tokens": 564,
+      "cost_usd": 0.002395,
+      "label": "kw_research:高山 老街 必買"
+    },
+    {
+      "timestamp": "2026-05-16T20:35:35.955237+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6092,
+      "output_tokens": 11207,
+      "cost_usd": 0.186381,
+      "label": "article:高山 老街 必買"
+    },
+    {
+      "timestamp": "2026-05-16T20:35:41.626941+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 379,
+      "output_tokens": 32,
+      "cost_usd": 0.000431,
+      "label": "maps:高山 老街 必買"
+    },
+    {
+      "timestamp": "2026-05-16T21:00:13.932677+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 105,
+      "cost_usd": 0.000512,
+      "label": "lsi:通信教育 タブレット 返却 必要？"
+    },
+    {
+      "timestamp": "2026-05-16T21:00:18.580514+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 638,
+      "cost_usd": 0.002698,
+      "label": "kw_research:通信教育 タブレット 返却 必要？"
+    },
+    {
+      "timestamp": "2026-05-16T21:02:46.723591+00:00",
+      "date": "2026-05-16",
+      "hour": "2026-05-16T21",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 6620,
+      "output_tokens": 9675,
+      "cost_usd": 0.164985,
+      "label": "article:通信教育 タブレット 返却 必要？"
+    },
+    {
+      "timestamp": "2026-05-17T16:19:02.227146+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T16",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 115,
+      "cost_usd": 0.000551,
+      "label": "lsi:AI自動化 在宅ワーク やり方"
+    },
+    {
+      "timestamp": "2026-05-17T16:19:05.895416+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T16",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 589,
+      "cost_usd": 0.002501,
+      "label": "kw_research:AI自動化 在宅ワーク やり方"
+    },
+    {
+      "timestamp": "2026-05-17T16:22:04.025503+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T16",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 7625,
+      "output_tokens": 12000,
+      "cost_usd": 0.202875,
+      "label": "article:AI自動化 在宅ワーク やり方"
+    },
+    {
+      "timestamp": "2026-05-17T16:25:38.054048+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T16",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 99,
+      "cost_usd": 0.000487,
+      "label": "lsi:AI自動化 在宅ワーク やり方"
+    },
+    {
+      "timestamp": "2026-05-17T16:25:42.034482+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T16",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 639,
+      "cost_usd": 0.002701,
+      "label": "kw_research:AI自動化 在宅ワーク やり方"
+    },
+    {
+      "timestamp": "2026-05-17T16:29:23.330098+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T16",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 7656,
+      "output_tokens": 15758,
+      "cost_usd": 0.259338,
+      "label": "article:AI自動化 在宅ワーク やり方"
+    },
+    {
+      "timestamp": "2026-05-17T17:18:17.033958+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 97,
+      "cost_usd": 0.000476,
+      "label": "lsi:AIエージェント 副業 とは"
+    },
+    {
+      "timestamp": "2026-05-17T17:18:20.826601+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 519,
+      "cost_usd": 0.002218,
+      "label": "kw_research:AIエージェント 副業 とは"
+    },
+    {
+      "timestamp": "2026-05-17T17:22:02.777026+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T17",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 9188,
+      "output_tokens": 13730,
+      "cost_usd": 0.233514,
+      "label": "article:AIエージェント 副業 とは"
+    },
+    {
+      "timestamp": "2026-05-17T18:21:50.501635+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T18",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 78,
+      "cost_usd": 0.0004,
+      "label": "lsi:飛騨特急 時刻表"
+    },
+    {
+      "timestamp": "2026-05-17T18:21:55.153035+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T18",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 624,
+      "cost_usd": 0.002638,
+      "label": "kw_research:飛騨特急 時刻表"
+    },
+    {
+      "timestamp": "2026-05-17T18:25:16.568542+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T18",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10216,
+      "output_tokens": 14550,
+      "cost_usd": 0.248898,
+      "label": "article:飛騨特急 時刻表"
+    },
+    {
+      "timestamp": "2026-05-17T18:25:23.264112+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T18",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 379,
+      "output_tokens": 14,
+      "cost_usd": 0.000359,
+      "label": "maps:飛騨特急 時刻表"
     }
   ],
   "events": [
