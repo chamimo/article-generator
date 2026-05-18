@@ -174,6 +174,60 @@
 
 ---
 
+## GSC分析・リライト提案コマンド
+
+`article-generator-hataraku/` ディレクトリで実行する。
+
+```bash
+./run_rewrite_analysis.sh workup-ai      # AIVice
+./run_rewrite_analysis.sh hataraku       # はた楽ナビ
+./run_rewrite_analysis.sh ys-trend       # ワイズトレンド
+./run_rewrite_analysis.sh kaerudoko      # どこで売ってるナビ
+./run_rewrite_analysis.sh hapipo8        # 気になることブログ
+./run_rewrite_analysis.sh hida-no-omoide # 飛騨の思い出
+./run_rewrite_analysis.sh web-study1     # オンライン学習ナビ
+```
+
+実行後、各ブログのスプレッドシート「リライト提案」シートを確認し、承認した記事にステータスを記入すること。
+
+---
+
+## リライト実行（承認後）
+
+ユーザーが「○○をリライトして」と指示したとき、以下の手順で実行すること。
+
+### 禁止事項（厳守）
+- URL変更・H1変更・主軸KWの変更は禁止
+- 既存本文の大量削除は禁止
+- 承認なしでWordPress本文を変更・公開することは禁止
+- 必ず **下書き保存（draft）** まで。勝手に公開しない
+
+### 実行手順
+1. **対象記事を特定**: タイトルまたはURLから WordPress REST API で記事を取得
+   ```
+   GET {wp_url}/wp-json/wp/v2/posts?search={キーワード}&status=publish&_fields=id,title,link,content
+   ```
+2. **GSCクエリ確認**: `modules/gsc_client.py` の GSCClient で対象URLの流入クエリを取得
+3. **リライト提案シート確認**: 対象記事の提案内容（追加意図・H2/H3案・FAQ案）を参照
+4. **リライト案生成**: 以下のルールで生成
+   - 既存本文はなるべく維持し、必要箇所のみ追記・修正
+   - 追加部分には `<!-- 追加ここから：〇〇 -->` / `<!-- 追加ここまで -->` コメントを入れる
+   - ASPリンクは差し替え用コメント `<!-- アフィリリンク: {サービス名} -->` で明示
+   - WordPressのGutenbergブロック形式（`<!-- wp:paragraph -->` 等）を使用
+5. **WordPress下書き保存**: REST API で `status: draft` として POST
+   ```
+   POST {wp_url}/wp-json/wp/v2/posts/{id}
+   {"content": "...", "status": "draft"}
+   ```
+6. 編集URLをユーザーに提示して確認を求める
+
+### リライト強度の目安
+- **軽微**: FAQ・内部リンク・CTA追加。既存構成はそのまま
+- **中規模**: H2/H3追加・比較表追加・ASP導線追加。既存H2は原則維持
+- **大規模**: 構成変更・タイトル改善・導入文の大幅改善（順位変動リスクあり。慎重に）
+
+---
+
 ## タイトル・ディスクリプション生成ルール（全ブログ共通）
 
 - タイトル：30〜40字・キーワード含む・数字/メリット/疑問形を活用

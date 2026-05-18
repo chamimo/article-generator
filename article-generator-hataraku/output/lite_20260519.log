@@ -1,0 +1,181 @@
+2026-05-19 01:53:18 [INFO] ============================================================
+2026-05-19 01:53:18 [INFO] generate_lite.py 開始  dry_run=True
+2026-05-19 01:53:18 [INFO] ============================================================
+2026-05-19 01:53:18 [INFO] 対象ブログ: ['workup-ai']
+2026-05-19 01:53:19 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 01:53:19 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-19 01:53:19 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 01:53:19 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-19 01:53:19 [INFO]   fact_check       : True
+2026-05-19 01:53:19 [INFO]   article_type_mix : True
+2026-05-19 01:53:19 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-19 01:53:19 [INFO]   article_count    : 1  dry_run: True
+2026-05-19 01:53:21 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-19 01:53:21 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-19 01:53:21 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-19 01:53:21 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-19 01:53:21 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-19 01:53:21 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-19 01:53:21 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-19 01:53:21 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-19 01:53:21 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-19 01:53:21 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-19 01:53:21 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-19 01:53:21 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-19 01:53:21 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-19 01:53:21 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-19 01:53:21 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-19 01:53:21 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-19 01:53:21 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-19 01:53:21 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-19 01:53:21 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-19 01:53:22 [INFO] [wp] 記事取得: 計404件 (publish=404)
+2026-05-19 01:53:22 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-19 01:53:23 [DEBUG] [fetch] シート「絞り込みKW」: 202行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-19 01:53:23 [INFO] [fetch] サブKW紐付け: 146件 → 19記事に統合
+2026-05-19 01:53:23 [INFO] [fetch] [キーワード] メインKW: 15件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 26件  テーマ外除外: 15件  aim内訳: [now:2, aim:15, claude:10, add:3]
+2026-05-19 01:53:23 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-19 01:53:23 [INFO] [dup_check] 優先候補: 15件 {'now': 2, 'add': 2, 'aim': 2, 'claude': 9} を先頭評価
+2026-05-19 01:53:23 [INFO] [dup_check] 除外: 「plaud note pro リアルタイム文字起こし」 → カニバリ(3/4語重複 ['plaud', 'note', 'pro']): 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-19 01:53:23 [DEBUG] [dup_check] OK: 「Claude Code Codex どっち 比較」
+2026-05-19 01:53:23 [INFO] [dup_check] 完了: 選定=1件 / 除外=1件 (pool=15件, 要求=1件)
+2026-05-19 01:53:23 [INFO] [select] 1件選定 (要求=1件)
+2026-05-19 01:53:23 [INFO] [select]   1. 「Claude Code Codex どっち 比較」 vol=0 seo=N/A comp=N/A
+2026-05-19 01:53:23 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-19 01:53:23 [INFO] [workup-ai] 候補: 15件 / 選定: 1件 / 生成予定: 1件
+2026-05-19 01:53:24 [INFO] [api_guard] 本日の使用量: $1.4299 / ¥214 (8回呼び出し)
+2026-05-19 01:53:24 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 01:53:24 [INFO] [workup-ai] [1/1] [LONGTAIL] 「Claude Code Codex どっち 比較」 vol=0 ★NOW
+2026-05-19 01:53:24 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 01:53:24 [INFO] [generate] 生成開始: 「Claude Code Codex どっち 比較」(vol:0) fact_check=True target_length=7,501字  誘導リンク:0件
+2026-05-19 01:56:47 [ERROR] [workup-ai] [1/1] ❌ エラー（続行）: [Errno 1] Operation not permitted: '/Users/yama/.article-generator-daily.json'
+2026-05-19 01:56:47 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-19 01:56:47 [INFO] 
+============================================================
+2026-05-19 01:56:47 [INFO] 【全体サマリー】
+2026-05-19 01:56:47 [INFO]   ブログ数  : 1件
+2026-05-19 01:56:47 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-19 01:56:47 [INFO]   所要時間  : 209.3秒
+2026-05-19 01:56:47 [INFO]   ❌ [workup-ai] Claude Code Codex どっち 比較 → (生成失敗)
+2026-05-19 01:56:47 [INFO] ============================================================
+2026-05-19 02:22:06 [INFO] ============================================================
+2026-05-19 02:22:06 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-19 02:22:06 [INFO] ============================================================
+2026-05-19 02:22:06 [INFO] 対象ブログ: ['workup-ai']
+2026-05-19 02:22:08 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 02:22:08 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-19 02:22:08 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 02:22:08 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-19 02:22:08 [INFO]   fact_check       : True
+2026-05-19 02:22:08 [INFO]   article_type_mix : True
+2026-05-19 02:22:08 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-19 02:22:08 [INFO]   article_count    : 3  dry_run: False
+2026-05-19 02:22:10 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-19 02:22:10 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-19 02:22:10 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-19 02:22:10 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-19 02:22:10 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-19 02:22:10 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-19 02:22:10 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-19 02:22:10 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-19 02:22:10 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-19 02:22:10 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-19 02:22:10 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-19 02:22:10 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-19 02:22:10 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-19 02:22:10 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-19 02:22:10 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-19 02:22:10 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-19 02:22:10 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-19 02:22:10 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-19 02:22:10 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-19 02:22:12 [INFO] [wp] 記事取得: 計404件 (publish=404)
+2026-05-19 02:22:12 [INFO] [workup-ai] キーワード直接指定: 「Claude Code Codex どっち 比較」
+2026-05-19 02:22:12 [INFO] [workup-ai] 候補: 1件 / 選定: 1件 / 生成予定: 3件
+2026-05-19 02:22:12 [INFO] [api_guard] 本日の使用量: $1.6671 / ¥250 (11回呼び出し)
+2026-05-19 02:22:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 02:22:12 [INFO] [workup-ai] [1/1] [LONGTAIL] 「Claude Code Codex どっち 比較」 vol=0
+2026-05-19 02:22:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 02:22:12 [INFO] [generate] 生成開始: 「Claude Code Codex どっち 比較」(vol:0) fact_check=True target_length=6,239字  誘導リンク:0件
+2026-05-19 02:25:51 [INFO] [generate] パターンCTA挿入（H3末尾）: 3件
+2026-05-19 02:25:51 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-19 02:25:56 [INFO] [link_check] 死リンク除去: 2件 / チェック: 8件
+2026-05-19 02:25:56 [DEBUG] [link_check]   削除: https://claude.ai
+2026-05-19 02:25:56 [INFO] [generate] 完了: 「Claude CodeとOpenAI Codex、どっちを選ぶ？機能・料金・用途の違いを比較」
+2026-05-19 02:25:56 [INFO] [post] 投稿方式: draft
+2026-05-19 02:26:32 [INFO] [post] WP投稿完了: ID=10288 → https://workup-ai.com/wp-admin/post.php?post=10288&action=edit
+2026-05-19 02:26:32 [INFO] [workup-ai] [1/1] ✅ 完了: 「Claude CodeとOpenAI Codex、どっちを選ぶ？機能・料金・用途の違いを比較」
+2026-05-19 02:26:32 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-19 02:26:32 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+2026-05-19 02:27:19 [INFO] 
+============================================================
+2026-05-19 02:27:19 [INFO] 【全体サマリー】
+2026-05-19 02:27:19 [INFO]   ブログ数  : 1件
+2026-05-19 02:27:19 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-19 02:27:19 [INFO]   所要時間  : 312.7秒
+2026-05-19 02:27:19 [INFO]   ✅ [workup-ai] Claude Code Codex どっち 比較 → Claude CodeとOpenAI Codex、どっちを選ぶ？機能・料金・用途の違いを比較
+2026-05-19 02:27:19 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10288&action=edit
+2026-05-19 02:27:19 [INFO] ============================================================
+2026-05-19 03:00:04 [INFO] ============================================================
+2026-05-19 03:00:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-19 03:00:04 [INFO] ============================================================
+2026-05-19 03:00:07 [INFO] [registry] ブログ管理シートから 7 件取得: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-19 03:00:07 [INFO] 対象ブログ: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-19 03:00:08 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 03:00:08 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-19 03:00:08 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 03:00:08 [INFO] [kanikabari] 開始: はた楽ナビ / シート「キーワード」
+2026-05-19 03:00:10 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-19 03:00:10 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-19 03:00:10 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 03:00:10 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-19 03:00:10 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 03:00:10 [INFO] [kanikabari] 開始: AIVice / シート「キーワード」
+2026-05-19 03:00:12 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-19 03:00:12 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-19 03:00:12 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 03:00:12 [INFO] === ワイズトレンド (ys-trend.com) 処理開始 ===
+2026-05-19 03:00:12 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 03:00:12 [INFO] [kanikabari] 開始: ワイズトレンド / シート「キーワード」
+2026-05-19 03:00:14 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-19 03:00:14 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-19 03:00:14 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 03:00:14 [INFO] === どこで売ってるナビ (kaerudoko.com) 処理開始 ===
+2026-05-19 03:00:14 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 03:00:14 [INFO] [kanikabari] 開始: どこで売ってるナビ / シート「キーワード」
+2026-05-19 03:00:16 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-19 03:00:16 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-19 03:00:16 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 03:00:16 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-19 03:00:16 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 03:00:16 [INFO] [kanikabari] 開始: 気になることブログ / シート「キーワード」
+2026-05-19 03:00:18 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-19 03:00:18 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-19 03:00:18 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 03:00:18 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-19 03:00:18 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 03:00:18 [INFO] [kanikabari] 開始: 飛騨の思い出 / シート「キーワード」
+2026-05-19 03:00:21 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-19 03:00:21 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-19 03:00:21 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 03:00:21 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-05-19 03:00:21 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 03:00:21 [INFO] [kanikabari] 開始: オンライン学習ナビ / シート「キーワード」
+2026-05-19 03:00:23 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-19 03:00:23 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-19 03:00:23 [INFO] 
+============================================================
+2026-05-19 03:00:23 [INFO] 【全体サマリー】
+2026-05-19 03:00:23 [INFO]   ブログ数  : 7件
+2026-05-19 03:00:23 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-19 03:00:23 [INFO]   所要時間  : 18.7秒
+2026-05-19 03:00:23 [INFO] ============================================================

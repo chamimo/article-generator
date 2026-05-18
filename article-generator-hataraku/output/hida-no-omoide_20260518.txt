@@ -1,0 +1,139 @@
+===== [HIDA-NO-OMOIDE] 実行開始: 2026-05-18 05:30:00 =====
+2026-05-18 05:30:05 [INFO] ============================================================
+2026-05-18 05:30:05 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-18 05:30:05 [INFO] ============================================================
+2026-05-18 05:30:05 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-18 05:30:08 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-18 05:30:08 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-18 05:30:08 [INFO] ════════════════════════════════════════════════════════════
+2026-05-18 05:30:08 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-18 05:30:08 [INFO]   fact_check       : True
+2026-05-18 05:30:08 [INFO]   article_type_mix : True
+2026-05-18 05:30:08 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-18 05:30:08 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] 飛騨の思い出 / 「ASP案件マスター 」: 3件
+[asp_fetcher]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+[asp_fetcher]   [999] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+[asp_fetcher]   [999] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+2026-05-18 05:30:11 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-18 05:30:11 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-18 05:30:11 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-18 05:30:11 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-18 05:30:12 [INFO] [wp] 記事取得: 計40件 (draft=7 / publish=33)
+2026-05-18 05:30:12 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-18 05:30:13 [INFO] [fetch] サブKW紐付け: 58件 → 7記事に統合
+2026-05-18 05:30:13 [INFO] [fetch] [キーワード] メインKW: 31件（vol≥30 or N/A）  サブKW除外: 58件（統合対象）  投稿済みスキップ: 51件  テーマ外除外: 13件  aim内訳: [now:1, aim:17, claude:21, add:5]
+2026-05-18 05:30:13 [INFO] [dup_check] 優先候補: 31件 {'now': 1, 'aim': 9, 'claude': 16, 'add': 5} を先頭評価
+2026-05-18 05:30:13 [INFO] [dup_check] 除外: 「赤かぶ漬け お土産 日持ち」 → カニバリ(2/3語重複 ['お土産', '日持ち']): 「朴葉味噌のお土産は日持ちする？賞味期限・保存方法を徹底解説」
+2026-05-18 05:30:13 [INFO] [dup_check] 除外: 「高山 雪 朝 写真 撮れる場所」 → カニバリ(2/3語重複 ['高山', '写真']): 「高山の冬写真スポット9選！静かな雪景色と古い町並みを早朝に撮る」
+2026-05-18 05:30:13 [INFO] [dup_check] 除外: 「飛騨 山に囲まれた景色 見どころ」 → カニバリ(2/3語重複 ['飛騨', '見どころ']): 「飛騨古川 昔の町並み見どころ完全ガイド｜散策・カフェ・朝市まで」
+2026-05-18 05:30:13 [INFO] [dup_check] 除外: 「高山 観光 徒歩で回れる範囲」 → カニバリ(2/3語重複 ['高山', '観光']): 「高山の赤い橋の名前と由来を簡単に解説！飛騨高山を代表する観光スポット」
+2026-05-18 05:30:13 [INFO] [dup_check] 完了: 選定=1件 / 除外=4件 (pool=31件, 要求=1件)
+2026-05-18 05:30:13 [INFO] [select] 1件選定 (要求=1件)
+2026-05-18 05:30:13 [INFO] [select]   1. 「飛騨牛 握り寿司 食べ歩き」 vol=0 seo=N/A comp=N/A
+2026-05-18 05:30:13 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-18 05:30:13 [INFO] [hida-no-omoide] 候補: 31件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.9428 / 1時間: $0.2264  (上限 日次$10.00 / 時間$5.00)  全体: $1.9428(¥291) / 8記事
+2026-05-18 05:30:13 [INFO] [api_guard] 本日の使用量: $1.9428 / ¥291 (25回呼び出し)
+2026-05-18 05:30:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-18 05:30:13 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「飛騨牛 握り寿司 食べ歩き」 vol=0 ★CLAUDE
+2026-05-18 05:30:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-18 05:30:13 [INFO] [generate] 生成開始: 「飛騨牛 握り寿司 食べ歩き」(vol:0) fact_check=True target_length=6,160字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「飛騨牛 握り寿司 食べ歩き」(vol:0) [6,160字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $1.9428 / 1時間: $0.2264  (上限 日次$10.00 / 時間$5.00)  全体: $1.9428(¥291) / 8記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=118 out=89 → $0.0005  (lsi:飛騨牛 握り寿司 食べ歩き)
+[api_guard] 本日の使用量: $1.9432 / ¥291 (937回呼び出し)
+[article_generator] 共起語: 飛騨牛、握り寿司、食べ歩き、高山、古い町並み、A5ランク、脂の乗り、握り方、シャリ、ネタ、飛騨地方、観光、名物グルメ、肉...
+[api_guard] ✅ 本日: $1.9432 / 1時間: $0.2268  (上限 日次$10.00 / 時間$5.00)  全体: $1.9432(¥291) / 8記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=185 out=679 → $0.0029  (kw_research:飛騨牛 握り寿司 食べ歩き)
+[api_guard] 本日の使用量: $1.9461 / ¥291 (938回呼び出し)
+[article_generator] サジェスト: 飛騨牛 握り寿司・飛騨牛 握り寿司 食べ歩き・飛騨牛 握り寿司 高山...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $1.9461 / 1時間: $0.2297  (上限 日次$10.00 / 時間$5.00)  全体: $1.9461(¥292) / 8記事
+[api_guard] 記録: claude-sonnet-4-6 in=10705 out=13847 → $0.2398  (article:飛騨牛 握り寿司 食べ歩き)
+[api_guard] 本日の使用量: $2.1859 / ¥327 (939回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of sushi nigiri, beef cuts, shoppi
+[imagefx] タイトル(英): Hida Beef Sushi Walking Guide
+[article_generator] 完了: 「飛騨牛握り寿司の食べ歩き完全ガイド｜高山で味わうA5ランクの肉寿司おすすめ店と値段相場」 カテゴリ: 未設定(-) タグ: ['飛騨牛', '食べ歩き', '高山グルメ', '肉寿司', '岐阜観光']
+2026-05-18 05:33:29 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「楽天トラベル」(ID:168)
+[api_guard] ✅ 本日: $2.1859 / 1時間: $0.4695  (上限 日次$10.00 / 時間$5.00)  全体: $2.1859(¥328) / 9記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=402 out=37 → $0.0005  (maps:飛騨牛 握り寿司 食べ歩き)
+[api_guard] 本日の使用量: $2.1864 / ¥327 (940回呼び出し)
+[maps_embedder] ✅ 地図挿入: mode=search / query=飛騨高山 飛騨牛握り寿司
+2026-05-18 05:33:30 [INFO] [generate] 完了: 「飛騨牛握り寿司の食べ歩き完全ガイド｜高山で味わうA5ランクの肉寿司おすすめ店と値段相場」
+2026-05-18 05:33:30 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 21件
+[category_selector] 「飛騨牛 握り寿司 食べ歩き」→ 食べ歩き(36) score=12
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration featuring premium Hida beef nigiri sushi with soft pa...
+[image_generator] 完了 (56KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260518_053340_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 516)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: 飛騨牛握り寿司とは？普通の肉寿司との違いと魅力
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Takayama street food scene with Hida beef nigiri sushi displays, shop storefront...
+[image_generator] 完了 (170KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260518_053351_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 517)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 高山で飛騨牛握り寿司を食べ歩くおすすめスポットと店の選び方
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Elegant flat design illustration showcasing Hida beef nigiri sushi with pastel g...
+[image_generator] 完了 (84KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260518_053402_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 518)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 飛騨牛握り寿司をより美味しく楽しむためのポイントと活用術
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 33件
+[internal_linker] 同カテゴリー: 1件選定（ルールベース）
+[internal_linker] 内部リンク選定完了: 計1件 (成約:0 / 案件関連:0 / 同親KW+補完:1)
+[internal_linker] 注意: 内部リンク1件（目標5件未達）
+[internal_linker] 内部リンク挿入完了: 計1件 (本文H3:1 / 末尾リスト:0)
+[internal_linker] 内部リンク 1件 挿入: ['高山の懐かしい町並み見どころ完全ガイド！散歩・食べ歩き・撮影']
+[wordpress] タグ設定: ['飛騨牛', '食べ歩き', '高山グルメ', '肉寿司', '岐阜観光']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 519) → https://hida-no-omoide.com/wp-admin/post.php?post=519&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of sushi nigiri, beef cuts, shopping bags, location pins, stars, coins, calendar, checkmarks in soft pink, mint green, cream, and lavender pastels.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Hida Beef Sushi Walking Guide" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行81 「飛騨牛 握り寿司 食べ歩き」→ 投稿済み (2026/05/18, ID:519) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「飛騨牛握り寿司の食べ歩き完全ガイド｜高山で味わうA5ランクの」
+2026-05-18 05:34:12 [INFO] [post] WP投稿完了: ID=519 → https://hida-no-omoide.com/wp-admin/post.php?post=519&action=edit
+2026-05-18 05:34:12 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「飛騨牛握り寿司の食べ歩き完全ガイド｜高山で味わうA5ランクの肉寿司おすすめ店と値段相場」
+2026-05-18 05:34:12 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-18 05:34:12 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hida-no-omoide limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #519 飛騨牛握り寿司の食べ歩き完全ガイド｜高山で味わうA5ランクの肉寿司おすすめ店と値段相場
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 飛騨の思い出向け・旅メディア型バナーで生成します
+[IMAGE] hida template: local_food
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (2124KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260518_053501_codex_hida_travel_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 520)
+[codex-eyecatch] featured image 設定完了: media_id=520
+[codex-eyecatch] 編集URL: https://hida-no-omoide.com/wp-admin/post.php?post=519&action=edit
+2026-05-18 05:35:05 [INFO] 
+============================================================
+2026-05-18 05:35:05 [INFO] 【全体サマリー】
+2026-05-18 05:35:05 [INFO]   ブログ数  : 1件
+2026-05-18 05:35:05 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-18 05:35:05 [INFO]   所要時間  : 300.0秒
+2026-05-18 05:35:05 [INFO]   ✅ [hida-no-omoide] 飛騨牛 握り寿司 食べ歩き → 飛騨牛握り寿司の食べ歩き完全ガイド｜高山で味わうA5ランクの肉寿司おすすめ店と値段相場
+2026-05-18 05:35:05 [INFO]        https://hida-no-omoide.com/wp-admin/post.php?post=519&action=edit
+2026-05-18 05:35:05 [INFO] ============================================================
+===== [HIDA-NO-OMOIDE] 記事生成終了: 2026-05-18 05:35:06 / exit=0 =====

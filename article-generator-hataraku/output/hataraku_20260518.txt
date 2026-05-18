@@ -1,0 +1,155 @@
+===== [HATARAKU] 実行開始: 2026-05-18 05:00:00 =====
+2026-05-18 05:00:06 [INFO] ============================================================
+2026-05-18 05:00:06 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-18 05:00:06 [INFO] ============================================================
+2026-05-18 05:00:06 [INFO] 対象ブログ: ['hataraku']
+2026-05-18 05:00:09 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-18 05:00:09 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-18 05:00:09 [INFO] ════════════════════════════════════════════════════════════
+2026-05-18 05:00:09 [INFO]   genre            : 転職・副業・キャリア
+2026-05-18 05:00:09 [INFO]   fact_check       : True
+2026-05-18 05:00:09 [INFO]   article_type_mix : True
+2026-05-18 05:00:09 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-18 05:00:09 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] はた楽ナビ / 「ASP案件マスター」: 21件
+[asp_fetcher]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive / 発達障害×IT就労支援・在宅・スキル習得
+[asp_fetcher]   [S] ラボル → https://hataraku-navi.com/labol / フリーランス資金繰り・即日入金・請求書買取
+[asp_fetcher]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it / 未経験IT転職・ブラック回避・手厚い支援
+[asp_fetcher]   [S] TechGo → https://hataraku-navi.com/techgo / IT転職・年収アップ・ハイクラス
+[asp_fetcher]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi / 転職不安・無料相談・高確定率
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen / 就活・既卒支援・高EPC
+[asp_fetcher]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo / 既卒・フリーター・高卒支援
+2026-05-18 05:00:12 [INFO] [hataraku] アフィリ案件: 21件（スプレッドシート）
+2026-05-18 05:00:12 [INFO] [hataraku]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive
+2026-05-18 05:00:12 [INFO] [hataraku]   [S] ラボル → https://hataraku-navi.com/labol
+2026-05-18 05:00:12 [INFO] [hataraku]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it
+2026-05-18 05:00:12 [INFO] [hataraku]   [S] TechGo → https://hataraku-navi.com/techgo
+2026-05-18 05:00:12 [INFO] [hataraku]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi
+2026-05-18 05:00:12 [INFO] [hataraku]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy
+2026-05-18 05:00:12 [INFO] [hataraku]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen
+2026-05-18 05:00:12 [INFO] [hataraku]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo
+2026-05-18 05:00:12 [INFO] [hataraku]   [S] 保育専門求人サイト ほいく畑 → https://hataraku-navi.com/hoikubatake
+2026-05-18 05:00:12 [INFO] [hataraku]   [A] FREENANCE → https://hataraku-navi.com/freenance
+2026-05-18 05:00:12 [INFO] [hataraku]   [A] Midworks → https://hataraku-navi.com/midworks
+2026-05-18 05:00:12 [INFO] [hataraku]   [A] マスメディアン → https://hataraku-navi.com/massmedia
+2026-05-18 05:00:12 [INFO] [hataraku]   [A] atGP → https://hataraku-navi.com/atgp
+2026-05-18 05:00:12 [INFO] [hataraku]   [A] atGPジョブトレ IT・Web → https://hataraku-navi.com/atgp_job
+2026-05-18 05:00:12 [INFO] [hataraku]   [A] リゾートバイトダイブ → https://hataraku-navi.com/dive
+2026-05-18 05:00:12 [INFO] [hataraku]   [A] 日本マンパワー → https://hataraku-navi.com/manpower
+2026-05-18 05:00:12 [INFO] [hataraku]   [A] クラウドワークス → https://hataraku-navi.com/crowdworks
+2026-05-18 05:00:12 [INFO] [hataraku]   [?] 保育エイド → https://hataraku-navi.com/hoiku-aid
+2026-05-18 05:00:12 [INFO] [hataraku]   [?] 保育バランス → https://hataraku-navi.com/hoiku-balance
+2026-05-18 05:00:12 [INFO] [hataraku]   [?] 保育メトロ → https://hataraku-navi.com/hoiku-metro
+2026-05-18 05:00:12 [INFO] [hataraku]   [?] 20代の転職相談所 → https://hataraku-navi.com/20tensyoku
+2026-05-18 05:00:13 [INFO] [wp] 記事取得: 計52件 (draft=3 / publish=49)
+2026-05-18 05:00:13 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-18 05:00:15 [INFO] [fetch] サブKW紐付け: 6968件 → 187記事に統合
+2026-05-18 05:00:15 [INFO] [fetch] [キーワード] メインKW: 174件（vol≥30 or N/A）  サブKW除外: 6968件（統合対象）  投稿済みスキップ: 892件  テーマ外除外: 198件  aim内訳: [claude:234, aim:131, add:7]
+2026-05-18 05:00:15 [INFO] [dup_check] 優先候補: 174件 {'claude': 101, 'aim': 67, 'add': 6} を先頭評価
+2026-05-18 05:00:15 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=174件, 要求=1件)
+2026-05-18 05:00:15 [INFO] [select] 1件選定 (要求=1件)
+2026-05-18 05:00:15 [INFO] [select]   1. 「保険販売 副業」 vol=0 seo=N/A comp=N/A
+2026-05-18 05:00:15 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-18 05:00:15 [INFO] [hataraku] 候補: 174件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.7164 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.7164(¥257) / 7記事
+2026-05-18 05:00:15 [INFO] [api_guard] 本日の使用量: $1.7164 / ¥257 (22回呼び出し)
+2026-05-18 05:00:15 [INFO] ────────────────────────────────────────────────────────────
+2026-05-18 05:00:15 [INFO] [hataraku] [1/1] [LONGTAIL] 「保険販売 副業」 vol=0 ★CLAUDE
+2026-05-18 05:00:15 [INFO] ────────────────────────────────────────────────────────────
+2026-05-18 05:00:15 [INFO] [generate] 生成開始: 「保険販売 副業」(vol:0) fact_check=True target_length=7,234字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「保険販売 副業」(vol:0) [7,234字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $1.7164 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.7164(¥257) / 7記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=106 out=86 → $0.0004  (lsi:保険販売 副業)
+[api_guard] 本日の使用量: $1.7169 / ¥257 (934回呼び出し)
+[article_generator] 共起語: 保険代理店、FP資格、手数料収入、保険営業、顧客管理、コンプライアンス、保険知識、営業スキル、契約件数、保険種類、独立開...
+[api_guard] ✅ 本日: $1.7169 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $1.7169(¥258) / 7記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=173 out=472 → $0.0020  (kw_research:保険販売 副業)
+[api_guard] 本日の使用量: $1.7189 / ¥257 (935回呼び出し)
+[article_generator] サジェスト: 保険販売 副業 おすすめ・保険販売 副業 稼ぐ・保険販売 副業 募集...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $1.7189 / 1時間: $0.0025  (上限 日次$10.00 / 時間$5.00)  全体: $1.7189(¥258) / 7記事
+[api_guard] 記録: claude-sonnet-4-6 in=10781 out=12771 → $0.2239  (article:保険販売 副業)
+[api_guard] 本日の使用量: $1.9428 / ¥291 (936回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of laptop, coins, stars, checkmark
+[imagefx] タイトル(英): Insurance Sales Side Business Guide
+[article_generator] 完了: 「保険販売の副業で稼ぐ方法｜資格・収入相場・未経験の始め方まで解説」 カテゴリ: 未設定(-) タグ: ['保険販売', '副業', 'FP資格', '保険代理店', '手数料収入']
+2026-05-18 05:03:19 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-18 05:03:19 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「atGPジョブトレ IT・Web」(ID:569)
+2026-05-18 05:03:20 [INFO] [generate] 完了: 「保険販売の副業で稼ぐ方法｜資格・収入相場・未経験の始め方まで解説」
+2026-05-18 05:03:20 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 21件
+[category_selector] 「保険販売 副業」→ お金・給与(286) score=12
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Insurance sales commission structure visualization: stacked coins, rising arrow ...
+[image_generator] 完了 (84KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260518_050330_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 686)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: 保険販売の副業で稼げる仕組みと収入の実態
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring certification documents, insurance policy ico...
+[image_generator] 完了 (57KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260518_050343_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 687)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 保険販売の副業に必要な資格と取得方法
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration with pastel gradient background featuring insurance pol...
+[image_generator] 完了 (68KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260518_050354_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 688)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 保険販売の副業で失敗しないための注意点と詐欺の見分け方
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 49件
+[internal_linker] 同カテゴリー: 2件選定（ルールベース）
+[internal_linker] 内部リンク選定完了: 計2件 (成約:0 / 案件関連:0 / 同親KW+補完:2)
+[internal_linker] 注意: 内部リンク2件（目標5件未達）
+[internal_linker] 内部リンク挿入完了: 計2件 (本文H3:2 / 末尾リスト:0)
+[internal_linker] 内部リンク 2件 挿入: ['仕事できない人の特徴15選！原因・改善方法・転職まで徹底解説', '働けないどうやって生きる？お金・支援制度・回復まで全対策']
+[wordpress] タグ設定: ['保険販売', '副業', 'FP資格', '保険代理店', '手数料収入']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 689) → https://hataraku-navi.com/wp-admin/post.php?post=689&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, coins, stars, checkmarks, lightbulb, chart, calendar and speech bubbles in soft pastel pink, mint, lavender and cream tones.
+Elegant lifestyle background: soft morning light with warm neutrals, gentle depth-of-field effect, clean and airy ambiance, muted earth tones.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Insurance Sales Side Business Guide" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行688 「保険販売 副業」→ 投稿済み (2026/05/18, ID:689) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「保険販売の副業で稼ぐ方法｜資格・収入相場・未経験の始め方まで」
+2026-05-18 05:04:04 [INFO] [post] WP投稿完了: ID=689 → https://hataraku-navi.com/wp-admin/post.php?post=689&action=edit
+2026-05-18 05:04:04 [INFO] [hataraku] [1/1] ✅ 完了: 「保険販売の副業で稼ぐ方法｜資格・収入相場・未経験の始め方まで解説」
+2026-05-18 05:04:04 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-18 05:04:04 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hataraku limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #689 保険販売の副業で稼ぐ方法｜資格・収入相場・未経験の始め方まで解説
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] オンライン学習ナビ向け・学習メディア型バナーで生成します
+[IMAGE] learning template: online_lesson
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1542KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260518_050451_codex_webstudy_learning_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 690)
+[codex-eyecatch] featured image 設定完了: media_id=690
+[codex-eyecatch] 編集URL: https://hataraku-navi.com/wp-admin/post.php?post=689&action=edit
+2026-05-18 05:04:55 [INFO] 
+============================================================
+2026-05-18 05:04:55 [INFO] 【全体サマリー】
+2026-05-18 05:04:55 [INFO]   ブログ数  : 1件
+2026-05-18 05:04:55 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-18 05:04:55 [INFO]   所要時間  : 289.4秒
+2026-05-18 05:04:55 [INFO]   ✅ [hataraku] 保険販売 副業 → 保険販売の副業で稼ぐ方法｜資格・収入相場・未経験の始め方まで解説
+2026-05-18 05:04:55 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=689&action=edit
+2026-05-18 05:04:55 [INFO] ============================================================
+===== [HATARAKU] 記事生成終了: 2026-05-18 05:04:56 / exit=0 =====
