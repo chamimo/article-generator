@@ -128,6 +128,31 @@ def fetch_patterns(blog_cfg) -> list[PatternItem]:
 # キーワードとのマッチング
 # ──────────────────────────────────────────────────────────
 
+# パターンタイトルの一部 → そのパターンを許可するキーワード条件（いずれかを含む場合のみ挿入）
+# 空リストの場合はすべてのキーワードで挿入可（制限なし）
+_PATTERN_TOPIC_RESTRICTION: dict[str, list[str]] = {
+    # ConoHa AI Canvas: AI画像生成ネタ以外では掲載しない
+    "ConoHa AI Canvas": ["画像生成", "image generation", "ai画像", "ai image",
+                         "stable diffusion", "midjourney", "dall-e", "dall·e",
+                         "imagefx", "firefly", "myedit", "画像ai", "aiイラスト",
+                         "ai アート", "ai イラスト"],
+}
+
+
+def _is_pattern_allowed(pat: "PatternItem", keyword: str) -> bool:
+    """パターンのトピック制限チェック。制限キーワードが1つもなければ許可しない。"""
+    kw_l = keyword.lower()
+    for title_fragment, required_kws in _PATTERN_TOPIC_RESTRICTION.items():
+        if title_fragment.lower() in pat.title.lower():
+            allowed = any(r in kw_l for r in required_kws)
+            if not allowed:
+                log.debug(
+                    f"[wp_pattern_fetcher] パターン「{pat.title}」はKW「{keyword}」には非対象（トピック制限）"
+                )
+            return allowed
+    return True  # 制限対象外 → 許可
+
+
 def match_pattern(
     keyword: str,
     patterns: list[PatternItem],
@@ -173,6 +198,8 @@ def match_pattern(
 
     if kw_tokens:
         for pat in patterns:
+            if not _is_pattern_allowed(pat, keyword):
+                continue
             s = _score(kw_tokens, pat)
             if s > best_score:
                 best_score = s
@@ -191,6 +218,8 @@ def match_pattern(
             if not name_tokens:
                 continue
             for pat in patterns:
+                if not _is_pattern_allowed(pat, keyword):
+                    continue
                 s = _score(name_tokens, pat)
                 if s > best_score:
                     best_score = s
@@ -267,6 +296,21 @@ _SECTION_BLOCK_END = re.compile(
     re.IGNORECASE,
 )
 
+# パターンを挿入してはいけないコンテナブロックの閉じタグ
+_CONTAINER_BLOCK_END = re.compile(
+    r'<!-- /wp:(?:loos/cap-block|loos/step|loos/faq)[^>]*-->',
+    re.IGNORECASE,
+)
+
+
+def _adjust_past_containers(article_html: str, insert_pos: int, limit_pos: int) -> int:
+    """insert_pos がコンテナブロック（cap-block・step・faq）内にある場合、
+    コンテナの閉じタグ直後まで挿入位置を押し出す。limit_pos を超えない範囲で動かす。"""
+    adjusted = insert_pos
+    for m in _CONTAINER_BLOCK_END.finditer(article_html, insert_pos, limit_pos):
+        adjusted = m.end()
+    return adjusted
+
 
 def _make_cta_block(pattern: PatternItem) -> str:
     """パターンの CTA ブロック HTML 文字列を生成する。
@@ -341,6 +385,9 @@ def insert_per_h3_cta(
             last_end = m.end()
         insert_pos = last_end
 
+        # cap-block・step・faq などコンテナ内に収まる場合はコンテナ外に押し出す
+        insert_pos = _adjust_past_containers(article_html, insert_pos, section_end)
+
         # 近接位置（50文字以内）への二重挿入を避ける
         if any(abs(insert_pos - p) < 50 for p in used_positions):
             continue
@@ -391,6 +438,11 @@ def insert_pattern_cta(article_html: str, pattern: PatternItem, skip_mention: bo
     mention_pos = None
     if not skip_mention:
         mention_pos = _find_mention_end(article_html, pattern.tokens)
+        if mention_pos is not None:
+            # cap-block・step・faq などコンテナ内に収まる場合はコンテナ外に押し出す
+            heading_positions = [m.start() for m in _ANY_HEADING.finditer(article_html)]
+            next_heading = next((h for h in heading_positions if h > mention_pos), original_len)
+            mention_pos = _adjust_past_containers(article_html, mention_pos, next_heading)
         # 末尾から 2000 字以内は③末尾挿入と近接するためスキップ
         if mention_pos is not None and mention_pos >= original_len - 2000:
             mention_pos = None

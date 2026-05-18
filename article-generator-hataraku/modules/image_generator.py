@@ -353,14 +353,17 @@ def _call_openai_image(prompt: str) -> bytes:
     import requests as _requests
 
     client = OpenAI(api_key=OPENAI_API_KEY)
-    print(f"[image_generator] OpenAI gpt-image-2 生成開始 (size={_GPT_IMAGE_SIZE}, quality=medium)")
+    quality = os.getenv("CODEX_EYECATCH_QUALITY", "medium").strip().lower() or "medium"
+    if quality not in {"low", "medium", "high", "auto"}:
+        quality = "medium"
+    print(f"[image_generator] OpenAI gpt-image-2 生成開始 (size={_GPT_IMAGE_SIZE}, quality={quality})")
 
     resp = client.images.generate(
         model="gpt-image-2",
         prompt=prompt,
         n=1,
         size=_GPT_IMAGE_SIZE,
-        quality="medium",
+        quality=quality,
     )
 
     img_data = resp.data[0]
@@ -760,6 +763,7 @@ def _build_background_only_prompt(keyword: str, concept: dict) -> str:
         f"LIGHT: {light}. Bright, warm, natural daylight. Soft and airy — morning to midday light quality. "
         f"PALETTE: {palette}. Ivory, beige, cream, warm white, natural wood tones — light and breathable. "
         f"COMPOSITION: {area_hint}. Generous negative space, uncluttered, calm. "
+        f"{_seo_blog_design_brief(keyword, concept.get('layout_style', ''), '')} "
         f"Style: Muji lifestyle campaign, Linné magazine Japan, Kinarino, Kinfolk, Pinterest natural aesthetic. "
         f"MOOD: hopeful, warm, peaceful, 'life feels a little more in order' — the opposite of dark or heavy. "
         f"ABSOLUTELY NO: dark tones, dramatic shadows, night scenes, cinematic lighting, moody atmosphere, lonely or melancholic mood, film poster look. "
@@ -1690,6 +1694,23 @@ def _is_beginner_guide_title(title: str) -> bool:
     return any(t in title for t in triggers)
 
 
+def _is_aivice_site_theme(article_theme: str = "") -> bool:
+    """AIVice / workup-ai 向けアイキャッチかを判定する。"""
+    try:
+        host = (wp_context.get_wp_url() or "").lower()
+    except Exception:
+        host = ""
+    meta = wp_context.get_blog_meta() or {}
+    haystack = " ".join([
+        host,
+        article_theme or "",
+        str(meta.get("site_purpose", "")),
+        str(meta.get("genre_detail", "")),
+        str(meta.get("target", "")),
+    ]).lower()
+    return any(k in haystack for k in ("workup-ai", "aivice", "aiツール", "ai tool", "生成ai"))
+
+
 def _select_beginner_guide_template(title: str) -> str:
     """タイトル内容から初心者ガイド型バナーの構図テンプレートを選ぶ。"""
     def _pick(pool: list[str]) -> str:
@@ -1722,6 +1743,8 @@ def _select_beginner_guide_template(title: str) -> str:
             pass
         return selected
 
+    if _is_aivice_site_theme() and any(k in title for k in ("Gemini", "ChatGPT", "Claude", "PhotoDirector", "AI自動化")):
+        return _pick(["aivice_pastel_person", "aivice_soft_flatlay", "aivice_wave_panel", "aivice_tool_desk"])
     if any(k in title for k in ("Gemini", "ChatGPT", "Claude", "PhotoDirector", "AI自動化")):
         return _pick(["right_person", "left_person", "cafe_side"])
     if any(k in title for k in ("副業", "稼ぐ", "月収", "収益", "アフィリエイト", "在宅")):
@@ -1729,6 +1752,89 @@ def _select_beginner_guide_template(title: str) -> str:
     if any(k in title for k in ("おすすめ", "比較", "無料", "選", "商用利用")):
         return _pick(["flatlay", "app_cards", "cafe_side", "right_person", "left_person", "hands_closeup", "dark_desk"])
     return _pick(["right_person", "flatlay", "cafe_side", "app_cards", "left_person", "hands_closeup", "dark_desk", "no_person_room"])
+
+
+def _eyecatch_candidate_count() -> int:
+    """候補生成枚数。API料金が増えるため、未指定時は1枚のまま。"""
+    raw = (
+        os.getenv("CODEX_EYECATCH_CANDIDATES")
+        or os.getenv("EYECATCH_CANDIDATES")
+        or "1"
+    )
+    try:
+        return max(1, min(4, int(str(raw).strip())))
+    except Exception:
+        return 1
+
+
+def _detect_blog_thumbnail_preset(title: str, article_theme: str = "") -> dict:
+    """記事タイトルから、SEOブログ向けのジャンル・構図・感情を決める。"""
+    text = f"{title} {article_theme}"
+    if any(k in text for k in ("安全", "危険", "ウイルス", "個人情報", "不安")):
+        kind = "安全性型"
+        layout = "大きな安心マーク、チェックリスト、やわらかい注意喚起"
+        icons = "shield icon, check marks, small lock icon, soft checklist cards"
+        emotion = "安心感、信頼感、不安がほどける感じ"
+    elif any(k in text for k in ("比較", "違い", "買い切り", "サブスク", "価格", "料金", "無料")):
+        kind = "比較型"
+        layout = "左右比較、2カラム、料金カード、メリット・注意点を視覚化"
+        icons = "comparison cards, yen icon, check marks, simple table blocks"
+        emotion = "納得感、選びやすさ、損しない安心感"
+    elif any(k in text for k in ("口コミ", "評判", "レビュー", "体験談")):
+        kind = "口コミ型"
+        layout = "吹き出し、レビューカード、やさしい人物または手元"
+        icons = "speech bubbles, star rating shapes without numbers, comment cards"
+        emotion = "親近感、正直さ、やさしい実感"
+    elif any(k in text for k in ("使い方", "始め方", "やり方", "手順", "導入", "設定")):
+        kind = "解説型"
+        layout = "左に大きなタイトル余白、右に手順カードやツール画面風の空白カード"
+        icons = "step cards, cursor icon, notebook icon, check marks"
+        emotion = "初心者でもできそう、前向き、やさしい未来感"
+    elif any(k in text for k in ("副業", "在宅", "稼ぐ", "収益", "仕事", "自動化")):
+        kind = "副業・仕事術型"
+        layout = "デスク、ノート、収益や自動化を示す小さな図解カード"
+        icons = "workflow arrows, yen icon, laptop icon, checklist cards"
+        emotion = "暮らしが整う、希望、現実的な前進"
+    elif any(k in text for k in ("学習", "教育", "スクール", "勉強", "講座")):
+        kind = "教育型"
+        layout = "ノート・教材・チェックリスト・学習ステップ"
+        icons = "book icon, pencil icon, step cards, check marks"
+        emotion = "学びやすさ、安心、知識が整理される感じ"
+    else:
+        kind = "AI・解説型"
+        layout = "ツール名を大きく読ませ、補助カードで内容を図解する"
+        icons = "AI tool cards, cursor icon, chat bubbles, check marks"
+        emotion = "信頼感、清潔感、少し未来感、初心者への安心感"
+
+    return {
+        "kind": kind,
+        "layout": layout,
+        "icons": icons,
+        "emotion": emotion,
+    }
+
+
+def _seo_blog_design_brief(title: str, template: str = "", article_theme: str = "") -> str:
+    """ChatGPT上で作るようなSEOブログ向けサムネ感を毎回足す共通ブリーフ。"""
+    preset = _detect_blog_thumbnail_preset(title, article_theme)
+    return (
+        "\nDESIGN BRIEF FOR JAPANESE SEO BLOG EYECATCH:\n"
+        "- Purpose: a polished 16:9 featured image for a Japanese SEO blog article, not an ad banner and not a generic AI illustration.\n"
+        "- Audience: Japanese beginners who want clear, reassuring, trustworthy information.\n"
+        f"- Article theme: {title}.\n"
+        f"- Genre preset: {preset['kind']}.\n"
+        f"- Layout intent: {preset['layout']}.\n"
+        "- Visual direction: Canva-like editorial blog thumbnail, Pinterest-friendly, SWELL WordPress theme compatible, readable at article-list size.\n"
+        "- Composition: generous natural margins, clear focal area, strong empty space reserved for Japanese title overlay, no cramped elements.\n"
+        "- Color: pastel-first palette, warm ivory, soft blush, pale sage, soft sky blue, dusty lavender, natural wood, deep navy or deep teal only for accents.\n"
+        "- Diagram feeling: communicate the article topic visually with clean cards, simple blank comparison blocks, soft checkmarks, gentle arrows, and icon-like objects.\n"
+        f"- Useful visual parts: {preset['icons']}.\n"
+        f"- Emotion: {preset['emotion']}.\n"
+        "- People: if a person appears, use a natural Japanese adult in white/off-white clothing with tasteful pastel accents, calm expression, soft lifestyle mood.\n"
+        "- Typography area: do not draw actual text; leave calm space for code-added Japanese text. Text will be added later by Pillow.\n"
+        "- Avoid: overseas AI stock look, glossy corporate ad, loud YouTube thumbnail, red/black danger palette, horror mood, cyberpunk, fake app text, fake Japanese characters, dense tiny icons, clutter, cheap gradient banner, hard shadows, exaggerated smiles, plastic skin, watermark, logo.\n"
+        f"- Template name for this run: {template or 'auto'}.\n"
+    )
 
 
 def _build_beginner_guide_background_prompt(title: str, template: str = "right_person") -> str:
@@ -1751,6 +1857,7 @@ def _build_beginner_guide_background_prompt(title: str, template: str = "right_p
         "All readable Japanese text will be added later by code, so keep the background clean and quiet. "
         "No decorative symbols, no sparkle marks, no star glyphs, no ✧-like ornaments anywhere. "
         f"Topic feeling: {title}. "
+        f"{_seo_blog_design_brief(title, template)} "
     )
 
     if template == "flatlay":
@@ -1778,6 +1885,59 @@ def _build_beginner_guide_background_prompt(title: str, template: str = "right_p
             "Do not draw small lines or blocks that resemble text on the cards. "
             "RIGHT 48% contains the lifestyle tech objects and blank card shapes. "
             "LEFT 52% remains clear ivory negative space for typography."
+        )
+
+    if template == "aivice_pastel_person":
+        person = random.choice([
+            "a young Japanese woman in her early 20s, off-white blouse with pale lavender accents, soft natural hair, calm confident expression",
+            "a Japanese woman in her late 20s, ivory cardigan with dusty pink scarf, gentle side profile, clean natural makeup",
+            "a young Japanese woman with shoulder-length dark hair, white knit top with pale blue accents, relaxed and focused",
+            "a young Japanese man in his 20s, soft white overshirt with pastel sage tee, calm approachable expression",
+        ])
+        return (
+            base +
+            "Template 1 background only. "
+            f"LEFT 46%: {person}, using a laptop or tablet in a bright home workspace. "
+            "Soft plants, ceramic cup, pale wood, warm natural window light, polished but natural. "
+            "RIGHT 54% must stay very clean: plain warm ivory wall or softly blurred desk background with no objects crossing into it. "
+            "Do not create any colored text panel, title area, labels, ribbons, badges, or abstract typography shapes. "
+            "AIVice visual style: refined, airy, feminine-neutral, trustworthy AI lifestyle media."
+        )
+
+    if template == "aivice_soft_flatlay":
+        scene = random.choice([
+            "top-down flatlay with laptop corner, tablet showing a blank photo-editing canvas, notebook, pen, coffee, small flowers",
+            "soft ivory desk with tablet, smartphone, planner, pastel sticky notes as blank shapes, ceramic mug, small plant",
+            "clean home workspace flatlay with laptop, blank app cards, pale pink notebook, gold pen, tea cup, botanical accent",
+        ])
+        return (
+            base +
+            "Template 2 background only. "
+            f"LEFT 48%: {scene}. No people. "
+            "RIGHT 52% must be a calm, mostly empty tabletop or softly blurred wall area for a separate overlay block. "
+            "Objects stay on the left and never cross into the clean typography area. "
+            "Do not create any colored text panel, speech bubble, title box, labels, ribbons, badges, or abstract typography shapes. "
+            "No readable text or UI details, only blank screens and refined lifestyle objects."
+        )
+
+    if template == "aivice_wave_panel":
+        return (
+            base +
+            "Template 3 background only. "
+            "Bright minimal workspace flatlay around the outer edges: laptop corner, notebook, coffee, pen, soft greenery, one small pastel item. "
+            "The center 70% must stay bright, calm, and low-contrast so a separate rounded text panel can be placed later. "
+            "Do not create any center panel, colored shape, wave shape, title box, labels, ribbons, badges, or readable UI. "
+            "Premium Pinterest-style thumbnail composition, elegant negative space, not childish, not busy."
+        )
+
+    if template == "aivice_tool_desk":
+        return (
+            base +
+            "Template 4 background only. "
+            "RIGHT 48%: clean AI tool workspace with laptop and tablet with completely blank screens, smartphone, notebook, pen, ceramic cup, soft flowers, pale wood desk. "
+            "LEFT 52% must be warm ivory negative space with only subtle natural texture, reserved for a separate text overlay. "
+            "Do not create any colored text panel, decorative dots, title box, labels, ribbons, badges, or readable UI. "
+            "Composition has depth and warmth, but the typography area remains spacious and calm."
         )
 
     if template == "cafe_side":
@@ -1907,7 +2067,8 @@ def _guide_overlay_texts(title: str, texts: dict, template: str = "right_person"
         strip = "初心者OK"
 
     icon_sets = _select_icon_labels(title, site="aivice")
-    palette_name = random.choice(["blush", "sage", "sky", "peach", "pop_pink", "royal_blue", "mint_yellow"])
+    aivice_style = _is_aivice_site_theme()
+    palette_name = random.choice(["blush", "sage", "sky", "peach", "mint_yellow"]) if aivice_style else random.choice(["blush", "sage", "sky", "peach", "pop_pink", "royal_blue", "mint_yellow"])
     glyph_pool = ["search", "note", "sparkle", "check", "heart", "book", "yen"]
     if template == "left_person":
         text_side = "right"
@@ -1939,13 +2100,164 @@ def _guide_overlay_texts(title: str, texts: dict, template: str = "right_person"
         "_hide_icons": compact_tool_guide or random.choice([False, False, True]),
         "_compact_layout": compact_tool_guide,
         "_quiet_layout": compact_tool_guide,
+        "_aivice_style": aivice_style,
     })
+
+
+def _overlay_aivice_template_banner(img_bytes: bytes, texts: dict) -> bytes:
+    """AIVice専用。背景・文字配置まで分けた複数テンプレートで合成する。"""
+    from PIL import Image, ImageDraw, ImageFont, ImageOps
+    import io as _io
+
+    img = Image.open(_io.BytesIO(img_bytes)).convert("RGBA")
+    W, H = img.size
+    template = texts.get("_template", "aivice_pastel_person")
+    font_bold_path = _find_font(_FONT_BOLD_CANDIDATES)
+    font_reg_path = _find_font(_FONT_REG_CANDIDATES)
+
+    def _load(path, size):
+        if path:
+            try:
+                return ImageFont.truetype(path, size)
+            except Exception:
+                pass
+        return ImageFont.load_default()
+
+    md = ImageDraw.Draw(Image.new("RGBA", (1, 1)))
+
+    def _bbox(text, font):
+        bb = md.textbbox((0, 0), str(text), font=font)
+        return bb[2] - bb[0], bb[3] - bb[1], bb
+
+    def _fit(text, path, max_sz, min_sz, max_w):
+        for sz in range(max_sz, min_sz - 1, -2):
+            font = _load(path, sz)
+            tw, _, _ = _bbox(text, font)
+            if tw <= max_w:
+                return font
+        return _load(path, min_sz)
+
+    def _text(draw, xy, text, font, fill, stroke=0, stroke_fill=(255, 255, 255, 180), anchor=None):
+        _, _, bb = _bbox(text, font)
+        x, y = xy
+        if anchor:
+            draw.text((x, y), text, font=font, fill=fill, anchor=anchor,
+                      stroke_width=stroke, stroke_fill=stroke_fill)
+        else:
+            draw.text((x, y - bb[1]), text, font=font, fill=fill,
+                      stroke_width=stroke, stroke_fill=stroke_fill)
+
+    def _rounded(draw, box, radius, fill, outline=None, width=1):
+        try:
+            draw.rounded_rectangle(box, radius=radius, fill=fill, outline=outline, width=width)
+        except Exception:
+            draw.rectangle(box, fill=fill, outline=outline, width=width)
+
+    main = texts.get("main_word", "AI活用")
+    accent = texts.get("accent_word", "やさしく解説")
+
+    navy = (47, 43, 57, 255)
+    deep = (36, 58, 58, 255)
+    mauve = (194, 158, 166, 238)
+    blush = (246, 219, 219, 228)
+    blush_light = (255, 246, 244, 238)
+    lavender = (232, 221, 238, 226)
+    cream = (255, 252, 247, 242)
+    sage = (154, 184, 164, 230)
+    line = (202, 117, 153, 220)
+
+    # 全テンプレ共通で、背景写真をやや柔らかくしてPinterest系の上品さを出す。
+    veil = Image.new("RGBA", (W, H), (255, 252, 247, 54))
+    img = Image.alpha_composite(img, veil)
+    draw = ImageDraw.Draw(img)
+
+    if template == "aivice_pastel_person":
+        # テンプレ1: 左に人物/生活感、右に余白パネル。AIViceの基本形。
+        panel_x = int(W * 0.485)
+        draw.rectangle([panel_x, 0, W, H], fill=cream)
+        draw.ellipse([int(W * 0.72), -int(H * 0.24), int(W * 1.10), int(H * 0.34)], fill=lavender)
+        draw.ellipse([int(W * 0.68), int(H * 0.72), int(W * 1.06), int(H * 1.14)], fill=blush)
+        draw.arc([panel_x + int(W * 0.05), int(H * 0.14), W - int(W * 0.12), int(H * 0.33)],
+                 5, 176, fill=line, width=max(3, int(H * 0.004)))
+
+        tx = panel_x + int(W * 0.070)
+        max_w = W - tx - int(W * 0.070)
+        f_main = _fit(main, font_bold_path, int(H * 0.112), int(H * 0.060), max_w)
+        f_acc = _fit(accent, font_reg_path, int(H * 0.052), int(H * 0.036), max_w)
+        _text(draw, (tx, int(H * 0.350)), main, f_main, deep)
+        mw, mh, _ = _bbox(main, f_main)
+        draw.line([(tx, int(H * 0.350) + mh + int(H * 0.035)),
+                   (tx + min(mw, max_w), int(H * 0.350) + mh + int(H * 0.035))],
+                  fill=sage, width=max(3, int(H * 0.005)))
+        _text(draw, (tx, int(H * 0.350) + mh + int(H * 0.095)), accent, f_acc, navy)
+
+    elif template == "aivice_soft_flatlay":
+        # テンプレ2: 左写真、右くすみピンク面。比較/価格/レビュー向け。
+        panel_x = int(W * 0.455)
+        draw.rectangle([panel_x, 0, W, H], fill=mauve)
+        draw.ellipse([panel_x - int(W * 0.10), -int(H * 0.10), panel_x + int(W * 0.16), int(H * 1.10)],
+                     fill=(255, 252, 247, 255))
+        tx = panel_x + int(W * 0.080)
+        max_w = W - tx - int(W * 0.070)
+        f_main = _fit(main, font_bold_path, int(H * 0.104), int(H * 0.058), max_w)
+        f_acc = _fit(accent, font_bold_path, int(H * 0.060), int(H * 0.038), max_w)
+        _text(draw, (tx, int(H * 0.300)), main, f_main, (255, 255, 255, 255), stroke=1, stroke_fill=(120, 88, 98, 120))
+        mw, mh, _ = _bbox(main, f_main)
+        pill_y = int(H * 0.300) + mh + int(H * 0.090)
+        aw, ah, _ = _bbox(accent, f_acc)
+        _rounded(draw, [tx, pill_y, tx + aw + int(W * 0.060), pill_y + ah + int(H * 0.040)],
+                 int(H * 0.020), fill=(150, 93, 111, 218))
+        _text(draw, (tx + int(W * 0.030), pill_y + int(H * 0.020)), accent, f_acc, (255, 255, 255, 255))
+
+    elif template == "aivice_wave_panel":
+        # テンプレ3: 中央に大きな淡色パネル。手帳/管理術系の雰囲気。
+        pad_x = int(W * 0.075)
+        pad_y = int(H * 0.100)
+        _rounded(draw, [pad_x, pad_y, W - pad_x, H - pad_y], int(H * 0.050), fill=blush_light)
+        draw.line([(pad_x + int(W * 0.055), pad_y + int(H * 0.060)),
+                   (W - pad_x - int(W * 0.055), pad_y + int(H * 0.060))],
+                  fill=(255, 255, 255, 230), width=max(3, int(H * 0.004)))
+        draw.line([(pad_x + int(W * 0.055), H - pad_y - int(H * 0.060)),
+                   (W - pad_x - int(W * 0.055), H - pad_y - int(H * 0.060))],
+                  fill=(255, 255, 255, 230), width=max(3, int(H * 0.004)))
+        f_main = _fit(main, font_bold_path, int(H * 0.112), int(H * 0.060), int(W * 0.76))
+        f_acc = _fit(accent, font_reg_path, int(H * 0.052), int(H * 0.036), int(W * 0.64))
+        _text(draw, (W // 2, int(H * 0.375)), main, f_main, navy, anchor="mm")
+        _rounded(draw, [int(W * 0.330), int(H * 0.565), int(W * 0.670), int(H * 0.640)],
+                 int(H * 0.018), fill=(232, 195, 198, 230))
+        _text(draw, (W // 2, int(H * 0.603)), accent, f_acc, navy, anchor="mm")
+
+    else:
+        # テンプレ4: 左テキスト面、右にAIツール/人物/デスク。記事一覧で読みやすい型。
+        panel_w = int(W * 0.520)
+        draw.rectangle([0, 0, panel_w, H], fill=cream)
+        draw.ellipse([-int(W * 0.16), -int(H * 0.22), int(W * 0.26), int(H * 0.32)], fill=blush)
+        draw.ellipse([int(W * 0.22), int(H * 0.76), int(W * 0.56), int(H * 1.16)], fill=lavender)
+        tx = int(W * 0.075)
+        max_w = panel_w - tx - int(W * 0.050)
+        f_main = _fit(main, font_bold_path, int(H * 0.105), int(H * 0.058), max_w)
+        f_acc = _fit(accent, font_bold_path, int(H * 0.058), int(H * 0.038), max_w)
+        _text(draw, (tx, int(H * 0.335)), main, f_main, deep)
+        mw, mh, _ = _bbox(main, f_main)
+        _text(draw, (tx, int(H * 0.335) + mh + int(H * 0.110)), accent, f_acc, (92, 112, 105, 255))
+        draw.line([(tx, int(H * 0.335) + mh + int(H * 0.050)),
+                   (tx + min(mw, max_w), int(H * 0.335) + mh + int(H * 0.050))],
+                  fill=sage, width=max(3, int(H * 0.006)))
+
+    out = Image.new("RGB", img.size, (255, 255, 255))
+    out.paste(img, mask=img.split()[3])
+    buf = _io.BytesIO()
+    out.save(buf, format="JPEG", quality=90)
+    return buf.getvalue()
 
 
 def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
     """添付サンプル寄せの初心者ガイド型バナー。16:9前提で安全余白を広めに取る。"""
     from PIL import Image, ImageDraw, ImageFont, ImageOps
     import io as _io
+
+    if texts.get("_aivice_style"):
+        return _overlay_aivice_template_banner(img_bytes, texts)
 
     img = Image.open(_io.BytesIO(img_bytes)).convert("RGBA")
     W, H = img.size
@@ -2037,6 +2349,7 @@ def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
     quiet_layout = bool(texts.get("_quiet_layout"))
     f_pre = _fit(texts["pre_title"], font_reg_path, int(H * 0.050 if quiet_layout else H * 0.055), int(H * 0.034), text_w)
     compact_layout = bool(texts.get("_compact_layout"))
+    aivice_style = bool(texts.get("_aivice_style"))
     f_main = _fit(texts["main_word"], font_bold_path, int(H * 0.120 if compact_layout else H * (0.158 if quiet_layout else 0.185)), int(H * 0.060 if compact_layout else H * 0.094), text_w)
     f_acc = _fit(texts["accent_word"], font_bold_path, int(H * 0.058 if compact_layout else H * (0.092 if quiet_layout else 0.112)), int(H * 0.040 if compact_layout else H * 0.050), text_w)
     f_sup = _fit(texts["supplement"], font_bold_path, int(H * 0.040 if quiet_layout else H * 0.043), int(H * 0.028), int(W * 0.42))
@@ -2085,16 +2398,17 @@ def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
     else:
         th = 0
 
-    main_y = int(H * 0.285) if compact_layout else max(int(H * (0.285 if quiet_layout else 0.260)), pre_y + th + int(H * 0.065))
+    main_y = int(H * (0.315 if aivice_style and compact_layout else 0.285)) if compact_layout else max(int(H * (0.285 if quiet_layout else 0.260)), pre_y + th + int(H * 0.065))
     shadow = (0, 0, 0, 34)
     _text(draw, (safe_x + 4, main_y + 4), texts["main_word"], f_main, shadow)
     _text(draw, (safe_x, main_y), texts["main_word"], f_main, navy)
     main_w, main_h, _ = _bbox(texts["main_word"], f_main)
-    draw.line([(safe_x + int(main_w * 0.02), main_y + main_h + int(H * 0.018)),
-               (safe_x + int(main_w * 0.98), main_y + main_h + int(H * 0.018))],
-              fill=coral_soft, width=max(6, int(H * 0.011)))
+    rule_y = main_y + main_h + int(H * (0.030 if aivice_style else 0.018))
+    draw.line([(safe_x + int(main_w * 0.02), rule_y),
+               (safe_x + int(main_w * 0.98), rule_y)],
+              fill=coral_soft, width=max(4 if aivice_style else 6, int(H * (0.007 if aivice_style else 0.011))))
 
-    acc_y = main_y + main_h + int(H * (0.122 if compact_layout else (0.112 if quiet_layout else 0.092)))
+    acc_y = main_y + main_h + int(H * (0.150 if aivice_style and compact_layout else (0.122 if compact_layout else (0.112 if quiet_layout else 0.092))))
     _text(draw, (safe_x, acc_y), texts["accent_word"], f_acc, blue, stroke=1)
     _, acc_h, _ = _bbox(texts["accent_word"], f_acc)
 
@@ -2248,10 +2562,11 @@ def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
             lw, _, _ = _bbox(label, f_small)
             _text(draw, (cx - lw // 2, cy + r + int(H * 0.020)), label, f_small, navy)
 
-    # さりげない装飾
-    for sx, sy in [(int(W * 0.525), int(H * 0.125)), (int(W * 0.545), int(H * 0.760)), (int(W * 0.205), int(H * 0.935))]:
-        draw.polygon([(sx, sy - 13), (sx + 5, sy - 4), (sx + 15, sy), (sx + 5, sy + 4), (sx, sy + 13), (sx - 5, sy + 4), (sx - 15, sy), (sx - 5, sy - 4)],
-                     fill=(239, 173, 132, 190))
+    # さりげない装飾。飛騨の思い出など、写真の空気感優先のブログでは非表示にする。
+    if not texts.get("_hide_decorations"):
+        for sx, sy in [(int(W * 0.525), int(H * 0.125)), (int(W * 0.545), int(H * 0.760)), (int(W * 0.205), int(H * 0.935))]:
+            draw.polygon([(sx, sy - 13), (sx + 5, sy - 4), (sx + 15, sy), (sx + 5, sy + 4), (sx, sy + 13), (sx - 5, sy + 4), (sx - 15, sy), (sx - 5, sy - 4)],
+                         fill=(239, 173, 132, 190))
 
     out = Image.new("RGB", img.size, (255, 255, 255))
     out.paste(img, mask=img.split()[3])
@@ -2650,10 +2965,20 @@ def _curiosity_overlay_texts(title: str, texts: dict, template: str) -> dict:
 
 def _select_hida_template(title: str) -> str:
     """飛騨の思い出用アイキャッチの構図をタイトルから選ぶ。"""
-    if any(k in title for k in ("冬タイヤ", "スタッドレス", "雪道", "道路規制", "チェーン規制", "凍結", "積雪")):
+    if any(k in title for k in ("特急", "飛騨特急", "ワイドビュー", "HC85", "列車", "電車", "鉄道")):
+        pool = ["hida_limited_express", "train_station", "train_window_view"]
+    elif any(k in title for k in ("時刻表", "運賃", "料金", "予約", "名古屋から", "アクセス")):
+        pool = ["hida_limited_express", "train_station", "railway_route_flatlay", "train_window_view"]
+    elif any(k in title for k in ("冬タイヤ", "スタッドレス", "雪道", "道路規制", "チェーン規制", "凍結", "積雪")):
         pool = ["winter_road", "snowy_mountain_road", "winter_car_check", "snowy_town_road"]
     elif any(k in title for k in ("鬼仏", "与平", "飢饉", "昔話", "民話", "再生物語", "鬼と呼ばれた")):
         pool = ["old_mountain_village", "poor_old_town", "town_evening"]
+    elif any(k in title for k in ("犬連れ", "ペット", "同伴", "愛犬", "犬")):
+        pool = ["pet_travel", "museum_with_dog", "pet_friendly_walk"]
+    elif any(k in title for k in ("古民家カフェ", "カフェ", "喫茶", "コーヒー", "珈琲")):
+        pool = ["old_house_cafe", "cafe_interior", "cafe_table"]
+    elif any(k in title for k in ("手紙文学", "手紙", "哀しみ", "乗り越えて", "大切な人", "失った")):
+        pool = ["letter_story", "quiet_letters", "nostalgic_desk"]
     elif any(k in title for k in ("宿", "ホテル", "旅館", "民宿", "泊", "温泉", "下呂", "奥飛騨")):
         pool = ["ryokan_room", "onsen_morning", "town_evening", "travel_flatlay"]
     elif any(k in title for k in ("グルメ", "ランチ", "カフェ", "食べ歩き", "飛騨牛", "名物", "お土産")):
@@ -2764,6 +3089,92 @@ def _build_hida_background_prompt(title: str, template: str) -> str:
             "a quiet road surface with patches of snow and ice, no crowds, no readable shop signs. "
             "Calm but practical winter travel mood, clean negative space for Japanese typography."
         )
+    if template == "hida_limited_express":
+        return (
+            base +
+            "A tasteful travel scene of a modern Japanese limited express train traveling through the Hida mountains, "
+            "seen from a safe distance on tracks beside a clear river and green valley, heading toward Takayama. "
+            "Do not show any real railway company logo, train number, readable destination sign, or text. "
+            "Practical railway travel guide mood, with clean negative space for Japanese typography."
+        )
+    if template == "train_station":
+        return (
+            base +
+            "A calm Japanese local train station platform that suggests Takayama or Gero travel, with a clean modern limited express train stopped at the platform, "
+            "wooden station details, mountains softly visible, a suitcase near a bench, warm daylight. "
+            "No readable signs, no timetable text, no logos, no crowds. One side has clean negative space for typography."
+        )
+    if template == "railway_route_flatlay":
+        return (
+            base +
+            "A neat travel planning flatlay on a wooden table: blank train ticket-like card, folded route map with no readable text, smartphone with blank screen, "
+            "small suitcase handle, notebook, pen, tea cup, and a subtle mountain travel mood. "
+            "Useful timetable, price, and reservation guide feeling, no readable text, generous negative space."
+        )
+    if template == "train_window_view":
+        return (
+            base +
+            "View from inside a comfortable Japanese limited express train: clean window frame, seat edge, small table, tea bottle without label, "
+            "outside the window a Hida river valley and mountains in soft daylight. "
+            "No readable ads, no logos, no people faces. Calm travel guide atmosphere with clean negative space."
+        )
+    if template == "pet_travel":
+        return (
+            base +
+            "A calm pet-friendly Hida travel scene: a small to medium dog on a leash beside a traveler outside a tasteful local museum or cultural park entrance, "
+            "wooden architecture, greenery, mountains softly visible, warm daylight. "
+            "No readable signs, no logos, no crowded people. Friendly practical mood with clean negative space for Japanese typography."
+        )
+    if template == "museum_with_dog":
+        return (
+            base +
+            "A pet-friendly sightseeing scene near Hida Takayama Matsuri no Mori: festival museum-like wooden exterior, lantern-like shapes without text, "
+            "a calm dog sitting beside a travel bag, owner hands only, lush greenery, soft afternoon light. "
+            "No readable signs, no logos, no exact brand marks. Clear travel rule guide mood with generous negative space."
+        )
+    if template == "pet_friendly_walk":
+        return (
+            base +
+            "A peaceful walk with a dog near a Hida cultural sightseeing area, stone path, wooden buildings, greenery, travel bag and water bowl, "
+            "gentle local travel atmosphere. No readable signs, no crowds, no logos. Clean negative space for typography."
+        )
+    if template == "old_house_cafe":
+        return (
+            base +
+            "A quiet renovated old Japanese folk house cafe in Takayama: dark wooden beams, lattice window, low warm light, handmade ceramic coffee cup, "
+            "small dessert plate, calm empty seat, traditional interior with modern comfort. No readable menus or signs. "
+            "Soft and peaceful cafe mood with clean negative space for Japanese typography."
+        )
+    if template == "cafe_interior":
+        return (
+            base +
+            "Interior of a serene kominka cafe: aged wood, shoji-like window light, simple table, coffee, flowers, woven chair, quiet afternoon. "
+            "No people faces, no readable text, no menus. Relaxed hidden-cafe mood, clean negative space for typography."
+        )
+    if template == "cafe_table":
+        return (
+            base +
+            "Close-up of a calm cafe table in an old Hida house: ceramic coffee cup, small cake, linen napkin, wooden tabletop, window with soft greenery outside. "
+            "No readable labels, no crowded scene. Gentle and tasteful, with one side clean for typography."
+        )
+    if template == "letter_story":
+        return (
+            base +
+            "A quiet literary still life: old handwritten letters without readable text, fountain pen, small wooden box, dried flowers, soft window light, "
+            "traditional Hida room atmosphere, muted warm tones. Emotional but gentle, no modern objects, clean negative space."
+        )
+    if template == "quiet_letters":
+        return (
+            base +
+            "A solemn but warm desk scene with folded letters, envelope, old notebook, tea cup, and a blurred mountain village outside a window. "
+            "No readable writing, no logos, no people faces. Tender memory and grief-healing mood with clean negative space."
+        )
+    if template == "nostalgic_desk":
+        return (
+            base +
+            "Nostalgic wooden writing desk in an old Hida home, paper letters with no readable text, pen, small lamp, faded photo frame turned away, "
+            "soft evening light, quiet atmosphere of remembrance and recovery. Clean negative space for Japanese typography."
+        )
     if template == "old_mountain_village":
         return (
             base +
@@ -2815,10 +3226,58 @@ def _hida_overlay_texts(title: str, texts: dict, template: str) -> dict:
         main = work_title
         accent = "飛騨弁の短編小説" if "飛騨弁" in title else "短編小説"
         strip = "ものがたり"
+    elif "Ｎ先生" in title or "N先生" in title:
+        main = "Ｎ先生へ"
+        accent = "今も問いかけています"
+        strip = "関連手紙"
+    elif "春祭りの夜" in title:
+        main = "春祭りの夜"
+        accent = "みんなが愛おしかった"
+        strip = "関連作品"
+    elif "姉ちゃんのなかに" in title:
+        main = "姉ちゃんのなかに"
+        accent = "父ちゃんと母ちゃんがおる"
+        strip = "関連作品"
+    elif "手紙文学" in title or "手紙" in title or "哀しみを乗り越えて" in title:
+        main = "哀しみを乗り越えて" if "哀しみを乗り越えて" in title else "飛騨の手紙文学"
+        accent = "大切な人を想う物語"
+        strip = "手紙文学"
+    elif any(k in title for k in ("犬連れ", "ペット", "同伴", "愛犬", "犬")):
+        main = "まつりの森" if "まつりの森" in title else "犬連れOK？"
+        accent = "犬連れOK？" if "まつりの森" in title else "同伴ルールと楽しみ方"
+        strip = "ペット旅"
+    elif "古民家カフェ" in title:
+        main = "古民家カフェ"
+        accent = "静かな空間でひと休み"
+        strip = "高山カフェ"
+    elif any(k in title for k in ("特急", "ひだ", "飛騨特急", "ワイドビュー", "HC85", "列車", "電車", "鉄道", "時刻表", "運賃", "料金", "予約", "名古屋から", "アクセス")):
+        main = "特急ひだ"
+        if "予約" in title:
+            accent = "予約と料金ガイド"
+        elif "料金" in title or "運賃" in title:
+            accent = "料金と時刻表"
+        else:
+            accent = "名古屋から高山へ"
+        strip = "列車旅のしおり"
     elif any(k in title for k in ("冬タイヤ", "スタッドレス", "雪道", "道路規制", "チェーン規制", "凍結", "積雪")):
         main = "冬タイヤ"
         accent = "高山の必要条件"
         strip = "冬の高山"
+    elif any(k in title for k in ("グルメ", "ランチ", "カフェ", "食べ歩き", "飛騨牛", "名物", "蕎麦", "そば", "寿司", "肉寿司")):
+        if "飛騨牛" in title:
+            main = "飛騨牛グルメ"
+            accent = "味わう旅"
+        elif "ランチ" in title:
+            main = "高山ランチ"
+            accent = "地元ごはん案内"
+        else:
+            main = head_kw or "飛騨グルメ"
+            accent = "味わう旅"
+        strip = "おいしい飛騨"
+    elif any(k in title for k in ("お土産", "土産", "必買", "買うべき", "人気商品")):
+        main = "高山みやげ"
+        accent = "買い物ガイド"
+        strip = "お土産さんぽ"
     elif "白川郷" in title:
         main = "白川郷"
         accent = "やさしい旅ガイド"
@@ -2835,16 +3294,15 @@ def _hida_overlay_texts(title: str, texts: dict, template: str) -> dict:
         main = head_kw or "宿選び"
         accent = "失敗しない選び方"
         strip = "宿のしおり"
-    elif any(k in title for k in ("グルメ", "ランチ", "カフェ", "食べ歩き", "飛騨牛", "名物")):
-        main = head_kw or "飛騨グルメ"
-        accent = "味わう旅"
-        strip = "おいしい飛騨"
     elif any(k in title for k in ("モデルコース", "日帰り", "観光")):
         main = head_kw or "飛騨観光"
         accent = "迷わない歩き方"
         strip = "旅の道しるべ"
 
-    if any(k in title for k in ("冬タイヤ", "スタッドレス", "雪道", "道路規制", "チェーン規制", "凍結", "積雪")):
+    if any(k in title for k in ("特急", "ひだ", "飛騨特急", "ワイドビュー", "HC85", "列車", "電車", "鉄道", "時刻表", "運賃", "料金", "予約", "名古屋から", "アクセス")):
+        pre_title = random.choice(["名古屋から飛騨へ", "高山・下呂への列車旅", "特急で行く飛騨"])
+        supplement = random.choice(["時刻表・料金・予約を整理", "乗り方を出発前に確認", "列車旅の基本をやさしく案内"])
+    elif any(k in title for k in ("冬タイヤ", "スタッドレス", "雪道", "道路規制", "チェーン規制", "凍結", "積雪")):
         pre_title = random.choice(["冬道の備え", "雪の高山へ行く前に", "車で行く高山"])
         supplement = random.choice(["標高・気温・規制を確認", "雪道対策を出発前に整理", "スタッドレスの目安を確認"])
     elif work_title and "小説" in title:
@@ -2855,6 +3313,21 @@ def _hida_overlay_texts(title: str, texts: dict, template: str) -> dict:
             supplement = random.choice(["あの日の気持ちを物語に", "淡い想いをたどる", "静かに読める飛騨の短編"])
         else:
             supplement = random.choice(["人のぬくもりを描く短編", "胸に残る飛騨の物語", "静かに読める飛騨の短編"])
+    elif any(k in title for k in ("Ｎ先生", "N先生", "春祭りの夜", "姉ちゃんのなかに")):
+        pre_title = random.choice(["飛騨の手紙文学", "心に残る関連作品", "手紙から生まれた物語"])
+        supplement = random.choice(["手紙に残るぬくもり", "大切な人を想う時間", "静かに心へ届く物語"])
+    elif "手紙文学" in title or "手紙" in title or "哀しみを乗り越えて" in title:
+        pre_title = random.choice(["飛騨の手紙文学", "心に残る物語", "大切な人を想う"])
+        supplement = random.choice(["喪失と再生を描く物語", "手紙に残るぬくもり", "哀しみの先にある光"])
+    elif any(k in title for k in ("犬連れ", "ペット", "同伴", "愛犬", "犬")):
+        pre_title = random.choice(["愛犬と行く飛騨", "ペット同伴の旅", "犬連れ観光メモ"])
+        supplement = random.choice(["ルールと楽しみ方を確認", "愛犬と安心して過ごす", "同伴前に知りたいポイント"])
+    elif "古民家カフェ" in title:
+        pre_title = random.choice(["高山でひと休み", "静かなカフェ時間", "古民家で過ごす午後"])
+        supplement = random.choice(["落ち着いた空間を楽しむ", "静かに過ごせる店選び", "旅の途中のやさしい時間"])
+    elif any(k in title for k in ("グルメ", "ランチ", "カフェ", "食べ歩き", "飛騨牛", "名物", "蕎麦", "そば", "寿司", "肉寿司", "お土産", "土産", "必買")):
+        pre_title = random.choice(["飛騨の味めぐり", "高山で味わう", "町歩きのお楽しみ"])
+        supplement = random.choice(["値段相場と選び方を整理", "おいしい寄り道を楽しむ", "旅先で迷わないための案内"])
     else:
         pre_title = random.choice(["旅の記憶", "静かな町歩き", "飛騨の一日"])
         supplement = random.choice(["土地の空気まで楽しむ", "静かに過ごす旅時間", "思い出に残る旅の準備"])
@@ -2875,6 +3348,7 @@ def _hida_overlay_texts(title: str, texts: dict, template: str) -> dict:
         "_text_side": random.choice(["left", "left", "right"]),
         "_hide_badge": True,
         "_hide_icons": True,
+        "_hide_decorations": True,
         "_quiet_layout": True,
     }
 
@@ -3013,6 +3487,80 @@ def _save_debug_image(img_bytes: bytes, image_type: str, model: str) -> None:
         print(f"[IMAGE] 保存: {path}")
     except Exception as e:
         print(f"[IMAGE] ローカル保存スキップ: {e}")
+
+
+def _score_eyecatch_candidate(img_bytes: bytes) -> float:
+    """候補画像を簡易スコアリングする。明るさ・コントラスト・余白感をざっくり見る。"""
+    try:
+        from PIL import Image, ImageStat
+        import io as _io_tmp
+
+        img = Image.open(_io_tmp.BytesIO(img_bytes)).convert("RGB").resize((384, 216))
+        gray = img.convert("L")
+        stat = ImageStat.Stat(gray)
+        mean = float(stat.mean[0])
+        std = float(stat.stddev[0])
+
+        # SEOブログの一覧で浮きにくい、明るく清潔で読みやすいレンジを好む。
+        score = 100.0
+        score -= abs(mean - 218.0) * 0.35
+        score -= abs(std - 42.0) * 0.45
+
+        # 暗すぎる/派手すぎる画像は避ける。
+        if mean < 150:
+            score -= 30
+        if std > 82:
+            score -= 25
+        if std < 18:
+            score -= 10
+        return score
+    except Exception:
+        return 0.0
+
+
+def _generate_beginner_guide_candidate(
+    model: str,
+    title: str,
+    template: str,
+    base_texts: dict,
+    candidate_index: int = 1,
+) -> tuple[bytes, str, float]:
+    """初心者ガイド型アイキャッチを1案生成して、テンプレ名と簡易スコアを返す。"""
+    print(f"[IMAGE] guide template: {template} (candidate {candidate_index})")
+    bg_prompt = _build_beginner_guide_background_prompt(title, template)
+    bg_bytes = _call_model(model, bg_prompt, W_EYECATCH, H_EYECATCH)
+    texts = _guide_overlay_texts(title, dict(base_texts), template)
+    final_bytes = _overlay_beginner_guide_banner(bg_bytes, texts)
+    score = _score_eyecatch_candidate(final_bytes)
+    _save_debug_image(final_bytes, f"codex_beginner_guide_candidate_{candidate_index}", model)
+    print(f"[IMAGE] candidate score: {score:.1f}")
+    return final_bytes, template, score
+
+
+def _generate_best_beginner_guide_image(model: str, title: str) -> bytes:
+    """
+    初心者ガイド型を1〜4案生成し、簡易スコアで最良案を選ぶ。
+    枚数は CODEX_EYECATCH_CANDIDATES / EYECATCH_CANDIDATES で調整。
+    """
+    count = _eyecatch_candidate_count()
+    best: tuple[bytes, str, float] | None = None
+    base_texts = _generate_overlay_texts(title)
+    for idx in range(1, count + 1):
+        template = _select_beginner_guide_template(title)
+        try:
+            candidate = _generate_beginner_guide_candidate(model, title, template, base_texts, idx)
+        except Exception as e:
+            if idx == 1:
+                raise
+            print(f"[IMAGE] candidate {idx} 生成失敗、スキップ: {e}")
+            continue
+        if best is None or candidate[2] > best[2]:
+            best = candidate
+
+    if best is None:
+        raise RuntimeError("初心者ガイド型アイキャッチの候補生成に失敗しました")
+    print(f"[IMAGE] selected template: {best[1]}  score={best[2]:.1f}")
+    return best[0]
 
 
 def generate_eyecatch_image(keyword: str, article_theme: str = "", variant: str = "a") -> bytes:
@@ -3155,12 +3703,7 @@ def generate_lifestyle_eyecatch_image(
 
     if _is_beginner_guide_title(title):
         print("[IMAGE] 初心者ガイド型バナーで生成します")
-        guide_template = _select_beginner_guide_template(title)
-        print(f"[IMAGE] guide template: {guide_template}")
-        bg_prompt = _build_beginner_guide_background_prompt(title, guide_template)
-        bg_bytes = _call_model(model, bg_prompt, W_EYECATCH, H_EYECATCH)
-        texts = _guide_overlay_texts(title, _generate_overlay_texts(title), guide_template)
-        final_bytes = _overlay_beginner_guide_banner(bg_bytes, texts)
+        final_bytes = _generate_best_beginner_guide_image(model, title)
         _save_debug_image(final_bytes, "codex_beginner_guide_eyecatch", model)
         return final_bytes
 

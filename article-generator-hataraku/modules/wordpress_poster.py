@@ -298,6 +298,50 @@ def _inject_h2_images(content: str, h2_image_data: list[tuple[str, str]]) -> str
     return content
 
 
+def _find_h3_block_end(content: str, section_keywords: list[str]) -> int | None:
+    """section_keywords のいずれかを含む H3 ブロックの終端位置を返す。"""
+    pattern = re.compile(
+        r'<!-- wp:heading \{"level":3\} -->\s*<h3[^>]*>(.*?)</h3>\s*<!-- /wp:heading -->',
+        re.DOTALL,
+    )
+    for m in pattern.finditer(content):
+        h3_text = re.sub(r'<[^>]+>', '', m.group(1)).strip()
+        if any(kw in h3_text for kw in section_keywords):
+            return m.end()
+    return None
+
+
+def _inject_h3_section_images(content: str, slug: str, keyword: str) -> str:
+    """「よくある質問」「まとめ」H3見出し直下に FLUX 生成画像を挿入する。"""
+    from modules.image_generator import generate_h2_image
+
+    targets = [
+        (["よくある質問", "FAQ", "Q&A", "よくある疑問"], f"{slug}-faq.jpg",     "よくある質問"),
+        (["まとめ"],                                      f"{slug}-summary.jpg", "まとめ"),
+    ]
+
+    # 挿入位置を先に全部計算してから後ろ→前の順で挿入（オフセットずれ防止）
+    inserts: list[tuple[int, str]] = []
+    for section_kws, filename, label in targets:
+        pos = _find_h3_block_end(content, section_kws)
+        if pos is None:
+            print(f"[wordpress] H3画像[{label}] 見出し見つからずスキップ")
+            continue
+        img_alt = f"{keyword}の{label}イメージ"
+        try:
+            img_bytes = generate_h2_image(label, keyword)
+            _, src_url = upload_media(img_bytes, filename, alt_text=img_alt, title=img_alt)
+            print(f"[wordpress] H3画像[{label}] FLUX生成・アップロード完了: {filename}")
+            inserts.append((pos, _build_wp_image_block(src_url, img_alt)))
+        except Exception as e:
+            print(f"[wordpress] H3画像[{label}] スキップ（続行）: {e}")
+
+    for pos, block in sorted(inserts, key=lambda x: x[0], reverse=True):
+        content = content[:pos] + block + content[pos:]
+
+    return content
+
+
 # ─────────────────────────────────────────────
 # タグ
 # ─────────────────────────────────────────────
@@ -561,6 +605,13 @@ def post_article_with_image(
         if h2_image_data:
             article["content"] = _inject_h2_images(article["content"], h2_image_data)
             print(f"[wordpress] H2画像 {len(h2_image_data)}枚 をコンテンツに挿入しました")
+
+    # ③-b よくある質問・まとめH3直下に画像を挿入
+    article["content"] = _inject_h3_section_images(
+        article["content"],
+        slug=slug,
+        keyword=keyword,
+    )
 
     # ④ 内部リンク挿入（H3セクション末尾に分散）
     try:

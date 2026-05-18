@@ -9239,6 +9239,336 @@
       "output_tokens": 14,
       "cost_usd": 0.000359,
       "label": "maps:飛騨特急 時刻表"
+    },
+    {
+      "timestamp": "2026-05-17T19:20:16.951156+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 95,
+      "cost_usd": 0.00047,
+      "label": "lsi:夏バテ 対策 食べ物"
+    },
+    {
+      "timestamp": "2026-05-17T19:20:21.250812+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 687,
+      "cost_usd": 0.002891,
+      "label": "kw_research:夏バテ 対策 食べ物"
+    },
+    {
+      "timestamp": "2026-05-17T19:23:28.747738+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12446,
+      "output_tokens": 14379,
+      "cost_usd": 0.253023,
+      "label": "article:夏バテ 対策 食べ物"
+    },
+    {
+      "timestamp": "2026-05-17T19:39:25.303632+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 134,
+      "cost_usd": 0.000624,
+      "label": "lsi:Claude Code 自動化 何ができる"
+    },
+    {
+      "timestamp": "2026-05-17T19:39:29.721815+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 509,
+      "cost_usd": 0.002178,
+      "label": "kw_research:Claude Code 自動化 何ができる"
+    },
+    {
+      "timestamp": "2026-05-17T19:40:16.420858+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 85,
+      "cost_usd": 0.000432,
+      "label": "lsi:成城石井 チーズケーキ 販売店"
+    },
+    {
+      "timestamp": "2026-05-17T19:40:20.667774+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 619,
+      "cost_usd": 0.002622,
+      "label": "kw_research:成城石井 チーズケーキ 販売店"
+    },
+    {
+      "timestamp": "2026-05-17T19:43:15.346967+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10569,
+      "output_tokens": 13426,
+      "cost_usd": 0.233097,
+      "label": "article:成城石井 チーズケーキ 販売店"
+    },
+    {
+      "timestamp": "2026-05-17T19:43:35.532474+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11189,
+      "output_tokens": 15371,
+      "cost_usd": 0.264132,
+      "label": "article:Claude Code 自動化 何ができる"
+    },
+    {
+      "timestamp": "2026-05-17T20:00:17.576036+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 106,
+      "output_tokens": 86,
+      "cost_usd": 0.000429,
+      "label": "lsi:保険販売 副業"
+    },
+    {
+      "timestamp": "2026-05-17T20:00:23.157721+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 173,
+      "output_tokens": 472,
+      "cost_usd": 0.002026,
+      "label": "kw_research:保険販売 副業"
+    },
+    {
+      "timestamp": "2026-05-17T20:03:14.425448+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10781,
+      "output_tokens": 12771,
+      "cost_usd": 0.223908,
+      "label": "article:保険販売 副業"
+    },
+    {
+      "timestamp": "2026-05-17T20:30:15.669648+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 118,
+      "output_tokens": 89,
+      "cost_usd": 0.00045,
+      "label": "lsi:飛騨牛 握り寿司 食べ歩き"
+    },
+    {
+      "timestamp": "2026-05-17T20:30:19.969070+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 185,
+      "output_tokens": 679,
+      "cost_usd": 0.002864,
+      "label": "kw_research:飛騨牛 握り寿司 食べ歩き"
+    },
+    {
+      "timestamp": "2026-05-17T20:33:25.440200+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10705,
+      "output_tokens": 13847,
+      "cost_usd": 0.23982,
+      "label": "article:飛騨牛 握り寿司 食べ歩き"
+    },
+    {
+      "timestamp": "2026-05-17T20:33:30.774934+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 402,
+      "output_tokens": 37,
+      "cost_usd": 0.00047,
+      "label": "maps:飛騨牛 握り寿司 食べ歩き"
+    },
+    {
+      "timestamp": "2026-05-17T21:00:15.536752+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 134,
+      "cost_usd": 0.000626,
+      "label": "lsi:通信教育 初期費用 いくら？"
+    },
+    {
+      "timestamp": "2026-05-17T21:00:18.581981+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 502,
+      "cost_usd": 0.002152,
+      "label": "kw_research:通信教育 初期費用 いくら？"
+    },
+    {
+      "timestamp": "2026-05-17T21:03:49.182429+00:00",
+      "date": "2026-05-17",
+      "hour": "2026-05-17T21",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11428,
+      "output_tokens": 13881,
+      "cost_usd": 0.242499,
+      "label": "article:通信教育 初期費用 いくら？"
+    },
+    {
+      "timestamp": "2026-05-18T06:56:58.722269+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 77,
+      "cost_usd": 0.000399,
+      "label": "lsi:AIアプリ 開発 初心者 無料"
+    },
+    {
+      "timestamp": "2026-05-18T06:57:05.356405+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T06",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 657,
+      "cost_usd": 0.002773,
+      "label": "kw_research:AIアプリ 開発 初心者 無料"
+    },
+    {
+      "timestamp": "2026-05-18T07:00:38.201287+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T07",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11075,
+      "output_tokens": 13819,
+      "cost_usd": 0.24051,
+      "label": "article:AIアプリ 開発 初心者 無料"
+    },
+    {
+      "timestamp": "2026-05-18T07:06:15.121604+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 97,
+      "cost_usd": 0.000479,
+      "label": "lsi:AIアプリ 開発 初心者 無料"
+    },
+    {
+      "timestamp": "2026-05-18T07:09:46.259671+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T07",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10435,
+      "output_tokens": 15363,
+      "cost_usd": 0.26175,
+      "label": "article:AIアプリ 開発 初心者 無料"
+    },
+    {
+      "timestamp": "2026-05-18T09:59:51.676588+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16004,
+      "output_tokens": 15650,
+      "cost_usd": 0.282762,
+      "label": "rewrite:https://workup-ai.com/super-grok-price-jpy-guide"
+    },
+    {
+      "timestamp": "2026-05-18T16:49:01.154662+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T16",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 18610,
+      "output_tokens": 15999,
+      "cost_usd": 0.295815,
+      "label": "rewrite:https://workup-ai.com/prompt-kouzu-hiki"
+    },
+    {
+      "timestamp": "2026-05-18T16:52:10.109766+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T16",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 35147,
+      "output_tokens": 16000,
+      "cost_usd": 0.345441,
+      "label": "rewrite:https://workup-ai.com/tareme-prompt"
+    },
+    {
+      "timestamp": "2026-05-18T16:53:40.919925+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T16",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 75,
+      "cost_usd": 0.000388,
+      "label": "lsi:Claude Code Codex どっち 比較"
+    },
+    {
+      "timestamp": "2026-05-18T16:53:44.914924+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T16",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 444,
+      "cost_usd": 0.001918,
+      "label": "kw_research:Claude Code Codex どっち 比較"
+    },
+    {
+      "timestamp": "2026-05-18T16:56:47.836658+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T16",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11817,
+      "output_tokens": 13296,
+      "cost_usd": 0.234891,
+      "label": "article:Claude Code Codex どっち 比較"
+    },
+    {
+      "timestamp": "2026-05-18T17:22:31.411364+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 78,
+      "cost_usd": 0.0004,
+      "label": "lsi:Claude Code Codex どっち 比較"
+    },
+    {
+      "timestamp": "2026-05-18T17:22:34.794186+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 395,
+      "cost_usd": 0.001722,
+      "label": "kw_research:Claude Code Codex どっち 比較"
+    },
+    {
+      "timestamp": "2026-05-18T17:25:47.803822+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T17",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12197,
+      "output_tokens": 14769,
+      "cost_usd": 0.258126,
+      "label": "article:Claude Code Codex どっち 比較"
     }
   ],
   "events": [

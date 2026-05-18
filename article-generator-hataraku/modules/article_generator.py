@@ -47,7 +47,8 @@ __SITE_INFO__
 - **「です」が3文以上連続しないこと**。「〜です。〜です。〜です。」は必ず語尾を変える（「〜しています」「〜でしょう」「〜なのが特徴」「〜といえます」「〜になります」など）
 - 同じ構文パターンの連続禁止（「〜することができます。〜することができます。」など）
 - 定型的なAI文体（「〜となっています」「〜となります」の多用）を避け、自然な表現を混ぜる
-- **「〜ですね」「〜ですよ」「〜してみてくださいね」などやわらかい語尾は、冒頭文・まとめセクションに限定して使う**。本文H3内での多用は禁止（くだけすぎてしまうため）。本文中では通常の丁寧語（〜です・〜ます・〜でしょう）を基本とする
+- **「〜ですね」「〜してみてくださいね」などやわらかい語尾は、冒頭文・まとめセクションに限定して使う**。本文H3内での多用は禁止（くだけすぎてしまうため）。本文中では通常の丁寧語（〜です・〜ます・〜でしょう）を基本とする
+- **「〜ですよ」は記事全体を通じて使わない**（「〜ですね」「〜です」で代替する）
 - 読者の気持ちへの共感は、冒頭・まとめ限定で自然に添える（例:「最初はハードルに感じるかもしれません」「迷うのは当然です」）
 - **「うまくいかなくても損はない」「まず1つだけ試してみる」など、リスクを下げる言い回しはまとめセクションで使う**
 - 難しい専門用語の後に「（つまり〜ということです）」「（要は〜です）」など口語的な補足を入れる
@@ -94,10 +95,10 @@ Google AI Overviewで引用されやすいよう以下を意識する:
 
 **締めの文章は300〜400字・2〜3段落で書く**（各段落を個別のwp:paragraphで囲む）:
 ①読者の悩みや迷いへの共感（「〜という気持ち、よく理解できます」「最初はハードルに感じますよね」など）
-②記事内容の価値をさらっと再確認＋リスクを下げる言い回し（「無料から試せるので、うまくいかなくても損はないですよ」など）
-③具体的な小さな一歩の提案（「今日の〇〇から1つだけ試してみてくださいね。きっともっとよくなりますよ」など）
+②記事内容の価値をさらっと再確認＋リスクを下げる言い回し（「無料から試せるので、うまくいかなくても損はありません」など）
+③具体的な小さな一歩の提案（「今日の〇〇から1つだけ試してみてくださいね。きっともっとよくなります」など）
 
-**トーン**: やわらかく、背中をそっと押す感じ。「きっと〜ですよ」「〜はずです」「〜してみてくださいね」を使う。
+**トーン**: やわらかく、背中をそっと押す感じ。「〜はずです」「〜してみてくださいね」「〜ですね」を使う。「〜ですよ」は使わない。
 **禁止**: 「ぜひ」「ご活用ください」「〜してください」「最後に」で始める締めは使わない。
 アフィリリンク登録済みツールが文脈に自然に合う場合のみ1つ挿入（無理に入れない）。
 
@@ -312,7 +313,7 @@ __AFFILIATE_LINES__
 <div class="swell-block-capbox cap_box is-style-onborder_ttl2"><div class="cap_box_ttl"><span>{{キーワード}}が向いている人・向いていない人</span></div><div class="cap_box_content">
 <!-- wp:paragraph --><p>✅ 向いている人</p><!-- /wp:paragraph -->
 <!-- wp:list {{"className":"is-style-check_list"}} --><ul class="wp-block-list is-style-check_list"><li>{{条件1}}</li><li>{{条件2}}</li><li>{{条件3}}</li></ul><!-- /wp:list -->
-<!-- wp:paragraph --><p>❌ 向いていない人</p><!-- /wp:paragraph -->
+<!-- wp:paragraph --><p>△ 向いていない人</p><!-- /wp:paragraph -->
 <!-- wp:list --><ul class="wp-block-list"><li>{{条件1}}</li><li>{{条件2}}</li></ul><!-- /wp:list -->
 </div></div>
 <!-- /wp:loos/cap-block -->
@@ -458,6 +459,28 @@ def _build_system_prompt(
     except Exception:
         site_lines = "- （ブログ情報未設定）"
     prompt = prompt.replace("__SITE_INFO__", site_lines)
+
+    # 「向いている人・向いていない人」セクションを除外するブログの場合は削除
+    try:
+        if not meta.get("fit_unfit_section", True):
+            prompt = prompt.replace(
+                "- **「向いている人・向いていない人」セクションを必ず設ける**（H3またはボックスで）\n",
+                "",
+            )
+            prompt = prompt.replace(
+                '{H2セクションの末尾付近に「向いている人・向いていない人」をボックスで設ける}\n'
+                '<!-- wp:loos/cap-block {"className":"is-style-onborder_ttl2"} -->\n'
+                '<div class="swell-block-capbox cap_box is-style-onborder_ttl2"><div class="cap_box_ttl"><span>{キーワード}が向いている人・向いていない人</span></div><div class="cap_box_content">\n'
+                "<!-- wp:paragraph --><p>✅ 向いている人</p><!-- /wp:paragraph -->\n"
+                '<!-- wp:list {"className":"is-style-check_list"} --><ul class="wp-block-list is-style-check_list"><li>{条件1}</li><li>{条件2}</li><li>{条件3}</li></ul><!-- /wp:list -->\n'
+                "<!-- wp:paragraph --><p>△ 向いていない人</p><!-- /wp:paragraph -->\n"
+                '<!-- wp:list --><ul class="wp-block-list"><li>{条件1}</li><li>{条件2}</li></ul><!-- /wp:list -->\n'
+                "</div></div>\n"
+                "<!-- /wp:loos/cap-block -->",
+                "",
+            )
+    except Exception:
+        pass
 
     # アフィリリンク（ブログ固有）を動的に差し込む
     if asp_links:
@@ -984,36 +1007,34 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     adsense_section = _build_adsense_instruction(keyword)
 
     check_stop()
+    user_prompt = USER_PROMPT_TEMPLATE.format(
+        current_date=date.today().strftime("%Y年%m月%d日"),
+        keyword=keyword,
+        volume=volume,
+        asp_hint_section=asp_hint_section,
+        blog_context_section=blog_context_section,
+        related_section=related_section,
+        theme_section=theme_section,
+        lsi_section=lsi_section,
+        keyword_research_section=keyword_research_section,
+        sub_keywords_section=sub_keywords_section,
+        differentiation_section=diff_section,
+        fact_check_section=fact_check_section,
+        person_section=person_section,
+        plaud_notta_section=plaud_notta_section,
+        tone_section=tone_section,
+        testimonial_section=testimonial_section,
+        trusted_external_links_section=trusted_external_links_section,
+        ref_urls_section=ref_urls_section,
+        forced_title_section=forced_title_section,
+        howto_section=howto_section,
+        adsense_section=adsense_section,
+    )
     message = client.messages.create(
         model="claude-sonnet-4-6",
         max_tokens=max_tokens,
         system=system_prompt,
-        messages=[{
-            "role": "user",
-            "content": USER_PROMPT_TEMPLATE.format(
-                current_date=date.today().strftime("%Y年%m月%d日"),
-                keyword=keyword,
-                volume=volume,
-                asp_hint_section=asp_hint_section,
-                blog_context_section=blog_context_section,
-                related_section=related_section,
-                theme_section=theme_section,
-                lsi_section=lsi_section,
-                keyword_research_section=keyword_research_section,
-                sub_keywords_section=sub_keywords_section,
-                differentiation_section=diff_section,
-                fact_check_section=fact_check_section,
-                person_section=person_section,
-                plaud_notta_section=plaud_notta_section,
-                tone_section=tone_section,
-                testimonial_section=testimonial_section,
-                trusted_external_links_section=trusted_external_links_section,
-                ref_urls_section=ref_urls_section,
-                forced_title_section=forced_title_section,
-                howto_section=howto_section,
-                adsense_section=adsense_section,
-            ),
-        }],
+        messages=[{"role": "user", "content": user_prompt}],
     )
     record_usage("claude-sonnet-4-6",
                  message.usage.input_tokens, message.usage.output_tokens, f"article:{keyword}")
@@ -1035,13 +1056,31 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     try:
         data = json.loads(raw)
     except json.JSONDecodeError:
-        # 制御文字（改行・タブ以外）をエスケープして再試行
         import re as _re
+        # ① 制御文字（改行・タブ以外）を除去して再試行
         sanitized = _re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', raw)
         try:
             data = json.loads(sanitized)
         except json.JSONDecodeError as e:
-            raise ValueError(f"Claude APIからのJSON解析エラー: {e}\n---\n{raw[:500]}") from e
+            # ② それでも失敗した場合は同じプロンプトでAPIを1回リトライ
+            print(f"[article_generator] JSON解析失敗（{e}）→ 同一プロンプトでリトライ中...")
+            retry_msg = client.messages.create(
+                model="claude-sonnet-4-6",
+                max_tokens=max_tokens,
+                system=system_prompt,
+                messages=[{"role": "user", "content": user_prompt}],
+            )
+            record_usage("claude-sonnet-4-6",
+                         retry_msg.usage.input_tokens, retry_msg.usage.output_tokens,
+                         f"article_retry:{keyword}")
+            raw2 = retry_msg.content[0].text.strip()
+            if raw2.startswith("```"):
+                lines2 = raw2.split("\n")
+                raw2 = "\n".join(lines2[1:-1] if lines2[-1].strip() == "```" else lines2[1:])
+            try:
+                data = json.loads(raw2)
+            except json.JSONDecodeError as e2:
+                raise ValueError(f"Claude APIからのJSON解析エラー: {e2}\n---\n{raw[:500]}") from e2
 
     for key in ("title", "meta_description", "slug", "image_prompt", "content"):
         if key not in data:
