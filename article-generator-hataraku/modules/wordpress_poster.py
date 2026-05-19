@@ -157,6 +157,43 @@ def upload_media(
     return media_id, data.get("source_url", "")
 
 
+def _fetch_recent_posts_for_links(exclude_slug: str, n: int = 5) -> list[dict]:
+    """公開済み記事から最近のものを取得（現記事は除外）。"""
+    try:
+        resp = requests.get(
+            f"{wp_context.get_wp_url()}/wp-json/wp/v2/posts",
+            auth=_auth(),
+            params={"per_page": 20, "status": "publish", "_fields": "id,title,link,slug"},
+            timeout=15,
+        )
+        posts = resp.json()
+        return [p for p in posts if p.get("slug") != exclude_slug][:n]
+    except Exception as e:
+        print(f"[wordpress] 関連記事取得失敗（続行）: {e}")
+        return []
+
+
+def _build_related_links_block(posts: list[dict], heading: str = "こちらの記事もどうぞ") -> str:
+    """記事リストをSWELL Gutenbergブロック形式の文末リンクセクションに変換する。"""
+    if not posts:
+        return ""
+    items = "\n".join(
+        f'<li><a href="{p["link"]}">{p["title"]["rendered"]}</a></li>'
+        for p in posts
+    )
+    return (
+        '\n<!-- wp:separator {"className":"is-style-wide"} -->\n'
+        '<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>\n'
+        '<!-- /wp:separator -->\n\n'
+        '<!-- wp:heading {"level":3} -->\n'
+        f'<h3 class="wp-block-heading">{heading}</h3>\n'
+        '<!-- /wp:heading -->\n\n'
+        '<!-- wp:list -->\n'
+        f'<ul class="wp-block-list">\n{items}\n</ul>\n'
+        '<!-- /wp:list -->'
+    )
+
+
 def _get_eyecatch_caption_tags(keyword: str) -> str:
     """
     キーワードから親グループ名を動的に検出し、
@@ -648,6 +685,16 @@ def post_article_with_image(
 
     # ⑤' 外部リンク確認・補完（最低1個必須）
     article["content"] = _ensure_external_link(article["content"], keyword)
+
+    # ⑤'' ブログ設定で related_articles_at_end=true の場合、文末に他記事リンクを追加
+    blog_meta = wp_context.get_blog_meta()
+    if blog_meta.get("related_articles_at_end"):
+        related_posts = _fetch_recent_posts_for_links(exclude_slug=slug, n=5)
+        if related_posts:
+            heading = blog_meta.get("related_articles_heading", "こちらの記事もどうぞ")
+            links_block = _build_related_links_block(related_posts, heading=heading)
+            article["content"] += links_block
+            print(f"[wordpress] 文末関連記事リンク {len(related_posts)}件 追加")
 
     # ⑥ 投稿
     result = create_post(article, featured_media_id=featured_media_id)

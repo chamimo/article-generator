@@ -725,7 +725,7 @@ def fetch_candidates(
     is_new_format = hantei_idx >= 0    # 判定列の有無で新旧フォーマットを判別
 
     # aim列の値 → 優先度レベル（高いほど先に評価）
-    _AIM_PRIORITY = {"now": 4, "future": 3, "monetize": 2, "aim": 1, "claude": 1, "add": 1}
+    _AIM_PRIORITY = {"now": 6, "future": 5, "monetize": 4, "aim": 3, "add": 2, "claude": 1}
 
     def to_int(v: str) -> int | None:
         if not v or v.upper() in ("N/A", "NULL", "-", ""):
@@ -1293,7 +1293,7 @@ def filter_duplicates(
     from datetime import timedelta
 
     # aim優先度 (_priority_level) 降順 → volume 降順でソートして先頭評価
-    # now=4 > future=3 > monetize=2 > aim/add=1 > 未指定=0
+    # now=6 > future=5 > monetize=4 > aim=3 > add=2 > claude=1 > 未指定=0
     high_pool = sorted(
         [c for c in candidates if c.get("_priority_level", 0) > 0],
         key=lambda x: (-x.get("_priority_level", 0), -x["volume"]),
@@ -1323,6 +1323,11 @@ def filter_duplicates(
     for c in pool:
         if len(chosen) >= n:
             break
+        # AIM=now は手動緊急指定のため重複チェックをバイパス
+        if c.get("_aim") == "now":
+            log.info(f"[dup_check] NOW優先スキップ: 「{c['keyword']}」（重複チェック免除）")
+            chosen.append(c)
+            continue
         is_dup, reason = _check_duplicate(c, wp_posts, recent_cutoff, stop_words=stop_words)
         if is_dup:
             log.info(f"[dup_check] 除外: 「{c['keyword']}」 → {reason}")

@@ -1,0 +1,715 @@
+===== [WORKUP-AI] 実行開始: 2026-05-19 20:10:26 =====
+2026-05-19 20:10:29 [INFO] ============================================================
+2026-05-19 20:10:29 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-19 20:10:29 [INFO] ============================================================
+2026-05-19 20:10:29 [INFO] 対象ブログ: ['workup-ai']
+2026-05-19 20:10:30 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 20:10:30 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-19 20:10:30 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 20:10:30 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-19 20:10:30 [INFO]   fact_check       : True
+2026-05-19 20:10:30 [INFO]   article_type_mix : True
+2026-05-19 20:10:30 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-19 20:10:30 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-19 20:10:32 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-19 20:10:32 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-19 20:10:32 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-19 20:10:32 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-19 20:10:32 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-19 20:10:32 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-19 20:10:35 [INFO] [wp] 記事取得: 計407件 (publish=407)
+2026-05-19 20:10:35 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-19 20:10:38 [INFO] [fetch] サブKW紐付け: 146件 → 19記事に統合
+2026-05-19 20:10:38 [INFO] [fetch] [キーワード] メインKW: 15件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 27件  テーマ外除外: 15件  aim内訳: [now:2, aim:15, claude:10, add:3]
+2026-05-19 20:10:38 [INFO] [dup_check] 優先候補: 15件 {'now': 2, 'add': 2, 'aim': 2, 'claude': 9} を先頭評価
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「plaud note pro リアルタイム文字起こし」 → カニバリ(3/4語重複 ['plaud', 'note', 'pro']): 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「claude code setup プラグイン」 → 直近7日重複: 「Claude Code自動化で何ができる？業務効率化の使い方と具体例を解説」
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「claude code skillsとは」 → カニバリ(2/3語重複 ['claude', 'code']): 「Claude Code自動化で何ができる？業務効率化の使い方と具体例を解説」
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → カニバリ(3/4語重複 ['youtube', 'ai', 'イラスト']): 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → カニバリ(2/3語重複 ['youtube', 'ai']): 「YouTube競合分析AIツールおすすめ6選！無料から使える方法・やり方を徹底解」
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「フリーランス AI 活用 在宅」 → カニバリ(3/4語重複 ['ai', '活用', '在宅']): 「在宅ワーク｜主婦で初心者でも安心！AI活用で始める稼げる副業」
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「AI副業 稼ぎ方 初心者 安全」 → カニバリ(3/4語重複 ['ai副業', '稼ぎ方', '初心者']): 「AI副業で何をする？初心者におすすめの種類と稼ぎ方を徹底解説」
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「Claude Code ChatGPT 違い わかりやすく」 → カニバリ(3/5語重複 ['claude', 'code', '違い']): 「Claude CodeとOpenAI Codex、どっちを選ぶ？機能・料金・用途」
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「Claude Code API できること」 → カニバリ(3/4語重複 ['claude', 'code', 'できること']): 「Claude Code無料枠でできること・制限を徹底解説！有料版との違いも比較」
+2026-05-19 20:10:38 [INFO] [dup_check] 完了: 選定=1件 / 除外=9件 (pool=15件, 要求=1件)
+2026-05-19 20:10:38 [INFO] [select] 1件選定 (要求=1件)
+2026-05-19 20:10:38 [INFO] [select]   1. 「AI記事 リライト やり方」 vol=0 seo=N/A comp=N/A
+2026-05-19 20:10:38 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-19 20:10:38 [INFO] [workup-ai] 候補: 15件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.2283 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.2283(¥34) / 0記事
+2026-05-19 20:10:38 [INFO] [api_guard] 本日の使用量: $0.2283 / ¥34 (1回呼び出し)
+2026-05-19 20:10:38 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 20:10:38 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AI記事 リライト やり方」 vol=0 ★CLAUDE
+2026-05-19 20:10:38 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 20:10:38 [INFO] [generate] 手順解説型ブースト: 7,815字 → 10,159字
+2026-05-19 20:10:38 [INFO] [generate] 生成開始: 「AI記事 リライト やり方」(vol:0) fact_check=True target_length=10,159字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「AI記事 リライト やり方」(vol:0) [10,159字 / H3:14〜18本 / FAQ:8〜10問]
+[api_guard] ✅ 本日: $0.2283 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.2283(¥34) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=109 out=121 → $0.0006  (lsi:AI記事 リライト やり方)
+[api_guard] 本日の使用量: $0.2289 / ¥34 (972回呼び出し)
+[article_generator] 共起語: AI記事リライトツール、記事リライト自動化、SEO対策リライト、コピペチェック、記事の質向上、リライト手順、オリジナリテ...
+[api_guard] ✅ 本日: $0.2289 / 1時間: $0.0006  (上限 日次$10.00 / 時間$5.00)  全体: $0.2289(¥34) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=176 out=451 → $0.0019  (kw_research:AI記事 リライト やり方)
+[api_guard] 本日の使用量: $0.2308 / ¥34 (973回呼び出し)
+[article_generator] サジェスト: AI記事 リライト やり方・AI記事 リライト ツール・AI記事 リライト 無料...
+[article_generator] 検索意図: 購買直前 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] 参考URL: 3件
+[article_generator] 手順解説型モード: 「AI記事 リライト やり方」
+[api_guard] ✅ 本日: $0.2308 / 1時間: $0.0025  (上限 日次$10.00 / 時間$5.00)  全体: $0.2308(¥35) / 0記事
+[api_guard] 記録: claude-sonnet-4-6 in=12143 out=15687 → $0.2717  (article:AI記事 リライト やり方)
+[api_guard] 本日の使用量: $0.5026 / ¥75 (974回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of laptop, speech bubbles, stars, 
+[imagefx] タイトル(英): AI Article Rewrite Guide
+[article_generator] 完了: 「AI記事リライトのやり方｜ChatGPTで品質とSEOを同時に上げる手順」 カテゴリ: 未設定(-) タグ: ['AIライティング', 'SEO対策', 'ChatGPT活用', '記事リライト', 'コンテンツ改善']
+2026-05-19 20:14:48 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-19 20:14:48 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-19 20:14:49 [INFO] [link_check] 死リンク除去: 2件 / チェック: 6件
+2026-05-19 20:14:49 [INFO] [generate] 完了: 「AI記事リライトのやり方｜ChatGPTで品質とSEOを同時に上げる手順」
+2026-05-19 20:14:49 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 34件
+[category_selector] 新規カテゴリ提案: 「ChatGPT活用術」
+[category_selector] カテゴリ新規作成: 「ChatGPT活用術」(ID=1752)
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: AI-powered article rewriting visualization: floating document pages with refresh...
+[image_generator] 完了 (45KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_201459_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10300)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: AI記事リライトとは｜手動との違いと効果を知る
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: AI article rewriting workflow visualization: document pages, circular arrows, te...
+[image_generator] 完了 (43KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_201519_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10301)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: ChatGPTでAI記事リライトを行う具体的な手順
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration: colorful document pages with refresh arrows, compariso...
+[image_generator] 完了 (66KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_201530_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10302)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: AI記事リライトツール比較｜無料・有料のおすすめ選び方
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration of stacked papers, refresh arrows, and question mark sy...
+[image_generator] 完了 (56KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_201541_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10303)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: ai-article-rewrite-how-to-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: AI article rewriting summary visualization: interconnected document icons, refre...
+[image_generator] 完了 (50KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_201553_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10304)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: ai-article-rewrite-how-to-summary.jpg
+[internal_linker] 公開済み記事取得: 407件
+[internal_linker] タイトル重複除去: 2件の旧記事を除外
+[internal_linker] 「Filmora」関連記事: 2件追加
+[internal_linker] キーワードトークンマッチ: 6件選定（ルールベース）
+[internal_linker] 低関連性 6件をフッターへ: ['AIアフィリエイトのやり方を初心者向けに解説！Ch', 'ChatGPTの議事録のやり方｜「精度」と「速さ」', 'ChatGPTのデータ分析のやり方完全ガイド｜初心', 'AI自動化×在宅ワークのやり方！初心者が稼ぐための', 'AIアフィリエイトのやり方を初心者向けに解説！稼ぎ', 'チャットGPT 手相占い やり方完全ガイド！初心者']
+[internal_linker] 製品名マッチ「Filmora」→ セクション12に割り当て
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 7件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:1 / 末尾リスト:7)
+[internal_linker] 内部リンク 8件 挿入: ['Wondershare Filmoraは危険？「怪しい」と言', 'Filmora AIクレジット完全ガイド｜字幕も画像も「最小', 'AIアフィリエイトのやり方を初心者向けに解説！ChatGPT', 'ChatGPTの議事録のやり方｜「精度」と「速さ」を両立させ', 'ChatGPTのデータ分析のやり方完全ガイド｜初心者向け手順', 'AI自動化×在宅ワークのやり方！初心者が稼ぐための手順とツー', 'AIアフィリエイトのやり方を初心者向けに解説！稼ぎ方・ツール', 'チャットGPT 手相占い やり方完全ガイド！初心者でも簡単に']
+[wordpress] タグ設定: ['AIライティング', 'SEO対策', 'ChatGPT活用', '記事リライト', 'コンテンツ改善']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 10305) → https://workup-ai.com/wp-admin/post.php?post=10305&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, speech bubbles, stars, checkmarks, and upward chart arrows in soft mint, pastel pink, and cream tones with minimal details.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "AI Article Rewrite Guide" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行184 「AI記事 リライト やり方」→ 投稿済み (2026/05/19, ID:10305) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「AI記事リライトのやり方｜ChatGPTで品質とSEOを同時」
+2026-05-19 20:16:10 [INFO] [post] WP投稿完了: ID=10305 → https://workup-ai.com/wp-admin/post.php?post=10305&action=edit
+2026-05-19 20:16:10 [INFO] [workup-ai] [1/1] ✅ 完了: 「AI記事リライトのやり方｜ChatGPTで品質とSEOを同時に上げる手順」
+2026-05-19 20:16:10 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-19 20:16:10 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #10305 AI記事リライトのやり方｜ChatGPTで品質とSEOを同時に上げる手順
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 初心者ガイド型バナーで生成します
+[IMAGE] guide template: aivice_tool_desk (candidate 1)
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1408KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_201705_codex_beginner_guide_candidate_1_gpt-image-2.jpg
+[IMAGE] candidate score: 92.0
+[IMAGE] selected template: aivice_tool_desk  score=92.0
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_201705_codex_beginner_guide_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 10306)
+[codex-eyecatch] featured image 設定完了: media_id=10306
+[codex-eyecatch] 編集URL: https://workup-ai.com/wp-admin/post.php?post=10305&action=edit
+2026-05-19 20:17:09 [INFO] 
+============================================================
+2026-05-19 20:17:09 [INFO] 【全体サマリー】
+2026-05-19 20:17:09 [INFO]   ブログ数  : 1件
+2026-05-19 20:17:09 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-19 20:17:09 [INFO]   所要時間  : 400.5秒
+2026-05-19 20:17:09 [INFO]   ✅ [workup-ai] AI記事 リライト やり方 → AI記事リライトのやり方｜ChatGPTで品質とSEOを同時に上げる手順
+2026-05-19 20:17:09 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10305&action=edit
+2026-05-19 20:17:09 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-19 20:17:10 / exit=0 =====
+===== [WORKUP-AI] 実行開始: 2026-05-19 20:23:13 =====
+2026-05-19 20:23:17 [INFO] ============================================================
+2026-05-19 20:23:17 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-19 20:23:17 [INFO] ============================================================
+2026-05-19 20:23:17 [INFO] 対象ブログ: ['workup-ai']
+2026-05-19 20:23:18 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 20:23:18 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-19 20:23:18 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 20:23:18 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-19 20:23:18 [INFO]   fact_check       : True
+2026-05-19 20:23:18 [INFO]   article_type_mix : True
+2026-05-19 20:23:18 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-19 20:23:18 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-19 20:23:20 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-19 20:23:20 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-19 20:23:20 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-19 20:23:20 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-19 20:23:20 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-19 20:23:20 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-19 20:23:22 [INFO] [wp] 記事取得: 計408件 (draft=1 / publish=407)
+2026-05-19 20:23:22 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-19 20:23:24 [INFO] [fetch] サブKW紐付け: 146件 → 19記事に統合
+2026-05-19 20:23:24 [INFO] [fetch] [キーワード] メインKW: 13件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 28件  テーマ外除外: 16件  aim内訳: [now:1, aim:16, claude:9, add:3]
+2026-05-19 20:23:24 [INFO] [dup_check] 優先候補: 13件 {'now': 1, 'add': 2, 'claude': 8, 'aim': 2} を先頭評価
+2026-05-19 20:23:24 [INFO] [dup_check] 除外: 「claude code setup プラグイン」 → 直近7日重複: 「Claude Code自動化で何ができる？業務効率化の使い方と具体例を解説」
+2026-05-19 20:23:24 [INFO] [dup_check] 除外: 「claude code skillsとは」 → カニバリ(2/3語重複 ['claude', 'code']): 「Claude Code自動化で何ができる？業務効率化の使い方と具体例を解説」
+2026-05-19 20:23:24 [INFO] [dup_check] 除外: 「フリーランス AI 活用 在宅」 → カニバリ(3/4語重複 ['ai', '活用', '在宅']): 「在宅ワーク｜主婦で初心者でも安心！AI活用で始める稼げる副業」
+2026-05-19 20:23:24 [INFO] [dup_check] 除外: 「AI副業 稼ぎ方 初心者 安全」 → カニバリ(3/4語重複 ['ai副業', '稼ぎ方', '初心者']): 「AI副業で何をする？初心者におすすめの種類と稼ぎ方を徹底解説」
+2026-05-19 20:23:24 [INFO] [dup_check] 除外: 「Claude Code ChatGPT 違い わかりやすく」 → カニバリ(3/5語重複 ['claude', 'code', '違い']): 「Claude CodeとOpenAI Codex、どっちを選ぶ？機能・料金・用途」
+2026-05-19 20:23:24 [INFO] [dup_check] 除外: 「Claude Code API できること」 → カニバリ(3/4語重複 ['claude', 'code', 'できること']): 「Claude Code無料枠でできること・制限を徹底解説！有料版との違いも比較」
+2026-05-19 20:23:24 [INFO] [dup_check] 除外: 「AIコンテンツ SEO 対策 2026」 → カニバリ(2/3語重複 ['seo', '対策']): 「AIライティングでブログSEO対策を強化する方法と注意点を徹底解説」
+2026-05-19 20:23:24 [INFO] [dup_check] 完了: 選定=1件 / 除外=7件 (pool=13件, 要求=1件)
+2026-05-19 20:23:24 [INFO] [select] 1件選定 (要求=1件)
+2026-05-19 20:23:24 [INFO] [select]   1. 「AI時代 ブログ 稼げるか」 vol=0 seo=N/A comp=N/A
+2026-05-19 20:23:24 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-19 20:23:24 [INFO] [workup-ai] 候補: 13件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.5026 / 1時間: $0.2742  (上限 日次$10.00 / 時間$5.00)  全体: $0.5026(¥75) / 1記事
+2026-05-19 20:23:24 [INFO] [api_guard] 本日の使用量: $0.5026 / ¥75 (4回呼び出し)
+2026-05-19 20:23:24 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 20:23:24 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AI時代 ブログ 稼げるか」 vol=0 ★CLAUDE
+2026-05-19 20:23:24 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 20:23:24 [INFO] [generate] 生成開始: 「AI時代 ブログ 稼げるか」(vol:0) fact_check=True target_length=6,985字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「AI時代 ブログ 稼げるか」(vol:0) [6,985字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.5026 / 1時間: $0.2742  (上限 日次$10.00 / 時間$5.00)  全体: $0.5026(¥75) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=113 out=80 → $0.0004  (lsi:AI時代 ブログ 稼げるか)
+[api_guard] 本日の使用量: $0.5030 / ¥75 (975回呼び出し)
+[article_generator] 共起語: ブログ収益化、アドセンス、アフィリエイト、ChatGPT、記事作成、SEO対策、アクセス数、PV、収入、稼ぐコツ、初心者...
+[api_guard] ✅ 本日: $0.5030 / 1時間: $0.2747  (上限 日次$10.00 / 時間$5.00)  全体: $0.5030(¥75) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=180 out=571 → $0.0024  (kw_research:AI時代 ブログ 稼げるか)
+[api_guard] 本日の使用量: $0.5054 / ¥75 (976回呼び出し)
+[article_generator] サジェスト: AI時代 ブログ 稼げるか・AI時代 ブログ 必要か・AI時代 ブログ 意味...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.5054 / 1時間: $0.2771  (上限 日次$10.00 / 時間$5.00)  全体: $0.5054(¥76) / 1記事
+[api_guard] 記録: claude-sonnet-4-6 in=10809 out=13740 → $0.2385  (article:AI時代 ブログ 稼げるか)
+[api_guard] 本日の使用量: $0.7439 / ¥111 (977回呼び出し)
+[article_generator] JSON解析失敗（Expecting ',' delimiter: line 8 column 7869 (char 8399)）→ 同一プロンプトでリトライ中...
+[api_guard] 記録: claude-sonnet-4-6 in=10809 out=15289 → $0.2618  (article_retry:AI時代 ブログ 稼げるか)
+[api_guard] 本日の使用量: $1.0057 / ¥150 (978回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of laptop, coins, upward arrow, li
+[imagefx] タイトル(英): AI Era Blog Monetization Strategies
+[article_generator] 完了: 「AI時代にブログは稼げるか？2026年の戦略と収益化の方法を解説」 カテゴリ: 未設定(-) タグ: ['AI時代', 'ブログ収益化', '副業', 'ChatGPT活用', 'SEO対策']
+2026-05-19 20:30:26 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-19 20:30:26 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-19 20:30:26 [INFO] [generate] 完了: 「AI時代にブログは稼げるか？2026年の戦略と収益化の方法を解説」
+2026-05-19 20:30:26 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 35件
+[category_selector] 新規カテゴリ提案: 「AI×ブログ収益化」
+[category_selector] カテゴリ新規作成: 「AI×ブログ収益化」(ID=1755)
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration of a blog page with rising graph, dollar signs, and AI ...
+[image_generator] 完了 (52KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_203038_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10308)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: AI時代にブログが稼げるか、正直に答えます
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration featuring ChatGPT speech bubbles, glowing lightbulbs,...
+[image_generator] 完了 (42KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_203051_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10309)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: ChatGPTをブログ収益化に活用する具体的な方法
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration featuring a glowing lightbulb, unique puzzle piece, t...
+[image_generator] 完了 (44KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_203104_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10310)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: AI時代にブログで稼ぐ戦略──テーマ選び・差別化・収益化の手
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration with pastel colors: question marks, lightbulb, dollar s...
+[image_generator] 完了 (40KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_203117_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10311)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: ai-era-blog-earn-money-strategy-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration with pastel colors: glowing lightbulb, ascending bar ch...
+[image_generator] 完了 (71KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_203128_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10312)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: ai-era-blog-earn-money-strategy-summary.jpg
+[internal_linker] 公開済み記事取得: 408件
+[internal_linker] タイトル重複除去: 2件の旧記事を除外
+[internal_linker] 「Notta」関連記事: 2件追加
+[internal_linker] 「MyEdit」関連記事: 4件追加
+[internal_linker] 「Udemy」関連記事: 4件追加
+[internal_linker] 「Filmora」関連記事: 6件追加
+[internal_linker] 同親KW「ai時代」: 2件選定（ルールベース）
+[internal_linker] 製品名マッチ「Notta」→ セクション10に割り当て
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 5件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:3 / 末尾リスト:5)
+[internal_linker] 内部リンク 8件 挿入: ['Notta使い方完全ガイド！無料登録から文字起こし・議事録作', 'PLAUD NOTEとNottaの比較｜スペックで選ぶと失敗', 'myeditの商用利用について｜料金・権利・注意点を完全整理', 'myeditの安全性は？利用前に知るべき仕組みと注意点まとめ', 'Wondershare Filmoraは危険？「怪しい」と言', 'Filmora AIクレジット完全ガイド｜字幕も画像も「最小', 'AI時代に生き残る資格とは？必要なスキルも解説', 'DeviantArtの危険性とは？AI時代に作品を守るための']
+[wordpress] タグ設定: ['AI時代', 'ブログ収益化', '副業', 'ChatGPT活用', 'SEO対策']
+[wordpress] タグ既存(term_exists)使用: 副業 (id=120)
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 10313) → https://workup-ai.com/wp-admin/post.php?post=10313&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, coins, upward arrow, lightbulb, checkmark and calendar in soft pastel pink, mint, lavender and cream tones with minimal design style.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "AI Era Blog Monetization Strategies" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行32 「AI時代 ブログ 稼げるか」→ 投稿済み (2026/05/19, ID:10313) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「AI時代にブログは稼げるか？2026年の戦略と収益化の方法を」
+2026-05-19 20:31:43 [INFO] [post] WP投稿完了: ID=10313 → https://workup-ai.com/wp-admin/post.php?post=10313&action=edit
+2026-05-19 20:31:43 [INFO] [workup-ai] [1/1] ✅ 完了: 「AI時代にブログは稼げるか？2026年の戦略と収益化の方法を解説」
+2026-05-19 20:31:43 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-19 20:31:43 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #10313 AI時代にブログは稼げるか？2026年の戦略と収益化の方法を解説
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 初心者ガイド型バナーで生成します
+[IMAGE] guide template: flatlay (candidate 1)
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (2053KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_203240_codex_beginner_guide_candidate_1_gpt-image-2.jpg
+[IMAGE] candidate score: 95.1
+[IMAGE] selected template: flatlay  score=95.1
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_203240_codex_beginner_guide_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 10314)
+[codex-eyecatch] featured image 設定完了: media_id=10314
+[codex-eyecatch] 編集URL: https://workup-ai.com/wp-admin/post.php?post=10313&action=edit
+2026-05-19 20:32:47 [INFO] 
+============================================================
+2026-05-19 20:32:47 [INFO] 【全体サマリー】
+2026-05-19 20:32:47 [INFO]   ブログ数  : 1件
+2026-05-19 20:32:47 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-19 20:32:47 [INFO]   所要時間  : 570.3秒
+2026-05-19 20:32:47 [INFO]   ✅ [workup-ai] AI時代 ブログ 稼げるか → AI時代にブログは稼げるか？2026年の戦略と収益化の方法を解説
+2026-05-19 20:32:47 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10313&action=edit
+2026-05-19 20:32:47 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-19 20:32:54 / exit=0 =====
+===== [WORKUP-AI] 実行開始: 2026-05-19 23:13:47 =====
+2026-05-19 23:13:49 [INFO] ============================================================
+2026-05-19 23:13:49 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-19 23:13:49 [INFO] ============================================================
+2026-05-19 23:13:49 [INFO] 対象ブログ: ['workup-ai']
+2026-05-19 23:13:52 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 23:13:52 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-19 23:13:52 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 23:13:52 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-19 23:13:52 [INFO]   fact_check       : True
+2026-05-19 23:13:52 [INFO]   article_type_mix : True
+2026-05-19 23:13:52 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-19 23:13:52 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-19 23:13:53 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-19 23:13:53 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-19 23:13:53 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-19 23:13:53 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-19 23:13:53 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-19 23:13:53 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-19 23:13:57 [INFO] [wp] 記事取得: 計408件 (publish=408)
+2026-05-19 23:13:57 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-19 23:13:59 [INFO] [fetch] サブKW紐付け: 146件 → 19記事に統合
+2026-05-19 23:13:59 [INFO] [fetch] [キーワード] メインKW: 12件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 29件  テーマ外除外: 16件  aim内訳: [now:1, claude:8, aim:16, add:3]
+2026-05-19 23:13:59 [INFO] [dup_check] 優先候補: 12件 {'now': 1, 'add': 2, 'claude': 7, 'aim': 2} を先頭評価
+2026-05-19 23:13:59 [INFO] [dup_check] 除外: 「claude code setup プラグイン」 → 直近7日重複: 「Claude Code自動化で何ができる？業務効率化の使い方と具体例を解説」
+2026-05-19 23:13:59 [INFO] [dup_check] 除外: 「claude code skillsとは」 → カニバリ(2/3語重複 ['claude', 'code']): 「Claude Code自動化で何ができる？業務効率化の使い方と具体例を解説」
+2026-05-19 23:13:59 [INFO] [dup_check] 除外: 「フリーランス AI 活用 在宅」 → カニバリ(3/4語重複 ['ai', '活用', '在宅']): 「在宅ワーク｜主婦で初心者でも安心！AI活用で始める稼げる副業」
+2026-05-19 23:13:59 [INFO] [dup_check] 除外: 「AI副業 稼ぎ方 初心者 安全」 → カニバリ(3/4語重複 ['ai副業', '稼ぎ方', '初心者']): 「AI副業で何をする？初心者におすすめの種類と稼ぎ方を徹底解説」
+2026-05-19 23:13:59 [INFO] [dup_check] 除外: 「Claude Code ChatGPT 違い わかりやすく」 → カニバリ(3/5語重複 ['claude', 'code', '違い']): 「Claude CodeとOpenAI Codex、どっちを選ぶ？機能・料金・用途」
+2026-05-19 23:13:59 [INFO] [dup_check] 除外: 「Claude Code API できること」 → カニバリ(3/4語重複 ['claude', 'code', 'できること']): 「Claude Code無料枠でできること・制限を徹底解説！有料版との違いも比較」
+2026-05-19 23:13:59 [INFO] [dup_check] 除外: 「AIコンテンツ SEO 対策 2026」 → カニバリ(2/3語重複 ['seo', '対策']): 「AIライティングでブログSEO対策を強化する方法と注意点を徹底解説」
+2026-05-19 23:13:59 [INFO] [dup_check] 完了: 選定=1件 / 除外=7件 (pool=12件, 要求=1件)
+2026-05-19 23:13:59 [INFO] [select] 1件選定 (要求=1件)
+2026-05-19 23:13:59 [INFO] [select]   1. 「AI時代 副業 何がいい」 vol=0 seo=N/A comp=N/A
+2026-05-19 23:13:59 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-19 23:13:59 [INFO] [workup-ai] 候補: 12件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.0057 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.0057(¥151) / 2記事
+2026-05-19 23:13:59 [INFO] [api_guard] 本日の使用量: $1.0057 / ¥151 (8回呼び出し)
+2026-05-19 23:13:59 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 23:13:59 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AI時代 副業 何がいい」 vol=0 ★CLAUDE
+2026-05-19 23:13:59 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 23:13:59 [INFO] [generate] 生成開始: 「AI時代 副業 何がいい」(vol:0) fact_check=True target_length=7,710字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「AI時代 副業 何がいい」(vol:0) [7,710字 / H3:14〜18本 / FAQ:8〜10問]
+[api_guard] ✅ 本日: $1.0057 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.0057(¥151) / 2記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=110 out=92 → $0.0005  (lsi:AI時代 副業 何がいい)
+[api_guard] 本日の使用量: $1.0061 / ¥150 (979回呼び出し)
+[article_generator] 共起語: スキル習得、在宅ワーク、初心者向け、プログラミング、データ入力、ライティング、ブログ、アフィリエイト、クラウドソーシング...
+[api_guard] ✅ 本日: $1.0061 / 1時間: $0.0005  (上限 日次$10.00 / 時間$5.00)  全体: $1.0061(¥151) / 2記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=177 out=510 → $0.0022  (kw_research:AI時代 副業 何がいい)
+[api_guard] 本日の使用量: $1.0083 / ¥151 (980回呼び出し)
+[article_generator] サジェスト: AI時代 副業 何がいい・AI時代 副業 稼ぎ方・AI時代 副業 おすすめ...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $1.0083 / 1時間: $0.0026  (上限 日次$10.00 / 時間$5.00)  全体: $1.0083(¥151) / 2記事
+[api_guard] 記録: claude-sonnet-4-6 in=10760 out=15547 → $0.2655  (article:AI時代 副業 何がいい)
+[api_guard] 本日の使用量: $1.2738 / ¥191 (981回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons: laptop, speech bubbles, golden co
+[imagefx] タイトル(英): AI Era Side Jobs For Beginners
+[article_generator] 完了: 「AI時代の副業は何がいい？初心者でも稼げる在宅ワーク6選と始め方」 カテゴリ: 未設定(-) タグ: ['AI時代の副業', '在宅ワーク', '副業おすすめ', '初心者向け副業', 'AIツール活用']
+2026-05-19 23:17:44 [INFO] [generate] パターンCTA挿入（H3末尾）: 5件
+2026-05-19 23:17:44 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-19 23:17:45 [INFO] [generate] 完了: 「AI時代の副業は何がいい？初心者でも稼げる在宅ワーク6選と始め方」
+2026-05-19 23:17:45 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 36件
+[category_selector] 新規カテゴリ提案: 「AI副業ガイド」
+[category_selector] 既存カテゴリを使用: 「AI副業ガイド」(1739)
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration featuring stacked coins, upward arrows, glowing light...
+[image_generator] 完了 (55KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_231801_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10317)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: AI時代の副業で稼ぐために知っておきたいこと
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Modern AI-powered side hustles concept: floating icons of content creation, data...
+[image_generator] 完了 (38KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_231813_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10318)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: AI時代の副業おすすめ6選｜将来性と月収目安で比較
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring stacked skill books, upward growth arrows, an...
+[image_generator] 完了 (50KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_231824_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10319)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: AI時代の副業で失敗しないスキル習得と継続のコツ
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration with pastel colors: question marks, lightbulbs, skill b...
+[image_generator] 完了 (49KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_231836_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10320)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: ai-era-side-job-what-is-good-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: AI era side hustles summary: colorful floating icons representing various income...
+[image_generator] 完了 (63KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_231847_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10321)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: ai-era-side-job-what-is-good-summary.jpg
+[internal_linker] 公開済み記事取得: 408件
+[internal_linker] タイトル重複除去: 2件の旧記事を除外
+[internal_linker] 「Notta」関連記事: 2件追加
+[internal_linker] 「Neuro Dive」関連記事: 3件追加
+[internal_linker] 「Udemy」関連記事: 3件追加
+[internal_linker] 「Filmora」関連記事: 5件追加
+[internal_linker] 「Promeo」関連記事: 5件追加
+[internal_linker] 同カテゴリー: 1件選定（ルールベース）
+[internal_linker] 同親KW「ai時代」: 2件選定（ルールベース）
+[internal_linker] 製品名マッチ「Neuro Dive」→ セクション8に割り当て
+[internal_linker] 製品名マッチ「Filmora」→ セクション9に割り当て
+[internal_linker] 製品名マッチ「Notta」→ セクション14に割り当て
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 2件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:6 / 末尾リスト:2)
+[internal_linker] 内部リンク 8件 挿入: ['Notta使い方完全ガイド！無料登録から文字起こし・議事録作', 'PLAUD NOTEとNottaの比較｜スペックで選ぶと失敗', 'Neuro Dive Onlineの費用は高い？料金と支援内', 'Wondershare Filmoraは危険？「怪しい」と言', 'Filmora AIクレジット完全ガイド｜字幕も画像も「最小', 'AIエージェント副業とは？初心者が月5万稼ぐ始め方と稼ぎ方を', 'ChatGPTの議事録のやり方｜「精度」と「速さ」を両立させ', 'DeviantArtの危険性とは？AI時代に作品を守るための']
+[wordpress] タグ設定: ['AI時代の副業', '在宅ワーク', '副業おすすめ', '初心者向け副業', 'AIツール活用']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 10322) → https://workup-ai.com/wp-admin/post.php?post=10322&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons: laptop, speech bubbles, golden coins, checkmarks, lightbulbs, upward charts, stars, calendar with pastel pink, mint, lavender, cream tones, minimal kawaii style.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "AI Era Side Jobs For Beginners" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行32 「AI時代 副業 何がいい」→ 投稿済み (2026/05/19, ID:10322) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「AI時代の副業は何がいい？初心者でも稼げる在宅ワーク6選と始」
+2026-05-19 23:18:57 [INFO] [post] WP投稿完了: ID=10322 → https://workup-ai.com/wp-admin/post.php?post=10322&action=edit
+2026-05-19 23:18:57 [INFO] [workup-ai] [1/1] ✅ 完了: 「AI時代の副業は何がいい？初心者でも稼げる在宅ワーク6選と始め方」
+2026-05-19 23:18:57 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-19 23:18:57 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #10322 AI時代の副業は何がいい？初心者でも稼げる在宅ワーク6選と始め方
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 初心者ガイド型バナーで生成します
+[IMAGE] guide template: hands_closeup (candidate 1)
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1826KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_232004_codex_beginner_guide_candidate_1_gpt-image-2.jpg
+[IMAGE] candidate score: 96.4
+[IMAGE] selected template: hands_closeup  score=96.4
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_232004_codex_beginner_guide_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 10324)
+[codex-eyecatch] featured image 設定完了: media_id=10324
+[codex-eyecatch] 編集URL: https://workup-ai.com/wp-admin/post.php?post=10322&action=edit
+2026-05-19 23:20:11 [INFO] 
+============================================================
+2026-05-19 23:20:11 [INFO] 【全体サマリー】
+2026-05-19 23:20:11 [INFO]   ブログ数  : 1件
+2026-05-19 23:20:11 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-19 23:20:11 [INFO]   所要時間  : 382.0秒
+2026-05-19 23:20:11 [INFO]   ✅ [workup-ai] AI時代 副業 何がいい → AI時代の副業は何がいい？初心者でも稼げる在宅ワーク6選と始め方
+2026-05-19 23:20:11 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10322&action=edit
+2026-05-19 23:20:11 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-19 23:20:12 / exit=0 =====
+===== [WORKUP-AI] 実行開始: 2026-05-19 23:24:40 =====
+2026-05-19 23:24:41 [INFO] ============================================================
+2026-05-19 23:24:41 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-19 23:24:41 [INFO] ============================================================
+2026-05-19 23:24:41 [INFO] 対象ブログ: ['workup-ai']
+2026-05-19 23:24:44 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 23:24:44 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-19 23:24:44 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 23:24:44 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-19 23:24:44 [INFO]   fact_check       : True
+2026-05-19 23:24:44 [INFO]   article_type_mix : True
+2026-05-19 23:24:44 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-19 23:24:44 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-19 23:24:46 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-19 23:24:46 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-19 23:24:46 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-19 23:24:46 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-19 23:24:46 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-19 23:24:46 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-19 23:24:48 [INFO] [wp] 記事取得: 計409件 (draft=1 / publish=408)
+2026-05-19 23:24:48 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-19 23:24:50 [INFO] [fetch] サブKW紐付け: 146件 → 19記事に統合
+2026-05-19 23:24:50 [INFO] [fetch] [キーワード] メインKW: 11件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 30件  テーマ外除外: 16件  aim内訳: [now:1, aim:16, add:3, claude:7]
+2026-05-19 23:24:50 [INFO] [dup_check] 優先候補: 11件 {'now': 1, 'aim': 2, 'add': 2, 'claude': 6} を先頭評価
+2026-05-19 23:24:50 [INFO] [dup_check] 除外: 「claude code setup プラグイン」 → 直近7日重複: 「Claude Code自動化で何ができる？業務効率化の使い方と具体例を解説」
+2026-05-19 23:24:50 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → カニバリ(3/4語重複 ['youtube', 'ai', 'イラスト']): 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-05-19 23:24:50 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → カニバリ(2/3語重複 ['youtube', 'ai']): 「YouTube競合分析AIツールおすすめ6選！無料から使える方法・やり方を徹底解」
+2026-05-19 23:24:50 [INFO] [dup_check] 除外: 「claude code skillsとは」 → カニバリ(2/3語重複 ['claude', 'code']): 「Claude Code自動化で何ができる？業務効率化の使い方と具体例を解説」
+2026-05-19 23:24:50 [INFO] [dup_check] 完了: 選定=1件 / 除外=4件 (pool=11件, 要求=1件)
+2026-05-19 23:24:50 [INFO] [select] 1件選定 (要求=1件)
+2026-05-19 23:24:50 [INFO] [select]   1. 「Claude CodeとCodexどっちがいい？」 vol=0 seo=N/A comp=N/A
+2026-05-19 23:24:50 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-19 23:24:50 [INFO] [workup-ai] 候補: 11件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.2738 / 1時間: $0.2681  (上限 日次$10.00 / 時間$5.00)  全体: $1.2738(¥191) / 3記事
+2026-05-19 23:24:50 [INFO] [api_guard] 本日の使用量: $1.2738 / ¥191 (11回呼び出し)
+2026-05-19 23:24:50 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 23:24:50 [INFO] [workup-ai] [1/1] [LONGTAIL] 「Claude CodeとCodexどっちがいい？」 vol=0 ★ADD
+2026-05-19 23:24:50 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 23:24:50 [INFO] [generate] 生成開始: 「Claude CodeとCodexどっちがいい？」(vol:0) fact_check=True target_length=5,023字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「Claude CodeとCodexどっちがいい？」(vol:0) [5,023字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $1.2738 / 1時間: $0.2681  (上限 日次$10.00 / 時間$5.00)  全体: $1.2738(¥191) / 3記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=111 out=77 → $0.0004  (lsi:Claude CodeとCodexどっちがいい？)
+[api_guard] 本日の使用量: $1.2742 / ¥191 (982回呼び出し)
+[article_generator] 共起語: Claude Code、Codeｘ、AI コーディング、コード生成、プログラミング、自動補完、開発効率、API、精度比較...
+[api_guard] ✅ 本日: $1.2742 / 1時間: $0.2685  (上限 日次$10.00 / 時間$5.00)  全体: $1.2742(¥191) / 3記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=178 out=395 → $0.0017  (kw_research:Claude CodeとCodexどっちがいい？)
+[api_guard] 本日の使用量: $1.2759 / ¥191 (983回呼び出し)
+[article_generator] サジェスト: Claude Code vs Codex・Claude Codeの使い方・Codexの使い方...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] 参考URL: 3件
+[api_guard] ✅ 本日: $1.2759 / 1時間: $0.2702  (上限 日次$10.00 / 時間$5.00)  全体: $1.2759(¥191) / 3記事
+[api_guard] 記録: claude-sonnet-4-6 in=11225 out=14120 → $0.2455  (article:Claude CodeとCodexどっちがいい？)
+[api_guard] 本日の使用量: $1.5214 / ¥228 (984回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of two laptops with speech bubbles
+[imagefx] タイトル(英): Claude Code Vs Codex Comparison
+[article_generator] 完了: 「Claude CodeとCodexどっちがいい？精度・料金・使いやすさを比較」 カテゴリ: 未設定(-) タグ: ['Claude Code', 'Codex', 'AIコーディング', 'コード生成', 'プログラミングAI']
+2026-05-19 23:28:10 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-19 23:28:10 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-19 23:28:11 [INFO] [link_check] 死リンク除去: 3件 / チェック: 4件
+2026-05-19 23:28:11 [INFO] [generate] 完了: 「Claude CodeとCodexどっちがいい？精度・料金・使いやすさを比較」
+2026-05-19 23:28:11 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 36件
+[category_selector] 新規カテゴリ提案: 「AI開発ツール比較」
+[category_selector] 既存カテゴリを使用: 「AI開発ツール比較」(1747)
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#Claude): claude-code-windows-how-to-use-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: Claude CodeとCodexの基本的な違いを把握しようのイメージ画像
+[wordpress] H2画像[2] ライブラリ選択 (#Claude): claude-code-ryokin-kakunin-eyecatch.jpg
+[wordpress] H2画像[2] ライブラリALT更新: Claude CodeとCodexを精度・料金・使いやすさで比較するのイメージ画像
+[wordpress] H2画像[3] ライブラリ選択 (#Claude): claude-ai-guide-business-usage-eyecatch.jpg
+[wordpress] H2画像[3] ライブラリALT更新: Claude Codeの使い方：初心者向けセットアップから実践までのイメージ画像
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful question marks and comparison scales in soft pastel colors, flat design...
+[image_generator] 完了 (72KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_232823_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10326)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: claude-code-vs-codex-comparison-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Two interconnected code blocks in pastel blues and pinks, floating beside a glow...
+[image_generator] 完了 (43KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_232836_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10327)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: claude-code-vs-codex-comparison-summary.jpg
+[internal_linker] 公開済み記事取得: 408件
+[internal_linker] タイトル重複除去: 2件の旧記事を除外
+[internal_linker] 同カテゴリー: 1件選定（ルールベース）
+[internal_linker] 同親KW「claude」: 7件選定（ルールベース）
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['Claude CodeとOpenAI Codex、どっちを選', 'Claude Code料金を完全解説！確認方法・プラン比較・', 'Claude Code自動化で何ができる？業務効率化の使い方', 'Claude Code無料枠でできること・制限を徹底解説！有', 'Claude Code Windows版の使い方を初心者向け', 'Claude Code Skills使い方ガイド｜初心者でも', 'noteセールスレター×Claude入門｜「中身は良いのに売', 'Claude AI活用ガイド！ビジネス効率を上げる使い方と事']
+[wordpress] タグ設定: ['Claude Code', 'Codex', 'AIコーディング', 'コード生成', 'プログラミングAI']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 10328) → https://workup-ai.com/wp-admin/post.php?post=10328&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of two laptops with speech bubbles, stars, coins, checkmarks, and lightbulbs in soft mint, blush pink, and cream pastel tones.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Claude Code Vs Codex Comparison" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行202 「Claude CodeとCodexどっちがいい？」→ 投稿済み (2026/05/19, ID:10328) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「Claude CodeとCodexどっちがいい？精度・料金・」
+2026-05-19 23:28:45 [INFO] [post] WP投稿完了: ID=10328 → https://workup-ai.com/wp-admin/post.php?post=10328&action=edit
+2026-05-19 23:28:45 [INFO] [workup-ai] [1/1] ✅ 完了: 「Claude CodeとCodexどっちがいい？精度・料金・使いやすさを比較」
+2026-05-19 23:28:45 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-19 23:28:45 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #10328 Claude CodeとCodexどっちがいい？精度・料金・使いやすさを比較
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 初心者ガイド型バナーで生成します
+[IMAGE] guide template: aivice_soft_flatlay (candidate 1)
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1799KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_232929_codex_beginner_guide_candidate_1_gpt-image-2.jpg
+[IMAGE] candidate score: 91.9
+[IMAGE] selected template: aivice_soft_flatlay  score=91.9
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_232929_codex_beginner_guide_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 10329)
+[codex-eyecatch] featured image 設定完了: media_id=10329
+[codex-eyecatch] 編集URL: https://workup-ai.com/wp-admin/post.php?post=10328&action=edit
+2026-05-19 23:29:31 [INFO] 
+============================================================
+2026-05-19 23:29:31 [INFO] 【全体サマリー】
+2026-05-19 23:29:31 [INFO]   ブログ数  : 1件
+2026-05-19 23:29:31 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-19 23:29:31 [INFO]   所要時間  : 289.8秒
+2026-05-19 23:29:31 [INFO]   ✅ [workup-ai] Claude CodeとCodexどっちがいい？ → Claude CodeとCodexどっちがいい？精度・料金・使いやすさを比較
+2026-05-19 23:29:31 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10328&action=edit
+2026-05-19 23:29:31 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-19 23:29:32 / exit=0 =====
