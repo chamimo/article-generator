@@ -179,3 +179,615 @@
 2026-05-19 03:00:23 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
 2026-05-19 03:00:23 [INFO]   所要時間  : 18.7秒
 2026-05-19 03:00:23 [INFO] ============================================================
+2026-05-19 04:20:03 [INFO] ============================================================
+2026-05-19 04:20:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-19 04:20:03 [INFO] ============================================================
+2026-05-19 04:20:03 [INFO] 対象ブログ: ['hapipo8']
+2026-05-19 04:20:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 04:20:05 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-19 04:20:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 04:20:05 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-05-19 04:20:05 [INFO]   fact_check       : True
+2026-05-19 04:20:05 [INFO]   article_type_mix : True
+2026-05-19 04:20:05 [INFO]   stop_words       : ['2026']
+2026-05-19 04:20:05 [INFO]   article_count    : 1  dry_run: False
+2026-05-19 04:20:08 [INFO] [hapipo8] アフィリ案件: 50件（スプレッドシート）
+2026-05-19 04:20:08 [INFO] [hapipo8]   [S] 福ちゃん → https://hapipo8.com/fukuchan
+2026-05-19 04:20:08 [INFO] [hapipo8]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori
+2026-05-19 04:20:08 [INFO] [hapipo8]   [S] フクウロ → https://hapipo8.com/fukuuro
+2026-05-19 04:20:08 [INFO] [hapipo8]   [S] メディカルフードサービス → https://hapipo8.com/medical_food
+2026-05-19 04:20:08 [INFO] [hapipo8]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-05-19 04:20:08 [INFO] [hapipo8]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman
+2026-05-19 04:20:08 [INFO] [hapipo8]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] トラベル・スタンダード・ジャパン → https://px.a8.net/svt/ejp?a8mat=4B1THV+17H122+5LKE+5ZU29
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ORBIS AMBER(オルビス アンバー) → https://px.a8.net/svt/ejp?a8mat=4B1THX+DDO2AI+1USQ+4ASX02
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] トリア → https://hapipo8.com/tria
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] nosh - ナッシュ → https://hapipo8.com/nosh
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] 快眠タイムズストア → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DRYGT6+4UHE+TRVYQ
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] NELL マットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6M5RVE+4KD8+5ZMCI
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] 咲夜レアルマットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6LKC9M+4MRW+61Z81
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] オーケンウォーター → https://px.a8.net/svt/ejp?a8mat=4B1THX+CRN0WQ+1LOO+6NMJL
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] every frecious（エブリィフレシャス） → https://px.a8.net/svt/ejp?a8mat=4B1THX+CS8GII+2B8Y+15OK2A
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] リゾバ → https://hapipo8.com/rizoba
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ダイブ → https://hapipo8.com/dive
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] 工場求人ワールド → https://px.a8.net/svt/ejp?a8mat=4B1O1T+EGYV5U+5S9S+5YJRM
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ソフトバンク光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KARLU+3HKU+25FF81
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] BIGLOBE WiMAX +5G → https://px.a8.net/svt/ejp?a8mat=4B1THS+2TTMYY+B4+2BDBUB
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] フレッツ光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KW4WA+348K+1TJE9U
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] AI英会話アプリ【スピーク】 → https://hapipo8.com/speak
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] もぐワン ペットフード → https://hapipo8.com/moguwan
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] DMM 生成AI CAMP → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ポニークリーニング → https://px.a8.net/svt/ejp?a8mat=4B1THV+5QLST6+4N08+5Z6WY
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] 体験型カタログギフト【EXETIME】 → https://hapipo8.com/exetime
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] GMOとくとくBB → https://px.a8.net/svt/ejp?a8mat=4B1THS+2UF2KQ+50+3H48S2
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] Amazon Prime Video → https://amzn.to/4tbKPVa
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] Pollet → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] カレントボディ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DFGD3U+54TM+5YJRM
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] アプリ接客キャスト → https://px.a8.net/svt/ejp?a8mat=4B1O1T+FKUWOY+3P1G+NTRMQ
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ヴィーナスウォーカー → https://px.a8.net/svt/ejp?a8mat=4B1THV+6632JE+58KC+5YRHE
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] WEBCOACH → https://px.a8.net/svt/ejp?a8mat=4B1V1W+DW4O7U+5EVK+5YZ75
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ポケットリサーチ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DUXMU2+58KC+BWVTE
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ラボル カード払い → https://px.a8.net/svt/ejp?a8mat=4B1THS+3TJN9M+40JM+1NJZN5
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] クロスワンルーム → https://px.a8.net/svt/ejp?a8mat=4B1THX+DPKQE2+4EZ2+BYLJL
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] Mr.シリーズ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CLOOUY+1USQ+2Z8T76
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] IBJ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CF4X7E+FOG+4MPSTE
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ユアマイスター → https://px.a8.net/svt/ejp?a8mat=4B1THX+BZNNH6+4HQS+5YJRM
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] TOSSY → https://px.a8.net/svt/ejp?a8mat=4B1THS+2V0I6I+1WP2+1HLNLE
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ABLENET VPS → https://px.a8.net/svt/ejp?a8mat=4B1THS+2VLXSA+4NIK+5Z6WX
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] BIGLOBE光 → https://px.a8.net/svt/ejp?a8mat=4B3LMR+4JQL96+3SPO+7LW1F7
+2026-05-19 04:20:08 [INFO] [hapipo8]   [B] 食楽膳 → https://hapipo8.com/shokurakuzen
+2026-05-19 04:20:08 [INFO] [hapipo8]   [?] 楽器買取 福ちゃん → https://hapipo8.com/gakki-fukucyan
+2026-05-19 04:20:08 [INFO] [hapipo8]   [?] ニーゴ・リユース → https://hapipo8.com/25reuse
+2026-05-19 04:20:10 [INFO] [wp] 記事取得: 計168件 (publish=168)
+2026-05-19 04:20:10 [INFO] [hapipo8] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.4, 'monetize': 0.1})
+2026-05-19 04:20:11 [DEBUG] [fetch] シート「絞り込みKW」: 604行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③']
+2026-05-19 04:20:11 [INFO] [fetch] サブKW紐付け: 165件 → 50記事に統合
+2026-05-19 04:20:11 [INFO] [fetch] [キーワード] メインKW: 16件（vol≥30 or N/A）  サブKW除外: 165件（統合対象）  投稿済みスキップ: 133件  テーマ外除外: 285件  aim内訳: [now:1, aim:60, claude:25, add:215]
+2026-05-19 04:20:11 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-19 04:20:11 [INFO] [dup_check] 優先候補: 16件 {'now': 1, 'add': 15} を先頭評価
+2026-05-19 04:20:11 [INFO] [dup_check] 除外: 「シェフの無添つくりおき 口コミ 評判」 → カニバリ(2/3語重複 ['口コミ', '評判']): 「もぐワンの口コミ・評判を徹底検証！成分・価格・食いつきのリアルな声」
+2026-05-19 04:20:11 [INFO] [dup_check] 除外: 「一人暮らし WiFi おすすめ」 → カニバリ(2/3語重複 ['一人暮らし', 'おすすめ']): 「宅食おすすめ5選！一人暮らし女性でも安く栄養バランスが取れる選び方」
+2026-05-19 04:20:11 [INFO] [dup_check] 除外: 「防災備蓄 女性 一人暮らし」 → カニバリ(2/3語重複 ['女性', '一人暮らし']): 「宅食おすすめ5選！一人暮らし女性でも安く栄養バランスが取れる選び方」
+2026-05-19 04:20:11 [DEBUG] [dup_check] OK: 「生活費 下げる 方法」
+2026-05-19 04:20:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=3件 (pool=16件, 要求=1件)
+2026-05-19 04:20:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-19 04:20:11 [INFO] [select]   1. 「生活費 下げる 方法」 vol=0 seo=N/A comp=N/A
+2026-05-19 04:20:11 [INFO] [hapipo8] LONGTAIL選定: 1件
+2026-05-19 04:20:11 [INFO] [hapipo8] 候補: 16件 / 選定: 1件 / 生成予定: 1件
+2026-05-19 04:20:11 [INFO] [api_guard] 本日の使用量: $1.9274 / ¥289 (14回呼び出し)
+2026-05-19 04:20:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 04:20:11 [INFO] [hapipo8] [1/1] [LONGTAIL] 「生活費 下げる 方法」 vol=0 ★ADD
+2026-05-19 04:20:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 04:20:11 [INFO] [generate] 手順解説型ブースト: 7,805字 → 10,146字
+2026-05-19 04:20:11 [INFO] [generate] 生成開始: 「生活費 下げる 方法」(vol:0) fact_check=True target_length=10,146字  誘導リンク:0件
+2026-05-19 04:23:51 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-19 04:23:51 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「nosh - ナッシュ」(ID:3979)
+2026-05-19 04:23:52 [INFO] [generate] 完了: 「生活費を下げる方法17選｜固定費・食費・光熱費の削減手順を解説」
+2026-05-19 04:23:52 [INFO] [post] 投稿方式: publish
+2026-05-19 04:25:03 [INFO] [post] WP投稿完了: ID=4266 → https://hapipo8.com/wp-admin/post.php?post=4266&action=edit
+2026-05-19 04:25:03 [INFO] [hapipo8] [1/1] ✅ 完了: 「生活費を下げる方法17選｜固定費・食費・光熱費の削減手順を解説」
+2026-05-19 04:25:03 [INFO] [hapipo8] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-19 04:25:03 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hapipo8 limit=1
+2026-05-19 04:25:11 [INFO] 
+============================================================
+2026-05-19 04:25:11 [INFO] 【全体サマリー】
+2026-05-19 04:25:11 [INFO]   ブログ数  : 1件
+2026-05-19 04:25:11 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-19 04:25:11 [INFO]   所要時間  : 307.6秒
+2026-05-19 04:25:11 [INFO]   ✅ [hapipo8] 生活費 下げる 方法 → 生活費を下げる方法17選｜固定費・食費・光熱費の削減手順を解説
+2026-05-19 04:25:11 [INFO]        https://hapipo8.com/wp-admin/post.php?post=4266&action=edit
+2026-05-19 04:25:11 [INFO] ============================================================
+2026-05-19 05:00:04 [INFO] ============================================================
+2026-05-19 05:00:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-19 05:00:04 [INFO] ============================================================
+2026-05-19 05:00:04 [INFO] 対象ブログ: ['hataraku']
+2026-05-19 05:00:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 05:00:06 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-19 05:00:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 05:00:06 [INFO]   genre            : 転職・副業・キャリア
+2026-05-19 05:00:06 [INFO]   fact_check       : True
+2026-05-19 05:00:06 [INFO]   article_type_mix : True
+2026-05-19 05:00:06 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-19 05:00:06 [INFO]   article_count    : 1  dry_run: False
+2026-05-19 05:00:08 [INFO] [hataraku] アフィリ案件: 21件（スプレッドシート）
+2026-05-19 05:00:08 [INFO] [hataraku]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive
+2026-05-19 05:00:08 [INFO] [hataraku]   [S] ラボル → https://hataraku-navi.com/labol
+2026-05-19 05:00:08 [INFO] [hataraku]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it
+2026-05-19 05:00:08 [INFO] [hataraku]   [S] TechGo → https://hataraku-navi.com/techgo
+2026-05-19 05:00:08 [INFO] [hataraku]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi
+2026-05-19 05:00:08 [INFO] [hataraku]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy
+2026-05-19 05:00:08 [INFO] [hataraku]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen
+2026-05-19 05:00:08 [INFO] [hataraku]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo
+2026-05-19 05:00:08 [INFO] [hataraku]   [S] 保育専門求人サイト ほいく畑 → https://hataraku-navi.com/hoikubatake
+2026-05-19 05:00:08 [INFO] [hataraku]   [A] FREENANCE → https://hataraku-navi.com/freenance
+2026-05-19 05:00:08 [INFO] [hataraku]   [A] Midworks → https://hataraku-navi.com/midworks
+2026-05-19 05:00:08 [INFO] [hataraku]   [A] マスメディアン → https://hataraku-navi.com/massmedia
+2026-05-19 05:00:08 [INFO] [hataraku]   [A] atGP → https://hataraku-navi.com/atgp
+2026-05-19 05:00:08 [INFO] [hataraku]   [A] atGPジョブトレ IT・Web → https://hataraku-navi.com/atgp_job
+2026-05-19 05:00:08 [INFO] [hataraku]   [A] リゾートバイトダイブ → https://hataraku-navi.com/dive
+2026-05-19 05:00:08 [INFO] [hataraku]   [A] 日本マンパワー → https://hataraku-navi.com/manpower
+2026-05-19 05:00:08 [INFO] [hataraku]   [A] クラウドワークス → https://hataraku-navi.com/crowdworks
+2026-05-19 05:00:08 [INFO] [hataraku]   [?] 保育エイド → https://hataraku-navi.com/hoiku-aid
+2026-05-19 05:00:08 [INFO] [hataraku]   [?] 保育バランス → https://hataraku-navi.com/hoiku-balance
+2026-05-19 05:00:08 [INFO] [hataraku]   [?] 保育メトロ → https://hataraku-navi.com/hoiku-metro
+2026-05-19 05:00:08 [INFO] [hataraku]   [?] 20代の転職相談所 → https://hataraku-navi.com/20tensyoku
+2026-05-19 05:00:09 [INFO] [wp] 記事取得: 計53件 (draft=1 / publish=52)
+2026-05-19 05:00:09 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-19 05:00:11 [DEBUG] [fetch] シート「絞り込みKW」: 8379行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考URL（WEB）', '参考URL（YouTube）', '参考WEB①', '参考WEB②', '参考WEB③']
+2026-05-19 05:00:11 [INFO] [fetch] サブKW紐付け: 6968件 → 187記事に統合
+2026-05-19 05:00:11 [INFO] [fetch] [キーワード] メインKW: 173件（vol≥30 or N/A）  サブKW除外: 6968件（統合対象）  投稿済みスキップ: 893件  テーマ外除外: 198件  aim内訳: [claude:233, aim:131, add:7]
+2026-05-19 05:00:11 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-19 05:00:11 [INFO] [dup_check] 優先候補: 173件 {'claude': 100, 'aim': 67, 'add': 6} を先頭評価
+2026-05-19 05:00:11 [DEBUG] [dup_check] OK: 「保険レディ 副業」
+2026-05-19 05:00:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=173件, 要求=1件)
+2026-05-19 05:00:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-19 05:00:11 [INFO] [select]   1. 「保険レディ 副業」 vol=0 seo=N/A comp=N/A
+2026-05-19 05:00:11 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-19 05:00:11 [INFO] [hataraku] 候補: 173件 / 選定: 1件 / 生成予定: 1件
+2026-05-19 05:00:12 [INFO] [api_guard] 本日の使用量: $2.2024 / ¥330 (17回呼び出し)
+2026-05-19 05:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 05:00:12 [INFO] [hataraku] [1/1] [LONGTAIL] 「保険レディ 副業」 vol=0 ★CLAUDE
+2026-05-19 05:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 05:00:12 [INFO] [generate] 生成開始: 「保険レディ 副業」(vol:0) fact_check=True target_length=7,834字  誘導リンク:0件
+2026-05-19 05:03:53 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-19 05:03:53 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「atGPジョブトレ IT・Web」(ID:569)
+2026-05-19 05:03:54 [INFO] [generate] 完了: 「保険レディの副業で稼ぐ方法｜給料・時間・本業との両立まで解説」
+2026-05-19 05:03:54 [INFO] [post] 投稿方式: draft
+2026-05-19 05:05:05 [INFO] [post] WP投稿完了: ID=698 → https://hataraku-navi.com/wp-admin/post.php?post=698&action=edit
+2026-05-19 05:05:05 [INFO] [hataraku] [1/1] ✅ 完了: 「保険レディの副業で稼ぐ方法｜給料・時間・本業との両立まで解説」
+2026-05-19 05:05:05 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-19 05:05:05 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hataraku limit=1
+2026-05-19 05:05:59 [INFO] 
+============================================================
+2026-05-19 05:05:59 [INFO] 【全体サマリー】
+2026-05-19 05:05:59 [INFO]   ブログ数  : 1件
+2026-05-19 05:05:59 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-19 05:05:59 [INFO]   所要時間  : 355.0秒
+2026-05-19 05:05:59 [INFO]   ✅ [hataraku] 保険レディ 副業 → 保険レディの副業で稼ぐ方法｜給料・時間・本業との両立まで解説
+2026-05-19 05:05:59 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=698&action=edit
+2026-05-19 05:05:59 [INFO] ============================================================
+2026-05-19 05:30:05 [INFO] ============================================================
+2026-05-19 05:30:05 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-19 05:30:05 [INFO] ============================================================
+2026-05-19 05:30:05 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-19 05:30:08 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 05:30:08 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-19 05:30:08 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 05:30:08 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-19 05:30:08 [INFO]   fact_check       : True
+2026-05-19 05:30:08 [INFO]   article_type_mix : True
+2026-05-19 05:30:08 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-19 05:30:08 [INFO]   article_count    : 1  dry_run: False
+2026-05-19 05:30:11 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-19 05:30:11 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-19 05:30:11 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-19 05:30:11 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-19 05:30:15 [INFO] [wp] 記事取得: 計40件 (draft=6 / publish=34)
+2026-05-19 05:30:15 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-19 05:30:16 [DEBUG] [fetch] シート「絞り込みKW」: 202行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③']
+2026-05-19 05:30:16 [INFO] [fetch] サブKW紐付け: 58件 → 7記事に統合
+2026-05-19 05:30:16 [INFO] [fetch] [キーワード] メインKW: 30件（vol≥30 or N/A）  サブKW除外: 58件（統合対象）  投稿済みスキップ: 52件  テーマ外除外: 13件  aim内訳: [now:1, aim:17, claude:20, add:5]
+2026-05-19 05:30:16 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-19 05:30:16 [INFO] [dup_check] 優先候補: 30件 {'now': 1, 'aim': 9, 'claude': 15, 'add': 5} を先頭評価
+2026-05-19 05:30:16 [INFO] [dup_check] 除外: 「赤かぶ漬け お土産 日持ち」 → カニバリ(2/3語重複 ['お土産', '日持ち']): 「朴葉味噌のお土産は日持ちする？賞味期限・保存方法を徹底解説」
+2026-05-19 05:30:16 [INFO] [dup_check] 除外: 「高山 雪 朝 写真 撮れる場所」 → カニバリ(2/3語重複 ['高山', '写真']): 「高山の冬写真スポット9選！静かな雪景色と古い町並みを早朝に撮る」
+2026-05-19 05:30:16 [INFO] [dup_check] 除外: 「飛騨 山に囲まれた景色 見どころ」 → カニバリ(2/3語重複 ['飛騨', '見どころ']): 「飛騨古川 昔の町並み見どころ完全ガイド｜散策・カフェ・朝市まで」
+2026-05-19 05:30:16 [INFO] [dup_check] 除外: 「高山 観光 徒歩で回れる範囲」 → カニバリ(2/3語重複 ['高山', '観光']): 「高山の赤い橋の名前と由来を簡単に解説！飛騨高山を代表する観光スポット」
+2026-05-19 05:30:16 [DEBUG] [dup_check] OK: 「高山ラーメン 中華そば 特徴」
+2026-05-19 05:30:16 [INFO] [dup_check] 完了: 選定=1件 / 除外=4件 (pool=30件, 要求=1件)
+2026-05-19 05:30:16 [INFO] [select] 1件選定 (要求=1件)
+2026-05-19 05:30:16 [INFO] [select]   1. 「高山ラーメン 中華そば 特徴」 vol=0 seo=N/A comp=N/A
+2026-05-19 05:30:16 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-19 05:30:16 [INFO] [hida-no-omoide] 候補: 30件 / 選定: 1件 / 生成予定: 1件
+2026-05-19 05:30:16 [INFO] [api_guard] 本日の使用量: $2.4402 / ¥366 (20回呼び出し)
+2026-05-19 05:30:16 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 05:30:16 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「高山ラーメン 中華そば 特徴」 vol=0 ★CLAUDE
+2026-05-19 05:30:16 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 05:30:16 [INFO] [generate] 生成開始: 「高山ラーメン 中華そば 特徴」(vol:0) fact_check=True target_length=6,734字  誘導リンク:0件
+2026-05-19 05:33:23 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「楽天トラベル」(ID:168)
+2026-05-19 05:33:25 [INFO] [generate] 完了: 「高山ラーメン（中華そば）の特徴とは？スープ・麺・歴史まで解説」
+2026-05-19 05:33:25 [INFO] [post] 投稿方式: draft
+2026-05-19 05:34:21 [INFO] [post] WP投稿完了: ID=545 → https://hida-no-omoide.com/wp-admin/post.php?post=545&action=edit
+2026-05-19 05:34:21 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「高山ラーメン（中華そば）の特徴とは？スープ・麺・歴史まで解説」
+2026-05-19 05:34:21 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-19 05:34:21 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hida-no-omoide limit=1
+2026-05-19 05:35:11 [INFO] 
+============================================================
+2026-05-19 05:35:11 [INFO] 【全体サマリー】
+2026-05-19 05:35:11 [INFO]   ブログ数  : 1件
+2026-05-19 05:35:11 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-19 05:35:11 [INFO]   所要時間  : 305.8秒
+2026-05-19 05:35:11 [INFO]   ✅ [hida-no-omoide] 高山ラーメン 中華そば 特徴 → 高山ラーメン（中華そば）の特徴とは？スープ・麺・歴史まで解説
+2026-05-19 05:35:11 [INFO]        https://hida-no-omoide.com/wp-admin/post.php?post=545&action=edit
+2026-05-19 05:35:11 [INFO] ============================================================
+2026-05-19 06:00:04 [INFO] ============================================================
+2026-05-19 06:00:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-19 06:00:04 [INFO] ============================================================
+2026-05-19 06:00:04 [INFO] 対象ブログ: ['web-study1']
+2026-05-19 06:00:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 06:00:06 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-05-19 06:00:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 06:00:06 [INFO]   genre            : オンライン学習・プログラミング・資格・スキルアップ
+2026-05-19 06:00:06 [INFO]   fact_check       : True
+2026-05-19 06:00:06 [INFO]   article_type_mix : True
+2026-05-19 06:00:06 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-19 06:00:06 [INFO]   article_count    : 1  dry_run: False
+2026-05-19 06:00:09 [INFO] [web-study1] アフィリ案件: 27件（スプレッドシート）
+2026-05-19 06:00:09 [INFO] [web-study1]   [S] 無学年式オンライン教材 のすらら → https://web-study1.com/surara
+2026-05-19 06:00:09 [INFO] [web-study1]   [S] ヒューマンアカデミー → https://web-study1.com/haa.athuman
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] こどもチャレンジ → https://web-study1.com/shimajiro
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] こどもチャレンジ baby → https://web-study1.com/shimajiro-baby
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] Filmora → https://web-study1.com/filmora
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] スマイルゼミ → https://web-study1.com/smile-zemi
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] 進研ゼミ　高校講座 → https://web-study1.com/sinkenzemi-koukou
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] 進研ゼミ　中学講座 → https://web-study1.com/sinkenzem-cyugaku
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] 進研ゼミ　小学講座 → https://web-study1.com/shinkenzemi-syougakukouza
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] スタディサプリ中学講座 → https://web-study1.com/studysapuri-chugaku
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] Z会 → https://web-study1.com/zkai
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] スタディサプリ高校・大学 受験講座 → https://web-study1.com/studysapur-koukou
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] DMM WEBCAMP  学習コース_大学生向け就活対策コース → https://web-study1.com/dmm_webcamp_shukatu
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] Tech Kids School → https://web-study1.com/tech-kids
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] 【RISU算数】(19-1031) → https://web-study1.com/risu
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] スタディサプリENGLISH（新日常英会話コース） → https://web-study1.com/eigosapuri
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] スタディサプリEnglish　ビジネス英語コース → https://web-study1.com/eigosapuri
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] DMM WEBCAMP プログラミングコース → https://web-study1.com/web-camp_programing
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] freenance → https://web-study1.com/freenance
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] Udemy → https://web-study1.com/udemy
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] DMM WEBCAMP WEBデザインコース → https://web-study1.com/dmm_webcamp
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] DMM WEBCAMP Pythonコース → https://web-study1.com/dmm_webcamp_python
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] AI英会話アプリ【スピーク】 → https://web-study1.com/speak
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] スタディサプリ小学講座 → https://web-study1.com/sutasapu-syougaku
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] スタディサプリENGLISH（TOEIC対策コース） → https://web-study1.com/human-english-toeic
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] アンズテック → https://web-study1.com/anzutech
+2026-05-19 06:00:09 [INFO] [web-study1]   [?] DMM WEBCAMP 学習コース → https://web-study1.com/dmm-webcamp-gakusyu
+2026-05-19 06:00:10 [INFO] [wp] 記事取得: 計40件 (draft=2 / publish=38)
+2026-05-19 06:00:10 [INFO] [web-study1] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.2, 'monetize': 0.3})
+2026-05-19 06:00:12 [DEBUG] [fetch] シート「絞り込みKW」: 268行 / ヘッダー: ['キーワード', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '体験談']
+2026-05-19 06:00:12 [INFO] [fetch] サブKW紐付け: 78件 → 29記事に統合
+2026-05-19 06:00:12 [INFO] [fetch] [キーワード] メインKW: 10件（vol≥30 or N/A）  サブKW除外: 78件（統合対象）  投稿済みスキップ: 49件  テーマ外除外: 130件  aim内訳: [claude:1, aim:127, add:12]
+2026-05-19 06:00:12 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-19 06:00:12 [INFO] [dup_check] 優先候補: 10件 {'claude': 1, 'aim': 5, 'add': 4} を先頭評価
+2026-05-19 06:00:12 [INFO] [dup_check] 除外: 「Web制作 学習 独学」 → カニバリ(2/3語重複 ['学習', '独学']): 「プログラミング独学は無理？挫折しない学習ロードマップと成功のコツを解説」
+2026-05-19 06:00:12 [INFO] [dup_check] 除外: 「中学生 通信教育 おすすめ」 → カニバリ(2/3語重複 ['通信教育', 'おすすめ']): 「不登校の子に通信教育は有効？すらら体験談とおすすめ教材を徹底解説」
+2026-05-19 06:00:12 [INFO] [dup_check] 除外: 「高校生 通信教育 おすすめ」 → カニバリ(2/3語重複 ['通信教育', 'おすすめ']): 「不登校の子に通信教育は有効？すらら体験談とおすすめ教材を徹底解説」
+2026-05-19 06:00:12 [INFO] [dup_check] 除外: 「家庭教師 通信教育 どっちがいい」 → カニバリ(2/3語重複 ['通信教育', 'どっちがいい']): 「塾と通信教育どっちがいい？小学生に合う学習方法の選び方を徹底解説」
+2026-05-19 06:00:12 [DEBUG] [dup_check] OK: 「社会人 学び直し 通信教育」
+2026-05-19 06:00:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=4件 (pool=10件, 要求=1件)
+2026-05-19 06:00:12 [INFO] [select] 1件選定 (要求=1件)
+2026-05-19 06:00:12 [INFO] [select]   1. 「社会人 学び直し 通信教育」 vol=0 seo=N/A comp=N/A
+2026-05-19 06:00:12 [INFO] [web-study1] LONGTAIL選定: 1件
+2026-05-19 06:00:12 [INFO] [web-study1] 候補: 10件 / 選定: 1件 / 生成予定: 1件
+2026-05-19 06:00:12 [INFO] [api_guard] 本日の使用量: $2.6756 / ¥401 (24回呼び出し)
+2026-05-19 06:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 06:00:12 [INFO] [web-study1] [1/1] [LONGTAIL] 「社会人 学び直し 通信教育」 vol=0 ★AIM
+2026-05-19 06:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 06:00:12 [INFO] [generate] 生成開始: 「社会人 学び直し 通信教育」(vol:0) fact_check=True target_length=6,686字  誘導リンク:0件
+2026-05-19 06:03:26 [INFO] [generate] パターンCTA挿入（H3末尾）: 3件
+2026-05-19 06:03:26 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「DMM WEBCAMP  学習コース_大学生向け就活対策コース」(ID:151)
+2026-05-19 06:03:28 [INFO] [link_check] 死リンク除去: 3件 / チェック: 6件
+2026-05-19 06:03:28 [DEBUG] [link_check]   削除: https://web-study1.com/udemy
+2026-05-19 06:03:28 [DEBUG] [link_check]   削除: https://web-study1.com/human-english-toeic
+2026-05-19 06:03:28 [INFO] [generate] 完了: 「社会人の学び直しに通信教育がおすすめな理由と選び方を解説」
+2026-05-19 06:03:28 [INFO] [post] 投稿方式: draft
+2026-05-19 06:04:32 [INFO] [post] WP投稿完了: ID=529 → https://web-study1.com/wp-admin/post.php?post=529&action=edit
+2026-05-19 06:04:32 [INFO] [web-study1] [1/1] ✅ 完了: 「社会人の学び直しに通信教育がおすすめな理由と選び方を解説」
+2026-05-19 06:04:32 [INFO] [web-study1] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-19 06:04:32 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=web-study1 limit=1
+2026-05-19 06:05:30 [INFO] 
+============================================================
+2026-05-19 06:05:30 [INFO] 【全体サマリー】
+2026-05-19 06:05:30 [INFO]   ブログ数  : 1件
+2026-05-19 06:05:30 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-19 06:05:30 [INFO]   所要時間  : 326.1秒
+2026-05-19 06:05:30 [INFO]   ✅ [web-study1] 社会人 学び直し 通信教育 → 社会人の学び直しに通信教育がおすすめな理由と選び方を解説
+2026-05-19 06:05:30 [INFO]        https://web-study1.com/wp-admin/post.php?post=529&action=edit
+2026-05-19 06:05:30 [INFO] ============================================================
+2026-05-19 20:10:29 [INFO] ============================================================
+2026-05-19 20:10:29 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-19 20:10:29 [INFO] ============================================================
+2026-05-19 20:10:29 [INFO] 対象ブログ: ['workup-ai']
+2026-05-19 20:10:30 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 20:10:30 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-19 20:10:30 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 20:10:30 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-19 20:10:30 [INFO]   fact_check       : True
+2026-05-19 20:10:30 [INFO]   article_type_mix : True
+2026-05-19 20:10:30 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-19 20:10:30 [INFO]   article_count    : 1  dry_run: False
+2026-05-19 20:10:32 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-19 20:10:32 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-19 20:10:32 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-19 20:10:32 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-19 20:10:32 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-19 20:10:32 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-19 20:10:32 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-19 20:10:35 [INFO] [wp] 記事取得: 計407件 (publish=407)
+2026-05-19 20:10:35 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-19 20:10:38 [DEBUG] [fetch] シート「絞り込みKW」: 203行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-19 20:10:38 [INFO] [fetch] サブKW紐付け: 146件 → 19記事に統合
+2026-05-19 20:10:38 [INFO] [fetch] [キーワード] メインKW: 15件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 27件  テーマ外除外: 15件  aim内訳: [now:2, aim:15, claude:10, add:3]
+2026-05-19 20:10:38 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-19 20:10:38 [INFO] [dup_check] 優先候補: 15件 {'now': 2, 'add': 2, 'aim': 2, 'claude': 9} を先頭評価
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「plaud note pro リアルタイム文字起こし」 → カニバリ(3/4語重複 ['plaud', 'note', 'pro']): 「PLAUD NOTE PROでオンライン会議を効率化！録音・文字起こし・議事録作」
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「claude code setup プラグイン」 → 直近7日重複: 「Claude Code自動化で何ができる？業務効率化の使い方と具体例を解説」
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「claude code skillsとは」 → カニバリ(2/3語重複 ['claude', 'code']): 「Claude Code自動化で何ができる？業務効率化の使い方と具体例を解説」
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → カニバリ(3/4語重複 ['youtube', 'ai', 'イラスト']): 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → カニバリ(2/3語重複 ['youtube', 'ai']): 「YouTube競合分析AIツールおすすめ6選！無料から使える方法・やり方を徹底解」
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「フリーランス AI 活用 在宅」 → カニバリ(3/4語重複 ['ai', '活用', '在宅']): 「在宅ワーク｜主婦で初心者でも安心！AI活用で始める稼げる副業」
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「AI副業 稼ぎ方 初心者 安全」 → カニバリ(3/4語重複 ['ai副業', '稼ぎ方', '初心者']): 「AI副業で何をする？初心者におすすめの種類と稼ぎ方を徹底解説」
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「Claude Code ChatGPT 違い わかりやすく」 → カニバリ(3/5語重複 ['claude', 'code', '違い']): 「Claude CodeとOpenAI Codex、どっちを選ぶ？機能・料金・用途」
+2026-05-19 20:10:38 [INFO] [dup_check] 除外: 「Claude Code API できること」 → カニバリ(3/4語重複 ['claude', 'code', 'できること']): 「Claude Code無料枠でできること・制限を徹底解説！有料版との違いも比較」
+2026-05-19 20:10:38 [DEBUG] [dup_check] OK: 「AI記事 リライト やり方」
+2026-05-19 20:10:38 [INFO] [dup_check] 完了: 選定=1件 / 除外=9件 (pool=15件, 要求=1件)
+2026-05-19 20:10:38 [INFO] [select] 1件選定 (要求=1件)
+2026-05-19 20:10:38 [INFO] [select]   1. 「AI記事 リライト やり方」 vol=0 seo=N/A comp=N/A
+2026-05-19 20:10:38 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-19 20:10:38 [INFO] [workup-ai] 候補: 15件 / 選定: 1件 / 生成予定: 1件
+2026-05-19 20:10:38 [INFO] [api_guard] 本日の使用量: $0.2283 / ¥34 (1回呼び出し)
+2026-05-19 20:10:38 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 20:10:38 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AI記事 リライト やり方」 vol=0 ★CLAUDE
+2026-05-19 20:10:38 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 20:10:38 [INFO] [generate] 手順解説型ブースト: 7,815字 → 10,159字
+2026-05-19 20:10:38 [INFO] [generate] 生成開始: 「AI記事 リライト やり方」(vol:0) fact_check=True target_length=10,159字  誘導リンク:0件
+2026-05-19 20:14:48 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-19 20:14:48 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-19 20:14:49 [INFO] [link_check] 死リンク除去: 2件 / チェック: 6件
+2026-05-19 20:14:49 [DEBUG] [link_check]   削除: https://www.claude.ai
+2026-05-19 20:14:49 [DEBUG] [link_check]   削除: https://copydetect.net/
+2026-05-19 20:14:49 [INFO] [generate] 完了: 「AI記事リライトのやり方｜ChatGPTで品質とSEOを同時に上げる手順」
+2026-05-19 20:14:49 [INFO] [post] 投稿方式: draft
+2026-05-19 20:16:10 [INFO] [post] WP投稿完了: ID=10305 → https://workup-ai.com/wp-admin/post.php?post=10305&action=edit
+2026-05-19 20:16:10 [INFO] [workup-ai] [1/1] ✅ 完了: 「AI記事リライトのやり方｜ChatGPTで品質とSEOを同時に上げる手順」
+2026-05-19 20:16:10 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-19 20:16:10 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+2026-05-19 20:17:09 [INFO] 
+============================================================
+2026-05-19 20:17:09 [INFO] 【全体サマリー】
+2026-05-19 20:17:09 [INFO]   ブログ数  : 1件
+2026-05-19 20:17:09 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-19 20:17:09 [INFO]   所要時間  : 400.5秒
+2026-05-19 20:17:09 [INFO]   ✅ [workup-ai] AI記事 リライト やり方 → AI記事リライトのやり方｜ChatGPTで品質とSEOを同時に上げる手順
+2026-05-19 20:17:09 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10305&action=edit
+2026-05-19 20:17:09 [INFO] ============================================================
+2026-05-19 20:23:17 [INFO] ============================================================
+2026-05-19 20:23:17 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-19 20:23:17 [INFO] ============================================================
+2026-05-19 20:23:17 [INFO] 対象ブログ: ['workup-ai']
+2026-05-19 20:23:18 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 20:23:18 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-19 20:23:18 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 20:23:18 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-19 20:23:18 [INFO]   fact_check       : True
+2026-05-19 20:23:18 [INFO]   article_type_mix : True
+2026-05-19 20:23:18 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-19 20:23:18 [INFO]   article_count    : 1  dry_run: False
+2026-05-19 20:23:20 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-19 20:23:20 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-19 20:23:20 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-19 20:23:20 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-19 20:23:20 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-19 20:23:20 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-19 20:23:20 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-19 20:23:22 [INFO] [wp] 記事取得: 計408件 (draft=1 / publish=407)
+2026-05-19 20:23:22 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-19 20:23:24 [DEBUG] [fetch] シート「絞り込みKW」: 203行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-19 20:23:24 [INFO] [fetch] サブKW紐付け: 146件 → 19記事に統合
+2026-05-19 20:23:24 [INFO] [fetch] [キーワード] メインKW: 13件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 28件  テーマ外除外: 16件  aim内訳: [now:1, aim:16, claude:9, add:3]
+2026-05-19 20:23:24 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-19 20:23:24 [INFO] [dup_check] 優先候補: 13件 {'now': 1, 'add': 2, 'claude': 8, 'aim': 2} を先頭評価
+2026-05-19 20:23:24 [INFO] [dup_check] 除外: 「claude code setup プラグイン」 → 直近7日重複: 「Claude Code自動化で何ができる？業務効率化の使い方と具体例を解説」
+2026-05-19 20:23:24 [INFO] [dup_check] 除外: 「claude code skillsとは」 → カニバリ(2/3語重複 ['claude', 'code']): 「Claude Code自動化で何ができる？業務効率化の使い方と具体例を解説」
+2026-05-19 20:23:24 [INFO] [dup_check] 除外: 「フリーランス AI 活用 在宅」 → カニバリ(3/4語重複 ['ai', '活用', '在宅']): 「在宅ワーク｜主婦で初心者でも安心！AI活用で始める稼げる副業」
+2026-05-19 20:23:24 [INFO] [dup_check] 除外: 「AI副業 稼ぎ方 初心者 安全」 → カニバリ(3/4語重複 ['ai副業', '稼ぎ方', '初心者']): 「AI副業で何をする？初心者におすすめの種類と稼ぎ方を徹底解説」
+2026-05-19 20:23:24 [INFO] [dup_check] 除外: 「Claude Code ChatGPT 違い わかりやすく」 → カニバリ(3/5語重複 ['claude', 'code', '違い']): 「Claude CodeとOpenAI Codex、どっちを選ぶ？機能・料金・用途」
+2026-05-19 20:23:24 [INFO] [dup_check] 除外: 「Claude Code API できること」 → カニバリ(3/4語重複 ['claude', 'code', 'できること']): 「Claude Code無料枠でできること・制限を徹底解説！有料版との違いも比較」
+2026-05-19 20:23:24 [INFO] [dup_check] 除外: 「AIコンテンツ SEO 対策 2026」 → カニバリ(2/3語重複 ['seo', '対策']): 「AIライティングでブログSEO対策を強化する方法と注意点を徹底解説」
+2026-05-19 20:23:24 [DEBUG] [dup_check] OK: 「AI時代 ブログ 稼げるか」
+2026-05-19 20:23:24 [INFO] [dup_check] 完了: 選定=1件 / 除外=7件 (pool=13件, 要求=1件)
+2026-05-19 20:23:24 [INFO] [select] 1件選定 (要求=1件)
+2026-05-19 20:23:24 [INFO] [select]   1. 「AI時代 ブログ 稼げるか」 vol=0 seo=N/A comp=N/A
+2026-05-19 20:23:24 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-19 20:23:24 [INFO] [workup-ai] 候補: 13件 / 選定: 1件 / 生成予定: 1件
+2026-05-19 20:23:24 [INFO] [api_guard] 本日の使用量: $0.5026 / ¥75 (4回呼び出し)
+2026-05-19 20:23:24 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 20:23:24 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AI時代 ブログ 稼げるか」 vol=0 ★CLAUDE
+2026-05-19 20:23:24 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 20:23:24 [INFO] [generate] 生成開始: 「AI時代 ブログ 稼げるか」(vol:0) fact_check=True target_length=6,985字  誘導リンク:0件
+2026-05-19 20:30:26 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-19 20:30:26 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-19 20:30:26 [INFO] [generate] 完了: 「AI時代にブログは稼げるか？2026年の戦略と収益化の方法を解説」
+2026-05-19 20:30:26 [INFO] [post] 投稿方式: draft
+2026-05-19 20:31:43 [INFO] [post] WP投稿完了: ID=10313 → https://workup-ai.com/wp-admin/post.php?post=10313&action=edit
+2026-05-19 20:31:43 [INFO] [workup-ai] [1/1] ✅ 完了: 「AI時代にブログは稼げるか？2026年の戦略と収益化の方法を解説」
+2026-05-19 20:31:43 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-19 20:31:43 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+2026-05-19 20:32:47 [INFO] 
+============================================================
+2026-05-19 20:32:47 [INFO] 【全体サマリー】
+2026-05-19 20:32:47 [INFO]   ブログ数  : 1件
+2026-05-19 20:32:47 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-19 20:32:47 [INFO]   所要時間  : 570.3秒
+2026-05-19 20:32:47 [INFO]   ✅ [workup-ai] AI時代 ブログ 稼げるか → AI時代にブログは稼げるか？2026年の戦略と収益化の方法を解説
+2026-05-19 20:32:47 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10313&action=edit
+2026-05-19 20:32:47 [INFO] ============================================================
+2026-05-19 23:13:49 [INFO] ============================================================
+2026-05-19 23:13:49 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-19 23:13:49 [INFO] ============================================================
+2026-05-19 23:13:49 [INFO] 対象ブログ: ['workup-ai']
+2026-05-19 23:13:52 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 23:13:52 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-19 23:13:52 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 23:13:52 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-19 23:13:52 [INFO]   fact_check       : True
+2026-05-19 23:13:52 [INFO]   article_type_mix : True
+2026-05-19 23:13:52 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-19 23:13:52 [INFO]   article_count    : 1  dry_run: False
+2026-05-19 23:13:53 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-19 23:13:53 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-19 23:13:53 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-19 23:13:53 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-19 23:13:53 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-19 23:13:53 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-19 23:13:53 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-19 23:13:57 [INFO] [wp] 記事取得: 計408件 (publish=408)
+2026-05-19 23:13:57 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-19 23:13:59 [DEBUG] [fetch] シート「絞り込みKW」: 203行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-19 23:13:59 [INFO] [fetch] サブKW紐付け: 146件 → 19記事に統合
+2026-05-19 23:13:59 [INFO] [fetch] [キーワード] メインKW: 12件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 29件  テーマ外除外: 16件  aim内訳: [now:1, claude:8, aim:16, add:3]
+2026-05-19 23:13:59 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-19 23:13:59 [INFO] [dup_check] 優先候補: 12件 {'now': 1, 'add': 2, 'claude': 7, 'aim': 2} を先頭評価
+2026-05-19 23:13:59 [INFO] [dup_check] 除外: 「claude code setup プラグイン」 → 直近7日重複: 「Claude Code自動化で何ができる？業務効率化の使い方と具体例を解説」
+2026-05-19 23:13:59 [INFO] [dup_check] 除外: 「claude code skillsとは」 → カニバリ(2/3語重複 ['claude', 'code']): 「Claude Code自動化で何ができる？業務効率化の使い方と具体例を解説」
+2026-05-19 23:13:59 [INFO] [dup_check] 除外: 「フリーランス AI 活用 在宅」 → カニバリ(3/4語重複 ['ai', '活用', '在宅']): 「在宅ワーク｜主婦で初心者でも安心！AI活用で始める稼げる副業」
+2026-05-19 23:13:59 [INFO] [dup_check] 除外: 「AI副業 稼ぎ方 初心者 安全」 → カニバリ(3/4語重複 ['ai副業', '稼ぎ方', '初心者']): 「AI副業で何をする？初心者におすすめの種類と稼ぎ方を徹底解説」
+2026-05-19 23:13:59 [INFO] [dup_check] 除外: 「Claude Code ChatGPT 違い わかりやすく」 → カニバリ(3/5語重複 ['claude', 'code', '違い']): 「Claude CodeとOpenAI Codex、どっちを選ぶ？機能・料金・用途」
+2026-05-19 23:13:59 [INFO] [dup_check] 除外: 「Claude Code API できること」 → カニバリ(3/4語重複 ['claude', 'code', 'できること']): 「Claude Code無料枠でできること・制限を徹底解説！有料版との違いも比較」
+2026-05-19 23:13:59 [INFO] [dup_check] 除外: 「AIコンテンツ SEO 対策 2026」 → カニバリ(2/3語重複 ['seo', '対策']): 「AIライティングでブログSEO対策を強化する方法と注意点を徹底解説」
+2026-05-19 23:13:59 [DEBUG] [dup_check] OK: 「AI時代 副業 何がいい」
+2026-05-19 23:13:59 [INFO] [dup_check] 完了: 選定=1件 / 除外=7件 (pool=12件, 要求=1件)
+2026-05-19 23:13:59 [INFO] [select] 1件選定 (要求=1件)
+2026-05-19 23:13:59 [INFO] [select]   1. 「AI時代 副業 何がいい」 vol=0 seo=N/A comp=N/A
+2026-05-19 23:13:59 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-19 23:13:59 [INFO] [workup-ai] 候補: 12件 / 選定: 1件 / 生成予定: 1件
+2026-05-19 23:13:59 [INFO] [api_guard] 本日の使用量: $1.0057 / ¥151 (8回呼び出し)
+2026-05-19 23:13:59 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 23:13:59 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AI時代 副業 何がいい」 vol=0 ★CLAUDE
+2026-05-19 23:13:59 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 23:13:59 [INFO] [generate] 生成開始: 「AI時代 副業 何がいい」(vol:0) fact_check=True target_length=7,710字  誘導リンク:0件
+2026-05-19 23:17:44 [INFO] [generate] パターンCTA挿入（H3末尾）: 5件
+2026-05-19 23:17:44 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-19 23:17:45 [INFO] [generate] 完了: 「AI時代の副業は何がいい？初心者でも稼げる在宅ワーク6選と始め方」
+2026-05-19 23:17:45 [INFO] [post] 投稿方式: draft
+2026-05-19 23:18:57 [INFO] [post] WP投稿完了: ID=10322 → https://workup-ai.com/wp-admin/post.php?post=10322&action=edit
+2026-05-19 23:18:57 [INFO] [workup-ai] [1/1] ✅ 完了: 「AI時代の副業は何がいい？初心者でも稼げる在宅ワーク6選と始め方」
+2026-05-19 23:18:57 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-19 23:18:57 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+2026-05-19 23:20:11 [INFO] 
+============================================================
+2026-05-19 23:20:11 [INFO] 【全体サマリー】
+2026-05-19 23:20:11 [INFO]   ブログ数  : 1件
+2026-05-19 23:20:11 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-19 23:20:11 [INFO]   所要時間  : 382.0秒
+2026-05-19 23:20:11 [INFO]   ✅ [workup-ai] AI時代 副業 何がいい → AI時代の副業は何がいい？初心者でも稼げる在宅ワーク6選と始め方
+2026-05-19 23:20:11 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10322&action=edit
+2026-05-19 23:20:11 [INFO] ============================================================
+2026-05-19 23:24:41 [INFO] ============================================================
+2026-05-19 23:24:41 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-19 23:24:41 [INFO] ============================================================
+2026-05-19 23:24:41 [INFO] 対象ブログ: ['workup-ai']
+2026-05-19 23:24:44 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 23:24:44 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-19 23:24:44 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 23:24:44 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-19 23:24:44 [INFO]   fact_check       : True
+2026-05-19 23:24:44 [INFO]   article_type_mix : True
+2026-05-19 23:24:44 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-19 23:24:44 [INFO]   article_count    : 1  dry_run: False
+2026-05-19 23:24:46 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-19 23:24:46 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-19 23:24:46 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-19 23:24:46 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-19 23:24:46 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-19 23:24:46 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-19 23:24:46 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-19 23:24:48 [INFO] [wp] 記事取得: 計409件 (draft=1 / publish=408)
+2026-05-19 23:24:48 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-19 23:24:50 [DEBUG] [fetch] シート「絞り込みKW」: 203行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-19 23:24:50 [INFO] [fetch] サブKW紐付け: 146件 → 19記事に統合
+2026-05-19 23:24:50 [INFO] [fetch] [キーワード] メインKW: 11件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 30件  テーマ外除外: 16件  aim内訳: [now:1, aim:16, add:3, claude:7]
+2026-05-19 23:24:50 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-19 23:24:50 [INFO] [dup_check] 優先候補: 11件 {'now': 1, 'aim': 2, 'add': 2, 'claude': 6} を先頭評価
+2026-05-19 23:24:50 [INFO] [dup_check] 除外: 「claude code setup プラグイン」 → 直近7日重複: 「Claude Code自動化で何ができる？業務効率化の使い方と具体例を解説」
+2026-05-19 23:24:50 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → カニバリ(3/4語重複 ['youtube', 'ai', 'イラスト']): 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-05-19 23:24:50 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → カニバリ(2/3語重複 ['youtube', 'ai']): 「YouTube競合分析AIツールおすすめ6選！無料から使える方法・やり方を徹底解」
+2026-05-19 23:24:50 [INFO] [dup_check] 除外: 「claude code skillsとは」 → カニバリ(2/3語重複 ['claude', 'code']): 「Claude Code自動化で何ができる？業務効率化の使い方と具体例を解説」
+2026-05-19 23:24:50 [DEBUG] [dup_check] OK: 「Claude CodeとCodexどっちがいい？」
+2026-05-19 23:24:50 [INFO] [dup_check] 完了: 選定=1件 / 除外=4件 (pool=11件, 要求=1件)
+2026-05-19 23:24:50 [INFO] [select] 1件選定 (要求=1件)
+2026-05-19 23:24:50 [INFO] [select]   1. 「Claude CodeとCodexどっちがいい？」 vol=0 seo=N/A comp=N/A
+2026-05-19 23:24:50 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-19 23:24:50 [INFO] [workup-ai] 候補: 11件 / 選定: 1件 / 生成予定: 1件
+2026-05-19 23:24:50 [INFO] [api_guard] 本日の使用量: $1.2738 / ¥191 (11回呼び出し)
+2026-05-19 23:24:50 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 23:24:50 [INFO] [workup-ai] [1/1] [LONGTAIL] 「Claude CodeとCodexどっちがいい？」 vol=0 ★ADD
+2026-05-19 23:24:50 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 23:24:50 [INFO] [generate] 生成開始: 「Claude CodeとCodexどっちがいい？」(vol:0) fact_check=True target_length=5,023字  誘導リンク:0件
+2026-05-19 23:28:10 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-19 23:28:10 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-19 23:28:11 [INFO] [link_check] 死リンク除去: 3件 / チェック: 4件
+2026-05-19 23:28:11 [DEBUG] [link_check]   削除: https://claude.ai
+2026-05-19 23:28:11 [INFO] [generate] 完了: 「Claude CodeとCodexどっちがいい？精度・料金・使いやすさを比較」
+2026-05-19 23:28:11 [INFO] [post] 投稿方式: draft
+2026-05-19 23:28:45 [INFO] [post] WP投稿完了: ID=10328 → https://workup-ai.com/wp-admin/post.php?post=10328&action=edit
+2026-05-19 23:28:45 [INFO] [workup-ai] [1/1] ✅ 完了: 「Claude CodeとCodexどっちがいい？精度・料金・使いやすさを比較」
+2026-05-19 23:28:45 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-19 23:28:45 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+2026-05-19 23:29:31 [INFO] 
+============================================================
+2026-05-19 23:29:31 [INFO] 【全体サマリー】
+2026-05-19 23:29:31 [INFO]   ブログ数  : 1件
+2026-05-19 23:29:31 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-19 23:29:31 [INFO]   所要時間  : 289.8秒
+2026-05-19 23:29:31 [INFO]   ✅ [workup-ai] Claude CodeとCodexどっちがいい？ → Claude CodeとCodexどっちがいい？精度・料金・使いやすさを比較
+2026-05-19 23:29:31 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10328&action=edit
+2026-05-19 23:29:31 [INFO] ============================================================

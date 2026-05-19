@@ -1,0 +1,145 @@
+===== [HIDA-NO-OMOIDE] 実行開始: 2026-05-19 05:30:01 =====
+2026-05-19 05:30:05 [INFO] ============================================================
+2026-05-19 05:30:05 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-19 05:30:05 [INFO] ============================================================
+2026-05-19 05:30:05 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-19 05:30:08 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 05:30:08 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-19 05:30:08 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 05:30:08 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-19 05:30:08 [INFO]   fact_check       : True
+2026-05-19 05:30:08 [INFO]   article_type_mix : True
+2026-05-19 05:30:08 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-19 05:30:08 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] 飛騨の思い出 / 「ASP案件マスター 」: 3件
+[asp_fetcher]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+[asp_fetcher]   [999] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+[asp_fetcher]   [999] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+2026-05-19 05:30:11 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-19 05:30:11 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-19 05:30:11 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-19 05:30:11 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-19 05:30:15 [INFO] [wp] 記事取得: 計40件 (draft=6 / publish=34)
+2026-05-19 05:30:15 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-19 05:30:16 [INFO] [fetch] サブKW紐付け: 58件 → 7記事に統合
+2026-05-19 05:30:16 [INFO] [fetch] [キーワード] メインKW: 30件（vol≥30 or N/A）  サブKW除外: 58件（統合対象）  投稿済みスキップ: 52件  テーマ外除外: 13件  aim内訳: [now:1, aim:17, claude:20, add:5]
+2026-05-19 05:30:16 [INFO] [dup_check] 優先候補: 30件 {'now': 1, 'aim': 9, 'claude': 15, 'add': 5} を先頭評価
+2026-05-19 05:30:16 [INFO] [dup_check] 除外: 「赤かぶ漬け お土産 日持ち」 → カニバリ(2/3語重複 ['お土産', '日持ち']): 「朴葉味噌のお土産は日持ちする？賞味期限・保存方法を徹底解説」
+2026-05-19 05:30:16 [INFO] [dup_check] 除外: 「高山 雪 朝 写真 撮れる場所」 → カニバリ(2/3語重複 ['高山', '写真']): 「高山の冬写真スポット9選！静かな雪景色と古い町並みを早朝に撮る」
+2026-05-19 05:30:16 [INFO] [dup_check] 除外: 「飛騨 山に囲まれた景色 見どころ」 → カニバリ(2/3語重複 ['飛騨', '見どころ']): 「飛騨古川 昔の町並み見どころ完全ガイド｜散策・カフェ・朝市まで」
+2026-05-19 05:30:16 [INFO] [dup_check] 除外: 「高山 観光 徒歩で回れる範囲」 → カニバリ(2/3語重複 ['高山', '観光']): 「高山の赤い橋の名前と由来を簡単に解説！飛騨高山を代表する観光スポット」
+2026-05-19 05:30:16 [INFO] [dup_check] 完了: 選定=1件 / 除外=4件 (pool=30件, 要求=1件)
+2026-05-19 05:30:16 [INFO] [select] 1件選定 (要求=1件)
+2026-05-19 05:30:16 [INFO] [select]   1. 「高山ラーメン 中華そば 特徴」 vol=0 seo=N/A comp=N/A
+2026-05-19 05:30:16 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-19 05:30:16 [INFO] [hida-no-omoide] 候補: 30件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $2.4402 / 1時間: $0.2378  (上限 日次$10.00 / 時間$5.00)  全体: $2.2030(¥330) / 5記事
+2026-05-19 05:30:16 [INFO] [api_guard] 本日の使用量: $2.4402 / ¥366 (20回呼び出し)
+2026-05-19 05:30:16 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 05:30:16 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「高山ラーメン 中華そば 特徴」 vol=0 ★CLAUDE
+2026-05-19 05:30:16 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 05:30:16 [INFO] [generate] 生成開始: 「高山ラーメン 中華そば 特徴」(vol:0) fact_check=True target_length=6,734字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「高山ラーメン 中華そば 特徴」(vol:0) [6,734字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $2.4402 / 1時間: $0.2378  (上限 日次$10.00 / 時間$5.00)  全体: $2.2030(¥330) / 5記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=115 out=95 → $0.0005  (lsi:高山ラーメン 中華そば 特徴)
+[api_guard] 本日の使用量: $2.4407 / ¥366 (964回呼び出し)
+[article_generator] 共起語: 飛騨高山、朴葉味噌、醤油ベース、あっさり、こってり、チャーシュー、メンマ、ねぎ、スープ、麺の硬さ、トッピング、昭和レトロ...
+[api_guard] ✅ 本日: $2.4407 / 1時間: $0.2383  (上限 日次$10.00 / 時間$5.00)  全体: $2.2035(¥331) / 5記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=182 out=612 → $0.0026  (kw_research:高山ラーメン 中華そば 特徴)
+[api_guard] 本日の使用量: $2.4433 / ¥366 (965回呼び出し)
+[article_generator] サジェスト: 高山ラーメン 中華そば 特徴・高山ラーメン 中華そば 違い・高山ラーメン 中華そば おすすめ...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] アドセンス記事判定: 「高山ラーメン 中華そば 特徴」→ アフィリリンク抑制モード
+[api_guard] ✅ 本日: $2.4433 / 1時間: $0.2409  (上限 日次$10.00 / 時間$5.00)  全体: $2.2061(¥331) / 5記事
+[api_guard] 記録: claude-sonnet-4-6 in=10995 out=13260 → $0.2319  (article:高山ラーメン 中華そば 特徴)
+[api_guard] 本日の使用量: $2.6752 / ¥401 (966回呼び出し)
+[imagefx] 背景:B / ビジュアル:Cute flat icons of steaming ramen bowl, chopsticks
+[imagefx] タイトル(英): Takayama Ramen History And Features
+[article_generator] 完了: 「高山ラーメン（中華そば）の特徴とは？スープ・麺・歴史まで解説」 カテゴリ: 未設定(-) タグ: ['高山ラーメン', '中華そば', '飛騨高山', 'ご当地ラーメン', '醤油ラーメン']
+2026-05-19 05:33:23 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「楽天トラベル」(ID:168)
+[api_guard] ✅ 本日: $2.6752 / 1時間: $0.4728  (上限 日次$10.00 / 時間$5.00)  全体: $2.4380(¥366) / 6記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=379 out=31 → $0.0004  (maps:高山ラーメン 中華そば 特徴)
+[api_guard] 本日の使用量: $2.6756 / ¥401 (967回呼び出し)
+[maps_embedder] ✅ 地図挿入: mode=search / query=飛騨高山 ラーメン
+2026-05-19 05:33:25 [INFO] [generate] 完了: 「高山ラーメン（中華そば）の特徴とは？スープ・麺・歴史まで解説」
+2026-05-19 05:33:25 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 21件
+[category_selector] 新規カテゴリ提案: 「飛騨グルメ」
+[category_selector] カテゴリ新規作成: 「飛騨グルメ」(ID=222)
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration of Takayama ramen bowl with delicate broth, thin noodle...
+[image_generator] 完了 (71KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_053336_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 541)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: 高山ラーメン（中華そば）の特徴｜スープ・麺・トッピングを解説
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Historic Takayama ramen bowl with traditional Chinese characters, surrounded by ...
+[image_generator] 完了 (72KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_053348_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 542)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 高山ラーメン（中華そば）の歴史と発祥：飛騨高山で育まれた理由
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Bowl of steaming Takayama ramen noodles with toppings, wooden chopsticks, chefs ...
+[image_generator] 完了 (78KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_053359_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 543)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 高山ラーメン（中華そば）の有名店と自宅での作り方
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration of steaming ramen bowl with mountain peaks, noodles, an...
+[image_generator] 完了 (62KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_053410_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 544)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: takayama-ramen-chuka-soba-features-faq.jpg
+[wordpress] H3画像[まとめ] 見出し見つからずスキップ
+[internal_linker] 公開済み記事取得: 34件
+[internal_linker] 内部リンク選定完了: 計0件 (成約:0 / 案件関連:0 / 同親KW+補完:0)
+[internal_linker] 関連記事なし・内部リンクなし
+[wordpress] タグ設定: ['高山ラーメン', '中華そば', '飛騨高山', 'ご当地ラーメン', '醤油ラーメン']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 545) → https://hida-no-omoide.com/wp-admin/post.php?post=545&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of steaming ramen bowl, chopsticks, and soup ladle with stars and checkmarks, soft cream, blush pink and mint pastel tones.
+Soft pastel gradient background: gentle blush pink, cream and ivory tones, warm neutral atmosphere, feminine and sophisticated, airy and bright.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Takayama Ramen History And Features" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行82 「高山ラーメン 中華そば 特徴」→ 投稿済み (2026/05/19, ID:545) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「高山ラーメン（中華そば）の特徴とは？スープ・麺・歴史まで解説」
+2026-05-19 05:34:21 [INFO] [post] WP投稿完了: ID=545 → https://hida-no-omoide.com/wp-admin/post.php?post=545&action=edit
+2026-05-19 05:34:21 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「高山ラーメン（中華そば）の特徴とは？スープ・麺・歴史まで解説」
+2026-05-19 05:34:21 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-19 05:34:21 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hida-no-omoide limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #545 高山ラーメン（中華そば）の特徴とは？スープ・麺・歴史まで解説
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 飛騨の思い出向け・旅メディア型バナーで生成します
+[IMAGE] hida template: market_walk
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1692KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_053507_codex_hida_travel_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 546)
+[codex-eyecatch] featured image 設定完了: media_id=546
+[codex-eyecatch] 編集URL: https://hida-no-omoide.com/wp-admin/post.php?post=545&action=edit
+2026-05-19 05:35:11 [INFO] 
+============================================================
+2026-05-19 05:35:11 [INFO] 【全体サマリー】
+2026-05-19 05:35:11 [INFO]   ブログ数  : 1件
+2026-05-19 05:35:11 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-19 05:35:11 [INFO]   所要時間  : 305.8秒
+2026-05-19 05:35:11 [INFO]   ✅ [hida-no-omoide] 高山ラーメン 中華そば 特徴 → 高山ラーメン（中華そば）の特徴とは？スープ・麺・歴史まで解説
+2026-05-19 05:35:11 [INFO]        https://hida-no-omoide.com/wp-admin/post.php?post=545&action=edit
+2026-05-19 05:35:11 [INFO] ============================================================
+===== [HIDA-NO-OMOIDE] 記事生成終了: 2026-05-19 05:35:12 / exit=0 =====

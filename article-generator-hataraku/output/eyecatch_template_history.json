@@ -1,20 +1,19 @@
 {
   "beginner_guide": [
-    "flatlay",
-    "dark_desk",
-    "cafe_side",
-    "left_person",
-    "right_person",
-    "cafe_side",
-    "aivice_pastel_person",
     "aivice_soft_flatlay",
     "aivice_wave_panel",
     "aivice_tool_desk",
     "app_cards",
+    "aivice_wave_panel",
+    "aivice_pastel_person",
+    "aivice_tool_desk",
+    "flatlay",
+    "hands_closeup",
+    "aivice_soft_flatlay",
+    "aivice_pastel_person",
     "aivice_wave_panel"
   ],
   "hida": [
-    "railway_route_flatlay",
     "train_window_view",
     "local_food",
     "market_walk",
@@ -25,7 +24,8 @@
     "pet_travel",
     "quiet_letters",
     "letter_story",
-    "nostalgic_desk"
+    "nostalgic_desk",
+    "market_walk"
   ],
   "curiosity": [
     "notebook_closeup",

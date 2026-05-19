@@ -9569,6 +9569,396 @@
       "output_tokens": 14769,
       "cost_usd": 0.258126,
       "label": "article:Claude Code Codex どっち 比較"
+    },
+    {
+      "timestamp": "2026-05-18T19:20:13.809675+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 89,
+      "cost_usd": 0.000443,
+      "label": "lsi:生活費 下げる 方法"
+    },
+    {
+      "timestamp": "2026-05-18T19:20:20.698697+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 510,
+      "cost_usd": 0.002181,
+      "label": "kw_research:生活費 下げる 方法"
+    },
+    {
+      "timestamp": "2026-05-18T19:23:47.924787+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 13224,
+      "output_tokens": 15515,
+      "cost_usd": 0.272397,
+      "label": "article:生活費 下げる 方法"
+    },
+    {
+      "timestamp": "2026-05-18T20:00:14.820694+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 107,
+      "output_tokens": 91,
+      "cost_usd": 0.00045,
+      "label": "lsi:保険レディ 副業"
+    },
+    {
+      "timestamp": "2026-05-18T20:00:18.851788+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 174,
+      "output_tokens": 596,
+      "cost_usd": 0.002523,
+      "label": "kw_research:保険レディ 副業"
+    },
+    {
+      "timestamp": "2026-05-18T20:03:47.949547+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10942,
+      "output_tokens": 13468,
+      "cost_usd": 0.234846,
+      "label": "article:保険レディ 副業"
+    },
+    {
+      "timestamp": "2026-05-18T20:30:18.853651+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 95,
+      "cost_usd": 0.000472,
+      "label": "lsi:高山ラーメン 中華そば 特徴"
+    },
+    {
+      "timestamp": "2026-05-18T20:30:22.867500+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 612,
+      "cost_usd": 0.002594,
+      "label": "kw_research:高山ラーメン 中華そば 特徴"
+    },
+    {
+      "timestamp": "2026-05-18T20:33:19.683092+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10995,
+      "output_tokens": 13260,
+      "cost_usd": 0.231885,
+      "label": "article:高山ラーメン 中華そば 特徴"
+    },
+    {
+      "timestamp": "2026-05-18T20:33:25.843355+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 379,
+      "output_tokens": 31,
+      "cost_usd": 0.000427,
+      "label": "maps:高山ラーメン 中華そば 特徴"
+    },
+    {
+      "timestamp": "2026-05-18T21:00:17.516528+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 106,
+      "cost_usd": 0.000514,
+      "label": "lsi:社会人 学び直し 通信教育"
+    },
+    {
+      "timestamp": "2026-05-18T21:00:21.358949+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 568,
+      "cost_usd": 0.002415,
+      "label": "kw_research:社会人 学び直し 通信教育"
+    },
+    {
+      "timestamp": "2026-05-18T21:03:23.274575+00:00",
+      "date": "2026-05-18",
+      "hour": "2026-05-18T21",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11188,
+      "output_tokens": 13226,
+      "cost_usd": 0.231954,
+      "label": "article:社会人 学び直し 通信教育"
+    },
+    {
+      "timestamp": "2026-05-19T10:52:12.188686+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T10",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 47660,
+      "output_tokens": 5689,
+      "cost_usd": 0.228315,
+      "label": "rewrite:https://workup-ai.com/me-no-katachi-prompt"
+    },
+    {
+      "timestamp": "2026-05-19T11:10:40.372522+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 121,
+      "cost_usd": 0.000571,
+      "label": "lsi:AI記事 リライト やり方"
+    },
+    {
+      "timestamp": "2026-05-19T11:10:43.674223+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 451,
+      "cost_usd": 0.001945,
+      "label": "kw_research:AI記事 リライト やり方"
+    },
+    {
+      "timestamp": "2026-05-19T11:14:44.957539+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12143,
+      "output_tokens": 15687,
+      "cost_usd": 0.271734,
+      "label": "article:AI記事 リライト やり方"
+    },
+    {
+      "timestamp": "2026-05-19T11:23:26.675159+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 80,
+      "cost_usd": 0.00041,
+      "label": "lsi:AI時代 ブログ 稼げるか"
+    },
+    {
+      "timestamp": "2026-05-19T11:23:30.669899+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 571,
+      "cost_usd": 0.002428,
+      "label": "kw_research:AI時代 ブログ 稼げるか"
+    },
+    {
+      "timestamp": "2026-05-19T11:26:47.859090+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10809,
+      "output_tokens": 13740,
+      "cost_usd": 0.238527,
+      "label": "article:AI時代 ブログ 稼げるか"
+    },
+    {
+      "timestamp": "2026-05-19T11:30:21.066785+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10809,
+      "output_tokens": 15289,
+      "cost_usd": 0.261762,
+      "label": "article_retry:AI時代 ブログ 稼げるか"
+    },
+    {
+      "timestamp": "2026-05-19T14:14:01.325847+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 92,
+      "cost_usd": 0.000456,
+      "label": "lsi:AI時代 副業 何がいい"
+    },
+    {
+      "timestamp": "2026-05-19T14:14:05.087023+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 510,
+      "cost_usd": 0.002182,
+      "label": "kw_research:AI時代 副業 何がいい"
+    },
+    {
+      "timestamp": "2026-05-19T14:17:40.628758+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T14",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10760,
+      "output_tokens": 15547,
+      "cost_usd": 0.265485,
+      "label": "article:AI時代 副業 何がいい"
+    },
+    {
+      "timestamp": "2026-05-19T14:24:52.379204+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 77,
+      "cost_usd": 0.000397,
+      "label": "lsi:Claude CodeとCodexどっちがいい？"
+    },
+    {
+      "timestamp": "2026-05-19T14:24:55.712576+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 395,
+      "cost_usd": 0.001722,
+      "label": "kw_research:Claude CodeとCodexどっちがいい？"
+    },
+    {
+      "timestamp": "2026-05-19T14:28:07.632070+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T14",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11225,
+      "output_tokens": 14120,
+      "cost_usd": 0.245475,
+      "label": "article:Claude CodeとCodexどっちがいい？"
+    },
+    {
+      "timestamp": "2026-05-19T15:00:34.784533+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 78,
+      "cost_usd": 0.000402,
+      "label": "lsi:AIプログラミング 初心者 やり方"
+    },
+    {
+      "timestamp": "2026-05-19T15:00:39.004855+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 571,
+      "cost_usd": 0.002428,
+      "label": "kw_research:AIプログラミング 初心者 やり方"
+    },
+    {
+      "timestamp": "2026-05-19T15:04:46.833314+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T15",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11971,
+      "output_tokens": 16000,
+      "cost_usd": 0.275913,
+      "label": "article:AIプログラミング 初心者 やり方"
+    },
+    {
+      "timestamp": "2026-05-19T15:06:42.297199+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 105,
+      "output_tokens": 99,
+      "cost_usd": 0.00048,
+      "label": "lsi:claude code skillsとは"
+    },
+    {
+      "timestamp": "2026-05-19T15:06:45.708991+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 172,
+      "output_tokens": 426,
+      "cost_usd": 0.001842,
+      "label": "kw_research:claude code skillsとは"
+    },
+    {
+      "timestamp": "2026-05-19T15:09:53.383040+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T15",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12033,
+      "output_tokens": 14549,
+      "cost_usd": 0.254334,
+      "label": "article:claude code skillsとは"
+    },
+    {
+      "timestamp": "2026-05-19T15:10:38.450412+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 107,
+      "output_tokens": 97,
+      "cost_usd": 0.000474,
+      "label": "lsi:claude code setup プラグイン"
+    },
+    {
+      "timestamp": "2026-05-19T15:10:42.511355+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 174,
+      "output_tokens": 525,
+      "cost_usd": 0.002239,
+      "label": "kw_research:claude code setup プラグイン"
+    },
+    {
+      "timestamp": "2026-05-19T15:13:42.584318+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T15",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11411,
+      "output_tokens": 13797,
+      "cost_usd": 0.241188,
+      "label": "article:claude code setup プラグイン"
+    },
+    {
+      "timestamp": "2026-05-19T15:14:22.463238+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 86,
+      "cost_usd": 0.000434,
+      "label": "lsi:AIプログラミング 初心者 やり方"
+    },
+    {
+      "timestamp": "2026-05-19T15:14:26.400166+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 543,
+      "cost_usd": 0.002316,
+      "label": "kw_research:AIプログラミング 初心者 やり方"
+    },
+    {
+      "timestamp": "2026-05-19T15:18:33.235392+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T15",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11951,
+      "output_tokens": 16000,
+      "cost_usd": 0.275853,
+      "label": "article:AIプログラミング 初心者 やり方"
     }
   ],
   "events": [

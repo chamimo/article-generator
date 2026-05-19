@@ -1,0 +1,182 @@
+===== [HAPIPO8] 実行開始: 2026-05-19 04:20:00 =====
+2026-05-19 04:20:03 [INFO] ============================================================
+2026-05-19 04:20:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-19 04:20:03 [INFO] ============================================================
+2026-05-19 04:20:03 [INFO] 対象ブログ: ['hapipo8']
+2026-05-19 04:20:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-19 04:20:05 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-19 04:20:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-19 04:20:05 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-05-19 04:20:05 [INFO]   fact_check       : True
+2026-05-19 04:20:05 [INFO]   article_type_mix : True
+2026-05-19 04:20:05 [INFO]   stop_words       : ['2026']
+2026-05-19 04:20:05 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] 気になることブログ / 「ASP案件マスター」: 50件
+[asp_fetcher]   [S] 福ちゃん → https://hapipo8.com/fukuchan / 着物買取・女性
+[asp_fetcher]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori / 即現金化・出張査定
+[asp_fetcher]   [S] フクウロ → https://hapipo8.com/fukuuro / 洋服買取 / 断捨離 / ブランド買取
+[asp_fetcher]   [S] メディカルフードサービス → https://hapipo8.com/medical_food / 腎臓病 宅配食 / 健康管理
+[asp_fetcher]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki / 宅配食 おすすめ 忙しい / 料理 時間ない 共働き
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile / 審査なし・スマホ契約できない・ブラックOK
+[asp_fetcher]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+
+2026-05-19 04:20:08 [INFO] [hapipo8] アフィリ案件: 50件（スプレッドシート）
+2026-05-19 04:20:08 [INFO] [hapipo8]   [S] 福ちゃん → https://hapipo8.com/fukuchan
+2026-05-19 04:20:08 [INFO] [hapipo8]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori
+2026-05-19 04:20:08 [INFO] [hapipo8]   [S] フクウロ → https://hapipo8.com/fukuuro
+2026-05-19 04:20:08 [INFO] [hapipo8]   [S] メディカルフードサービス → https://hapipo8.com/medical_food
+2026-05-19 04:20:08 [INFO] [hapipo8]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-05-19 04:20:08 [INFO] [hapipo8]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman
+2026-05-19 04:20:08 [INFO] [hapipo8]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] トラベル・スタンダード・ジャパン → https://px.a8.net/svt/ejp?a8mat=4B1THV+17H122+5LKE+5ZU29
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ORBIS AMBER(オルビス アンバー) → https://px.a8.net/svt/ejp?a8mat=4B1THX+DDO2AI+1USQ+4ASX02
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] トリア → https://hapipo8.com/tria
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] nosh - ナッシュ → https://hapipo8.com/nosh
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] 快眠タイムズストア → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DRYGT6+4UHE+TRVYQ
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] NELL マットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6M5RVE+4KD8+5ZMCI
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] 咲夜レアルマットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6LKC9M+4MRW+61Z81
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] オーケンウォーター → https://px.a8.net/svt/ejp?a8mat=4B1THX+CRN0WQ+1LOO+6NMJL
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] every frecious（エブリィフレシャス） → https://px.a8.net/svt/ejp?a8mat=4B1THX+CS8GII+2B8Y+15OK2A
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] リゾバ → https://hapipo8.com/rizoba
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ダイブ → https://hapipo8.com/dive
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] 工場求人ワールド → https://px.a8.net/svt/ejp?a8mat=4B1O1T+EGYV5U+5S9S+5YJRM
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ソフトバンク光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KARLU+3HKU+25FF81
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] BIGLOBE WiMAX +5G → https://px.a8.net/svt/ejp?a8mat=4B1THS+2TTMYY+B4+2BDBUB
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] フレッツ光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KW4WA+348K+1TJE9U
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] AI英会話アプリ【スピーク】 → https://hapipo8.com/speak
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] もぐワン ペットフード → https://hapipo8.com/moguwan
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] DMM 生成AI CAMP → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ポニークリーニング → https://px.a8.net/svt/ejp?a8mat=4B1THV+5QLST6+4N08+5Z6WY
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] 体験型カタログギフト【EXETIME】 → https://hapipo8.com/exetime
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] GMOとくとくBB → https://px.a8.net/svt/ejp?a8mat=4B1THS+2UF2KQ+50+3H48S2
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] Amazon Prime Video → https://amzn.to/4tbKPVa
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] Pollet → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] カレントボディ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DFGD3U+54TM+5YJRM
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] アプリ接客キャスト → https://px.a8.net/svt/ejp?a8mat=4B1O1T+FKUWOY+3P1G+NTRMQ
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ヴィーナスウォーカー → https://px.a8.net/svt/ejp?a8mat=4B1THV+6632JE+58KC+5YRHE
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] WEBCOACH → https://px.a8.net/svt/ejp?a8mat=4B1V1W+DW4O7U+5EVK+5YZ75
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ポケットリサーチ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DUXMU2+58KC+BWVTE
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ラボル カード払い → https://px.a8.net/svt/ejp?a8mat=4B1THS+3TJN9M+40JM+1NJZN5
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] クロスワンルーム → https://px.a8.net/svt/ejp?a8mat=4B1THX+DPKQE2+4EZ2+BYLJL
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] Mr.シリーズ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CLOOUY+1USQ+2Z8T76
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] IBJ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CF4X7E+FOG+4MPSTE
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ユアマイスター → https://px.a8.net/svt/ejp?a8mat=4B1THX+BZNNH6+4HQS+5YJRM
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] TOSSY → https://px.a8.net/svt/ejp?a8mat=4B1THS+2V0I6I+1WP2+1HLNLE
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] ABLENET VPS → https://px.a8.net/svt/ejp?a8mat=4B1THS+2VLXSA+4NIK+5Z6WX
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-19 04:20:08 [INFO] [hapipo8]   [A] BIGLOBE光 → https://px.a8.net/svt/ejp?a8mat=4B3LMR+4JQL96+3SPO+7LW1F7
+2026-05-19 04:20:08 [INFO] [hapipo8]   [B] 食楽膳 → https://hapipo8.com/shokurakuzen
+2026-05-19 04:20:08 [INFO] [hapipo8]   [?] 楽器買取 福ちゃん → https://hapipo8.com/gakki-fukucyan
+2026-05-19 04:20:08 [INFO] [hapipo8]   [?] ニーゴ・リユース → https://hapipo8.com/25reuse
+2026-05-19 04:20:10 [INFO] [wp] 記事取得: 計168件 (publish=168)
+2026-05-19 04:20:10 [INFO] [hapipo8] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.4, 'monetize': 0.1})
+2026-05-19 04:20:11 [INFO] [fetch] サブKW紐付け: 165件 → 50記事に統合
+2026-05-19 04:20:11 [INFO] [fetch] [キーワード] メインKW: 16件（vol≥30 or N/A）  サブKW除外: 165件（統合対象）  投稿済みスキップ: 133件  テーマ外除外: 285件  aim内訳: [now:1, aim:60, claude:25, add:215]
+2026-05-19 04:20:11 [INFO] [dup_check] 優先候補: 16件 {'now': 1, 'add': 15} を先頭評価
+2026-05-19 04:20:11 [INFO] [dup_check] 除外: 「シェフの無添つくりおき 口コミ 評判」 → カニバリ(2/3語重複 ['口コミ', '評判']): 「もぐワンの口コミ・評判を徹底検証！成分・価格・食いつきのリアルな声」
+2026-05-19 04:20:11 [INFO] [dup_check] 除外: 「一人暮らし WiFi おすすめ」 → カニバリ(2/3語重複 ['一人暮らし', 'おすすめ']): 「宅食おすすめ5選！一人暮らし女性でも安く栄養バランスが取れる選び方」
+2026-05-19 04:20:11 [INFO] [dup_check] 除外: 「防災備蓄 女性 一人暮らし」 → カニバリ(2/3語重複 ['女性', '一人暮らし']): 「宅食おすすめ5選！一人暮らし女性でも安く栄養バランスが取れる選び方」
+2026-05-19 04:20:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=3件 (pool=16件, 要求=1件)
+2026-05-19 04:20:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-19 04:20:11 [INFO] [select]   1. 「生活費 下げる 方法」 vol=0 seo=N/A comp=N/A
+2026-05-19 04:20:11 [INFO] [hapipo8] LONGTAIL選定: 1件
+2026-05-19 04:20:11 [INFO] [hapipo8] 候補: 16件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.9274 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.6902(¥254) / 3記事
+2026-05-19 04:20:11 [INFO] [api_guard] 本日の使用量: $1.9274 / ¥289 (14回呼び出し)
+2026-05-19 04:20:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 04:20:11 [INFO] [hapipo8] [1/1] [LONGTAIL] 「生活費 下げる 方法」 vol=0 ★ADD
+2026-05-19 04:20:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-19 04:20:11 [INFO] [generate] 手順解説型ブースト: 7,805字 → 10,146字
+2026-05-19 04:20:11 [INFO] [generate] 生成開始: 「生活費 下げる 方法」(vol:0) fact_check=True target_length=10,146字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「生活費 下げる 方法」(vol:0) [10,146字 / H3:14〜18本 / FAQ:8〜10問]
+[api_guard] ✅ 本日: $1.9274 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.6902(¥254) / 3記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=109 out=89 → $0.0004  (lsi:生活費 下げる 方法)
+[api_guard] 本日の使用量: $1.9278 / ¥289 (958回呼び出し)
+[article_generator] 共起語: 節約、家計管理、固定費削減、食費節約、光熱費削減、格安SIM、家賃交渉、買い物のコツ、貯金、副業、ポイント還元、サブスク...
+[api_guard] ✅ 本日: $1.9278 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $1.6906(¥254) / 3記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=176 out=510 → $0.0022  (kw_research:生活費 下げる 方法)
+[api_guard] 本日の使用量: $1.9300 / ¥289 (959回呼び出し)
+[article_generator] サジェスト: 生活費 下げる 方法・生活費 下げる コツ・生活費 下げる 家族...
+[article_generator] 検索意図: 購買直前 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] 手順解説型モード: 「生活費 下げる 方法」
+[api_guard] ✅ 本日: $1.9300 / 1時間: $0.0026  (上限 日次$10.00 / 時間$5.00)  全体: $1.6928(¥254) / 3記事
+[api_guard] 記録: claude-sonnet-4-6 in=13224 out=15515 → $0.2724  (article:生活費 下げる 方法)
+[api_guard] 本日の使用量: $2.2024 / ¥330 (960回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of coins, lightbulbs, calendar, pi
+[imagefx] タイトル(英): Lower Your Living Costs
+[article_generator] 完了: 「生活費を下げる方法17選｜固定費・食費・光熱費の削減手順を解説」 カテゴリ: 未設定(-) タグ: ['節約', '家計管理', '固定費削減', '生活費', '貯金']
+2026-05-19 04:23:51 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-19 04:23:51 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「nosh - ナッシュ」(ID:3979)
+2026-05-19 04:23:52 [INFO] [generate] 完了: 「生活費を下げる方法17選｜固定費・食費・光熱費の削減手順を解説」
+2026-05-19 04:23:52 [INFO] [post] 投稿方式: publish
+[category_selector] カテゴリ取得: 36件
+[category_selector] 「生活費 下げる 方法」→ 設定フォールバック: ライフ(102)
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring budget planning essentials: piggy bank, expen...
+[image_generator] 完了 (40KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_042401_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4261)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: 生活費を下げる前に知っておきたい「支出管理の基本」
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Minimalist flat design illustration featuring utility bills, house icon, piggy b...
+[image_generator] 完了 (57KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_042414_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4262)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 生活費を下げる固定費削減の具体的な方法
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration featuring grocery bags, fresh vegetables, household i...
+[image_generator] 完了 (75KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_042426_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4263)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 食費・日用品費を無理なく下げる節約のコツ
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring budget-friendly lifestyle objects: piggy bank...
+[image_generator] 完了 (53KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_042437_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4264)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: reduce-living-expenses-methods-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Minimalist flat design illustration featuring piggy bank, budget envelope, disco...
+[image_generator] 完了 (36KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260519_042450_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4265)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: reduce-living-expenses-methods-summary.jpg
+[internal_linker] 公開済み記事取得: 168件
+[internal_linker] 古い記事を除外: 123件（2年以上前）→ 45件で選定
+[internal_linker] 同カテゴリー: 8件選定（ルールベース）
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['ゴールデンウィークのホテルを安く予約する方法7選！格安で泊ま', 'AIで稼ぐ方法10選！初心者でも副業で月収を上げる具体的なや', '小学生の算数苦手を克服する方法7選！親が教えるコツと効果的な', '副業がバレない方法7つ！確定申告・住民税の対策を会社員向けに', '引きこもりから社会復帰する方法7ステップ！段階的に自信を取り', 'ゴールデンウィーク車なし旅行おすすめ10選！電車・新幹線・飛', 'もぐワンの口コミ・評判を徹底検証！成分・価格・食いつきのリア', '夏休みお金かけない過ごし方20選！子どもも家族も無料で楽しむ']
+[wordpress] タグ設定: ['節約', '家計管理', '固定費削減', '生活費', '貯金']
+[wordpress] タグ既存(term_exists)使用: 節約 (id=830)
+[wordpress] 投稿方式: publish
+[wordpress] 投稿完了 (ID: 4266) → https://hapipo8.com/wp-admin/post.php?post=4266&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行372 「生活費 下げる 方法」→ 投稿済み (2026/05/19, ID:4266) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「生活費を下げる方法17選｜固定費・食費・光熱費の削減手順を解」
+2026-05-19 04:25:03 [INFO] [post] WP投稿完了: ID=4266 → https://hapipo8.com/wp-admin/post.php?post=4266&action=edit
+2026-05-19 04:25:03 [INFO] [hapipo8] [1/1] ✅ 完了: 「生活費を下げる方法17選｜固定費・食費・光熱費の削減手順を解説」
+2026-05-19 04:25:03 [INFO] [hapipo8] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-19 04:25:03 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hapipo8 limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #4266 生活費を下げる方法17選｜固定費・食費・光熱費の削減手順を解説
+[codex-eyecatch] 既存ライブラリ画像を選択: search=固定費 media_id=4262
+[codex-eyecatch] 既存ライブラリ画像を featured image に設定: media_id=4262
+[codex-eyecatch] 編集URL: https://hapipo8.com/wp-admin/post.php?post=4266&action=edit
+2026-05-19 04:25:11 [INFO] 
+============================================================
+2026-05-19 04:25:11 [INFO] 【全体サマリー】
+2026-05-19 04:25:11 [INFO]   ブログ数  : 1件
+2026-05-19 04:25:11 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-19 04:25:11 [INFO]   所要時間  : 307.6秒
+2026-05-19 04:25:11 [INFO]   ✅ [hapipo8] 生活費 下げる 方法 → 生活費を下げる方法17選｜固定費・食費・光熱費の削減手順を解説
+2026-05-19 04:25:11 [INFO]        https://hapipo8.com/wp-admin/post.php?post=4266&action=edit
+2026-05-19 04:25:11 [INFO] ============================================================
+===== [HAPIPO8] 記事生成終了: 2026-05-19 04:25:15 / exit=0 =====

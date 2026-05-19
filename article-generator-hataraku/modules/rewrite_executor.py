@@ -260,8 +260,123 @@ def _apply_patches(original: str, patch_text: str) -> str:
     return result
 
 
+def _count_wp_images(content: str) -> int:
+    """記事内の <!-- wp:image --> ブロック数を数える。"""
+    return len(re.findall(r'<!-- wp:image', content))
+
+
+def _find_imageless_h2_positions(content: str) -> list[tuple[int, str]]:
+    """画像が直後にないH2ブロックの (終端位置, H2テキスト) リストを返す。"""
+    results = []
+    for m in re.finditer(
+        r'<!-- wp:heading[^>]*-->.*?<h2[^>]*>(.*?)</h2>.*?<!-- /wp:heading -->',
+        content, re.DOTALL,
+    ):
+        end_pos   = m.end()
+        h2_text   = re.sub(r'<[^>]+>', '', m.group(1)).strip()
+        # 直後500字以内に wp:image がなければ候補
+        lookahead = content[end_pos:end_pos + 500]
+        if '<!-- wp:image' not in lookahead:
+            results.append((end_pos, h2_text))
+    return results
+
+
+def _upload_image_to_wp(wp_url: str, auth: HTTPBasicAuth,
+                         img_bytes: bytes, filename: str, alt_text: str) -> tuple[int, str]:
+    """バイト列をWPメディアにアップロードして (media_id, src_url) を返す。"""
+    resp = requests.post(
+        f"{wp_url}/wp-json/wp/v2/media",
+        auth=auth,
+        headers={
+            "Content-Disposition": f'attachment; filename="{filename}"',
+            "Content-Type": "image/jpeg",
+        },
+        data=img_bytes,
+        timeout=120,
+    )
+    resp.raise_for_status()
+    data     = resp.json()
+    media_id = data["id"]
+    src_url  = data.get("source_url", "")
+    try:
+        requests.post(f"{wp_url}/wp-json/wp/v2/media/{media_id}",
+                      auth=auth, json={"alt_text": alt_text}, timeout=10)
+    except Exception:
+        pass
+    return media_id, src_url
+
+
+def _build_wp_image_block(media_id: int, src_url: str, alt_text: str) -> str:
+    return (
+        f'\n<!-- wp:image {{"id":{media_id},"sizeSlug":"large","linkDestination":"none"}} -->\n'
+        f'<figure class="wp-block-image size-large">'
+        f'<img src="{src_url}" alt="{alt_text}" class="wp-image-{media_id}"/>'
+        f'</figure>\n'
+        f'<!-- /wp:image -->\n'
+    )
+
+
+def _add_rewrite_images(
+    content: str, wp_url: str, auth: HTTPBasicAuth,
+    keyword: str, slug: str, max_add: int = 3,
+) -> str:
+    """記事内画像が少ない場合、FLUX画像を最大 max_add 枚追加する。"""
+    try:
+        from modules.image_generator import generate_h2_image
+    except ImportError:
+        print("[executor] image_generator インポート失敗 → 画像追加スキップ")
+        return content
+
+    current_img_count = _count_wp_images(content)
+    can_add = max_add - current_img_count
+    if can_add <= 0:
+        print(f"[executor] 画像{current_img_count}枚 → 追加不要")
+        return content
+
+    candidates = _find_imageless_h2_positions(content)
+    if not candidates:
+        print("[executor] 画像挿入候補H2なし → スキップ")
+        return content
+
+    result      = content
+    added       = 0
+    offset      = 0  # 挿入によるオフセット補正
+
+    for pos, h2_text in candidates[:can_add]:
+        try:
+            img_bytes = generate_h2_image(h2_text, keyword)
+            filename  = f"{slug}-rewrite-{added + 1:02d}.jpg"
+            alt_text  = f"{h2_text}のイメージ画像"
+            media_id, src_url = _upload_image_to_wp(wp_url, auth, img_bytes, filename, alt_text)
+            img_block = _build_wp_image_block(media_id, src_url, alt_text)
+            insert_at = pos + offset
+            result    = result[:insert_at] + img_block + result[insert_at:]
+            offset   += len(img_block)
+            added    += 1
+            print(f"[executor] 画像追加[{added}] H2:{h2_text[:30]} → {filename}")
+        except Exception as e:
+            print(f"[executor] 画像生成失敗（続行）: {e}")
+
+    print(f"[executor] 画像: {current_img_count}枚 → {current_img_count + added}枚")
+    return result
+
+
+def _fetch_recent_wp_posts(wp_url: str, auth: HTTPBasicAuth, n: int = 10) -> list[dict]:
+    """ブログの最近の公開記事一覧 (title, link) を取得する。"""
+    try:
+        resp = requests.get(
+            f"{wp_url}/wp-json/wp/v2/posts",
+            auth=auth,
+            params={"per_page": n, "status": "publish", "_fields": "title,link"},
+            timeout=15,
+        )
+        return [{"title": p["title"]["rendered"], "link": p["link"]} for p in resp.json()]
+    except Exception:
+        return []
+
+
 def _generate_rewrite(row: dict, current_content: str, gsc_queries: list[dict],
-                       blog_cfg: dict) -> str:
+                       blog_cfg: dict, recent_posts: list[dict] | None = None) -> str:
     """Claude Sonnet で追加パッチを生成し元記事に適用して返す。"""
     import anthropic
     from config import ANTHROPIC_API_KEY
@@ -296,6 +411,13 @@ def _generate_rewrite(row: dict, current_content: str, gsc_queries: list[dict],
 
     strength = row.get("strength", "軽微〜中規模")
 
+    # 同ブログの最近の記事一覧（古い情報の誘導先候補）
+    recent_posts_text = ""
+    if recent_posts:
+        recent_posts_text = "\n## 同ブログの最近の公開記事（古い情報への誘導先として活用可）\n"
+        for p in recent_posts[:8]:
+            recent_posts_text += f"・{p['title']}  {p['link']}\n"
+
     system_prompt = f"""あなたはSEO特化のコンテンツライターです。
 ブログ名: {blog_name}
 ジャンル: {genre}
@@ -308,14 +430,24 @@ def _generate_rewrite(row: dict, current_content: str, gsc_queries: list[dict],
 （ここにWordPress Gutenbergブロック形式の追加コンテンツ）
 [/INSERT]
 
-[INSERT: before H2 "まとめ"]
-（ここに追加コンテンツ）
+[INSERT: after H2 "挿入先のH2テキスト"]
+（H4やH3を追加する場合もここに書く）
 [/INSERT]
 
-- 既存本文は絶対に出力しない・削らない
-- 挿入先の見出しテキストは記事内の実際の文字列をそのまま使う
-- 複数箇所に追加する場合は [INSERT] ブロックを繰り返す
+[INSERT: before H2 "まとめ"]
+（まとめ前に新H2セクションを追加する場合）
+[/INSERT]
+
+## リライトルール（厳守）
+- **文字数は絶対に減らさない**。追加のみ行う
+- **既存のH2・H3は変更しない**（テキスト・順序・構成）
+- 新しいH2・H3を追加することはOKだが追加しすぎない（既存H2の20%増し以内が目安）
+- **H4を積極的に活用**して既存H3の内容を深掘りする
+- **古い情報・過去の日付・廃止されたサービス**を見つけたら：
+  - 「最新情報」としてH4または段落で補足する
+  - 同ブログに関連する最新記事があれば <!-- wp:paragraph --><p>最新情報は<a href="URL">こちらの記事</a>をご覧ください。</p><!-- /wp:paragraph --> で誘導する
 - 追加コンテンツはWordPress SWELL形式（Gutenbergブロック）で書く
+- 挿入先の見出しテキストは記事内の実際の文字列をそのまま使う
 
 ## 文章ルール
 - やさしく寄り添う口調。「〜ですね」「〜してみてくださいね」を自然に使う
@@ -335,13 +467,17 @@ URL: {row['url']}
 
 ## GSC流入クエリ（過去90日）
 {query_text}
-
+{recent_posts_text}
 ## 現在の記事本文
 {current_content}
 
 ---
-上記の記事を分析し、リライト提案とGSCクエリをもとに**追加すべきコンテンツだけ**を [INSERT] 形式で出力してください。
-既存本文の出力・削除は禁止です。追加のみ行ってください。"""
+【作業指示】
+1. 既存H2・H3を一切変更せず、追加コンテンツだけを [INSERT] 形式で出力してください
+2. 既存本文の出力・削除は絶対禁止。追加のみ
+3. 古い情報があれば最新情報をH4で補足するか、関連最新記事へのリンクで誘導してください
+4. H4を使って既存H3の内容を深掘りしてください（複数箇所OK）
+5. H2・H3の追加は本当に必要な場合のみ（追加しすぎない）"""
 
     msg = client.messages.create(
         model="claude-sonnet-4-6",
@@ -428,10 +564,18 @@ def run_rewrite(blog_name: str) -> None:
             gsc_queries = _fetch_page_gsc_queries(gsc, row["url"])
             print(f"[executor] GSCクエリ: {len(gsc_queries)}件")
 
-            # Claude リライト生成
+            # 同ブログの最近記事取得（古い情報の誘導先候補）
+            recent_posts = _fetch_recent_wp_posts(wp_url, wp_auth)
+
+            # Claude リライト生成（追記パッチ方式）
             print(f"[executor] Claude リライト生成中...")
-            rewritten = _generate_rewrite(row, current_content, gsc_queries, blog_cfg)
+            rewritten = _generate_rewrite(row, current_content, gsc_queries, blog_cfg, recent_posts)
             print(f"[executor] 生成完了: {len(rewritten)}字")
+
+            # 画像が少ない場合はFLUXで追加（最大3枚まで）
+            slug    = _slug_from_url(row["url"])
+            keyword = row.get("title", slug)
+            rewritten = _add_rewrite_images(rewritten, wp_url, wp_auth, keyword, slug, max_add=3)
 
             # WP保存（公開済みなら公開状態を維持）
             edit_url = _save_wp_post(wp_url, wp_auth, post_id, rewritten, current_status)

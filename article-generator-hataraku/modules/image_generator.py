@@ -2029,7 +2029,11 @@ def _guide_overlay_texts(title: str, texts: dict, template: str = "right_person"
     accent = texts.get("accent_word", "").strip() or "入門ガイド"
     strip = texts.get("strip_label", "").strip() or "初心者OK"
 
-    if "ChatGPT" in title or "GPT" in title:
+    if "Claude" in title and ("Codex" in title or "コード" in title) and any(k in title for k in ("比較", "どっち", "違い")):
+        main = "Claude Code"
+        accent = "Codexと比較"
+        strip = "AI開発ツール比較"
+    elif "ChatGPT" in title or "GPT" in title:
         main = "ChatGPT"
         if "入門" in title:
             accent = "入門ガイド"
@@ -2256,7 +2260,7 @@ def _overlay_beginner_guide_banner(img_bytes: bytes, texts: dict) -> bytes:
     from PIL import Image, ImageDraw, ImageFont, ImageOps
     import io as _io
 
-    if texts.get("_aivice_style"):
+    if texts.get("_aivice_style") or texts.get("_editorial_split_style"):
         return _overlay_aivice_template_banner(img_bytes, texts)
 
     img = Image.open(_io.BytesIO(img_bytes)).convert("RGBA")
@@ -3427,7 +3431,17 @@ def _career_overlay_texts(title: str, texts: dict, template: str) -> dict:
     if head_kw:
         main = head_kw
 
-    if "転職" in title:
+    insurance_side_job = "保険レディ" in title or ("保険" in title and "副業" in title)
+
+    if "夏バイト" in title:
+        main = "夏バイト15選"
+        accent = "学生向け職種"
+        strip = "学生バイト"
+    elif insurance_side_job:
+        main = "保険レディ副業"
+        accent = "給料と両立のコツ"
+        strip = "副業・本業両立"
+    elif "転職" in title:
         main = head_kw or "転職"
         accent = "失敗しない進め方"
         strip = "転職ガイド"
@@ -3452,27 +3466,39 @@ def _career_overlay_texts(title: str, texts: dict, template: str) -> dict:
         accent = "原因と対処法"
         strip = "心を整える"
 
+    hataraku_clean_layout = True
     quiet = any(k in title for k in ("仕事行きたくない", "辞めたい", "ストレス", "メンタル", "病気", "疲れ"))
+    if "夏バイト" in title:
+        pre_title = random.choice(["夏休みに稼ぐ", "学生のバイト選び", "短期で働くなら"])
+        supplement = random.choice(["給料と選び方を整理", "高校生・大学生向け", "無理なく稼げる職種"])
+    elif quiet:
+        pre_title = random.choice(["ひとりで抱えない", "心と働き方を整える", "無理しないために"])
+        supplement = random.choice(["症状を整理して早めに休む", "無理せず状態を見直す", "つらさを言葉にして整理"])
+    else:
+        pre_title = random.choice(["迷ったときの道しるべ", "働き方を整える", "次の一歩を考える"])
+        supplement = random.choice(["不安を整理して次へ進む", "リアルな悩みに寄り添う", "自分に合う働き方を探す"])
+
     return {
         "strip_label": strip[:8],
-        "pre_title": random.choice(["ひとりで抱えない", "心と働き方を整える", "無理しないために"]) if quiet else random.choice(["迷ったときの道しるべ", "働き方を整える", "次の一歩を考える"]),
+        "pre_title": pre_title,
         "main_word": main[:12],
         "accent_word": accent[:12],
-        "supplement": random.choice(["症状を整理して早めに休む", "無理せず状態を見直す", "つらさを言葉にして整理"]) if quiet else random.choice(["不安を整理して次へ進む", "リアルな悩みに寄り添う", "自分に合う働き方を探す"]),
+        "supplement": supplement,
         "badge": random.choice(["やさしく解説", "保存版", "迷わない"]),
         "icon_labels": _select_icon_labels(title, site="career"),
         "_palette_name": random.choice(["sage", "sky", "peach", "royal_blue", "mint_yellow"]),
         "_template": template,
         "_panel_curve": random.choice(["soft", "wide", "diagonal"]),
         "_ribbon_x": random.choice([0.615, 0.645, 0.675]),
-        "_sub_layout": "ribbon_top" if quiet else random.choice(["ribbon_top", "badge_circle", "sticky_note", "icon_cards"]),
+        "_sub_layout": "ribbon_top",
         "_text_side": random.choice(["left", "right"]),
         "_icon_style": "dynamic",
         "_icon_glyphs": random.sample(glyph_pool, 3),
-        "_quiet_layout": quiet,
-        "_hide_badge": quiet,
-        "_hide_icons": random.choice([True, False]) if quiet else False,
-        "_hide_top_icon": quiet,
+        "_quiet_layout": True,
+        "_hide_badge": True,
+        "_hide_icons": True,
+        "_hide_top_icon": True,
+        "_editorial_split_style": hataraku_clean_layout,
     }
 
 
