@@ -9959,6 +9959,106 @@
       "output_tokens": 16000,
       "cost_usd": 0.275853,
       "label": "article:AIプログラミング 初心者 やり方"
+    },
+    {
+      "timestamp": "2026-05-19T19:20:34.989368+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 118,
+      "output_tokens": 106,
+      "cost_usd": 0.000518,
+      "label": "lsi:シェフの無添つくりおき 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-19T19:20:38.999093+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 185,
+      "output_tokens": 654,
+      "cost_usd": 0.002764,
+      "label": "kw_research:シェフの無添つくりおき 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-19T19:23:53.163158+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 14214,
+      "output_tokens": 13710,
+      "cost_usd": 0.248292,
+      "label": "article:シェフの無添つくりおき 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-19T20:00:13.970818+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 85,
+      "cost_usd": 0.00043,
+      "label": "lsi:フリーランス 保険 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-19T20:00:18.484551+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 600,
+      "cost_usd": 0.002544,
+      "label": "kw_research:フリーランス 保険 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-19T20:04:15.927313+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11170,
+      "output_tokens": 15523,
+      "cost_usd": 0.266355,
+      "label": "article:フリーランス 保険 おすすめ"
+    },
+    {
+      "timestamp": "2026-05-19T20:30:13.267417+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 85,
+      "cost_usd": 0.000433,
+      "label": "lsi:赤かぶ漬け お土産 日持ち"
+    },
+    {
+      "timestamp": "2026-05-19T20:30:19.842174+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 673,
+      "cost_usd": 0.002838,
+      "label": "kw_research:赤かぶ漬け お土産 日持ち"
+    },
+    {
+      "timestamp": "2026-05-19T20:33:12.187332+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10958,
+      "output_tokens": 13146,
+      "cost_usd": 0.230064,
+      "label": "article:赤かぶ漬け お土産 日持ち"
+    },
+    {
+      "timestamp": "2026-05-19T20:33:16.986755+00:00",
+      "date": "2026-05-19",
+      "hour": "2026-05-19T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 380,
+      "output_tokens": 14,
+      "cost_usd": 0.00036,
+      "label": "maps:赤かぶ漬け お土産 日持ち"
     }
   ],
   "events": [

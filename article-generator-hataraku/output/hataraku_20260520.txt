@@ -1,0 +1,169 @@
+===== [HATARAKU] 実行開始: 2026-05-20 05:00:00 =====
+2026-05-20 05:00:03 [INFO] ============================================================
+2026-05-20 05:00:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-20 05:00:03 [INFO] ============================================================
+2026-05-20 05:00:03 [INFO] 対象ブログ: ['hataraku']
+2026-05-20 05:00:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-20 05:00:06 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-20 05:00:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-20 05:00:06 [INFO]   genre            : 転職・副業・キャリア
+2026-05-20 05:00:06 [INFO]   fact_check       : True
+2026-05-20 05:00:06 [INFO]   article_type_mix : True
+2026-05-20 05:00:06 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-20 05:00:06 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] はた楽ナビ / 「ASP案件マスター」: 21件
+[asp_fetcher]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive / 発達障害×IT就労支援・在宅・スキル習得
+[asp_fetcher]   [S] ラボル → https://hataraku-navi.com/labol / フリーランス資金繰り・即日入金・請求書買取
+[asp_fetcher]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it / 未経験IT転職・ブラック回避・手厚い支援
+[asp_fetcher]   [S] TechGo → https://hataraku-navi.com/techgo / IT転職・年収アップ・ハイクラス
+[asp_fetcher]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi / 転職不安・無料相談・高確定率
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen / 就活・既卒支援・高EPC
+[asp_fetcher]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo / 既卒・フリーター・高卒支援
+2026-05-20 05:00:08 [INFO] [hataraku] アフィリ案件: 21件（スプレッドシート）
+2026-05-20 05:00:08 [INFO] [hataraku]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive
+2026-05-20 05:00:08 [INFO] [hataraku]   [S] ラボル → https://hataraku-navi.com/labol
+2026-05-20 05:00:08 [INFO] [hataraku]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it
+2026-05-20 05:00:08 [INFO] [hataraku]   [S] TechGo → https://hataraku-navi.com/techgo
+2026-05-20 05:00:08 [INFO] [hataraku]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi
+2026-05-20 05:00:08 [INFO] [hataraku]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy
+2026-05-20 05:00:08 [INFO] [hataraku]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen
+2026-05-20 05:00:08 [INFO] [hataraku]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo
+2026-05-20 05:00:08 [INFO] [hataraku]   [S] 保育専門求人サイト ほいく畑 → https://hataraku-navi.com/hoikubatake
+2026-05-20 05:00:08 [INFO] [hataraku]   [A] FREENANCE → https://hataraku-navi.com/freenance
+2026-05-20 05:00:08 [INFO] [hataraku]   [A] Midworks → https://hataraku-navi.com/midworks
+2026-05-20 05:00:08 [INFO] [hataraku]   [A] マスメディアン → https://hataraku-navi.com/massmedia
+2026-05-20 05:00:08 [INFO] [hataraku]   [A] atGP → https://hataraku-navi.com/atgp
+2026-05-20 05:00:08 [INFO] [hataraku]   [A] atGPジョブトレ IT・Web → https://hataraku-navi.com/atgp_job
+2026-05-20 05:00:08 [INFO] [hataraku]   [A] リゾートバイトダイブ → https://hataraku-navi.com/dive
+2026-05-20 05:00:08 [INFO] [hataraku]   [A] 日本マンパワー → https://hataraku-navi.com/manpower
+2026-05-20 05:00:08 [INFO] [hataraku]   [A] クラウドワークス → https://hataraku-navi.com/crowdworks
+2026-05-20 05:00:08 [INFO] [hataraku]   [?] 保育エイド → https://hataraku-navi.com/hoiku-aid
+2026-05-20 05:00:08 [INFO] [hataraku]   [?] 保育バランス → https://hataraku-navi.com/hoiku-balance
+2026-05-20 05:00:08 [INFO] [hataraku]   [?] 保育メトロ → https://hataraku-navi.com/hoiku-metro
+2026-05-20 05:00:08 [INFO] [hataraku]   [?] 20代の転職相談所 → https://hataraku-navi.com/20tensyoku
+2026-05-20 05:00:10 [INFO] [wp] 記事取得: 計53件 (draft=1 / publish=52)
+2026-05-20 05:00:10 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-20 05:00:11 [INFO] [fetch] サブKW紐付け: 6968件 → 187記事に統合
+2026-05-20 05:00:11 [INFO] [fetch] [キーワード] メインKW: 172件（vol≥30 or N/A）  サブKW除外: 6968件（統合対象）  投稿済みスキップ: 894件  テーマ外除外: 198件  aim内訳: [aim:131, add:7, claude:232]
+2026-05-20 05:00:11 [INFO] [dup_check] 優先候補: 172件 {'aim': 67, 'add': 6, 'claude': 99} を先頭評価
+2026-05-20 05:00:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=172件, 要求=1件)
+2026-05-20 05:00:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-20 05:00:11 [INFO] [select]   1. 「フリーランス 保険 おすすめ」 vol=0 seo=N/A comp=N/A
+2026-05-20 05:00:11 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-20 05:00:11 [INFO] [hataraku] 候補: 172件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $2.8309 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $2.8309(¥425) / 9記事
+2026-05-20 05:00:11 [INFO] [api_guard] 本日の使用量: $2.8309 / ¥425 (29回呼び出し)
+2026-05-20 05:00:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-20 05:00:11 [INFO] [hataraku] [1/1] [LONGTAIL] 「フリーランス 保険 おすすめ」 vol=0 ★AIM
+2026-05-20 05:00:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-20 05:00:11 [INFO] [generate] 生成開始: 「フリーランス 保険 おすすめ」(vol:0) fact_check=True target_length=7,147字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「フリーランス 保険 おすすめ」(vol:0) [7,147字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $2.8309 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $2.8309(¥425) / 9記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=113 out=85 → $0.0004  (lsi:フリーランス 保険 おすすめ)
+[api_guard] 本日の使用量: $2.8313 / ¥424 (1000回呼び出し)
+[article_generator] 共起語: フリーランス保険、業務災害保険、賠償責任保険、健康保険、年金、確定申告、所得補償保険、医療保険、生命保険、損害保険、自営...
+[api_guard] ✅ 本日: $2.8313 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $2.8313(¥425) / 9記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=180 out=600 → $0.0025  (kw_research:フリーランス 保険 おすすめ)
+[api_guard] 本日の使用量: $2.8339 / ¥425 (1001回呼び出し)
+[article_generator] サジェスト: フリーランス 保険 おすすめ・フリーランス 保険 必要・フリーランス 保険 種類...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $2.8339 / 1時間: $0.0030  (上限 日次$10.00 / 時間$5.00)  全体: $2.8339(¥425) / 9記事
+[api_guard] 記録: claude-sonnet-4-6 in=11170 out=15523 → $0.2664  (article:フリーランス 保険 おすすめ)
+[api_guard] 本日の使用量: $3.1002 / ¥465 (1002回呼び出し)
+[imagefx] 背景:B / ビジュアル:Cute flat icons of laptop, shield, coins, stars, c
+[imagefx] タイトル(英): Freelance Insurance Top Seven
+[article_generator] 完了: 「フリーランス保険おすすめ7選！種類・選び方・保険料相場まで解説」 カテゴリ: 未設定(-) タグ: ['フリーランス保険', '賠償責任保険', '所得補償保険', '個人事業主', '健康保険']
+2026-05-20 05:04:23 [INFO] [generate] パターンCTA挿入（H3末尾）: 3件
+2026-05-20 05:04:23 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「保育バランス」(ID:581)
+2026-05-20 05:04:25 [INFO] [generate] 完了: 「フリーランス保険おすすめ7選！種類・選び方・保険料相場まで解説」
+2026-05-20 05:04:25 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 21件
+[category_selector] 「フリーランス 保険 おすすめ」→ 副業・フリーランス(277) score=36
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring layered shield icons, health cross symbol, an...
+[image_generator] 完了 (40KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260520_050435_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 704)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: フリーランスに必要な保険の種類と優先順位
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring stacked shield icons, insurance documents, an...
+[image_generator] 完了 (45KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260520_050448_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 705)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: フリーランス保険おすすめ7選を比較
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration with pastel colors showing calculator, receipt, tax doc...
+[image_generator] 完了 (52KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260520_050502_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 706)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: フリーランス保険の保険料と経費・節税の活用方法
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration with pastel colors and soft gradients showing question ...
+[image_generator] 完了 (46KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260520_050518_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 707)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: freelance-insurance-recommended-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration of shield, insurance document, and gear icons in soft p...
+[image_generator] 完了 (32KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260520_050531_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 708)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: freelance-insurance-recommended-summary.jpg
+[internal_linker] 公開済み記事取得: 52件
+[internal_linker] 「クラウドワークス」関連記事: 1件追加
+[internal_linker] 同カテゴリー: 2件選定（ルールベース）
+[internal_linker] 内部リンク選定完了: 計3件 (成約:0 / 案件関連:1 / 同親KW+補完:2)
+[internal_linker] 製品名マッチ「クラウドワークス」→ セクション4に割り当て
+[internal_linker] 注意: 内部リンク3件（目標5件未達）
+[internal_linker] 内部リンク挿入完了: 計3件 (本文H3:3 / 末尾リスト:0)
+[internal_linker] 内部リンク 3件 挿入: ['クラウドワークス初心者の始め方・稼ぎ方完全ガイド！登録から最', '保険レディの副業で稼ぐ方法｜給料・時間・本業との両立まで解説', '在宅ワーク未経験から始める方法7選！スキルなしでも稼げる仕事']
+[wordpress] タグ設定: ['フリーランス保険', '賠償責任保険', '所得補償保険', '個人事業主', '健康保険']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 709) → https://hataraku-navi.com/wp-admin/post.php?post=709&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, shield, coins, stars, checkmarks and lightbulb in soft pastel pink, mint, lavender and cream tones with minimal design style.
+Soft pastel gradient background: gentle blush pink, cream and ivory tones, warm neutral atmosphere, feminine and sophisticated, airy and bright.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Freelance Insurance Top Seven" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行6145 「フリーランス 保険 おすすめ」→ 投稿済み (2026/05/20, ID:709) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「フリーランス保険おすすめ7選！種類・選び方・保険料相場まで解」
+2026-05-20 05:05:43 [INFO] [post] WP投稿完了: ID=709 → https://hataraku-navi.com/wp-admin/post.php?post=709&action=edit
+2026-05-20 05:05:43 [INFO] [hataraku] [1/1] ✅ 完了: 「フリーランス保険おすすめ7選！種類・選び方・保険料相場まで解説」
+2026-05-20 05:05:43 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-20 05:05:43 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hataraku limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #709 フリーランス保険おすすめ7選！種類・選び方・保険料相場まで解説
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] はた楽ナビ向けキャリア型バナーで生成します
+[IMAGE] career template: cafe_calm
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1722KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260520_050637_codex_hataraku_career_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 710)
+[codex-eyecatch] featured image 設定完了: media_id=710
+[codex-eyecatch] 編集URL: https://hataraku-navi.com/wp-admin/post.php?post=709&action=edit
+2026-05-20 05:06:42 [INFO] 
+============================================================
+2026-05-20 05:06:42 [INFO] 【全体サマリー】
+2026-05-20 05:06:42 [INFO]   ブログ数  : 1件
+2026-05-20 05:06:42 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-20 05:06:42 [INFO]   所要時間  : 398.9秒
+2026-05-20 05:06:42 [INFO]   ✅ [hataraku] フリーランス 保険 おすすめ → フリーランス保険おすすめ7選！種類・選び方・保険料相場まで解説
+2026-05-20 05:06:42 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=709&action=edit
+2026-05-20 05:06:42 [INFO] ============================================================
+===== [HATARAKU] 記事生成終了: 2026-05-20 05:06:42 / exit=0 =====

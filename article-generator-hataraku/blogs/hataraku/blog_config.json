@@ -104,6 +104,15 @@
       "ぜひ〜"
     ]
   },
+  "eyecatch_model": "gpt-image-2",
+  "article_image_model": "black-forest-labs/FLUX.1-schnell",
+  "image_style": {
+    "eyecatch_templates": {
+      "a": "Warm and professional illustration for a Japanese career blog thumbnail, wide 16:9 landscape format. Background: clean warm white at center fading to soft professional blue (#E8F0FF) at top-right corner and a gentle warm beige (#FFF5E8) glow at bottom-left — calm and trustworthy, not stark. Central composition: one bold, clearly recognizable illustration representing {topic} placed slightly left of center, large enough to be immediately understood. Style: soft flat design with gentle gradients, rounded edges, professional yet approachable colors — navy blue (#4A72B8), soft coral (#FF8A70), warm yellow (#FFD166), light teal (#6DCFB8). Depth: two semi-transparent overlapping rounded shapes behind the main illustration create a sense of depth and positivity. Supporting elements: 2 small accent icons on the right side reinforcing the career or work theme. Decorative accents: a few soft dots or small curved lines scattered lightly for visual rhythm. Soft glow behind the central illustration. No text, no letters, no numbers, no faces. Mood: professional, warm, trustworthy, encouraging — like a supportive career advisor. Japanese career blog meets modern lifestyle. Engaging enough to make someone want to read about their work future.",
+      "b": "Warm and story-like Japanese career blog thumbnail, wide 16:9 landscape format. Scene: a close-up of a person's hands lightly typing or writing at a desk, viewed from slightly above — only hands and desk visible, no face, no head, no full body. Papers, a notebook, or career documents subtly visible. The laptop screen or notepad shows a clean abstract representation of {topic}: resume outlines, career path diagrams, or soft flowing text lines. Warm bokeh background suggests a home office or cozy workspace — a plant or coffee mug softly blurred in the far corner. Style: soft cinematic illustration with gentle warm grain texture — lived-in and human, not sterile or corporate. Color palette: warm cream (#FFF8F0), professional blue (#4A72B8), warm amber (#FFD166), soft coral (#FF8A70). Composition: hands occupy left half of frame, screen or documents fill right side, creating a natural left-to-right visual flow. No face, no head, no full human silhouette, no text overlay, no watermark. Mood: warm, motivated, relatable — the feeling of planning your career path on a hopeful morning. Makes the viewer feel understood and ready to take action.",
+      "c": "Cinematic warm career blog thumbnail background for text overlay, wide 16:9 landscape format. COMPOSITION: a young professional (back view or side silhouette, no face) seated at a bright desk reviewing documents or a laptop, positioned in the RIGHT 55% of the frame — warm natural light creating a hopeful halo effect around their silhouette, soft bokeh background of a modern home office or tidy workspace. The desk surface glows warmly evoking {topic}. LEFT 45% OF FRAME: intentionally clear — a smooth gradient from soft warm shadow on the far left edge blending naturally into the scene. This entire left side must remain EMPTY with no objects, no decorations, no people. Perfect for text overlay. Color palette: deep warm shadow (#1a1510) on left, warm amber (#FFD166) mid, professional blue (#4A72B8) glow on right. Soft cinematic lighting contrast between clear left and warm-lit right. NO text, NO numbers, NO UI labels anywhere in the image. Style: soft painterly cinematic illustration. Mood: hopeful, motivated, professional, warm — like the cover of a career lifestyle magazine."
+    }
+  },
   "wp_post_status": "draft",
   "wp_url": "https://hataraku-navi.com",
   "default_fallback_category": "転職・就職",
@@ -237,5 +246,6 @@
       "お金"
     ]
   },
-  "main_ss_id": "1w0oAjA8JflYqHZP31XeF2RYZ_jxdznRl6D2e8387jLU"
+  "main_ss_id": "1w0oAjA8JflYqHZP31XeF2RYZ_jxdznRl6D2e8387jLU",
+  "kanikabari_include_no_aim": true
 }
