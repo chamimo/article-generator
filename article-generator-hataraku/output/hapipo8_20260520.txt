@@ -1,0 +1,188 @@
+===== [HAPIPO8] 実行開始: 2026-05-20 04:20:00 =====
+2026-05-20 04:20:03 [INFO] ============================================================
+2026-05-20 04:20:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-20 04:20:03 [INFO] ============================================================
+2026-05-20 04:20:03 [INFO] 対象ブログ: ['hapipo8']
+2026-05-20 04:20:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-20 04:20:05 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-20 04:20:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-20 04:20:05 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-05-20 04:20:05 [INFO]   fact_check       : True
+2026-05-20 04:20:05 [INFO]   article_type_mix : True
+2026-05-20 04:20:05 [INFO]   stop_words       : ['2026']
+2026-05-20 04:20:05 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] 気になることブログ / 「ASP案件マスター」: 50件
+[asp_fetcher]   [S] 福ちゃん → https://hapipo8.com/fukuchan / 着物買取・女性
+[asp_fetcher]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori / 即現金化・出張査定
+[asp_fetcher]   [S] フクウロ → https://hapipo8.com/fukuuro / 洋服買取 / 断捨離 / ブランド買取
+[asp_fetcher]   [S] メディカルフードサービス → https://hapipo8.com/medical_food / 腎臓病 宅配食 / 健康管理
+[asp_fetcher]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki / 宅配食 おすすめ 忙しい / 料理 時間ない 共働き
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile / 審査なし・スマホ契約できない・ブラックOK
+[asp_fetcher]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+
+2026-05-20 04:20:08 [INFO] [hapipo8] アフィリ案件: 50件（スプレッドシート）
+2026-05-20 04:20:08 [INFO] [hapipo8]   [S] 福ちゃん → https://hapipo8.com/fukuchan
+2026-05-20 04:20:08 [INFO] [hapipo8]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori
+2026-05-20 04:20:08 [INFO] [hapipo8]   [S] フクウロ → https://hapipo8.com/fukuuro
+2026-05-20 04:20:08 [INFO] [hapipo8]   [S] メディカルフードサービス → https://hapipo8.com/medical_food
+2026-05-20 04:20:08 [INFO] [hapipo8]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-05-20 04:20:08 [INFO] [hapipo8]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman
+2026-05-20 04:20:08 [INFO] [hapipo8]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] トラベル・スタンダード・ジャパン → https://px.a8.net/svt/ejp?a8mat=4B1THV+17H122+5LKE+5ZU29
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] ORBIS AMBER(オルビス アンバー) → https://px.a8.net/svt/ejp?a8mat=4B1THX+DDO2AI+1USQ+4ASX02
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] トリア → https://hapipo8.com/tria
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] nosh - ナッシュ → https://hapipo8.com/nosh
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] 快眠タイムズストア → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DRYGT6+4UHE+TRVYQ
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] NELL マットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6M5RVE+4KD8+5ZMCI
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] 咲夜レアルマットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6LKC9M+4MRW+61Z81
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] オーケンウォーター → https://px.a8.net/svt/ejp?a8mat=4B1THX+CRN0WQ+1LOO+6NMJL
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] every frecious（エブリィフレシャス） → https://px.a8.net/svt/ejp?a8mat=4B1THX+CS8GII+2B8Y+15OK2A
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] リゾバ → https://hapipo8.com/rizoba
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] ダイブ → https://hapipo8.com/dive
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] 工場求人ワールド → https://px.a8.net/svt/ejp?a8mat=4B1O1T+EGYV5U+5S9S+5YJRM
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] ソフトバンク光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KARLU+3HKU+25FF81
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] BIGLOBE WiMAX +5G → https://px.a8.net/svt/ejp?a8mat=4B1THS+2TTMYY+B4+2BDBUB
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] フレッツ光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KW4WA+348K+1TJE9U
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] AI英会話アプリ【スピーク】 → https://hapipo8.com/speak
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] もぐワン ペットフード → https://hapipo8.com/moguwan
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] DMM 生成AI CAMP → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] ポニークリーニング → https://px.a8.net/svt/ejp?a8mat=4B1THV+5QLST6+4N08+5Z6WY
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] 体験型カタログギフト【EXETIME】 → https://hapipo8.com/exetime
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] GMOとくとくBB → https://px.a8.net/svt/ejp?a8mat=4B1THS+2UF2KQ+50+3H48S2
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] Amazon Prime Video → https://amzn.to/4tbKPVa
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] Pollet → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] カレントボディ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DFGD3U+54TM+5YJRM
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] アプリ接客キャスト → https://px.a8.net/svt/ejp?a8mat=4B1O1T+FKUWOY+3P1G+NTRMQ
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] ヴィーナスウォーカー → https://px.a8.net/svt/ejp?a8mat=4B1THV+6632JE+58KC+5YRHE
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] WEBCOACH → https://px.a8.net/svt/ejp?a8mat=4B1V1W+DW4O7U+5EVK+5YZ75
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] ポケットリサーチ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DUXMU2+58KC+BWVTE
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] ラボル カード払い → https://px.a8.net/svt/ejp?a8mat=4B1THS+3TJN9M+40JM+1NJZN5
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] クロスワンルーム → https://px.a8.net/svt/ejp?a8mat=4B1THX+DPKQE2+4EZ2+BYLJL
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] Mr.シリーズ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CLOOUY+1USQ+2Z8T76
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] IBJ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CF4X7E+FOG+4MPSTE
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] ユアマイスター → https://px.a8.net/svt/ejp?a8mat=4B1THX+BZNNH6+4HQS+5YJRM
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] TOSSY → https://px.a8.net/svt/ejp?a8mat=4B1THS+2V0I6I+1WP2+1HLNLE
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] ABLENET VPS → https://px.a8.net/svt/ejp?a8mat=4B1THS+2VLXSA+4NIK+5Z6WX
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-20 04:20:08 [INFO] [hapipo8]   [A] BIGLOBE光 → https://px.a8.net/svt/ejp?a8mat=4B3LMR+4JQL96+3SPO+7LW1F7
+2026-05-20 04:20:08 [INFO] [hapipo8]   [B] 食楽膳 → https://hapipo8.com/shokurakuzen
+2026-05-20 04:20:08 [INFO] [hapipo8]   [?] 楽器買取 福ちゃん → https://hapipo8.com/gakki-fukucyan
+2026-05-20 04:20:08 [INFO] [hapipo8]   [?] ニーゴ・リユース → https://hapipo8.com/25reuse
+2026-05-20 04:20:11 [INFO] [wp] 記事取得: 計169件 (publish=169)
+2026-05-20 04:20:11 [INFO] [hapipo8] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.4, 'monetize': 0.1})
+2026-05-20 04:20:12 [INFO] [fetch] サブKW紐付け: 165件 → 50記事に統合
+2026-05-20 04:20:12 [INFO] [fetch] [キーワード] メインKW: 15件（vol≥30 or N/A）  サブKW除外: 165件（統合対象）  投稿済みスキップ: 134件  テーマ外除外: 285件  aim内訳: [now:1, aim:60, add:214, claude:25]
+2026-05-20 04:20:12 [INFO] [dup_check] 優先候補: 15件 {'now': 1, 'add': 14} を先頭評価
+2026-05-20 04:20:12 [INFO] [dup_check] NOW優先スキップ: 「シェフの無添つくりおき 口コミ 評判」（重複チェック免除）
+2026-05-20 04:20:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=15件, 要求=1件)
+2026-05-20 04:20:12 [INFO] [select] 1件選定 (要求=1件)
+2026-05-20 04:20:12 [INFO] [select]   1. 「シェフの無添つくりおき 口コミ 評判」 vol=0 seo=N/A comp=N/A
+2026-05-20 04:20:12 [INFO] [hapipo8] LONGTAIL選定: 1件
+2026-05-20 04:20:12 [INFO] [hapipo8] 候補: 15件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $2.5793 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $2.5793(¥387) / 8記事
+2026-05-20 04:20:12 [INFO] [api_guard] 本日の使用量: $2.5793 / ¥387 (26回呼び出し)
+2026-05-20 04:20:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-20 04:20:12 [INFO] [hapipo8] [1/1] [LONGTAIL] 「シェフの無添つくりおき 口コミ 評判」 vol=0 ★NOW
+2026-05-20 04:20:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-20 04:20:12 [INFO] [generate] 生成開始: 「シェフの無添つくりおき 口コミ 評判」(vol:0) fact_check=True target_length=7,220字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「シェフの無添つくりおき 口コミ 評判」(vol:0) [7,220字 / H3:8〜12本 / FAQ:5〜7問]
+[article_generator] 事実確認中: 「シェフの無添つくりおき 口コミ 評判」
+[article_generator] 事実確認完了: 確認済み12件 / 不確か2件 / 注意5件
+  ⚠️  価格に関する記述：複数のレビューサイトで「高い」という評価が多いため、記事ではこの点を均衡的に扱う必要がある（初回割引については記載可）
+  ⚠️  味の評価が分かれている：無添加による優しい味付けを肯定評価する利用者と、味が薄いと感じる利用者の両者が存在するため、記事では両方の見方を記載することが重要
+  ⚠️  正式名称の揺らぎ：ネット検索では『シェフの無添加つくりおき』『シェフの無添加作り置き』とも検索されるが、公式の正式名称は『シェフの無添つくりおき』
+  ⚠️  消費期限に関する地域差：冷蔵配送のため一部エリアでは2-3日間の制限がある可能性があり、全国一律4日間ではない点に注意
+  ⚠️  量に関する評価：子どもの年齢・人数により「足りない」という評判もあるため、プラン選択時の注意を記載すべき
+[api_guard] ✅ 本日: $2.5793 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $2.5793(¥387) / 8記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=118 out=106 → $0.0005  (lsi:シェフの無添つくりおき 口コミ 評判)
+[api_guard] 本日の使用量: $2.5798 / ¥386 (997回呼び出し)
+[article_generator] 共起語: シェフの無添つくりおき、宅配弁当、冷凍食事、口コミ評判、栄養バランス、健康食、無添加食品、調理済み食事、食事宅配サービス...
+[api_guard] ✅ 本日: $2.5798 / 1時間: $0.0005  (上限 日次$10.00 / 時間$5.00)  全体: $2.5798(¥387) / 8記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=185 out=654 → $0.0028  (kw_research:シェフの無添つくりおき 口コミ 評判)
+[api_guard] 本日の使用量: $2.5826 / ¥387 (998回呼び出し)
+[article_generator] サジェスト: シェフの無添つくりおき 口コミ・シェフの無添つくりおき 評判・シェフの無添つくりおき 料金...
+[article_generator] 検索意図: 購買直前 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $2.5826 / 1時間: $0.0033  (上限 日次$10.00 / 時間$5.00)  全体: $2.5826(¥387) / 8記事
+[api_guard] 記録: claude-sonnet-4-6 in=14214 out=13710 → $0.2483  (article:シェフの無添つくりおき 口コミ 評判)
+[api_guard] 本日の使用量: $2.8309 / ¥424 (999回呼び出し)
+[imagefx] 背景:A / ビジュアル:Minimal flat design with laptop, speech bubbles, s
+[imagefx] タイトル(英): Chef No Additives Meal Prep
+[article_generator] 完了: 「シェフの無添つくりおき 口コミ・評判まとめ｜料金・メニュー・味の正直レビュー」 カテゴリ: 未設定(-) タグ: ['シェフの無添つくりおき', '宅配弁当', '無添加食品', '食事宅配サービス', '健康食']
+2026-05-20 04:23:57 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-20 04:23:57 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「シェフの無添つくりおき」(ID:3989)
+2026-05-20 04:23:58 [INFO] [link_check] 死リンク除去: 1件 / チェック: 3件
+2026-05-20 04:23:58 [INFO] [generate] 完了: 「シェフの無添つくりおき 口コミ・評判まとめ｜料金・メニュー・味の正直レビュー」
+2026-05-20 04:23:58 [INFO] [post] 投稿方式: publish
+[category_selector] カテゴリ取得: 36件
+[category_selector] 「シェフの無添つくりおき 口コミ 評判」→ 節約・お得情報(678) score=21
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful meal prep containers with fresh vegetables and ingredients, floating ut...
+[image_generator] 完了 (101KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260520_042409_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4270)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: シェフの無添つくりおきとはどんなサービス？基本情報を解説
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring review stars, speech bubbles, and meal contai...
+[image_generator] 完了 (53KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260520_042422_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4271)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: シェフの無添つくりおきの口コミ・評判｜良い点も悪い点も正直に
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring signup forms, checkmarks, and cancellation sy...
+[image_generator] 完了 (32KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260520_042435_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4272)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: シェフの無添つくりおきの申し込み方法と解約手順
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration with pastel colors and soft gradients featuring questio...
+[image_generator] 完了 (44KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260520_042445_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4273)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: chef-mutenashi-tsukurioki-review-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful meal prep containers with fresh vegetables and ingredients, surrounded ...
+[image_generator] 完了 (83KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260520_042457_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4274)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: chef-mutenashi-tsukurioki-review-summary.jpg
+[internal_linker] 公開済み記事取得: 169件
+[internal_linker] 古い記事を除外: 123件（2年以上前）→ 46件で選定
+[internal_linker] 同カテゴリー: 7件選定（ルールベース）
+[internal_linker] キーワードトークンマッチ: 1件選定（ルールベース）
+[internal_linker] 低関連性 1件をフッターへ: ['福ちゃんの口コミ・評判を徹底解説！着物買取で本当に']
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 1件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:7 / 末尾リスト:1)
+[internal_linker] 内部リンク 8件 挿入: ['フレッツ光とビッグローブ光の違いを徹底比較！料金・速度・乗り', '携帯料金を滞納すると契約できない？解決策と審査を通す方法を徹', 'お金なくても備蓄できる！低予算で始める食料・防災グッズの節約', '未経験からITスキルを学ぶ方法7ステップ！独学・スクール徹底', '楽器の買取屋さん比較2026年版｜どれがいい？おすすめ業者6', '海外旅行を安くする方法15選！航空券・ホテル・時期まで徹底解', 'エアコン電気代を節約する方法10選！設定温度からフィルター掃', '福ちゃんの口コミ・評判を徹底解説！着物買取で本当に高く売れる']
+[wordpress] タグ設定: ['シェフの無添つくりおき', '宅配弁当', '無添加食品', '食事宅配サービス', '健康食']
+[wordpress] 投稿方式: publish
+[wordpress] 投稿完了 (ID: 4275) → https://hapipo8.com/wp-admin/post.php?post=4275&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行107 「シェフの無添つくりおき 口コミ 評判」→ 投稿済み (2026/05/20, ID:4275) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「シェフの無添つくりおき 口コミ・評判まとめ｜料金・メニュー・」
+2026-05-20 04:25:12 [INFO] [post] WP投稿完了: ID=4275 → https://hapipo8.com/wp-admin/post.php?post=4275&action=edit
+2026-05-20 04:25:12 [INFO] [hapipo8] [1/1] ✅ 完了: 「シェフの無添つくりおき 口コミ・評判まとめ｜料金・メニュー・味の正直レビュー」
+2026-05-20 04:25:12 [INFO] [hapipo8] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-20 04:25:12 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hapipo8 limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #4275 シェフの無添つくりおき 口コミ・評判まとめ｜料金・メニュー・味の正直レビュー
+[codex-eyecatch] 既存ライブラリ画像を選択: search=シェフの無添つくりおき media_id=4272
+[codex-eyecatch] 既存ライブラリ画像を featured image に設定: media_id=4272
+[codex-eyecatch] 編集URL: https://hapipo8.com/wp-admin/post.php?post=4275&action=edit
+2026-05-20 04:25:22 [INFO] 
+============================================================
+2026-05-20 04:25:22 [INFO] 【全体サマリー】
+2026-05-20 04:25:22 [INFO]   ブログ数  : 1件
+2026-05-20 04:25:22 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-20 04:25:22 [INFO]   所要時間  : 319.3秒
+2026-05-20 04:25:22 [INFO]   ✅ [hapipo8] シェフの無添つくりおき 口コミ 評判 → シェフの無添つくりおき 口コミ・評判まとめ｜料金・メニュー・味の正直レビュー
+2026-05-20 04:25:22 [INFO]        https://hapipo8.com/wp-admin/post.php?post=4275&action=edit
+2026-05-20 04:25:22 [INFO] ============================================================
+===== [HAPIPO8] 記事生成終了: 2026-05-20 04:25:23 / exit=0 =====

@@ -1434,6 +1434,77 @@ def select_keywords(
 # 記事タイプ → target_length 解決ヘルパー
 # ─────────────────────────────────────────────────────────────
 
+def _estimate_competitor_length(urls: list[str], timeout: int = 6) -> int | None:
+    """
+    競合URLのテキスト文字数を並列計測し、最大値を返す。
+
+    - HTML から script/style/nav/header/footer/aside を除いたテキストを抽出
+    - 空白除去後の文字数でカウント（日本語記事は1文字=1カウント）
+    - タイムアウト内に取得できた URL の最大文字数を返す
+    - URL が空・取得失敗の場合は None
+    """
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    from html.parser import HTMLParser
+    import urllib.request
+    import re as _re2
+
+    _SKIP_TAGS = {"script", "style", "nav", "header", "footer", "aside", "noscript", "iframe"}
+
+    class _Extractor(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self._buf: list[str] = []
+            self._depth = 0
+
+        def handle_starttag(self, tag, attrs):
+            if tag in _SKIP_TAGS:
+                self._depth += 1
+
+        def handle_endtag(self, tag):
+            if tag in _SKIP_TAGS and self._depth > 0:
+                self._depth -= 1
+
+        def handle_data(self, data):
+            if self._depth == 0:
+                self._buf.append(data)
+
+        def get_text(self) -> str:
+            return " ".join(self._buf)
+
+    def _fetch_char_count(url: str) -> int | None:
+        try:
+            req = urllib.request.Request(
+                url,
+                headers={"User-Agent": "Mozilla/5.0 (compatible; BlogBot/1.0)"},
+            )
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                raw = resp.read(600_000)  # 最大600KB
+            html = raw.decode("utf-8", errors="replace")
+            parser = _Extractor()
+            parser.feed(html)
+            clean = _re2.sub(r"\s+", "", parser.get_text())
+            return len(clean) if len(clean) > 300 else None
+        except Exception:
+            return None
+
+    valid_urls = [u for u in urls if u and u.startswith("http")]
+    if not valid_urls:
+        return None
+
+    lengths: list[int] = []
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        futures = {ex.submit(_fetch_char_count, u): u for u in valid_urls}
+        for f in as_completed(futures, timeout=timeout + 3):
+            try:
+                result = f.result()
+                if result:
+                    lengths.append(result)
+            except Exception:
+                pass
+
+    return max(lengths) if lengths else None
+
+
 def _resolve_target_length(target_length: int | dict, article_type: str) -> int:
     """
     BlogConfig.target_length（int or dict）と article_type から
@@ -1511,6 +1582,27 @@ def generate(
         boosted = min(int(target_length * 1.3), 12000)
         log.info(f"[generate] 手順解説型ブースト: {target_length:,}字 → {boosted:,}字")
         target_length = boosted
+
+    # 競合文字数チェック（参考URLが指定されている場合）
+    # 参考WEB①②③の上位記事文字数を計測し、競合最大値 × 1.2 が設定値を超えるなら採用
+    if ref_urls:
+        _rival_urls = [ref_urls.get(k, "") for k in ("web1", "web2", "web3")]
+        _rival_urls = [u for u in _rival_urls if u]
+        if _rival_urls:
+            competitor_len = _estimate_competitor_length(_rival_urls)
+            if competitor_len:
+                rival_target = min(int(competitor_len * 1.2), 20000)
+                if rival_target > target_length:
+                    log.info(
+                        f"[generate] 競合文字数調整: {target_length:,}字 → {rival_target:,}字"
+                        f"（競合上位最大: {competitor_len:,}字 × 1.2）"
+                    )
+                    target_length = rival_target
+                else:
+                    log.info(
+                        f"[generate] 競合文字数チェック: 競合最大 {competitor_len:,}字"
+                        f" → 設定値 {target_length:,}字 で生成（調整不要）"
+                    )
 
     # blog_cfg.asp_links（blog_config.json の静的案件）を asp_list にマージ
     # スプレッドシートから0件の場合でもプロンプトに案件情報が渡るようにする

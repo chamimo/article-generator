@@ -14,7 +14,6 @@
     "aivice_wave_panel"
   ],
   "hida": [
-    "train_window_view",
     "local_food",
     "market_walk",
     "town_morning",
@@ -25,7 +24,8 @@
     "quiet_letters",
     "letter_story",
     "nostalgic_desk",
-    "market_walk"
+    "market_walk",
+    "travel_flatlay"
   ],
   "curiosity": [
     "notebook_closeup",

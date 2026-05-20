@@ -234,19 +234,19 @@ __AFFILIATE_LINES__
 {{手順・ステップを説明するH3では、番号付きリストの代わりに必ず以下のSWELL Stepブロックを使うこと。}}
 <!-- wp:loos/step -->
 <div class="swell-block-step" data-num-style="circle"><!-- wp:loos/step-item {{"stepLabel":"STEP"}} -->
-<div class="swell-block-step__item"><div class="swell-block-step__number u-bg-main"><span class="__label">STEP</span></div><div class="swell-block-step__title u-fz-l"><strong>【STEP1】{{ステップタイトル}}</strong></div><div class="swell-block-step__body"><!-- wp:paragraph -->
+<div class="swell-block-step__item"><div class="swell-block-step__number u-bg-main"><span class="__label">STEP</span></div><div class="swell-block-step__title u-fz-l"><strong>{{ステップタイトル}}</strong></div><div class="swell-block-step__body"><!-- wp:paragraph -->
 <p>{{このステップで何をするか1文 → 具体的な操作（クリック先・入力値）→ 結果・確認ポイント（120〜200字）}}</p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:loos/step-item -->
 
 <!-- wp:loos/step-item {{"stepLabel":"STEP"}} -->
-<div class="swell-block-step__item"><div class="swell-block-step__number u-bg-main"><span class="__label">STEP</span></div><div class="swell-block-step__title u-fz-l"><strong>【STEP2】{{ステップタイトル}}</strong></div><div class="swell-block-step__body"><!-- wp:paragraph -->
+<div class="swell-block-step__item"><div class="swell-block-step__number u-bg-main"><span class="__label">STEP</span></div><div class="swell-block-step__title u-fz-l"><strong>{{ステップタイトル}}</strong></div><div class="swell-block-step__body"><!-- wp:paragraph -->
 <p>{{同上（120〜200字）}}</p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:loos/step-item -->
 
 <!-- wp:loos/step-item {{"stepLabel":"STEP"}} -->
-<div class="swell-block-step__item"><div class="swell-block-step__number u-bg-main"><span class="__label">STEP</span></div><div class="swell-block-step__title u-fz-l"><strong>【STEP3】{{ステップタイトル}}</strong></div><div class="swell-block-step__body"><!-- wp:paragraph -->
+<div class="swell-block-step__item"><div class="swell-block-step__number u-bg-main"><span class="__label">STEP</span></div><div class="swell-block-step__title u-fz-l"><strong>{{ステップタイトル}}</strong></div><div class="swell-block-step__body"><!-- wp:paragraph -->
 <p>{{同上（120〜200字）}}</p>
 <!-- /wp:paragraph --></div></div>
 <!-- /wp:loos/step-item --></div>
@@ -583,7 +583,7 @@ def _build_howto_section(keyword: str) -> str:
         "  <!-- wp:loos/step -->\n"
         "  <div class=\"swell-block-step\" data-num-style=\"circle\"><!-- wp:loos/step-item {\"stepLabel\":\"STEP\"} -->\n"
         "  <div class=\"swell-block-step__item\"><div class=\"swell-block-step__number u-bg-main\"><span class=\"__label\">STEP</span></div>"
-        "<div class=\"swell-block-step__title u-fz-l\"><strong>【STEP1】タイトル</strong></div>"
+        "<div class=\"swell-block-step__title u-fz-l\"><strong>タイトル</strong></div>"
         "<div class=\"swell-block-step__body\"><!-- wp:paragraph -->\n"
         "  <p>本文（120〜200字）</p>\n"
         "  <!-- /wp:paragraph --></div></div>\n"
