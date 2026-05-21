@@ -1121,6 +1121,7 @@ def generate(
     sub_keywords: list[str] | None = None,
     article_type: str = "longtail",
     asp_list: list[dict] | None = None,
+    blog_persona_section: str = "",
 ) -> dict:
     """
     記事を生成して dict で返す。
@@ -1128,6 +1129,7 @@ def generate(
     article_type に応じて target_length を解決し、H3本数・FAQ・max_tokensを切り替える。
     asp_list が渡された場合はASP案件リンクをプロンプトに注入する。
     blog_cfg.guide_links が設定されている場合は内部誘導リンクをプロンプトに注入する。
+    blog_persona_section が渡された場合はブログ設定・メディア人格をプロンプトに注入する。
     """
     fact_check    = blog_cfg.fact_check if blog_cfg is not None else True
     raw_tl        = blog_cfg.target_length if blog_cfg is not None else 9000
@@ -1139,13 +1141,15 @@ def generate(
         f" fact_check={fact_check} target_length={target_length:,}字"
         + (f"  サブKW:{len(sub_keywords)}件" if sub_keywords else "")
         + (f"  誘導リンク:{len([v for v in guide_links.values() if v])}件" if guide_links else "")
+        + ("  人格設定:あり" if blog_persona_section else "")
     )
     article = generate_article(keyword, volume, sub_keywords=sub_keywords,
                                enable_fact_check=fact_check,
                                target_length=target_length,
                                article_type=article_type,
                                asp_list=asp_list,
-                               guide_links=guide_links or None)
+                               guide_links=guide_links or None,
+                               blog_persona_section=blog_persona_section)
     log.info(f"[generate] 完了: 「{article['title']}」")
     return article
 
@@ -1247,6 +1251,24 @@ def run_blog(
     log.info(f"  article_type_mix : {FEATURES['article_type_mix']}")
     log.info(f"  stop_words       : {stop_words or '(なし)'}")
     log.info(f"  article_count    : {n_articles}  dry_run: {dry_run}")
+
+    # ── ブログ設定・メディア人格シートを読み込む ──────────────────
+    blog_persona_section = ""
+    try:
+        from modules.blog_sheets import (
+            load_blog_config_sheet,
+            load_media_persona_sheet,
+            build_persona_prompt,
+        )
+        _persona_ss_id = blog_cfg.candidate_ss_id or blog_cfg.asp_ss_id
+        if _persona_ss_id:
+            _blog_config_data  = load_blog_config_sheet(_persona_ss_id, GOOGLE_CREDENTIALS_PATH)
+            _media_persona_data = load_media_persona_sheet(_persona_ss_id, GOOGLE_CREDENTIALS_PATH)
+            blog_persona_section = build_persona_prompt(_blog_config_data, _media_persona_data)
+            if blog_persona_section:
+                log.info(f"[{blog_cfg.name}] ブログ設定・メディア人格を読み込みました")
+    except Exception as _sheet_err:
+        log.warning(f"[{blog_cfg.name}] ブログ設定・人格読み込みスキップ（続行）: {_sheet_err}")
 
     # ── ASP案件リスト読み込み（ブログ別SS の ASP案件マスターシートから）──
     asp_list: list[dict] = []
@@ -1395,7 +1417,8 @@ def run_blog(
             article     = generate(chosen["keyword"], chosen["volume"],
                                    blog_cfg=blog_cfg, sub_keywords=related_sub or None,
                                    article_type=article_type_label,
-                                   asp_list=asp_list or None)
+                                   asp_list=asp_list or None,
+                                   blog_persona_section=blog_persona_section)
             # 記事タイプ・KWステータスを article dict に付与（シート書き込み用）
             article["_article_type"] = article_type_label
             article["_kw_status"]    = chosen.get("_aim", "")

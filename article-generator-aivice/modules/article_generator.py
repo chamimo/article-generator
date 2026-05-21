@@ -431,7 +431,7 @@ USER_PROMPT_TEMPLATE = """\
 
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{asp_section}
+{blog_context_section}{blog_persona_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{asp_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
@@ -456,7 +456,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    enable_fact_check: bool = True,
                    target_length: int = 9000,
                    asp_list: list[dict] | None = None,
-                   guide_links: dict | None = None) -> dict:
+                   guide_links: dict | None = None,
+                   blog_persona_section: str = "") -> dict:
     """
     記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
 
@@ -570,6 +571,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                 keyword=keyword,
                 volume=volume,
                 blog_context_section=blog_context_section,
+                blog_persona_section=blog_persona_section,
                 related_section=related_section,
                 theme_section=theme_section,
                 lsi_section=lsi_section,
@@ -647,7 +649,8 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                      target_length: int = 9000,
                      article_type: str = "longtail",
                      asp_list: list[dict] | None = None,
-                     guide_links: dict | None = None) -> dict:
+                     guide_links: dict | None = None,
+                     blog_persona_section: str = "") -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
@@ -661,6 +664,7 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
         article_type: 記事タイプ（longtail/trend/monetize）
         asp_list: ASP案件リスト（プロンプト注入用）
         guide_links: 内部誘導リンク dict
+        blog_persona_section: ブログ設定・メディア人格のプロンプト文字列
 
     Returns:
         {title, meta_description, slug, image_prompt, category_id, category_name,
@@ -670,7 +674,8 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                           sub_keywords=sub_keywords, enable_fact_check=enable_fact_check,
                           target_length=target_length,
                           asp_list=asp_list,
-                          guide_links=guide_links)
+                          guide_links=guide_links,
+                          blog_persona_section=blog_persona_section)
 
 
 def generate_article_from_cluster(cluster: dict, sub_keywords: list[str] | None = None) -> dict:
