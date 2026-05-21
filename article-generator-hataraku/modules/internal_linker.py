@@ -170,29 +170,57 @@ def _jaccard(a: str, b: str) -> float:
     return len(bg_a & bg_b) / len(bg_a | bg_b)
 
 
+def _recency_score(date_str: str) -> float:
+    """記事の新しさスコア（0.0〜1.0）。6ヶ月以内=1.0, 12ヶ月=0.6, 24ヶ月=0.3, 24ヶ月超=0.0"""
+    if not date_str:
+        return 0.5
+    try:
+        pub = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
+        if pub.tzinfo is None:
+            pub = pub.replace(tzinfo=timezone.utc)
+        days_old = (datetime.now(timezone.utc) - pub).days
+        if days_old <= 180:
+            return 1.0
+        elif days_old <= 365:
+            return 0.6
+        elif days_old <= 730:
+            return 0.3
+        else:
+            return 0.0
+    except ValueError:
+        return 0.5
+
+
 def _rule_select(
     keyword: str,
     article_title: str,
     candidates: list[dict],
     max_count: int,
     label: str = "",
+    h3_text: str = "",
+    article_category_ids: list[int] | None = None,
 ) -> list[dict]:
     """
-    Jaccard bigram スコアリングで candidates から関連記事を最大 max_count 件選ぶ。
-    API不使用のルールベース実装。
+    同カテゴリー優先 → 関連度 60% + 新しさ 40% のタプルソートで最大 max_count 件選ぶ。
+    タプル比較により同カテゴリー記事は常に別カテゴリー記事より上位になる。
     """
     if not candidates or max_count <= 0:
         return []
 
-    query = f"{keyword} {article_title}"
-    scored = sorted(
-        candidates,
-        key=lambda a: _jaccard(query, unescape(a["title"])),
-        reverse=True,
-    )
+    query    = h3_text + " " + keyword + " " + article_title if h3_text else f"{keyword} {article_title}"
+    cat_set  = frozenset(article_category_ids or [])
+
+    def _sort_key(a: dict) -> tuple:
+        same_cat  = int(bool(cat_set & frozenset(a.get("categories", [])))) if cat_set else 0
+        relevance = _jaccard(query, unescape(a["title"]))
+        recency   = _recency_score(a.get("date", ""))
+        return (same_cat, relevance * 0.6 + recency * 0.4)
+
+    scored   = sorted(candidates, key=_sort_key, reverse=True)
     selected = scored[:max_count]
     if label:
-        print(f"[internal_linker] {label}: {len(selected)}件選定（ルールベース）")
+        same_n = sum(1 for a in selected if cat_set & frozenset(a.get("categories", [])))
+        print(f"[internal_linker] {label}: {len(selected)}件選定（同カテゴリー:{same_n}件 / 関連度60%+新しさ40%）")
     return selected
 
 
@@ -357,7 +385,8 @@ def select_related_articles(
         ]
         if same_cat_pool:
             for a in _rule_select(keyword, article_title, same_cat_pool, remaining,
-                                  label="同カテゴリー"):
+                                  label="同カテゴリー",
+                                  article_category_ids=article_category_ids):
                 if _can_add(a) and len(selected) < max_count:
                     _add({**a, "_link_type": "same_category", "_high_relevance": True})
             remaining = max_count - len(selected)
@@ -376,7 +405,8 @@ def select_related_articles(
     ]
     if same_parent_pool:
         for a in _rule_select(keyword, article_title, same_parent_pool, remaining,
-                                label=f"同親KW「{parent}」"):
+                              label=f"同親KW「{parent}」",
+                              article_category_ids=article_category_ids):
             if _can_add(a) and len(selected) < max_count:
                 _add({**a, "_link_type": "same_parent", "_high_relevance": True})
 
@@ -401,9 +431,9 @@ def select_related_articles(
         ]
         if token_pool:
             for a in _rule_select(keyword, article_title, token_pool, remaining,
-                                    label="キーワードトークンマッチ"):
+                                  label="キーワードトークンマッチ",
+                                  article_category_ids=article_category_ids):
                 if _can_add(a) and len(selected) < max_count:
-                    # キーワードトークン一致 + 同カテゴリー → HIGH、それ以外 → LOW
                     cat_set = set(article_category_ids or [])
                     is_high = bool(cat_set & set(a.get("categories", []))) if cat_set else True
                     _add({**a, "_link_type": "keyword_token", "_high_relevance": is_high})
@@ -423,7 +453,8 @@ def select_related_articles(
         ]
         if others_pool:
             for a in _rule_select(keyword, article_title, others_pool, remaining,
-                                    label="関連補完（親KW絞り込み）"):
+                                  label="関連補完（親KW絞り込み）",
+                                  article_category_ids=article_category_ids):
                 if _can_add(a) and len(selected) < max_count:
                     _add({**a, "_link_type": "related", "_high_relevance": False})
 
@@ -581,12 +612,13 @@ def _dominant_product(section: dict, product_names: list[str]) -> str | None:
 def _assign_links_to_sections(
     related_articles: list[dict],
     sections: list[dict],
+    article_category_ids: list[int] | None = None,
 ) -> tuple[list[tuple[int, dict]], list[dict]]:
     """
     製品名マッチングで各リンクを最適なH3セクションに割り当てる。
 
     Pass1: _product_name を持つ記事 → その製品名がセクション本文に出るスロットに優先割り当て
-    Pass2: 残りを空きスロットに順番割り当て
+    Pass2: 残りを空きスロット → H3テキスト×新しさ×同カテゴリーで最適記事を選択
     スロット不足分は footer_links として返す。
 
     Returns:
@@ -642,23 +674,42 @@ def _assign_links_to_sections(
             f"→ セクション{i+1}に割り当て"
         )
 
-    # Pass2: 製品が支配しないセクションにのみ汎用記事を割り当て
-    generic_deque: deque = deque(generic_articles)
+    # Pass2: 製品が支配しないセクションにのみ汎用記事を割り当て（H3内容×新しさでマッチ）
+    remaining_generics = [a for a in generic_articles if a["id"] not in assigned_ids]
     for i, section in enumerate(sections):
         if slot_assignment[i] is not None:
             continue
         # 製品支配セクションで記事が枯渇した場合は空スロットのまま（無関係記事は入れない）
         if _dominant_product(section, product_names) is not None:
             continue
-        while generic_deque:
-            candidate = generic_deque.popleft()
-            if candidate["id"] not in assigned_ids:
-                slot_assignment[i] = candidate
-                assigned_ids.add(candidate["id"])
-                break
+        if not remaining_generics:
+            break
+        # H3テキスト × 新しさ × 同カテゴリー（タプルソート）で最適記事を選ぶ
+        h3_query = section.get("text", "")
+        cat_set  = frozenset(article_category_ids or [])
+        def _h3_combined(a: dict, q: str = h3_query, cs: frozenset = cat_set) -> tuple:
+            same_cat = int(bool(cs & frozenset(a.get("categories", [])))) if cs else 0
+            rel      = _jaccard(q, unescape(a["title"])) if q else 0.0
+            rec      = _recency_score(a.get("date", ""))
+            return (same_cat, rel * 0.6 + rec * 0.4)
+        best = max(remaining_generics, key=_h3_combined)
+        slot_assignment[i] = best
+        assigned_ids.add(best["id"])
+        remaining_generics = [a for a in remaining_generics if a["id"] != best["id"]]
+        h3_short  = section.get("title_text", "")[:20]
+        same_mark = "★同カテゴリー" if (cat_set & frozenset(best.get("categories", []))) else ""
+        print(
+            f"[internal_linker] H3マッチ割り当て「{h3_short}」"
+            f"→「{unescape(best['title'])[:35]}」"
+            f"（{best.get('date','')[:10]}）{same_mark}"
+        )
 
-    # 未割り当て記事 + 低関連性記事 → footer
-    footer_links = [a for a in related_articles if a["id"] not in assigned_ids] + low_relevance
+    # 未割り当て記事 + 低関連性記事 → footer（新しさ優先でソート）
+    footer_links = sorted(
+        [a for a in related_articles if a["id"] not in assigned_ids] + low_relevance,
+        key=lambda a: _recency_score(a.get("date", "")),
+        reverse=True,
+    )
 
     assignments = [
         (sections[i]["end"], slot_assignment[i])
@@ -677,13 +728,14 @@ def inject_internal_links(
     related_articles: list[dict],
     keyword: str = "",
     article_title: str = "",
+    article_category_ids: list[int] | None = None,
 ) -> str:
     """
     内部リンクを挿入する。
 
     方針:
     1. H3セクション本文に製品名が出ていればその製品の記事を優先割り当て（誘導文あり・新タブ）
-    2. 製品名マッチなしは空きスロットに順番割り当て
+    2. 製品名マッチなし → H3テキスト×新しさ×同カテゴリーで最適記事をセクションごとに選択
     3. H3スロット不足分は記事末尾「✅ 次に読むならこちら」に追加（新タブ）
     4. 合計5件以上になるように調整する
     """
@@ -694,7 +746,9 @@ def inject_internal_links(
     sections = _find_h3_sections(content)
 
     # 製品名マッチングでH3スロットに割り当て
-    assignments, footer_links = _assign_links_to_sections(related_articles, sections)
+    assignments, footer_links = _assign_links_to_sections(
+        related_articles, sections, article_category_ids=article_category_ids
+    )
 
     # 後ろから挿入（位置ずれ防止）・誘導文なし、カードのみ
     for i in range(len(assignments) - 1, -1, -1):

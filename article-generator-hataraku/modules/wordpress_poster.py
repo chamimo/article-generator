@@ -672,6 +672,7 @@ def post_article_with_image(
                     article["content"], related,
                     keyword=keyword,
                     article_title=article.get("title", ""),
+                    article_category_ids=[cat_id] if cat_id else [],
                 )
                 titles = [a["title"][:30] for a in related]
                 print(f"[internal_linker] 内部リンク {len(related)}件 挿入: {titles}")

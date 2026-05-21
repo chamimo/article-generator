@@ -735,7 +735,7 @@ def fetch_candidates(
         except ValueError:
             return None
 
-    MAIN_VOL_THRESHOLD = 30  # これ以上（またはN/A）→ 記事生成対象
+    MAIN_VOL_THRESHOLD = 30  # 旧フォーマット用: これ以上（またはN/A）→ 記事生成対象
 
     candidates: list[dict] = []   # メインKW（vol>=30 or N/A）
     sub_keywords: list[str] = []  # サブKW（vol<30）→ 記事本文に盛り込む
@@ -766,28 +766,30 @@ def fetch_candidates(
             continue
 
         # ── 新フォーマット（判定列あり）専用処理 ──────────────────────
+        sheet_approved = False
         if is_new_format:
-            # AIM列が生成対象の値の行のみ対象
-            if aim not in ("aim", "claude", "add", "now", "future", "monetize"):
-                continue
             # サブKW行：記事生成しない → 統合先KWに紐付けて蓄積
             if hantei == "サブKW":
                 if togo_saki:
                     sub_kws_map.setdefault(togo_saki, []).append(kw)
                 n_sub_kw_skip += 1
                 continue
-            # 要確認・統合対象はスキップ（人間の確認待ち or かにばり統合済み）
-            if hantei == "要確認" or post_status in ("統合対象",):
+
+            # 新フォーマットでは、シート上で人間が承認した
+            # 「親KW」かつ「生成待ち」を記事生成対象とする。
+            if not (hantei == "親KW" and post_status == "生成待ち"):
                 n_posted_skip += 1
                 continue
+            sheet_approved = True
 
         # 投稿済みキーワードはスキップ（新旧共通）
         if post_status in ("投稿済み", "カニバリスキップ"):
             n_posted_skip += 1
             continue
 
-        # vol=N/A（None）はメイン扱い、明示的な数値は30以上のみメイン
-        is_main = (vol is None) or (vol >= MAIN_VOL_THRESHOLD)
+        # 新フォーマットは「親KW + 生成待ち」をメイン扱いにする。
+        # 旧フォーマットのみ検索ボリュームでメイン/サブを分ける。
+        is_main = sheet_approved or (vol is None) or (vol >= MAIN_VOL_THRESHOLD)
         vol_int = vol if vol is not None else 0
 
         if not is_main:
@@ -810,6 +812,7 @@ def fetch_candidates(
             "_ref_web1":       ref_web1,   # 参考WEB①
             "_ref_web2":       ref_web2,   # 参考WEB②
             "_ref_web3":       ref_web3,   # 参考WEB③
+            "_sheet_approved":  sheet_approved,  # 新フォーマット: 親KW + 生成待ち
         })
 
     # 新フォーマット: 各候補にサブKWを直接紐付け
@@ -851,13 +854,17 @@ def fetch_candidates(
         return any(theme.lower() in kw_l for theme in allowed_themes)
 
     before_filter = len(candidates)
-    # now/future は緊急指定のためテーマフィルターを免除
-    candidates  = [c for c in candidates  if c.get("_aim") in ("now", "future") or _passes_theme(c["keyword"])]
+    # 新フォーマットの「親KW + 生成待ち」と now/future は、手動承認済みとしてテーマフィルターを免除
+    candidates  = [
+        c for c in candidates
+        if c.get("_sheet_approved") or c.get("_aim") in ("now", "future") or _passes_theme(c["keyword"])
+    ]
     sub_keywords = [k for k in sub_keywords if _passes_theme(k)]
     filtered_out = before_filter - len(candidates)
 
     log.info(
-        f"[fetch] [{sheet}] メインKW: {len(candidates)}件（vol≥{MAIN_VOL_THRESHOLD} or N/A）"
+        f"[fetch] [{sheet}] メインKW: {len(candidates)}件"
+        + ("（親KW+生成待ち）" if is_new_format else f"（vol≥{MAIN_VOL_THRESHOLD} or N/A）")
         + (f"  サブKW除外: {n_sub_kw_skip}件（統合対象）" if n_sub_kw_skip else
            f"  サブKW: {len(sub_keywords)}件（vol<{MAIN_VOL_THRESHOLD}）")
         + (f"  投稿済みスキップ: {n_posted_skip}件" if n_posted_skip else "")
@@ -1323,6 +1330,11 @@ def filter_duplicates(
     for c in pool:
         if len(chosen) >= n:
             break
+        # 新フォーマットの「親KW + 生成待ち」はシート側で承認済みとして重複チェックをバイパス
+        if c.get("_sheet_approved"):
+            log.info(f"[dup_check] シート承認済みスキップ: 「{c['keyword']}」（親KW+生成待ちのため重複チェック免除）")
+            chosen.append(c)
+            continue
         # AIM=now は手動緊急指定のため重複チェックをバイパス
         if c.get("_aim") == "now":
             log.info(f"[dup_check] NOW優先スキップ: 「{c['keyword']}」（重複チェック免除）")
@@ -1563,6 +1575,7 @@ def generate(
     forced_title: str | None = None,
     asp_hint: list[str] | None = None,
     ref_urls: dict | None = None,
+    blog_persona_section: str = "",
 ) -> dict:
     """
     記事を生成して dict で返す。
@@ -1628,7 +1641,8 @@ def generate(
                                guide_links=guide_links or None,
                                forced_title=forced_title,
                                asp_hint=asp_hint or None,
-                               ref_urls=ref_urls or None)
+                               ref_urls=ref_urls or None,
+                               blog_persona_section=blog_persona_section)
 
     # ── マイパターン CTA 挿入（ブログにパターンがある場合のみ）──
     if blog_cfg:
@@ -1660,7 +1674,17 @@ def generate(
                         log.info(f"[generate] パターンCTA: 訴求案件指定マッチ「{matched.title}」← hint=「{hint}」")
                         break
             if not matched:
-                asp_names = [item["name"] for item in (asp_list or [])]
+                # 記事本文に言及のある案件名のみに絞る（無関係パターンの挿入防止）
+                # 例: 「スピーク」記事に「Director Suite 365」を挿入しないようにする
+                _ct = article["content"].lower()
+                asp_names = [
+                    n for n in [item["name"] for item in (asp_list or [])]
+                    if any(
+                        p.lower() in _ct
+                        for p in _re.split(r'[\s\-_・/【】「」()（）]+', n)
+                        if len(p) >= 3
+                    )
+                ]
                 matched = match_pattern(keyword, patterns, asp_names=asp_names)
             if matched:
                 # H3末尾挿入済みの場合は②言及段落をスキップして重複を避ける
@@ -1741,6 +1765,7 @@ def post(article: dict, dry_run: bool = False,
                 ),
                 "genre_detail":  blog_cfg.genre_detail,
                 "search_intent": blog_cfg.search_intent,
+                "extra_system_prompt": blog_cfg.extra.get("extra_system_prompt", ""),
             },
         )
         log.info(f"[post] 投稿方式: {blog_cfg.wp_post_status}")
@@ -1802,6 +1827,24 @@ def run_blog(
     log.info(f"  article_type_mix : {FEATURES['article_type_mix']}")
     log.info(f"  stop_words       : {stop_words or '(なし)'}")
     log.info(f"  article_count    : {n_articles}  dry_run: {dry_run}")
+
+    # ── ブログ設定・メディア人格シートを読み込む ──────────────────
+    blog_persona_section = ""
+    try:
+        from modules.blog_sheets import (
+            load_blog_config_sheet,
+            load_media_persona_sheet,
+            build_persona_prompt,
+        )
+        _persona_ss_id = blog_cfg.candidate_ss_id or blog_cfg.asp_ss_id
+        if _persona_ss_id:
+            _blog_config_data   = load_blog_config_sheet(_persona_ss_id, GOOGLE_CREDENTIALS_PATH)
+            _media_persona_data = load_media_persona_sheet(_persona_ss_id, GOOGLE_CREDENTIALS_PATH)
+            blog_persona_section = build_persona_prompt(_blog_config_data, _media_persona_data)
+            if blog_persona_section:
+                log.info(f"[{blog_cfg.name}] ブログ設定・メディア人格を読み込みました")
+    except Exception as _sheet_err:
+        log.warning(f"[{blog_cfg.name}] ブログ設定・人格読み込みスキップ（続行）: {_sheet_err}")
 
     # ── ASP案件リスト読み込み（ブログ別SS の ASP案件マスターシートから）──
     asp_list: list[dict] = []
@@ -1976,7 +2019,8 @@ def run_blog(
                                    asp_list=asp_list or None,
                                    forced_title=forced_title,
                                    asp_hint=kw_asp_hint,
-                                   ref_urls={"web1": chosen.get("_ref_web1", ""), "web2": chosen.get("_ref_web2", ""), "web3": chosen.get("_ref_web3", "")} if (chosen.get("_ref_web1") or chosen.get("_ref_web2") or chosen.get("_ref_web3")) else None)
+                                   ref_urls={"web1": chosen.get("_ref_web1", ""), "web2": chosen.get("_ref_web2", ""), "web3": chosen.get("_ref_web3", "")} if (chosen.get("_ref_web1") or chosen.get("_ref_web2") or chosen.get("_ref_web3")) else None,
+                                   blog_persona_section=blog_persona_section)
             # 記事タイプ・KWステータスを article dict に付与（シート書き込み用）
             article["_article_type"] = article_type_label
             article["_kw_status"]    = chosen.get("_aim", "")
@@ -1992,6 +2036,14 @@ def run_blog(
                         f"タイトル重複のため投稿スキップ: "
                         f"「{article['title'][:35]}」≈「{dup_title[:35]}」"
                     )
+
+            # ── 品質チェック（下書き保存前・IDなし段階） ─────────────
+            try:
+                from modules.quality_checker import log_quality_report as _quality_check
+                _quality_issues = _quality_check(article, chosen["keyword"], logger=log)
+            except Exception as _qe:
+                log.warning(f"[quality] チェックエラー（続行）: {_qe}")
+                _quality_issues = []
 
             post_result = post(article, dry_run=dry_run, blog_cfg=blog_cfg, asp_list=asp_list)
 
@@ -2012,6 +2064,20 @@ def run_blog(
                 "edit_url":    post_result.get("edit_url", ""),
                 "finished_at": datetime.now().isoformat(),
             })
+
+            # ── 品質NGメール通知（投稿ID確定後） ──────────────────
+            if _quality_issues:
+                try:
+                    from modules.quality_checker import _send_quality_alert
+                    _send_quality_alert(
+                        article, _quality_issues,
+                        post_id=post_result.get("id"),
+                        edit_url=post_result.get("edit_url", ""),
+                        logger=log,
+                    )
+                except Exception as _me:
+                    log.warning(f"[quality] メール通知エラー（続行）: {_me}")
+
             n_success += 1
             log.info(f"[{blog_cfg.name}] [{i}/{len(targets)}] ✅ 完了: 「{article['title']}」")
 

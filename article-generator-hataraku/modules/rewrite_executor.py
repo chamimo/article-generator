@@ -136,12 +136,21 @@ def _fetch_wp_post(wp_url: str, auth: HTTPBasicAuth, page_url: str) -> dict | No
 
 
 def _save_wp_post(wp_url: str, auth: HTTPBasicAuth, post_id: int,
-                  content: str, current_status: str) -> str:
-    """WP記事の本文を更新する。公開済みなら公開状態を維持し非公開にしない。"""
+                  content: str, current_status: str,
+                  meta_description: str | None = None) -> str:
+    """WP記事の本文とSEOメタフィールドを更新する。"""
+    payload: dict = {"content": content, "status": current_status}
+    if meta_description:
+        payload["meta"] = {
+            "ssp_meta_description":   meta_description,
+            "_yoast_wpseo_metadesc":  meta_description,
+            "rank_math_description":  meta_description,
+        }
+        print(f"[executor] メタディスクリプション更新: {meta_description[:60]}…")
     resp = requests.post(
         f"{wp_url}/wp-json/wp/v2/posts/{post_id}",
         auth=auth,
-        json={"content": content, "status": current_status},
+        json=payload,
         timeout=60,
     )
     resp.raise_for_status()
@@ -200,6 +209,13 @@ _PATCH_RE = re.compile(
     r'\[INSERT:\s*(?P<pos>[^\]]+)\]\s*\n(?P<content>.*?)\[/INSERT\]',
     re.DOTALL,
 )
+_REPLACE_RE = re.compile(
+    r'\[REPLACE:\s*"(?P<old>[^"]+)"\]\s*\n(?P<new>.*?)\[/REPLACE\]',
+    re.DOTALL,
+)
+_META_DESC_RE = re.compile(
+    r'\[META_DESCRIPTION:\s*(?P<desc>[^\]]+)\]',
+)
 
 
 def _find_after_heading(content: str, heading_text: str) -> int:
@@ -223,6 +239,8 @@ def _find_before_heading(content: str, heading_text: str) -> int:
 def _resolve_position(content: str, pos_spec: str) -> int:
     """挿入位置の指定文字列を実際のインデックスに変換する。"""
     s = pos_spec.strip()
+    if s.lower() == 'top':
+        return 0
     m = re.match(r'(after|before)\s+(h2|h3)\s+"?(.+?)"?\s*$', s, re.IGNORECASE)
     if m:
         direction, _level, text = m.group(1).lower(), m.group(2), m.group(3)
@@ -236,28 +254,48 @@ def _resolve_position(content: str, pos_spec: str) -> int:
     return -1
 
 
-def _apply_patches(original: str, patch_text: str) -> str:
-    """Claudeが出力したパッチ群を元記事に適用する。元記事の文字は削らない。"""
+def _apply_patches(original: str, patch_text: str) -> tuple[str, str | None]:
+    """Claudeが出力したパッチ群を元記事に適用する。
+    戻り値: (更新後コンテンツ, メタディスクリプション or None)
+    """
+    # メタディスクリプション抽出
+    meta_desc: str | None = None
+    m_meta = _META_DESC_RE.search(patch_text)
+    if m_meta:
+        meta_desc = m_meta.group('desc').strip()
+
+    result = original
+
+    # REPLACE: 既存テキストの書き換え
+    for rp in _REPLACE_RE.finditer(patch_text):
+        old_text = rp.group('old').strip()
+        new_text = rp.group('new').strip()
+        if old_text in result:
+            result = result.replace(old_text, new_text, 1)
+            print(f"[executor] REPLACE適用: 「{old_text[:30]}...」")
+        else:
+            print(f"[executor] REPLACE対象テキストが見つかりません（スキップ）: 「{old_text[:40]}」")
+
+    # INSERT: 追記
     patches = list(_PATCH_RE.finditer(patch_text))
     if not patches:
-        return original
+        return result, meta_desc
 
     insertions: list[tuple[int, str]] = []
     for patch in patches:
         pos_spec   = patch.group('pos')
         new_block  = '\n' + patch.group('content').strip() + '\n'
-        insert_pos = _resolve_position(original, pos_spec)
+        insert_pos = _resolve_position(result, pos_spec)
         if insert_pos >= 0:
             insertions.append((insert_pos, new_block))
         else:
             print(f"[executor] パッチ挿入位置が見つかりません: {pos_spec!r} → 末尾に追加")
-            insertions.append((len(original), new_block))
+            insertions.append((len(result), new_block))
 
     # 後ろから挿入することでオフセットのズレを防ぐ
-    result = original
     for pos, block in sorted(insertions, key=lambda x: -x[0]):
         result = result[:pos] + block + result[pos:]
-    return result
+    return result, meta_desc
 
 
 def _count_wp_images(content: str) -> int:
@@ -418,44 +456,83 @@ def _generate_rewrite(row: dict, current_content: str, gsc_queries: list[dict],
         for p in recent_posts[:8]:
             recent_posts_text += f"・{p['title']}  {p['link']}\n"
 
-    system_prompt = f"""あなたはSEO特化のコンテンツライターです。
+    system_prompt = f"""あなたはSEO・AIO・E-E-A-T対策に精通したコンテンツライターです。
 ブログ名: {blog_name}
 ジャンル: {genre}
 文章のトーン: {writing_style.get("tone", "実用的でわかりやすい")}
 
 ## 出力形式（厳守）
-既存記事には一切手を加えず、「追加するブロックだけ」を以下の形式で出力してください。
+以下の3種のディレクティブを組み合わせて出力してください。
 
-[INSERT: after H3 "挿入先の見出しテキスト"]
-（ここにWordPress Gutenbergブロック形式の追加コンテンツ）
+### 1. 追記（INSERT）
+[INSERT: top]
+（記事の最先頭に追加するブロック）
 [/INSERT]
 
 [INSERT: after H2 "挿入先のH2テキスト"]
-（H4やH3を追加する場合もここに書く）
+（そのH2直後に追加）
+[/INSERT]
+
+[INSERT: after H3 "挿入先のH3テキスト"]
+（そのH3直後に追加）
 [/INSERT]
 
 [INSERT: before H2 "まとめ"]
-（まとめ前に新H2セクションを追加する場合）
+（まとめ前に新セクションを追加）
 [/INSERT]
 
-## リライトルール（厳守）
-- **文字数は絶対に減らさない**。追加のみ行う
-- **既存のH2・H3は変更しない**（テキスト・順序・構成）
-- 新しいH2・H3を追加することはOKだが追加しすぎない（既存H2の20%増し以内が目安）
-- **H4を積極的に活用**して既存H3の内容を深掘りする
-- **古い情報・過去の日付・廃止されたサービス**を見つけたら：
-  - 「最新情報」としてH4または段落で補足する
-  - 同ブログに関連する最新記事があれば <!-- wp:paragraph --><p>最新情報は<a href="URL">こちらの記事</a>をご覧ください。</p><!-- /wp:paragraph --> で誘導する
-- 追加コンテンツはWordPress SWELL形式（Gutenbergブロック）で書く
-- 挿入先の見出しテキストは記事内の実際の文字列をそのまま使う
+### 2. 既存テキスト書き換え（REPLACE）※曖昧表現→断言文の場合のみ使用
+[REPLACE: "置き換え前の文章をそのまま正確に書く"]
+置き換え後の断言文
+[/REPLACE]
+
+### 3. メタディスクリプション（META_DESCRIPTION）※必ず1つ出力
+[META_DESCRIPTION: ここに80〜120字のメタディスクリプションを書く]
+
+## SEO・AIO・E-E-A-Tリライト優先順位（必ず全て対応すること）
+
+### 優先度1: 定義文の追加
+- 記事冒頭（最初の段落）に「○○とは〜です。」形式の定義文がなければ [INSERT: top] で追加する
+- すでにある場合はスキップ
+
+### 優先度2: H2冒頭を結論ファーストに
+- 各H2の直後に結論・要約の段落（1〜2文）を [INSERT: after H2 "..."] で追加する
+- 「このセクションでは〜について解説します」のような前置き文はNG。結論から始める
+
+### 優先度3: FAQセクション
+- 「よくある質問」H3がなければ [INSERT: before H2 "まとめ"] でFAQを追加する（5〜7問・各回答200字以上）
+- SWELL FAQブロック形式で出力する
+- すでにFAQがある場合はスキップ
+
+### 優先度4: 一人称体験談（2〜3箇所）
+- 「実際に使ってみたところ〜」「比較してみて感じたのは〜」など一人称の体験文を2〜3箇所 [INSERT] で追加する
+- 各体験談は2〜3文（100〜200字）で自然に溶け込ませる
+
+### 優先度5: 比較表
+- 比較表がなければ適切なH3の直後に [INSERT] で追加する
+- ツール・プラン・対象者などを比較する表を1つ以上設置する
+
+### 優先度6: 曖昧表現→断言文
+- 「〜かもしれません」「諸説あります」「場合によります」「一概に言えません」などを見つけたら [REPLACE] で断言文に書き換える
+- 確認できない事実は記述しない（「〜と言われています」→「〜です」または削除）
+
+### 優先度7: メタディスクリプション
+- キーワード・得られるメリット・数字を含む80〜120字のメタディスクリプションを必ず [META_DESCRIPTION: ...] で出力する
+
+## 絶対に変えてはいけないこと
+- 既存の内部リンク先URL・アンカーテキスト
+- 商品・サービスの固有名詞
+- サイトのトーン・口調（{writing_style.get("tone", "実用的でわかりやすい")}）
+- 既存H2・H3の見出しテキスト（変更・削除禁止）
 
 ## 文章ルール
 - やさしく寄り添う口調。「〜ですね」「〜してみてくださいね」を自然に使う
 - 「〜ですよ」は使わない
 - 「完全」「徹底」をタイトル・見出しに使わない
-- ASPリンクが不明な場合は <!-- アフィリリンク: {{サービス名}} --> とコメントで明示"""
+- ASPリンクが不明な場合は <!-- アフィリリンク: {{サービス名}} --> とコメントで明示
+- 追加コンテンツはWordPress SWELL形式（Gutenbergブロック）で書く"""
 
-    user_prompt = f"""以下の記事に不足している内容を追加してください。
+    user_prompt = f"""以下の記事をSEO・AIO・E-E-A-T対策の観点からリライトしてください。
 
 ## 対象記事
 タイトル: {row['title']}
@@ -473,11 +550,11 @@ URL: {row['url']}
 
 ---
 【作業指示】
-1. 既存H2・H3を一切変更せず、追加コンテンツだけを [INSERT] 形式で出力してください
-2. 既存本文の出力・削除は絶対禁止。追加のみ
-3. 古い情報があれば最新情報をH4で補足するか、関連最新記事へのリンクで誘導してください
-4. H4を使って既存H3の内容を深掘りしてください（複数箇所OK）
-5. H2・H3の追加は本当に必要な場合のみ（追加しすぎない）"""
+1. 優先度1〜7を全て確認し、必要な対応を [INSERT] / [REPLACE] / [META_DESCRIPTION] 形式で出力する
+2. 既存本文の出力・大量削除は禁止。文字数を増やす方向でのみ編集する
+3. FAQがすでにある場合は優先度3をスキップし、その旨を冒頭に一行メモする
+4. 曖昧表現が見つからない場合は優先度6をスキップする
+5. [META_DESCRIPTION: ...] は必ず1つ出力すること"""
 
     msg = client.messages.create(
         model="claude-sonnet-4-6",
@@ -492,10 +569,7 @@ URL: {row['url']}
         f"rewrite:{row['url']}",
     )
 
-    patch_text = msg.content[0].text.strip()
-    result     = _apply_patches(current_content, patch_text)
-    print(f"[executor] パッチ適用: {len(current_content)}字 → {len(result)}字 (+{len(result)-len(current_content)}字)")
-    return result
+    return msg.content[0].text.strip()
 
 
 # ──────────────────────────────────────────────────────────
@@ -569,16 +643,19 @@ def run_rewrite(blog_name: str) -> None:
 
             # Claude リライト生成（追記パッチ方式）
             print(f"[executor] Claude リライト生成中...")
-            rewritten = _generate_rewrite(row, current_content, gsc_queries, blog_cfg, recent_posts)
-            print(f"[executor] 生成完了: {len(rewritten)}字")
+            patch_text = _generate_rewrite(row, current_content, gsc_queries, blog_cfg, recent_posts)
+            rewritten, meta_desc = _apply_patches(current_content, patch_text)
+            print(f"[executor] 生成完了: {len(current_content)}字 → {len(rewritten)}字 (+{len(rewritten)-len(current_content)}字)")
+            if meta_desc:
+                print(f"[executor] メタディスクリプション: {meta_desc[:60]}…")
 
             # 画像が少ない場合はFLUXで追加（最大3枚まで）
             slug    = _slug_from_url(row["url"])
             keyword = row.get("title", slug)
             rewritten = _add_rewrite_images(rewritten, wp_url, wp_auth, keyword, slug, max_add=3)
 
-            # WP保存（公開済みなら公開状態を維持）
-            edit_url = _save_wp_post(wp_url, wp_auth, post_id, rewritten, current_status)
+            # WP保存（公開済みなら公開状態を維持、メタディスクリプションも更新）
+            edit_url = _save_wp_post(wp_url, wp_auth, post_id, rewritten, current_status, meta_desc)
             print(f"[executor] WP保存完了 (status={current_status}): {edit_url}")
 
             # シート更新
