@@ -1,0 +1,1389 @@
+===== [WORKUP-AI] 実行開始: 2026-05-21 11:48:01 =====
+2026-05-21 11:48:03 [INFO] ============================================================
+2026-05-21 11:48:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-21 11:48:03 [INFO] ============================================================
+2026-05-21 11:48:03 [INFO] 対象ブログ: ['workup-ai']
+2026-05-21 11:48:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-21 11:48:05 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-21 11:48:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-21 11:48:05 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-21 11:48:05 [INFO]   fact_check       : True
+2026-05-21 11:48:05 [INFO]   article_type_mix : True
+2026-05-21 11:48:05 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-21 11:48:05 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 11:48:07 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-21 11:48:07 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-21 11:48:07 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-21 11:48:07 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-21 11:48:07 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-21 11:48:07 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-21 11:48:07 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-21 11:48:07 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-21 11:48:07 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 11:48:07 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-21 11:48:07 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-21 11:48:07 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-21 11:48:07 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-21 11:48:07 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-21 11:48:07 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-21 11:48:07 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-21 11:48:07 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-21 11:48:07 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-21 11:48:07 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-21 11:48:10 [INFO] [wp] 記事取得: 計413件 (publish=413)
+2026-05-21 11:48:10 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-21 11:48:12 [INFO] [fetch] サブKW紐付け: 146件 → 18記事に統合
+2026-05-21 11:48:12 [INFO] [fetch] [キーワード] メインKW: 8件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 33件  テーマ外除外: 16件  aim内訳: [aim:16, add:1, claude:7]
+2026-05-21 11:48:12 [INFO] [dup_check] 優先候補: 8件 {'aim': 2, 'claude': 6} を先頭評価
+2026-05-21 11:48:12 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → カニバリ(3/4語重複 ['youtube', 'ai', 'イラスト']): 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-05-21 11:48:12 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → カニバリ(2/3語重複 ['youtube', 'ai']): 「YouTube競合分析AIツールおすすめ6選！無料から使える方法・やり方を徹底解」
+2026-05-21 11:48:12 [INFO] [dup_check] 除外: 「フリーランス AI 活用 在宅」 → カニバリ(3/4語重複 ['ai', '活用', '在宅']): 「在宅ワーク｜主婦で初心者でも安心！AI活用で始める稼げる副業」
+2026-05-21 11:48:12 [INFO] [dup_check] 除外: 「AI副業 稼ぎ方 初心者 安全」 → カニバリ(3/4語重複 ['ai副業', '稼ぎ方', '初心者']): 「AI副業で何をする？初心者におすすめの種類と稼ぎ方を徹底解説」
+2026-05-21 11:48:12 [INFO] [dup_check] 除外: 「Claude Code ChatGPT 違い わかりやすく」 → カニバリ(3/5語重複 ['claude', 'code', '違い']): 「Claude CodeとOpenAI Codex、どっちを選ぶ？機能・料金・用途」
+2026-05-21 11:48:12 [INFO] [dup_check] 除外: 「Claude Code API できること」 → カニバリ(3/4語重複 ['claude', 'code', 'できること']): 「Claude Code Skillsとは？できること・使い方・導入手順を解説」
+2026-05-21 11:48:12 [INFO] [dup_check] 除外: 「AIコンテンツ SEO 対策 2026」 → カニバリ(2/3語重複 ['seo', '対策']): 「AIライティングでブログSEO対策を強化する方法と注意点を徹底解説」
+2026-05-21 11:48:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=7件 (pool=8件, 要求=1件)
+2026-05-21 11:48:12 [INFO] [select] 1件選定 (要求=1件)
+2026-05-21 11:48:12 [INFO] [select]   1. 「AIプログラミング 初心者 やり方」 vol=0 seo=N/A comp=N/A
+2026-05-21 11:48:12 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-21 11:48:12 [INFO] [workup-ai] 候補: 8件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+2026-05-21 11:48:12 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-21 11:48:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-21 11:48:12 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AIプログラミング 初心者 やり方」 vol=0 ★CLAUDE
+2026-05-21 11:48:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-21 11:48:12 [INFO] [generate] 手順解説型ブースト: 5,573字 → 7,244字
+2026-05-21 11:48:12 [INFO] [generate] 生成開始: 「AIプログラミング 初心者 やり方」(vol:0) fact_check=True target_length=7,244字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「AIプログラミング 初心者 やり方」(vol:0) [7,244字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+[article_generator] 検索意図: 購買直前 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] 手順解説型モード: 「AIプログラミング 初心者 やり方」
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+2026-05-21 11:48:14 [ERROR] [workup-ai] [1/1] ❌ エラー（続行）: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CbEx8RjvPhs4de37e6d4Q'}
+2026-05-21 11:48:14 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-21 11:48:14 [INFO] 
+============================================================
+2026-05-21 11:48:14 [INFO] 【全体サマリー】
+2026-05-21 11:48:14 [INFO]   ブログ数  : 1件
+2026-05-21 11:48:14 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-21 11:48:14 [INFO]   所要時間  : 10.9秒
+2026-05-21 11:48:14 [INFO]   ❌ [workup-ai] AIプログラミング 初心者 やり方 → (生成失敗)
+2026-05-21 11:48:14 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-21 11:48:14 / exit=0 =====
+===== [WORKUP-AI] 実行開始: 2026-05-21 12:47:35 =====
+2026-05-21 12:47:37 [INFO] ============================================================
+2026-05-21 12:47:37 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-21 12:47:37 [INFO] ============================================================
+2026-05-21 12:47:37 [INFO] 対象ブログ: ['workup-ai']
+2026-05-21 12:47:39 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-21 12:47:39 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-21 12:47:39 [INFO] ════════════════════════════════════════════════════════════
+2026-05-21 12:47:39 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-21 12:47:39 [INFO]   fact_check       : True
+2026-05-21 12:47:39 [INFO]   article_type_mix : True
+2026-05-21 12:47:39 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-21 12:47:39 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 12:47:40 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-21 12:47:40 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-21 12:47:40 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-21 12:47:40 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-21 12:47:40 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-21 12:47:40 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-21 12:47:40 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-21 12:47:40 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-21 12:47:40 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 12:47:40 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-21 12:47:40 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-21 12:47:40 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-21 12:47:40 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-21 12:47:40 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-21 12:47:40 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-21 12:47:40 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-21 12:47:40 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-21 12:47:40 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-21 12:47:40 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-21 12:47:42 [INFO] [wp] 記事取得: 計413件 (publish=413)
+2026-05-21 12:47:42 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-21 12:47:43 [INFO] [fetch] サブKW紐付け: 146件 → 18記事に統合
+2026-05-21 12:47:43 [INFO] [fetch] [キーワード] メインKW: 9件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 33件  テーマ外除外: 16件  aim内訳: [now:1, aim:16, add:1, claude:7]
+2026-05-21 12:47:43 [INFO] [dup_check] 優先候補: 9件 {'now': 1, 'aim': 2, 'claude': 6} を先頭評価
+2026-05-21 12:47:43 [INFO] [dup_check] NOW優先スキップ: 「Google AIO 意味がない」（重複チェック免除）
+2026-05-21 12:47:43 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=9件, 要求=1件)
+2026-05-21 12:47:43 [INFO] [select] 1件選定 (要求=1件)
+2026-05-21 12:47:43 [INFO] [select]   1. 「Google AIO 意味がない」 vol=0 seo=N/A comp=N/A
+2026-05-21 12:47:43 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-21 12:47:43 [INFO] [workup-ai] 候補: 9件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+2026-05-21 12:47:43 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-21 12:47:43 [INFO] ────────────────────────────────────────────────────────────
+2026-05-21 12:47:43 [INFO] [workup-ai] [1/1] [LONGTAIL] 「Google AIO 意味がない」 vol=0 ★NOW
+2026-05-21 12:47:43 [INFO] ────────────────────────────────────────────────────────────
+2026-05-21 12:47:43 [INFO] [generate] 生成開始: 「Google AIO 意味がない」(vol:0) fact_check=True target_length=5,608字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「Google AIO 意味がない」(vol:0) [5,608字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=107 out=85 → $0.0004  (lsi:Google AIO 意味がない)
+[api_guard] 本日の使用量: $0.0004 / ¥0 (1007回呼び出し)
+[article_generator] 共起語: Google AIO、All in One SEO、プラグイン、設定方法、効果、メリット、デメリット、代替案、Yoast...
+[api_guard] ✅ 本日: $0.0004 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $0.0004(¥0) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=174 out=439 → $0.0019  (kw_research:Google AIO 意味がない)
+[api_guard] 本日の使用量: $0.0023 / ¥0 (1008回呼び出し)
+[article_generator] サジェスト: Google AIO 意味がない 理由・Google AIO 廃止・Google AIO とは...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] 参考URL: 3件
+[article_generator] アドセンス記事判定: 「Google AIO 意味がない」→ アフィリリンク抑制モード
+[api_guard] ✅ 本日: $0.0023 / 1時間: $0.0023  (上限 日次$10.00 / 時間$5.00)  全体: $0.0023(¥0) / 0記事
+[api_guard] 記録: claude-sonnet-4-6 in=11686 out=13664 → $0.2400  (article:Google AIO 意味がない)
+[api_guard] 本日の使用量: $0.2423 / ¥36 (1009回呼び出し)
+[imagefx] 背景:B / ビジュアル:Cute flat icons of laptop, magnifying glass, and c
+[imagefx] タイトル(英): Google AI Worthless SEO Fixes Now
+[article_generator] 完了: 「Google AIOが意味がないと言われる理由と、今すぐできるSEO対策」 カテゴリ: 未設定(-) タグ: ['Google AIO', 'SEO対策', 'AI Overview', '検索流入', 'コンテンツ戦略']
+2026-05-21 12:51:39 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-21 12:51:39 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-21 12:51:39 [INFO] [generate] 完了: 「Google AIOが意味がないと言われる理由と、今すぐできるSEO対策」
+2026-05-21 12:51:39 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 37件
+[category_selector] 「Google AIO 意味がない」→ Gemini・Google AI(1372) score=24
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration showing interconnected circular nodes and flowing dat...
+[image_generator] 完了 (64KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_125149_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10343)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: Google AIOとは何か——仕組みと「意味がない」と言わ
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration showing a declining search graph with downward arrows, ...
+[image_generator] 完了 (42KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_125201_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10344)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: AIOがSEOに与える影響——検索流入の減少と検索順位への波
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring SEO strategy icons: shield protecting search ...
+[image_generator] 完了 (51KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_125212_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10345)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: Google AIO対策——流入を守るための具体的なSEO戦
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration with pastel colors showing stacked question mark icons,...
+[image_generator] 完了 (35KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_125223_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10346)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: google-aio-meaningless-seo-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring stacked books, magnifying glass, and question...
+[image_generator] 完了 (77KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_125234_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10347)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: google-aio-meaningless-seo-summary.jpg
+[internal_linker] 公開済み記事取得: 413件
+[internal_linker] タイトル重複除去: 2件の旧記事を除外
+[internal_linker] 同カテゴリー: 8件選定（ルールベース）
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['Google AI Studioとは？最新Gemini連携と', 'Google Gemini 使い方ガイド！日本語で今すぐ始め', 'Google AI Studioの料金はどう決まる？無料期間', 'Gemini vs Google AI Studio徹底比較', 'Google AIモード検索とは？2025年最新の使い方・メ', 'Google AI Proは学生無料って本当？利用条件と注意', 'googleワークスペースでできること徹底ガイド【2025年', 'Google AI スティッチの使い方｜失敗写真を「奇跡の1']
+[wordpress] タグ設定: ['Google AIO', 'SEO対策', 'AI Overview', '検索流入', 'コンテンツ戦略']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 10348) → https://workup-ai.com/wp-admin/post.php?post=10348&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, magnifying glass, and checkmarks with soft pink and mint pastel tones, minimal kawaii business style design
+Soft pastel gradient background: gentle blush pink, cream and ivory tones, warm neutral atmosphere, feminine and sophisticated, airy and bright.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Google AI Worthless SEO Fixes Now" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行205 「Google AIO 意味がない」→ 投稿済み (2026/05/21, ID:10348) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「Google AIOが意味がないと言われる理由と、今すぐでき」
+2026-05-21 12:52:43 [INFO] [post] WP投稿完了: ID=10348 → https://workup-ai.com/wp-admin/post.php?post=10348&action=edit
+2026-05-21 12:52:43 [INFO] [workup-ai] [1/1] ✅ 完了: 「Google AIOが意味がないと言われる理由と、今すぐできるSEO対策」
+2026-05-21 12:52:43 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-21 12:52:43 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #10348 Google AIOが意味がないと言われる理由と、今すぐできるSEO対策
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 感情・世界観コンセプト生成中...
+[IMAGE] rand comp  : bold negative space dominant, subject occupies les
+[IMAGE] rand scene : smartphone held lightly in hand, soft screen glow
+[IMAGE] rand person: Japanese woman in her 30s, calm and elegant, relaxed posture
+[IMAGE] rand taste : polished lifestyle magazine editorial, intentional and composed
+[IMAGE] rand palette: cool silver-gray and clean white, minimal
+[IMAGE] rand place : bottom-left  layout: apple_clean
+[IMAGE] world     : AIツールが日常に静かに溶け込み、仕事も暮らしも少しずつ軽くなっていく世界。
+[IMAGE] emotion   : やさしい希望 / 暮らしが整う感じ / 静かな充足感
+[IMAGE] placement : bottom-left  color: dark  layout: apple_clean
+[IMAGE] copy      : 「手のひらに、人生が整う。」 / sub: 「小さなツールで、毎日が少し優しく。」
+[IMAGE] ライフスタイル背景生成中 placement=bottom-left...
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1486KB)
+[IMAGE] タイトル解析・サムネ文字生成中...
+[IMAGE] 読みやすいタイポグラフィ合成中...
+[IMAGE] overlay layout=3  palette=coral
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_125337_codex_lifestyle_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 10350)
+[codex-eyecatch] featured image 設定完了: media_id=10350
+[codex-eyecatch] 編集URL: https://workup-ai.com/wp-admin/post.php?post=10348&action=edit
+2026-05-21 12:53:42 [INFO] 
+============================================================
+2026-05-21 12:53:42 [INFO] 【全体サマリー】
+2026-05-21 12:53:42 [INFO]   ブログ数  : 1件
+2026-05-21 12:53:42 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-21 12:53:42 [INFO]   所要時間  : 365.5秒
+2026-05-21 12:53:42 [INFO]   ✅ [workup-ai] Google AIO 意味がない → Google AIOが意味がないと言われる理由と、今すぐできるSEO対策
+2026-05-21 12:53:42 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10348&action=edit
+2026-05-21 12:53:42 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-21 12:53:43 / exit=0 =====
+===== [WORKUP-AI] 実行開始: 2026-05-21 13:13:34 =====
+2026-05-21 13:13:36 [INFO] ============================================================
+2026-05-21 13:13:36 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-21 13:13:36 [INFO] ============================================================
+2026-05-21 13:13:36 [INFO] 対象ブログ: ['workup-ai']
+2026-05-21 13:13:38 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-21 13:13:38 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-21 13:13:38 [INFO] ════════════════════════════════════════════════════════════
+2026-05-21 13:13:38 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-21 13:13:38 [INFO]   fact_check       : True
+2026-05-21 13:13:38 [INFO]   article_type_mix : True
+2026-05-21 13:13:38 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-21 13:13:38 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 13:13:39 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-21 13:13:39 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-21 13:13:39 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-21 13:13:39 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-21 13:13:39 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-21 13:13:39 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-21 13:13:39 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-21 13:13:39 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-21 13:13:39 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 13:13:39 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-21 13:13:39 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-21 13:13:39 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-21 13:13:39 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-21 13:13:39 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-21 13:13:39 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-21 13:13:39 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-21 13:13:39 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-21 13:13:39 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-21 13:13:39 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-21 13:13:42 [INFO] [wp] 記事取得: 計414件 (draft=1 / publish=413)
+2026-05-21 13:13:42 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-21 13:13:44 [INFO] [fetch] サブKW紐付け: 146件 → 18記事に統合
+2026-05-21 13:13:44 [INFO] [fetch] [キーワード] メインKW: 9件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 34件  テーマ外除外: 16件  aim内訳: [now:1, aim:16, add:1, claude:7]
+2026-05-21 13:13:44 [INFO] [dup_check] 優先候補: 9件 {'now': 1, 'aim': 2, 'claude': 6} を先頭評価
+2026-05-21 13:13:44 [INFO] [dup_check] NOW優先スキップ: 「Google I/O 2026 SEO」（重複チェック免除）
+2026-05-21 13:13:44 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=9件, 要求=1件)
+2026-05-21 13:13:44 [INFO] [select] 1件選定 (要求=1件)
+2026-05-21 13:13:44 [INFO] [select]   1. 「Google I/O 2026 SEO」 vol=0 seo=N/A comp=N/A
+2026-05-21 13:13:44 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-21 13:13:44 [INFO] [workup-ai] 候補: 9件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.2423 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.2423(¥36) / 1記事
+2026-05-21 13:13:44 [INFO] [api_guard] 本日の使用量: $0.2423 / ¥36 (3回呼び出し)
+2026-05-21 13:13:44 [INFO] ────────────────────────────────────────────────────────────
+2026-05-21 13:13:44 [INFO] [workup-ai] [1/1] [LONGTAIL] 「Google I/O 2026 SEO」 vol=0 ★NOW
+2026-05-21 13:13:44 [INFO] ────────────────────────────────────────────────────────────
+2026-05-21 13:13:44 [INFO] [generate] 生成開始: 「Google I/O 2026 SEO」(vol:0) fact_check=True target_length=5,882字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「Google I/O 2026 SEO」(vol:0) [5,882字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.2423 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.2423(¥36) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=109 out=121 → $0.0006  (lsi:Google I/O 2026 SEO)
+[api_guard] 本日の使用量: $0.2429 / ¥36 (1010回呼び出し)
+[article_generator] 共起語: Google I/O 2026、SEO対策、検索エンジン最適化、Googleアルゴリズム更新、コアウェブバイタルス、E-...
+[api_guard] ✅ 本日: $0.2429 / 1時間: $0.0006  (上限 日次$10.00 / 時間$5.00)  全体: $0.2429(¥36) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=176 out=465 → $0.0020  (kw_research:Google I/O 2026 SEO)
+[api_guard] 本日の使用量: $0.2449 / ¥36 (1011回呼び出し)
+[article_generator] サジェスト: Google I/O 2026 SEO・Google I/O 2026 日程・Google I/O 2026 新機能...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] 参考URL: 3件
+[api_guard] ✅ 本日: $0.2449 / 1時間: $0.0026  (上限 日次$10.00 / 時間$5.00)  全体: $0.2449(¥37) / 1記事
+[api_guard] 記録: claude-sonnet-4-6 in=11431 out=13568 → $0.2378  (article:Google I/O 2026 SEO)
+[api_guard] 本日の使用量: $0.4827 / ¥72 (1012回呼び出し)
+[imagefx] 背景:B / ビジュアル:Cute flat icons of laptop, speech bubbles, stars, 
+[imagefx] タイトル(英): Google I/O 2026 SEO Changes
+[article_generator] 完了: 「Google I/O 2026 SEO対策まとめ｜AI検索時代に必要な5つの変化」 カテゴリ: 未設定(-) タグ: ['Google I/O 2026', 'SEO対策', 'AI検索', 'Gemini', '検索アルゴリズム']
+2026-05-21 13:17:36 [INFO] [generate] パターンCTA挿入（H3末尾）: 3件
+2026-05-21 13:17:36 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Director Suite 365」(ID:9813)
+2026-05-21 13:17:37 [INFO] [generate] 完了: 「Google I/O 2026 SEO対策まとめ｜AI検索時代に必要な5つの変化」
+2026-05-21 13:17:37 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 37件
+[category_selector] 「Google I/O 2026 SEO」→ Gemini・Google AI(1372) score=24
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring interconnected search icons, colorful algorit...
+[image_generator] 完了 (86KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_131746_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10356)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: Google I/O 2026が検索・SEOを変えた理由
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring SEO optimization symbols: magnifying glass, s...
+[image_generator] 完了 (54KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_131759_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10357)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: Google I/O 2026後のSEO対策で今すぐやるべき
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Abstract SEO optimization concept with floating search icons, magnifying glass, ...
+[image_generator] 完了 (44KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_131810_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10358)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: Google I/O 2026 SEOの注意点と今後の予測
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful question mark icons, magnifying glass, and Google colors in soft pastel...
+[image_generator] 完了 (51KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_131821_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10359)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: google-io-2026-seo-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration with pastel colors: Google I/O 2026 SEO summary concept...
+[image_generator] 完了 (41KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_131833_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10360)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: google-io-2026-seo-summary.jpg
+[internal_linker] 公開済み記事取得: 413件
+[internal_linker] タイトル重複除去: 2件の旧記事を除外
+[internal_linker] 同カテゴリー: 8件選定（ルールベース）
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['Google AIモード検索とは？2025年最新の使い方・メ', 'Google AI Studioとは？最新Gemini連携と', 'Google AI Studioの料金はどう決まる？無料期間', 'Gemini vs Google AI Studio徹底比較', 'Google AI Proは学生無料って本当？利用条件と注意', 'googleワークスペースでできること徹底ガイド【2025年', 'Google AI スティッチの使い方｜失敗写真を「奇跡の1', 'google検索AIによる概要オフのやり方と注意点']
+[wordpress] タグ設定: ['Google I/O 2026', 'SEO対策', 'AI検索', 'Gemini', '検索アルゴリズム']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 10361) → https://workup-ai.com/wp-admin/post.php?post=10361&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, speech bubbles, stars, lightbulbs, and upward charts with checkmarks, soft pastel pink, mint, and cream tones, minimal style.
+Soft pastel gradient background: gentle blush pink, cream and ivory tones, warm neutral atmosphere, feminine and sophisticated, airy and bright.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Google I/O 2026 SEO Changes" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行206 「Google I/O 2026 SEO」→ 投稿済み (2026/05/21, ID:10361) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「Google I/O 2026 SEO対策まとめ｜AI検索時」
+2026-05-21 13:18:43 [INFO] [post] WP投稿完了: ID=10361 → https://workup-ai.com/wp-admin/post.php?post=10361&action=edit
+2026-05-21 13:18:43 [INFO] [workup-ai] [1/1] ✅ 完了: 「Google I/O 2026 SEO対策まとめ｜AI検索時代に必要な5つの変化」
+2026-05-21 13:18:43 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-21 13:18:43 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #10361 Google I/O 2026 SEO対策まとめ｜AI検索時代に必要な5つの変化
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 感情・世界観コンセプト生成中...
+[IMAGE] rand comp  : strong asymmetric composition, subject pushed far 
+[IMAGE] rand scene : independent cafe, espresso, background hum of people, warm wood
+[IMAGE] rand person: side profile, face softly lit from one side, serene
+[IMAGE] rand taste : personal note.com blog header, warm and approachable
+[IMAGE] rand palette: warm terracotta orange, sandy earth, clay
+[IMAGE] rand place : center-left  layout: band_editorial
+[IMAGE] world     : AIツールが日常に溶け込み、自分のペースで人生を整えていく、そんな穏やかな現在地。
+[IMAGE] emotion   : やさしい希望 / 暮らしが整う感じ / 前向きな静けさ
+[IMAGE] placement : center-left  color: dark  layout: band_editorial
+[IMAGE] copy      : 「AIで、人生が少し整う。」 / sub: 「カフェで、ゆっくり始める。」
+[IMAGE] ライフスタイル背景生成中 placement=center-left...
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1594KB)
+[IMAGE] タイトル解析・サムネ文字生成中...
+[IMAGE] 読みやすいタイポグラフィ合成中...
+[IMAGE] overlay layout=5  palette=teal
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_131946_codex_lifestyle_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 10362)
+[codex-eyecatch] featured image 設定完了: media_id=10362
+[codex-eyecatch] 編集URL: https://workup-ai.com/wp-admin/post.php?post=10361&action=edit
+2026-05-21 13:19:49 [INFO] 
+============================================================
+2026-05-21 13:19:49 [INFO] 【全体サマリー】
+2026-05-21 13:19:49 [INFO]   ブログ数  : 1件
+2026-05-21 13:19:49 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-21 13:19:49 [INFO]   所要時間  : 373.4秒
+2026-05-21 13:19:49 [INFO]   ✅ [workup-ai] Google I/O 2026 SEO → Google I/O 2026 SEO対策まとめ｜AI検索時代に必要な5つの変化
+2026-05-21 13:19:49 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10361&action=edit
+2026-05-21 13:19:49 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-21 13:19:50 / exit=0 =====
+===== [WORKUP-AI] 実行開始: 2026-05-21 16:38:30 =====
+Traceback (most recent call last):
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 49, in <module>
+    from modules.article_generator import generate_article
+  File "/Users/yama/article-generator-hataraku/modules/article_generator.py", line 403
+    "datePublished": "{{今日の日付 YYYY-MM-DD}}",
+                        ^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+===== [WORKUP-AI] 記事生成終了: 2026-05-21 16:38:30 / exit=1 =====
+===== [WORKUP-AI] 実行開始: 2026-05-21 16:49:07 =====
+2026-05-21 16:49:09 [INFO] ============================================================
+2026-05-21 16:49:09 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-21 16:49:09 [INFO] ============================================================
+2026-05-21 16:49:09 [INFO] 対象ブログ: ['workup-ai']
+2026-05-21 16:49:10 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-21 16:49:10 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-21 16:49:10 [INFO] ════════════════════════════════════════════════════════════
+2026-05-21 16:49:10 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-21 16:49:10 [INFO]   fact_check       : True
+2026-05-21 16:49:10 [INFO]   article_type_mix : True
+2026-05-21 16:49:10 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-21 16:49:10 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 16:49:12 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-21 16:49:12 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-21 16:49:12 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-21 16:49:12 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-21 16:49:12 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-21 16:49:12 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-21 16:49:12 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-21 16:49:12 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-21 16:49:12 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 16:49:12 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-21 16:49:12 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-21 16:49:12 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-21 16:49:12 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-21 16:49:12 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-21 16:49:12 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-21 16:49:12 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-21 16:49:12 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-21 16:49:12 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-21 16:49:12 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-21 16:49:13 [INFO] [wp] 記事取得: 計415件 (publish=415)
+2026-05-21 16:49:13 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-21 16:49:14 [INFO] [fetch] サブKW紐付け: 146件 → 18記事に統合
+2026-05-21 16:49:14 [INFO] [fetch] [キーワード] メインKW: 8件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 35件  テーマ外除外: 16件  aim内訳: [aim:16, add:1, claude:7]
+2026-05-21 16:49:14 [INFO] [dup_check] 優先候補: 8件 {'aim': 2, 'claude': 6} を先頭評価
+2026-05-21 16:49:14 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → カニバリ(3/4語重複 ['youtube', 'ai', 'イラスト']): 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-05-21 16:49:14 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → カニバリ(2/3語重複 ['youtube', 'ai']): 「YouTube競合分析AIツールおすすめ6選！無料から使える方法・やり方を徹底解」
+2026-05-21 16:49:14 [INFO] [dup_check] 除外: 「フリーランス AI 活用 在宅」 → カニバリ(3/4語重複 ['ai', '活用', '在宅']): 「在宅ワーク｜主婦で初心者でも安心！AI活用で始める稼げる副業」
+2026-05-21 16:49:14 [INFO] [dup_check] 除外: 「AI副業 稼ぎ方 初心者 安全」 → カニバリ(3/4語重複 ['ai副業', '稼ぎ方', '初心者']): 「AI副業で何をする？初心者におすすめの種類と稼ぎ方を徹底解説」
+2026-05-21 16:49:14 [INFO] [dup_check] 除外: 「Claude Code ChatGPT 違い わかりやすく」 → カニバリ(3/5語重複 ['claude', 'code', '違い']): 「Claude CodeとOpenAI Codex、どっちを選ぶ？機能・料金・用途」
+2026-05-21 16:49:14 [INFO] [dup_check] 除外: 「Claude Code API できること」 → カニバリ(3/4語重複 ['claude', 'code', 'できること']): 「Claude Code Skillsとは？できること・使い方・導入手順を解説」
+2026-05-21 16:49:14 [INFO] [dup_check] 除外: 「AIコンテンツ SEO 対策 2026」 → カニバリ(2/3語重複 ['seo', '対策']): 「Google I/O 2026 SEO対策まとめ｜AI検索時代に必要な5つの変化」
+2026-05-21 16:49:15 [INFO] [dup_check] 完了: 選定=1件 / 除外=7件 (pool=8件, 要求=1件)
+2026-05-21 16:49:15 [INFO] [select] 1件選定 (要求=1件)
+2026-05-21 16:49:15 [INFO] [select]   1. 「AIプログラミング 初心者 やり方」 vol=0 seo=N/A comp=N/A
+2026-05-21 16:49:15 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-21 16:49:15 [INFO] [workup-ai] 候補: 8件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.7456 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.7456(¥112) / 3記事
+2026-05-21 16:49:15 [INFO] [api_guard] 本日の使用量: $0.7456 / ¥112 (9回呼び出し)
+2026-05-21 16:49:15 [INFO] ────────────────────────────────────────────────────────────
+2026-05-21 16:49:15 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AIプログラミング 初心者 やり方」 vol=0 ★CLAUDE
+2026-05-21 16:49:15 [INFO] ────────────────────────────────────────────────────────────
+2026-05-21 16:49:15 [INFO] [generate] 手順解説型ブースト: 5,035字 → 6,545字
+2026-05-21 16:49:15 [INFO] [generate] 生成開始: 「AIプログラミング 初心者 やり方」(vol:0) fact_check=True target_length=6,545字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「AIプログラミング 初心者 やり方」(vol:0) [6,545字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.7456 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.7456(¥112) / 3記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=113 out=78 → $0.0004  (lsi:AIプログラミング 初心者 やり方)
+[api_guard] 本日の使用量: $0.7460 / ¥111 (1016回呼び出し)
+[article_generator] 共起語: Python、機械学習、ChatGPT、プログラミング言語、コード生成、API、開発環境、ライブラリ、自動化、データ分析...
+[api_guard] ✅ 本日: $0.7460 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $0.7460(¥112) / 3記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=180 out=600 → $0.0025  (kw_research:AIプログラミング 初心者 やり方)
+[api_guard] 本日の使用量: $0.7486 / ¥112 (1017回呼び出し)
+[article_generator] サジェスト: AIプログラミング 初心者 やり方・AIプログラミング 初心者 言語・AIプログラミング 初心者 Python...
+[article_generator] 検索意図: 購買直前 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] 手順解説型モード: 「AIプログラミング 初心者 やり方」
+[api_guard] ✅ 本日: $0.7486 / 1時間: $0.0029  (上限 日次$10.00 / 時間$5.00)  全体: $0.7486(¥112) / 3記事
+[api_guard] 記録: claude-sonnet-4-6 in=12821 out=16000 → $0.2785  (article:AIプログラミング 初心者 やり方)
+[api_guard] 本日の使用量: $1.0270 / ¥154 (1018回呼び出し)
+2026-05-21 16:53:31 [ERROR] [workup-ai] [1/1] ❌ エラー（続行）: max_tokens上限（16000）に到達しました。JSONが途切れています。 出力トークン: 16000
+2026-05-21 16:53:31 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-21 16:53:31 [INFO] 
+============================================================
+2026-05-21 16:53:31 [INFO] 【全体サマリー】
+2026-05-21 16:53:31 [INFO]   ブログ数  : 1件
+2026-05-21 16:53:31 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-21 16:53:31 [INFO]   所要時間  : 262.0秒
+2026-05-21 16:53:31 [INFO]   ❌ [workup-ai] AIプログラミング 初心者 やり方 → (生成失敗)
+2026-05-21 16:53:31 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-21 16:53:31 / exit=0 =====
+===== [WORKUP-AI] 実行開始: 2026-05-21 17:00:35 =====
+2026-05-21 17:00:37 [INFO] ============================================================
+2026-05-21 17:00:37 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-21 17:00:37 [INFO] ============================================================
+2026-05-21 17:00:37 [INFO] 対象ブログ: ['workup-ai']
+2026-05-21 17:00:39 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-21 17:00:39 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-21 17:00:39 [INFO] ════════════════════════════════════════════════════════════
+2026-05-21 17:00:39 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-21 17:00:39 [INFO]   fact_check       : True
+2026-05-21 17:00:39 [INFO]   article_type_mix : True
+2026-05-21 17:00:39 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-21 17:00:39 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 17:00:40 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-21 17:00:40 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-21 17:00:40 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-21 17:00:40 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-21 17:00:40 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-21 17:00:40 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-21 17:00:40 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-21 17:00:40 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-21 17:00:40 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 17:00:40 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-21 17:00:40 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-21 17:00:40 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-21 17:00:40 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-21 17:00:40 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-21 17:00:40 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-21 17:00:40 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-21 17:00:40 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-21 17:00:40 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-21 17:00:40 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-21 17:00:43 [INFO] [wp] 記事取得: 計415件 (publish=415)
+2026-05-21 17:00:43 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-21 17:00:44 [INFO] [fetch] サブKW紐付け: 146件 → 18記事に統合
+2026-05-21 17:00:44 [INFO] [fetch] [キーワード] メインKW: 8件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 35件  テーマ外除外: 16件  aim内訳: [aim:16, add:1, claude:7]
+2026-05-21 17:00:44 [INFO] [dup_check] 優先候補: 8件 {'aim': 2, 'claude': 6} を先頭評価
+2026-05-21 17:00:44 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → カニバリ(3/4語重複 ['youtube', 'ai', 'イラスト']): 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-05-21 17:00:44 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → カニバリ(2/3語重複 ['youtube', 'ai']): 「YouTube競合分析AIツールおすすめ6選！無料から使える方法・やり方を徹底解」
+2026-05-21 17:00:44 [INFO] [dup_check] 除外: 「フリーランス AI 活用 在宅」 → カニバリ(3/4語重複 ['ai', '活用', '在宅']): 「在宅ワーク｜主婦で初心者でも安心！AI活用で始める稼げる副業」
+2026-05-21 17:00:44 [INFO] [dup_check] 除外: 「AI副業 稼ぎ方 初心者 安全」 → カニバリ(3/4語重複 ['ai副業', '稼ぎ方', '初心者']): 「AI副業で何をする？初心者におすすめの種類と稼ぎ方を徹底解説」
+2026-05-21 17:00:44 [INFO] [dup_check] 除外: 「Claude Code ChatGPT 違い わかりやすく」 → カニバリ(3/5語重複 ['claude', 'code', '違い']): 「Claude CodeとOpenAI Codex、どっちを選ぶ？機能・料金・用途」
+2026-05-21 17:00:44 [INFO] [dup_check] 除外: 「Claude Code API できること」 → カニバリ(3/4語重複 ['claude', 'code', 'できること']): 「Claude Code Skillsとは？できること・使い方・導入手順を解説」
+2026-05-21 17:00:44 [INFO] [dup_check] 除外: 「AIコンテンツ SEO 対策 2026」 → カニバリ(2/3語重複 ['seo', '対策']): 「Google I/O 2026 SEO対策まとめ｜AI検索時代に必要な5つの変化」
+2026-05-21 17:00:44 [INFO] [dup_check] 完了: 選定=1件 / 除外=7件 (pool=8件, 要求=1件)
+2026-05-21 17:00:44 [INFO] [select] 1件選定 (要求=1件)
+2026-05-21 17:00:44 [INFO] [select]   1. 「AIプログラミング 初心者 やり方」 vol=0 seo=N/A comp=N/A
+2026-05-21 17:00:44 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-21 17:00:44 [INFO] [workup-ai] 候補: 8件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.0270 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.0270(¥154) / 4記事
+2026-05-21 17:00:44 [INFO] [api_guard] 本日の使用量: $1.0270 / ¥154 (12回呼び出し)
+2026-05-21 17:00:44 [INFO] ────────────────────────────────────────────────────────────
+2026-05-21 17:00:44 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AIプログラミング 初心者 やり方」 vol=0 ★CLAUDE
+2026-05-21 17:00:44 [INFO] ────────────────────────────────────────────────────────────
+2026-05-21 17:00:44 [INFO] [generate] 手順解説型ブースト: 7,928字 → 10,306字
+2026-05-21 17:00:44 [INFO] [generate] 生成開始: 「AIプログラミング 初心者 やり方」(vol:0) fact_check=True target_length=10,306字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「AIプログラミング 初心者 やり方」(vol:0) [10,306字 / H3:14〜18本 / FAQ:8〜10問]
+[api_guard] ✅ 本日: $1.0270 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.0270(¥154) / 4記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=113 out=80 → $0.0004  (lsi:AIプログラミング 初心者 やり方)
+[api_guard] 本日の使用量: $1.0274 / ¥154 (1019回呼び出し)
+[article_generator] 共起語: Python、機械学習、ChatGPT、プログラミング言語、開発環境、ライブラリ、コード例、初心者向け、学習方法、データ...
+[api_guard] ✅ 本日: $1.0274 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $1.0274(¥154) / 4記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=180 out=568 → $0.0024  (kw_research:AIプログラミング 初心者 やり方)
+[api_guard] 本日の使用量: $1.0298 / ¥154 (1020回呼び出し)
+[article_generator] サジェスト: AIプログラミング 初心者 やり方・AIプログラミング 初心者 言語・AIプログラミング 初心者 Python...
+[article_generator] 検索意図: 購買直前 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] 手順解説型モード: 「AIプログラミング 初心者 やり方」
+[api_guard] ✅ 本日: $1.0298 / 1時間: $0.0028  (上限 日次$10.00 / 時間$5.00)  全体: $1.0298(¥154) / 4記事
+2026-05-21 17:00:50 [ERROR] [workup-ai] [1/1] ❌ エラー（続行）: Streaming is required for operations that may take longer than 10 minutes. See https://github.com/anthropics/anthropic-sdk-python#long-requests for more details
+2026-05-21 17:00:50 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-21 17:00:50 [INFO] 
+============================================================
+2026-05-21 17:00:50 [INFO] 【全体サマリー】
+2026-05-21 17:00:50 [INFO]   ブログ数  : 1件
+2026-05-21 17:00:50 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-21 17:00:50 [INFO]   所要時間  : 13.8秒
+2026-05-21 17:00:50 [INFO]   ❌ [workup-ai] AIプログラミング 初心者 やり方 → (生成失敗)
+2026-05-21 17:00:50 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-21 17:00:51 / exit=0 =====
+===== [WORKUP-AI] 実行開始: 2026-05-21 17:02:42 =====
+2026-05-21 17:02:43 [INFO] ============================================================
+2026-05-21 17:02:43 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-21 17:02:43 [INFO] ============================================================
+2026-05-21 17:02:43 [INFO] 対象ブログ: ['workup-ai']
+2026-05-21 17:02:45 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-21 17:02:45 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-21 17:02:45 [INFO] ════════════════════════════════════════════════════════════
+2026-05-21 17:02:45 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-21 17:02:45 [INFO]   fact_check       : True
+2026-05-21 17:02:45 [INFO]   article_type_mix : True
+2026-05-21 17:02:45 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-21 17:02:45 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 17:02:46 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-21 17:02:46 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-21 17:02:46 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-21 17:02:46 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-21 17:02:46 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-21 17:02:46 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-21 17:02:46 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-21 17:02:46 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-21 17:02:46 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 17:02:46 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-21 17:02:46 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-21 17:02:46 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-21 17:02:46 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-21 17:02:46 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-21 17:02:46 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-21 17:02:46 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-21 17:02:46 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-21 17:02:46 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-21 17:02:46 [INFO] [workup-ai]   [A] ChatGPTなどの生成AIを学び仕事に活かす！「DMM 生成AI CAMP」(26-0414) → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-21 17:02:49 [INFO] [wp] 記事取得: 計415件 (publish=415)
+2026-05-21 17:02:49 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-21 17:02:50 [INFO] [fetch] サブKW紐付け: 146件 → 18記事に統合
+2026-05-21 17:02:50 [INFO] [fetch] [キーワード] メインKW: 8件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 35件  テーマ外除外: 16件  aim内訳: [aim:16, add:1, claude:7]
+2026-05-21 17:02:50 [INFO] [dup_check] 優先候補: 8件 {'aim': 2, 'claude': 6} を先頭評価
+2026-05-21 17:02:50 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → カニバリ(3/4語重複 ['youtube', 'ai', 'イラスト']): 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-05-21 17:02:50 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → カニバリ(2/3語重複 ['youtube', 'ai']): 「YouTube競合分析AIツールおすすめ6選！無料から使える方法・やり方を徹底解」
+2026-05-21 17:02:50 [INFO] [dup_check] 除外: 「フリーランス AI 活用 在宅」 → カニバリ(3/4語重複 ['ai', '活用', '在宅']): 「在宅ワーク｜主婦で初心者でも安心！AI活用で始める稼げる副業」
+2026-05-21 17:02:50 [INFO] [dup_check] 除外: 「AI副業 稼ぎ方 初心者 安全」 → カニバリ(3/4語重複 ['ai副業', '稼ぎ方', '初心者']): 「AI副業で何をする？初心者におすすめの種類と稼ぎ方を徹底解説」
+2026-05-21 17:02:50 [INFO] [dup_check] 除外: 「Claude Code ChatGPT 違い わかりやすく」 → カニバリ(3/5語重複 ['claude', 'code', '違い']): 「Claude CodeとOpenAI Codex、どっちを選ぶ？機能・料金・用途」
+2026-05-21 17:02:50 [INFO] [dup_check] 除外: 「Claude Code API できること」 → カニバリ(3/4語重複 ['claude', 'code', 'できること']): 「Claude Code Skillsとは？できること・使い方・導入手順を解説」
+2026-05-21 17:02:50 [INFO] [dup_check] 除外: 「AIコンテンツ SEO 対策 2026」 → カニバリ(2/3語重複 ['seo', '対策']): 「Google I/O 2026 SEO対策まとめ｜AI検索時代に必要な5つの変化」
+2026-05-21 17:02:50 [INFO] [dup_check] 完了: 選定=1件 / 除外=7件 (pool=8件, 要求=1件)
+2026-05-21 17:02:50 [INFO] [select] 1件選定 (要求=1件)
+2026-05-21 17:02:50 [INFO] [select]   1. 「AIプログラミング 初心者 やり方」 vol=0 seo=N/A comp=N/A
+2026-05-21 17:02:50 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-21 17:02:50 [INFO] [workup-ai] 候補: 8件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.0298 / 1時間: $0.0028  (上限 日次$10.00 / 時間$5.00)  全体: $1.0298(¥154) / 4記事
+2026-05-21 17:02:50 [INFO] [api_guard] 本日の使用量: $1.0298 / ¥154 (14回呼び出し)
+2026-05-21 17:02:50 [INFO] ────────────────────────────────────────────────────────────
+2026-05-21 17:02:50 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AIプログラミング 初心者 やり方」 vol=0 ★CLAUDE
+2026-05-21 17:02:50 [INFO] ────────────────────────────────────────────────────────────
+2026-05-21 17:02:50 [INFO] [generate] 手順解説型ブースト: 7,632字 → 9,921字
+2026-05-21 17:02:50 [INFO] [generate] 生成開始: 「AIプログラミング 初心者 やり方」(vol:0) fact_check=True target_length=9,921字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「AIプログラミング 初心者 やり方」(vol:0) [9,921字 / H3:14〜18本 / FAQ:8〜10問]
+[api_guard] ✅ 本日: $1.0298 / 1時間: $0.0028  (上限 日次$10.00 / 時間$5.00)  全体: $1.0298(¥154) / 4記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=113 out=83 → $0.0004  (lsi:AIプログラミング 初心者 やり方)
+[api_guard] 本日の使用量: $1.0303 / ¥154 (1021回呼び出し)
+[article_generator] 共起語: Python、機械学習、ChatGPT、開発環境、ライブラリ、APIキー、コード例、デバッグ、エラー対処、プログラミング...
+[api_guard] ✅ 本日: $1.0303 / 1時間: $0.0032  (上限 日次$10.00 / 時間$5.00)  全体: $1.0303(¥155) / 4記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=180 out=634 → $0.0027  (kw_research:AIプログラミング 初心者 やり方)
+[api_guard] 本日の使用量: $1.0329 / ¥154 (1022回呼び出し)
+[article_generator] サジェスト: AIプログラミング 初心者 やり方・AIプログラミング 初心者 言語・AIプログラミング 初心者 python...
+[article_generator] 検索意図: 購買直前 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] 手順解説型モード: 「AIプログラミング 初心者 やり方」
+[api_guard] ✅ 本日: $1.0329 / 1時間: $0.0059  (上限 日次$10.00 / 時間$5.00)  全体: $1.0329(¥155) / 4記事
+[api_guard] 記録: claude-sonnet-4-6 in=12857 out=17702 → $0.3041  (article:AIプログラミング 初心者 やり方)
+[api_guard] 本日の使用量: $1.3370 / ¥200 (1023回呼び出し)
+[imagefx] 背景:B / ビジュアル:Cute flat icons of laptop, Python logo, lightbulb,
+[imagefx] タイトル(英): AI Programming Beginner Guide
+[article_generator] 完了: 「AIプログラミング初心者のやり方を解説！Pythonで始める学習ロードマップ」 カテゴリ: 未設定(-) タグ: ['AIプログラミング', 'Python入門', '機械学習', 'プログラミング初心者', 'AI学習']
+2026-05-21 17:07:37 [INFO] [generate] パターンCTA挿入（H3末尾）: 3件
+2026-05-21 17:07:37 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-21 17:07:37 [INFO] [generate] 完了: 「AIプログラミング初心者のやり方を解説！Pythonで始める学習ロードマップ」
+2026-05-21 17:07:37 [WARNING] [quality] 品質チェック: ❌3件NG / ⚠️0件警告 / 「AIプログラミング初心者のやり方を解説！Pythonで始める学習ロードマップ」
+2026-05-21 17:07:37 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（でしょうか。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-21 17:07:37 [WARNING] [quality]   ❌ □ 段落の長さ: 13箇所の段落が250字超えています。スマホ読みやすさのため、1段落は120〜200字を目安に分割してください。
+2026-05-21 17:07:37 [WARNING] [quality]   ❌ □ メタディスクリプション: メタディスクリプションが短すぎます（78字）。80〜120字に拡充してください。
+2026-05-21 17:07:37 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-21 17:07:37 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 37件
+[category_selector] 「AIプログラミング 初心者 やり方」→ プログラミング・開発(1382) score=14
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration showing stacked books, a lightbulb, gears, and code s...
+[image_generator] 完了 (52KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_170747_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10375)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: AIプログラミングを始める前に知っておきたい基礎知識
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration showing Python code snippets, AI neural network nodes...
+[image_generator] 完了 (88KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_170801_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10376)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: PythonでAIプログラミングを始める具体的なやり方・手順
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration featuring learning resources: stacked books, a gradua...
+[image_generator] 完了 (63KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_170811_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10377)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: AIプログラミング初心者におすすめの学習リソース比較
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration with pastel colors: floating question marks, coding bra...
+[image_generator] 完了 (59KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_170823_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10378)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: ai-programming-beginner-guide-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful flat design illustration with pastel palette featuring graduation cap, ...
+[image_generator] 完了 (46KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_170835_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10379)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: ai-programming-beginner-guide-summary.jpg
+[internal_linker] 公開済み記事取得: 415件
+[internal_linker] タイトル重複除去: 2件の旧記事を除外
+[internal_linker] 「Neuro Dive」関連記事: 1件追加
+[internal_linker] 「Udemy」関連記事: 1件追加
+[internal_linker] 同カテゴリー: 7件選定（ルールベース）
+[internal_linker] 製品名マッチ「Neuro Dive」→ セクション11に割り当て
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['Neuro Dive Onlineの費用は高い？料金と支援内', 'Windsurf AIとは？OpenAIが買収した話題のAI', 'Claude Code Windows版の使い方を初心者向け', 'Cursor AIの日本語対応はどこまで？実力と使い方をわか', 'replit agentは日本語で使える？使い方と注意点を解', 'Rorkとは？アプリ開発を自動化するAIエージェントの実力と', 'CursorエディタWindows版の使い方と便利機能を解説', 'deepseek v3 日本語の対応の実力と料金は？APIの']
+[wordpress] タグ設定: ['AIプログラミング', 'Python入門', '機械学習', 'プログラミング初心者', 'AI学習']
+[wordpress] タグ既存(term_exists)使用: AI学習 (id=674)
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 10380) → https://workup-ai.com/wp-admin/post.php?post=10380&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, Python logo, lightbulb, checkmarks, and upward chart with stars, soft pastel pink, mint, and lavender tones, minimal style.
+Soft pastel gradient background: gentle blush pink, cream and ivory tones, warm neutral atmosphere, feminine and sophisticated, airy and bright.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "AI Programming Beginner Guide" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行34 「AIプログラミング 初心者 やり方」→ 投稿済み (2026/05/21, ID:10380) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「AIプログラミング初心者のやり方を解説！Pythonで始める」
+2026-05-21 17:08:49 [INFO] [post] WP投稿完了: ID=10380 → https://workup-ai.com/wp-admin/post.php?post=10380&action=edit
+2026-05-21 17:08:49 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-21 17:08:49 [INFO] [workup-ai] [1/1] ✅ 完了: 「AIプログラミング初心者のやり方を解説！Pythonで始める学習ロードマップ」
+2026-05-21 17:08:49 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-21 17:08:49 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #10380 AIプログラミング初心者のやり方を解説！Pythonで始める学習ロードマップ
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] オンライン学習ナビ向け・学習メディア型バナーで生成します
+[IMAGE] learning template: study_compare
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1606KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_170946_codex_webstudy_learning_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 10381)
+[codex-eyecatch] featured image 設定完了: media_id=10381
+[codex-eyecatch] 編集URL: https://workup-ai.com/wp-admin/post.php?post=10380&action=edit
+2026-05-21 17:09:49 [INFO] 
+============================================================
+2026-05-21 17:09:49 [INFO] 【全体サマリー】
+2026-05-21 17:09:49 [INFO]   ブログ数  : 1件
+2026-05-21 17:09:49 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-21 17:09:49 [INFO]   所要時間  : 426.0秒
+2026-05-21 17:09:49 [INFO]   ✅ [workup-ai] AIプログラミング 初心者 やり方 → AIプログラミング初心者のやり方を解説！Pythonで始める学習ロードマップ
+2026-05-21 17:09:49 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10380&action=edit
+2026-05-21 17:09:49 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-21 17:09:51 / exit=0 =====
+===== [WORKUP-AI] 実行開始: 2026-05-21 21:51:34 =====
+2026-05-21 21:51:36 [INFO] ============================================================
+2026-05-21 21:51:36 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-21 21:51:36 [INFO] ============================================================
+2026-05-21 21:51:36 [INFO] 対象ブログ: ['workup-ai']
+2026-05-21 21:51:37 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-21 21:51:37 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-21 21:51:37 [INFO] ════════════════════════════════════════════════════════════
+2026-05-21 21:51:37 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-21 21:51:37 [INFO]   fact_check       : True
+2026-05-21 21:51:37 [INFO]   article_type_mix : True
+2026-05-21 21:51:37 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-21 21:51:37 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 21:51:39 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-21 21:51:39 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-21 21:51:39 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-21 21:51:39 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-21 21:51:39 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-21 21:51:39 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-21 21:51:39 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-21 21:51:39 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-21 21:51:39 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 21:51:39 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-21 21:51:39 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-21 21:51:39 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-21 21:51:39 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-21 21:51:39 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-21 21:51:39 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-21 21:51:39 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-21 21:51:39 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-21 21:51:39 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-21 21:51:39 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-21 21:51:42 [INFO] [wp] 記事取得: 計415件 (publish=415)
+2026-05-21 21:51:42 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-21 21:51:43 [INFO] [fetch] サブKW紐付け: 146件 → 18記事に統合
+2026-05-21 21:51:43 [INFO] [fetch] [キーワード] メインKW: 7件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 36件  テーマ外除外: 16件  aim内訳: [aim:16, add:1, claude:6]
+2026-05-21 21:51:43 [INFO] [dup_check] 優先候補: 7件 {'aim': 2, 'claude': 5} を先頭評価
+2026-05-21 21:51:43 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → カニバリ(3/4語重複 ['youtube', 'ai', 'イラスト']): 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-05-21 21:51:43 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → カニバリ(2/3語重複 ['youtube', 'ai']): 「YouTube競合分析AIツールおすすめ6選！無料から使える方法・やり方を徹底解」
+2026-05-21 21:51:43 [INFO] [dup_check] 除外: 「フリーランス AI 活用 在宅」 → カニバリ(3/4語重複 ['ai', '活用', '在宅']): 「在宅ワーク｜主婦で初心者でも安心！AI活用で始める稼げる副業」
+2026-05-21 21:51:43 [INFO] [dup_check] 除外: 「AI副業 稼ぎ方 初心者 安全」 → カニバリ(3/4語重複 ['ai副業', '稼ぎ方', '初心者']): 「AI副業で何をする？初心者におすすめの種類と稼ぎ方を徹底解説」
+2026-05-21 21:51:43 [INFO] [dup_check] 除外: 「Claude Code ChatGPT 違い わかりやすく」 → カニバリ(3/5語重複 ['claude', 'code', '違い']): 「Claude CodeとOpenAI Codex、どっちを選ぶ？機能・料金・用途」
+2026-05-21 21:51:43 [INFO] [dup_check] 除外: 「Claude Code API できること」 → カニバリ(3/4語重複 ['claude', 'code', 'できること']): 「Claude Code Skillsとは？できること・使い方・導入手順を解説」
+2026-05-21 21:51:43 [INFO] [dup_check] 除外: 「AIコンテンツ SEO 対策 2026」 → カニバリ(2/3語重複 ['seo', '対策']): 「Google I/O 2026 SEO対策まとめ｜AI検索時代に必要な5つの変化」
+2026-05-21 21:51:43 [INFO] [dup_check] 完了: 選定=0件 / 除外=7件 (pool=7件, 要求=1件)
+2026-05-21 21:51:43 [WARNING] [dup_check] 目標1件に対し0件のみ確保（候補不足）
+2026-05-21 21:51:43 [INFO] [select] 0件選定 (要求=1件)
+2026-05-21 21:51:43 [INFO] [workup-ai] LONGTAIL選定: 0件
+2026-05-21 21:51:43 [INFO] [workup-ai] 候補: 7件 / 選定: 0件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.3370 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.3370(¥201) / 5記事
+2026-05-21 21:51:43 [INFO] [api_guard] 本日の使用量: $1.3370 / ¥201 (17回呼び出し)
+2026-05-21 21:51:43 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=0件 / 合計=0件
+2026-05-21 21:51:43 [INFO] 
+============================================================
+2026-05-21 21:51:43 [INFO] 【全体サマリー】
+2026-05-21 21:51:43 [INFO]   ブログ数  : 1件
+2026-05-21 21:51:43 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-21 21:51:43 [INFO]   所要時間  : 7.7秒
+2026-05-21 21:51:43 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-21 21:51:44 / exit=0 =====
+===== [WORKUP-AI] 実行開始: 2026-05-21 22:41:04 =====
+2026-05-21 22:41:10 [INFO] ============================================================
+2026-05-21 22:41:10 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-21 22:41:10 [INFO] ============================================================
+2026-05-21 22:41:10 [INFO] 対象ブログ: ['workup-ai']
+2026-05-21 22:41:11 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-21 22:41:11 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-21 22:41:11 [INFO] ════════════════════════════════════════════════════════════
+2026-05-21 22:41:11 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-21 22:41:11 [INFO]   fact_check       : True
+2026-05-21 22:41:11 [INFO]   article_type_mix : True
+2026-05-21 22:41:11 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-21 22:41:11 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 22:41:13 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-21 22:41:13 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-21 22:41:13 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-21 22:41:13 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-21 22:41:13 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-21 22:41:13 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-21 22:41:13 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-21 22:41:13 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-21 22:41:13 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 22:41:13 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-21 22:41:13 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-21 22:41:13 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-21 22:41:13 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-21 22:41:13 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-21 22:41:13 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-21 22:41:13 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-21 22:41:13 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-21 22:41:13 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-21 22:41:13 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-21 22:41:17 [INFO] [wp] 記事取得: 計415件 (publish=415)
+2026-05-21 22:41:17 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-21 22:41:19 [INFO] [fetch] サブKW紐付け: 146件 → 18記事に統合
+2026-05-21 22:41:19 [INFO] [fetch] [キーワード] メインKW: 8件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 36件  テーマ外除外: 16件  aim内訳: [now:1, aim:16, add:1, claude:6]
+2026-05-21 22:41:19 [INFO] [dup_check] 優先候補: 8件 {'now': 1, 'aim': 2, 'claude': 5} を先頭評価
+2026-05-21 22:41:19 [INFO] [dup_check] NOW優先スキップ: 「Google Spark 買い物」（重複チェック免除）
+2026-05-21 22:41:19 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=8件, 要求=1件)
+2026-05-21 22:41:19 [INFO] [select] 1件選定 (要求=1件)
+2026-05-21 22:41:19 [INFO] [select]   1. 「Google Spark 買い物」 vol=0 seo=N/A comp=N/A
+2026-05-21 22:41:19 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-21 22:41:19 [INFO] [workup-ai] 候補: 8件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.3370 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.3370(¥201) / 5記事
+2026-05-21 22:41:19 [INFO] [api_guard] 本日の使用量: $1.3370 / ¥201 (17回呼び出し)
+2026-05-21 22:41:19 [INFO] ────────────────────────────────────────────────────────────
+2026-05-21 22:41:19 [INFO] [workup-ai] [1/1] [LONGTAIL] 「Google Spark 買い物」 vol=0 ★NOW
+2026-05-21 22:41:19 [INFO] ────────────────────────────────────────────────────────────
+2026-05-21 22:41:19 [INFO] [generate] 競合文字数チェック: 競合最大 3,425字 → 設定値 5,279字 で生成（調整不要）
+2026-05-21 22:41:19 [INFO] [generate] 生成開始: 「Google Spark 買い物」(vol:0) fact_check=True target_length=5,279字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「Google Spark 買い物」(vol:0) [5,279字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $1.3370 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.3370(¥201) / 5記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=106 out=83 → $0.0004  (lsi:Google Spark 買い物)
+[api_guard] 本日の使用量: $1.3375 / ¥200 (1024回呼び出し)
+[article_generator] 共起語: Google Spark、ショッピング機能、画像検索、視覚検索、商品検索、オンラインショッピング、Google Lens...
+[api_guard] ✅ 本日: $1.3375 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $1.3375(¥201) / 5記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=173 out=502 → $0.0021  (kw_research:Google Spark 買い物)
+[api_guard] 本日の使用量: $1.3396 / ¥200 (1025回呼び出し)
+[article_generator] サジェスト: Google Spark 買い物 使い方・Google Spark 買い物 アプリ・Google Spark 買い物 日本...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] 参考URL: 3件
+[api_guard] ✅ 本日: $1.3396 / 1時間: $0.0026  (上限 日次$10.00 / 時間$5.00)  全体: $1.3396(¥201) / 5記事
+[api_guard] 記録: claude-sonnet-4-6 in=12154 out=14129 → $0.2484  (article:Google Spark 買い物)
+[api_guard] 本日の使用量: $1.5880 / ¥238 (1026回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of shopping bag, laptop, stars, co
+[imagefx] タイトル(英): Google Spark Shopping Features Guide
+[article_generator] 完了: 「Google Sparkで買い物はできる？ショッピング機能の実態と代替アプリ5選」 カテゴリ: 未設定(-) タグ: ['Google Spark', '商品検索', 'ショッピングアプリ', 'Google Lens', '視覚検索']
+2026-05-21 22:45:12 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-21 22:45:12 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Director Suite 365」(ID:9813)
+2026-05-21 22:45:13 [INFO] [generate] 完了: 「Google Sparkで買い物はできる？ショッピング機能の実態と代替アプリ5選」
+2026-05-21 22:45:13 [WARNING] [quality] 品質チェック: ❌1件NG / ⚠️1件警告 / 「Google Sparkで買い物はできる？ショッピング機能の実態と代替アプリ5選」
+2026-05-21 22:45:13 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（でしょうか。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-21 22:45:13 [WARNING] [quality]   ⚠️  □ 外部ソースリンク: 外部リンクはありますが、Google公式・官公庁など信頼性の高いソースへの言及があるとE-E-A-Tが向上します。
+2026-05-21 22:45:13 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 37件
+[category_selector] 「Google Spark 買い物」→ Gemini・Google AI(1372) score=24
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful shopping bags, gift boxes, and sparkle icons arranged in flat design st...
+[image_generator] 完了 (66KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_224523_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10389)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: Google Sparkの買い物機能とは何か：実態と歴史的経
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful shopping app icons and product discovery symbols arranged in flat desig...
+[image_generator] 完了 (119KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_224535_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10390)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: Google Sparkの代わりに使えるショッピング・商品検
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful shopping bags and product boxes with Google Lens camera icon and sparkl...
+[image_generator] 完了 (70KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_224553_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10391)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: Google LensとGemini Sparkで商品検索を
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful shopping bags and gift boxes with sparkles, FAQ question marks in paste...
+[image_generator] 完了 (66KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_224627_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10392)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: google-spark-shopping-guide-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration of shopping bags, gift boxes, and sparkle elements in p...
+[image_generator] 完了 (58KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_224640_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10393)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: google-spark-shopping-guide-summary.jpg
+[internal_linker] 公開済み記事取得: 415件
+[internal_linker] タイトル重複除去: 2件の旧記事を除外
+[internal_linker] 「MyEdit」関連記事: 2件追加
+[internal_linker] 同カテゴリー: 6件選定（同カテゴリー:6件 / 関連度60%+新しさ40%）
+[internal_linker] 製品名マッチ「MyEdit」→ セクション10に割り当て
+[internal_linker] 製品名マッチ「MyEdit」→ セクション15に割り当て
+[internal_linker] H3マッチ割り当て「google sparkとはどんなサービ」→「Google Antigravityの使い方｜「指示するだけ」でアプリ」（2025-12-05）★同カテゴリー
+[internal_linker] H3マッチ割り当て「ショッピング機能はどこまで使えたのか」→「Google Opalは危険？無料で使える「神ツール」の正しい使い方と」（2025-11-30）★同カテゴリー
+[internal_linker] H3マッチ割り当て「日本でgoogle sparkは利用でき」→「Google Gemini 使い方ガイド！日本語で今すぐ始める初心者向」（2026-05-16）★同カテゴリー
+[internal_linker] H3マッチ割り当て「google sparkはいつ終了・閉鎖」→「Google I/O 2026 SEO対策まとめ｜AI検索時代に必要な」（2026-05-21）★同カテゴリー
+[internal_linker] H3マッチ割り当て「google sparkとpintere」→「Google AI スティッチの使い方｜失敗写真を「奇跡の1枚」に変え」（2025-12-03）★同カテゴリー
+[internal_linker] H3マッチ割り当て「google lens：画像から商品を特」→「AIO対策（LLMO）は意味がない？Web制作者がやりがちな対策の落と」（2026-05-21）★同カテゴリー
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['myeditの商用利用について｜料金・権利・注意点を完全整理', 'myeditの安全性は？利用前に知るべき仕組みと注意点まとめ', 'Google Opalは危険？無料で使える「神ツール」の正し', 'Google Antigravityの使い方｜「指示するだけ', 'Google Gemini 使い方ガイド！日本語で今すぐ始め', 'Google I/O 2026 SEO対策まとめ｜AI検索時', 'Google AI スティッチの使い方｜失敗写真を「奇跡の1', 'AIO対策（LLMO）は意味がない？Web制作者がやりがちな']
+[wordpress] タグ設定: ['Google Spark', '商品検索', 'ショッピングアプリ', 'Google Lens', '視覚検索']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 10394) → https://workup-ai.com/wp-admin/post.php?post=10394&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of shopping bag, laptop, stars, coins, and checkmarks with speech bubbles, soft pastel pink, mint, and lavender tones, minimal style.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Google Spark Shopping Features Guide" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行207 「Google Spark 買い物」→ 投稿済み (2026/05/21, ID:10394) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「Google Sparkで買い物はできる？ショッピング機能の」
+2026-05-21 22:46:55 [INFO] [post] WP投稿完了: ID=10394 → https://workup-ai.com/wp-admin/post.php?post=10394&action=edit
+2026-05-21 22:46:55 [INFO] [workup-ai] [1/1] ✅ 完了: 「Google Sparkで買い物はできる？ショッピング機能の実態と代替アプリ5選」
+2026-05-21 22:46:55 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-21 22:46:55 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #10394 Google Sparkで買い物はできる？ショッピング機能の実態と代替アプリ5選
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 初心者ガイド型バナーで生成します
+[IMAGE] guide template: flatlay (candidate 1)
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (2165KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_224803_codex_beginner_guide_candidate_1_gpt-image-2.jpg
+[IMAGE] candidate score: 96.6
+[IMAGE] selected template: flatlay  score=96.6
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_224803_codex_beginner_guide_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 10395)
+[codex-eyecatch] featured image 設定完了: media_id=10395
+[codex-eyecatch] 編集URL: https://workup-ai.com/wp-admin/post.php?post=10394&action=edit
+2026-05-21 22:48:11 [INFO] 
+============================================================
+2026-05-21 22:48:11 [INFO] 【全体サマリー】
+2026-05-21 22:48:11 [INFO]   ブログ数  : 1件
+2026-05-21 22:48:11 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-21 22:48:11 [INFO]   所要時間  : 420.8秒
+2026-05-21 22:48:11 [INFO]   ✅ [workup-ai] Google Spark 買い物 → Google Sparkで買い物はできる？ショッピング機能の実態と代替アプリ5選
+2026-05-21 22:48:11 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10394&action=edit
+2026-05-21 22:48:11 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-21 22:48:17 / exit=0 =====
+===== [WORKUP-AI] 実行開始: 2026-05-21 23:40:04 =====
+2026-05-21 23:40:08 [INFO] ============================================================
+2026-05-21 23:40:08 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-21 23:40:08 [INFO] ============================================================
+2026-05-21 23:40:08 [INFO] 対象ブログ: ['workup-ai']
+2026-05-21 23:40:10 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-21 23:40:10 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-21 23:40:10 [INFO] ════════════════════════════════════════════════════════════
+2026-05-21 23:40:10 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-21 23:40:10 [INFO]   fact_check       : True
+2026-05-21 23:40:10 [INFO]   article_type_mix : True
+2026-05-21 23:40:10 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-21 23:40:10 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 23:40:12 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-21 23:40:12 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-21 23:40:12 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-21 23:40:12 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-21 23:40:12 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-21 23:40:12 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-21 23:40:12 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-21 23:40:12 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-21 23:40:12 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 23:40:12 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-21 23:40:12 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-21 23:40:12 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-21 23:40:12 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-21 23:40:12 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-21 23:40:12 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-21 23:40:12 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-21 23:40:12 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-21 23:40:12 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-21 23:40:12 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-21 23:40:15 [INFO] [wp] 記事取得: 計416件 (draft=1 / publish=415)
+2026-05-21 23:40:15 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-21 23:40:16 [INFO] [fetch] サブKW紐付け: 146件 → 18記事に統合
+2026-05-21 23:40:16 [INFO] [fetch] [キーワード] メインKW: 7件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 37件  テーマ外除外: 16件  aim内訳: [aim:16, add:1, claude:6]
+2026-05-21 23:40:16 [INFO] [dup_check] 優先候補: 7件 {'aim': 2, 'claude': 5} を先頭評価
+2026-05-21 23:40:16 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → カニバリ(3/4語重複 ['youtube', 'ai', 'イラスト']): 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-05-21 23:40:16 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → カニバリ(2/3語重複 ['youtube', 'ai']): 「YouTube競合分析AIツールおすすめ6選！無料から使える方法・やり方を徹底解」
+2026-05-21 23:40:16 [INFO] [dup_check] 除外: 「フリーランス AI 活用 在宅」 → カニバリ(3/4語重複 ['ai', '活用', '在宅']): 「在宅ワーク｜主婦で初心者でも安心！AI活用で始める稼げる副業」
+2026-05-21 23:40:17 [INFO] [dup_check] 除外: 「AI副業 稼ぎ方 初心者 安全」 → カニバリ(3/4語重複 ['ai副業', '稼ぎ方', '初心者']): 「AI副業で何をする？初心者におすすめの種類と稼ぎ方を徹底解説」
+2026-05-21 23:40:17 [INFO] [dup_check] 除外: 「Claude Code ChatGPT 違い わかりやすく」 → カニバリ(3/5語重複 ['claude', 'code', '違い']): 「Claude CodeとOpenAI Codex、どっちを選ぶ？機能・料金・用途」
+2026-05-21 23:40:17 [INFO] [dup_check] 除外: 「Claude Code API できること」 → カニバリ(3/4語重複 ['claude', 'code', 'できること']): 「Claude Code Skillsとは？できること・使い方・導入手順を解説」
+2026-05-21 23:40:17 [INFO] [dup_check] 除外: 「AIコンテンツ SEO 対策 2026」 → カニバリ(2/3語重複 ['seo', '対策']): 「Google I/O 2026 SEO対策まとめ｜AI検索時代に必要な5つの変化」
+2026-05-21 23:40:17 [INFO] [dup_check] 完了: 選定=0件 / 除外=7件 (pool=7件, 要求=1件)
+2026-05-21 23:40:17 [WARNING] [dup_check] 目標1件に対し0件のみ確保（候補不足）
+2026-05-21 23:40:17 [INFO] [select] 0件選定 (要求=1件)
+2026-05-21 23:40:17 [INFO] [workup-ai] LONGTAIL選定: 0件
+2026-05-21 23:40:17 [INFO] [workup-ai] 候補: 7件 / 選定: 0件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.5880 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.5880(¥238) / 6記事
+2026-05-21 23:40:17 [INFO] [api_guard] 本日の使用量: $1.5880 / ¥238 (20回呼び出し)
+2026-05-21 23:40:17 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=0件 / 合計=0件
+2026-05-21 23:40:17 [INFO] 
+============================================================
+2026-05-21 23:40:17 [INFO] 【全体サマリー】
+2026-05-21 23:40:17 [INFO]   ブログ数  : 1件
+2026-05-21 23:40:17 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-21 23:40:17 [INFO]   所要時間  : 8.6秒
+2026-05-21 23:40:17 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-21 23:40:17 / exit=0 =====
+===== [WORKUP-AI] 実行開始: 2026-05-21 23:43:04 =====
+2026-05-21 23:43:06 [INFO] ============================================================
+2026-05-21 23:43:06 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-21 23:43:06 [INFO] ============================================================
+2026-05-21 23:43:06 [INFO] 対象ブログ: ['workup-ai']
+2026-05-21 23:43:08 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-21 23:43:08 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-21 23:43:08 [INFO] ════════════════════════════════════════════════════════════
+2026-05-21 23:43:08 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-21 23:43:08 [INFO]   fact_check       : True
+2026-05-21 23:43:08 [INFO]   article_type_mix : True
+2026-05-21 23:43:08 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-21 23:43:08 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 23:43:09 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-21 23:43:09 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-21 23:43:09 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-21 23:43:09 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-21 23:43:09 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-21 23:43:09 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-21 23:43:09 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-21 23:43:09 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-21 23:43:09 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 23:43:09 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-21 23:43:09 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-21 23:43:09 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-21 23:43:09 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-21 23:43:09 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-21 23:43:09 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-21 23:43:09 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-21 23:43:09 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-21 23:43:09 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-21 23:43:09 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-21 23:43:13 [INFO] [wp] 記事取得: 計416件 (draft=1 / publish=415)
+2026-05-21 23:43:13 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-21 23:43:14 [INFO] [fetch] サブKW紐付け: 146件 → 18記事に統合
+2026-05-21 23:43:14 [INFO] [fetch] [キーワード] メインKW: 7件（vol≥30 or N/A）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 37件  テーマ外除外: 16件  aim内訳: [aim:16, add:1, claude:6]
+2026-05-21 23:43:14 [INFO] [dup_check] 優先候補: 7件 {'aim': 2, 'claude': 5} を先頭評価
+2026-05-21 23:43:14 [INFO] [dup_check] 除外: 「youtube 広告 ai イラスト」 → カニバリ(3/4語重複 ['youtube', 'ai', 'イラスト']): 「YouTubeのAIイラスト活用術！サムネイル・動画制作におすすめツール5選と著」
+2026-05-21 23:43:14 [INFO] [dup_check] 除外: 「youtube 雑学 ai」 → カニバリ(2/3語重複 ['youtube', 'ai']): 「YouTube競合分析AIツールおすすめ6選！無料から使える方法・やり方を徹底解」
+2026-05-21 23:43:14 [INFO] [dup_check] 除外: 「フリーランス AI 活用 在宅」 → カニバリ(3/4語重複 ['ai', '活用', '在宅']): 「在宅ワーク｜主婦で初心者でも安心！AI活用で始める稼げる副業」
+2026-05-21 23:43:14 [INFO] [dup_check] 除外: 「AI副業 稼ぎ方 初心者 安全」 → カニバリ(3/4語重複 ['ai副業', '稼ぎ方', '初心者']): 「AI副業で何をする？初心者におすすめの種類と稼ぎ方を徹底解説」
+2026-05-21 23:43:14 [INFO] [dup_check] 除外: 「Claude Code ChatGPT 違い わかりやすく」 → カニバリ(3/5語重複 ['claude', 'code', '違い']): 「Claude CodeとOpenAI Codex、どっちを選ぶ？機能・料金・用途」
+2026-05-21 23:43:14 [INFO] [dup_check] 除外: 「Claude Code API できること」 → カニバリ(3/4語重複 ['claude', 'code', 'できること']): 「Claude Code Skillsとは？できること・使い方・導入手順を解説」
+2026-05-21 23:43:14 [INFO] [dup_check] 除外: 「AIコンテンツ SEO 対策 2026」 → カニバリ(2/3語重複 ['seo', '対策']): 「Google I/O 2026 SEO対策まとめ｜AI検索時代に必要な5つの変化」
+2026-05-21 23:43:14 [INFO] [dup_check] 完了: 選定=0件 / 除外=7件 (pool=7件, 要求=1件)
+2026-05-21 23:43:14 [WARNING] [dup_check] 目標1件に対し0件のみ確保（候補不足）
+2026-05-21 23:43:14 [INFO] [select] 0件選定 (要求=1件)
+2026-05-21 23:43:14 [INFO] [workup-ai] LONGTAIL選定: 0件
+2026-05-21 23:43:14 [INFO] [workup-ai] 候補: 7件 / 選定: 0件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.5880 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.5880(¥238) / 6記事
+2026-05-21 23:43:14 [INFO] [api_guard] 本日の使用量: $1.5880 / ¥238 (20回呼び出し)
+2026-05-21 23:43:14 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=0件 / 合計=0件
+2026-05-21 23:43:14 [INFO] 
+============================================================
+2026-05-21 23:43:14 [INFO] 【全体サマリー】
+2026-05-21 23:43:14 [INFO]   ブログ数  : 1件
+2026-05-21 23:43:14 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-21 23:43:14 [INFO]   所要時間  : 7.6秒
+2026-05-21 23:43:14 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-21 23:43:14 / exit=0 =====
+===== [WORKUP-AI] 実行開始: 2026-05-21 23:56:04 =====
+2026-05-21 23:56:09 [INFO] ============================================================
+2026-05-21 23:56:09 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-21 23:56:09 [INFO] ============================================================
+2026-05-21 23:56:09 [INFO] 対象ブログ: ['workup-ai']
+2026-05-21 23:56:10 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-21 23:56:10 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-21 23:56:10 [INFO] ════════════════════════════════════════════════════════════
+2026-05-21 23:56:10 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-21 23:56:10 [INFO]   fact_check       : True
+2026-05-21 23:56:10 [INFO]   article_type_mix : True
+2026-05-21 23:56:10 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-21 23:56:10 [INFO]   article_count    : 1  dry_run: False
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 23:56:12 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-21 23:56:12 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-21 23:56:12 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-21 23:56:12 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-21 23:56:12 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-21 23:56:12 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-21 23:56:12 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-21 23:56:12 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-21 23:56:12 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-21 23:56:12 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-21 23:56:12 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-21 23:56:12 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-21 23:56:12 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-21 23:56:12 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-21 23:56:12 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-21 23:56:12 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-21 23:56:12 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-21 23:56:12 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-21 23:56:12 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-21 23:56:15 [INFO] [wp] 記事取得: 計416件 (draft=1 / publish=415)
+2026-05-21 23:56:15 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-21 23:56:16 [INFO] [fetch] サブKW紐付け: 146件 → 18記事に統合
+2026-05-21 23:56:16 [INFO] [fetch] [キーワード] メインKW: 23件（親KW+生成待ち）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 37件  aim内訳: [now:1, aim:15, add:1, claude:6]
+2026-05-21 23:56:16 [INFO] [dup_check] 優先候補: 23件 {'now': 1, 'aim': 15, 'add': 1, 'claude': 6} を先頭評価
+2026-05-21 23:56:16 [INFO] [dup_check] シート承認済みスキップ: 「スピーク プレミアムプラス 違い」（親KW+生成待ちのため重複チェック免除）
+2026-05-21 23:56:16 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=23件, 要求=1件)
+2026-05-21 23:56:16 [INFO] [select] 1件選定 (要求=1件)
+2026-05-21 23:56:16 [INFO] [select]   1. 「スピーク プレミアムプラス 違い」 vol=0 seo=N/A comp=N/A
+2026-05-21 23:56:16 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-21 23:56:16 [INFO] [workup-ai] 候補: 23件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.5880 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.5880(¥238) / 6記事
+2026-05-21 23:56:16 [INFO] [api_guard] 本日の使用量: $1.5880 / ¥238 (20回呼び出し)
+2026-05-21 23:56:16 [INFO] ────────────────────────────────────────────────────────────
+2026-05-21 23:56:16 [INFO] [workup-ai] [1/1] [LONGTAIL] 「スピーク プレミアムプラス 違い」 vol=0 ★NOW
+2026-05-21 23:56:16 [INFO] ────────────────────────────────────────────────────────────
+2026-05-21 23:56:16 [INFO] [generate] 生成開始: 「スピーク プレミアムプラス 違い」(vol:0) fact_check=True target_length=7,130字  サブKW:1件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「スピーク プレミアムプラス 違い」(vol:0) [7,130字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $1.5880 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $1.5880(¥238) / 6記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=114 out=111 → $0.0005  (lsi:スピーク プレミアムプラス 違い)
+[api_guard] 本日の使用量: $1.5885 / ¥238 (1027回呼び出し)
+[article_generator] 共起語: スピークの料金、プレミアムプラス価格、英会話アプリ比較、スピーク機能、AI英会話、発音矯正、スピークレビュー、月額費用、...
+[api_guard] ✅ 本日: $1.5885 / 1時間: $0.0005  (上限 日次$10.00 / 時間$5.00)  全体: $1.5885(¥238) / 6記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=181 out=621 → $0.0026  (kw_research:スピーク プレミアムプラス 違い)
+[api_guard] 本日の使用量: $1.5912 / ¥238 (1028回呼び出し)
+[article_generator] サジェスト: スピーク プレミアムプラス 違い・スピーク プレミアムプラス 料金・スピーク プレミアムプラス 口コミ...
+[article_generator] 検索意図: 比較系 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] 参考URL: 3件
+[article_generator] アドセンス記事判定: 「スピーク プレミアムプラス 違い」→ アフィリリンク抑制モード
+[api_guard] ✅ 本日: $1.5912 / 1時間: $0.0032  (上限 日次$10.00 / 時間$5.00)  全体: $1.5912(¥239) / 6記事
+[api_guard] 記録: claude-sonnet-4-6 in=13252 out=12852 → $0.2325  (article:スピーク プレミアムプラス 違い)
+[api_guard] 本日の使用量: $1.8237 / ¥273 (1029回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of laptop, speech bubbles, stars, 
+[imagefx] タイトル(英): Speak Premium Vs Plus Comparison
+[article_generator] 完了: 「スピーク プレミアムとプレミアムプラスの違いを比較｜どちらを選ぶべきか解説」 カテゴリ: 未設定(-) タグ: ['スピーク', 'AI英会話', '英語学習アプリ', 'プラン比較', '英語上達']
+2026-05-21 23:59:42 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-21 23:59:42 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Director Suite 365」(ID:9813)
+2026-05-21 23:59:44 [INFO] [generate] 完了: 「スピーク プレミアムとプレミアムプラスの違いを比較｜どちらを選ぶべきか解説」
+2026-05-21 23:59:44 [WARNING] [quality] 品質チェック: ❌2件NG / ⚠️1件警告 / 「スピーク プレミアムとプレミアムプラスの違いを比較｜どちらを選ぶべきか解説」
+2026-05-21 23:59:44 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [1, 2, 3, 4, 7] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-21 23:59:44 [WARNING] [quality]   ❌ □ 一人称体験談: 一人称体験談が1箇所しかありません（2〜3箇所必要）。「実際に使ってみたところ〜」「試してみて感じたのは〜」など自然な体験文を2〜3箇所追加してください。
+2026-05-21 23:59:44 [WARNING] [quality]   ⚠️  □ 外部ソースリンク: 外部リンクはありますが、Google公式・官公庁など信頼性の高いソースへの言及があるとE-E-A-Tが向上します。
+2026-05-21 23:59:44 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 37件
+[category_selector] 新規カテゴリ提案: 「AI英会話ツール」
+[category_selector] カテゴリ新規作成: 「AI英会話ツール」(ID=1779)
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Comparison chart featuring Speak Premium and Premium Plus plan tiers with featur...
+[image_generator] 完了 (72KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260521_235958_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10398)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: スピーク プレミアムとプレミアムプラスの機能・料金の違い
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration with pastel colors: pricing tags, currency symbols, lan...
+[image_generator] 完了 (54KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_000012_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10399)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: スピーク プレミアムプラスの料金・解約・対応言語を解説
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring review stars, speech bubbles, checkmark badge...
+[image_generator] 完了 (64KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_000024_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10400)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: スピーク プレミアムプラスの口コミ・評判と実際の効果
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful question mark icons and comparison symbols floating on soft pastel back...
+[image_generator] 完了 (59KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_000036_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10401)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: speak-premium-plus-difference-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Two overlapping speech bubbles in soft pastels with comparison symbols, checkmar...
+[image_generator] 完了 (27KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_000047_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10402)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: speak-premium-plus-difference-summary.jpg
+[internal_linker] 公開済み記事取得: 415件
+[internal_linker] タイトル重複除去: 2件の旧記事を除外
+[internal_linker] 同親KW「スピーク」: 3件選定（同カテゴリー:0件 / 関連度60%+新しさ40%）
+[internal_linker] キーワードトークンマッチ: 1件選定（同カテゴリー:0件 / 関連度60%+新しさ40%）
+[internal_linker] 内部リンク選定完了: 計4件 (成約:0 / 案件関連:0 / 同親KW+補完:4)
+[internal_linker] 低関連性 1件をフッターへ: ['Speakの料金はどれが正解？プレミアムとプレミア']
+[internal_linker] H3マッチ割り当て「プレミアムプラスとはどんなプランか」→「スピーク(Speak)無料期間は即解約OK！勝手に課金されない「裏技」」（2025-12-03）
+[internal_linker] H3マッチ割り当て「両プランの料金を数字で比較する」→「スピーク英会話アプリの無料版を使いこなす！有料プランへの切り替えポイン」（2025-06-28）
+[internal_linker] H3マッチ割り当て「機能の違いを項目別に整理する」→「スピーク(Speak)の口コミ・評判まとめ｜“損しない”始め方と、7日」（2025-11-13）
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 1件追加
+[internal_linker] 注意: 内部リンク4件（目標5件未達）
+[internal_linker] 内部リンク挿入完了: 計4件 (本文H3:3 / 末尾リスト:1)
+[internal_linker] 内部リンク 4件 挿入: ['スピーク(Speak)無料期間は即解約OK！勝手に課金されな', 'スピーク英会話アプリの無料版を使いこなす！有料プランへの切り', 'スピーク(Speak)の口コミ・評判まとめ｜“損しない”始め', 'Speakの料金はどれが正解？プレミアムとプレミアムプラスの']
+[wordpress] タグ設定: ['スピーク', 'AI英会話', '英語学習アプリ', 'プラン比較', '英語上達']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 10403) → https://workup-ai.com/wp-admin/post.php?post=10403&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of laptop, speech bubbles, stars, checkmarks, and comparison charts in soft pink, mint, and lavender pastels with minimal line details.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Speak Premium Vs Plus Comparison" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行90 「スピーク プレミアムプラス 違い」→ 投稿済み (2026/05/22, ID:10403) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「スピーク プレミアムとプレミアムプラスの違いを比較｜どちらを」
+2026-05-22 00:00:57 [INFO] [post] WP投稿完了: ID=10403 → https://workup-ai.com/wp-admin/post.php?post=10403&action=edit
+2026-05-22 00:00:58 [INFO] [workup-ai] [1/1] ✅ 完了: 「スピーク プレミアムとプレミアムプラスの違いを比較｜どちらを選ぶべきか解説」
+2026-05-22 00:00:58 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-22 00:00:58 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #10403 スピーク プレミアムとプレミアムプラスの違いを比較｜どちらを選ぶべきか解説
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 初心者ガイド型バナーで生成します
+[IMAGE] guide template: left_person (candidate 1)
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1537KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_000156_codex_beginner_guide_candidate_1_gpt-image-2.jpg
+[IMAGE] candidate score: 82.8
+[IMAGE] selected template: left_person  score=82.8
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_000156_codex_beginner_guide_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 10404)
+[codex-eyecatch] featured image 設定完了: media_id=10404
+[codex-eyecatch] 編集URL: https://workup-ai.com/wp-admin/post.php?post=10403&action=edit
+2026-05-22 00:02:01 [INFO] 
+============================================================
+2026-05-22 00:02:01 [INFO] 【全体サマリー】
+2026-05-22 00:02:01 [INFO]   ブログ数  : 1件
+2026-05-22 00:02:01 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-22 00:02:01 [INFO]   所要時間  : 352.3秒
+2026-05-22 00:02:01 [INFO]   ✅ [workup-ai] スピーク プレミアムプラス 違い → スピーク プレミアムとプレミアムプラスの違いを比較｜どちらを選ぶべきか解説
+2026-05-22 00:02:01 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10403&action=edit
+2026-05-22 00:02:01 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-22 00:02:02 / exit=0 =====

@@ -1,7 +1,5 @@
 {
   "beginner_guide": [
-    "aivice_soft_flatlay",
-    "aivice_wave_panel",
     "aivice_tool_desk",
     "app_cards",
     "aivice_wave_panel",
@@ -11,7 +9,9 @@
     "hands_closeup",
     "aivice_soft_flatlay",
     "aivice_pastel_person",
-    "aivice_wave_panel"
+    "aivice_wave_panel",
+    "flatlay",
+    "left_person"
   ],
   "hida": [
     "local_food",

@@ -63,18 +63,24 @@ __SITE_INFO__
 
 ## AIO（AI Overview）対策
 Google AI Overviewで引用されやすいよう以下を意識する:
-- **定義文を自然に配置する**: 記事冒頭またはH2冒頭に「○○とは、△△できるサービスです。」形式の定義文を1文入れる
+- **定義文を記事冒頭に必ず入れる**: 最初のp段落に「○○とは、△△です。」形式の定義文を1文含めること（AIOに引用されやすい最重要ルール）
+- **冒頭に5要素を整理する**: 読者が最初に知りたい「結論・定義・手順・比較ポイント・注意点」を記事冒頭（リード文またはポイントボックス）から整理して提示する
 - 結論・要約を先出しする（各H2冒頭に2〜3行の結論要約を入れる）
-- FAQ・Q&A・比較表・箇条書きを積極的に使う
+- FAQ・Q&A・比較表・箇条書き・手順リスト・注意点を積極的に使う
 - 各セクションの冒頭で「このセクションで何がわかるか」を明示する
+- **断言文を使う**: 「〜とは○○です」「〜するには以下が必要です」など断定表現を基本とする
+- **曖昧表現・逃げ表現を使わない**: 「諸説あります」「場合によります」「一概に言えません」などは禁止。確認できない事実は出典を示すか記述しない
+- **AI Overviewの文面を直接引用・転載しない**: AIが要約した文章をそのまま使わず、参考WEB・公式情報・検索上位情報と照合して独自の文章で構成すること
+- **参考WEBがある場合は内容を優先して事実確認する**: 記事テーマに参考URLが与えられている場合、その内容を最優先で反映し、事実の正確性を担保すること
+- **情報鮮度の確保**: 日々変化しやすいテーマ（AI・法制度・料金・新機能など）では公式情報・最新情報を最優先にし、古い情報を断定的に書かないこと
 
 ## 文字数
 - 通常H3本文: 300〜400字
 - **手順解説型H3の充実ルール**: キーワードに「使い方」「方法」「手順」「やり方」「始め方」「設定」「手続き」が含まれる場合、手順H3は600〜800字。各ステップを「①何をするか → ②具体的な操作（画面・入力値まで） → ③結果・確認ポイント・つまずきやすいポイント」の流れで展開し、読者がその場で実行できる具体性を保つこと
 
 ## 比較・CV導線
-- **比較表は「複数の選択肢を読者が比べたい」場面にのみ使う**。無理に全記事に入れる必要はない。「1つのツールの使い方」記事や「とは」記事には不要なことが多い
-- 比較表が有効な場面: 複数ツール・サービス・プランの横比較、料金体系の違い、機能差など
+- **比較表は必ず1箇所以上設置すること**（AIO・LLMO対策として必須）。比較対象がない場合でも、料金プランの比較・対象者タイプの比較・他ツールとの簡易比較など工夫して必ず入れる
+- 比較表が特に有効な場面: 複数ツール・サービス・プランの横比較、料金体系の違い、機能差など
 - **比較表に載せるのは記事テーマに直接関係するツール・サービスのみ**。アフィリ登録済みだからといってテーマ外のものを無理に入れない
 - **スクール・講座系（例: DMM生成AI CAMP、ヒューマンアカデミーなど）はツール比較表には入れない**（別途「学習リソース」として紹介はOK）
 - **フリーランス支援・保険・決済系（例: freenance）はツール比較表には入れない**（副業・フリーランスの文脈で個別紹介はOK）
@@ -84,7 +90,7 @@ Google AI Overviewで引用されやすいよう以下を意識する:
 - **CTA直前に不安解消要素を入れる**: 「無料体験あり」「初心者でも大丈夫」「いつでも解約可能」「サポートあり」など、読者の背中を押す要素を簡潔に添える
 
 ## E-E-A-T対策
-- **体験文を1〜2箇所自然に入れる**: 「実際に使って感じたこと」「比較して感じたこと」などの一人称体験を短く添える（AI臭を減らし信頼性を高める目的。長文不要、2〜3文で十分）
+- **体験文を2〜3箇所自然に入れる**: 「実際に使って感じたこと」「比較して感じたこと」などの一人称体験を短く添える（AI臭を減らし信頼性を高める目的。長文不要、2〜3文で十分）
 
 ## まとめ（チェックリスト＋締めの文章）
 
@@ -179,7 +185,7 @@ __AFFILIATE_LINES__
 
 ## 1. 冒頭文（250〜300字）
 <!-- wp:paragraph -->
-<p>{{冒頭文（キーフレーズ1回）}}</p>
+<p>{{冒頭文（キーフレーズ1回）。必ず最初の文に「○○とは〜です。」形式の定義文を入れること。}}</p>
 <!-- /wp:paragraph -->
 
 ## 2. この記事のポイント
@@ -231,7 +237,7 @@ __AFFILIATE_LINES__
 <p>{{具体例・補足（120〜150字）。番号付き列挙が必要な場合は段落の後にリストブロックを追加。}}</p>
 <!-- /wp:paragraph -->
 
-{{手順・ステップを説明するH3では、番号付きリストの代わりに必ず以下のSWELL Stepブロックを使うこと。}}
+{{手順・ステップを説明するH3では、番号付きリストの代わりに必ず以下のSWELL Stepブロックを使うこと。重要: `<strong>`タグ内には「【STEP1】」「【STEP2】」などの番号テキストを絶対に入れないこと。タイトルはステップの内容のみ（例:「アカウントを作成する」）。}}
 <!-- wp:loos/step -->
 <div class="swell-block-step" data-num-style="circle"><!-- wp:loos/step-item {{"stepLabel":"STEP"}} -->
 <div class="swell-block-step__item"><div class="swell-block-step__number u-bg-main"><span class="__label">STEP</span></div><div class="swell-block-step__title u-fz-l"><strong>{{ステップタイトル}}</strong></div><div class="swell-block-step__body"><!-- wp:paragraph -->
@@ -387,6 +393,40 @@ FAQには以下の内容を必ず含める:
 <p>{{③小さな一歩の提案（80〜120字）: 「今日の〇〇から、小さな一歩を試してみてくださいね。きっともっとよくなりますよ。」など、やわらかく締める}}</p>
 <!-- /wp:paragraph -->
 
+## 6. 構造化データ（JSON-LD）— 必ずまとめの直後に出力すること
+Article と BreadcrumbList の2種を <!-- wp:html --> ブロックで出力する。
+FAQ JSON-LDはSWELL FAQブロックの "outputJsonLd":true で自動生成されるため別途不要。
+
+<!-- wp:html -->
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{記事タイトル}}",
+  "description": "{{meta_descriptionと同じ内容}}",
+  "datePublished": "{{今日の日付 YYYY-MM-DD}}",
+  "dateModified": "{{今日の日付 YYYY-MM-DD}}",
+  "author": {{"@type": "Person", "name": "{{サイト名}}編集部"}},
+  "publisher": {{"@type": "Organization", "name": "{{サイト名}}", "url": "{{サイトURL}}"}},
+  "mainEntityOfPage": {{"@type": "WebPage", "@id": "{{サイトURL}}/{{記事スラッグ}}/"}}
+}}
+</script>
+<!-- /wp:html -->
+
+<!-- wp:html -->
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "{{サイトURL}}"}},
+    {{"@type": "ListItem", "position": 2, "name": "{{カテゴリー名}}", "item": "{{サイトURL}}/category/{{カテゴリースラッグ}}/"}},
+    {{"@type": "ListItem", "position": 3, "name": "{{記事タイトル}}", "item": "{{サイトURL}}/{{記事スラッグ}}/"}}
+  ]
+}}
+</script>
+<!-- /wp:html -->
+
 """
 
 # ============================================================
@@ -427,9 +467,9 @@ _PLAUD_NOTTA_INSTRUCTION = """\
 # target_length → (h3_min, h3_max, faq_min, faq_max, max_tokens)
 # ============================================================
 _ARTICLE_STRUCTURE: dict[int, tuple[int, int, int, int, int]] = {
-    9000: (14, 18, 8, 10, 16000),  # MONETIZE: 比較・レビュー系・高品質
-    6000: ( 8, 12, 5,  7, 16000),  # LONGTAIL: 標準SEO記事
-    3000: ( 5,  7, 3,  4, 12000),  # FUTURE / TREND: 短め情報記事
+    9000: (14, 18, 8, 10, 32000),  # MONETIZE: 比較・レビュー系・高品質
+    6000: ( 8, 12, 5,  7, 28000),  # LONGTAIL: 標準SEO記事
+    3000: ( 5,  7, 5,  7, 16000),  # FUTURE / TREND: 短め情報記事
 }
 
 def _get_structure(target_length: int) -> tuple[int, int, int, int, int]:
@@ -516,6 +556,15 @@ def _build_system_prompt(
         "{8〜10問繰り返し}",
         f"{{{faq_min}〜{faq_max}問繰り返し}}",
     )
+
+    # ブログ固有の追加人格・方針（blog_config.json の extra_system_prompt）
+    try:
+        extra_system = meta.get("extra_system_prompt", "")
+        if extra_system:
+            prompt += f"\n\n{extra_system}"
+    except Exception:
+        pass
+
     return prompt
 
 
@@ -573,6 +622,7 @@ def _build_howto_section(keyword: str) -> str:
         "- 手順・操作を説明するH3は1ステップずつ丁寧に展開し、H3本文は600〜800字を目標にする\n"
         "- 各ステップの構成: ①何をするか（1文で明確に）→ ②具体的な操作（クリック先・入力値・設定名まで）→ ③期待できる結果と確認方法、注意点やつまずきやすいポイント\n"
         "- **手順・ステップの列挙には必ずSWELL Stepブロック（<!-- wp:loos/step -->）を使うこと。**\n"
+        "- **Stepブロックのタイトル（`<strong>`内）には「【STEP1】」「【STEP2】」などの番号テキストを絶対に入れないこと。** SWELLブロックが数字バッジを自動表示するため、タイトルはステップの内容のみ（例:「アカウントを作成する」）。\n"
         "- 手順以外で装飾なしの番号付きリストが必要な場合は、必ずSWELLボーダーグループで囲むこと:\n"
         "  <!-- wp:group {\"className\":\"has-border -border04\",\"layout\":{\"type\":\"constrained\"}} -->\n"
         "  <div class=\"wp-block-group has-border -border04\"><!-- wp:list {\"ordered\":true,\"className\":\"wp-block-list is-style-index\"} -->\n"
@@ -807,7 +857,7 @@ USER_PROMPT_TEMPLATE = """\
 
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{asp_hint_section}{blog_context_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{tone_section}{testimonial_section}{trusted_external_links_section}{ref_urls_section}{forced_title_section}{howto_section}{adsense_section}
+{asp_hint_section}{blog_context_section}{blog_persona_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{tone_section}{testimonial_section}{trusted_external_links_section}{ref_urls_section}{forced_title_section}{howto_section}{adsense_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
@@ -834,15 +884,15 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    asp_links: dict | None = None,
                    forced_title: str | None = None,
                    asp_hint: list[str] | None = None,
-                   ref_urls: dict | None = None) -> dict:
+                   ref_urls: dict | None = None,
+                   blog_persona_section: str = "") -> dict:
     """
     記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
 
     target_length に応じてH3本数・FAQ問数・max_tokensを動的に切り替える。
-      9000 (MONETIZE): H3×14〜18本 / FAQ×8〜10問 / max_tokens=12,000
-      6000 (LONGTAIL):  H3×8〜12本  / FAQ×5〜7問  / max_tokens=10,000
-      3000 (TREND):     H3×5〜7本   / FAQ×3〜4問  / max_tokens= 6,000
-      3000 (FUTURE):    H3×5〜7本   / FAQ×3〜4問  / max_tokens=4,500
+      9000 (MONETIZE): H3×14〜18本 / FAQ×8〜10問 / max_tokens=32,000
+      6000 (LONGTAIL):  H3×8〜12本  / FAQ×5〜7問  / max_tokens=28,000
+      3000 (TREND):     H3×5〜7本   / FAQ×5〜7問  / max_tokens=16,000
     """
     h3_min, h3_max, faq_min, faq_max, max_tokens = _get_structure(target_length)
     system_prompt = _build_system_prompt(h3_min, h3_max, faq_min, faq_max, asp_links=asp_links)
@@ -1019,6 +1069,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
         volume=volume,
         asp_hint_section=asp_hint_section,
         blog_context_section=blog_context_section,
+        blog_persona_section=blog_persona_section,
         related_section=related_section,
         theme_section=theme_section,
         lsi_section=lsi_section,
@@ -1036,12 +1087,13 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
         howto_section=howto_section,
         adsense_section=adsense_section,
     )
-    message = client.messages.create(
+    with client.messages.stream(
         model="claude-sonnet-4-6",
         max_tokens=max_tokens,
         system=system_prompt,
         messages=[{"role": "user", "content": user_prompt}],
-    )
+    ) as stream:
+        message = stream.get_final_message()
     record_usage("claude-sonnet-4-6",
                  message.usage.input_tokens, message.usage.output_tokens, f"article:{keyword}")
 
@@ -1070,12 +1122,13 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
         except json.JSONDecodeError as e:
             # ② それでも失敗した場合は同じプロンプトでAPIを1回リトライ
             print(f"[article_generator] JSON解析失敗（{e}）→ 同一プロンプトでリトライ中...")
-            retry_msg = client.messages.create(
+            with client.messages.stream(
                 model="claude-sonnet-4-6",
                 max_tokens=max_tokens,
                 system=system_prompt,
                 messages=[{"role": "user", "content": user_prompt}],
-            )
+            ) as _retry_stream:
+                retry_msg = _retry_stream.get_final_message()
             record_usage("claude-sonnet-4-6",
                          retry_msg.usage.input_tokens, retry_msg.usage.output_tokens,
                          f"article_retry:{keyword}")
@@ -1137,7 +1190,8 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                      guide_links: dict | None = None,
                      forced_title: str | None = None,
                      asp_hint: list[str] | None = None,
-                     ref_urls: dict | None = None) -> dict:
+                     ref_urls: dict | None = None,
+                     blog_persona_section: str = "") -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
@@ -1162,7 +1216,7 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                           sub_keywords=sub_keywords, enable_fact_check=enable_fact_check,
                           target_length=target_length, asp_links=asp_links,
                           forced_title=forced_title, asp_hint=asp_hint,
-                          ref_urls=ref_urls)
+                          ref_urls=ref_urls, blog_persona_section=blog_persona_section)
 
 
 def generate_article_from_cluster(cluster: dict, sub_keywords: list[str] | None = None) -> dict:

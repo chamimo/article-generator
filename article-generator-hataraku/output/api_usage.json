@@ -10059,6 +10059,306 @@
       "output_tokens": 14,
       "cost_usd": 0.00036,
       "label": "maps:赤かぶ漬け お土産 日持ち"
+    },
+    {
+      "timestamp": "2026-05-21T03:47:45.545692+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 107,
+      "output_tokens": 85,
+      "cost_usd": 0.000426,
+      "label": "lsi:Google AIO 意味がない"
+    },
+    {
+      "timestamp": "2026-05-21T03:47:49.557497+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T03",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 174,
+      "output_tokens": 439,
+      "cost_usd": 0.001895,
+      "label": "kw_research:Google AIO 意味がない"
+    },
+    {
+      "timestamp": "2026-05-21T03:51:35.875996+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T03",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11686,
+      "output_tokens": 13664,
+      "cost_usd": 0.240018,
+      "label": "article:Google AIO 意味がない"
+    },
+    {
+      "timestamp": "2026-05-21T04:13:46.859084+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 121,
+      "cost_usd": 0.000571,
+      "label": "lsi:Google I/O 2026 SEO"
+    },
+    {
+      "timestamp": "2026-05-21T04:13:50.544822+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 465,
+      "cost_usd": 0.002001,
+      "label": "kw_research:Google I/O 2026 SEO"
+    },
+    {
+      "timestamp": "2026-05-21T04:17:33.147439+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T04",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11431,
+      "output_tokens": 13568,
+      "cost_usd": 0.237813,
+      "label": "article:Google I/O 2026 SEO"
+    },
+    {
+      "timestamp": "2026-05-21T04:22:11.632969+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 107,
+      "output_tokens": 105,
+      "cost_usd": 0.000506,
+      "label": "lsi:Google AIO 意味がない"
+    },
+    {
+      "timestamp": "2026-05-21T04:22:14.999582+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T04",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 174,
+      "output_tokens": 414,
+      "cost_usd": 0.001795,
+      "label": "kw_research:Google AIO 意味がない"
+    },
+    {
+      "timestamp": "2026-05-21T04:26:22.461926+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T04",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11352,
+      "output_tokens": 15102,
+      "cost_usd": 0.260586,
+      "label": "article:Google AIO 意味がない"
+    },
+    {
+      "timestamp": "2026-05-21T07:49:16.772155+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 78,
+      "cost_usd": 0.000402,
+      "label": "lsi:AIプログラミング 初心者 やり方"
+    },
+    {
+      "timestamp": "2026-05-21T07:49:20.945398+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 600,
+      "cost_usd": 0.002544,
+      "label": "kw_research:AIプログラミング 初心者 やり方"
+    },
+    {
+      "timestamp": "2026-05-21T07:53:31.387724+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T07",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12821,
+      "output_tokens": 16000,
+      "cost_usd": 0.278463,
+      "label": "article:AIプログラミング 初心者 やり方"
+    },
+    {
+      "timestamp": "2026-05-21T08:00:45.966782+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 80,
+      "cost_usd": 0.00041,
+      "label": "lsi:AIプログラミング 初心者 やり方"
+    },
+    {
+      "timestamp": "2026-05-21T08:00:49.786199+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 568,
+      "cost_usd": 0.002416,
+      "label": "kw_research:AIプログラミング 初心者 やり方"
+    },
+    {
+      "timestamp": "2026-05-21T08:02:52.044191+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 83,
+      "cost_usd": 0.000422,
+      "label": "lsi:AIプログラミング 初心者 やり方"
+    },
+    {
+      "timestamp": "2026-05-21T08:02:56.351419+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 634,
+      "cost_usd": 0.00268,
+      "label": "kw_research:AIプログラミング 初心者 やり方"
+    },
+    {
+      "timestamp": "2026-05-21T08:07:33.034472+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12857,
+      "output_tokens": 17702,
+      "cost_usd": 0.304101,
+      "label": "article:AIプログラミング 初心者 やり方"
+    },
+    {
+      "timestamp": "2026-05-21T13:41:21.687365+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T13",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 106,
+      "output_tokens": 83,
+      "cost_usd": 0.000417,
+      "label": "lsi:Google Spark 買い物"
+    },
+    {
+      "timestamp": "2026-05-21T13:41:25.454509+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T13",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 173,
+      "output_tokens": 502,
+      "cost_usd": 0.002146,
+      "label": "kw_research:Google Spark 買い物"
+    },
+    {
+      "timestamp": "2026-05-21T13:45:07.252148+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T13",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12154,
+      "output_tokens": 14129,
+      "cost_usd": 0.248397,
+      "label": "article:Google Spark 買い物"
+    },
+    {
+      "timestamp": "2026-05-21T14:56:18.683146+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 111,
+      "cost_usd": 0.000535,
+      "label": "lsi:スピーク プレミアムプラス 違い"
+    },
+    {
+      "timestamp": "2026-05-21T14:56:22.802699+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 621,
+      "cost_usd": 0.002629,
+      "label": "kw_research:スピーク プレミアムプラス 違い"
+    },
+    {
+      "timestamp": "2026-05-21T14:59:38.053431+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T14",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 13252,
+      "output_tokens": 12852,
+      "cost_usd": 0.232536,
+      "label": "article:スピーク プレミアムプラス 違い"
+    },
+    {
+      "timestamp": "2026-05-21T17:55:14.307111+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 104,
+      "output_tokens": 113,
+      "cost_usd": 0.000535,
+      "label": "lsi:Claude Code API できること"
+    },
+    {
+      "timestamp": "2026-05-21T17:55:17.589138+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 171,
+      "output_tokens": 365,
+      "cost_usd": 0.001597,
+      "label": "kw_research:Claude Code API できること"
+    },
+    {
+      "timestamp": "2026-05-21T17:59:06.381191+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T17",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12278,
+      "output_tokens": 14815,
+      "cost_usd": 0.259059,
+      "label": "article:Claude Code API できること"
+    },
+    {
+      "timestamp": "2026-05-21T18:02:44.864442+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T18",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12278,
+      "output_tokens": 14337,
+      "cost_usd": 0.251889,
+      "label": "article_retry:Claude Code API できること"
+    },
+    {
+      "timestamp": "2026-05-21T18:13:17.437031+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T18",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 106,
+      "output_tokens": 141,
+      "cost_usd": 0.000649,
+      "label": "lsi:director suite 365 解約"
+    },
+    {
+      "timestamp": "2026-05-21T18:13:21.514993+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T18",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 173,
+      "output_tokens": 468,
+      "cost_usd": 0.00201,
+      "label": "kw_research:director suite 365 解約"
+    },
+    {
+      "timestamp": "2026-05-21T18:16:56.767719+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T18",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12587,
+      "output_tokens": 14037,
+      "cost_usd": 0.248316,
+      "label": "article:director suite 365 解約"
     }
   ],
   "events": [
