@@ -1,0 +1,172 @@
+===== [HATARAKU] 実行開始: 2026-05-22 05:00:00 =====
+2026-05-22 05:00:03 [INFO] ============================================================
+2026-05-22 05:00:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-22 05:00:03 [INFO] ============================================================
+2026-05-22 05:00:03 [INFO] 対象ブログ: ['hataraku']
+2026-05-22 05:00:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-22 05:00:04 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-22 05:00:04 [INFO] ════════════════════════════════════════════════════════════
+2026-05-22 05:00:04 [INFO]   genre            : 転職・副業・キャリア
+2026-05-22 05:00:04 [INFO]   fact_check       : True
+2026-05-22 05:00:04 [INFO]   article_type_mix : True
+2026-05-22 05:00:04 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-22 05:00:04 [INFO]   article_count    : 1  dry_run: False
+2026-05-22 05:00:07 [INFO] [hataraku] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] はた楽ナビ / 「ASP案件マスター」: 21件
+[asp_fetcher]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive / 発達障害×IT就労支援・在宅・スキル習得
+[asp_fetcher]   [S] ラボル → https://hataraku-navi.com/labol / フリーランス資金繰り・即日入金・請求書買取
+[asp_fetcher]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it / 未経験IT転職・ブラック回避・手厚い支援
+[asp_fetcher]   [S] TechGo → https://hataraku-navi.com/techgo / IT転職・年収アップ・ハイクラス
+[asp_fetcher]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi / 転職不安・無料相談・高確定率
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen / 就活・既卒支援・高EPC
+[asp_fetcher]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo / 既卒・フリーター・高卒支援
+2026-05-22 05:00:08 [INFO] [hataraku] アフィリ案件: 21件（スプレッドシート）
+2026-05-22 05:00:08 [INFO] [hataraku]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive
+2026-05-22 05:00:08 [INFO] [hataraku]   [S] ラボル → https://hataraku-navi.com/labol
+2026-05-22 05:00:08 [INFO] [hataraku]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it
+2026-05-22 05:00:08 [INFO] [hataraku]   [S] TechGo → https://hataraku-navi.com/techgo
+2026-05-22 05:00:08 [INFO] [hataraku]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi
+2026-05-22 05:00:08 [INFO] [hataraku]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy
+2026-05-22 05:00:08 [INFO] [hataraku]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen
+2026-05-22 05:00:08 [INFO] [hataraku]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo
+2026-05-22 05:00:08 [INFO] [hataraku]   [S] 保育専門求人サイト ほいく畑 → https://hataraku-navi.com/hoikubatake
+2026-05-22 05:00:08 [INFO] [hataraku]   [A] FREENANCE → https://hataraku-navi.com/freenance
+2026-05-22 05:00:08 [INFO] [hataraku]   [A] Midworks → https://hataraku-navi.com/midworks
+2026-05-22 05:00:08 [INFO] [hataraku]   [A] マスメディアン → https://hataraku-navi.com/massmedia
+2026-05-22 05:00:08 [INFO] [hataraku]   [A] atGP → https://hataraku-navi.com/atgp
+2026-05-22 05:00:08 [INFO] [hataraku]   [A] atGPジョブトレ IT・Web → https://hataraku-navi.com/atgp_job
+2026-05-22 05:00:08 [INFO] [hataraku]   [A] リゾートバイトダイブ → https://hataraku-navi.com/dive
+2026-05-22 05:00:08 [INFO] [hataraku]   [A] 日本マンパワー → https://hataraku-navi.com/manpower
+2026-05-22 05:00:08 [INFO] [hataraku]   [A] クラウドワークス → https://hataraku-navi.com/crowdworks
+2026-05-22 05:00:08 [INFO] [hataraku]   [?] 保育エイド → https://hataraku-navi.com/hoiku-aid
+2026-05-22 05:00:08 [INFO] [hataraku]   [?] 保育バランス → https://hataraku-navi.com/hoiku-balance
+2026-05-22 05:00:08 [INFO] [hataraku]   [?] 保育メトロ → https://hataraku-navi.com/hoiku-metro
+2026-05-22 05:00:08 [INFO] [hataraku]   [?] 20代の転職相談所 → https://hataraku-navi.com/20tensyoku
+2026-05-22 05:00:10 [INFO] [wp] 記事取得: 計53件 (publish=53)
+2026-05-22 05:00:10 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-22 05:00:12 [INFO] [fetch] サブKW紐付け: 4202件 → 172記事に統合
+2026-05-22 05:00:12 [INFO] [fetch] [キーワード] メインKW: 324件（親KW+生成待ち）  サブKW除外: 4202件（統合対象）  投稿済みスキップ: 76件  aim内訳: [aim:324]
+2026-05-22 05:00:12 [INFO] [dup_check] 優先候補: 324件 {'aim': 324} を先頭評価
+2026-05-22 05:00:12 [INFO] [dup_check] シート承認済みスキップ: 「保育士 派遣 扶養内」（親KW+生成待ちのため重複チェック免除）
+2026-05-22 05:00:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=324件, 要求=1件)
+2026-05-22 05:00:12 [INFO] [select] 1件選定 (要求=1件)
+2026-05-22 05:00:12 [INFO] [select]   1. 「保育士 派遣 扶養内」 vol=0 seo=N/A comp=N/A
+2026-05-22 05:00:12 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-22 05:00:12 [INFO] [hataraku] 候補: 324件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $2.8570 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $2.8570(¥429) / 10記事
+2026-05-22 05:00:12 [INFO] [api_guard] 本日の使用量: $2.8570 / ¥429 (33回呼び出し)
+2026-05-22 05:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-22 05:00:12 [INFO] [hataraku] [1/1] [LONGTAIL] 「保育士 派遣 扶養内」 vol=0 ★AIM
+2026-05-22 05:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-22 05:00:12 [INFO] [generate] 生成開始: 「保育士 派遣 扶養内」(vol:0) fact_check=True target_length=7,778字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「保育士 派遣 扶養内」(vol:0) [7,778字 / H3:14〜18本 / FAQ:8〜10問]
+[api_guard] ✅ 本日: $2.8570 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $2.8570(¥429) / 10記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=111 out=125 → $0.0006  (lsi:保育士 派遣 扶養内)
+[api_guard] 本日の使用量: $2.8576 / ¥428 (1040回呼び出し)
+[article_generator] 共起語: 保育士派遣の時給、扶養控除内の年収上限、扶養内で働く条件、配偶者控除、保育士派遣求人、短時間勤務、社会保険加入、給与計算...
+[api_guard] ✅ 本日: $2.8576 / 1時間: $0.0006  (上限 日次$10.00 / 時間$5.00)  全体: $2.8576(¥429) / 10記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=178 out=602 → $0.0026  (kw_research:保育士 派遣 扶養内)
+[api_guard] 本日の使用量: $2.8602 / ¥429 (1041回呼び出し)
+[article_generator] サジェスト: 保育士 派遣 扶養内 求人・保育士 派遣 扶養内 時給・保育士 派遣 扶養内 月収...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $2.8602 / 1時間: $0.0031  (上限 日次$10.00 / 時間$5.00)  全体: $2.8602(¥429) / 10記事
+[api_guard] 記録: claude-sonnet-4-6 in=15383 out=15479 → $0.2783  (article:保育士 派遣 扶養内)
+[api_guard] 本日の使用量: $3.1385 / ¥470 (1042回呼び出し)
+[imagefx] 背景:A / ビジュアル:Minimal flat design with laptop, coins, calendar, 
+[imagefx] タイトル(英): Childcare Worker Temp Pay Limits
+[article_generator] 完了: 「保育士派遣で扶養内勤務は可能？103万円に収める働き方と注意点」 カテゴリ: 未設定(-) タグ: ['保育士派遣', '扶養内勤務', '保育士転職', '保育士パート', '働き方']
+2026-05-22 05:04:30 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-22 05:04:30 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「atGPジョブトレ IT・Web」(ID:569)
+2026-05-22 05:04:31 [INFO] [generate] 完了: 「保育士派遣で扶養内勤務は可能？103万円に収める働き方と注意点」
+2026-05-22 05:04:31 [WARNING] [quality] 品質チェック: ❌3件NG / ⚠️0件警告 / 「保育士派遣で扶養内勤務は可能？103万円に収める働き方と注意点」
+2026-05-22 05:04:31 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [1, 3, 4, 5, 6] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-22 05:04:31 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（でしょうか。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-22 05:04:31 [WARNING] [quality]   ❌ □ 外部ソースリンク: 外部リンクが1つもありません。信頼性の高いソース（公式サイト・官公庁・大手メディア等）へのリンクを1〜3件追加してください。
+2026-05-22 05:04:31 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-22 05:04:31 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 21件
+[category_selector] 「保育士 派遣 扶養内」→ 派遣・パート(273) score=12
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#保育士): nursery-teacher-career-change-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 保育士派遣で扶養内勤務は実際にできる？年収の壁と基本の仕組みのイメージ画像
+[wordpress] H2画像[2] ライブラリ選択 (#保育士): hoikushi-tensyoku-site-kuchikomi-eyecatch.jpg
+[wordpress] H2画像[2] ライブラリALT更新: 保育士派遣で扶養内に収めるための時間調整と税金手続きのポイントのイメージ画像
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring childcare icons like blocks, teddy bears, and...
+[image_generator] 完了 (58KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_050441_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 737)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 保育士派遣で扶養内勤務を探せるおすすめ派遣会社の選び方
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful flat design illustration with pastel icons: childcare blocks, calendar,...
+[image_generator] 完了 (52KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_050455_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 738)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: hoikushi-haken-fuyonai-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful flat design illustration with pastel colors featuring childcare icons, ...
+[image_generator] 完了 (80KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_050506_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 739)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: hoikushi-haken-fuyonai-summary.jpg
+[internal_linker] 公開済み記事取得: 53件
+[internal_linker] 同カテゴリー: 2件選定（同カテゴリー:2件 / 関連度60%+新しさ40%）
+[internal_linker] キーワードトークンマッチ: 3件選定（同カテゴリー:0件 / 関連度60%+新しさ40%）
+[internal_linker] 関連補完（親KW絞り込み）: 3件選定（同カテゴリー:0件 / 関連度60%+新しさ40%）
+[internal_linker] 内部リンク選定完了: 計8件 (成約:0 / 案件関連:0 / 同親KW+補完:8)
+[internal_linker] 低関連性 6件をフッターへ: ['保育士転職サイト口コミ・評判おすすめ10選！選び方', '保育士から異業種転職は可能？おすすめ職種7選と成功', '保育士が人間関係に疲れた時の対処法5選｜転職・改善', '派遣法とはわかりやすく解説！3年ルール・改正・禁止', '派遣会社が儲かる仕組みを徹底解説！マージン率・利益', '派遣看護師の社会保険完全ガイド｜加入条件・保険料・']
+[internal_linker] H3マッチ割り当て「「103万円の壁」と「130万円の壁」の」→「経理派遣のリアルを徹底解説！時給・仕事内容・未経験でも働ける？」（2026-05-02）★同カテゴリー
+[internal_linker] H3マッチ割り当て「保育士派遣の時給相場と扶養内に収まる月収」→「夏バイトおすすめ15選！大学生・高校生が稼げる職種を徹底解説」（2026-05-18）★同カテゴリー
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 6件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:2 / 末尾リスト:6)
+[internal_linker] 内部リンク 8件 挿入: ['経理派遣のリアルを徹底解説！時給・仕事内容・未経験でも働ける', '夏バイトおすすめ15選！大学生・高校生が稼げる職種を徹底解説', '保育士転職サイト口コミ・評判おすすめ10選！選び方と注意点も', '保育士から異業種転職は可能？おすすめ職種7選と成功のコツを徹', '保育士が人間関係に疲れた時の対処法5選｜転職・改善策まで徹底', '派遣法とはわかりやすく解説！3年ルール・改正・禁止業務まで総', '派遣会社が儲かる仕組みを徹底解説！マージン率・利益構造・開業', '派遣看護師の社会保険完全ガイド｜加入条件・保険料・メリットを']
+[wordpress] タグ設定: ['保育士派遣', '扶養内勤務', '保育士転職', '保育士パート', '働き方']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 740) → https://hataraku-navi.com/wp-admin/post.php?post=740&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Minimal flat design with laptop, coins, calendar, checkmark, lightbulb icons, soft pink and mint pastel tones, kawaii business style.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Childcare Worker Temp Pay Limits" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行65 「保育士 派遣 扶養内」→ 投稿済み (2026/05/22, ID:740) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「保育士派遣で扶養内勤務は可能？103万円に収める働き方と注意」
+2026-05-22 05:05:17 [INFO] [post] WP投稿完了: ID=740 → https://hataraku-navi.com/wp-admin/post.php?post=740&action=edit
+2026-05-22 05:05:17 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-22 05:05:17 [INFO] [hataraku] [1/1] ✅ 完了: 「保育士派遣で扶養内勤務は可能？103万円に収める働き方と注意点」
+2026-05-22 05:05:17 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-22 05:05:17 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hataraku limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #740 保育士派遣で扶養内勤務は可能？103万円に収める働き方と注意点
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] はた楽ナビ向けキャリア型バナーで生成します
+[IMAGE] career template: office_person
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1526KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_050611_codex_hataraku_career_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 741)
+[codex-eyecatch] featured image 設定完了: media_id=741
+[codex-eyecatch] 編集URL: https://hataraku-navi.com/wp-admin/post.php?post=740&action=edit
+2026-05-22 05:06:15 [INFO] 
+============================================================
+2026-05-22 05:06:15 [INFO] 【全体サマリー】
+2026-05-22 05:06:15 [INFO]   ブログ数  : 1件
+2026-05-22 05:06:15 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-22 05:06:15 [INFO]   所要時間  : 372.2秒
+2026-05-22 05:06:15 [INFO]   ✅ [hataraku] 保育士 派遣 扶養内 → 保育士派遣で扶養内勤務は可能？103万円に収める働き方と注意点
+2026-05-22 05:06:15 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=740&action=edit
+2026-05-22 05:06:15 [INFO] ============================================================
+===== [HATARAKU] 記事生成終了: 2026-05-22 05:06:15 / exit=0 =====

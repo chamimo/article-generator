@@ -1,0 +1,201 @@
+===== [HAPIPO8] 実行開始: 2026-05-22 04:20:01 =====
+2026-05-22 04:20:05 [INFO] ============================================================
+2026-05-22 04:20:05 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-22 04:20:05 [INFO] ============================================================
+2026-05-22 04:20:05 [INFO] 対象ブログ: ['hapipo8']
+2026-05-22 04:20:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-22 04:20:06 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-22 04:20:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-22 04:20:06 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-05-22 04:20:06 [INFO]   fact_check       : True
+2026-05-22 04:20:06 [INFO]   article_type_mix : True
+2026-05-22 04:20:06 [INFO]   stop_words       : ['2026']
+2026-05-22 04:20:06 [INFO]   article_count    : 1  dry_run: False
+2026-05-22 04:20:09 [INFO] [hapipo8] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] 気になることブログ / 「ASP案件マスター」: 50件
+[asp_fetcher]   [S] 福ちゃん → https://hapipo8.com/fukuchan / 着物買取・女性
+[asp_fetcher]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori / 即現金化・出張査定
+[asp_fetcher]   [S] フクウロ → https://hapipo8.com/fukuuro / 洋服買取 / 断捨離 / ブランド買取
+[asp_fetcher]   [S] メディカルフードサービス → https://hapipo8.com/medical_food / 腎臓病 宅配食 / 健康管理
+[asp_fetcher]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki / 宅配食 おすすめ 忙しい / 料理 時間ない 共働き
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile / 審査なし・スマホ契約できない・ブラックOK
+[asp_fetcher]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+
+2026-05-22 04:20:10 [INFO] [hapipo8] アフィリ案件: 50件（スプレッドシート）
+2026-05-22 04:20:10 [INFO] [hapipo8]   [S] 福ちゃん → https://hapipo8.com/fukuchan
+2026-05-22 04:20:10 [INFO] [hapipo8]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori
+2026-05-22 04:20:10 [INFO] [hapipo8]   [S] フクウロ → https://hapipo8.com/fukuuro
+2026-05-22 04:20:10 [INFO] [hapipo8]   [S] メディカルフードサービス → https://hapipo8.com/medical_food
+2026-05-22 04:20:10 [INFO] [hapipo8]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-05-22 04:20:10 [INFO] [hapipo8]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman
+2026-05-22 04:20:10 [INFO] [hapipo8]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] トラベル・スタンダード・ジャパン → https://px.a8.net/svt/ejp?a8mat=4B1THV+17H122+5LKE+5ZU29
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] ORBIS AMBER(オルビス アンバー) → https://px.a8.net/svt/ejp?a8mat=4B1THX+DDO2AI+1USQ+4ASX02
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] トリア → https://hapipo8.com/tria
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] nosh - ナッシュ → https://hapipo8.com/nosh
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] 快眠タイムズストア → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DRYGT6+4UHE+TRVYQ
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] NELL マットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6M5RVE+4KD8+5ZMCI
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] 咲夜レアルマットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6LKC9M+4MRW+61Z81
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] オーケンウォーター → https://px.a8.net/svt/ejp?a8mat=4B1THX+CRN0WQ+1LOO+6NMJL
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] every frecious（エブリィフレシャス） → https://px.a8.net/svt/ejp?a8mat=4B1THX+CS8GII+2B8Y+15OK2A
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] リゾバ → https://hapipo8.com/rizoba
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] ダイブ → https://hapipo8.com/dive
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] 工場求人ワールド → https://px.a8.net/svt/ejp?a8mat=4B1O1T+EGYV5U+5S9S+5YJRM
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] ソフトバンク光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KARLU+3HKU+25FF81
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] BIGLOBE WiMAX +5G → https://px.a8.net/svt/ejp?a8mat=4B1THS+2TTMYY+B4+2BDBUB
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] フレッツ光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KW4WA+348K+1TJE9U
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] AI英会話アプリ【スピーク】 → https://hapipo8.com/speak
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] もぐワン ペットフード → https://hapipo8.com/moguwan
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] DMM 生成AI CAMP → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] ポニークリーニング → https://px.a8.net/svt/ejp?a8mat=4B1THV+5QLST6+4N08+5Z6WY
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] 体験型カタログギフト【EXETIME】 → https://hapipo8.com/exetime
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] GMOとくとくBB → https://px.a8.net/svt/ejp?a8mat=4B1THS+2UF2KQ+50+3H48S2
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] Amazon Prime Video → https://amzn.to/4tbKPVa
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] Pollet → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] カレントボディ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DFGD3U+54TM+5YJRM
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] アプリ接客キャスト → https://px.a8.net/svt/ejp?a8mat=4B1O1T+FKUWOY+3P1G+NTRMQ
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] ヴィーナスウォーカー → https://px.a8.net/svt/ejp?a8mat=4B1THV+6632JE+58KC+5YRHE
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] WEBCOACH → https://px.a8.net/svt/ejp?a8mat=4B1V1W+DW4O7U+5EVK+5YZ75
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] ポケットリサーチ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DUXMU2+58KC+BWVTE
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] ラボル カード払い → https://px.a8.net/svt/ejp?a8mat=4B1THS+3TJN9M+40JM+1NJZN5
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] クロスワンルーム → https://px.a8.net/svt/ejp?a8mat=4B1THX+DPKQE2+4EZ2+BYLJL
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] Mr.シリーズ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CLOOUY+1USQ+2Z8T76
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] IBJ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CF4X7E+FOG+4MPSTE
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] ユアマイスター → https://px.a8.net/svt/ejp?a8mat=4B1THX+BZNNH6+4HQS+5YJRM
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] TOSSY → https://px.a8.net/svt/ejp?a8mat=4B1THS+2V0I6I+1WP2+1HLNLE
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] ABLENET VPS → https://px.a8.net/svt/ejp?a8mat=4B1THS+2VLXSA+4NIK+5Z6WX
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-22 04:20:10 [INFO] [hapipo8]   [A] BIGLOBE光 → https://px.a8.net/svt/ejp?a8mat=4B3LMR+4JQL96+3SPO+7LW1F7
+2026-05-22 04:20:10 [INFO] [hapipo8]   [B] 食楽膳 → https://hapipo8.com/shokurakuzen
+2026-05-22 04:20:10 [INFO] [hapipo8]   [?] 楽器買取 福ちゃん → https://hapipo8.com/gakki-fukucyan
+2026-05-22 04:20:10 [INFO] [hapipo8]   [?] ニーゴ・リユース → https://hapipo8.com/25reuse
+2026-05-22 04:20:24 [INFO] [wp] 記事取得: 計170件 (publish=170)
+2026-05-22 04:20:24 [INFO] [hapipo8] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.4, 'monetize': 0.1})
+2026-05-22 04:20:25 [INFO] [fetch] サブKW紐付け: 165件 → 50記事に統合
+2026-05-22 04:20:25 [INFO] [fetch] [キーワード] メインKW: 299件（親KW+生成待ち）  サブKW除外: 165件（統合対象）  投稿済みスキップ: 140件  aim内訳: [aim:60, add:214, claude:25]
+2026-05-22 04:20:25 [INFO] [dup_check] 優先候補: 299件 {'aim': 60, 'add': 214, 'claude': 25} を先頭評価
+2026-05-22 04:20:25 [INFO] [dup_check] シート承認済みスキップ: 「リゾバ 比較 どれがいい」（親KW+生成待ちのため重複チェック免除）
+2026-05-22 04:20:25 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=299件, 要求=1件)
+2026-05-22 04:20:25 [INFO] [select] 1件選定 (要求=1件)
+2026-05-22 04:20:25 [INFO] [select]   1. 「リゾバ 比較 どれがいい」 vol=0 seo=N/A comp=N/A
+2026-05-22 04:20:25 [INFO] [hapipo8] LONGTAIL選定: 1件
+2026-05-22 04:20:25 [INFO] [hapipo8] 候補: 299件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $2.5878 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $2.5878(¥388) / 9記事
+2026-05-22 04:20:25 [INFO] [api_guard] 本日の使用量: $2.5878 / ¥388 (30回呼び出し)
+2026-05-22 04:20:25 [INFO] ────────────────────────────────────────────────────────────
+2026-05-22 04:20:25 [INFO] [hapipo8] [1/1] [LONGTAIL] 「リゾバ 比較 どれがいい」 vol=0 ★AIM
+2026-05-22 04:20:25 [INFO] ────────────────────────────────────────────────────────────
+2026-05-22 04:20:25 [INFO] [generate] 生成開始: 「リゾバ 比較 どれがいい」(vol:0) fact_check=True target_length=5,645字  サブKW:2件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「リゾバ 比較 どれがいい」(vol:0) [5,645字 / H3:8〜12本 / FAQ:5〜7問]
+[article_generator] 事実確認中: 「リゾバ 比較 どれがいい」
+[article_generator] 事実確認完了: 確認済み11件 / 不確か5件 / 注意5件
+  ⚠️  「どれがいいか」は利用者の目的（貯金優先か、場所選び優先か、サポート重視か）により大きく異なるため、単純な比較は不正確になる可能性がある
+  ⚠️  派遣会社選びの際は、求人数・時給・サポート体制の3点セットで判断することが重要だが、これらは相互にトレードオフの関係にある（例：リゾバ.comは求人数が多いが時給が相対的に低い）
+  ⚠️  同じ職場の求人でも派遣会社により時給に差がある場合があるため、複数社の比較が必須である
+  ⚠️  時期による変動が大きく（特に連休シーズン）、記事作成時と読者が参考にする時点で求人状況が大きく変わる可能性がある
+  ⚠️  「新人向け」「高時給志向」「長期勤務」など対象読者の属性を明確にしないと、誤った派遣会社選びの推奨につながる可能性がある
+[api_guard] ✅ 本日: $2.5878 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $2.5878(¥388) / 9記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=113 out=66 → $0.0004  (lsi:リゾバ 比較 どれがいい)
+[api_guard] 本日の使用量: $2.5881 / ¥388 (1037回呼び出し)
+[article_generator] 共起語: リゾートバイト、時給、期間、求人サイト、口コミ、評判、給与、寮、食事、サポート、地域、職種、ランキング、おすすめ、福利厚...
+[article_generator] サブKW候補: 2件 (リゾバ 人気 ランキング〜)
+[api_guard] ✅ 本日: $2.5881 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $2.5881(¥388) / 9記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=180 out=565 → $0.0024  (kw_research:リゾバ 比較 どれがいい)
+[api_guard] 本日の使用量: $2.5905 / ¥388 (1038回呼び出し)
+[article_generator] サジェスト: リゾバ 比較 おすすめ・リゾバ 比較 給料・リゾバ 比較 口コミ...
+[article_generator] 検索意図: 比較系 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $2.5905 / 1時間: $0.0028  (上限 日次$10.00 / 時間$5.00)  全体: $2.5905(¥389) / 9記事
+[api_guard] 記録: claude-sonnet-4-6 in=18251 out=14116 → $0.2665  (article:リゾバ 比較 どれがいい)
+[api_guard] 本日の使用量: $2.8570 / ¥428 (1039回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of laptop, comparison charts, star
+[imagefx] タイトル(英): Resort Work Companies Compared
+[article_generator] 完了: 「リゾバ派遣会社どれがいい？主要4社を目的別に比較してみた」 カテゴリ: 未設定(-) タグ: ['リゾートバイト', '派遣会社比較', 'リゾバ', '住み込みバイト', '求人サイト']
+2026-05-22 04:24:29 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-22 04:24:29 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「リゾバ」(ID:3767)
+2026-05-22 04:24:30 [INFO] [generate] 完了: 「リゾバ派遣会社どれがいい？主要4社を目的別に比較してみた」
+2026-05-22 04:24:30 [WARNING] [quality] 品質チェック: ❌4件NG / ⚠️0件警告 / 「リゾバ派遣会社どれがいい？主要4社を目的別に比較してみた」
+2026-05-22 04:24:30 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [1, 3, 5, 6] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-22 04:24:30 [WARNING] [quality]   ❌ □ 一人称体験談: 一人称体験談が1箇所しかありません（2〜3箇所必要）。「実際に使ってみたところ〜」「試してみて感じたのは〜」など自然な体験文を2〜3箇所追加してください。
+2026-05-22 04:24:30 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（でしょうか。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-22 04:24:30 [WARNING] [quality]   ❌ □ 外部ソースリンク: 外部リンクが1つもありません。信頼性の高いソース（公式サイト・官公庁・大手メディア等）へのリンクを1〜3件追加してください。
+2026-05-22 04:24:30 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-22 04:24:30 [INFO] [post] 投稿方式: publish
+[category_selector] カテゴリ取得: 36件
+[category_selector] 「リゾバ 比較 どれがいい」→ 節約・お得情報(678) score=21
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Three comparison axes illustrated with soft pastel icons: salary bars, calendar ...
+[image_generator] 完了 (36KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_042440_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4279)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: リゾバ派遣会社の違いを3つの軸で比較する
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring cozy dormitory room, meal plate, and wellness...
+[image_generator] 完了 (51KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_042453_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4280)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: リゾバ比較で見落としがちな「寮・食事・福利厚生」の差
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful resort work icons arranged in a circle—beach umbrella, mountain peak, h...
+[image_generator] 完了 (47KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_042504_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4281)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 目的別に「自分に合うリゾバ派遣会社」を選ぶ方法
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful comparison cards with checkmark icons, question mark symbol, and resort...
+[image_generator] 完了 (37KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_042518_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4282)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: resort-part-time-agency-comparison-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful resort destination cards floating with checkmark icons, comparison char...
+[image_generator] 完了 (61KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_042529_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4283)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: resort-part-time-agency-comparison-summary.jpg
+[internal_linker] 公開済み記事取得: 170件
+[internal_linker] 古い記事を除外: 123件（2年以上前）→ 47件で選定
+[internal_linker] 同カテゴリー: 8件選定（同カテゴリー:8件 / 関連度60%+新しさ40%）
+[internal_linker] H3マッチ割り当て「リゾートバイトの時給って実際どのくらい違」→「海外旅行を安くする方法15選！航空券・ホテル・時期まで徹底解説」（2026-05-07）★同カテゴリー
+[internal_linker] H3マッチ割り当て「求人数で選ぶなら業界老舗のリゾバ.com」→「未経験からITスキルを学ぶ方法7ステップ！独学・スクール徹底比較」（2026-05-14）★同カテゴリー
+[internal_linker] H3マッチ割り当て「高時給で選ぶならリゾートバイト.comと」→「楽器の買取屋さん比較2026年版｜どれがいい？おすすめ業者6選を徹底解」（2026-05-08）★同カテゴリー
+[internal_linker] H3マッチ割り当て「初心者のサポート体制ならダイブが安心感あ」→「シェフの無添つくりおき 口コミ・評判まとめ｜料金・メニュー・味の正直レ」（2026-05-20）★同カテゴリー
+[internal_linker] H3マッチ割り当て「主要4社を横並びで比べると何が見えてくる」→「携帯料金を滞納すると契約できない？解決策と審査を通す方法を徹底解説」（2026-05-08）★同カテゴリー
+[internal_linker] H3マッチ割り当て「寮費・食費が「実質無料」かどうかを確認す」→「お金なくても備蓄できる！低予算で始める食料・防災グッズの節約術」（2026-05-17）★同カテゴリー
+[internal_linker] H3マッチ割り当て「交通費支給の条件が意外と求人によってバラ」→「エアコン電気代を節約する方法10選！設定温度からフィルター掃除まで徹底」（2026-05-03）★同カテゴリー
+[internal_linker] H3マッチ割り当て「給与前払い制度があると資金面での不安が減」→「フレッツ光とビッグローブ光の違いを徹底比較！料金・速度・乗り換えメリッ」（2026-05-08）★同カテゴリー
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['楽器の買取屋さん比較2026年版｜どれがいい？おすすめ業者6', 'フレッツ光とビッグローブ光の違いを徹底比較！料金・速度・乗り', '未経験からITスキルを学ぶ方法7ステップ！独学・スクール徹底', '携帯料金を滞納すると契約できない？解決策と審査を通す方法を徹', 'シェフの無添つくりおき 口コミ・評判まとめ｜料金・メニュー・', 'お金なくても備蓄できる！低予算で始める食料・防災グッズの節約', '海外旅行を安くする方法15選！航空券・ホテル・時期まで徹底解', 'エアコン電気代を節約する方法10選！設定温度からフィルター掃']
+[wordpress] タグ設定: ['リゾートバイト', '派遣会社比較', 'リゾバ', '住み込みバイト', '求人サイト']
+[wordpress] 投稿方式: publish
+[wordpress] 投稿完了 (ID: 4284) → https://hapipo8.com/wp-admin/post.php?post=4284&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行106 「リゾバ 比較 どれがいい」→ 投稿済み (2026/05/22, ID:4284) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「リゾバ派遣会社どれがいい？主要4社を目的別に比較してみた」
+2026-05-22 04:25:41 [INFO] [post] WP投稿完了: ID=4284 → https://hapipo8.com/wp-admin/post.php?post=4284&action=edit
+2026-05-22 04:25:41 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-22 04:25:41 [INFO] [hapipo8] [1/1] ✅ 完了: 「リゾバ派遣会社どれがいい？主要4社を目的別に比較してみた」
+2026-05-22 04:25:41 [INFO] [hapipo8] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-22 04:25:41 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hapipo8 limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #4284 リゾバ派遣会社どれがいい？主要4社を目的別に比較してみた
+[codex-eyecatch] 既存ライブラリ画像を選択: recent media_id=4280
+[codex-eyecatch] 既存ライブラリ画像を featured image に設定: media_id=4280
+[codex-eyecatch] 編集URL: https://hapipo8.com/wp-admin/post.php?post=4284&action=edit
+2026-05-22 04:25:50 [INFO] 
+============================================================
+2026-05-22 04:25:50 [INFO] 【全体サマリー】
+2026-05-22 04:25:50 [INFO]   ブログ数  : 1件
+2026-05-22 04:25:50 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-22 04:25:50 [INFO]   所要時間  : 345.0秒
+2026-05-22 04:25:50 [INFO]   ✅ [hapipo8] リゾバ 比較 どれがいい → リゾバ派遣会社どれがいい？主要4社を目的別に比較してみた
+2026-05-22 04:25:50 [INFO]        https://hapipo8.com/wp-admin/post.php?post=4284&action=edit
+2026-05-22 04:25:50 [INFO] ============================================================
+===== [HAPIPO8] 記事生成終了: 2026-05-22 04:25:50 / exit=0 =====
