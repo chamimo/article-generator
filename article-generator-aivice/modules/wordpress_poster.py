@@ -592,8 +592,9 @@ def post_article_with_image(
     except Exception as _il_err:
         print(f"[internal_linker] スキップ（続行）: {_il_err}")
 
-    # ⑤ CTA挿入（まとめH3直前）
-    article["content"] = _inject_cta(article["content"], keyword)
+    # ⑤ CTA挿入 → generate_lite.py の wp_pattern_fetcher に移管（ref形式で挿入）
+    # _inject_cta はGutenberg検証エラーが発生するraw HTML埋め込みのため無効化
+    # article["content"] = _inject_cta(article["content"], keyword)
 
     # ⑤' 外部リンク確認・補完（最低1個必須）
     article["content"] = _ensure_external_link(article["content"], keyword)

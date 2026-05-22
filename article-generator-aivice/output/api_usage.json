@@ -2809,6 +2809,126 @@
       "output_tokens": 9610,
       "cost_usd": 0.162702,
       "label": "article:claudecode skills 使い方"
+    },
+    {
+      "timestamp": "2026-05-22T14:08:36.605985+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 119,
+      "cost_usd": 0.000569,
+      "label": "lsi:Google AI広告 会話型ディスカバリー広告"
+    },
+    {
+      "timestamp": "2026-05-22T14:08:41.366065+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 524,
+      "cost_usd": 0.002242,
+      "label": "kw_research:Google AI広告 会話型ディスカバリー広告"
+    },
+    {
+      "timestamp": "2026-05-22T14:11:43.006668+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T14",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10370,
+      "output_tokens": 11406,
+      "cost_usd": 0.2022,
+      "label": "article:Google AI広告 会話型ディスカバリー広告"
+    },
+    {
+      "timestamp": "2026-05-22T14:57:56.829926+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 102,
+      "cost_usd": 0.000501,
+      "label": "lsi:Google AI広告 会話型ディスカバリー広告"
+    },
+    {
+      "timestamp": "2026-05-22T14:58:01.183713+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 621,
+      "cost_usd": 0.00263,
+      "label": "kw_research:Google AI広告 会話型ディスカバリー広告"
+    },
+    {
+      "timestamp": "2026-05-22T15:01:11.757634+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T15",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10727,
+      "output_tokens": 11723,
+      "cost_usd": 0.208026,
+      "label": "article:Google AI広告 会話型ディスカバリー広告"
+    },
+    {
+      "timestamp": "2026-05-22T15:46:02.621342+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 90,
+      "cost_usd": 0.000448,
+      "label": "lsi:Codexで記事生成してみた"
+    },
+    {
+      "timestamp": "2026-05-22T15:46:06.020418+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 514,
+      "cost_usd": 0.002198,
+      "label": "kw_research:Codexで記事生成してみた"
+    },
+    {
+      "timestamp": "2026-05-22T15:49:18.283788+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T15",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10808,
+      "output_tokens": 11390,
+      "cost_usd": 0.203274,
+      "label": "article:Codexで記事生成してみた"
+    },
+    {
+      "timestamp": "2026-05-22T15:59:38.037912+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 111,
+      "cost_usd": 0.000535,
+      "label": "lsi:スピーク プレミアムプラス 違い"
+    },
+    {
+      "timestamp": "2026-05-22T15:59:42.141298+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 616,
+      "cost_usd": 0.002609,
+      "label": "kw_research:スピーク プレミアムプラス 違い"
+    },
+    {
+      "timestamp": "2026-05-22T16:02:43.836086+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T16",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10935,
+      "output_tokens": 11477,
+      "cost_usd": 0.20496,
+      "label": "article:スピーク プレミアムプラス 違い"
     }
   ],
   "events": [
@@ -2856,6 +2976,11 @@
       "timestamp": "2026-05-19T19:00:15.239123+00:00",
       "type": "global_daily_limit",
       "message": "[api_guard] 🛑 全体日次コスト上限: 本日合計 $2.5793 (¥387) >= $2.00 (¥300)\n  翌日（UTC）にリセットされます。"
+    },
+    {
+      "timestamp": "2026-05-21T19:00:22.166604+00:00",
+      "type": "global_daily_limit",
+      "message": "[api_guard] 🛑 全体日次コスト上限: 本日合計 $2.5878 (¥388) >= $2.00 (¥300)\n  翌日（UTC）にリセットされます。"
     }
   ]
 }

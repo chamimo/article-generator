@@ -51,6 +51,9 @@ from modules.wordpress_poster import create_post, post_article_with_image
 from modules.image_generator import generate_image_for_article
 from modules.api_guard import check_stop, daily_summary
 from modules import wp_context
+from modules.wp_pattern_fetcher import fetch_patterns, match_pattern, insert_pattern_cta, insert_per_h3_cta
+
+_wp_patterns_cache: dict[str, list] = {}
 
 # ═══════════════════════════════════════════════════════════════
 # FEATURE FLAGS
@@ -1203,6 +1206,43 @@ def post(article: dict, dry_run: bool = False,
                 from modules.asp_fetcher import to_asp_dict
                 asp_links.update(to_asp_dict(asp_list))
             stop_words = blog_cfg.stop_words if blog_cfg else []
+
+            # ── マイパターン CTA 挿入（WordPress の「マイパターン」を使用）──
+            if blog_cfg:
+                blog_name = blog_cfg.name
+                if blog_name not in _wp_patterns_cache:
+                    try:
+                        _wp_patterns_cache[blog_name] = fetch_patterns(blog_cfg)
+                    except Exception as _pe:
+                        log.warning(f"[post] マイパターン取得失敗（スキップ）: {_pe}")
+                        _wp_patterns_cache[blog_name] = []
+                patterns = _wp_patterns_cache[blog_name]
+                if patterns:
+                    keyword = article.get("keyword", "")
+                    # ① 各案件H3末尾へのCTA挿入
+                    article["content"], n_h3 = insert_per_h3_cta(
+                        article["content"], patterns, asp_list or []
+                    )
+                    if n_h3 > 0:
+                        log.info(f"[post] パターンCTA挿入（H3末尾）: {n_h3}件")
+                    # ② キーワードマッチパターンを「この記事のポイント」直後・末尾に挿入
+                    import re as _re
+                    _ct = article["content"].lower()
+                    asp_names = [
+                        n for n in [item["name"] for item in (asp_list or [])]
+                        if any(
+                            p.lower() in _ct
+                            for p in _re.split(r'[\s\-_・/【】「」()（）]+', n)
+                            if len(p) >= 3
+                        )
+                    ]
+                    matched = match_pattern(keyword, patterns, asp_names=asp_names)
+                    if matched:
+                        article["content"] = insert_pattern_cta(
+                            article["content"], matched, skip_mention=(n_h3 > 0)
+                        )
+                        log.info(f"[post] パターンCTA挿入（KWマッチ）: 「{matched.title}」(ID:{matched.id})")
+
             result = post_article_with_image(article, image_bytes=None,
                                              asp_links=asp_links, stop_words=stop_words,
                                              enable_eyecatch=False)
