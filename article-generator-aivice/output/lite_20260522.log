@@ -1,0 +1,153 @@
+2026-05-22 04:00:07 [INFO] ============================================================
+2026-05-22 04:00:07 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-22 04:00:07 [INFO] ============================================================
+2026-05-22 04:00:07 [INFO] 対象ブログ: ['workup-ai']
+2026-05-22 04:00:09 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-22 04:00:09 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-05-22 04:00:09 [INFO] ════════════════════════════════════════════════════════════
+2026-05-22 04:00:09 [INFO]   genre            : AI・副業・転職・キャリア
+2026-05-22 04:00:09 [INFO]   fact_check       : True
+2026-05-22 04:00:09 [INFO]   article_type_mix : True
+2026-05-22 04:00:09 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-05-22 04:00:09 [INFO]   article_count    : 1  dry_run: False
+2026-05-22 04:00:13 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-22 04:00:20 [INFO] [wp] 記事取得: 計415件 (publish=415)
+2026-05-22 04:00:20 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-22 04:00:21 [DEBUG] [fetch] シート「絞り込みKW」: 206行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-22 04:00:21 [INFO] [fetch] [キーワード] メインKW: 60件（vol≥30 or N/A）  サブKW: 52件（vol<30）  投稿済みスキップ: 31件  テーマ外除外: 63件  aim内訳: [now:4, claude:17, aim:89, add:13]
+2026-05-22 04:00:21 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-22 04:00:21 [INFO] [dup_check] 優先候補: 60件 {'now': 2, 'add': 12, 'claude': 15, 'aim': 31} を先頭評価
+2026-05-22 04:00:22 [DEBUG] [dup_check] OK: 「AIエージェント 何ができる 初心者」
+2026-05-22 04:00:22 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=60件, 要求=1件)
+2026-05-22 04:00:22 [INFO] [select] 1件選定 (要求=1件)
+2026-05-22 04:00:22 [INFO] [select]   1. 「AIエージェント 何ができる 初心者」 vol=0 seo=N/A comp=N/A
+2026-05-22 04:00:22 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-22 04:00:22 [INFO] [workup-ai] 候補: 60件 / 選定: 1件 / 生成予定: 1件
+2026-05-22 22:51:43 [INFO] ============================================================
+2026-05-22 22:51:43 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-22 22:51:43 [INFO] ============================================================
+2026-05-22 22:51:44 [INFO] [registry] ブログ管理シートから 7 件取得: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-22 22:51:44 [INFO] 対象ブログ: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-22 22:51:44 [ERROR] [hataraku] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hataraku/blog_config.json
+2026-05-22 22:51:45 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-22 22:51:45 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-05-22 22:51:45 [INFO] ════════════════════════════════════════════════════════════
+2026-05-22 22:51:45 [INFO]   genre            : AI・副業・転職・キャリア
+2026-05-22 22:51:45 [INFO]   fact_check       : True
+2026-05-22 22:51:45 [INFO]   article_type_mix : True
+2026-05-22 22:51:45 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-05-22 22:51:45 [INFO]   article_count    : 3  dry_run: False
+2026-05-22 22:51:48 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-22 22:51:52 [INFO] [wp] 記事取得: 計417件 (draft=1 / publish=416)
+2026-05-22 22:51:52 [INFO] [workup-ai] キーワード直接指定: 「Google AI広告 会話型ディスカバリー広告」
+2026-05-22 22:51:52 [INFO] [workup-ai] 候補: 1件 / 選定: 1件 / 生成予定: 3件
+2026-05-22 22:51:52 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-22 22:51:52 [INFO] ────────────────────────────────────────────────────────────
+2026-05-22 22:51:52 [INFO] [workup-ai] [1/1] [LONGTAIL] 「Google AI広告 会話型ディスカバリー広告」 vol=500
+2026-05-22 22:51:52 [INFO] ────────────────────────────────────────────────────────────
+2026-05-22 22:51:52 [INFO] [generate] 生成開始: 「Google AI広告 会話型ディスカバリー広告」(vol:500) fact_check=True target_length=6,000字  誘導リンク:0件  人格設定:あり
+2026-05-22 22:51:53 [ERROR] [workup-ai] [1/1] ❌ エラー（続行）: Error code: 401 - {'type': 'error', 'error': {'type': 'authentication_error', 'message': 'invalid x-api-key'}, 'request_id': 'req_011CbHiYboCy9xB88BktRFW4'}
+2026-05-22 22:51:53 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-22 22:51:53 [ERROR] [ys-trend] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/ys-trend/blog_config.json
+2026-05-22 22:51:53 [ERROR] [kaerudoko] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/kaerudoko/blog_config.json
+2026-05-22 22:51:53 [ERROR] [hapipo8] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hapipo8/blog_config.json
+2026-05-22 22:51:53 [ERROR] [hida-no-omoide] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hida-no-omoide/blog_config.json
+2026-05-22 22:51:53 [ERROR] [web-study1] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/web-study1/blog_config.json
+2026-05-22 22:51:53 [INFO] 
+============================================================
+2026-05-22 22:51:53 [INFO] 【全体サマリー】
+2026-05-22 22:51:53 [INFO]   ブログ数  : 7件
+2026-05-22 22:51:53 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-22 22:51:53 [INFO]   所要時間  : 10.0秒
+2026-05-22 22:51:53 [INFO]   ❌ [workup-ai] Google AI広告 会話型ディスカバリー広告 → (生成失敗)
+2026-05-22 22:51:53 [INFO] ============================================================
+2026-05-22 23:08:24 [INFO] ============================================================
+2026-05-22 23:08:24 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-22 23:08:24 [INFO] ============================================================
+2026-05-22 23:08:25 [INFO] [registry] ブログ管理シートから 7 件取得: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-22 23:08:25 [INFO] 対象ブログ: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-22 23:08:25 [ERROR] [hataraku] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hataraku/blog_config.json
+2026-05-22 23:08:26 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-22 23:08:26 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-05-22 23:08:26 [INFO] ════════════════════════════════════════════════════════════
+2026-05-22 23:08:26 [INFO]   genre            : AI・副業・転職・キャリア
+2026-05-22 23:08:26 [INFO]   fact_check       : True
+2026-05-22 23:08:26 [INFO]   article_type_mix : True
+2026-05-22 23:08:26 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-05-22 23:08:26 [INFO]   article_count    : 3  dry_run: False
+2026-05-22 23:08:30 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-22 23:08:33 [INFO] [wp] 記事取得: 計417件 (draft=1 / publish=416)
+2026-05-22 23:08:33 [INFO] [workup-ai] キーワード直接指定: 「Google AI広告 会話型ディスカバリー広告」
+2026-05-22 23:08:33 [INFO] [workup-ai] 候補: 1件 / 選定: 1件 / 生成予定: 3件
+2026-05-22 23:08:33 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-22 23:08:33 [INFO] ────────────────────────────────────────────────────────────
+2026-05-22 23:08:33 [INFO] [workup-ai] [1/1] [LONGTAIL] 「Google AI広告 会話型ディスカバリー広告」 vol=500
+2026-05-22 23:08:33 [INFO] ────────────────────────────────────────────────────────────
+2026-05-22 23:08:33 [INFO] [generate] 生成開始: 「Google AI広告 会話型ディスカバリー広告」(vol:500) fact_check=True target_length=6,000字  誘導リンク:0件  人格設定:あり
+2026-05-22 23:11:45 [INFO] [generate] 完了: 「Google AI広告・会話型ディスカバリー広告とは？仕組みと活用法をやさしく解説」
+2026-05-22 23:11:45 [INFO] [post] 投稿方式: draft
+2026-05-22 23:12:35 [INFO] [post] WP投稿完了: ID=10515 → https://workup-ai.com/wp-admin/post.php?post=10515&action=edit
+2026-05-22 23:12:35 [INFO] [workup-ai] [1/1] ✅ 完了: 「Google AI広告・会話型ディスカバリー広告とは？仕組みと活用法をやさしく解説」
+2026-05-22 23:12:35 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-22 23:12:35 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+2026-05-22 23:13:30 [ERROR] [ys-trend] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/ys-trend/blog_config.json
+2026-05-22 23:13:30 [ERROR] [kaerudoko] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/kaerudoko/blog_config.json
+2026-05-22 23:13:30 [ERROR] [hapipo8] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hapipo8/blog_config.json
+2026-05-22 23:13:30 [ERROR] [hida-no-omoide] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hida-no-omoide/blog_config.json
+2026-05-22 23:13:30 [ERROR] [web-study1] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/web-study1/blog_config.json
+2026-05-22 23:13:30 [INFO] 
+============================================================
+2026-05-22 23:13:30 [INFO] 【全体サマリー】
+2026-05-22 23:13:30 [INFO]   ブログ数  : 7件
+2026-05-22 23:13:30 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-22 23:13:30 [INFO]   所要時間  : 306.5秒
+2026-05-22 23:13:30 [INFO]   ✅ [workup-ai] Google AI広告 会話型ディスカバリー広告 → Google AI広告・会話型ディスカバリー広告とは？仕組みと活用法をやさしく解説
+2026-05-22 23:13:30 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10515&action=edit
+2026-05-22 23:13:30 [INFO] ============================================================
+2026-05-22 23:57:44 [INFO] ============================================================
+2026-05-22 23:57:44 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-22 23:57:44 [INFO] ============================================================
+2026-05-22 23:57:46 [INFO] [registry] ブログ管理シートから 7 件取得: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-22 23:57:46 [INFO] 対象ブログ: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-22 23:57:46 [ERROR] [hataraku] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hataraku/blog_config.json
+2026-05-22 23:57:47 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-22 23:57:47 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-05-22 23:57:47 [INFO] ════════════════════════════════════════════════════════════
+2026-05-22 23:57:47 [INFO]   genre            : AI・副業・転職・キャリア
+2026-05-22 23:57:47 [INFO]   fact_check       : True
+2026-05-22 23:57:47 [INFO]   article_type_mix : True
+2026-05-22 23:57:47 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-05-22 23:57:47 [INFO]   article_count    : 3  dry_run: False
+2026-05-22 23:57:50 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-22 23:57:55 [INFO] [wp] 記事取得: 計417件 (draft=1 / publish=416)
+2026-05-22 23:57:55 [INFO] [workup-ai] キーワード直接指定: 「Google AI広告 会話型ディスカバリー広告」
+2026-05-22 23:57:55 [INFO] [workup-ai] 候補: 1件 / 選定: 1件 / 生成予定: 3件
+2026-05-22 23:57:55 [INFO] [api_guard] 本日の使用量: $0.2050 / ¥31 (3回呼び出し)
+2026-05-22 23:57:55 [INFO] ────────────────────────────────────────────────────────────
+2026-05-22 23:57:55 [INFO] [workup-ai] [1/1] [LONGTAIL] 「Google AI広告 会話型ディスカバリー広告」 vol=500
+2026-05-22 23:57:55 [INFO] ────────────────────────────────────────────────────────────
+2026-05-22 23:57:55 [INFO] [generate] 生成開始: 「Google AI広告 会話型ディスカバリー広告」(vol:500) fact_check=True target_length=6,000字  誘導リンク:0件  人格設定:あり
+2026-05-23 00:01:15 [INFO] [generate] 完了: 「Google AI広告 会話型ディスカバリー広告とは？設定から運用まで初心者でもわかる完全ガイド」
+2026-05-23 00:01:15 [INFO] [post] 投稿方式: draft
+2026-05-23 00:02:00 [INFO] [post] WP投稿完了: ID=10521 → https://workup-ai.com/wp-admin/post.php?post=10521&action=edit
+2026-05-23 00:02:00 [INFO] [workup-ai] [1/1] ✅ 完了: 「Google AI広告 会話型ディスカバリー広告とは？設定から運用まで初心者でもわかる完全ガイド」
+2026-05-23 00:02:00 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-23 00:02:00 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+2026-05-23 00:02:46 [ERROR] [ys-trend] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/ys-trend/blog_config.json
+2026-05-23 00:02:46 [ERROR] [kaerudoko] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/kaerudoko/blog_config.json
+2026-05-23 00:02:46 [ERROR] [hapipo8] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hapipo8/blog_config.json
+2026-05-23 00:02:46 [ERROR] [hida-no-omoide] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hida-no-omoide/blog_config.json
+2026-05-23 00:02:46 [ERROR] [web-study1] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/web-study1/blog_config.json
+2026-05-23 00:02:46 [INFO] 
+============================================================
+2026-05-23 00:02:46 [INFO] 【全体サマリー】
+2026-05-23 00:02:46 [INFO]   ブログ数  : 7件
+2026-05-23 00:02:46 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-23 00:02:46 [INFO]   所要時間  : 301.4秒
+2026-05-23 00:02:46 [INFO]   ✅ [workup-ai] Google AI広告 会話型ディスカバリー広告 → Google AI広告 会話型ディスカバリー広告とは？設定から運用まで初心者でもわかる完全ガイド
+2026-05-23 00:02:46 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10521&action=edit
+2026-05-23 00:02:46 [INFO] ============================================================

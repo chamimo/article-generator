@@ -1,0 +1,88 @@
+2026-05-23 00:45:50 [INFO] ============================================================
+2026-05-23 00:45:50 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-23 00:45:50 [INFO] ============================================================
+2026-05-23 00:45:51 [INFO] [registry] ブログ管理シートから 7 件取得: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-23 00:45:51 [INFO] 対象ブログ: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-23 00:45:51 [ERROR] [hataraku] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hataraku/blog_config.json
+2026-05-23 00:45:52 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 00:45:52 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-05-23 00:45:52 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 00:45:52 [INFO]   genre            : AI・副業・転職・キャリア
+2026-05-23 00:45:52 [INFO]   fact_check       : True
+2026-05-23 00:45:52 [INFO]   article_type_mix : True
+2026-05-23 00:45:52 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-05-23 00:45:52 [INFO]   article_count    : 3  dry_run: False
+2026-05-23 00:45:55 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-23 00:46:00 [INFO] [wp] 記事取得: 計418件 (draft=1 / publish=417)
+2026-05-23 00:46:00 [INFO] [workup-ai] キーワード直接指定: 「Codexで記事生成してみた」
+2026-05-23 00:46:00 [INFO] [workup-ai] 候補: 1件 / 選定: 1件 / 生成予定: 3件
+2026-05-23 00:46:00 [INFO] [api_guard] 本日の使用量: $0.4162 / ¥62 (6回呼び出し)
+2026-05-23 00:46:00 [INFO] ────────────────────────────────────────────────────────────
+2026-05-23 00:46:00 [INFO] [workup-ai] [1/1] [LONGTAIL] 「Codexで記事生成してみた」 vol=390
+2026-05-23 00:46:00 [INFO] ────────────────────────────────────────────────────────────
+2026-05-23 00:46:00 [INFO] [generate] 生成開始: 「Codexで記事生成してみた」(vol:390) fact_check=True target_length=6,000字  誘導リンク:0件  人格設定:あり
+2026-05-23 00:49:20 [INFO] [generate] 完了: 「Codexで記事生成してみた！精度・使い方・SEO効果を実際に検証」
+2026-05-23 00:49:20 [INFO] [post] 投稿方式: draft
+2026-05-23 00:50:07 [INFO] [post] WP投稿完了: ID=10530 → https://workup-ai.com/wp-admin/post.php?post=10530&action=edit
+2026-05-23 00:50:07 [INFO] [workup-ai] [1/1] ✅ 完了: 「Codexで記事生成してみた！精度・使い方・SEO効果を実際に検証」
+2026-05-23 00:50:07 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-23 00:50:07 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+2026-05-23 00:50:55 [ERROR] [ys-trend] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/ys-trend/blog_config.json
+2026-05-23 00:50:55 [ERROR] [kaerudoko] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/kaerudoko/blog_config.json
+2026-05-23 00:50:55 [ERROR] [hapipo8] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hapipo8/blog_config.json
+2026-05-23 00:50:55 [ERROR] [hida-no-omoide] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hida-no-omoide/blog_config.json
+2026-05-23 00:50:55 [ERROR] [web-study1] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/web-study1/blog_config.json
+2026-05-23 00:50:55 [INFO] 
+============================================================
+2026-05-23 00:50:55 [INFO] 【全体サマリー】
+2026-05-23 00:50:55 [INFO]   ブログ数  : 7件
+2026-05-23 00:50:55 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-23 00:50:55 [INFO]   所要時間  : 305.7秒
+2026-05-23 00:50:55 [INFO]   ✅ [workup-ai] Codexで記事生成してみた → Codexで記事生成してみた！精度・使い方・SEO効果を実際に検証
+2026-05-23 00:50:55 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10530&action=edit
+2026-05-23 00:50:55 [INFO] ============================================================
+2026-05-23 00:59:27 [INFO] ============================================================
+2026-05-23 00:59:27 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-23 00:59:27 [INFO] ============================================================
+2026-05-23 00:59:29 [INFO] [registry] ブログ管理シートから 7 件取得: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-23 00:59:29 [INFO] 対象ブログ: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-23 00:59:29 [ERROR] [hataraku] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hataraku/blog_config.json
+2026-05-23 00:59:30 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 00:59:30 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-05-23 00:59:30 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 00:59:30 [INFO]   genre            : AI・副業・転職・キャリア
+2026-05-23 00:59:30 [INFO]   fact_check       : True
+2026-05-23 00:59:30 [INFO]   article_type_mix : True
+2026-05-23 00:59:30 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-05-23 00:59:30 [INFO]   article_count    : 3  dry_run: False
+2026-05-23 00:59:33 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-23 00:59:36 [INFO] [wp] 記事取得: 計419件 (draft=2 / publish=417)
+2026-05-23 00:59:36 [INFO] [workup-ai] キーワード直接指定: 「スピーク プレミアムプラス 違い」
+2026-05-23 00:59:36 [INFO] [workup-ai] 候補: 1件 / 選定: 1件 / 生成予定: 3件
+2026-05-23 00:59:36 [INFO] [api_guard] 本日の使用量: $0.6221 / ¥93 (9回呼び出し)
+2026-05-23 00:59:36 [INFO] ────────────────────────────────────────────────────────────
+2026-05-23 00:59:36 [INFO] [workup-ai] [1/1] [LONGTAIL] 「スピーク プレミアムプラス 違い」 vol=0
+2026-05-23 00:59:36 [INFO] ────────────────────────────────────────────────────────────
+2026-05-23 00:59:36 [INFO] [generate] 生成開始: 「スピーク プレミアムプラス 違い」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  人格設定:あり
+2026-05-23 01:02:46 [INFO] [generate] 完了: 「スピーク プレミアムとプレミアムプラスの違いを徹底比較！どちらが自分に合う？」
+2026-05-23 01:02:46 [INFO] [post] 投稿方式: draft
+2026-05-23 01:03:33 [INFO] [post] WP投稿完了: ID=10537 → https://workup-ai.com/wp-admin/post.php?post=10537&action=edit
+2026-05-23 01:03:33 [INFO] [workup-ai] [1/1] ✅ 完了: 「スピーク プレミアムとプレミアムプラスの違いを徹底比較！どちらが自分に合う？」
+2026-05-23 01:03:33 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-23 01:03:33 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+2026-05-23 01:04:20 [ERROR] [ys-trend] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/ys-trend/blog_config.json
+2026-05-23 01:04:20 [ERROR] [kaerudoko] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/kaerudoko/blog_config.json
+2026-05-23 01:04:20 [ERROR] [hapipo8] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hapipo8/blog_config.json
+2026-05-23 01:04:20 [ERROR] [hida-no-omoide] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/hida-no-omoide/blog_config.json
+2026-05-23 01:04:20 [ERROR] [web-study1] 設定ファイルが見つかりません（スキップ）: blog_config.json が見つかりません: /Users/yama/article-generator-aivice/blogs/web-study1/blog_config.json
+2026-05-23 01:04:20 [INFO] 
+============================================================
+2026-05-23 01:04:20 [INFO] 【全体サマリー】
+2026-05-23 01:04:20 [INFO]   ブログ数  : 7件
+2026-05-23 01:04:20 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-23 01:04:20 [INFO]   所要時間  : 293.0秒
+2026-05-23 01:04:20 [INFO]   ✅ [workup-ai] スピーク プレミアムプラス 違い → スピーク プレミアムとプレミアムプラスの違いを徹底比較！どちらが自分に合う？
+2026-05-23 01:04:20 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10537&action=edit
+2026-05-23 01:04:20 [INFO] ============================================================
