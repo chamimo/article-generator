@@ -10359,6 +10359,166 @@
       "output_tokens": 14037,
       "cost_usd": 0.248316,
       "label": "article:director suite 365 解約"
+    },
+    {
+      "timestamp": "2026-05-21T19:20:43.362713+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 66,
+      "cost_usd": 0.000354,
+      "label": "lsi:リゾバ 比較 どれがいい"
+    },
+    {
+      "timestamp": "2026-05-21T19:20:47.053401+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 565,
+      "cost_usd": 0.002404,
+      "label": "kw_research:リゾバ 比較 どれがいい"
+    },
+    {
+      "timestamp": "2026-05-21T19:24:25.203847+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 18251,
+      "output_tokens": 14116,
+      "cost_usd": 0.266493,
+      "label": "article:リゾバ 比較 どれがいい"
+    },
+    {
+      "timestamp": "2026-05-21T20:00:14.003195+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 125,
+      "cost_usd": 0.000589,
+      "label": "lsi:保育士 派遣 扶養内"
+    },
+    {
+      "timestamp": "2026-05-21T20:00:17.985850+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 602,
+      "cost_usd": 0.00255,
+      "label": "kw_research:保育士 派遣 扶養内"
+    },
+    {
+      "timestamp": "2026-05-21T20:04:25.898299+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15383,
+      "output_tokens": 15479,
+      "cost_usd": 0.278334,
+      "label": "article:保育士 派遣 扶養内"
+    },
+    {
+      "timestamp": "2026-05-21T20:30:20.702506+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 84,
+      "cost_usd": 0.000426,
+      "label": "lsi:中橋 写真スポット 時間帯"
+    },
+    {
+      "timestamp": "2026-05-21T20:30:24.827331+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 631,
+      "cost_usd": 0.002668,
+      "label": "kw_research:中橋 写真スポット 時間帯"
+    },
+    {
+      "timestamp": "2026-05-21T20:34:35.097387+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 14956,
+      "output_tokens": 15211,
+      "cost_usd": 0.273033,
+      "label": "article:中橋 写真スポット 時間帯"
+    },
+    {
+      "timestamp": "2026-05-21T20:34:40.914970+00:00",
+      "date": "2026-05-21",
+      "hour": "2026-05-21T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 382,
+      "output_tokens": 26,
+      "cost_usd": 0.00041,
+      "label": "maps:中橋 写真スポット 時間帯"
+    },
+    {
+      "timestamp": "2026-05-22T07:03:21.407811+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 106,
+      "output_tokens": 85,
+      "cost_usd": 0.000425,
+      "label": "lsi:director suite 365 解約"
+    },
+    {
+      "timestamp": "2026-05-22T07:03:26.036275+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T07",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 173,
+      "output_tokens": 512,
+      "cost_usd": 0.002186,
+      "label": "kw_research:director suite 365 解約"
+    },
+    {
+      "timestamp": "2026-05-22T07:07:02.473053+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T07",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16139,
+      "output_tokens": 14205,
+      "cost_usd": 0.261492,
+      "label": "article:director suite 365 解約"
+    },
+    {
+      "timestamp": "2026-05-22T16:48:18.535331+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T16",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 93,
+      "cost_usd": 0.00046,
+      "label": "lsi:副業 保険 入ら ない"
+    },
+    {
+      "timestamp": "2026-05-22T16:48:22.340000+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T16",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 477,
+      "cost_usd": 0.00205,
+      "label": "kw_research:副業 保険 入ら ない"
+    },
+    {
+      "timestamp": "2026-05-22T16:52:22.049246+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T16",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15543,
+      "output_tokens": 15602,
+      "cost_usd": 0.280659,
+      "label": "article:副業 保険 入ら ない"
     }
   ],
   "events": [

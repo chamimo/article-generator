@@ -1,0 +1,118 @@
+===== [WORKUP-AI] 実行開始: 2026-05-23 01:33:03 =====
+2026-05-23 01:33:05 [INFO] ============================================================
+2026-05-23 01:33:05 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-23 01:33:05 [INFO] ============================================================
+2026-05-23 01:33:05 [INFO] 対象ブログ: ['workup-ai']
+2026-05-23 01:33:07 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 01:33:07 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-23 01:33:07 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 01:33:07 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-23 01:33:07 [INFO]   fact_check       : True
+2026-05-23 01:33:07 [INFO]   article_type_mix : True
+2026-05-23 01:33:07 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-23 01:33:07 [INFO]   article_count    : 1  dry_run: False
+2026-05-23 01:33:10 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-23 01:33:12 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-23 01:33:12 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-23 01:33:12 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-23 01:33:12 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-23 01:33:12 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-23 01:33:12 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-23 01:33:15 [INFO] [wp] 記事取得: 計419件 (draft=1 / publish=418)
+2026-05-23 01:33:15 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-23 01:33:16 [INFO] [fetch] [キーワード] メインKW: 0件（親KW+生成待ち）  サブKW: 0件（vol<30）
+Traceback (most recent call last):
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 3062, in <module>
+    main()
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 3027, in main
+    results = run_blog(
+              ^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 1906, in run_blog
+    lt_sel  = select_keywords(lt_pool, n=dist["longtail"],
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 1422, in select_keywords
+    raise ValueError("候補キーワードが0件です")
+ValueError: 候補キーワードが0件です
+===== [WORKUP-AI] 記事生成終了: 2026-05-23 01:33:17 / exit=1 =====
+===== [WORKUP-AI] 実行開始: 2026-05-23 01:47:05 =====
+2026-05-23 01:47:08 [INFO] ============================================================
+2026-05-23 01:47:08 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-23 01:47:08 [INFO] ============================================================
+2026-05-23 01:47:08 [INFO] 対象ブログ: ['workup-ai']
+2026-05-23 01:47:09 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 01:47:09 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-23 01:47:09 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 01:47:09 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-23 01:47:09 [INFO]   fact_check       : True
+2026-05-23 01:47:09 [INFO]   article_type_mix : True
+2026-05-23 01:47:09 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-23 01:47:09 [INFO]   article_count    : 1  dry_run: False
+2026-05-23 01:47:12 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-23 01:47:14 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-23 01:47:14 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-23 01:47:14 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-23 01:47:14 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-23 01:47:14 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-23 01:47:14 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-23 01:47:16 [INFO] [wp] 記事取得: 計418件 (publish=418)
+2026-05-23 01:47:16 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-23 01:47:18 [INFO] [fetch] [キーワード] メインKW: 0件（親KW+生成待ち）  サブKW: 0件（vol<30）
+Traceback (most recent call last):
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 3062, in <module>
+    main()
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 3027, in main
+    results = run_blog(
+              ^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 1906, in run_blog
+    lt_sel  = select_keywords(lt_pool, n=dist["longtail"],
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 1422, in select_keywords
+    raise ValueError("候補キーワードが0件です")
+ValueError: 候補キーワードが0件です
+===== [WORKUP-AI] 記事生成終了: 2026-05-23 01:47:18 / exit=1 =====

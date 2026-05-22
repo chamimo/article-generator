@@ -1,0 +1,222 @@
+2026-05-23 01:33:05 [INFO] ============================================================
+2026-05-23 01:33:05 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-23 01:33:05 [INFO] ============================================================
+2026-05-23 01:33:05 [INFO] 対象ブログ: ['workup-ai']
+2026-05-23 01:33:07 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 01:33:07 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-23 01:33:07 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 01:33:07 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-23 01:33:07 [INFO]   fact_check       : True
+2026-05-23 01:33:07 [INFO]   article_type_mix : True
+2026-05-23 01:33:07 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-23 01:33:07 [INFO]   article_count    : 1  dry_run: False
+2026-05-23 01:33:10 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-23 01:33:12 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-23 01:33:12 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-23 01:33:12 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-23 01:33:12 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-23 01:33:12 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-23 01:33:12 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-23 01:33:12 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-23 01:33:15 [INFO] [wp] 記事取得: 計419件 (draft=1 / publish=418)
+2026-05-23 01:33:15 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-23 01:33:16 [DEBUG] [fetch] シート「絞り込みKW」: 205行 / ヘッダー: ['', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要', '投稿ステータス', '記事URL', '投稿ID', '使用サブKW']
+2026-05-23 01:33:16 [INFO] [fetch] [キーワード] メインKW: 0件（親KW+生成待ち）  サブKW: 0件（vol<30）
+2026-05-23 01:47:08 [INFO] ============================================================
+2026-05-23 01:47:08 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-23 01:47:08 [INFO] ============================================================
+2026-05-23 01:47:08 [INFO] 対象ブログ: ['workup-ai']
+2026-05-23 01:47:09 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 01:47:09 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-23 01:47:09 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 01:47:09 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-23 01:47:09 [INFO]   fact_check       : True
+2026-05-23 01:47:09 [INFO]   article_type_mix : True
+2026-05-23 01:47:09 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-23 01:47:09 [INFO]   article_count    : 1  dry_run: False
+2026-05-23 01:47:12 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-23 01:47:14 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-23 01:47:14 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-23 01:47:14 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-23 01:47:14 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-23 01:47:14 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-23 01:47:14 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-23 01:47:14 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-23 01:47:16 [INFO] [wp] 記事取得: 計418件 (publish=418)
+2026-05-23 01:47:16 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-23 01:47:18 [DEBUG] [fetch] シート「絞り込みKW」: 206行 / ヘッダー: ['', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要', '投稿ステータス', '記事URL', '投稿ID', '使用サブKW']
+2026-05-23 01:47:18 [INFO] [fetch] [キーワード] メインKW: 0件（親KW+生成待ち）  サブKW: 0件（vol<30）
+2026-05-23 01:48:06 [INFO] ============================================================
+2026-05-23 01:48:06 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-23 01:48:06 [INFO] ============================================================
+2026-05-23 01:48:06 [INFO] 対象ブログ: ['hataraku']
+2026-05-23 01:48:08 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 01:48:08 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-23 01:48:08 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 01:48:08 [INFO]   genre            : 転職・副業・キャリア
+2026-05-23 01:48:08 [INFO]   fact_check       : True
+2026-05-23 01:48:08 [INFO]   article_type_mix : True
+2026-05-23 01:48:08 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-23 01:48:08 [INFO]   article_count    : 1  dry_run: False
+2026-05-23 01:48:11 [INFO] [hataraku] ブログ設定・メディア人格を読み込みました
+2026-05-23 01:48:12 [INFO] [hataraku] アフィリ案件: 21件（スプレッドシート）
+2026-05-23 01:48:12 [INFO] [hataraku]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive
+2026-05-23 01:48:12 [INFO] [hataraku]   [S] ラボル → https://hataraku-navi.com/labol
+2026-05-23 01:48:12 [INFO] [hataraku]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it
+2026-05-23 01:48:12 [INFO] [hataraku]   [S] TechGo → https://hataraku-navi.com/techgo
+2026-05-23 01:48:12 [INFO] [hataraku]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi
+2026-05-23 01:48:12 [INFO] [hataraku]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy
+2026-05-23 01:48:12 [INFO] [hataraku]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen
+2026-05-23 01:48:12 [INFO] [hataraku]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo
+2026-05-23 01:48:12 [INFO] [hataraku]   [S] 保育専門求人サイト ほいく畑 → https://hataraku-navi.com/hoikubatake
+2026-05-23 01:48:12 [INFO] [hataraku]   [A] FREENANCE → https://hataraku-navi.com/freenance
+2026-05-23 01:48:12 [INFO] [hataraku]   [A] Midworks → https://hataraku-navi.com/midworks
+2026-05-23 01:48:12 [INFO] [hataraku]   [A] マスメディアン → https://hataraku-navi.com/massmedia
+2026-05-23 01:48:12 [INFO] [hataraku]   [A] atGP → https://hataraku-navi.com/atgp
+2026-05-23 01:48:12 [INFO] [hataraku]   [A] atGPジョブトレ IT・Web → https://hataraku-navi.com/atgp_job
+2026-05-23 01:48:12 [INFO] [hataraku]   [A] リゾートバイトダイブ → https://hataraku-navi.com/dive
+2026-05-23 01:48:12 [INFO] [hataraku]   [A] 日本マンパワー → https://hataraku-navi.com/manpower
+2026-05-23 01:48:12 [INFO] [hataraku]   [A] クラウドワークス → https://hataraku-navi.com/crowdworks
+2026-05-23 01:48:12 [INFO] [hataraku]   [?] 保育エイド → https://hataraku-navi.com/hoiku-aid
+2026-05-23 01:48:12 [INFO] [hataraku]   [?] 保育バランス → https://hataraku-navi.com/hoiku-balance
+2026-05-23 01:48:12 [INFO] [hataraku]   [?] 保育メトロ → https://hataraku-navi.com/hoiku-metro
+2026-05-23 01:48:12 [INFO] [hataraku]   [?] 20代の転職相談所 → https://hataraku-navi.com/20tensyoku
+2026-05-23 01:48:14 [INFO] [wp] 記事取得: 計54件 (publish=54)
+2026-05-23 01:48:14 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-23 01:48:15 [DEBUG] [fetch] シート「絞り込みKW」: 4608行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-23 01:48:16 [INFO] [fetch] サブKW紐付け: 4202件 → 172記事に統合
+2026-05-23 01:48:16 [INFO] [fetch] [キーワード] メインKW: 323件（親KW+生成待ち）  サブKW除外: 4202件（統合対象）  投稿済みスキップ: 77件  aim内訳: [aim:323]
+2026-05-23 01:48:16 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-23 01:48:16 [INFO] [dup_check] 優先候補: 323件 {'aim': 323} を先頭評価
+2026-05-23 01:48:16 [INFO] [dup_check] シート承認済みスキップ: 「副業 保険 入ら ない」（親KW+生成待ちのため重複チェック免除）
+2026-05-23 01:48:16 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=323件, 要求=1件)
+2026-05-23 01:48:16 [INFO] [select] 1件選定 (要求=1件)
+2026-05-23 01:48:16 [INFO] [select]   1. 「副業 保険 入ら ない」 vol=0 seo=N/A comp=N/A
+2026-05-23 01:48:16 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-23 01:48:16 [INFO] [hataraku] 候補: 323件 / 選定: 1件 / 生成予定: 1件
+2026-05-23 01:48:16 [INFO] [api_guard] 本日の使用量: $0.2641 / ¥40 (3回呼び出し)
+2026-05-23 01:48:16 [INFO] ────────────────────────────────────────────────────────────
+2026-05-23 01:48:16 [INFO] [hataraku] [1/1] [LONGTAIL] 「副業 保険 入ら ない」 vol=0 ★AIM
+2026-05-23 01:48:16 [INFO] ────────────────────────────────────────────────────────────
+2026-05-23 01:48:16 [INFO] [generate] 生成開始: 「副業 保険 入ら ない」(vol:0) fact_check=True target_length=5,447字  サブKW:3件  誘導リンク:0件
+2026-05-23 01:52:26 [INFO] [generate] パターンCTA挿入（H3末尾）: 3件
+2026-05-23 01:52:26 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「atGPジョブトレ IT・Web」(ID:569)
+2026-05-23 01:52:28 [INFO] [generate] 完了: 「副業で保険に入らないとどうなる？リスクと正しい備え方を解説」
+2026-05-23 01:52:28 [WARNING] [quality] 品質チェック: ❌4件NG / ⚠️0件警告 / 「副業で保険に入らないとどうなる？リスクと正しい備え方を解説」
+2026-05-23 01:52:28 [WARNING] [quality]   ❌ □ 一人称体験談: 一人称体験談が0箇所しかありません（2〜3箇所必要）。「実際に使ってみたところ〜」「試してみて感じたのは〜」など自然な体験文を2〜3箇所追加してください。
+2026-05-23 01:52:28 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（でしょうか。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-23 01:52:28 [WARNING] [quality]   ❌ □ 外部ソースリンク: 外部リンクが1つもありません。信頼性の高いソース（公式サイト・官公庁・大手メディア等）へのリンクを1〜3件追加してください。
+2026-05-23 01:52:28 [WARNING] [quality]   ❌ □ 段落の長さ: 7箇所の段落が250字超えています。スマホ読みやすさのため、1段落は120〜200字を目安に分割してください。
+2026-05-23 01:52:28 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-23 01:52:28 [INFO] [post] 投稿方式: draft
+2026-05-23 01:53:13 [INFO] [post] WP投稿完了: ID=749 → https://hataraku-navi.com/wp-admin/post.php?post=749&action=edit
+2026-05-23 01:53:13 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-23 01:53:13 [INFO] [hataraku] [1/1] ✅ 完了: 「副業で保険に入らないとどうなる？リスクと正しい備え方を解説」
+2026-05-23 01:53:13 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-23 01:53:13 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hataraku limit=1
+2026-05-23 01:54:06 [INFO] 
+============================================================
+2026-05-23 01:54:06 [INFO] 【全体サマリー】
+2026-05-23 01:54:06 [INFO]   ブログ数  : 1件
+2026-05-23 01:54:06 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-23 01:54:06 [INFO]   所要時間  : 359.3秒
+2026-05-23 01:54:06 [INFO]   ✅ [hataraku] 副業 保険 入ら ない → 副業で保険に入らないとどうなる？リスクと正しい備え方を解説
+2026-05-23 01:54:06 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=749&action=edit
+2026-05-23 01:54:06 [INFO] ============================================================
+2026-05-23 03:00:03 [INFO] ============================================================
+2026-05-23 03:00:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-23 03:00:03 [INFO] ============================================================
+2026-05-23 03:00:05 [INFO] [registry] ブログ管理シートから 7 件取得: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-23 03:00:05 [INFO] 対象ブログ: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-23 03:00:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 03:00:06 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-23 03:00:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 03:00:06 [INFO] [kanikabari] 開始: はた楽ナビ / シート「キーワード」
+2026-05-23 03:00:08 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-23 03:00:08 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-23 03:00:08 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 03:00:08 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-23 03:00:08 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 03:00:08 [INFO] [kanikabari] 開始: AIVice / シート「キーワード」
+2026-05-23 03:00:10 [ERROR] [kanikabari] 「キーワード」列が見つかりません。
+2026-05-23 03:00:10 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 03:00:10 [INFO] === ワイズトレンド (ys-trend.com) 処理開始 ===
+2026-05-23 03:00:10 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 03:00:10 [INFO] [kanikabari] 開始: ワイズトレンド / シート「キーワード」
+2026-05-23 03:00:12 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-23 03:00:12 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-23 03:00:12 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 03:00:12 [INFO] === どこで売ってるナビ (kaerudoko.com) 処理開始 ===
+2026-05-23 03:00:12 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 03:00:12 [INFO] [kanikabari] 開始: どこで売ってるナビ / シート「キーワード」
+2026-05-23 03:00:15 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-23 03:00:15 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-23 03:00:15 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 03:00:15 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-23 03:00:15 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 03:00:15 [INFO] [kanikabari] 開始: 気になることブログ / シート「キーワード」
+2026-05-23 03:00:17 [INFO] [kanikabari] 未判定AIMキーワード: 5件
+2026-05-23 03:00:17 [INFO] [kanikabari] クラスタリング結果: 5クラスター
+2026-05-23 03:00:17 [INFO]   親KW: 「Codex vs Claude Code」[base='codex vs']  (サブKWなし)
+2026-05-23 03:00:17 [INFO]   親KW: 「Claude Code vs Cursor」[base='claude code']  (サブKWなし)
+2026-05-23 03:00:17 [INFO]   親KW: 「Claude SEO vs ChatGPT」[base='claude seo']  (サブKWなし)
+2026-05-23 03:00:17 [INFO]   親KW: 「Codexで記事生成してみた」[base='codexで記事生成してみた']  (サブKWなし)
+2026-05-23 03:00:17 [INFO]   親KW: 「Claude CodeとCodexどっちがいい？」[base='claude codeとcodexどっちがいい?']  (サブKWなし)
+2026-05-23 03:00:19 [INFO] [wp] 記事取得: 計171件 (publish=171)
+2026-05-23 03:00:19 [INFO] [kanikabari] WP既存記事: 171件取得 (公開=171 / 下書き=0)
+2026-05-23 03:00:19 [INFO] [kanikabari] 書き込み対象: 5件
+2026-05-23 03:00:22 [INFO] [kanikabari] 要確認行の色修復: 102行を薄ブルーに更新
+2026-05-23 03:00:22 [INFO] [kanikabari] 完了: 親KW生成待ち=5件 / シート内サブKW=0件 / WP統合対象=0件 / カニバリスキップ=0件 / 要確認=0件
+2026-05-23 03:00:22 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 03:00:22 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-23 03:00:22 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 03:00:22 [INFO] [kanikabari] 開始: 飛騨の思い出 / シート「キーワード」
+2026-05-23 03:00:24 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-23 03:00:24 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-23 03:00:24 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 03:00:24 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-05-23 03:00:24 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 03:00:24 [INFO] [kanikabari] 開始: オンライン学習ナビ / シート「キーワード」
+2026-05-23 03:00:26 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-23 03:00:26 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-23 03:00:26 [INFO] 
+============================================================
+2026-05-23 03:00:26 [INFO] 【全体サマリー】
+2026-05-23 03:00:26 [INFO]   ブログ数  : 7件
+2026-05-23 03:00:26 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-23 03:00:26 [INFO]   所要時間  : 23.0秒
+2026-05-23 03:00:26 [INFO] ============================================================

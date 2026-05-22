@@ -292,3 +292,245 @@ Add the text "Director Suite 365 Cancellation Guide" in white or soft white, ble
 2026-05-22 03:19:19 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10414&action=edit
 2026-05-22 03:19:19 [INFO] ============================================================
 ===== [WORKUP-AI] 記事生成終了: 2026-05-22 03:19:19 / exit=0 =====
+===== [WORKUP-AI] 実行開始: 2026-05-22 16:03:04 =====
+2026-05-22 16:03:06 [INFO] ============================================================
+2026-05-22 16:03:06 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-22 16:03:06 [INFO] ============================================================
+2026-05-22 16:03:06 [INFO] 対象ブログ: ['workup-ai']
+2026-05-22 16:03:08 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-22 16:03:08 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-22 16:03:08 [INFO] ════════════════════════════════════════════════════════════
+2026-05-22 16:03:08 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-22 16:03:08 [INFO]   fact_check       : True
+2026-05-22 16:03:08 [INFO]   article_type_mix : True
+2026-05-22 16:03:08 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-22 16:03:08 [INFO]   article_count    : 1  dry_run: False
+2026-05-22 16:03:11 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-22 16:03:12 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-22 16:03:12 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-22 16:03:12 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-22 16:03:12 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-22 16:03:12 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-22 16:03:12 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-22 16:03:12 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-22 16:03:12 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-22 16:03:12 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-22 16:03:12 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-22 16:03:12 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-22 16:03:12 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-22 16:03:12 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-22 16:03:12 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-22 16:03:12 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-22 16:03:12 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-22 16:03:12 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-22 16:03:12 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-22 16:03:12 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-22 16:03:15 [INFO] [wp] 記事取得: 計416件 (publish=416)
+2026-05-22 16:03:15 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-22 16:03:17 [INFO] [fetch] サブKW紐付け: 146件 → 18記事に統合
+2026-05-22 16:03:17 [INFO] [fetch] [キーワード] メインKW: 22件（親KW+生成待ち）  サブKW除外: 146件（統合対象）  投稿済みスキップ: 38件  aim内訳: [now:2, aim:14, add:1, claude:5]
+2026-05-22 16:03:17 [INFO] [dup_check] 優先候補: 22件 {'now': 2, 'aim': 14, 'add': 1, 'claude': 5} を先頭評価
+2026-05-22 16:03:17 [INFO] [dup_check] シート承認済みスキップ: 「director suite 365 解約」（親KW+生成待ちのため重複チェック免除）
+2026-05-22 16:03:17 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=22件, 要求=1件)
+2026-05-22 16:03:17 [INFO] [select] 1件選定 (要求=1件)
+2026-05-22 16:03:17 [INFO] [select]   1. 「director suite 365 解約」 vol=0 seo=N/A comp=N/A
+2026-05-22 16:03:17 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-22 16:03:17 [INFO] [workup-ai] 候補: 22件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+2026-05-22 16:03:17 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-22 16:03:17 [INFO] ────────────────────────────────────────────────────────────
+2026-05-22 16:03:17 [INFO] [workup-ai] [1/1] [LONGTAIL] 「director suite 365 解約」 vol=0 ★NOW
+2026-05-22 16:03:17 [INFO] ────────────────────────────────────────────────────────────
+2026-05-22 16:03:17 [INFO] [generate] 生成開始: 「director suite 365 解約」(vol:0) fact_check=True target_length=7,205字  サブKW:1件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「director suite 365 解約」(vol:0) [7,205字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=106 out=85 → $0.0004  (lsi:director suite 365 解約)
+[api_guard] 本日の使用量: $0.0004 / ¥0 (1047回呼び出し)
+[article_generator] 共起語: director suite 365、解約方法、キャンセル手順、退会、アカウント削除、料金、サブスクリプション、キャンセ...
+[api_guard] ✅ 本日: $0.0004 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $0.0004(¥0) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=173 out=512 → $0.0022  (kw_research:director suite 365 解約)
+[api_guard] 本日の使用量: $0.0026 / ¥0 (1048回呼び出し)
+[article_generator] サジェスト: director suite 365 解約方法・director suite 365 解約手数料・director suite 365 解約できない...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] 参考URL: 3件
+[api_guard] ✅ 本日: $0.0026 / 1時間: $0.0026  (上限 日次$10.00 / 時間$5.00)  全体: $0.0026(¥0) / 0記事
+[api_guard] 記録: claude-sonnet-4-6 in=16139 out=14205 → $0.2615  (article:director suite 365 解約)
+[api_guard] 本日の使用量: $0.2641 / ¥39 (1049回呼び出し)
+[article_generator] ImageFXプロンプト生成スキップ: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHBgTi9tRv6jvgVeFTWE'}
+[article_generator] 完了: 「Director Suite 365の解約方法｜手順・返金・自動更新の止め方まとめ」 カテゴリ: 未設定(-) タグ: ['Director Suite 365', 'CyberLink', '解約方法', 'サブスクリプション', '動画編集ソフト']
+2026-05-22 16:07:11 [INFO] [generate] パターンCTA挿入（H3末尾）: 3件
+2026-05-22 16:07:11 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Director Suite 365」(ID:9813)
+2026-05-22 16:07:11 [INFO] [generate] 完了: 「Director Suite 365の解約方法｜手順・返金・自動更新の止め方まとめ」
+2026-05-22 16:07:11 [WARNING] [quality] 品質チェック: ❌4件NG / ⚠️0件警告 / 「Director Suite 365の解約方法｜手順・返金・自動更新の止め方まと」
+2026-05-22 16:07:11 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [2, 3, 4, 5, 6, 7] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-22 16:07:11 [WARNING] [quality]   ❌ □ 一人称体験談: 一人称体験談が1箇所しかありません（2〜3箇所必要）。「実際に使ってみたところ〜」「試してみて感じたのは〜」など自然な体験文を2〜3箇所追加してください。
+2026-05-22 16:07:11 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（でしょうか。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-22 16:07:11 [WARNING] [quality]   ❌ □ 外部ソースリンク: 外部リンクが1つもありません。信頼性の高いソース（公式サイト・官公庁・大手メディア等）へのリンクを1〜3件追加してください。
+2026-05-22 16:07:11 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-22 16:07:11 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 39件
+[category_selector] カテゴリ提案エラー: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHBh59rzTFx1MTUYkKBe'}
+[category_selector] カテゴリ新規作成: 「directorsu」(ID=1783)
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration showing a computer monitor displaying Director Suite 36...
+[image_generator] 完了 (72KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_160728_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10420)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: Director Suite 365の解約手順｜マイアカウン
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring calendar pages, refund arrows, payment receip...
+[image_generator] 完了 (33KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_160740_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10421)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: Director Suite 365の返金ポリシーと解約後の
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[image_generator] H2プロンプト生成失敗、フォールバック使用: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHBjMkoWR5fSznFEXdMa'}
+[IMAGE] h2 prompt: flat design icons for Director Suite 365の解約でよくある疑問と注意点まとめ, flat design illustrat...
+[image_generator] 完了 (40KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_160756_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10422)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: Director Suite 365の解約でよくある疑問と注
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[image_generator] H2プロンプト生成失敗、フォールバック使用: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHBkeMy3A4iBtLENRr65'}
+[IMAGE] h2 prompt: flat design icons for よくある質問, flat design illustration, pastel colors, flat desi...
+[image_generator] 完了 (39KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_160814_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10423)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: director-suite-365-cancel-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[image_generator] H2プロンプト生成失敗、フォールバック使用: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHBmvMRR9cy4AreCVfSi'}
+[IMAGE] h2 prompt: flat design icons for まとめ, flat design illustration, pastel colors, flat design ...
+[image_generator] 完了 (69KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_160831_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 10424)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: director-suite-365-cancel-summary.jpg
+[internal_linker] 公開済み記事取得: 416件
+[internal_linker] タイトル重複除去: 2件の旧記事を除外
+[internal_linker] 「PowerDirecto」関連記事: 2件追加
+[internal_linker] 「Director Suite 365」関連記事: 2件追加
+[internal_linker] 「PhotoDirector 365」関連記事: 2件追加
+[internal_linker] 「Filmora」関連記事: 4件追加
+[internal_linker] 同親KW「director」: 4件選定（同カテゴリー:0件 / 関連度60%+新しさ40%）
+[internal_linker] 製品名マッチ「PowerDirecto」→ セクション5に割り当て
+[internal_linker] 製品名マッチ「PowerDirecto」→ セクション9に割り当て
+[internal_linker] H3マッチ割り当て「cyberlink公式サイトからの解約手」→「CyberLink PhotoDirectorとは？機能・価格・無料版」（2026-05-17）
+[internal_linker] H3マッチ割り当て「amazonやbic cameraなど代」→「PhotoDirector買い切り版の価格・機能・サブスクとの違いを徹」（2026-05-16）
+[internal_linker] H3マッチ割り当て「解約後もソフトはいつまで使える？期間中の」→「PhotoDirectorの解約手順｜勝手な課金を防ぐ「更新停止」と返」（2025-12-13）
+[internal_linker] H3マッチ割り当て「自動更新を止めるベストなタイミングはいつ」→「PhotoDirectorは安全？ウイルス・危険性・個人情報の不安を解」（2026-05-17）
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 2件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:6 / 末尾リスト:2)
+[internal_linker] 内部リンク 8件 挿入: ['PowerDirectorのダウンロード｜買い切り版の始め方', 'PowerDirectorの買い切り｜料金・導入手順と有料版', 'Wondershare Filmoraは危険？「怪しい」と言', 'Filmora AIクレジット完全ガイド｜字幕も画像も「最小', 'PhotoDirectorの解約手順｜勝手な課金を防ぐ「更新', 'PhotoDirectorは安全？ウイルス・危険性・個人情報', 'PhotoDirector買い切り版の価格・機能・サブスクと', 'CyberLink PhotoDirectorとは？機能・価']
+[wordpress] タグ設定: ['Director Suite 365', 'CyberLink', '解約方法', 'サブスクリプション', '動画編集ソフト']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 10425) → https://workup-ai.com/wp-admin/post.php?post=10425&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行37 「director suite 365 解約」→ 投稿済み (2026/05/22, ID:10425) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「Director Suite 365の解約方法｜手順・返金・」
+2026-05-22 16:08:43 [INFO] [post] WP投稿完了: ID=10425 → https://workup-ai.com/wp-admin/post.php?post=10425&action=edit
+2026-05-22 16:08:43 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-22 16:08:43 [INFO] [workup-ai] [1/1] ✅ 完了: 「Director Suite 365の解約方法｜手順・返金・自動更新の止め方まとめ」
+2026-05-22 16:08:43 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-22 16:08:43 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #10425 Director Suite 365の解約方法｜手順・返金・自動更新の止め方まとめ
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 感情・世界観コンセプト生成中...
+[IMAGE] rand comp  : strong asymmetric composition, subject pushed far 
+[IMAGE] rand scene : home study lined with books, quiet focus, reading lamp
+[IMAGE] rand person: no people at all, still-life scene of objects only
+[IMAGE] rand taste : clean advertising campaign, aspirational and minimal
+[IMAGE] rand palette: warm sunrise amber, soft peach, golden glow
+[IMAGE] rand place : center-left  layout: nordic_minimal
+[IMAGE] コンセプト生成失敗、フォールバック: Error code: 529 - {'type': 'error', 'error': {'type': 'overloaded_error', 'message': 'Overloaded'}, 'request_id': 'req_011CbHBpEMTAWH4Qevdh4XfT'}
+[IMAGE] ライフスタイル背景生成中 placement=lower-center...
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1285KB)
+[IMAGE] タイトル解析・サムネ文字生成中...
+[IMAGE] 読みやすいタイポグラフィ合成中...
+[IMAGE] overlay layout=4  palette=coral
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260522_160942_codex_lifestyle_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 10426)
+[codex-eyecatch] featured image 設定完了: media_id=10426
+[codex-eyecatch] 編集URL: https://workup-ai.com/wp-admin/post.php?post=10425&action=edit
+2026-05-22 16:09:45 [INFO] 
+============================================================
+2026-05-22 16:09:45 [INFO] 【全体サマリー】
+2026-05-22 16:09:45 [INFO]   ブログ数  : 1件
+2026-05-22 16:09:45 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-22 16:09:45 [INFO]   所要時間  : 398.8秒
+2026-05-22 16:09:45 [INFO]   ✅ [workup-ai] director suite 365 解約 → Director Suite 365の解約方法｜手順・返金・自動更新の止め方まとめ
+2026-05-22 16:09:45 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10425&action=edit
+2026-05-22 16:09:45 [INFO] ============================================================
+===== [WORKUP-AI] 記事生成終了: 2026-05-22 16:09:46 / exit=0 =====
+===== [WORKUP-AI] 実行開始: 2026-05-22 23:14:03 =====
+2026-05-22 23:14:07 [INFO] ============================================================
+2026-05-22 23:14:07 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-22 23:14:07 [INFO] ============================================================
+2026-05-22 23:14:07 [INFO] 対象ブログ: ['workup-ai']
+2026-05-22 23:14:09 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-22 23:14:09 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-22 23:14:09 [INFO] ════════════════════════════════════════════════════════════
+2026-05-22 23:14:09 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-22 23:14:09 [INFO]   fact_check       : True
+2026-05-22 23:14:09 [INFO]   article_type_mix : True
+2026-05-22 23:14:09 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-22 23:14:09 [INFO]   article_count    : 1  dry_run: False
+2026-05-22 23:14:11 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] AIVice / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-22 23:14:13 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-22 23:14:13 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-22 23:14:13 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-22 23:14:13 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-22 23:14:13 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-22 23:14:13 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-22 23:14:13 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-22 23:14:13 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-22 23:14:13 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-22 23:14:13 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-22 23:14:13 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-22 23:14:13 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-22 23:14:13 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-22 23:14:13 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-22 23:14:13 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-22 23:14:13 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-22 23:14:13 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-22 23:14:13 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-22 23:14:13 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-22 23:14:15 [INFO] [wp] 記事取得: 計418件 (draft=2 / publish=416)
+2026-05-22 23:14:15 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-22 23:14:16 [INFO] [fetch] [キーワード] メインKW: 0件（親KW+生成待ち）  サブKW: 0件（vol<30）
+Traceback (most recent call last):
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 3062, in <module>
+    main()
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 3027, in main
+    results = run_blog(
+              ^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 1906, in run_blog
+    lt_sel  = select_keywords(lt_pool, n=dist["longtail"],
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 1422, in select_keywords
+    raise ValueError("候補キーワードが0件です")
+ValueError: 候補キーワードが0件です
+===== [WORKUP-AI] 記事生成終了: 2026-05-22 23:14:16 / exit=1 =====

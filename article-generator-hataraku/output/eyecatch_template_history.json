@@ -1,20 +1,19 @@
 {
   "beginner_guide": [
     "aivice_tool_desk",
-    "app_cards",
-    "aivice_wave_panel",
-    "aivice_pastel_person",
-    "aivice_tool_desk",
     "flatlay",
     "hands_closeup",
     "aivice_soft_flatlay",
     "aivice_pastel_person",
     "aivice_wave_panel",
     "flatlay",
-    "left_person"
+    "left_person",
+    "dark_desk",
+    "cafe_side",
+    "hands_closeup",
+    "right_person"
   ],
   "hida": [
-    "local_food",
     "market_walk",
     "town_morning",
     "pet_friendly_walk",
@@ -25,7 +24,8 @@
     "letter_story",
     "nostalgic_desk",
     "market_walk",
-    "travel_flatlay"
+    "travel_flatlay",
+    "ryokan_room"
   ],
   "curiosity": [
     "notebook_closeup",
