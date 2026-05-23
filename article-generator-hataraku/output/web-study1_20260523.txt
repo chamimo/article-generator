@@ -1,0 +1,169 @@
+===== [WEB-STUDY1] 実行開始: 2026-05-23 06:00:01 =====
+2026-05-23 06:00:04 [INFO] ============================================================
+2026-05-23 06:00:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-23 06:00:04 [INFO] ============================================================
+2026-05-23 06:00:05 [INFO] 対象ブログ: ['web-study1']
+2026-05-23 06:00:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 06:00:06 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-05-23 06:00:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 06:00:06 [INFO]   genre            : オンライン学習・プログラミング・資格・スキルアップ
+2026-05-23 06:00:06 [INFO]   fact_check       : True
+2026-05-23 06:00:06 [INFO]   article_type_mix : True
+2026-05-23 06:00:06 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-23 06:00:06 [INFO]   article_count    : 1  dry_run: False
+2026-05-23 06:00:10 [INFO] [web-study1] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] オンライン学習ナビ / 「ASP案件マスター」: 27件
+[asp_fetcher]   [S] 無学年式オンライン教材 のすらら → https://web-study1.com/surara
+[asp_fetcher]   [S] ヒューマンアカデミー → https://web-study1.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [999] こどもチャレンジ → https://web-study1.com/shimajiro
+[asp_fetcher]   [999] こどもチャレンジ baby → https://web-study1.com/shimajiro-baby
+[asp_fetcher]   [999] Filmora → https://web-study1.com/filmora
+[asp_fetcher]   [999] スマイルゼミ → https://web-study1.com/smile-zemi
+[asp_fetcher]   [999] 進研ゼミ　高校講座 → https://web-study1.com/sinkenzemi-koukou
+[asp_fetcher]   [999] 進研ゼミ　中学講座 → https://web-study1.com/sinkenzem-cyugaku
+2026-05-23 06:00:11 [INFO] [web-study1] アフィリ案件: 27件（スプレッドシート）
+2026-05-23 06:00:11 [INFO] [web-study1]   [S] 無学年式オンライン教材 のすらら → https://web-study1.com/surara
+2026-05-23 06:00:11 [INFO] [web-study1]   [S] ヒューマンアカデミー → https://web-study1.com/haa.athuman
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] こどもチャレンジ → https://web-study1.com/shimajiro
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] こどもチャレンジ baby → https://web-study1.com/shimajiro-baby
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] Filmora → https://web-study1.com/filmora
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] スマイルゼミ → https://web-study1.com/smile-zemi
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] 進研ゼミ　高校講座 → https://web-study1.com/sinkenzemi-koukou
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] 進研ゼミ　中学講座 → https://web-study1.com/sinkenzem-cyugaku
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] 進研ゼミ　小学講座 → https://web-study1.com/shinkenzemi-syougakukouza
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] スタディサプリ中学講座 → https://web-study1.com/studysapuri-chugaku
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] Z会 → https://web-study1.com/zkai
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] スタディサプリ高校・大学 受験講座 → https://web-study1.com/studysapur-koukou
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] DMM WEBCAMP  学習コース_大学生向け就活対策コース → https://web-study1.com/dmm_webcamp_shukatu
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] Tech Kids School → https://web-study1.com/tech-kids
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] 【RISU算数】(19-1031) → https://web-study1.com/risu
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] スタディサプリENGLISH（新日常英会話コース） → https://web-study1.com/eigosapuri
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] スタディサプリEnglish　ビジネス英語コース → https://web-study1.com/eigosapuri
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] DMM WEBCAMP プログラミングコース → https://web-study1.com/web-camp_programing
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] freenance → https://web-study1.com/freenance
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] Udemy → https://web-study1.com/udemy
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] DMM WEBCAMP WEBデザインコース → https://web-study1.com/dmm_webcamp
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] DMM WEBCAMP Pythonコース → https://web-study1.com/dmm_webcamp_python
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] AI英会話アプリ【スピーク】 → https://web-study1.com/speak
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] スタディサプリ小学講座 → https://web-study1.com/sutasapu-syougaku
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] スタディサプリENGLISH（TOEIC対策コース） → https://web-study1.com/human-english-toeic
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] アンズテック → https://web-study1.com/anzutech
+2026-05-23 06:00:11 [INFO] [web-study1]   [?] DMM WEBCAMP 学習コース → https://web-study1.com/dmm-webcamp-gakusyu
+2026-05-23 06:00:12 [INFO] [wp] 記事取得: 計41件 (draft=1 / publish=40)
+2026-05-23 06:00:12 [INFO] [web-study1] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.2, 'monetize': 0.3})
+2026-05-23 06:00:13 [INFO] [fetch] サブKW紐付け: 78件 → 29記事に統合
+2026-05-23 06:00:13 [INFO] [fetch] [キーワード] メインKW: 133件（親KW+生成待ち）  サブKW除外: 78件（統合対象）  投稿済みスキップ: 50件  aim内訳: [now:6, aim:114, add:12, claude:1]
+2026-05-23 06:00:13 [INFO] [dup_check] 優先候補: 133件 {'now': 6, 'aim': 114, 'add': 12, 'claude': 1} を先頭評価
+2026-05-23 06:00:13 [INFO] [dup_check] シート承認済みスキップ: 「通信制大学 放送大学 違い」（親KW+生成待ちのため重複チェック免除）
+2026-05-23 06:00:13 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=133件, 要求=1件)
+2026-05-23 06:00:13 [INFO] [select] 1件選定 (要求=1件)
+2026-05-23 06:00:13 [INFO] [select]   1. 「通信制大学 放送大学 違い」 vol=0 seo=N/A comp=N/A
+2026-05-23 06:00:13 [INFO] [web-study1] LONGTAIL選定: 1件
+2026-05-23 06:00:13 [INFO] [web-study1] 候補: 133件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.9520 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $2.7822(¥417) / 11記事
+2026-05-23 06:00:13 [INFO] [api_guard] 本日の使用量: $1.9520 / ¥293 (23回呼び出し)
+2026-05-23 06:00:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-23 06:00:13 [INFO] [web-study1] [1/1] [LONGTAIL] 「通信制大学 放送大学 違い」 vol=0 ★NOW
+2026-05-23 06:00:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-23 06:00:13 [INFO] [generate] 生成開始: 「通信制大学 放送大学 違い」(vol:0) fact_check=True target_length=5,817字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「通信制大学 放送大学 違い」(vol:0) [5,817字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $1.9520 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $2.7822(¥417) / 11記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=112 out=90 → $0.0004  (lsi:通信制大学 放送大学 違い)
+[api_guard] 本日の使用量: $1.9525 / ¥292 (1070回呼び出し)
+[article_generator] 共起語: 通信制大学、放送大学、学費、卒業難易度、学位取得、働きながら学ぶ、入学資格、スクーリング、オンライン授業、編入学、社会人...
+[api_guard] ✅ 本日: $1.9525 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $2.7826(¥417) / 11記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=179 out=513 → $0.0022  (kw_research:通信制大学 放送大学 違い)
+[api_guard] 本日の使用量: $1.9546 / ¥293 (1071回呼び出し)
+[article_generator] サジェスト: 通信制大学 放送大学 違い・放送大学 通信制大学・放送大学とは...
+[article_generator] 検索意図: 比較系 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] 参考URL: 3件
+[article_generator] アドセンス記事判定: 「通信制大学 放送大学 違い」→ アフィリリンク抑制モード
+[api_guard] ✅ 本日: $1.9546 / 1時間: $0.0026  (上限 日次$10.00 / 時間$5.00)  全体: $2.7848(¥418) / 11記事
+[api_guard] 記録: claude-sonnet-4-6 in=16579 out=14306 → $0.2643  (article:通信制大学 放送大学 違い)
+[api_guard] 本日の使用量: $2.2190 / ¥332 (1072回呼び出し)
+[imagefx] 背景:B / ビジュアル:Minimal flat icons of laptop, graduation cap, coin
+[imagefx] タイトル(英): Communication University Vs Broadcast University
+[article_generator] 完了: 「通信制大学と放送大学の違いを比較｜学費・卒業難易度・向いている人」 カテゴリ: 未設定(-) タグ: ['通信制大学', '放送大学', '社会人学習', '学位取得', '働きながら学ぶ']
+2026-05-23 06:04:05 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-23 06:04:05 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「【スタディサプリ高校・大学 受験講座】(15-0130)」(ID:140)
+2026-05-23 06:04:05 [INFO] [link_check] 死リンク除去: 2件 / チェック: 3件
+2026-05-23 06:04:05 [INFO] [generate] 完了: 「通信制大学と放送大学の違いを比較｜学費・卒業難易度・向いている人」
+2026-05-23 06:04:05 [WARNING] [quality] 品質チェック: ❌2件NG / ⚠️1件警告 / 「通信制大学と放送大学の違いを比較｜学費・卒業難易度・向いている人」
+2026-05-23 06:04:05 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [5] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-23 06:04:05 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が2箇所あります（かもしれません。, でしょうか。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-23 06:04:05 [WARNING] [quality]   ⚠️  □ 外部ソースリンク: 外部リンクはありますが、Google公式・官公庁など信頼性の高いソースへの言及があるとE-E-A-Tが向上します。
+2026-05-23 06:04:05 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 12件
+[category_selector] 新規カテゴリ提案: 「通信制大学」
+[category_selector] カテゴリ新規作成: 「通信制大学」(ID=211)
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#通信制大学): tsushinsei-daigaku-daigaku-shikaku-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 放送大学と通信制大学の根本的な違いとはのイメージ画像
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration of graduation caps, diploma certificates, and completio...
+[image_generator] 完了 (49KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260523_060416_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 544)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 卒業難易度と学位取得のリアルな違い
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Two overlapping open books with soft pastel icons: broadcast tower, graduation c...
+[image_generator] 完了 (59KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260523_060428_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 545)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 放送大学・通信制大学の選び方と目的別おすすめの判断基準
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration with pastel colors and soft gradients showing compariso...
+[image_generator] 完了 (42KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260523_060438_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 546)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: tsushin-daigaku-hoso-daigaku-chigai-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Two distinctive university buildings with floating books and graduation caps bet...
+[image_generator] 完了 (87KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260523_060448_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 547)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: tsushin-daigaku-hoso-daigaku-chigai-summary.jpg
+[internal_linker] 公開済み記事取得: 40件
+[internal_linker] 「Udemy」関連記事: 1件追加
+[internal_linker] 同親KW「通信制大学」: 1件選定（同カテゴリー:0件 / 関連度60%+新しさ40%）
+[internal_linker] 内部リンク選定完了: 計2件 (成約:0 / 案件関連:1 / 同親KW+補完:1)
+[internal_linker] 製品名マッチ「Udemy」→ セクション13に割り当て
+[internal_linker] H3マッチ割り当て「放送大学は通信制大学に含まれますか？」→「通信制大学で大卒資格は取れる？学位取得の条件・難易度・就職まで解説」（2026-05-17）
+[internal_linker] 注意: 内部リンク2件（目標5件未達）
+[internal_linker] 内部リンク挿入完了: 計2件 (本文H3:2 / 末尾リスト:0)
+[internal_linker] 内部リンク 2件 挿入: ['Udemyおすすめコース2026年版！初心者からプロまで使え', '通信制大学で大卒資格は取れる？学位取得の条件・難易度・就職ま']
+[wordpress] タグ設定: ['通信制大学', '放送大学', '社会人学習', '学位取得', '働きながら学ぶ']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 548) → https://web-study1.com/wp-admin/post.php?post=548&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行146 「通信制大学 放送大学 違い」→ 投稿済み (2026/05/23, ID:548) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「通信制大学と放送大学の違いを比較｜学費・卒業難易度・向いてい」
+2026-05-23 06:04:56 [INFO] [post] WP投稿完了: ID=548 → https://web-study1.com/wp-admin/post.php?post=548&action=edit
+2026-05-23 06:04:56 [INFO] [web-study1] [1/1] ✅ 完了: 「通信制大学と放送大学の違いを比較｜学費・卒業難易度・向いている人」
+2026-05-23 06:04:56 [INFO] [web-study1] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-23 06:04:56 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=web-study1 limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #548 通信制大学と放送大学の違いを比較｜学費・卒業難易度・向いている人
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] オンライン学習ナビ向け・学習メディア型バナーで生成します
+[IMAGE] learning template: notebook_learning
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1533KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260523_060544_codex_webstudy_learning_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 549)
+[codex-eyecatch] featured image 設定完了: media_id=549
+[codex-eyecatch] 編集URL: https://web-study1.com/wp-admin/post.php?post=548&action=edit
+2026-05-23 06:05:47 [INFO] 
+============================================================
+2026-05-23 06:05:47 [INFO] 【全体サマリー】
+2026-05-23 06:05:47 [INFO]   ブログ数  : 1件
+2026-05-23 06:05:47 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-23 06:05:47 [INFO]   所要時間  : 342.9秒
+2026-05-23 06:05:47 [INFO]   ✅ [web-study1] 通信制大学 放送大学 違い → 通信制大学と放送大学の違いを比較｜学費・卒業難易度・向いている人
+2026-05-23 06:05:47 [INFO]        https://web-study1.com/wp-admin/post.php?post=548&action=edit
+2026-05-23 06:05:47 [INFO] ============================================================
+===== [WEB-STUDY1] 記事生成終了: 2026-05-23 06:05:48 / exit=0 =====

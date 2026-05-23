@@ -1,0 +1,202 @@
+===== [HAPIPO8] 実行開始: 2026-05-23 04:20:00 =====
+2026-05-23 04:20:02 [INFO] ============================================================
+2026-05-23 04:20:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-23 04:20:02 [INFO] ============================================================
+2026-05-23 04:20:02 [INFO] 対象ブログ: ['hapipo8']
+2026-05-23 04:20:03 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 04:20:03 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-23 04:20:03 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 04:20:03 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-05-23 04:20:03 [INFO]   fact_check       : True
+2026-05-23 04:20:03 [INFO]   article_type_mix : True
+2026-05-23 04:20:03 [INFO]   stop_words       : ['2026']
+2026-05-23 04:20:03 [INFO]   article_count    : 1  dry_run: False
+2026-05-23 04:20:07 [INFO] [hapipo8] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] 気になることブログ / 「ASP案件マスター」: 50件
+[asp_fetcher]   [S] 福ちゃん → https://hapipo8.com/fukuchan / 着物買取・女性
+[asp_fetcher]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori / 即現金化・出張査定
+[asp_fetcher]   [S] フクウロ → https://hapipo8.com/fukuuro / 洋服買取 / 断捨離 / ブランド買取
+[asp_fetcher]   [S] メディカルフードサービス → https://hapipo8.com/medical_food / 腎臓病 宅配食 / 健康管理
+[asp_fetcher]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki / 宅配食 おすすめ 忙しい / 料理 時間ない 共働き
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile / 審査なし・スマホ契約できない・ブラックOK
+[asp_fetcher]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+
+2026-05-23 04:20:08 [INFO] [hapipo8] アフィリ案件: 50件（スプレッドシート）
+2026-05-23 04:20:08 [INFO] [hapipo8]   [S] 福ちゃん → https://hapipo8.com/fukuchan
+2026-05-23 04:20:08 [INFO] [hapipo8]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori
+2026-05-23 04:20:08 [INFO] [hapipo8]   [S] フクウロ → https://hapipo8.com/fukuuro
+2026-05-23 04:20:08 [INFO] [hapipo8]   [S] メディカルフードサービス → https://hapipo8.com/medical_food
+2026-05-23 04:20:08 [INFO] [hapipo8]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-05-23 04:20:08 [INFO] [hapipo8]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman
+2026-05-23 04:20:08 [INFO] [hapipo8]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] トラベル・スタンダード・ジャパン → https://px.a8.net/svt/ejp?a8mat=4B1THV+17H122+5LKE+5ZU29
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] ORBIS AMBER(オルビス アンバー) → https://px.a8.net/svt/ejp?a8mat=4B1THX+DDO2AI+1USQ+4ASX02
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] トリア → https://hapipo8.com/tria
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] nosh - ナッシュ → https://hapipo8.com/nosh
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] 快眠タイムズストア → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DRYGT6+4UHE+TRVYQ
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] NELL マットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6M5RVE+4KD8+5ZMCI
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] 咲夜レアルマットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6LKC9M+4MRW+61Z81
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] オーケンウォーター → https://px.a8.net/svt/ejp?a8mat=4B1THX+CRN0WQ+1LOO+6NMJL
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] every frecious（エブリィフレシャス） → https://px.a8.net/svt/ejp?a8mat=4B1THX+CS8GII+2B8Y+15OK2A
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] リゾバ → https://hapipo8.com/rizoba
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] ダイブ → https://hapipo8.com/dive
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] 工場求人ワールド → https://px.a8.net/svt/ejp?a8mat=4B1O1T+EGYV5U+5S9S+5YJRM
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] ソフトバンク光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KARLU+3HKU+25FF81
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] BIGLOBE WiMAX +5G → https://px.a8.net/svt/ejp?a8mat=4B1THS+2TTMYY+B4+2BDBUB
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] フレッツ光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KW4WA+348K+1TJE9U
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] AI英会話アプリ【スピーク】 → https://hapipo8.com/speak
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] もぐワン ペットフード → https://hapipo8.com/moguwan
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] DMM 生成AI CAMP → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] ポニークリーニング → https://px.a8.net/svt/ejp?a8mat=4B1THV+5QLST6+4N08+5Z6WY
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] 体験型カタログギフト【EXETIME】 → https://hapipo8.com/exetime
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] GMOとくとくBB → https://px.a8.net/svt/ejp?a8mat=4B1THS+2UF2KQ+50+3H48S2
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] Amazon Prime Video → https://amzn.to/4tbKPVa
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] Pollet → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] カレントボディ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DFGD3U+54TM+5YJRM
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] アプリ接客キャスト → https://px.a8.net/svt/ejp?a8mat=4B1O1T+FKUWOY+3P1G+NTRMQ
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] ヴィーナスウォーカー → https://px.a8.net/svt/ejp?a8mat=4B1THV+6632JE+58KC+5YRHE
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] WEBCOACH → https://px.a8.net/svt/ejp?a8mat=4B1V1W+DW4O7U+5EVK+5YZ75
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] ポケットリサーチ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DUXMU2+58KC+BWVTE
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] ラボル カード払い → https://px.a8.net/svt/ejp?a8mat=4B1THS+3TJN9M+40JM+1NJZN5
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] クロスワンルーム → https://px.a8.net/svt/ejp?a8mat=4B1THX+DPKQE2+4EZ2+BYLJL
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] Mr.シリーズ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CLOOUY+1USQ+2Z8T76
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] IBJ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CF4X7E+FOG+4MPSTE
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] ユアマイスター → https://px.a8.net/svt/ejp?a8mat=4B1THX+BZNNH6+4HQS+5YJRM
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] TOSSY → https://px.a8.net/svt/ejp?a8mat=4B1THS+2V0I6I+1WP2+1HLNLE
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] ABLENET VPS → https://px.a8.net/svt/ejp?a8mat=4B1THS+2VLXSA+4NIK+5Z6WX
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-23 04:20:08 [INFO] [hapipo8]   [A] BIGLOBE光 → https://px.a8.net/svt/ejp?a8mat=4B3LMR+4JQL96+3SPO+7LW1F7
+2026-05-23 04:20:08 [INFO] [hapipo8]   [B] 食楽膳 → https://hapipo8.com/shokurakuzen
+2026-05-23 04:20:08 [INFO] [hapipo8]   [?] 楽器買取 福ちゃん → https://hapipo8.com/gakki-fukucyan
+2026-05-23 04:20:08 [INFO] [hapipo8]   [?] ニーゴ・リユース → https://hapipo8.com/25reuse
+2026-05-23 04:20:10 [INFO] [wp] 記事取得: 計171件 (publish=171)
+2026-05-23 04:20:10 [INFO] [hapipo8] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.4, 'monetize': 0.1})
+2026-05-23 04:20:11 [INFO] [fetch] サブKW紐付け: 165件 → 49記事に統合
+2026-05-23 04:20:11 [INFO] [fetch] [キーワード] メインKW: 303件（親KW+生成待ち）  サブKW除外: 165件（統合対象）  投稿済みスキップ: 136件  aim内訳: [aim:59, add:219, claude:25]
+2026-05-23 04:20:11 [INFO] [dup_check] 優先候補: 303件 {'aim': 59, 'add': 219, 'claude': 25} を先頭評価
+2026-05-23 04:20:11 [INFO] [dup_check] シート承認済みスキップ: 「AI英会話アプリ【スピーク】 口コミ 評判」（親KW+生成待ちのため重複チェック免除）
+2026-05-23 04:20:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=303件, 要求=1件)
+2026-05-23 04:20:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-23 04:20:11 [INFO] [select]   1. 「AI英会話アプリ【スピーク】 口コミ 評判」 vol=0 seo=N/A comp=N/A
+2026-05-23 04:20:11 [INFO] [hapipo8] LONGTAIL選定: 1件
+2026-05-23 04:20:11 [INFO] [hapipo8] 候補: 303件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.7917 / 1時間: $0.2445  (上限 日次$10.00 / 時間$5.00)  全体: $1.6219(¥243) / 7記事
+2026-05-23 04:20:11 [INFO] [api_guard] 本日の使用量: $0.7917 / ¥119 (9回呼び出し)
+2026-05-23 04:20:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-23 04:20:11 [INFO] [hapipo8] [1/1] [LONGTAIL] 「AI英会話アプリ【スピーク】 口コミ 評判」 vol=0 ★AIM
+2026-05-23 04:20:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-23 04:20:11 [INFO] [generate] 生成開始: 「AI英会話アプリ【スピーク】 口コミ 評判」(vol:0) fact_check=True target_length=5,800字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「AI英会話アプリ【スピーク】 口コミ 評判」(vol:0) [5,800字 / H3:8〜12本 / FAQ:5〜7問]
+[article_generator] 事実確認中: 「AI英会話アプリ【スピーク】 口コミ 評判」
+[article_generator] 事実確認完了: 確認済み11件 / 不確か3件 / 注意5件
+  ⚠️  【価格表示の複雑性】Web申し込みとアプリ内申し込みで価格が異なり、Apple/Googleの手数料も加算されるため、記事で価格言及時は申し込み経路を明記すべき
+  ⚠️  【自動課金への注意】7日間無料体験後は24時間以内にキャンセルしないと自動的に有料プランへ移行される点が利用者の不満として複数報告されており、重要な注意点として記事に含めるべき
+  ⚠️  【ダウンロード数の更新タイミング】異なる時期での数字が存在するため、記事作成時期に応じて最新の数字を公式サイトで確認する必要がある
+  ⚠️  【一般的な英会話アプリとの混同】「スピークバディ」（日本企業開発）と「スピーク」（米国企業開発）は異なるアプリであるため、混同や記述誤りに注意
+  ⚠️  【ユーザー評判の両面性】総合的に肯定的評価が多い一方で、アプリの不具合、自動課金トラブル、有料プラン説明の不親切さなどについて相当数の批判的口コミが存在する点を記事に反映させるべき
+[api_guard] ✅ 本日: $0.7917 / 1時間: $0.2445  (上限 日次$10.00 / 時間$5.00)  全体: $1.6219(¥243) / 7記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=121 out=103 → $0.0005  (lsi:AI英会話アプリ【スピーク】 口コミ 評判)
+[api_guard] 本日の使用量: $0.7922 / ¥118 (1056回呼び出し)
+[article_generator] 共起語: AI英会話アプリ、スピーク使い方、英語学習効果、月額料金、無料体験、継続率、発音評価、実際の利用者、メリットデメリット、...
+[api_guard] ✅ 本日: $0.7922 / 1時間: $0.2450  (上限 日次$10.00 / 時間$5.00)  全体: $1.6224(¥243) / 7記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=188 out=538 → $0.0023  (kw_research:AI英会話アプリ【スピーク】 口コミ 評判)
+[api_guard] 本日の使用量: $0.7945 / ¥119 (1057回呼び出し)
+[article_generator] サジェスト: AI英会話アプリ スピーク 口コミ・スピーク 英会話 評判・スピーク アプリ 料金...
+[article_generator] 検索意図: 購買直前 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.7945 / 1時間: $0.2473  (上限 日次$10.00 / 時間$5.00)  全体: $1.6247(¥244) / 7記事
+[api_guard] 記録: claude-sonnet-4-6 in=18426 out=13673 → $0.2604  (article:AI英会話アプリ【スピーク】 口コミ 評判)
+[api_guard] 本日の使用量: $1.0549 / ¥158 (1058回呼び出し)
+[imagefx] 背景:B / ビジュアル:Cute flat icons of smartphone, speech bubbles, sta
+[imagefx] タイトル(英): Speak AI App Review Summary
+[article_generator] 完了: 「スピーク（AI英会話アプリ）の口コミ・評判は？料金・効果・使い方まとめ」 カテゴリ: 未設定(-) タグ: ['AI英会話', 'スピーク', '英語学習アプリ', '英会話アプリ比較', 'AI学習']
+2026-05-23 04:24:14 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-23 04:24:14 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「スピーク英会話」(ID:3765)
+2026-05-23 04:24:15 [INFO] [link_check] 死リンク除去: 5件 / チェック: 5件
+2026-05-23 04:24:15 [INFO] [generate] 完了: 「スピーク（AI英会話アプリ）の口コミ・評判は？料金・効果・使い方まとめ」
+2026-05-23 04:24:15 [WARNING] [quality] 品質チェック: ❌4件NG / ⚠️1件警告 / 「スピーク（AI英会話アプリ）の口コミ・評判は？料金・効果・使い方まとめ」
+2026-05-23 04:24:15 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [4, 5] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-23 04:24:15 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（かもしれません。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-23 04:24:15 [WARNING] [quality]   ⚠️  □ 外部ソースリンク: 外部リンクはありますが、Google公式・官公庁など信頼性の高いソースへの言及があるとE-E-A-Tが向上します。
+2026-05-23 04:24:15 [WARNING] [quality]   ❌ □ メタディスクリプション: メタディスクリプションが短すぎます（72字）。80〜120字に拡充してください。
+2026-05-23 04:24:15 [WARNING] [quality]   ❌ □ タイトルKW: タイトルにメインキーワード「AI英会話アプリ【スピーク】」が含まれていません。タイトル前半にキーワードを自然に組み込んでください。
+2026-05-23 04:24:15 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-23 04:24:15 [INFO] [post] 投稿方式: publish
+[category_selector] カテゴリ取得: 36件
+[category_selector] 「AI英会話アプリ【スピーク】 口コミ 評判」→ 節約・お得情報(678) score=21
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring speech bubbles with star ratings, a smartphon...
+[image_generator] 完了 (54KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260523_042427_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4288)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: スピークの口コミ・評判｜良い点も気になる点も正直に紹介
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration featuring stacked price tags in pastel colors, floati...
+[image_generator] 完了 (56KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260523_042439_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4289)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: スピークの料金・無料体験・他アプリ比較まで一気にわかる
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful step-by-step guide icons with soft pastel gradients, floating instructi...
+[image_generator] 完了 (61KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260523_042450_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4290)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: スピークの使い方・始め方・退会方法まで手順で解説
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring stacked question mark icons in soft pastel co...
+[image_generator] 完了 (38KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260523_042502_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4291)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: speak-ai-eikaiwa-review-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration of colorful speech bubbles, stars, checkmarks, and lang...
+[image_generator] 完了 (48KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260523_042515_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4292)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: speak-ai-eikaiwa-review-summary.jpg
+[internal_linker] 公開済み記事取得: 171件
+[internal_linker] 古い記事を除外: 123件（2年以上前）→ 48件で選定
+[internal_linker] 同カテゴリー: 8件選定（同カテゴリー:8件 / 関連度60%+新しさ40%）
+[internal_linker] H3マッチ割り当て「「話す機会が多い」と好評なフリートーク機」→「携帯料金を滞納すると契約できない？解決策と審査を通す方法を徹底解説」（2026-05-08）★同カテゴリー
+[internal_linker] H3マッチ割り当て「aiの発音フィードバック精度はどう評価さ」→「お金なくても備蓄できる！低予算で始める食料・防災グッズの節約術」（2026-05-17）★同カテゴリー
+[internal_linker] H3マッチ割り当て「気になるマイナス口コミ：バグと自動課金の」→「シェフの無添つくりおき 口コミ・評判まとめ｜料金・メニュー・味の正直レ」（2026-05-20）★同カテゴリー
+[internal_linker] H3マッチ割り当て「実際に使って感じたこと：アウトプット重視」→「楽器の買取屋さん比較2026年版｜どれがいい？おすすめ業者6選を徹底解」（2026-05-08）★同カテゴリー
+[internal_linker] H3マッチ割り当て「料金プランの全体像：webとアプリで何が」→「フレッツ光とビッグローブ光の違いを徹底比較！料金・速度・乗り換えメリッ」（2026-05-08）★同カテゴリー
+[internal_linker] H3マッチ割り当て「無料トライアル7日間の正しい使い方と注意」→「リゾバ派遣会社どれがいい？主要4社を目的別に比較してみた」（2026-05-22）★同カテゴリー
+[internal_linker] H3マッチ割り当て「他の英会話アプリと料金・機能を比較してみ」→「未経験からITスキルを学ぶ方法7ステップ！独学・スクール徹底比較」（2026-05-14）★同カテゴリー
+[internal_linker] H3マッチ割り当て「スピークが初心者向けと言える理由」→「海外旅行を安くする方法15選！航空券・ホテル・時期まで徹底解説」（2026-05-07）★同カテゴリー
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['シェフの無添つくりおき 口コミ・評判まとめ｜料金・メニュー・', 'フレッツ光とビッグローブ光の違いを徹底比較！料金・速度・乗り', '携帯料金を滞納すると契約できない？解決策と審査を通す方法を徹', 'リゾバ派遣会社どれがいい？主要4社を目的別に比較してみた', 'お金なくても備蓄できる！低予算で始める食料・防災グッズの節約', '未経験からITスキルを学ぶ方法7ステップ！独学・スクール徹底', '楽器の買取屋さん比較2026年版｜どれがいい？おすすめ業者6', '海外旅行を安くする方法15選！航空券・ホテル・時期まで徹底解']
+[wordpress] タグ設定: ['AI英会話', 'スピーク', '英語学習アプリ', '英会話アプリ比較', 'AI学習']
+[wordpress] 投稿方式: publish
+[wordpress] 投稿完了 (ID: 4293) → https://hapipo8.com/wp-admin/post.php?post=4293&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行137 「AI英会話アプリ【スピーク】 口コミ 評判」→ 投稿済み (2026/05/23, ID:4293) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「スピーク（AI英会話アプリ）の口コミ・評判は？料金・効果・使」
+2026-05-23 04:25:29 [INFO] [post] WP投稿完了: ID=4293 → https://hapipo8.com/wp-admin/post.php?post=4293&action=edit
+2026-05-23 04:25:29 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-23 04:25:29 [INFO] [hapipo8] [1/1] ✅ 完了: 「スピーク（AI英会話アプリ）の口コミ・評判は？料金・効果・使い方まとめ」
+2026-05-23 04:25:29 [INFO] [hapipo8] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-23 04:25:29 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hapipo8 limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #4293 スピーク（AI英会話アプリ）の口コミ・評判は？料金・効果・使い方まとめ
+[codex-eyecatch] 既存ライブラリ画像を選択: search=料金 media_id=4093
+[codex-eyecatch] 既存ライブラリ画像を featured image に設定: media_id=4093
+[codex-eyecatch] 編集URL: https://hapipo8.com/wp-admin/post.php?post=4293&action=edit
+2026-05-23 04:25:37 [INFO] 
+============================================================
+2026-05-23 04:25:37 [INFO] 【全体サマリー】
+2026-05-23 04:25:37 [INFO]   ブログ数  : 1件
+2026-05-23 04:25:37 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-23 04:25:37 [INFO]   所要時間  : 334.5秒
+2026-05-23 04:25:37 [INFO]   ✅ [hapipo8] AI英会話アプリ【スピーク】 口コミ 評判 → スピーク（AI英会話アプリ）の口コミ・評判は？料金・効果・使い方まとめ
+2026-05-23 04:25:37 [INFO]        https://hapipo8.com/wp-admin/post.php?post=4293&action=edit
+2026-05-23 04:25:37 [INFO] ============================================================
+===== [HAPIPO8] 記事生成終了: 2026-05-23 04:25:37 / exit=0 =====
