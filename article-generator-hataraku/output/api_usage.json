@@ -10519,6 +10519,206 @@
       "output_tokens": 15602,
       "cost_usd": 0.280659,
       "label": "article:副業 保険 入ら ない"
+    },
+    {
+      "timestamp": "2026-05-22T19:00:59.174419+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 139,
+      "cost_usd": 0.000642,
+      "label": "lsi:通信教育 初期費用"
+    },
+    {
+      "timestamp": "2026-05-22T19:01:02.584319+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 555,
+      "cost_usd": 0.00236,
+      "label": "kw_research:通信教育 初期費用"
+    },
+    {
+      "timestamp": "2026-05-22T19:04:16.866509+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 14115,
+      "output_tokens": 13274,
+      "cost_usd": 0.241455,
+      "label": "article:通信教育 初期費用"
+    },
+    {
+      "timestamp": "2026-05-22T19:20:33.494770+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 121,
+      "output_tokens": 103,
+      "cost_usd": 0.000509,
+      "label": "lsi:AI英会話アプリ【スピーク】 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-22T19:20:37.775645+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 188,
+      "output_tokens": 538,
+      "cost_usd": 0.002302,
+      "label": "kw_research:AI英会話アプリ【スピーク】 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-22T19:24:10.556485+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 18426,
+      "output_tokens": 13673,
+      "cost_usd": 0.260373,
+      "label": "article:AI英会話アプリ【スピーク】 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-22T19:26:16.033300+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 117,
+      "output_tokens": 107,
+      "cost_usd": 0.000522,
+      "label": "lsi:高山 雪 朝 写真 撮れる場所"
+    },
+    {
+      "timestamp": "2026-05-22T19:26:21.455205+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 184,
+      "output_tokens": 671,
+      "cost_usd": 0.002831,
+      "label": "kw_research:高山 雪 朝 写真 撮れる場所"
+    },
+    {
+      "timestamp": "2026-05-22T19:30:38.525716+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15625,
+      "output_tokens": 14889,
+      "cost_usd": 0.27021,
+      "label": "article:高山 雪 朝 写真 撮れる場所"
+    },
+    {
+      "timestamp": "2026-05-22T19:30:44.716077+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 386,
+      "output_tokens": 37,
+      "cost_usd": 0.000457,
+      "label": "maps:高山 雪 朝 写真 撮れる場所"
+    },
+    {
+      "timestamp": "2026-05-22T20:00:18.368561+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 142,
+      "cost_usd": 0.000654,
+      "label": "lsi:転職 妨害 相談"
+    },
+    {
+      "timestamp": "2026-05-22T20:00:22.181389+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 499,
+      "cost_usd": 0.002136,
+      "label": "kw_research:転職 妨害 相談"
+    },
+    {
+      "timestamp": "2026-05-22T20:05:02.073982+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15481,
+      "output_tokens": 17539,
+      "cost_usd": 0.309528,
+      "label": "article:転職 妨害 相談"
+    },
+    {
+      "timestamp": "2026-05-22T20:30:19.989774+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 118,
+      "output_tokens": 94,
+      "cost_usd": 0.00047,
+      "label": "lsi:飛騨 山に囲まれた景色 見どころ"
+    },
+    {
+      "timestamp": "2026-05-22T20:30:24.976645+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 185,
+      "output_tokens": 578,
+      "cost_usd": 0.00246,
+      "label": "kw_research:飛騨 山に囲まれた景色 見どころ"
+    },
+    {
+      "timestamp": "2026-05-22T20:35:06.773996+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15646,
+      "output_tokens": 17363,
+      "cost_usd": 0.307383,
+      "label": "article:飛騨 山に囲まれた景色 見どころ"
+    },
+    {
+      "timestamp": "2026-05-22T20:35:13.181196+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 385,
+      "output_tokens": 32,
+      "cost_usd": 0.000436,
+      "label": "maps:飛騨 山に囲まれた景色 見どころ"
+    },
+    {
+      "timestamp": "2026-05-22T21:00:15.553623+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 90,
+      "cost_usd": 0.00045,
+      "label": "lsi:通信制大学 放送大学 違い"
+    },
+    {
+      "timestamp": "2026-05-22T21:00:19.239672+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T21",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 513,
+      "cost_usd": 0.002195,
+      "label": "kw_research:通信制大学 放送大学 違い"
+    },
+    {
+      "timestamp": "2026-05-22T21:04:00.924446+00:00",
+      "date": "2026-05-22",
+      "hour": "2026-05-22T21",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16579,
+      "output_tokens": 14306,
+      "cost_usd": 0.264327,
+      "label": "article:通信制大学 放送大学 違い"
     }
   ],
   "events": [

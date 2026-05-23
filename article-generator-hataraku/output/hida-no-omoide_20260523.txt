@@ -1,0 +1,290 @@
+===== [HIDA-NO-OMOIDE] 実行開始: 2026-05-23 04:26:03 =====
+2026-05-23 04:26:05 [INFO] ============================================================
+2026-05-23 04:26:05 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-23 04:26:05 [INFO] ============================================================
+2026-05-23 04:26:05 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-23 04:26:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 04:26:06 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-23 04:26:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 04:26:06 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-23 04:26:06 [INFO]   fact_check       : True
+2026-05-23 04:26:06 [INFO]   article_type_mix : True
+2026-05-23 04:26:06 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-23 04:26:06 [INFO]   article_count    : 1  dry_run: False
+2026-05-23 04:26:09 [INFO] [hida-no-omoide] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] 飛騨の思い出 / 「ASP案件マスター 」: 3件
+[asp_fetcher]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+[asp_fetcher]   [999] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+[asp_fetcher]   [999] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+2026-05-23 04:26:11 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-23 04:26:11 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-23 04:26:11 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-23 04:26:11 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-23 04:26:13 [INFO] [wp] 記事取得: 計43件 (draft=4 / publish=39)
+2026-05-23 04:26:13 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-23 04:26:14 [INFO] [fetch] サブKW紐付け: 87件 → 10記事に統合
+2026-05-23 04:26:14 [INFO] [fetch] [キーワード] メインKW: 40件（親KW+生成待ち）  サブKW除外: 87件（統合対象）  投稿済みスキップ: 75件  aim内訳: [aim:16, add:5, claude:19]
+2026-05-23 04:26:14 [INFO] [dup_check] 優先候補: 40件 {'aim': 16, 'add': 5, 'claude': 19} を先頭評価
+2026-05-23 04:26:14 [INFO] [dup_check] シート承認済みスキップ: 「高山 雪 朝 写真 撮れる場所」（親KW+生成待ちのため重複チェック免除）
+2026-05-23 04:26:14 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=40件, 要求=1件)
+2026-05-23 04:26:14 [INFO] [select] 1件選定 (要求=1件)
+2026-05-23 04:26:14 [INFO] [select]   1. 「高山 雪 朝 写真 撮れる場所」 vol=0 seo=N/A comp=N/A
+2026-05-23 04:26:14 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-23 04:26:14 [INFO] [hida-no-omoide] 候補: 40件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.0549 / 1時間: $0.5076  (上限 日次$10.00 / 時間$5.00)  全体: $1.8851(¥283) / 8記事
+2026-05-23 04:26:14 [INFO] [api_guard] 本日の使用量: $1.0549 / ¥158 (12回呼び出し)
+2026-05-23 04:26:14 [INFO] ────────────────────────────────────────────────────────────
+2026-05-23 04:26:14 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「高山 雪 朝 写真 撮れる場所」 vol=0 ★AIM
+2026-05-23 04:26:14 [INFO] ────────────────────────────────────────────────────────────
+2026-05-23 04:26:14 [INFO] [generate] 生成開始: 「高山 雪 朝 写真 撮れる場所」(vol:0) fact_check=True target_length=6,248字  サブKW:1件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「高山 雪 朝 写真 撮れる場所」(vol:0) [6,248字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $1.0549 / 1時間: $0.5076  (上限 日次$10.00 / 時間$5.00)  全体: $1.8851(¥283) / 8記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=117 out=107 → $0.0005  (lsi:高山 雪 朝 写真 撮れる場所)
+[api_guard] 本日の使用量: $1.0554 / ¥158 (1059回呼び出し)
+[article_generator] 共起語: 高山の朝日、雪景色、絶景スポット、朝焼け撮影、冬の山、アルペンルート、立山黒部、槍ヶ岳、おすすめ撮影地、カメラ持ち込み、...
+[article_generator] サブKW候補: 1件 (高山 雪道 運転 対策〜)
+[api_guard] ✅ 本日: $1.0554 / 1時間: $0.5082  (上限 日次$10.00 / 時間$5.00)  全体: $1.8856(¥283) / 8記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=184 out=671 → $0.0028  (kw_research:高山 雪 朝 写真 撮れる場所)
+[api_guard] 本日の使用量: $1.0583 / ¥158 (1060回呼び出し)
+[article_generator] サジェスト: 高山 雪 朝 写真 撮れる場所 おすすめ・高山 雪 朝焼け 写真スポット・高山 朝の雪景色 撮影地...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] アドセンス記事判定: 「高山 雪 朝 写真 撮れる場所」→ アフィリリンク抑制モード
+[api_guard] ✅ 本日: $1.0583 / 1時間: $0.5110  (上限 日次$10.00 / 時間$5.00)  全体: $1.8885(¥283) / 8記事
+[api_guard] 記録: claude-sonnet-4-6 in=15625 out=14889 → $0.2702  (article:高山 雪 朝 写真 撮れる場所)
+[api_guard] 本日の使用量: $1.3285 / ¥199 (1061回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of camera, snowflake, mountain, su
+[imagefx] タイトル(英): Mountain Snow Morning Photography Spots
+[article_generator] 完了: 「高山で雪の朝写真が撮れる場所7選｜早朝撮影のコツと時間帯まとめ」 カテゴリ: 未設定(-) タグ: ['飛騨高山', '雪景色撮影', '冬の朝', 'カメラスポット', '高山観光']
+2026-05-23 04:30:42 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-23 04:30:42 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「飛騨高山の小説」(ID:555)
+2026-05-23 04:30:43 [INFO] [link_check] 死リンク除去: 1件 / チェック: 3件
+[api_guard] ✅ 本日: $1.3285 / 1時間: $0.7812  (上限 日次$10.00 / 時間$5.00)  全体: $2.1587(¥324) / 9記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=386 out=37 → $0.0005  (maps:高山 雪 朝 写真 撮れる場所)
+[api_guard] 本日の使用量: $1.3289 / ¥199 (1062回呼び出し)
+[maps_embedder] ✅ 地図挿入: mode=search / query=飛騨高山 雪景色 撮影スポット
+2026-05-23 04:30:44 [INFO] [generate] 完了: 「高山で雪の朝写真が撮れる場所7選｜早朝撮影のコツと時間帯まとめ」
+2026-05-23 04:30:44 [WARNING] [quality] 品質チェック: ❌2件NG / ⚠️1件警告 / 「高山で雪の朝写真が撮れる場所7選｜早朝撮影のコツと時間帯まとめ」
+2026-05-23 04:30:44 [WARNING] [quality]   ❌ □ 一人称体験談: 一人称体験談が1箇所しかありません（2〜3箇所必要）。「実際に使ってみたところ〜」「試してみて感じたのは〜」など自然な体験文を2〜3箇所追加してください。
+2026-05-23 04:30:44 [WARNING] [quality]   ⚠️  □ 外部ソースリンク: 外部リンクはありますが、Google公式・官公庁など信頼性の高いソースへの言及があるとE-E-A-Tが向上します。
+2026-05-23 04:30:44 [WARNING] [quality]   ❌ □ メタディスクリプション: メタディスクリプションが短すぎます（74字）。80〜120字に拡充してください。
+2026-05-23 04:30:44 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 21件
+[category_selector] 新規カテゴリ提案: 「飛騨・高山の景観」
+[category_selector] カテゴリ新規作成: 「飛騨・高山の景観」(ID=235)
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#高山): takayama-omiyage-net-purchase-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 高山で雪の朝写真を撮るなら、まずこの7か所を押さえておこうのイメージ画像
+[wordpress] H2画像[2] ライブラリ選択 (#高山): takayama-river-evening-scenery-eyecatch.jpg
+[wordpress] H2画像[2] ライブラリALT更新: 高山の雪の朝写真を成功させる時間帯と撮影のコツのイメージ画像
+[wordpress] H2画像[3] ライブラリ選択 (#高山): takayama-nostalgic-townscape-highlights-eyecatch.jpg
+[wordpress] H2画像[3] ライブラリALT更新: 高山の雪の朝写真、季節ごとの狙い目と実際の体験談のイメージ画像
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Mountain peaks covered in snow at sunrise, with camera and photography equipment...
+[image_generator] 完了 (97KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260523_043056_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 581)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: takayama-snow-morning-photo-spots-faq.jpg
+[wordpress] H3画像[まとめ] 見出し見つからずスキップ
+[internal_linker] 公開済み記事取得: 39件
+[internal_linker] 関連補完（親KW絞り込み）: 8件選定（同カテゴリー:0件 / 関連度60%+新しさ40%）
+[internal_linker] 内部リンク選定完了: 計8件 (成約:0 / 案件関連:0 / 同親KW+補完:8)
+[internal_linker] 低関連性 8件をフッターへ: ['高山で昔の風景が残る場所7選！江戸時代の建物・古民', '高山の冬写真スポット9選！静かな雪景色と古い町並み', '春慶塗のお土産人気商品おすすめ7選｜高山・岐阜で選', '高山の冬タイヤ必要条件を解説！標高・気温・規制まと', '飛騨高山の変わらない風景スポット7選｜江戸時代の古', '高山の川×夕方が落ち着く理由と絶景スポット5選｜飛', '飛騨高山朝市の楽しみ方完全ガイド｜時間・グルメ・お', '飛騨高山の温泉宿おすすめ9選！露天風呂・食事・カッ']
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 8件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:0 / 末尾リスト:8)
+[internal_linker] 内部リンク 8件 挿入: ['高山で昔の風景が残る場所7選！江戸時代の建物・古民家を歩いて', '高山の冬写真スポット9選！静かな雪景色と古い町並みを早朝に撮', '春慶塗のお土産人気商品おすすめ7選｜高山・岐阜で選ぶ伝統漆工', '高山の冬タイヤ必要条件を解説！標高・気温・規制まとめ', '飛騨高山の変わらない風景スポット7選｜江戸時代の古い町並みを', '高山の川×夕方が落ち着く理由と絶景スポット5選｜飛騨の癒し旅', '飛騨高山朝市の楽しみ方完全ガイド｜時間・グルメ・お土産まで徹', '飛騨高山の温泉宿おすすめ9選！露天風呂・食事・カップル向けま']
+[wordpress] タグ設定: ['飛騨高山', '雪景色撮影', '冬の朝', 'カメラスポット', '高山観光']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 582) → https://hida-no-omoide.com/wp-admin/post.php?post=582&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of camera, snowflake, mountain, sunrise clock, and calendar in soft pastels—mint, blush pink, cream—with minimal stars and checkmarks.
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Mountain Snow Morning Photography Spots" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行10 「高山 雪 朝 写真 撮れる場所」→ 投稿済み (2026/05/23, ID:582) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「高山で雪の朝写真が撮れる場所7選｜早朝撮影のコツと時間帯まと」
+2026-05-23 04:31:05 [INFO] [post] WP投稿完了: ID=582 → https://hida-no-omoide.com/wp-admin/post.php?post=582&action=edit
+2026-05-23 04:31:05 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「高山で雪の朝写真が撮れる場所7選｜早朝撮影のコツと時間帯まとめ」
+2026-05-23 04:31:05 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-23 04:31:05 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hida-no-omoide limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #582 高山で雪の朝写真が撮れる場所7選｜早朝撮影のコツと時間帯まとめ
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 飛騨の思い出向け・旅メディア型バナーで生成します
+[IMAGE] hida template: market_walk
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1921KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260523_043151_codex_hida_travel_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 583)
+[codex-eyecatch] featured image 設定完了: media_id=583
+[codex-eyecatch] 編集URL: https://hida-no-omoide.com/wp-admin/post.php?post=582&action=edit
+2026-05-23 04:31:54 [INFO] 
+============================================================
+2026-05-23 04:31:54 [INFO] 【全体サマリー】
+2026-05-23 04:31:54 [INFO]   ブログ数  : 1件
+2026-05-23 04:31:54 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-23 04:31:54 [INFO]   所要時間  : 348.8秒
+2026-05-23 04:31:54 [INFO]   ✅ [hida-no-omoide] 高山 雪 朝 写真 撮れる場所 → 高山で雪の朝写真が撮れる場所7選｜早朝撮影のコツと時間帯まとめ
+2026-05-23 04:31:54 [INFO]        https://hida-no-omoide.com/wp-admin/post.php?post=582&action=edit
+2026-05-23 04:31:54 [INFO] ============================================================
+===== [HIDA-NO-OMOIDE] 記事生成終了: 2026-05-23 04:31:54 / exit=0 =====
+===== [HIDA-NO-OMOIDE] 実行開始: 2026-05-23 05:30:00 =====
+2026-05-23 05:30:05 [INFO] ============================================================
+2026-05-23 05:30:05 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-23 05:30:05 [INFO] ============================================================
+2026-05-23 05:30:05 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-23 05:30:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-23 05:30:06 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-23 05:30:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-23 05:30:06 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-23 05:30:06 [INFO]   fact_check       : True
+2026-05-23 05:30:06 [INFO]   article_type_mix : True
+2026-05-23 05:30:06 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-23 05:30:06 [INFO]   article_count    : 1  dry_run: False
+2026-05-23 05:30:11 [INFO] [hida-no-omoide] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] 飛騨の思い出 / 「ASP案件マスター 」: 3件
+[asp_fetcher]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+[asp_fetcher]   [999] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+[asp_fetcher]   [999] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+2026-05-23 05:30:13 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-23 05:30:13 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-23 05:30:13 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-23 05:30:13 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-23 05:30:14 [INFO] [wp] 記事取得: 計44件 (draft=5 / publish=39)
+2026-05-23 05:30:14 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-23 05:30:16 [INFO] [fetch] サブKW紐付け: 87件 → 9記事に統合
+2026-05-23 05:30:16 [INFO] [fetch] [キーワード] メインKW: 39件（親KW+生成待ち）  サブKW除外: 87件（統合対象）  投稿済みスキップ: 76件  aim内訳: [aim:15, add:5, claude:19]
+2026-05-23 05:30:16 [INFO] [dup_check] 優先候補: 39件 {'aim': 15, 'add': 5, 'claude': 19} を先頭評価
+2026-05-23 05:30:16 [INFO] [dup_check] シート承認済みスキップ: 「飛騨 山に囲まれた景色 見どころ」（親KW+生成待ちのため重複チェック免除）
+2026-05-23 05:30:16 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=39件, 要求=1件)
+2026-05-23 05:30:16 [INFO] [select] 1件選定 (要求=1件)
+2026-05-23 05:30:16 [INFO] [select]   1. 「飛騨 山に囲まれた景色 見どころ」 vol=0 seo=N/A comp=N/A
+2026-05-23 05:30:16 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-23 05:30:16 [INFO] [hida-no-omoide] 候補: 39件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $1.6413 / 1時間: $0.3123  (上限 日次$10.00 / 時間$5.00)  全体: $2.4714(¥371) / 10記事
+2026-05-23 05:30:16 [INFO] [api_guard] 本日の使用量: $1.6413 / ¥246 (19回呼び出し)
+2026-05-23 05:30:16 [INFO] ────────────────────────────────────────────────────────────
+2026-05-23 05:30:16 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「飛騨 山に囲まれた景色 見どころ」 vol=0 ★AIM
+2026-05-23 05:30:16 [INFO] ────────────────────────────────────────────────────────────
+2026-05-23 05:30:16 [INFO] [generate] 生成開始: 「飛騨 山に囲まれた景色 見どころ」(vol:0) fact_check=True target_length=7,932字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「飛騨 山に囲まれた景色 見どころ」(vol:0) [7,932字 / H3:14〜18本 / FAQ:8〜10問]
+[api_guard] ✅ 本日: $1.6413 / 1時間: $0.3123  (上限 日次$10.00 / 時間$5.00)  全体: $2.4714(¥371) / 10記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=118 out=94 → $0.0005  (lsi:飛騨 山に囲まれた景色 見どころ)
+[api_guard] 本日の使用量: $1.6417 / ¥246 (1066回呼び出し)
+[article_generator] 共起語: 飛騨高山、白川郷、合掌造り、飛騨古川、山々の絶景、渓谷美、新緑、紅葉スポット、温泉地、飛騨牛、古い町並み、トレッキングコ...
+[api_guard] ✅ 本日: $1.6417 / 1時間: $0.3128  (上限 日次$10.00 / 時間$5.00)  全体: $2.4719(¥371) / 10記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=185 out=578 → $0.0025  (kw_research:飛騨 山に囲まれた景色 見どころ)
+[api_guard] 本日の使用量: $1.6442 / ¥246 (1067回呼び出し)
+[article_generator] サジェスト: 飛騨 山に囲まれた景色 見どころ 観光・飛騨 山々 絶景スポット・飛騨 山に囲まれた町...
+[article_generator] 検索意図: 比較系 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] アドセンス記事判定: 「飛騨 山に囲まれた景色 見どころ」→ アフィリリンク抑制モード
+[api_guard] ✅ 本日: $1.6442 / 1時間: $0.3152  (上限 日次$10.00 / 時間$5.00)  全体: $2.4744(¥371) / 10記事
+[api_guard] 記録: claude-sonnet-4-6 in=15646 out=17363 → $0.3074  (article:飛騨 山に囲まれた景色 見どころ)
+[api_guard] 本日の使用量: $1.9516 / ¥292 (1068回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of mountain peaks, seasonal trees,
+[imagefx] タイトル(英): Hida Mountain Scenic Spots Guide
+[article_generator] 完了: 「飛騨・山に囲まれた景色の見どころ7選｜季節ごとの絶景スポット案内」 カテゴリ: 未設定(-) タグ: ['飛騨高山', '絶景スポット', '山岳景観', '飛騨古川', '白川郷']
+2026-05-23 05:35:11 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-23 05:35:11 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「飛騨高山の小説」(ID:555)
+[api_guard] ✅ 本日: $1.9516 / 1時間: $0.6226  (上限 日次$10.00 / 時間$5.00)  全体: $2.7818(¥417) / 11記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=385 out=32 → $0.0004  (maps:飛騨 山に囲まれた景色 見どころ)
+[api_guard] 本日の使用量: $1.9520 / ¥292 (1069回呼び出し)
+[maps_embedder] ✅ 地図挿入: mode=search / query=飛騨高山 絶景スポット
+2026-05-23 05:35:13 [INFO] [generate] 完了: 「飛騨・山に囲まれた景色の見どころ7選｜季節ごとの絶景スポット案内」
+2026-05-23 05:35:13 [WARNING] [quality] 品質チェック: ❌3件NG / ⚠️0件警告 / 「飛騨・山に囲まれた景色の見どころ7選｜季節ごとの絶景スポット案内」
+2026-05-23 05:35:13 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [1, 2, 3, 4, 5, 6, 7, 8, 9] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-23 05:35:13 [WARNING] [quality]   ❌ □ 一人称体験談: 一人称体験談が0箇所しかありません（2〜3箇所必要）。「実際に使ってみたところ〜」「試してみて感じたのは〜」など自然な体験文を2〜3箇所追加してください。
+2026-05-23 05:35:13 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が2箇所あります（かもしれません。, でしょうか。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-23 05:35:13 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-23 05:35:13 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 22件
+[category_selector] 「飛騨 山に囲まれた景色 見どころ」→ 飛騨・高山の景観(235) score=6
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#飛騨): hida-furukawa-old-townscape-highlights-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 飛騨の山に囲まれた景色が美しい理由のイメージ画像
+[wordpress] H2画像[2] ライブラリ選択 (#飛騨): hida-beef-nigiri-sushi-tabeayuki-codex-eyecatch.jpg
+[wordpress] H2画像[2] ライブラリALT更新: 飛騨の山景色を季節ごとに楽しむ方法のイメージ画像
+[wordpress] H2画像[3] ライブラリ選択 (#飛騨): hida-limited-express-timetable-codex-eyecatch-1.jpg
+[wordpress] H2画像[3] ライブラリALT更新: 飛騨の山に囲まれた景色を旅で体験するためのポイントのイメージ画像
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration of mountain peaks, scenic valley views, question mark i...
+[image_generator] 完了 (49KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260523_053527_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 585)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: hida-mountain-scenery-spots-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Mountain-surrounded landscape of Hida region with scenic viewpoints, flat design...
+[image_generator] 完了 (127KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260523_053538_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 586)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: hida-mountain-scenery-spots-summary.jpg
+[internal_linker] 公開済み記事取得: 39件
+[internal_linker] キーワードトークンマッチ: 2件選定（同カテゴリー:0件 / 関連度60%+新しさ40%）
+[internal_linker] 関連補完（親KW絞り込み）: 6件選定（同カテゴリー:0件 / 関連度60%+新しさ40%）
+[internal_linker] 内部リンク選定完了: 計8件 (成約:0 / 案件関連:0 / 同親KW+補完:8)
+[internal_linker] 低関連性 8件をフッターへ: ['高山の懐かしい町並み見どころ完全ガイド！散歩・食べ', '飛騨古川 昔の町並み見どころ完全ガイド｜散策・カフ', '高山の川×夕方が落ち着く理由と絶景スポット5選｜飛', '飛騨で空がきれいに見える場所9選！星空・天の川・夜', '飛騨高山の変わらない風景スポット7選｜江戸時代の古', '高山の赤い橋の名前と由来を簡単に解説！飛騨高山を代', '飛騨民芸を見学できる場所7選！工房・博物館・体験施', '飛騨弁の感動短編小説『鬼仏の与平』｜鬼と呼ばれた男']
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 8件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:0 / 末尾リスト:8)
+[internal_linker] 内部リンク 8件 挿入: ['高山の懐かしい町並み見どころ完全ガイド！散歩・食べ歩き・撮影', '飛騨古川 昔の町並み見どころ完全ガイド｜散策・カフェ・朝市ま', '高山の川×夕方が落ち着く理由と絶景スポット5選｜飛騨の癒し旅', '飛騨で空がきれいに見える場所9選！星空・天の川・夜景の絶景ス', '飛騨高山の変わらない風景スポット7選｜江戸時代の古い町並みを', '高山の赤い橋の名前と由来を簡単に解説！飛騨高山を代表する観光', '飛騨民芸を見学できる場所7選！工房・博物館・体験施設まとめ', '飛騨弁の感動短編小説『鬼仏の与平』｜鬼と呼ばれた男の再生物語']
+[wordpress] タグ設定: ['飛騨高山', '絶景スポット', '山岳景観', '飛騨古川', '白川郷']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 587) → https://hida-no-omoide.com/wp-admin/post.php?post=587&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of mountain peaks, seasonal trees, calendar months, stars, and checkmarks in soft mint, blush pink, and cream pastel tones, minimal style.
+Elegant lifestyle background: soft morning light with warm neutrals, gentle depth-of-field effect, clean and airy ambiance, muted earth tones.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Hida Mountain Scenic Spots Guide" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行13 「飛騨 山に囲まれた景色 見どころ」→ 投稿済み (2026/05/23, ID:587) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「飛騨・山に囲まれた景色の見どころ7選｜季節ごとの絶景スポット」
+2026-05-23 05:35:47 [INFO] [post] WP投稿完了: ID=587 → https://hida-no-omoide.com/wp-admin/post.php?post=587&action=edit
+2026-05-23 05:35:47 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-23 05:35:47 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「飛騨・山に囲まれた景色の見どころ7選｜季節ごとの絶景スポット案内」
+2026-05-23 05:35:47 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-23 05:35:47 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hida-no-omoide limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #587 飛騨・山に囲まれた景色の見どころ7選｜季節ごとの絶景スポット案内
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 飛騨の思い出向け・旅メディア型バナーで生成します
+[IMAGE] hida template: town_morning
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (2348KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260523_053646_codex_hida_travel_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 588)
+[codex-eyecatch] featured image 設定完了: media_id=588
+[codex-eyecatch] 編集URL: https://hida-no-omoide.com/wp-admin/post.php?post=587&action=edit
+2026-05-23 05:36:53 [INFO] 
+============================================================
+2026-05-23 05:36:53 [INFO] 【全体サマリー】
+2026-05-23 05:36:53 [INFO]   ブログ数  : 1件
+2026-05-23 05:36:53 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-23 05:36:53 [INFO]   所要時間  : 407.5秒
+2026-05-23 05:36:53 [INFO]   ✅ [hida-no-omoide] 飛騨 山に囲まれた景色 見どころ → 飛騨・山に囲まれた景色の見どころ7選｜季節ごとの絶景スポット案内
+2026-05-23 05:36:53 [INFO]        https://hida-no-omoide.com/wp-admin/post.php?post=587&action=edit
+2026-05-23 05:36:53 [INFO] ============================================================
+===== [HIDA-NO-OMOIDE] 記事生成終了: 2026-05-23 05:36:54 / exit=0 =====

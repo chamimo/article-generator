@@ -1,0 +1,244 @@
+2026-05-24 01:24:09 [INFO] ============================================================
+2026-05-24 01:24:09 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-24 01:24:09 [INFO] ============================================================
+2026-05-24 01:24:09 [INFO] 対象ブログ: ['workup-ai']
+2026-05-24 01:24:10 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-24 01:24:10 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-24 01:24:10 [INFO] ════════════════════════════════════════════════════════════
+2026-05-24 01:24:10 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-24 01:24:10 [INFO]   fact_check       : True
+2026-05-24 01:24:10 [INFO]   article_type_mix : True
+2026-05-24 01:24:10 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-24 01:24:10 [INFO]   article_count    : 1  dry_run: False
+2026-05-24 01:24:13 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-24 01:24:14 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-24 01:24:14 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-24 01:24:14 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-24 01:24:14 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-24 01:24:14 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-24 01:24:14 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-24 01:24:14 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-24 01:24:14 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-24 01:24:14 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-24 01:24:14 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-24 01:24:14 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-24 01:24:14 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-24 01:24:14 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-24 01:24:14 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-24 01:24:14 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-24 01:24:14 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-24 01:24:14 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-24 01:24:14 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-24 01:24:14 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-24 01:24:16 [INFO] [wp] 記事取得: 計419件 (publish=419)
+2026-05-24 01:24:16 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-24 01:24:18 [DEBUG] [fetch] シート「絞り込みKW」: 206行 / ヘッダー: ['', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要', '投稿ステータス', '記事URL', '投稿ID', '使用サブKW']
+2026-05-24 01:24:18 [INFO] [fetch] [キーワード] メインKW: 0件（親KW+生成待ち）  サブKW: 0件（vol<30）
+2026-05-24 01:26:04 [INFO] ============================================================
+2026-05-24 01:26:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-24 01:26:04 [INFO] ============================================================
+2026-05-24 01:26:04 [INFO] 対象ブログ: ['workup-ai']
+2026-05-24 01:26:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-24 01:26:05 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-24 01:26:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-24 01:26:05 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-24 01:26:05 [INFO]   fact_check       : True
+2026-05-24 01:26:05 [INFO]   article_type_mix : True
+2026-05-24 01:26:05 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-24 01:26:05 [INFO]   article_count    : 1  dry_run: False
+2026-05-24 01:26:08 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-24 01:26:09 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-24 01:26:09 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-24 01:26:09 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-24 01:26:09 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-24 01:26:09 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-24 01:26:09 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-24 01:26:09 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-24 01:26:09 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-24 01:26:09 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-24 01:26:09 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-24 01:26:09 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-24 01:26:09 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-24 01:26:09 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-24 01:26:09 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-24 01:26:09 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-24 01:26:09 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-24 01:26:09 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-24 01:26:09 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-24 01:26:09 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-24 01:26:12 [INFO] [wp] 記事取得: 計419件 (publish=419)
+2026-05-24 01:26:12 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-24 01:26:13 [DEBUG] [fetch] シート「絞り込みKW」: 206行 / ヘッダー: ['', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要', '投稿ステータス', '記事URL', '投稿ID', '使用サブKW']
+2026-05-24 01:26:13 [INFO] [fetch] [キーワード] メインKW: 0件（親KW+生成待ち）  サブKW: 0件（vol<30）
+2026-05-24 01:32:05 [INFO] ============================================================
+2026-05-24 01:32:05 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-24 01:32:05 [INFO] ============================================================
+2026-05-24 01:32:05 [INFO] 対象ブログ: ['workup-ai']
+2026-05-24 01:32:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-24 01:32:06 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-24 01:32:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-24 01:32:06 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-24 01:32:06 [INFO]   fact_check       : True
+2026-05-24 01:32:06 [INFO]   article_type_mix : True
+2026-05-24 01:32:06 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-24 01:32:06 [INFO]   article_count    : 1  dry_run: False
+2026-05-24 01:32:09 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-24 01:32:10 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-24 01:32:10 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-24 01:32:10 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-24 01:32:10 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-24 01:32:10 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-24 01:32:10 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-24 01:32:10 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-24 01:32:10 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-24 01:32:10 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-24 01:32:10 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-24 01:32:10 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-24 01:32:10 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-24 01:32:10 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-24 01:32:10 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-24 01:32:10 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-24 01:32:10 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-24 01:32:10 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-24 01:32:10 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-24 01:32:10 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-24 01:32:13 [INFO] [wp] 記事取得: 計419件 (publish=419)
+2026-05-24 01:32:13 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-24 01:32:14 [DEBUG] [fetch] シート「絞り込みKW」: 206行 / ヘッダー: ['', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要', '投稿ステータス', '記事URL', '投稿ID', '使用サブKW']
+2026-05-24 01:32:14 [INFO] [fetch] [キーワード] メインKW: 0件（親KW+生成待ち）  サブKW: 0件（vol<30）
+2026-05-24 01:37:05 [INFO] ============================================================
+2026-05-24 01:37:05 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-24 01:37:05 [INFO] ============================================================
+2026-05-24 01:37:05 [INFO] 対象ブログ: ['workup-ai']
+2026-05-24 01:37:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-24 01:37:06 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-24 01:37:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-24 01:37:06 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-24 01:37:06 [INFO]   fact_check       : True
+2026-05-24 01:37:06 [INFO]   article_type_mix : True
+2026-05-24 01:37:06 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-24 01:37:06 [INFO]   article_count    : 1  dry_run: False
+2026-05-24 01:37:09 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-24 01:37:10 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-24 01:37:10 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-24 01:37:10 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-24 01:37:10 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-24 01:37:10 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-24 01:37:10 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-24 01:37:10 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-24 01:37:10 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-24 01:37:10 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-24 01:37:10 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-24 01:37:10 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-24 01:37:10 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-24 01:37:10 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-24 01:37:10 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-24 01:37:10 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-24 01:37:10 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-24 01:37:10 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-24 01:37:10 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-24 01:37:10 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-24 01:37:12 [INFO] [wp] 記事取得: 計419件 (publish=419)
+2026-05-24 01:37:12 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-24 01:37:14 [DEBUG] [fetch] シート「絞り込みKW」: 206行 / ヘッダー: ['', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要', '投稿ステータス', '記事URL', '投稿ID', '使用サブKW']
+2026-05-24 01:37:14 [INFO] [fetch] [キーワード] メインKW: 0件（親KW+生成待ち）  サブKW: 0件（vol<30）
+2026-05-24 02:45:06 [INFO] ============================================================
+2026-05-24 02:45:06 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-24 02:45:06 [INFO] ============================================================
+2026-05-24 02:45:06 [INFO] 対象ブログ: ['workup-ai']
+2026-05-24 02:45:07 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-24 02:45:07 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-24 02:45:07 [INFO] ════════════════════════════════════════════════════════════
+2026-05-24 02:45:07 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-24 02:45:07 [INFO]   fact_check       : True
+2026-05-24 02:45:07 [INFO]   article_type_mix : True
+2026-05-24 02:45:07 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-24 02:45:07 [INFO]   article_count    : 1  dry_run: False
+2026-05-24 02:45:10 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-24 02:45:11 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-24 02:45:11 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-24 02:45:11 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-24 02:45:11 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-24 02:45:11 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-24 02:45:11 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-24 02:45:11 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-24 02:45:11 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-24 02:45:11 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-24 02:45:11 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-24 02:45:11 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-24 02:45:11 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-24 02:45:11 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-24 02:45:11 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-24 02:45:11 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-24 02:45:11 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-24 02:45:11 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-24 02:45:11 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-24 02:45:11 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-24 02:45:14 [INFO] [wp] 記事取得: 計419件 (publish=419)
+2026-05-24 02:45:14 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-24 02:45:16 [DEBUG] [fetch] シート「絞り込みKW」: 206行 / ヘッダー: ['', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要', '投稿ステータス', '記事URL', '投稿ID', '使用サブKW']
+2026-05-24 02:45:16 [INFO] [fetch] [キーワード] メインKW: 0件（親KW+生成待ち）  サブKW: 0件（vol<30）
+2026-05-24 03:00:02 [INFO] ============================================================
+2026-05-24 03:00:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-24 03:00:02 [INFO] ============================================================
+2026-05-24 03:00:04 [INFO] [registry] ブログ管理シートから 7 件取得: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-24 03:00:04 [INFO] 対象ブログ: ['hataraku', 'workup-ai', 'ys-trend', 'kaerudoko', 'hapipo8', 'hida-no-omoide', 'web-study1']
+2026-05-24 03:00:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-24 03:00:05 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-24 03:00:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-24 03:00:05 [INFO] [kanikabari] 開始: はた楽ナビ / シート「キーワード」
+2026-05-24 03:00:08 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-24 03:00:08 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-24 03:00:08 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-24 03:00:08 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-24 03:00:08 [INFO] ════════════════════════════════════════════════════════════
+2026-05-24 03:00:08 [INFO] [kanikabari] 開始: AIVice / シート「キーワード」
+2026-05-24 03:00:10 [ERROR] [kanikabari] 「キーワード」列が見つかりません。
+2026-05-24 03:00:10 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-24 03:00:10 [INFO] === ワイズトレンド (ys-trend.com) 処理開始 ===
+2026-05-24 03:00:10 [INFO] ════════════════════════════════════════════════════════════
+2026-05-24 03:00:10 [INFO] [kanikabari] 開始: ワイズトレンド / シート「キーワード」
+2026-05-24 03:00:12 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-24 03:00:12 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-24 03:00:12 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-24 03:00:12 [INFO] === どこで売ってるナビ (kaerudoko.com) 処理開始 ===
+2026-05-24 03:00:12 [INFO] ════════════════════════════════════════════════════════════
+2026-05-24 03:00:12 [INFO] [kanikabari] 開始: どこで売ってるナビ / シート「キーワード」
+2026-05-24 03:00:14 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-24 03:00:14 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-24 03:00:14 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-24 03:00:14 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-24 03:00:14 [INFO] ════════════════════════════════════════════════════════════
+2026-05-24 03:00:14 [INFO] [kanikabari] 開始: 気になることブログ / シート「キーワード」
+2026-05-24 03:00:17 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-24 03:00:17 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-24 03:00:17 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-24 03:00:17 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-24 03:00:17 [INFO] ════════════════════════════════════════════════════════════
+2026-05-24 03:00:17 [INFO] [kanikabari] 開始: 飛騨の思い出 / シート「キーワード」
+2026-05-24 03:00:19 [INFO] [kanikabari] 未判定AIMキーワード: 0件
+2026-05-24 03:00:19 [INFO] [kanikabari] 処理対象なし。終了します。
+2026-05-24 03:00:19 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-24 03:00:19 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-05-24 03:00:19 [INFO] ════════════════════════════════════════════════════════════
+2026-05-24 03:00:19 [INFO] [kanikabari] 開始: オンライン学習ナビ / シート「キーワード」
+2026-05-24 03:00:21 [ERROR] [kanikabari] 「キーワード」列が見つかりません。
+2026-05-24 03:00:21 [INFO] 
+============================================================
+2026-05-24 03:00:21 [INFO] 【全体サマリー】
+2026-05-24 03:00:21 [INFO]   ブログ数  : 7件
+2026-05-24 03:00:21 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
+2026-05-24 03:00:21 [INFO]   所要時間  : 18.3秒
+2026-05-24 03:00:21 [INFO] ============================================================
