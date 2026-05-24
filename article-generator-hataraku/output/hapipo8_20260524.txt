@@ -1,0 +1,192 @@
+===== [HAPIPO8] 実行開始: 2026-05-24 04:20:00 =====
+2026-05-24 04:20:02 [INFO] ============================================================
+2026-05-24 04:20:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-24 04:20:02 [INFO] ============================================================
+2026-05-24 04:20:02 [INFO] 対象ブログ: ['hapipo8']
+2026-05-24 04:20:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-24 04:20:04 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-24 04:20:04 [INFO] ════════════════════════════════════════════════════════════
+2026-05-24 04:20:04 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-05-24 04:20:04 [INFO]   fact_check       : True
+2026-05-24 04:20:04 [INFO]   article_type_mix : True
+2026-05-24 04:20:04 [INFO]   stop_words       : ['2026']
+2026-05-24 04:20:04 [INFO]   article_count    : 1  dry_run: False
+2026-05-24 04:20:07 [INFO] [hapipo8] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] 気になることブログ / 「ASP案件マスター」: 50件
+[asp_fetcher]   [S] 福ちゃん → https://hapipo8.com/fukuchan / 着物買取・女性
+[asp_fetcher]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori / 即現金化・出張査定
+[asp_fetcher]   [S] フクウロ → https://hapipo8.com/fukuuro / 洋服買取 / 断捨離 / ブランド買取
+[asp_fetcher]   [S] メディカルフードサービス → https://hapipo8.com/medical_food / 腎臓病 宅配食 / 健康管理
+[asp_fetcher]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki / 宅配食 おすすめ 忙しい / 料理 時間ない 共働き
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile / 審査なし・スマホ契約できない・ブラックOK
+[asp_fetcher]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+
+2026-05-24 04:20:09 [INFO] [hapipo8] アフィリ案件: 50件（スプレッドシート）
+2026-05-24 04:20:09 [INFO] [hapipo8]   [S] 福ちゃん → https://hapipo8.com/fukuchan
+2026-05-24 04:20:09 [INFO] [hapipo8]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori
+2026-05-24 04:20:09 [INFO] [hapipo8]   [S] フクウロ → https://hapipo8.com/fukuuro
+2026-05-24 04:20:09 [INFO] [hapipo8]   [S] メディカルフードサービス → https://hapipo8.com/medical_food
+2026-05-24 04:20:09 [INFO] [hapipo8]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-05-24 04:20:09 [INFO] [hapipo8]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman
+2026-05-24 04:20:09 [INFO] [hapipo8]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] トラベル・スタンダード・ジャパン → https://px.a8.net/svt/ejp?a8mat=4B1THV+17H122+5LKE+5ZU29
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] ORBIS AMBER(オルビス アンバー) → https://px.a8.net/svt/ejp?a8mat=4B1THX+DDO2AI+1USQ+4ASX02
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] トリア → https://hapipo8.com/tria
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] nosh - ナッシュ → https://hapipo8.com/nosh
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] 快眠タイムズストア → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DRYGT6+4UHE+TRVYQ
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] NELL マットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6M5RVE+4KD8+5ZMCI
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] 咲夜レアルマットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6LKC9M+4MRW+61Z81
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] オーケンウォーター → https://px.a8.net/svt/ejp?a8mat=4B1THX+CRN0WQ+1LOO+6NMJL
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] every frecious（エブリィフレシャス） → https://px.a8.net/svt/ejp?a8mat=4B1THX+CS8GII+2B8Y+15OK2A
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] リゾバ → https://hapipo8.com/rizoba
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] ダイブ → https://hapipo8.com/dive
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] 工場求人ワールド → https://px.a8.net/svt/ejp?a8mat=4B1O1T+EGYV5U+5S9S+5YJRM
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] ソフトバンク光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KARLU+3HKU+25FF81
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] BIGLOBE WiMAX +5G → https://px.a8.net/svt/ejp?a8mat=4B1THS+2TTMYY+B4+2BDBUB
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] フレッツ光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KW4WA+348K+1TJE9U
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] AI英会話アプリ【スピーク】 → https://hapipo8.com/speak
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] もぐワン ペットフード → https://hapipo8.com/moguwan
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] DMM 生成AI CAMP → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] ポニークリーニング → https://px.a8.net/svt/ejp?a8mat=4B1THV+5QLST6+4N08+5Z6WY
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] 体験型カタログギフト【EXETIME】 → https://hapipo8.com/exetime
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] GMOとくとくBB → https://px.a8.net/svt/ejp?a8mat=4B1THS+2UF2KQ+50+3H48S2
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] Amazon Prime Video → https://amzn.to/4tbKPVa
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] Pollet → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] カレントボディ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DFGD3U+54TM+5YJRM
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] アプリ接客キャスト → https://px.a8.net/svt/ejp?a8mat=4B1O1T+FKUWOY+3P1G+NTRMQ
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] ヴィーナスウォーカー → https://px.a8.net/svt/ejp?a8mat=4B1THV+6632JE+58KC+5YRHE
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] WEBCOACH → https://px.a8.net/svt/ejp?a8mat=4B1V1W+DW4O7U+5EVK+5YZ75
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] ポケットリサーチ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DUXMU2+58KC+BWVTE
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] ラボル カード払い → https://px.a8.net/svt/ejp?a8mat=4B1THS+3TJN9M+40JM+1NJZN5
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] クロスワンルーム → https://px.a8.net/svt/ejp?a8mat=4B1THX+DPKQE2+4EZ2+BYLJL
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] Mr.シリーズ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CLOOUY+1USQ+2Z8T76
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] IBJ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CF4X7E+FOG+4MPSTE
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] ユアマイスター → https://px.a8.net/svt/ejp?a8mat=4B1THX+BZNNH6+4HQS+5YJRM
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] TOSSY → https://px.a8.net/svt/ejp?a8mat=4B1THS+2V0I6I+1WP2+1HLNLE
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] ABLENET VPS → https://px.a8.net/svt/ejp?a8mat=4B1THS+2VLXSA+4NIK+5Z6WX
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-24 04:20:09 [INFO] [hapipo8]   [A] BIGLOBE光 → https://px.a8.net/svt/ejp?a8mat=4B3LMR+4JQL96+3SPO+7LW1F7
+2026-05-24 04:20:09 [INFO] [hapipo8]   [B] 食楽膳 → https://hapipo8.com/shokurakuzen
+2026-05-24 04:20:09 [INFO] [hapipo8]   [?] 楽器買取 福ちゃん → https://hapipo8.com/gakki-fukucyan
+2026-05-24 04:20:09 [INFO] [hapipo8]   [?] ニーゴ・リユース → https://hapipo8.com/25reuse
+2026-05-24 04:20:12 [INFO] [wp] 記事取得: 計172件 (publish=172)
+2026-05-24 04:20:12 [INFO] [hapipo8] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.4, 'monetize': 0.1})
+2026-05-24 04:20:14 [INFO] [fetch] サブKW紐付け: 165件 → 49記事に統合
+2026-05-24 04:20:14 [INFO] [fetch] [キーワード] メインKW: 302件（親KW+生成待ち）  サブKW除外: 165件（統合対象）  投稿済みスキップ: 137件  aim内訳: [aim:58, add:219, claude:25]
+2026-05-24 04:20:14 [INFO] [dup_check] 優先候補: 302件 {'aim': 58, 'add': 219, 'claude': 25} を先頭評価
+2026-05-24 04:20:14 [INFO] [dup_check] シート承認済みスキップ: 「猫 トイレ砂 臭わない おすすめ」（親KW+生成待ちのため重複チェック免除）
+2026-05-24 04:20:14 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=302件, 要求=1件)
+2026-05-24 04:20:14 [INFO] [select] 1件選定 (要求=1件)
+2026-05-24 04:20:14 [INFO] [select]   1. 「猫 トイレ砂 臭わない おすすめ」 vol=0 seo=N/A comp=N/A
+2026-05-24 04:20:14 [INFO] [hapipo8] LONGTAIL選定: 1件
+2026-05-24 04:20:14 [INFO] [hapipo8] 候補: 302件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+2026-05-24 04:20:14 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-24 04:20:14 [INFO] ────────────────────────────────────────────────────────────
+2026-05-24 04:20:14 [INFO] [hapipo8] [1/1] [LONGTAIL] 「猫 トイレ砂 臭わない おすすめ」 vol=0 ★AIM
+2026-05-24 04:20:14 [INFO] ────────────────────────────────────────────────────────────
+2026-05-24 04:20:14 [INFO] [generate] 生成開始: 「猫 トイレ砂 臭わない おすすめ」(vol:0) fact_check=True target_length=6,102字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「猫 トイレ砂 臭わない おすすめ」(vol:0) [6,102字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=118 out=115 → $0.0006  (lsi:猫 トイレ砂 臭わない おすすめ)
+[api_guard] 本日の使用量: $0.0006 / ¥0 (1073回呼び出し)
+[article_generator] 共起語: 猫砂の種類、消臭効果、固まりやすさ、飛び散らない、システムトイレ、紙砂、おからの砂、ベントナイト、活性炭、猫トイレ掃除、...
+[api_guard] ✅ 本日: $0.0006 / 1時間: $0.0006  (上限 日次$10.00 / 時間$5.00)  全体: $0.0006(¥0) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=185 out=609 → $0.0026  (kw_research:猫 トイレ砂 臭わない おすすめ)
+[api_guard] 本日の使用量: $0.0031 / ¥0 (1074回呼び出し)
+[article_generator] サジェスト: 猫 トイレ砂 臭わない おすすめ・猫 トイレ砂 臭わない 安い・猫 トイレ砂 臭わない 人気...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.0031 / 1時間: $0.0031  (上限 日次$10.00 / 時間$5.00)  全体: $0.0031(¥0) / 0記事
+[api_guard] 記録: claude-sonnet-4-6 in=16813 out=13227 → $0.2488  (article:猫 トイレ砂 臭わない おすすめ)
+[api_guard] 本日の使用量: $0.2520 / ¥37 (1075回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of cat litter box, odor waves, sta
+[imagefx] タイトル(英): Odorless Cat Litter Top Five
+[article_generator] 完了: 「猫のトイレ砂で臭わないおすすめ5選！種類別の消臭効果と選び方を解説」 カテゴリ: 未設定(-) タグ: ['猫砂', '猫トイレ', '消臭', '猫グッズ', 'ペット用品']
+2026-05-24 04:23:51 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「体験型カタログギフト【EXETIME】(14-1107)」(ID:3771)
+2026-05-24 04:23:51 [INFO] [generate] 完了: 「猫のトイレ砂で臭わないおすすめ5選！種類別の消臭効果と選び方を解説」
+2026-05-24 04:23:51 [WARNING] [quality] 品質チェック: ❌4件NG / ⚠️0件警告 / 「猫のトイレ砂で臭わないおすすめ5選！種類別の消臭効果と選び方を解説」
+2026-05-24 04:23:51 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [1, 3, 4, 5, 6] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-24 04:23:51 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（かもしれません。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-24 04:23:51 [WARNING] [quality]   ❌ □ 外部ソースリンク: 外部リンクが1つもありません。信頼性の高いソース（公式サイト・官公庁・大手メディア等）へのリンクを1〜3件追加してください。
+2026-05-24 04:23:51 [WARNING] [quality]   ❌ □ メタディスクリプション: メタディスクリプションが短すぎます（78字）。80〜120字に拡充してください。
+2026-05-24 04:23:51 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-24 04:23:51 [INFO] [post] 投稿方式: publish
+[category_selector] カテゴリ取得: 36件
+[category_selector] 「猫 トイレ砂 臭わない おすすめ」→ おすすめアイテム(677) score=19
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration of odor-free cat litter materials: clay granules, silic...
+[image_generator] 完了 (47KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260524_042401_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4297)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: 臭わない猫砂の選び方｜素材と消臭力の違いを知っておこう
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Cat litter box with five different colored sand bags, soft pastel tones, flat de...
+[image_generator] 完了 (81KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260524_042416_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4298)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 臭わない猫砂おすすめ5選｜素材別に比較してみた
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A soft pastel flat design illustration featuring a cute cat litter box with gent...
+[image_generator] 完了 (48KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260524_042427_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4299)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 猫トイレの臭い対策をさらに高めるコツ3つ
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring a cat litter box with soft pastel gradient ba...
+[image_generator] 完了 (45KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260524_042438_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4300)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: cat-toilet-sand-no-smell-recommended-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration featuring a happy cat, litter box, and fresh flower i...
+[image_generator] 完了 (36KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260524_042450_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4301)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: cat-toilet-sand-no-smell-recommended-summary.jpg
+[internal_linker] 公開済み記事取得: 172件
+[internal_linker] 古い記事を除外: 123件（2年以上前）→ 49件で選定
+[internal_linker] 同カテゴリー: 8件選定（同カテゴリー:8件 / 関連度60%+新しさ40%）
+[internal_linker] H3マッチ割り当て「猫砂の種類は大きく5つ。それぞれの消臭力」→「宅食 一人暮らし男性おすすめ6選！栄養・コスト・時短を徹底比較」（2026-05-10）★同カテゴリー
+[internal_linker] H3マッチ割り当て「消臭効果を左右する「活性炭・シリカゲル・」→「生活保護でもスマホ契約できる！審査・手続き・おすすめプランを完全解説」（2026-05-15）★同カテゴリー
+[internal_linker] H3マッチ割り当て「コスパと交換頻度のバランスで選ぶ方法」→「宅食おすすめ5選！一人暮らし女性でも安く栄養バランスが取れる選び方」（2026-05-16）★同カテゴリー
+[internal_linker] H3マッチ割り当て「猫の好みと相性も実は超大事な話」→「敏感肌向け日焼け止めおすすめ2026年版！肌荒れしない選び方と人気製品」（2026-05-08）★同カテゴリー
+[internal_linker] H3マッチ割り当て「デオトイレ 消臭・抗菌サンド｜シリカゲル」→「格安SIM審査がゆるいおすすめ3選！審査なし・ブラックOKも比較」（2026-05-09）★同カテゴリー
+[internal_linker] H3マッチ割り当て「ニャンとも清潔トイレ 脱臭・抗菌チップ｜」→「宅食おすすめ比較6選！価格・栄養・味を徹底チェック【2026年版】」（2026-05-06）★同カテゴリー
+[internal_linker] H3マッチ割り当て「クリーンミュウ 消臭サンド｜固まりやすさ」→「宅配食 無添加おすすめ6選｜一人暮らし女性が選ぶ健康・時短ごはん」（2026-05-09）★同カテゴリー
+[internal_linker] H3マッチ割り当て「おからの猫砂｜環境にやさしくトイレに流せ」→「在宅勤務WiFiおすすめ3選！光回線・置き型・工事不要を徹底比較」（2026-05-09）★同カテゴリー
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['宅食おすすめ5選！一人暮らし女性でも安く栄養バランスが取れる', '敏感肌向け日焼け止めおすすめ2026年版！肌荒れしない選び方', '格安SIM審査がゆるいおすすめ3選！審査なし・ブラックOKも', '宅食 一人暮らし男性おすすめ6選！栄養・コスト・時短を徹底比', '宅配食 無添加おすすめ6選｜一人暮らし女性が選ぶ健康・時短ご', '在宅勤務WiFiおすすめ3選！光回線・置き型・工事不要を徹底', '宅食おすすめ比較6選！価格・栄養・味を徹底チェック【2026', '生活保護でもスマホ契約できる！審査・手続き・おすすめプランを']
+[wordpress] 警告: 外部リンク未検出 → 記事プロンプトを確認してください: 猫 トイレ砂 臭わない おすすめ
+[wordpress] タグ設定: ['猫砂', '猫トイレ', '消臭', '猫グッズ', 'ペット用品']
+[wordpress] 投稿方式: publish
+[wordpress] 投稿完了 (ID: 4302) → https://hapipo8.com/wp-admin/post.php?post=4302&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行138 「猫 トイレ砂 臭わない おすすめ」→ 投稿済み (2026/05/24, ID:4302) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「猫のトイレ砂で臭わないおすすめ5選！種類別の消臭効果と選び方」
+2026-05-24 04:25:02 [INFO] [post] WP投稿完了: ID=4302 → https://hapipo8.com/wp-admin/post.php?post=4302&action=edit
+2026-05-24 04:25:02 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-24 04:25:02 [INFO] [hapipo8] [1/1] ✅ 完了: 「猫のトイレ砂で臭わないおすすめ5選！種類別の消臭効果と選び方を解説」
+2026-05-24 04:25:02 [INFO] [hapipo8] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-24 04:25:02 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hapipo8 limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #4302 猫のトイレ砂で臭わないおすすめ5選！種類別の消臭効果と選び方を解説
+[codex-eyecatch] 既存ライブラリ画像を選択: recent media_id=4280
+[codex-eyecatch] 既存ライブラリ画像を featured image に設定: media_id=4280
+[codex-eyecatch] 編集URL: https://hapipo8.com/wp-admin/post.php?post=4302&action=edit
+2026-05-24 04:25:11 [INFO] 
+============================================================
+2026-05-24 04:25:11 [INFO] 【全体サマリー】
+2026-05-24 04:25:11 [INFO]   ブログ数  : 1件
+2026-05-24 04:25:11 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-24 04:25:11 [INFO]   所要時間  : 308.7秒
+2026-05-24 04:25:11 [INFO]   ✅ [hapipo8] 猫 トイレ砂 臭わない おすすめ → 猫のトイレ砂で臭わないおすすめ5選！種類別の消臭効果と選び方を解説
+2026-05-24 04:25:11 [INFO]        https://hapipo8.com/wp-admin/post.php?post=4302&action=edit
+2026-05-24 04:25:11 [INFO] ============================================================
+===== [HAPIPO8] 記事生成終了: 2026-05-24 04:25:12 / exit=0 =====
