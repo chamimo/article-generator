@@ -10719,6 +10719,106 @@
       "output_tokens": 14306,
       "cost_usd": 0.264327,
       "label": "article:通信制大学 放送大学 違い"
+    },
+    {
+      "timestamp": "2026-05-23T19:20:17.081211+00:00",
+      "date": "2026-05-23",
+      "hour": "2026-05-23T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 118,
+      "output_tokens": 115,
+      "cost_usd": 0.000554,
+      "label": "lsi:猫 トイレ砂 臭わない おすすめ"
+    },
+    {
+      "timestamp": "2026-05-23T19:20:20.906750+00:00",
+      "date": "2026-05-23",
+      "hour": "2026-05-23T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 185,
+      "output_tokens": 609,
+      "cost_usd": 0.002584,
+      "label": "kw_research:猫 トイレ砂 臭わない おすすめ"
+    },
+    {
+      "timestamp": "2026-05-23T19:23:47.227854+00:00",
+      "date": "2026-05-23",
+      "hour": "2026-05-23T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16813,
+      "output_tokens": 13227,
+      "cost_usd": 0.248844,
+      "label": "article:猫 トイレ砂 臭わない おすすめ"
+    },
+    {
+      "timestamp": "2026-05-23T20:00:16.123137+00:00",
+      "date": "2026-05-23",
+      "hour": "2026-05-23T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 95,
+      "cost_usd": 0.000466,
+      "label": "lsi:社会復帰 辛い"
+    },
+    {
+      "timestamp": "2026-05-23T20:00:19.978406+00:00",
+      "date": "2026-05-23",
+      "hour": "2026-05-23T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 552,
+      "cost_usd": 0.002348,
+      "label": "kw_research:社会復帰 辛い"
+    },
+    {
+      "timestamp": "2026-05-23T20:04:27.989956+00:00",
+      "date": "2026-05-23",
+      "hour": "2026-05-23T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15606,
+      "output_tokens": 15151,
+      "cost_usd": 0.274083,
+      "label": "article:社会復帰 辛い"
+    },
+    {
+      "timestamp": "2026-05-23T20:30:14.805845+00:00",
+      "date": "2026-05-23",
+      "hour": "2026-05-23T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 119,
+      "output_tokens": 87,
+      "cost_usd": 0.000443,
+      "label": "lsi:朴葉味噌 家庭用 おすすめ商品"
+    },
+    {
+      "timestamp": "2026-05-23T20:30:19.257894+00:00",
+      "date": "2026-05-23",
+      "hour": "2026-05-23T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 186,
+      "output_tokens": 677,
+      "cost_usd": 0.002857,
+      "label": "kw_research:朴葉味噌 家庭用 おすすめ商品"
+    },
+    {
+      "timestamp": "2026-05-23T20:34:54.890107+00:00",
+      "date": "2026-05-23",
+      "hour": "2026-05-23T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15201,
+      "output_tokens": 17377,
+      "cost_usd": 0.306258,
+      "label": "article:朴葉味噌 家庭用 おすすめ商品"
+    },
+    {
+      "timestamp": "2026-05-23T20:35:00.963213+00:00",
+      "date": "2026-05-23",
+      "hour": "2026-05-23T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 387,
+      "output_tokens": 14,
+      "cost_usd": 0.000366,
+      "label": "maps:朴葉味噌 家庭用 おすすめ商品"
     }
   ],
   "events": [
