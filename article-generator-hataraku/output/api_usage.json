@@ -10819,6 +10819,136 @@
       "output_tokens": 14,
       "cost_usd": 0.000366,
       "label": "maps:朴葉味噌 家庭用 おすすめ商品"
+    },
+    {
+      "timestamp": "2026-05-24T19:20:13.628620+00:00",
+      "date": "2026-05-24",
+      "hour": "2026-05-24T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 138,
+      "cost_usd": 0.000642,
+      "label": "lsi:在宅ワーク WiFi 遅い"
+    },
+    {
+      "timestamp": "2026-05-24T19:20:18.075311+00:00",
+      "date": "2026-05-24",
+      "hour": "2026-05-24T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 643,
+      "cost_usd": 0.002715,
+      "label": "kw_research:在宅ワーク WiFi 遅い"
+    },
+    {
+      "timestamp": "2026-05-24T19:24:53.109920+00:00",
+      "date": "2026-05-24",
+      "hour": "2026-05-24T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 17121,
+      "output_tokens": 17586,
+      "cost_usd": 0.315153,
+      "label": "article:在宅ワーク WiFi 遅い"
+    },
+    {
+      "timestamp": "2026-05-24T19:40:13.269279+00:00",
+      "date": "2026-05-24",
+      "hour": "2026-05-24T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 200,
+      "cost_usd": 0.000893,
+      "label": "lsi:ピュレグミ プレミアム 売ってない"
+    },
+    {
+      "timestamp": "2026-05-24T19:40:17.000266+00:00",
+      "date": "2026-05-24",
+      "hour": "2026-05-24T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 604,
+      "cost_usd": 0.002562,
+      "label": "kw_research:ピュレグミ プレミアム 売ってない"
+    },
+    {
+      "timestamp": "2026-05-24T19:43:26.582701+00:00",
+      "date": "2026-05-24",
+      "hour": "2026-05-24T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 14913,
+      "output_tokens": 12753,
+      "cost_usd": 0.236034,
+      "label": "article:ピュレグミ プレミアム 売ってない"
+    },
+    {
+      "timestamp": "2026-05-24T20:00:16.604945+00:00",
+      "date": "2026-05-24",
+      "hour": "2026-05-24T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 94,
+      "cost_usd": 0.000462,
+      "label": "lsi:既卒 留学 就職"
+    },
+    {
+      "timestamp": "2026-05-24T20:00:20.434948+00:00",
+      "date": "2026-05-24",
+      "hour": "2026-05-24T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 516,
+      "cost_usd": 0.002204,
+      "label": "kw_research:既卒 留学 就職"
+    },
+    {
+      "timestamp": "2026-05-24T20:04:38.758776+00:00",
+      "date": "2026-05-24",
+      "hour": "2026-05-24T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15585,
+      "output_tokens": 16464,
+      "cost_usd": 0.293715,
+      "label": "article:既卒 留学 就職"
+    },
+    {
+      "timestamp": "2026-05-24T20:30:15.340026+00:00",
+      "date": "2026-05-24",
+      "hour": "2026-05-24T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 133,
+      "cost_usd": 0.000625,
+      "label": "lsi:高山 観光 徒歩で回れる範囲"
+    },
+    {
+      "timestamp": "2026-05-24T20:30:19.587393+00:00",
+      "date": "2026-05-24",
+      "hour": "2026-05-24T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 607,
+      "cost_usd": 0.002574,
+      "label": "kw_research:高山 観光 徒歩で回れる範囲"
+    },
+    {
+      "timestamp": "2026-05-24T20:35:01.599966+00:00",
+      "date": "2026-05-24",
+      "hour": "2026-05-24T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15355,
+      "output_tokens": 17248,
+      "cost_usd": 0.304785,
+      "label": "article:高山 観光 徒歩で回れる範囲"
+    },
+    {
+      "timestamp": "2026-05-24T20:35:07.229627+00:00",
+      "date": "2026-05-24",
+      "hour": "2026-05-24T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 376,
+      "output_tokens": 36,
+      "cost_usd": 0.000445,
+      "label": "maps:高山 観光 徒歩で回れる範囲"
     }
   ],
   "events": [

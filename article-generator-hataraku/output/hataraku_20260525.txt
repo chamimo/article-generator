@@ -1,0 +1,184 @@
+===== [HATARAKU] 実行開始: 2026-05-25 05:00:00 =====
+2026-05-25 05:00:03 [INFO] ============================================================
+2026-05-25 05:00:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-25 05:00:03 [INFO] ============================================================
+2026-05-25 05:00:03 [INFO] 対象ブログ: ['hataraku']
+2026-05-25 05:00:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-25 05:00:04 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-25 05:00:04 [INFO] ════════════════════════════════════════════════════════════
+2026-05-25 05:00:04 [INFO]   genre            : 転職・副業・キャリア
+2026-05-25 05:00:04 [INFO]   fact_check       : True
+2026-05-25 05:00:04 [INFO]   article_type_mix : True
+2026-05-25 05:00:04 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-25 05:00:04 [INFO]   article_count    : 1  dry_run: False
+2026-05-25 05:00:09 [INFO] [hataraku] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] はた楽ナビ / 「ASP案件マスター」: 21件
+[asp_fetcher]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive / 発達障害×IT就労支援・在宅・スキル習得
+[asp_fetcher]   [S] ラボル → https://hataraku-navi.com/labol / フリーランス資金繰り・即日入金・請求書買取
+[asp_fetcher]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it / 未経験IT転職・ブラック回避・手厚い支援
+[asp_fetcher]   [S] TechGo → https://hataraku-navi.com/techgo / IT転職・年収アップ・ハイクラス
+[asp_fetcher]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi / 転職不安・無料相談・高確定率
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen / 就活・既卒支援・高EPC
+[asp_fetcher]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo / 既卒・フリーター・高卒支援
+2026-05-25 05:00:11 [INFO] [hataraku] アフィリ案件: 21件（スプレッドシート）
+2026-05-25 05:00:11 [INFO] [hataraku]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive
+2026-05-25 05:00:11 [INFO] [hataraku]   [S] ラボル → https://hataraku-navi.com/labol
+2026-05-25 05:00:11 [INFO] [hataraku]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it
+2026-05-25 05:00:11 [INFO] [hataraku]   [S] TechGo → https://hataraku-navi.com/techgo
+2026-05-25 05:00:11 [INFO] [hataraku]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi
+2026-05-25 05:00:11 [INFO] [hataraku]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy
+2026-05-25 05:00:11 [INFO] [hataraku]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen
+2026-05-25 05:00:11 [INFO] [hataraku]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo
+2026-05-25 05:00:11 [INFO] [hataraku]   [S] 保育専門求人サイト ほいく畑 → https://hataraku-navi.com/hoikubatake
+2026-05-25 05:00:11 [INFO] [hataraku]   [A] FREENANCE → https://hataraku-navi.com/freenance
+2026-05-25 05:00:11 [INFO] [hataraku]   [A] Midworks → https://hataraku-navi.com/midworks
+2026-05-25 05:00:11 [INFO] [hataraku]   [A] マスメディアン → https://hataraku-navi.com/massmedia
+2026-05-25 05:00:11 [INFO] [hataraku]   [A] atGP → https://hataraku-navi.com/atgp
+2026-05-25 05:00:11 [INFO] [hataraku]   [A] atGPジョブトレ IT・Web → https://hataraku-navi.com/atgp_job
+2026-05-25 05:00:11 [INFO] [hataraku]   [A] リゾートバイトダイブ → https://hataraku-navi.com/dive
+2026-05-25 05:00:11 [INFO] [hataraku]   [A] 日本マンパワー → https://hataraku-navi.com/manpower
+2026-05-25 05:00:11 [INFO] [hataraku]   [A] クラウドワークス → https://hataraku-navi.com/crowdworks
+2026-05-25 05:00:11 [INFO] [hataraku]   [?] 保育エイド → https://hataraku-navi.com/hoiku-aid
+2026-05-25 05:00:11 [INFO] [hataraku]   [?] 保育バランス → https://hataraku-navi.com/hoiku-balance
+2026-05-25 05:00:11 [INFO] [hataraku]   [?] 保育メトロ → https://hataraku-navi.com/hoiku-metro
+2026-05-25 05:00:11 [INFO] [hataraku]   [?] 20代の転職相談所 → https://hataraku-navi.com/20tensyoku
+2026-05-25 05:00:12 [INFO] [wp] 記事取得: 計57件 (draft=1 / publish=56)
+2026-05-25 05:00:12 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-25 05:00:14 [INFO] [fetch] サブKW紐付け: 4202件 → 170記事に統合
+2026-05-25 05:00:14 [INFO] [fetch] [キーワード] メインKW: 320件（親KW+生成待ち）  サブKW除外: 4202件（統合対象）  投稿済みスキップ: 80件  aim内訳: [aim:320]
+2026-05-25 05:00:14 [INFO] [dup_check] 優先候補: 320件 {'aim': 320} を先頭評価
+2026-05-25 05:00:14 [INFO] [dup_check] シート承認済みスキップ: 「既卒 留学 就職」（親KW+生成待ちのため重複チェック免除）
+2026-05-25 05:00:14 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=320件, 要求=1件)
+2026-05-25 05:00:14 [INFO] [select] 1件選定 (要求=1件)
+2026-05-25 05:00:14 [INFO] [select]   1. 「既卒 留学 就職」 vol=0 seo=N/A comp=N/A
+2026-05-25 05:00:14 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-25 05:00:14 [INFO] [hataraku] 候補: 320件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.5580 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.5580(¥84) / 2記事
+2026-05-25 05:00:14 [INFO] [api_guard] 本日の使用量: $0.5580 / ¥84 (6回呼び出し)
+2026-05-25 05:00:14 [INFO] ────────────────────────────────────────────────────────────
+2026-05-25 05:00:14 [INFO] [hataraku] [1/1] [LONGTAIL] 「既卒 留学 就職」 vol=0 ★AIM
+2026-05-25 05:00:14 [INFO] ────────────────────────────────────────────────────────────
+2026-05-25 05:00:14 [INFO] [generate] 生成開始: 「既卒 留学 就職」(vol:0) fact_check=True target_length=6,171字  サブKW:5件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「既卒 留学 就職」(vol:0) [6,171字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.5580 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.5580(¥84) / 2記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=108 out=94 → $0.0005  (lsi:既卒 留学 就職)
+[api_guard] 本日の使用量: $0.5585 / ¥83 (1089回呼び出し)
+[article_generator] 共起語: 既卒者、海外大学院、ビザ取得、キャリア形成、帰国子女、語学力、奨学金、インターンシップ、グローバル企業、職務経歴書、面接...
+[article_generator] サブKW候補: 5件 (帝 愛 就職〜)
+[api_guard] ✅ 本日: $0.5585 / 1時間: $0.0005  (上限 日次$10.00 / 時間$5.00)  全体: $0.5585(¥84) / 2記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=175 out=516 → $0.0022  (kw_research:既卒 留学 就職)
+[api_guard] 本日の使用量: $0.5607 / ¥84 (1090回呼び出し)
+[article_generator] サジェスト: 既卒 留学 就職 ビザ・既卒 留学後 就職活動・既卒 留学経験 就職 有利...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.5607 / 1時間: $0.0027  (上限 日次$10.00 / 時間$5.00)  全体: $0.5607(¥84) / 2記事
+[api_guard] 記録: claude-sonnet-4-6 in=15585 out=16464 → $0.2937  (article:既卒 留学 就職)
+[api_guard] 本日の使用量: $0.8544 / ¥128 (1091回呼び出し)
+[imagefx] 背景:B / ビジュアル:Minimal flat design with laptop, passport, calenda
+[imagefx] タイトル(英): Study Abroad After Graduation Works
+[article_generator] 完了: 「既卒から留学して就職できる？成功するための現実的な進め方」 カテゴリ: 未設定(-) タグ: ['既卒就職', '留学', '帰国後就活', 'キャリア形成', '転職・就職']
+2026-05-25 05:04:45 [INFO] [generate] パターンCTA挿入（H3末尾）: 5件
+2026-05-25 05:04:45 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「atGPジョブトレ IT・Web」(ID:569)
+2026-05-25 05:04:46 [INFO] [generate] 完了: 「既卒から留学して就職できる？成功するための現実的な進め方」
+2026-05-25 05:04:46 [WARNING] [quality] 品質チェック: ❌3件NG / ⚠️0件警告 / 「既卒から留学して就職できる？成功するための現実的な進め方」
+2026-05-25 05:04:46 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [1, 2, 3, 4, 5, 6, 7] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-25 05:04:46 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（でしょうか。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-25 05:04:46 [WARNING] [quality]   ❌ □ 外部ソースリンク: 外部リンクが1つもありません。信頼性の高いソース（公式サイト・官公庁・大手メディア等）へのリンクを1〜3件追加してください。
+2026-05-25 05:04:46 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-25 05:04:46 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 21件
+[category_selector] 「既卒 留学 就職」→ 転職・就職(269) score=12
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Graduation cap floating above an open book, with airplane, globe, and upward arr...
+[image_generator] 完了 (68KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260525_050456_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 770)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: 既卒から留学して就職を目指すメリットと現実
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Returning graduate planning career path with calendar, resume documents, job lis...
+[image_generator] 完了 (57KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260525_050509_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 771)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 帰国後の就職活動、具体的な進め方と押さえたいポイント
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Graduation cap transitioning into globe and ascending career ladder, surrounded ...
+[image_generator] 完了 (66KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260525_050521_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 772)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 既卒留学から就職を成功させた人の共通点と失敗しない注意点
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration with pastel colors: question mark speech bubbles, gradu...
+[image_generator] 完了 (58KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260525_050533_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 773)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: ---faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration with pastel colors: graduation cap, airplane, briefcase...
+[image_generator] 完了 (52KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260525_050546_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 774)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: ---summary.jpg
+[internal_linker] 公開済み記事取得: 56件
+[internal_linker] 「atGP」関連記事: 1件追加
+[internal_linker] 「クラウドワークス」関連記事: 2件追加
+[internal_linker] 同カテゴリー: 6件選定（同カテゴリー:6件 / 関連度60%+新しさ40%）
+[internal_linker] 製品名マッチ「クラウドワークス」→ セクション10に割り当て
+[internal_linker] 製品名マッチ「atGP」→ セクション13に割り当て
+[internal_linker] H3マッチ割り当て「留学経験が就職で評価される条件とは」→「簿記1級転職で有利になる理由と年収・求人・未経験からの可能性を徹底解説」（2026-05-08）★同カテゴリー
+[internal_linker] H3マッチ割り当て「既卒留学のリアルなデメリットと乗り越え方」→「薬剤師の転職相談はどこでできる？無料で使えるサービスと成功のコツ」（2026-05-18）★同カテゴリー
+[internal_linker] H3マッチ割り当て「留学期間はどのくらいが適切か」→「経理に転職！未経験から成功する5つのポイントと必要な資格・勉強法」（2026-04-20）★同カテゴリー
+[internal_linker] H3マッチ割り当て「年齢制限と「既卒何年目まで」問題」→「IT転職は未経験30代でも現実的？成功するための完全ロードマップ」（2026-05-08）★同カテゴリー
+[internal_linker] H3マッチ割り当て「留学費用と就職支援コストのバランス」→「梅雨で仕事のやる気が出ない！原因と今日から使える対策7選」（2026-05-14）★同カテゴリー
+[internal_linker] H3マッチ割り当て「帰国後すぐに始める就活準備チェックリスト」→「転職後の自信喪失、30代なら誰でも経験する！原因と克服法を徹底解説」（2026-05-06）★同カテゴリー
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['AI副業の稼ぎ方【初心者向け】ChatGPTで月5万円を目指', 'クラウドワークス初心者の始め方・稼ぎ方完全ガイド！登録から最', 'IT転職は未経験30代でも現実的？成功するための完全ロードマ', '経理に転職！未経験から成功する5つのポイントと必要な資格・勉', '薬剤師の転職相談はどこでできる？無料で使えるサービスと成功の', '転職後の自信喪失、30代なら誰でも経験する！原因と克服法を徹', '簿記1級転職で有利になる理由と年収・求人・未経験からの可能性', '梅雨で仕事のやる気が出ない！原因と今日から使える対策7選']
+[wordpress] タグ設定: ['既卒就職', '留学', '帰国後就活', 'キャリア形成', '転職・就職']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 775) → https://hataraku-navi.com/wp-admin/post.php?post=775&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Minimal flat design with laptop, passport, calendar, upward chart, lightbulb, checkmarks and coins in soft pastel pink, mint, and cream tones, kawaii business aesthetic.
+Soft pastel gradient background: gentle blush pink, cream and ivory tones, warm neutral atmosphere, feminine and sophisticated, airy and bright.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Study Abroad After Graduation Works" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行69 「既卒 留学 就職」→ 投稿済み (2026/05/25, ID:775) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「既卒から留学して就職できる？成功するための現実的な進め方」
+2026-05-25 05:05:58 [INFO] [post] WP投稿完了: ID=775 → https://hataraku-navi.com/wp-admin/post.php?post=775&action=edit
+2026-05-25 05:05:58 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-25 05:05:58 [INFO] [hataraku] [1/1] ✅ 完了: 「既卒から留学して就職できる？成功するための現実的な進め方」
+2026-05-25 05:05:58 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-25 05:05:58 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hataraku limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #775 既卒から留学して就職できる？成功するための現実的な進め方
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] はた楽ナビ向けキャリア型バナーで生成します
+[IMAGE] career template: document_desk
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1608KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260525_050644_codex_hataraku_career_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 776)
+[codex-eyecatch] featured image 設定完了: media_id=776
+[codex-eyecatch] 編集URL: https://hataraku-navi.com/wp-admin/post.php?post=775&action=edit
+2026-05-25 05:06:49 [INFO] 
+============================================================
+2026-05-25 05:06:49 [INFO] 【全体サマリー】
+2026-05-25 05:06:49 [INFO]   ブログ数  : 1件
+2026-05-25 05:06:49 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-25 05:06:49 [INFO]   所要時間  : 406.2秒
+2026-05-25 05:06:49 [INFO]   ✅ [hataraku] 既卒 留学 就職 → 既卒から留学して就職できる？成功するための現実的な進め方
+2026-05-25 05:06:49 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=775&action=edit
+2026-05-25 05:06:49 [INFO] ============================================================
+===== [HATARAKU] 記事生成終了: 2026-05-25 05:06:50 / exit=0 =====

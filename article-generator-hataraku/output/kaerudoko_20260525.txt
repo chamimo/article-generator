@@ -1,0 +1,124 @@
+===== [KAERUDOKO] 実行開始: 2026-05-25 04:40:00 =====
+2026-05-25 04:40:02 [INFO] ============================================================
+2026-05-25 04:40:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-25 04:40:02 [INFO] ============================================================
+2026-05-25 04:40:02 [INFO] 対象ブログ: ['kaerudoko']
+2026-05-25 04:40:03 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-25 04:40:03 [INFO] === どこで売ってるナビ (kaerudoko.com) 処理開始 ===
+2026-05-25 04:40:03 [INFO] ════════════════════════════════════════════════════════════
+2026-05-25 04:40:03 [INFO]   genre            : ショッピング・購入場所・買い物情報
+2026-05-25 04:40:03 [INFO]   fact_check       : True
+2026-05-25 04:40:03 [INFO]   article_type_mix : True
+2026-05-25 04:40:03 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-25 04:40:03 [INFO]   article_count    : 1  dry_run: False
+2026-05-25 04:40:07 [INFO] [kaerudoko] ブログ設定・メディア人格を読み込みました
+2026-05-25 04:40:09 [WARNING] [kaerudoko] ⚠️  アフィリ案件: 0件 — 登録がないため汎用記事を生成します
+2026-05-25 04:40:09 [INFO] [wp] 記事取得: 計65件 (publish=65)
+2026-05-25 04:40:09 [INFO] [kaerudoko] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.6, 'trend': 0.2, 'monetize': 0.2})
+2026-05-25 04:40:11 [INFO] [fetch] サブKW紐付け: 369件 → 45記事に統合
+2026-05-25 04:40:11 [INFO] [fetch] [キーワード] メインKW: 81件（親KW+生成待ち）  サブKW除外: 369件（統合対象）  投稿済みスキップ: 74件  aim内訳: [aim:50, claude:31]
+2026-05-25 04:40:11 [INFO] [dup_check] 優先候補: 81件 {'aim': 50, 'claude': 31} を先頭評価
+2026-05-25 04:40:11 [INFO] [dup_check] シート承認済みスキップ: 「ピュレグミ プレミアム 売ってない」（親KW+生成待ちのため重複チェック免除）
+2026-05-25 04:40:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=81件, 要求=1件)
+2026-05-25 04:40:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-25 04:40:11 [INFO] [select]   1. 「ピュレグミ プレミアム 売ってない」 vol=0 seo=N/A comp=N/A
+2026-05-25 04:40:11 [INFO] [kaerudoko] LONGTAIL選定: 1件
+2026-05-25 04:40:11 [INFO] [kaerudoko] 候補: 81件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.3185 / 1時間: $0.3185  (上限 日次$10.00 / 時間$5.00)  全体: $0.3185(¥48) / 1記事
+2026-05-25 04:40:11 [INFO] [api_guard] 本日の使用量: $0.3185 / ¥48 (3回呼び出し)
+2026-05-25 04:40:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-25 04:40:11 [INFO] [kaerudoko] [1/1] [LONGTAIL] 「ピュレグミ プレミアム 売ってない」 vol=0 ★AIM
+2026-05-25 04:40:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-25 04:40:11 [INFO] [generate] 生成開始: 「ピュレグミ プレミアム 売ってない」(vol:0) fact_check=True target_length=7,295字  サブKW:2件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「ピュレグミ プレミアム 売ってない」(vol:0) [7,295字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.3185 / 1時間: $0.3185  (上限 日次$10.00 / 時間$5.00)  全体: $0.3185(¥48) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=116 out=200 → $0.0009  (lsi:ピュレグミ プレミアム 売ってない)
+[api_guard] 本日の使用量: $0.3194 / ¥47 (1086回呼び出し)
+[article_generator] 共起語: ピュレグミ プレミアム 販売終了、ピュレグミ プレミアム 廃盤、ピュレグミ プレミアム 在庫なし、ピュレグミ プレミアム...
+[article_generator] サブKW候補: 2件 (ピュレグミ プレミアム 再販〜)
+[api_guard] ✅ 本日: $0.3194 / 1時間: $0.3194  (上限 日次$10.00 / 時間$5.00)  全体: $0.3194(¥48) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=183 out=604 → $0.0026  (kw_research:ピュレグミ プレミアム 売ってない)
+[api_guard] 本日の使用量: $0.3220 / ¥48 (1087回呼び出し)
+[article_generator] サジェスト: ピュレグミ プレミアム 売ってない 理由・ピュレグミ プレミアム 在庫・ピュレグミ プレミアム どこで買える...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.3220 / 1時間: $0.3220  (上限 日次$10.00 / 時間$5.00)  全体: $0.3220(¥48) / 1記事
+[api_guard] 記録: claude-sonnet-4-6 in=14913 out=12753 → $0.2360  (article:ピュレグミ プレミアム 売ってない)
+[api_guard] 本日の使用量: $0.5580 / ¥83 (1088回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of shopping bag, laptop, stars, ch
+[imagefx] タイトル(英): Puregel Premium Unavailable Solutions
+[article_generator] 完了: 「ピュレグミ プレミアムが売ってない理由と今すぐ買える方法まとめ」 カテゴリ: 未設定(-) タグ: ['ピュレグミ', 'グミ', 'お菓子 どこで売ってる', '販売終了 お菓子', '通販 グミ']
+2026-05-25 04:43:35 [INFO] [generate] 完了: 「ピュレグミ プレミアムが売ってない理由と今すぐ買える方法まとめ」
+2026-05-25 04:43:35 [WARNING] [quality] 品質チェック: ❌4件NG / ⚠️1件警告 / 「ピュレグミ プレミアムが売ってない理由と今すぐ買える方法まとめ」
+2026-05-25 04:43:35 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [1, 3, 4, 5, 6, 7] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-25 04:43:35 [WARNING] [quality]   ❌ □ 一人称体験談: 一人称体験談が0箇所しかありません（2〜3箇所必要）。「実際に使ってみたところ〜」「試してみて感じたのは〜」など自然な体験文を2〜3箇所追加してください。
+2026-05-25 04:43:35 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（かもしれません。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-25 04:43:35 [WARNING] [quality]   ⚠️  □ 外部ソースリンク: 外部リンクはありますが、Google公式・官公庁など信頼性の高いソースへの言及があるとE-E-A-Tが向上します。
+2026-05-25 04:43:35 [WARNING] [quality]   ❌ □ メタディスクリプション: メタディスクリプションが短すぎます（73字）。80〜120字に拡充してください。
+2026-05-25 04:43:35 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-25 04:43:35 [INFO] [post] 投稿方式: publish
+[category_selector] カテゴリ取得: 6件
+[category_selector] 新規カテゴリ提案: 「グミ・キャンディ」
+[category_selector] カテゴリ新規作成: 「グミ・キャンディ」(ID=393)
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Empty pastel shelf with missing candy gum product, soft gradient background, fla...
+[image_generator] 完了 (74KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260525_044346_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 794)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: ピュレグミ プレミアムが売ってない理由｜廃盤・販売終了の真相
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration of shopping locations with pastel-colored storefronts, ...
+[image_generator] 完了 (63KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260525_044359_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 795)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: ピュレグミ プレミアムが今すぐ買える場所｜通販・実店舗の在庫
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful gummy candies arranged in a circle with soft pastel gradient background...
+[image_generator] 完了 (104KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260525_044412_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 796)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: ピュレグミ プレミアムの代わりになるおすすめ類似グミ商品
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful gummy candies with question mark symbols, soft pastel gradient backgrou...
+[image_generator] 完了 (57KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260525_044425_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 797)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: puregummy-premium-where-to-buy-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration with pastel gradient background featuring gummy candy i...
+[image_generator] 完了 (56KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260525_044438_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 798)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: puregummy-premium-where-to-buy-summary.jpg
+[internal_linker] 公開済み記事取得: 65件
+[internal_linker] 内部リンク選定完了: 計0件 (成約:0 / 案件関連:0 / 同親KW+補完:0)
+[internal_linker] 関連記事なし・内部リンクなし
+[wordpress] タグ設定: ['ピュレグミ', 'グミ', 'お菓子 どこで売ってる', '販売終了 お菓子', '通販 グミ']
+[wordpress] 投稿方式: publish
+[wordpress] 投稿完了 (ID: 799) → https://kaerudoko.com/wp-admin/post.php?post=799&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行16 「ピュレグミ プレミアム 売ってない」→ 投稿済み (2026/05/25, ID:799) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「ピュレグミ プレミアムが売ってない理由と今すぐ買える方法まと」
+2026-05-25 04:44:49 [INFO] [post] WP投稿完了: ID=799 → https://kaerudoko.com/wp-admin/post.php?post=799&action=edit
+2026-05-25 04:44:49 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-25 04:44:49 [INFO] [kaerudoko] [1/1] ✅ 完了: 「ピュレグミ プレミアムが売ってない理由と今すぐ買える方法まとめ」
+2026-05-25 04:44:49 [INFO] [kaerudoko] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-25 04:44:49 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=kaerudoko limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #799 ピュレグミ プレミアムが売ってない理由と今すぐ買える方法まとめ
+[codex-eyecatch] 既存ライブラリ画像を選択: search=ピュレグミ media_id=798
+[codex-eyecatch] 既存ライブラリ画像を featured image に設定: media_id=798
+[codex-eyecatch] 編集URL: https://kaerudoko.com/wp-admin/post.php?post=799&action=edit
+2026-05-25 04:44:56 [INFO] 
+============================================================
+2026-05-25 04:44:56 [INFO] 【全体サマリー】
+2026-05-25 04:44:56 [INFO]   ブログ数  : 1件
+2026-05-25 04:44:56 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-25 04:44:56 [INFO]   所要時間  : 293.5秒
+2026-05-25 04:44:56 [INFO]   ✅ [kaerudoko] ピュレグミ プレミアム 売ってない → ピュレグミ プレミアムが売ってない理由と今すぐ買える方法まとめ
+2026-05-25 04:44:56 [INFO]        https://kaerudoko.com/wp-admin/post.php?post=799&action=edit
+2026-05-25 04:44:56 [INFO] ============================================================
+===== [KAERUDOKO] 記事生成終了: 2026-05-25 04:44:56 / exit=0 =====
