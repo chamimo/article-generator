@@ -1,0 +1,146 @@
+===== [HIDA-NO-OMOIDE] 実行開始: 2026-05-25 05:30:00 =====
+2026-05-25 05:30:03 [INFO] ============================================================
+2026-05-25 05:30:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-25 05:30:03 [INFO] ============================================================
+2026-05-25 05:30:03 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-25 05:30:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-25 05:30:04 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-25 05:30:04 [INFO] ════════════════════════════════════════════════════════════
+2026-05-25 05:30:04 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-25 05:30:04 [INFO]   fact_check       : True
+2026-05-25 05:30:04 [INFO]   article_type_mix : True
+2026-05-25 05:30:04 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-25 05:30:04 [INFO]   article_count    : 1  dry_run: False
+2026-05-25 05:30:07 [INFO] [hida-no-omoide] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] 飛騨の思い出 / 「ASP案件マスター 」: 3件
+[asp_fetcher]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+[asp_fetcher]   [999] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+[asp_fetcher]   [999] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+2026-05-25 05:30:09 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-25 05:30:09 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-25 05:30:09 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-25 05:30:09 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-25 05:30:11 [INFO] [wp] 記事取得: 計46件 (draft=7 / publish=39)
+2026-05-25 05:30:11 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-25 05:30:13 [INFO] [fetch] サブKW紐付け: 87件 → 9記事に統合
+2026-05-25 05:30:13 [INFO] [fetch] [キーワード] メインKW: 37件（親KW+生成待ち）  サブKW除外: 87件（統合対象）  投稿済みスキップ: 78件  aim内訳: [aim:13, add:5, claude:19]
+2026-05-25 05:30:13 [INFO] [dup_check] 優先候補: 37件 {'aim': 13, 'add': 5, 'claude': 19} を先頭評価
+2026-05-25 05:30:13 [INFO] [dup_check] シート承認済みスキップ: 「高山 観光 徒歩で回れる範囲」（親KW+生成待ちのため重複チェック免除）
+2026-05-25 05:30:13 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=37件, 要求=1件)
+2026-05-25 05:30:13 [INFO] [select] 1件選定 (要求=1件)
+2026-05-25 05:30:13 [INFO] [select]   1. 「高山 観光 徒歩で回れる範囲」 vol=0 seo=N/A comp=N/A
+2026-05-25 05:30:13 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-25 05:30:13 [INFO] [hida-no-omoide] 候補: 37件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.8544 / 1時間: $0.2964  (上限 日次$10.00 / 時間$5.00)  全体: $0.8544(¥128) / 3記事
+2026-05-25 05:30:13 [INFO] [api_guard] 本日の使用量: $0.8544 / ¥128 (9回呼び出し)
+2026-05-25 05:30:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-25 05:30:13 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「高山 観光 徒歩で回れる範囲」 vol=0 ★AIM
+2026-05-25 05:30:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-25 05:30:13 [INFO] [generate] 生成開始: 「高山 観光 徒歩で回れる範囲」(vol:0) fact_check=True target_length=7,859字  サブKW:5件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「高山 観光 徒歩で回れる範囲」(vol:0) [7,859字 / H3:14〜18本 / FAQ:8〜10問]
+[api_guard] ✅ 本日: $0.8544 / 1時間: $0.2964  (上限 日次$10.00 / 時間$5.00)  全体: $0.8544(¥128) / 3記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=116 out=133 → $0.0006  (lsi:高山 観光 徒歩で回れる範囲)
+[api_guard] 本日の使用量: $0.8550 / ¥128 (1092回呼び出し)
+[article_generator] 共起語: 高山古い町並み、飛騨高山観光、高山朝市、高山駅から徒歩、高山観光所要時間、高山日帰り観光、高山散策ルート、高山観光マップ...
+[article_generator] サブKW候補: 5件 (高山 観光 車なしで行ける場所〜)
+[api_guard] ✅ 本日: $0.8550 / 1時間: $0.2970  (上限 日次$10.00 / 時間$5.00)  全体: $0.8550(¥128) / 3記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=183 out=607 → $0.0026  (kw_research:高山 観光 徒歩で回れる範囲)
+[api_guard] 本日の使用量: $0.8576 / ¥128 (1093回呼び出し)
+[article_generator] サジェスト: 高山 観光 徒歩で回れる範囲 コース・高山 観光 徒歩 半日・高山 観光 徒歩 モデルコース...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.8576 / 1時間: $0.2996  (上限 日次$10.00 / 時間$5.00)  全体: $0.8576(¥129) / 3記事
+[api_guard] 記録: claude-sonnet-4-6 in=15355 out=17248 → $0.3048  (article:高山 観光 徒歩で回れる範囲)
+[api_guard] 本日の使用量: $1.1624 / ¥174 (1094回呼び出し)
+[imagefx] 背景:B / ビジュアル:Cute flat icons of walking shoes, map pins, clock,
+[imagefx] タイトル(英): Mountain Sightseeing Walking Routes
+[article_generator] 完了: 「高山観光は徒歩で回れる！半日〜1日コースと所要時間の目安」 カテゴリ: 未設定(-) タグ: ['飛騨高山観光', '高山散策', '高山古い町並み', '飛騨旅行', '高山モデルコース']
+2026-05-25 05:35:05 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-25 05:35:05 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「飛騨高山の小説」(ID:555)
+[api_guard] ✅ 本日: $1.1624 / 1時間: $0.6044  (上限 日次$10.00 / 時間$5.00)  全体: $1.1624(¥174) / 4記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=376 out=36 → $0.0004  (maps:高山 観光 徒歩で回れる範囲)
+[api_guard] 本日の使用量: $1.1628 / ¥174 (1095回呼び出し)
+[maps_embedder] ✅ 地図挿入: mode=search / query=飛騨高山 観光スポット 徒歩
+2026-05-25 05:35:07 [INFO] [generate] 完了: 「高山観光は徒歩で回れる！半日〜1日コースと所要時間の目安」
+2026-05-25 05:35:07 [WARNING] [quality] 品質チェック: ❌5件NG / ⚠️1件警告 / 「高山観光は徒歩で回れる！半日〜1日コースと所要時間の目安」
+2026-05-25 05:35:07 [WARNING] [quality]   ❌ □ 冒頭定義文: 冒頭段落に定義文が見つかりません。「高山とは、○○です。」形式の定義文を最初の文として追加してください。
+2026-05-25 05:35:07 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-25 05:35:07 [WARNING] [quality]   ❌ □ 一人称体験談: 一人称体験談が0箇所しかありません（2〜3箇所必要）。「実際に使ってみたところ〜」「試してみて感じたのは〜」など自然な体験文を2〜3箇所追加してください。
+2026-05-25 05:35:07 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（かもしれません。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-25 05:35:07 [WARNING] [quality]   ⚠️  □ 外部ソースリンク: 外部リンクはありますが、Google公式・官公庁など信頼性の高いソースへの言及があるとE-E-A-Tが向上します。
+2026-05-25 05:35:07 [WARNING] [quality]   ❌ □ メタディスクリプション: メタディスクリプションが短すぎます（79字）。80〜120字に拡充してください。
+2026-05-25 05:35:07 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-25 05:35:07 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 23件
+[category_selector] 「高山 観光 徒歩で回れる範囲」→ 飛騨高山・古川観光(11) score=4
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#高山): takayama-red-bridge-origin-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 高山観光で徒歩で回れる範囲はどのくらい？距離と時間の目安のイメージ画像
+[wordpress] H2画像[2] ライブラリ選択 (#高山): takayama-nakabashi-history-eyecatch.jpg
+[wordpress] H2画像[2] ライブラリALT更新: 高山観光の半日・1日徒歩モデルコースを歩いてみようのイメージ画像
+[wordpress] H2画像[3] ライブラリ選択 (#高山): takayama-lunch-local-popular-restaurants-eyecatch.jpg
+[wordpress] H2画像[3] ライブラリALT更新: 高山を徒歩で回るときに知っておきたい立ち寄りスポットと注意点のイメージ画像
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration with pastel colors showing a winding mountain trail m...
+[image_generator] 完了 (40KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260525_053519_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 597)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: takayama-kanko-toho-range-faq.jpg
+[wordpress] H3画像[まとめ] 見出し見つからずスキップ
+[internal_linker] 公開済み記事取得: 39件
+[internal_linker] 同カテゴリー: 1件選定（同カテゴリー:1件 / 関連度60%+新しさ40%）
+[internal_linker] 関連補完（親KW絞り込み）: 7件選定（同カテゴリー:0件 / 関連度60%+新しさ40%）
+[internal_linker] 内部リンク選定完了: 計8件 (成約:0 / 案件関連:0 / 同親KW+補完:8)
+[internal_linker] 低関連性 7件をフッターへ: ['飛騨高山 古い町並み散策の完全ガイド｜モデルコース', '高山の川・朝の静かな風景を楽しむ完全ガイド｜宮川・', '飛騨高山朝市の楽しみ方完全ガイド｜時間・グルメ・お', '高山の赤い橋の名前と由来を簡単に解説！飛騨高山を代', '春慶塗のお土産人気商品おすすめ7選｜高山・岐阜で選', '高山の冬タイヤ必要条件を解説！標高・気温・規制まと', '高山の川×夕方が落ち着く理由と絶景スポット5選｜飛']
+[internal_linker] H3マッチ割り当て「高山駅から主要スポットまでの徒歩距離と所」→「飛騨古川 昔の町並み見どころ完全ガイド｜散策・カフェ・朝市まで」（2026-05-01）★同カテゴリー
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 7件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:1 / 末尾リスト:7)
+[internal_linker] 内部リンク 8件 挿入: ['飛騨古川 昔の町並み見どころ完全ガイド｜散策・カフェ・朝市ま', '飛騨高山 古い町並み散策の完全ガイド｜モデルコース・グルメ・', '高山の川・朝の静かな風景を楽しむ完全ガイド｜宮川・散歩コース', '飛騨高山朝市の楽しみ方完全ガイド｜時間・グルメ・お土産まで徹', '高山の赤い橋の名前と由来を簡単に解説！飛騨高山を代表する観光', '春慶塗のお土産人気商品おすすめ7選｜高山・岐阜で選ぶ伝統漆工', '高山の冬タイヤ必要条件を解説！標高・気温・規制まとめ', '高山の川×夕方が落ち着く理由と絶景スポット5選｜飛騨の癒し旅']
+[wordpress] タグ設定: ['飛騨高山観光', '高山散策', '高山古い町並み', '飛騨旅行', '高山モデルコース']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 598) → https://hida-no-omoide.com/wp-admin/post.php?post=598&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of walking shoes, map pins, clock, mountain silhouettes, and checkmarks in soft pastel pink, mint, and cream tones with minimal design style.
+Soft pastel gradient background: gentle blush pink, cream and ivory tones, warm neutral atmosphere, feminine and sophisticated, airy and bright.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Mountain Sightseeing Walking Routes" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行43 「高山 観光 徒歩で回れる範囲」→ 投稿済み (2026/05/25, ID:598) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「高山観光は徒歩で回れる！半日〜1日コースと所要時間の目安」
+2026-05-25 05:35:30 [INFO] [post] WP投稿完了: ID=598 → https://hida-no-omoide.com/wp-admin/post.php?post=598&action=edit
+2026-05-25 05:35:30 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-25 05:35:30 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「高山観光は徒歩で回れる！半日〜1日コースと所要時間の目安」
+2026-05-25 05:35:30 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-25 05:35:30 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hida-no-omoide limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #598 高山観光は徒歩で回れる！半日〜1日コースと所要時間の目安
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 飛騨の思い出向け・旅メディア型バナーで生成します
+[IMAGE] hida template: market_walk
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (2110KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260525_053615_codex_hida_travel_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 599)
+[codex-eyecatch] featured image 設定完了: media_id=599
+[codex-eyecatch] 編集URL: https://hida-no-omoide.com/wp-admin/post.php?post=598&action=edit
+2026-05-25 05:36:18 [INFO] 
+============================================================
+2026-05-25 05:36:18 [INFO] 【全体サマリー】
+2026-05-25 05:36:18 [INFO]   ブログ数  : 1件
+2026-05-25 05:36:18 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-25 05:36:18 [INFO]   所要時間  : 375.6秒
+2026-05-25 05:36:18 [INFO]   ✅ [hida-no-omoide] 高山 観光 徒歩で回れる範囲 → 高山観光は徒歩で回れる！半日〜1日コースと所要時間の目安
+2026-05-25 05:36:18 [INFO]        https://hida-no-omoide.com/wp-admin/post.php?post=598&action=edit
+2026-05-25 05:36:18 [INFO] ============================================================
+===== [HIDA-NO-OMOIDE] 記事生成終了: 2026-05-25 05:36:19 / exit=0 =====

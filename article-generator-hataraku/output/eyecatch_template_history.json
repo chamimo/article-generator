@@ -14,7 +14,6 @@
     "right_person"
   ],
   "hida": [
-    "old_house_cafe",
     "letter_story",
     "pet_travel",
     "quiet_letters",
@@ -25,7 +24,8 @@
     "ryokan_room",
     "market_walk",
     "town_morning",
-    "ryokan_room"
+    "ryokan_room",
+    "market_walk"
   ],
   "curiosity": [
     "notebook_closeup",
