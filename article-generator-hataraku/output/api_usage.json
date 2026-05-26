@@ -10949,6 +10949,106 @@
       "output_tokens": 36,
       "cost_usd": 0.000445,
       "label": "maps:高山 観光 徒歩で回れる範囲"
+    },
+    {
+      "timestamp": "2026-05-25T19:20:14.414124+00:00",
+      "date": "2026-05-25",
+      "hour": "2026-05-25T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 80,
+      "cost_usd": 0.000409,
+      "label": "lsi:ゲーム 回線 遅い"
+    },
+    {
+      "timestamp": "2026-05-25T19:20:19.018505+00:00",
+      "date": "2026-05-25",
+      "hour": "2026-05-25T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 633,
+      "cost_usd": 0.002674,
+      "label": "kw_research:ゲーム 回線 遅い"
+    },
+    {
+      "timestamp": "2026-05-25T19:24:16.341968+00:00",
+      "date": "2026-05-25",
+      "hour": "2026-05-25T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 17026,
+      "output_tokens": 15341,
+      "cost_usd": 0.281193,
+      "label": "article:ゲーム 回線 遅い"
+    },
+    {
+      "timestamp": "2026-05-25T20:00:14.782852+00:00",
+      "date": "2026-05-25",
+      "hour": "2026-05-25T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 98,
+      "cost_usd": 0.000479,
+      "label": "lsi:既卒 推薦 就職"
+    },
+    {
+      "timestamp": "2026-05-25T20:00:18.603428+00:00",
+      "date": "2026-05-25",
+      "hour": "2026-05-25T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 619,
+      "cost_usd": 0.002617,
+      "label": "kw_research:既卒 推薦 就職"
+    },
+    {
+      "timestamp": "2026-05-25T20:04:25.760516+00:00",
+      "date": "2026-05-25",
+      "hour": "2026-05-25T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15561,
+      "output_tokens": 15896,
+      "cost_usd": 0.285123,
+      "label": "article:既卒 推薦 就職"
+    },
+    {
+      "timestamp": "2026-05-25T20:30:16.322484+00:00",
+      "date": "2026-05-25",
+      "hour": "2026-05-25T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 117,
+      "output_tokens": 81,
+      "cost_usd": 0.000418,
+      "label": "lsi:宮川朝市 行き方 徒歩ルート"
+    },
+    {
+      "timestamp": "2026-05-25T20:30:20.907768+00:00",
+      "date": "2026-05-25",
+      "hour": "2026-05-25T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 184,
+      "output_tokens": 653,
+      "cost_usd": 0.002759,
+      "label": "kw_research:宮川朝市 行き方 徒歩ルート"
+    },
+    {
+      "timestamp": "2026-05-25T20:34:05.493817+00:00",
+      "date": "2026-05-25",
+      "hour": "2026-05-25T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15169,
+      "output_tokens": 13704,
+      "cost_usd": 0.251067,
+      "label": "article:宮川朝市 行き方 徒歩ルート"
+    },
+    {
+      "timestamp": "2026-05-25T20:34:10.669694+00:00",
+      "date": "2026-05-25",
+      "hour": "2026-05-25T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 386,
+      "output_tokens": 29,
+      "cost_usd": 0.000425,
+      "label": "maps:宮川朝市 行き方 徒歩ルート"
     }
   ],
   "events": [

@@ -14,7 +14,6 @@
     "right_person"
   ],
   "hida": [
-    "letter_story",
     "pet_travel",
     "quiet_letters",
     "letter_story",
@@ -25,7 +24,8 @@
     "market_walk",
     "town_morning",
     "ryokan_room",
-    "market_walk"
+    "market_walk",
+    "town_morning"
   ],
   "curiosity": [
     "notebook_closeup",
