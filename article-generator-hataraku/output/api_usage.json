@@ -11049,6 +11049,106 @@
       "output_tokens": 29,
       "cost_usd": 0.000425,
       "label": "maps:宮川朝市 行き方 徒歩ルート"
+    },
+    {
+      "timestamp": "2026-05-26T19:20:26.868313+00:00",
+      "date": "2026-05-26",
+      "hour": "2026-05-26T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 117,
+      "output_tokens": 128,
+      "cost_usd": 0.000606,
+      "label": "lsi:楽器の買取屋さん 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-26T19:20:31.053226+00:00",
+      "date": "2026-05-26",
+      "hour": "2026-05-26T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 184,
+      "output_tokens": 606,
+      "cost_usd": 0.002571,
+      "label": "kw_research:楽器の買取屋さん 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-26T19:23:51.945866+00:00",
+      "date": "2026-05-26",
+      "hour": "2026-05-26T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 17923,
+      "output_tokens": 13408,
+      "cost_usd": 0.254889,
+      "label": "article:楽器の買取屋さん 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-26T20:00:13.976849+00:00",
+      "date": "2026-05-26",
+      "hour": "2026-05-26T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 107,
+      "output_tokens": 94,
+      "cost_usd": 0.000462,
+      "label": "lsi:既卒 就職時期"
+    },
+    {
+      "timestamp": "2026-05-26T20:00:17.559442+00:00",
+      "date": "2026-05-26",
+      "hour": "2026-05-26T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 174,
+      "output_tokens": 521,
+      "cost_usd": 0.002223,
+      "label": "kw_research:既卒 就職時期"
+    },
+    {
+      "timestamp": "2026-05-26T20:04:50.717404+00:00",
+      "date": "2026-05-26",
+      "hour": "2026-05-26T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15561,
+      "output_tokens": 17192,
+      "cost_usd": 0.304563,
+      "label": "article:既卒 就職時期"
+    },
+    {
+      "timestamp": "2026-05-26T20:30:20.874830+00:00",
+      "date": "2026-05-26",
+      "hour": "2026-05-26T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 90,
+      "cost_usd": 0.000452,
+      "label": "lsi:高山 お土産 夕方でも買える 店"
+    },
+    {
+      "timestamp": "2026-05-26T20:30:24.603742+00:00",
+      "date": "2026-05-26",
+      "hour": "2026-05-26T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 513,
+      "cost_usd": 0.002198,
+      "label": "kw_research:高山 お土産 夕方でも買える 店"
+    },
+    {
+      "timestamp": "2026-05-26T20:34:56.450615+00:00",
+      "date": "2026-05-26",
+      "hour": "2026-05-26T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15466,
+      "output_tokens": 16498,
+      "cost_usd": 0.293868,
+      "label": "article:高山 お土産 夕方でも買える 店"
+    },
+    {
+      "timestamp": "2026-05-26T20:35:02.098743+00:00",
+      "date": "2026-05-26",
+      "hour": "2026-05-26T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 385,
+      "output_tokens": 35,
+      "cost_usd": 0.000448,
+      "label": "maps:高山 お土産 夕方でも買える 店"
     }
   ],
   "events": [

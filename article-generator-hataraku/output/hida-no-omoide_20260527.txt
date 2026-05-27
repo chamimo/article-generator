@@ -1,0 +1,166 @@
+===== [HIDA-NO-OMOIDE] 実行開始: 2026-05-27 05:30:00 =====
+2026-05-27 05:30:02 [INFO] ============================================================
+2026-05-27 05:30:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-27 05:30:02 [INFO] ============================================================
+2026-05-27 05:30:02 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-27 05:30:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-27 05:30:04 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-27 05:30:04 [INFO] ════════════════════════════════════════════════════════════
+2026-05-27 05:30:04 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-27 05:30:04 [INFO]   fact_check       : True
+2026-05-27 05:30:04 [INFO]   article_type_mix : True
+2026-05-27 05:30:04 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-27 05:30:04 [INFO]   article_count    : 1  dry_run: False
+2026-05-27 05:30:13 [INFO] [hida-no-omoide] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] 飛騨の思い出 / 「ASP案件マスター 」: 3件
+[asp_fetcher]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+[asp_fetcher]   [999] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+[asp_fetcher]   [999] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+2026-05-27 05:30:15 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-27 05:30:15 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-27 05:30:15 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-27 05:30:15 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-27 05:30:17 [INFO] [wp] 記事取得: 計48件 (draft=9 / publish=39)
+2026-05-27 05:30:17 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-27 05:30:18 [INFO] [fetch] サブKW紐付け: 87件 → 8記事に統合
+2026-05-27 05:30:18 [INFO] [fetch] [キーワード] メインKW: 35件（親KW+生成待ち）  サブKW除外: 87件（統合対象）  投稿済みスキップ: 80件  aim内訳: [aim:11, add:5, claude:19]
+2026-05-27 05:30:18 [INFO] [dup_check] 優先候補: 35件 {'aim': 11, 'add': 5, 'claude': 19} を先頭評価
+2026-05-27 05:30:18 [INFO] [dup_check] シート承認済みスキップ: 「高山 お土産 夕方でも買える 店」（親KW+生成待ちのため重複チェック免除）
+2026-05-27 05:30:18 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=35件, 要求=1件)
+2026-05-27 05:30:18 [INFO] [select] 1件選定 (要求=1件)
+2026-05-27 05:30:18 [INFO] [select]   1. 「高山 お土産 夕方でも買える 店」 vol=0 seo=N/A comp=N/A
+2026-05-27 05:30:18 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-27 05:30:18 [INFO] [hida-no-omoide] 候補: 35件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.5653 / 1時間: $0.3072  (上限 日次$10.00 / 時間$5.00)  全体: $0.5653(¥85) / 2記事
+2026-05-27 05:30:18 [INFO] [api_guard] 本日の使用量: $0.5653 / ¥85 (6回呼び出し)
+2026-05-27 05:30:18 [INFO] ────────────────────────────────────────────────────────────
+2026-05-27 05:30:18 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「高山 お土産 夕方でも買える 店」 vol=0 ★AIM
+2026-05-27 05:30:18 [INFO] ────────────────────────────────────────────────────────────
+2026-05-27 05:30:18 [INFO] [generate] 生成開始: 「高山 お土産 夕方でも買える 店」(vol:0) fact_check=True target_length=7,225字  サブKW:18件  誘導リンク:0件
+[article_generator] 記事構成生成中: 「高山 お土産 夕方でも買える 店」(vol:0) [7,225字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.5653 / 1時間: $0.3072  (上限 日次$10.00 / 時間$5.00)  全体: $0.5653(¥85) / 2記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=115 out=90 → $0.0005  (lsi:高山 お土産 夕方でも買える 店)
+[api_guard] 本日の使用量: $0.5658 / ¥84 (1112回呼び出し)
+[article_generator] 共起語: 高山駅、飛騨高山、営業時間、コンビニ、夜間営業、古い町並み、土産物店、駅前、みたらし団子、 sake、飛騨牛、朴葉味噌、...
+[article_generator] サブKW候補: 18件 (飛騨高山 お土産 買うタイミング〜)
+[api_guard] ✅ 本日: $0.5658 / 1時間: $0.3077  (上限 日次$10.00 / 時間$5.00)  全体: $0.5658(¥85) / 2記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=182 out=513 → $0.0022  (kw_research:高山 お土産 夕方でも買える 店)
+[api_guard] 本日の使用量: $0.5680 / ¥85 (1113回呼び出し)
+[article_generator] サジェスト: 高山 お土産 夕方・高山 お土産 夜間営業・高山 お土産 営業時間...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.5680 / 1時間: $0.3099  (上限 日次$10.00 / 時間$5.00)  全体: $0.5680(¥85) / 2記事
+[api_guard] 記録: claude-sonnet-4-6 in=15466 out=16498 → $0.2939  (article:高山 お土産 夕方でも買える 店)
+[api_guard] 本日の使用量: $0.8618 / ¥129 (1114回呼び出し)
+[imagefx] 背景:A / ビジュアル:Cute flat icons of shopping bag, clock, store buil
+[imagefx] タイトル(英): Takayama Souvenir Shops Evening Hours
+[article_generator] 完了: 「高山のお土産を夕方でも買える店5選｜夜間営業・駅前・コンビニ情報まとめ」 カテゴリ: 未設定(-) タグ: ['飛騨高山', '高山お土産', '高山観光', '飛騨旅行', '高山駅周辺']
+2026-05-27 05:35:00 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-27 05:35:00 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「飛騨高山の小説」(ID:555)
+[api_guard] ✅ 本日: $0.8618 / 1時間: $0.6038  (上限 日次$10.00 / 時間$5.00)  全体: $0.8618(¥129) / 3記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=385 out=35 → $0.0004  (maps:高山 お土産 夕方でも買える 店)
+[api_guard] 本日の使用量: $0.8623 / ¥129 (1115回呼び出し)
+[maps_embedder] ✅ 地図挿入: mode=search / query=飛騨高山 お土産 夜間営業
+2026-05-27 05:35:02 [INFO] [generate] 完了: 「高山のお土産を夕方でも買える店5選｜夜間営業・駅前・コンビニ情報まとめ」
+2026-05-27 05:35:02 [WARNING] [quality] 品質チェック: ❌2件NG / ⚠️2件警告 / 「高山のお土産を夕方でも買える店5選｜夜間営業・駅前・コンビニ情報まとめ」
+2026-05-27 05:35:02 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [7] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-27 05:35:02 [WARNING] [quality]   ❌ □ 一人称体験談: 一人称体験談が1箇所しかありません（2〜3箇所必要）。「実際に使ってみたところ〜」「試してみて感じたのは〜」など自然な体験文を2〜3箇所追加してください。
+2026-05-27 05:35:02 [WARNING] [quality]   ⚠️  □ 外部ソースリンク: 外部リンクはありますが、Google公式・官公庁など信頼性の高いソースへの言及があるとE-E-A-Tが向上します。
+2026-05-27 05:35:02 [WARNING] [quality]   ⚠️  □ CV導線: CTA（ボタン・登録誘導・比較表への誘導）が見当たりません。読者を次のアクションに導くCTAを1〜2箇所追加するとCV率が向上します。
+2026-05-27 05:35:02 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 23件
+[category_selector] 「高山 お土産 夕方でも買える 店」→ 飛騨グルメ・お土産(227) score=9
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#高山): takayama-red-bridge-origin-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 夕方以降に高山でお土産が買える場所はどこ？のイメージ画像
+[wordpress] H2画像[2] ライブラリ選択 (#高山): takayama-nakabashi-history-eyecatch-1.jpg
+[wordpress] H2画像[2] ライブラリALT更新: 高山お土産の人気商品と、夕方でも買いやすい選び方のイメージ画像
+[wordpress] H2画像[3] ライブラリ選択 (#高山): takayama-river-evening-scenery-eyecatch.jpg
+[wordpress] H2画像[3] ライブラリALT更新: 帰路を慌てないための「高山お土産タイムプラン」のイメージ画像
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Mountain souvenir shop at dusk with open storefront, colorful gift packages, que...
+[image_generator] 完了 (87KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260527_053513_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 608)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: takayama-omiyage-yugata-kaeeru-mise-faq.jpg
+[wordpress] H3画像[まとめ] 見出し見つからずスキップ
+[internal_linker] 公開済み記事取得: 39件
+[internal_linker] 同カテゴリー: 1件選定（同カテゴリー:1件 / 関連度60%+新しさ40%）
+[internal_linker] キーワードトークンマッチ: 5件選定（同カテゴリー:0件 / 関連度60%+新しさ40%）
+[internal_linker] 関連補完（親KW絞り込み）: 2件選定（同カテゴリー:0件 / 関連度60%+新しさ40%）
+[internal_linker] 内部リンク選定完了: 計8件 (成約:0 / 案件関連:0 / 同親KW+補完:8)
+[internal_linker] 低関連性 7件をフッターへ: ['高山のお土産をネットで購入する方法・おすすめ通販サ', '春慶塗のお土産人気商品おすすめ7選｜高山・岐阜で選', '五平餅はお土産にできる？日持ち・通販・買える場所を', '朴葉味噌のお土産は日持ちする？賞味期限・保存方法を', '飛騨高山朝市の楽しみ方完全ガイド｜時間・グルメ・お', '高山の川×夕方が落ち着く理由と絶景スポット5選｜飛', '高山の冬タイヤ必要条件を解説！標高・気温・規制まと']
+[internal_linker] H3マッチ割り当て「古い町並みの土産物店——何時まで開いてい」→「赤かぶ漬けお土産の日持ちは？保存方法・選び方・通販まで解説」（2026-05-20）★同カテゴリー
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 7件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:1 / 末尾リスト:7)
+[internal_linker] 内部リンク 8件 挿入: ['赤かぶ漬けお土産の日持ちは？保存方法・選び方・通販まで解説', '高山のお土産をネットで購入する方法・おすすめ通販サイト完全ガ', '春慶塗のお土産人気商品おすすめ7選｜高山・岐阜で選ぶ伝統漆工', '五平餅はお土産にできる？日持ち・通販・買える場所を徹底解説', '朴葉味噌のお土産は日持ちする？賞味期限・保存方法を徹底解説', '飛騨高山朝市の楽しみ方完全ガイド｜時間・グルメ・お土産まで徹', '高山の川×夕方が落ち着く理由と絶景スポット5選｜飛騨の癒し旅', '高山の冬タイヤ必要条件を解説！標高・気温・規制まとめ']
+[wordpress] タグ設定: ['飛騨高山', '高山お土産', '高山観光', '飛騨旅行', '高山駅周辺']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 609) → https://hida-no-omoide.com/wp-admin/post.php?post=609&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of shopping bag, clock, store building, gift box and star, soft pastel pink, mint and cream tones, minimal style
+Clean modern workspace background: minimalist desk with soft natural light, warm beige and white tones, elegant and uncluttered, lifestyle photography aesthetic.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Takayama Souvenir Shops Evening Hours" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行141 「高山 お土産 夕方でも買える 店」→ 投稿済み (2026/05/27, ID:609) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「高山のお土産を夕方でも買える店5選｜夜間営業・駅前・コンビニ」
+2026-05-27 05:35:24 [INFO] [post] WP投稿完了: ID=609 → https://hida-no-omoide.com/wp-admin/post.php?post=609&action=edit
+2026-05-27 05:35:24 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「高山のお土産を夕方でも買える店5選｜夜間営業・駅前・コンビニ情報まとめ」
+2026-05-27 05:35:24 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-27 05:35:24 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hida-no-omoide limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #609 高山のお土産を夕方でも買える店5選｜夜間営業・駅前・コンビニ情報まとめ
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 飛騨の思い出向け・旅メディア型バナーで生成します
+[IMAGE] hida template: travel_flatlay
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+Traceback (most recent call last):
+  File "/Users/yama/article-generator-hataraku/codex_eyecatch.py", line 277, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/yama/article-generator-hataraku/codex_eyecatch.py", line 253, in main
+    image_bytes = generate_lifestyle_eyecatch_image(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/modules/image_generator.py", line 3691, in generate_lifestyle_eyecatch_image
+    bg_bytes = _call_model(model, bg_prompt, W_EYECATCH, H_EYECATCH)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/modules/image_generator.py", line 391, in _call_model
+    return _call_openai_image(prompt)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/modules/image_generator.py", line 361, in _call_openai_image
+    resp = client.images.generate(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/openai/resources/images.py", line 997, in generate
+    return self._post(
+           ^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/openai/_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/openai/_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.BadRequestError: Error code: 400 - {'error': {'message': 'Billing hard limit has been reached.', 'type': 'billing_limit_user_error', 'param': None, 'code': 'billing_hard_limit_reached'}}
+2026-05-27 05:35:32 [INFO] 
+============================================================
+2026-05-27 05:35:32 [INFO] 【全体サマリー】
+2026-05-27 05:35:32 [INFO]   ブログ数  : 1件
+2026-05-27 05:35:32 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-27 05:35:32 [INFO]   所要時間  : 329.1秒
+2026-05-27 05:35:32 [INFO]   ✅ [hida-no-omoide] 高山 お土産 夕方でも買える 店 → 高山のお土産を夕方でも買える店5選｜夜間営業・駅前・コンビニ情報まとめ
+2026-05-27 05:35:32 [INFO]        https://hida-no-omoide.com/wp-admin/post.php?post=609&action=edit
+2026-05-27 05:35:32 [INFO] ============================================================
+===== [HIDA-NO-OMOIDE] 記事生成終了: 2026-05-27 05:35:32 / exit=0 =====
