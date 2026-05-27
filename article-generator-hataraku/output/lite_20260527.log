@@ -57,3 +57,289 @@
 2026-05-27 03:00:24 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計0件
 2026-05-27 03:00:24 [INFO]   所要時間  : 18.8秒
 2026-05-27 03:00:24 [INFO] ============================================================
+2026-05-27 04:20:03 [INFO] ============================================================
+2026-05-27 04:20:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-27 04:20:03 [INFO] ============================================================
+2026-05-27 04:20:03 [INFO] 対象ブログ: ['hapipo8']
+2026-05-27 04:20:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-27 04:20:04 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-27 04:20:04 [INFO] ════════════════════════════════════════════════════════════
+2026-05-27 04:20:04 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-05-27 04:20:04 [INFO]   fact_check       : True
+2026-05-27 04:20:04 [INFO]   article_type_mix : True
+2026-05-27 04:20:04 [INFO]   stop_words       : ['2026']
+2026-05-27 04:20:04 [INFO]   article_count    : 1  dry_run: False
+2026-05-27 04:20:08 [INFO] [hapipo8] ブログ設定・メディア人格を読み込みました
+2026-05-27 04:20:09 [INFO] [hapipo8] アフィリ案件: 50件（スプレッドシート）
+2026-05-27 04:20:09 [INFO] [hapipo8]   [S] 福ちゃん → https://hapipo8.com/fukuchan
+2026-05-27 04:20:09 [INFO] [hapipo8]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori
+2026-05-27 04:20:09 [INFO] [hapipo8]   [S] フクウロ → https://hapipo8.com/fukuuro
+2026-05-27 04:20:09 [INFO] [hapipo8]   [S] メディカルフードサービス → https://hapipo8.com/medical_food
+2026-05-27 04:20:09 [INFO] [hapipo8]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-05-27 04:20:09 [INFO] [hapipo8]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman
+2026-05-27 04:20:09 [INFO] [hapipo8]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] トラベル・スタンダード・ジャパン → https://px.a8.net/svt/ejp?a8mat=4B1THV+17H122+5LKE+5ZU29
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ORBIS AMBER(オルビス アンバー) → https://px.a8.net/svt/ejp?a8mat=4B1THX+DDO2AI+1USQ+4ASX02
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] トリア → https://hapipo8.com/tria
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] nosh - ナッシュ → https://hapipo8.com/nosh
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] 快眠タイムズストア → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DRYGT6+4UHE+TRVYQ
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] NELL マットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6M5RVE+4KD8+5ZMCI
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] 咲夜レアルマットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6LKC9M+4MRW+61Z81
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] オーケンウォーター → https://px.a8.net/svt/ejp?a8mat=4B1THX+CRN0WQ+1LOO+6NMJL
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] every frecious（エブリィフレシャス） → https://px.a8.net/svt/ejp?a8mat=4B1THX+CS8GII+2B8Y+15OK2A
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] リゾバ → https://hapipo8.com/rizoba
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ダイブ → https://hapipo8.com/dive
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] 工場求人ワールド → https://px.a8.net/svt/ejp?a8mat=4B1O1T+EGYV5U+5S9S+5YJRM
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ソフトバンク光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KARLU+3HKU+25FF81
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] BIGLOBE WiMAX +5G → https://px.a8.net/svt/ejp?a8mat=4B1THS+2TTMYY+B4+2BDBUB
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] フレッツ光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KW4WA+348K+1TJE9U
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] AI英会話アプリ【スピーク】 → https://hapipo8.com/speak
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] もぐワン ペットフード → https://hapipo8.com/moguwan
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] DMM 生成AI CAMP → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ポニークリーニング → https://px.a8.net/svt/ejp?a8mat=4B1THV+5QLST6+4N08+5Z6WY
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] 体験型カタログギフト【EXETIME】 → https://hapipo8.com/exetime
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] GMOとくとくBB → https://px.a8.net/svt/ejp?a8mat=4B1THS+2UF2KQ+50+3H48S2
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] Amazon Prime Video → https://amzn.to/4tbKPVa
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] Pollet → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] カレントボディ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DFGD3U+54TM+5YJRM
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] アプリ接客キャスト → https://px.a8.net/svt/ejp?a8mat=4B1O1T+FKUWOY+3P1G+NTRMQ
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ヴィーナスウォーカー → https://px.a8.net/svt/ejp?a8mat=4B1THV+6632JE+58KC+5YRHE
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] WEBCOACH → https://px.a8.net/svt/ejp?a8mat=4B1V1W+DW4O7U+5EVK+5YZ75
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ポケットリサーチ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DUXMU2+58KC+BWVTE
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ラボル カード払い → https://px.a8.net/svt/ejp?a8mat=4B1THS+3TJN9M+40JM+1NJZN5
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] クロスワンルーム → https://px.a8.net/svt/ejp?a8mat=4B1THX+DPKQE2+4EZ2+BYLJL
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] Mr.シリーズ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CLOOUY+1USQ+2Z8T76
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] IBJ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CF4X7E+FOG+4MPSTE
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ユアマイスター → https://px.a8.net/svt/ejp?a8mat=4B1THX+BZNNH6+4HQS+5YJRM
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] TOSSY → https://px.a8.net/svt/ejp?a8mat=4B1THS+2V0I6I+1WP2+1HLNLE
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ABLENET VPS → https://px.a8.net/svt/ejp?a8mat=4B1THS+2VLXSA+4NIK+5Z6WX
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] BIGLOBE光 → https://px.a8.net/svt/ejp?a8mat=4B3LMR+4JQL96+3SPO+7LW1F7
+2026-05-27 04:20:09 [INFO] [hapipo8]   [B] 食楽膳 → https://hapipo8.com/shokurakuzen
+2026-05-27 04:20:09 [INFO] [hapipo8]   [?] 楽器買取 福ちゃん → https://hapipo8.com/gakki-fukucyan
+2026-05-27 04:20:09 [INFO] [hapipo8]   [?] ニーゴ・リユース → https://hapipo8.com/25reuse
+2026-05-27 04:20:12 [INFO] [wp] 記事取得: 計175件 (publish=175)
+2026-05-27 04:20:12 [INFO] [hapipo8] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.4, 'monetize': 0.1})
+2026-05-27 04:20:13 [DEBUG] [fetch] シート「絞り込みKW」: 604行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③']
+2026-05-27 04:20:13 [INFO] [fetch] サブKW紐付け: 165件 → 47記事に統合
+2026-05-27 04:20:13 [INFO] [fetch] [キーワード] メインKW: 299件（親KW+生成待ち）  サブKW除外: 165件（統合対象）  投稿済みスキップ: 140件  aim内訳: [aim:55, add:219, claude:25]
+2026-05-27 04:20:13 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-27 04:20:13 [INFO] [dup_check] 優先候補: 299件 {'aim': 55, 'add': 219, 'claude': 25} を先頭評価
+2026-05-27 04:20:13 [INFO] [dup_check] シート承認済みスキップ: 「楽器の買取屋さん 口コミ 評判」（親KW+生成待ちのため重複チェック免除）
+2026-05-27 04:20:13 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=299件, 要求=1件)
+2026-05-27 04:20:13 [INFO] [select] 1件選定 (要求=1件)
+2026-05-27 04:20:13 [INFO] [select]   1. 「楽器の買取屋さん 口コミ 評判」 vol=0 seo=N/A comp=N/A
+2026-05-27 04:20:13 [INFO] [hapipo8] LONGTAIL選定: 1件
+2026-05-27 04:20:13 [INFO] [hapipo8] 候補: 299件 / 選定: 1件 / 生成予定: 1件
+2026-05-27 04:20:13 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-27 04:20:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-27 04:20:13 [INFO] [hapipo8] [1/1] [LONGTAIL] 「楽器の買取屋さん 口コミ 評判」 vol=0 ★AIM
+2026-05-27 04:20:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-27 04:20:13 [INFO] [generate] 生成開始: 「楽器の買取屋さん 口コミ 評判」(vol:0) fact_check=True target_length=7,660字  誘導リンク:0件
+2026-05-27 04:23:55 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-27 04:23:55 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「楽器の買取屋さん」(ID:3757)
+2026-05-27 04:23:55 [INFO] [generate] 完了: 「楽器の買取屋さんの口コミ・評判を正直にまとめてみた【2026年最新】」
+2026-05-27 04:23:55 [WARNING] [quality] 品質チェック: ❌4件NG / ⚠️0件警告 / 「楽器の買取屋さんの口コミ・評判を正直にまとめてみた【2026年最新】」
+2026-05-27 04:23:55 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [1, 2, 3, 4, 5, 6, 7, 8, 9] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-27 04:23:55 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（かもしれません。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-27 04:23:55 [WARNING] [quality]   ❌ □ 外部ソースリンク: 外部リンクが1つもありません。信頼性の高いソース（公式サイト・官公庁・大手メディア等）へのリンクを1〜3件追加してください。
+2026-05-27 04:23:55 [WARNING] [quality]   ❌ □ メタディスクリプション: メタディスクリプションが短すぎます（79字）。80〜120字に拡充してください。
+2026-05-27 04:23:55 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-27 04:23:55 [INFO] [post] 投稿方式: publish
+2026-05-27 04:25:01 [INFO] [post] WP投稿完了: ID=4328 → https://hapipo8.com/wp-admin/post.php?post=4328&action=edit
+2026-05-27 04:25:01 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-27 04:25:01 [INFO] [hapipo8] [1/1] ✅ 完了: 「楽器の買取屋さんの口コミ・評判を正直にまとめてみた【2026年最新】」
+2026-05-27 04:25:01 [INFO] [hapipo8] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-27 04:25:01 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hapipo8 limit=1
+2026-05-27 04:25:08 [INFO] 
+============================================================
+2026-05-27 04:25:08 [INFO] 【全体サマリー】
+2026-05-27 04:25:08 [INFO]   ブログ数  : 1件
+2026-05-27 04:25:08 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-27 04:25:08 [INFO]   所要時間  : 305.0秒
+2026-05-27 04:25:08 [INFO]   ✅ [hapipo8] 楽器の買取屋さん 口コミ 評判 → 楽器の買取屋さんの口コミ・評判を正直にまとめてみた【2026年最新】
+2026-05-27 04:25:08 [INFO]        https://hapipo8.com/wp-admin/post.php?post=4328&action=edit
+2026-05-27 04:25:08 [INFO] ============================================================
+2026-05-27 05:00:02 [INFO] ============================================================
+2026-05-27 05:00:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-27 05:00:02 [INFO] ============================================================
+2026-05-27 05:00:02 [INFO] 対象ブログ: ['hataraku']
+2026-05-27 05:00:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-27 05:00:04 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-27 05:00:04 [INFO] ════════════════════════════════════════════════════════════
+2026-05-27 05:00:04 [INFO]   genre            : 転職・副業・キャリア
+2026-05-27 05:00:04 [INFO]   fact_check       : True
+2026-05-27 05:00:04 [INFO]   article_type_mix : True
+2026-05-27 05:00:04 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-27 05:00:04 [INFO]   article_count    : 1  dry_run: False
+2026-05-27 05:00:07 [INFO] [hataraku] ブログ設定・メディア人格を読み込みました
+2026-05-27 05:00:08 [INFO] [hataraku] アフィリ案件: 21件（スプレッドシート）
+2026-05-27 05:00:08 [INFO] [hataraku]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive
+2026-05-27 05:00:08 [INFO] [hataraku]   [S] ラボル → https://hataraku-navi.com/labol
+2026-05-27 05:00:08 [INFO] [hataraku]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it
+2026-05-27 05:00:08 [INFO] [hataraku]   [S] TechGo → https://hataraku-navi.com/techgo
+2026-05-27 05:00:08 [INFO] [hataraku]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi
+2026-05-27 05:00:08 [INFO] [hataraku]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy
+2026-05-27 05:00:08 [INFO] [hataraku]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen
+2026-05-27 05:00:08 [INFO] [hataraku]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo
+2026-05-27 05:00:08 [INFO] [hataraku]   [S] 保育専門求人サイト ほいく畑 → https://hataraku-navi.com/hoikubatake
+2026-05-27 05:00:08 [INFO] [hataraku]   [A] FREENANCE → https://hataraku-navi.com/freenance
+2026-05-27 05:00:08 [INFO] [hataraku]   [A] Midworks → https://hataraku-navi.com/midworks
+2026-05-27 05:00:08 [INFO] [hataraku]   [A] マスメディアン → https://hataraku-navi.com/massmedia
+2026-05-27 05:00:08 [INFO] [hataraku]   [A] atGP → https://hataraku-navi.com/atgp
+2026-05-27 05:00:08 [INFO] [hataraku]   [A] atGPジョブトレ IT・Web → https://hataraku-navi.com/atgp_job
+2026-05-27 05:00:08 [INFO] [hataraku]   [A] リゾートバイトダイブ → https://hataraku-navi.com/dive
+2026-05-27 05:00:08 [INFO] [hataraku]   [A] 日本マンパワー → https://hataraku-navi.com/manpower
+2026-05-27 05:00:08 [INFO] [hataraku]   [A] クラウドワークス → https://hataraku-navi.com/crowdworks
+2026-05-27 05:00:08 [INFO] [hataraku]   [?] 保育エイド → https://hataraku-navi.com/hoiku-aid
+2026-05-27 05:00:08 [INFO] [hataraku]   [?] 保育バランス → https://hataraku-navi.com/hoiku-balance
+2026-05-27 05:00:08 [INFO] [hataraku]   [?] 保育メトロ → https://hataraku-navi.com/hoiku-metro
+2026-05-27 05:00:08 [INFO] [hataraku]   [?] 20代の転職相談所 → https://hataraku-navi.com/20tensyoku
+2026-05-27 05:00:10 [INFO] [wp] 記事取得: 計58件 (publish=58)
+2026-05-27 05:00:10 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-27 05:00:11 [DEBUG] [fetch] シート「絞り込みKW」: 4608行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-27 05:00:11 [INFO] [fetch] サブKW紐付け: 4202件 → 169記事に統合
+2026-05-27 05:00:11 [INFO] [fetch] [キーワード] メインKW: 318件（親KW+生成待ち）  サブKW除外: 4202件（統合対象）  投稿済みスキップ: 82件  aim内訳: [aim:318]
+2026-05-27 05:00:11 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-27 05:00:11 [INFO] [dup_check] 優先候補: 318件 {'aim': 318} を先頭評価
+2026-05-27 05:00:11 [INFO] [dup_check] シート承認済みスキップ: 「既卒 就職時期」（親KW+生成待ちのため重複チェック免除）
+2026-05-27 05:00:11 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=318件, 要求=1件)
+2026-05-27 05:00:11 [INFO] [select] 1件選定 (要求=1件)
+2026-05-27 05:00:11 [INFO] [select]   1. 「既卒 就職時期」 vol=0 seo=N/A comp=N/A
+2026-05-27 05:00:11 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-27 05:00:11 [INFO] [hataraku] 候補: 318件 / 選定: 1件 / 生成予定: 1件
+2026-05-27 05:00:11 [INFO] [api_guard] 本日の使用量: $0.2581 / ¥39 (3回呼び出し)
+2026-05-27 05:00:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-27 05:00:11 [INFO] [hataraku] [1/1] [LONGTAIL] 「既卒 就職時期」 vol=0 ★AIM
+2026-05-27 05:00:11 [INFO] ────────────────────────────────────────────────────────────
+2026-05-27 05:00:11 [INFO] [generate] 生成開始: 「既卒 就職時期」(vol:0) fact_check=True target_length=7,573字  サブKW:1件  誘導リンク:0件
+2026-05-27 05:04:54 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-27 05:04:54 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「atGPジョブトレ IT・Web」(ID:569)
+2026-05-27 05:04:55 [INFO] [generate] 完了: 「既卒の就職時期はいつがベスト？有利な時期と準備の進め方」
+2026-05-27 05:04:55 [WARNING] [quality] 品質チェック: ❌2件NG / ⚠️0件警告 / 「既卒の就職時期はいつがベスト？有利な時期と準備の進め方」
+2026-05-27 05:04:55 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（かもしれません。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-27 05:04:55 [WARNING] [quality]   ❌ □ 外部ソースリンク: 外部リンクが1つもありません。信頼性の高いソース（公式サイト・官公庁・大手メディア等）へのリンクを1〜3件追加してください。
+2026-05-27 05:04:55 [INFO] [post] 投稿方式: draft
+2026-05-27 05:06:10 [INFO] [post] WP投稿完了: ID=800 → https://hataraku-navi.com/wp-admin/post.php?post=800&action=edit
+2026-05-27 05:06:10 [INFO] [hataraku] [1/1] ✅ 完了: 「既卒の就職時期はいつがベスト？有利な時期と準備の進め方」
+2026-05-27 05:06:10 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-27 05:06:10 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hataraku limit=1
+2026-05-27 05:06:20 [INFO] 
+============================================================
+2026-05-27 05:06:20 [INFO] 【全体サマリー】
+2026-05-27 05:06:20 [INFO]   ブログ数  : 1件
+2026-05-27 05:06:20 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-27 05:06:20 [INFO]   所要時間  : 377.2秒
+2026-05-27 05:06:20 [INFO]   ✅ [hataraku] 既卒 就職時期 → 既卒の就職時期はいつがベスト？有利な時期と準備の進め方
+2026-05-27 05:06:20 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=800&action=edit
+2026-05-27 05:06:20 [INFO] ============================================================
+2026-05-27 05:30:02 [INFO] ============================================================
+2026-05-27 05:30:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-27 05:30:02 [INFO] ============================================================
+2026-05-27 05:30:02 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-27 05:30:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-27 05:30:04 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-27 05:30:04 [INFO] ════════════════════════════════════════════════════════════
+2026-05-27 05:30:04 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-27 05:30:04 [INFO]   fact_check       : True
+2026-05-27 05:30:04 [INFO]   article_type_mix : True
+2026-05-27 05:30:04 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-27 05:30:04 [INFO]   article_count    : 1  dry_run: False
+2026-05-27 05:30:13 [INFO] [hida-no-omoide] ブログ設定・メディア人格を読み込みました
+2026-05-27 05:30:15 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-27 05:30:15 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-27 05:30:15 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-27 05:30:15 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-27 05:30:17 [INFO] [wp] 記事取得: 計48件 (draft=9 / publish=39)
+2026-05-27 05:30:17 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-27 05:30:18 [DEBUG] [fetch] シート「絞り込みKW」: 202行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-27 05:30:18 [INFO] [fetch] サブKW紐付け: 87件 → 8記事に統合
+2026-05-27 05:30:18 [INFO] [fetch] [キーワード] メインKW: 35件（親KW+生成待ち）  サブKW除外: 87件（統合対象）  投稿済みスキップ: 80件  aim内訳: [aim:11, add:5, claude:19]
+2026-05-27 05:30:18 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-27 05:30:18 [INFO] [dup_check] 優先候補: 35件 {'aim': 11, 'add': 5, 'claude': 19} を先頭評価
+2026-05-27 05:30:18 [INFO] [dup_check] シート承認済みスキップ: 「高山 お土産 夕方でも買える 店」（親KW+生成待ちのため重複チェック免除）
+2026-05-27 05:30:18 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=35件, 要求=1件)
+2026-05-27 05:30:18 [INFO] [select] 1件選定 (要求=1件)
+2026-05-27 05:30:18 [INFO] [select]   1. 「高山 お土産 夕方でも買える 店」 vol=0 seo=N/A comp=N/A
+2026-05-27 05:30:18 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-27 05:30:18 [INFO] [hida-no-omoide] 候補: 35件 / 選定: 1件 / 生成予定: 1件
+2026-05-27 05:30:18 [INFO] [api_guard] 本日の使用量: $0.5653 / ¥85 (6回呼び出し)
+2026-05-27 05:30:18 [INFO] ────────────────────────────────────────────────────────────
+2026-05-27 05:30:18 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「高山 お土産 夕方でも買える 店」 vol=0 ★AIM
+2026-05-27 05:30:18 [INFO] ────────────────────────────────────────────────────────────
+2026-05-27 05:30:18 [INFO] [generate] 生成開始: 「高山 お土産 夕方でも買える 店」(vol:0) fact_check=True target_length=7,225字  サブKW:18件  誘導リンク:0件
+2026-05-27 05:35:00 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-27 05:35:00 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「飛騨高山の小説」(ID:555)
+2026-05-27 05:35:02 [INFO] [generate] 完了: 「高山のお土産を夕方でも買える店5選｜夜間営業・駅前・コンビニ情報まとめ」
+2026-05-27 05:35:02 [WARNING] [quality] 品質チェック: ❌2件NG / ⚠️2件警告 / 「高山のお土産を夕方でも買える店5選｜夜間営業・駅前・コンビニ情報まとめ」
+2026-05-27 05:35:02 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [7] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-27 05:35:02 [WARNING] [quality]   ❌ □ 一人称体験談: 一人称体験談が1箇所しかありません（2〜3箇所必要）。「実際に使ってみたところ〜」「試してみて感じたのは〜」など自然な体験文を2〜3箇所追加してください。
+2026-05-27 05:35:02 [WARNING] [quality]   ⚠️  □ 外部ソースリンク: 外部リンクはありますが、Google公式・官公庁など信頼性の高いソースへの言及があるとE-E-A-Tが向上します。
+2026-05-27 05:35:02 [WARNING] [quality]   ⚠️  □ CV導線: CTA（ボタン・登録誘導・比較表への誘導）が見当たりません。読者を次のアクションに導くCTAを1〜2箇所追加するとCV率が向上します。
+2026-05-27 05:35:02 [INFO] [post] 投稿方式: draft
+2026-05-27 05:35:24 [INFO] [post] WP投稿完了: ID=609 → https://hida-no-omoide.com/wp-admin/post.php?post=609&action=edit
+2026-05-27 05:35:24 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「高山のお土産を夕方でも買える店5選｜夜間営業・駅前・コンビニ情報まとめ」
+2026-05-27 05:35:24 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-27 05:35:24 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hida-no-omoide limit=1
+2026-05-27 05:35:32 [INFO] 
+============================================================
+2026-05-27 05:35:32 [INFO] 【全体サマリー】
+2026-05-27 05:35:32 [INFO]   ブログ数  : 1件
+2026-05-27 05:35:32 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-27 05:35:32 [INFO]   所要時間  : 329.1秒
+2026-05-27 05:35:32 [INFO]   ✅ [hida-no-omoide] 高山 お土産 夕方でも買える 店 → 高山のお土産を夕方でも買える店5選｜夜間営業・駅前・コンビニ情報まとめ
+2026-05-27 05:35:32 [INFO]        https://hida-no-omoide.com/wp-admin/post.php?post=609&action=edit
+2026-05-27 05:35:32 [INFO] ============================================================
+2026-05-27 06:00:03 [INFO] ============================================================
+2026-05-27 06:00:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-27 06:00:03 [INFO] ============================================================
+2026-05-27 06:00:03 [INFO] 対象ブログ: ['web-study1']
+2026-05-27 06:00:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-27 06:00:04 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-05-27 06:00:04 [INFO] ════════════════════════════════════════════════════════════
+2026-05-27 06:00:04 [INFO]   genre            : オンライン学習・プログラミング・資格・スキルアップ
+2026-05-27 06:00:04 [INFO]   fact_check       : True
+2026-05-27 06:00:04 [INFO]   article_type_mix : True
+2026-05-27 06:00:04 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-27 06:00:04 [INFO]   article_count    : 1  dry_run: False
+2026-05-27 06:00:08 [INFO] [web-study1] ブログ設定・メディア人格を読み込みました
+2026-05-27 06:00:09 [INFO] [web-study1] アフィリ案件: 28件（スプレッドシート）
+2026-05-27 06:00:09 [INFO] [web-study1]   [S] 無学年式オンライン教材 のすらら → https://web-study1.com/surara
+2026-05-27 06:00:09 [INFO] [web-study1]   [S] ヒューマンアカデミー → https://web-study1.com/haa.athuman
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] こどもチャレンジ → https://web-study1.com/shimajiro
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] こどもチャレンジ baby → https://web-study1.com/shimajiro-baby
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] Filmora → https://web-study1.com/filmora
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] スマイルゼミ → https://web-study1.com/smile-zemi
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] 進研ゼミ　高校講座 → https://web-study1.com/sinkenzemi-koukou
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] 進研ゼミ　中学講座 → https://web-study1.com/sinkenzem-cyugaku
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] 進研ゼミ　小学講座 → https://web-study1.com/shinkenzemi-syougakukouza
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] スタディサプリ中学講座 → https://web-study1.com/studysapuri-chugaku
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] Z会 → https://web-study1.com/zkai
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] スタディサプリ高校・大学 受験講座 → https://web-study1.com/studysapur-koukou
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] DMM WEBCAMP  学習コース_大学生向け就活対策コース → https://web-study1.com/dmm_webcamp_shukatu
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] Tech Kids School → https://web-study1.com/tech-kids
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] 【RISU算数】(19-1031) → https://web-study1.com/risu
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] スタディサプリENGLISH（新日常英会話コース） → https://web-study1.com/eigosapuri
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] スタディサプリEnglish　ビジネス英語コース → https://web-study1.com/eigosapuri
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] DMM WEBCAMP プログラミングコース → https://web-study1.com/web-camp_programing
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] freenance → https://web-study1.com/freenance
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] Udemy → https://web-study1.com/udemy
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] DMM WEBCAMP WEBデザインコース → https://web-study1.com/dmm_webcamp
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] DMM WEBCAMP Pythonコース → https://web-study1.com/dmm_webcamp_python
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] AI英会話アプリ【スピーク】 → https://web-study1.com/speak
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] スタディサプリ小学講座 → https://web-study1.com/sutasapu-syougaku
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] スタディサプリENGLISH（TOEIC対策コース） → https://web-study1.com/human-english-toeic
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] アンズテック → https://web-study1.com/anzutech
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] DMM WEBCAMP 学習コース → https://web-study1.com/dmm-webcamp-gakusyu
+2026-05-27 06:00:09 [INFO] [web-study1]   [?] キズキ共育塾 → https://web-study1.com/kizuki
+2026-05-27 06:00:10 [INFO] [wp] 記事取得: 計43件 (draft=1 / publish=42)
+2026-05-27 06:00:10 [INFO] [web-study1] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.2, 'monetize': 0.3})
+2026-05-27 06:00:11 [DEBUG] [fetch] シート「絞り込みKW」: 261行 / ヘッダー: ['', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要', '体験談']
+2026-05-27 06:00:11 [INFO] [fetch] [キーワード] メインKW: 0件（親KW+生成待ち）  サブKW: 0件（vol<30）

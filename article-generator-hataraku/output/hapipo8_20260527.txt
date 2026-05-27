@@ -1,0 +1,196 @@
+===== [HAPIPO8] 実行開始: 2026-05-27 04:20:01 =====
+2026-05-27 04:20:03 [INFO] ============================================================
+2026-05-27 04:20:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-27 04:20:03 [INFO] ============================================================
+2026-05-27 04:20:03 [INFO] 対象ブログ: ['hapipo8']
+2026-05-27 04:20:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-27 04:20:04 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-27 04:20:04 [INFO] ════════════════════════════════════════════════════════════
+2026-05-27 04:20:04 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-05-27 04:20:04 [INFO]   fact_check       : True
+2026-05-27 04:20:04 [INFO]   article_type_mix : True
+2026-05-27 04:20:04 [INFO]   stop_words       : ['2026']
+2026-05-27 04:20:04 [INFO]   article_count    : 1  dry_run: False
+2026-05-27 04:20:08 [INFO] [hapipo8] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] 気になることブログ / 「ASP案件マスター」: 50件
+[asp_fetcher]   [S] 福ちゃん → https://hapipo8.com/fukuchan / 着物買取・女性
+[asp_fetcher]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori / 即現金化・出張査定
+[asp_fetcher]   [S] フクウロ → https://hapipo8.com/fukuuro / 洋服買取 / 断捨離 / ブランド買取
+[asp_fetcher]   [S] メディカルフードサービス → https://hapipo8.com/medical_food / 腎臓病 宅配食 / 健康管理
+[asp_fetcher]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki / 宅配食 おすすめ 忙しい / 料理 時間ない 共働き
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile / 審査なし・スマホ契約できない・ブラックOK
+[asp_fetcher]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+
+2026-05-27 04:20:09 [INFO] [hapipo8] アフィリ案件: 50件（スプレッドシート）
+2026-05-27 04:20:09 [INFO] [hapipo8]   [S] 福ちゃん → https://hapipo8.com/fukuchan
+2026-05-27 04:20:09 [INFO] [hapipo8]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori
+2026-05-27 04:20:09 [INFO] [hapipo8]   [S] フクウロ → https://hapipo8.com/fukuuro
+2026-05-27 04:20:09 [INFO] [hapipo8]   [S] メディカルフードサービス → https://hapipo8.com/medical_food
+2026-05-27 04:20:09 [INFO] [hapipo8]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-05-27 04:20:09 [INFO] [hapipo8]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman
+2026-05-27 04:20:09 [INFO] [hapipo8]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] トラベル・スタンダード・ジャパン → https://px.a8.net/svt/ejp?a8mat=4B1THV+17H122+5LKE+5ZU29
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ORBIS AMBER(オルビス アンバー) → https://px.a8.net/svt/ejp?a8mat=4B1THX+DDO2AI+1USQ+4ASX02
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] トリア → https://hapipo8.com/tria
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] nosh - ナッシュ → https://hapipo8.com/nosh
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] 快眠タイムズストア → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DRYGT6+4UHE+TRVYQ
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] NELL マットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6M5RVE+4KD8+5ZMCI
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] 咲夜レアルマットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6LKC9M+4MRW+61Z81
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] オーケンウォーター → https://px.a8.net/svt/ejp?a8mat=4B1THX+CRN0WQ+1LOO+6NMJL
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] every frecious（エブリィフレシャス） → https://px.a8.net/svt/ejp?a8mat=4B1THX+CS8GII+2B8Y+15OK2A
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] リゾバ → https://hapipo8.com/rizoba
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ダイブ → https://hapipo8.com/dive
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] 工場求人ワールド → https://px.a8.net/svt/ejp?a8mat=4B1O1T+EGYV5U+5S9S+5YJRM
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ソフトバンク光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KARLU+3HKU+25FF81
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] BIGLOBE WiMAX +5G → https://px.a8.net/svt/ejp?a8mat=4B1THS+2TTMYY+B4+2BDBUB
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] フレッツ光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KW4WA+348K+1TJE9U
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] AI英会話アプリ【スピーク】 → https://hapipo8.com/speak
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] もぐワン ペットフード → https://hapipo8.com/moguwan
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] DMM 生成AI CAMP → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ポニークリーニング → https://px.a8.net/svt/ejp?a8mat=4B1THV+5QLST6+4N08+5Z6WY
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] 体験型カタログギフト【EXETIME】 → https://hapipo8.com/exetime
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] GMOとくとくBB → https://px.a8.net/svt/ejp?a8mat=4B1THS+2UF2KQ+50+3H48S2
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] Amazon Prime Video → https://amzn.to/4tbKPVa
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] Pollet → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] カレントボディ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DFGD3U+54TM+5YJRM
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] アプリ接客キャスト → https://px.a8.net/svt/ejp?a8mat=4B1O1T+FKUWOY+3P1G+NTRMQ
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ヴィーナスウォーカー → https://px.a8.net/svt/ejp?a8mat=4B1THV+6632JE+58KC+5YRHE
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] WEBCOACH → https://px.a8.net/svt/ejp?a8mat=4B1V1W+DW4O7U+5EVK+5YZ75
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ポケットリサーチ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DUXMU2+58KC+BWVTE
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ラボル カード払い → https://px.a8.net/svt/ejp?a8mat=4B1THS+3TJN9M+40JM+1NJZN5
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] クロスワンルーム → https://px.a8.net/svt/ejp?a8mat=4B1THX+DPKQE2+4EZ2+BYLJL
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] Mr.シリーズ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CLOOUY+1USQ+2Z8T76
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] IBJ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CF4X7E+FOG+4MPSTE
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ユアマイスター → https://px.a8.net/svt/ejp?a8mat=4B1THX+BZNNH6+4HQS+5YJRM
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] TOSSY → https://px.a8.net/svt/ejp?a8mat=4B1THS+2V0I6I+1WP2+1HLNLE
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] ABLENET VPS → https://px.a8.net/svt/ejp?a8mat=4B1THS+2VLXSA+4NIK+5Z6WX
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-27 04:20:09 [INFO] [hapipo8]   [A] BIGLOBE光 → https://px.a8.net/svt/ejp?a8mat=4B3LMR+4JQL96+3SPO+7LW1F7
+2026-05-27 04:20:09 [INFO] [hapipo8]   [B] 食楽膳 → https://hapipo8.com/shokurakuzen
+2026-05-27 04:20:09 [INFO] [hapipo8]   [?] 楽器買取 福ちゃん → https://hapipo8.com/gakki-fukucyan
+2026-05-27 04:20:09 [INFO] [hapipo8]   [?] ニーゴ・リユース → https://hapipo8.com/25reuse
+2026-05-27 04:20:12 [INFO] [wp] 記事取得: 計175件 (publish=175)
+2026-05-27 04:20:12 [INFO] [hapipo8] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.4, 'monetize': 0.1})
+2026-05-27 04:20:13 [INFO] [fetch] サブKW紐付け: 165件 → 47記事に統合
+2026-05-27 04:20:13 [INFO] [fetch] [キーワード] メインKW: 299件（親KW+生成待ち）  サブKW除外: 165件（統合対象）  投稿済みスキップ: 140件  aim内訳: [aim:55, add:219, claude:25]
+2026-05-27 04:20:13 [INFO] [dup_check] 優先候補: 299件 {'aim': 55, 'add': 219, 'claude': 25} を先頭評価
+2026-05-27 04:20:13 [INFO] [dup_check] シート承認済みスキップ: 「楽器の買取屋さん 口コミ 評判」（親KW+生成待ちのため重複チェック免除）
+2026-05-27 04:20:13 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=299件, 要求=1件)
+2026-05-27 04:20:13 [INFO] [select] 1件選定 (要求=1件)
+2026-05-27 04:20:13 [INFO] [select]   1. 「楽器の買取屋さん 口コミ 評判」 vol=0 seo=N/A comp=N/A
+2026-05-27 04:20:13 [INFO] [hapipo8] LONGTAIL選定: 1件
+2026-05-27 04:20:13 [INFO] [hapipo8] 候補: 299件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+2026-05-27 04:20:13 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-27 04:20:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-27 04:20:13 [INFO] [hapipo8] [1/1] [LONGTAIL] 「楽器の買取屋さん 口コミ 評判」 vol=0 ★AIM
+2026-05-27 04:20:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-27 04:20:13 [INFO] [generate] 生成開始: 「楽器の買取屋さん 口コミ 評判」(vol:0) fact_check=True target_length=7,660字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「楽器の買取屋さん 口コミ 評判」(vol:0) [7,660字 / H3:14〜18本 / FAQ:8〜10問]
+[article_generator] 事実確認中: 「楽器の買取屋さん 口コミ 評判」
+[article_generator] 事実確認完了: 確認済み10件 / 不確か3件 / 注意4件
+  ⚠️  口コミに「査定額と実際の金額が異なった」「他店比較で30%低い」との報告が複数あり、相見積もりの実施が強く推奨されている
+  ⚠️  スタッフによる査定の質にばらつきがある可能性（ビンテージ品や専門的知識を要する楽器の査定で知識不足を指摘する口コミあり）
+  ⚠️  「どんな楽器でも買取」という広告表現が実態と異なる場合があり、事前に買取対象確認が必須
+  ⚠️  高評価口コミと低評価口コミが混在しており、個人差が大きい傾向（スタッフの態度や対応品質に関する満足度の開きが大きい）
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=117 out=128 → $0.0006  (lsi:楽器の買取屋さん 口コミ 評判)
+[api_guard] 本日の使用量: $0.0006 / ¥0 (1106回呼び出し)
+[article_generator] 共起語: 楽器買取相場、楽器買取業者比較、楽器買取おすすめ、中古楽器買取、楽器売却相場、買取査定額、楽器高価買取、ギター買取、ピア...
+[api_guard] ✅ 本日: $0.0006 / 1時間: $0.0006  (上限 日次$10.00 / 時間$5.00)  全体: $0.0006(¥0) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=184 out=606 → $0.0026  (kw_research:楽器の買取屋さん 口コミ 評判)
+[api_guard] 本日の使用量: $0.0032 / ¥0 (1107回呼び出し)
+[article_generator] サジェスト: 楽器の買取屋さん 口コミ・楽器の買取屋さん 評判・楽器の買取屋さん 査定...
+[article_generator] 検索意図: 購買直前 → トーン調整
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.0032 / 1時間: $0.0032  (上限 日次$10.00 / 時間$5.00)  全体: $0.0032(¥0) / 0記事
+[api_guard] 記録: claude-sonnet-4-6 in=17923 out=13408 → $0.2549  (article:楽器の買取屋さん 口コミ 評判)
+[api_guard] 本日の使用量: $0.2581 / ¥38 (1108回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of laptop, speech bubbles, stars, 
+[imagefx] タイトル(英): Musical Instrument Shop Reviews
+[article_generator] 完了: 「楽器の買取屋さんの口コミ・評判を正直にまとめてみた【2026年最新】」 カテゴリ: 未設定(-) タグ: ['楽器買取', '楽器の買取屋さん', '楽器売却', '買取業者比較', '口コミ評判']
+2026-05-27 04:23:55 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-27 04:23:55 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「楽器の買取屋さん」(ID:3757)
+2026-05-27 04:23:55 [INFO] [generate] 完了: 「楽器の買取屋さんの口コミ・評判を正直にまとめてみた【2026年最新】」
+2026-05-27 04:23:55 [WARNING] [quality] 品質チェック: ❌4件NG / ⚠️0件警告 / 「楽器の買取屋さんの口コミ・評判を正直にまとめてみた【2026年最新】」
+2026-05-27 04:23:55 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [1, 2, 3, 4, 5, 6, 7, 8, 9] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-27 04:23:55 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（かもしれません。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-27 04:23:55 [WARNING] [quality]   ❌ □ 外部ソースリンク: 外部リンクが1つもありません。信頼性の高いソース（公式サイト・官公庁・大手メディア等）へのリンクを1〜3件追加してください。
+2026-05-27 04:23:55 [WARNING] [quality]   ❌ □ メタディスクリプション: メタディスクリプションが短すぎます（79字）。80〜120字に拡充してください。
+2026-05-27 04:23:55 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-27 04:23:55 [INFO] [post] 投稿方式: publish
+[category_selector] カテゴリ取得: 36件
+[category_selector] 「楽器の買取屋さん 口コミ 評判」→ 節約・お得情報(678) score=21
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#楽器の買取屋さん): gakki-kaitori-ya-hikaku-eyecatch.jpg
+[wordpress] H2画像[1] ライブラリALT更新: 楽器の買取屋さんの口コミ・評判、実際どうなの？のイメージ画像
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration showing musical instruments (guitar, violin, keyboard) ...
+[image_generator] 完了 (53KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260527_042407_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4324)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 楽器の買取屋さんの買取方法と申し込みの流れ
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring musical instruments with caution symbols, che...
+[image_generator] 完了 (86KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260527_042424_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4325)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 楽器の買取屋さんを使う前に知っておきたい注意点
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful musical instruments arranged in flat design style with pastel gradient ...
+[image_generator] 完了 (82KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260527_042437_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4326)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: gakki-kaitoriyasan-kuchikomi-hyoban-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Musical instruments displayed with positive review stars and checkmarks, flat de...
+[image_generator] 完了 (100KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260527_042449_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 4327)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: gakki-kaitoriyasan-kuchikomi-hyoban-summary.jpg
+[internal_linker] 公開済み記事取得: 175件
+[internal_linker] 古い記事を除外: 123件（2年以上前）→ 52件で選定
+[internal_linker] 「楽器の買取屋さん」関連記事: 1件追加
+[internal_linker] 同カテゴリー: 7件選定（同カテゴリー:7件 / 関連度60%+新しさ40%）
+[internal_linker] 製品名マッチ「楽器の買取屋さん」→ セクション3に割り当て
+[internal_linker] H3マッチ割り当て「良い口コミ：「スピードが早い」「対応が丁」→「スピーク（AI英会話アプリ）の口コミ・評判は？料金・効果・使い方まとめ」（2026-05-23）★同カテゴリー
+[internal_linker] H3マッチ割り当て「悪い口コミ：査定額の低さとスタッフ対応の」→「シェフの無添つくりおき 口コミ・評判まとめ｜料金・メニュー・味の正直レ」（2026-05-20）★同カテゴリー
+[internal_linker] H3マッチ割り当て「出張・宅配・店頭、3つの買取方法の特徴を」→「リゾバ派遣会社どれがいい？主要4社を目的別に比較してみた」（2026-05-22）★同カテゴリー
+[internal_linker] H3マッチ割り当て「査定額を少しでも上げるために、申し込み前」→「携帯料金を滞納すると契約できない？解決策と審査を通す方法を徹底解説」（2026-05-08）★同カテゴリー
+[internal_linker] H3マッチ割り当て「出張買取は関東圏外では使えないことも。エ」→「未経験からITスキルを学ぶ方法7ステップ！独学・スクール徹底比較」（2026-05-14）★同カテゴリー
+[internal_linker] H3マッチ割り当て「査定額の相場感を先に調べておくと、後悔が」→「お金なくても備蓄できる！低予算で始める食料・防災グッズの節約術」（2026-05-17）★同カテゴリー
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 1件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:7 / 末尾リスト:1)
+[internal_linker] 内部リンク 8件 挿入: ['楽器の買取屋さん比較2026年版｜どれがいい？おすすめ業者6', 'シェフの無添つくりおき 口コミ・評判まとめ｜料金・メニュー・', 'スピーク（AI英会話アプリ）の口コミ・評判は？料金・効果・使', 'リゾバ派遣会社どれがいい？主要4社を目的別に比較してみた', 'お金なくても備蓄できる！低予算で始める食料・防災グッズの節約', '未経験からITスキルを学ぶ方法7ステップ！独学・スクール徹底', '携帯料金を滞納すると契約できない？解決策と審査を通す方法を徹', 'フレッツ光とビッグローブ光の違いを徹底比較！料金・速度・乗り']
+[wordpress] タグ設定: ['楽器買取', '楽器の買取屋さん', '楽器売却', '買取業者比較', '口コミ評判']
+[wordpress] 投稿方式: publish
+[wordpress] 投稿完了 (ID: 4328) → https://hapipo8.com/wp-admin/post.php?post=4328&action=edit
+[wordpress] imagefx_prompt: 未登録（functions.phpへのスニペット追加が必要）
+[sheets_updater] 書き込み完了: 行141 「楽器の買取屋さん 口コミ 評判」→ 投稿済み (2026/05/27, ID:4328) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「楽器の買取屋さんの口コミ・評判を正直にまとめてみた【2026」
+2026-05-27 04:25:01 [INFO] [post] WP投稿完了: ID=4328 → https://hapipo8.com/wp-admin/post.php?post=4328&action=edit
+2026-05-27 04:25:01 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-27 04:25:01 [INFO] [hapipo8] [1/1] ✅ 完了: 「楽器の買取屋さんの口コミ・評判を正直にまとめてみた【2026年最新】」
+2026-05-27 04:25:01 [INFO] [hapipo8] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-27 04:25:01 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hapipo8 limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #4328 楽器の買取屋さんの口コミ・評判を正直にまとめてみた【2026年最新】
+[codex-eyecatch] 既存ライブラリ画像を選択: recent media_id=4255
+[codex-eyecatch] 既存ライブラリ画像を featured image に設定: media_id=4255
+[codex-eyecatch] 編集URL: https://hapipo8.com/wp-admin/post.php?post=4328&action=edit
+2026-05-27 04:25:08 [INFO] 
+============================================================
+2026-05-27 04:25:08 [INFO] 【全体サマリー】
+2026-05-27 04:25:08 [INFO]   ブログ数  : 1件
+2026-05-27 04:25:08 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-27 04:25:08 [INFO]   所要時間  : 305.0秒
+2026-05-27 04:25:08 [INFO]   ✅ [hapipo8] 楽器の買取屋さん 口コミ 評判 → 楽器の買取屋さんの口コミ・評判を正直にまとめてみた【2026年最新】
+2026-05-27 04:25:08 [INFO]        https://hapipo8.com/wp-admin/post.php?post=4328&action=edit
+2026-05-27 04:25:08 [INFO] ============================================================
+===== [HAPIPO8] 記事生成終了: 2026-05-27 04:25:09 / exit=0 =====
