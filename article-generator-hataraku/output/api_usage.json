@@ -11149,6 +11149,106 @@
       "output_tokens": 35,
       "cost_usd": 0.000448,
       "label": "maps:高山 お土産 夕方でも買える 店"
+    },
+    {
+      "timestamp": "2026-05-27T19:20:32.874517+00:00",
+      "date": "2026-05-27",
+      "hour": "2026-05-27T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 86,
+      "cost_usd": 0.000432,
+      "label": "lsi:トリア 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-27T19:20:36.768397+00:00",
+      "date": "2026-05-27",
+      "hour": "2026-05-27T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 576,
+      "cost_usd": 0.002446,
+      "label": "kw_research:トリア 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-27T19:24:30.199809+00:00",
+      "date": "2026-05-27",
+      "hour": "2026-05-27T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 18067,
+      "output_tokens": 14490,
+      "cost_usd": 0.271551,
+      "label": "article:トリア 口コミ 評判"
+    },
+    {
+      "timestamp": "2026-05-27T20:00:14.637498+00:00",
+      "date": "2026-05-27",
+      "hour": "2026-05-27T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 130,
+      "cost_usd": 0.000607,
+      "label": "lsi:既卒 銀行 就職"
+    },
+    {
+      "timestamp": "2026-05-27T20:00:18.375546+00:00",
+      "date": "2026-05-27",
+      "hour": "2026-05-27T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 558,
+      "cost_usd": 0.002373,
+      "label": "kw_research:既卒 銀行 就職"
+    },
+    {
+      "timestamp": "2026-05-27T20:04:38.320010+00:00",
+      "date": "2026-05-27",
+      "hour": "2026-05-27T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15538,
+      "output_tokens": 16110,
+      "cost_usd": 0.288264,
+      "label": "article:既卒 銀行 就職"
+    },
+    {
+      "timestamp": "2026-05-27T20:30:15.826611+00:00",
+      "date": "2026-05-27",
+      "hour": "2026-05-27T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 85,
+      "cost_usd": 0.000432,
+      "label": "lsi:さるぼぼ お土産 人気 理由"
+    },
+    {
+      "timestamp": "2026-05-27T20:30:19.978798+00:00",
+      "date": "2026-05-27",
+      "hour": "2026-05-27T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 593,
+      "cost_usd": 0.002518,
+      "label": "kw_research:さるぼぼ お土産 人気 理由"
+    },
+    {
+      "timestamp": "2026-05-27T20:34:30.765250+00:00",
+      "date": "2026-05-27",
+      "hour": "2026-05-27T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15421,
+      "output_tokens": 15124,
+      "cost_usd": 0.273123,
+      "label": "article:さるぼぼ お土産 人気 理由"
+    },
+    {
+      "timestamp": "2026-05-27T20:34:36.161158+00:00",
+      "date": "2026-05-27",
+      "hour": "2026-05-27T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 379,
+      "output_tokens": 19,
+      "cost_usd": 0.000379,
+      "label": "maps:さるぼぼ お土産 人気 理由"
     }
   ],
   "events": [

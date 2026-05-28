@@ -1,0 +1,179 @@
+===== [HATARAKU] 実行開始: 2026-05-28 05:00:00 =====
+2026-05-28 05:00:03 [INFO] ============================================================
+2026-05-28 05:00:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-28 05:00:03 [INFO] ============================================================
+2026-05-28 05:00:03 [INFO] 対象ブログ: ['hataraku']
+2026-05-28 05:00:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-28 05:00:05 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-28 05:00:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-28 05:00:05 [INFO]   genre            : 転職・副業・キャリア
+2026-05-28 05:00:05 [INFO]   fact_check       : True
+2026-05-28 05:00:05 [INFO]   article_type_mix : True
+2026-05-28 05:00:05 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-28 05:00:05 [INFO]   article_count    : 1  dry_run: False
+2026-05-28 05:00:08 [INFO] [hataraku] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] はた楽ナビ / 「ASP案件マスター」: 21件
+[asp_fetcher]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive / 発達障害×IT就労支援・在宅・スキル習得
+[asp_fetcher]   [S] ラボル → https://hataraku-navi.com/labol / フリーランス資金繰り・即日入金・請求書買取
+[asp_fetcher]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it / 未経験IT転職・ブラック回避・手厚い支援
+[asp_fetcher]   [S] TechGo → https://hataraku-navi.com/techgo / IT転職・年収アップ・ハイクラス
+[asp_fetcher]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi / 転職不安・無料相談・高確定率
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen / 就活・既卒支援・高EPC
+[asp_fetcher]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo / 既卒・フリーター・高卒支援
+2026-05-28 05:00:09 [INFO] [hataraku] アフィリ案件: 21件（スプレッドシート）
+2026-05-28 05:00:09 [INFO] [hataraku]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive
+2026-05-28 05:00:09 [INFO] [hataraku]   [S] ラボル → https://hataraku-navi.com/labol
+2026-05-28 05:00:09 [INFO] [hataraku]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it
+2026-05-28 05:00:09 [INFO] [hataraku]   [S] TechGo → https://hataraku-navi.com/techgo
+2026-05-28 05:00:09 [INFO] [hataraku]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi
+2026-05-28 05:00:09 [INFO] [hataraku]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy
+2026-05-28 05:00:09 [INFO] [hataraku]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen
+2026-05-28 05:00:09 [INFO] [hataraku]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo
+2026-05-28 05:00:09 [INFO] [hataraku]   [S] 保育専門求人サイト ほいく畑 → https://hataraku-navi.com/hoikubatake
+2026-05-28 05:00:09 [INFO] [hataraku]   [A] FREENANCE → https://hataraku-navi.com/freenance
+2026-05-28 05:00:09 [INFO] [hataraku]   [A] Midworks → https://hataraku-navi.com/midworks
+2026-05-28 05:00:09 [INFO] [hataraku]   [A] マスメディアン → https://hataraku-navi.com/massmedia
+2026-05-28 05:00:09 [INFO] [hataraku]   [A] atGP → https://hataraku-navi.com/atgp
+2026-05-28 05:00:09 [INFO] [hataraku]   [A] atGPジョブトレ IT・Web → https://hataraku-navi.com/atgp_job
+2026-05-28 05:00:09 [INFO] [hataraku]   [A] リゾートバイトダイブ → https://hataraku-navi.com/dive
+2026-05-28 05:00:09 [INFO] [hataraku]   [A] 日本マンパワー → https://hataraku-navi.com/manpower
+2026-05-28 05:00:09 [INFO] [hataraku]   [A] クラウドワークス → https://hataraku-navi.com/crowdworks
+2026-05-28 05:00:09 [INFO] [hataraku]   [?] 保育エイド → https://hataraku-navi.com/hoiku-aid
+2026-05-28 05:00:09 [INFO] [hataraku]   [?] 保育バランス → https://hataraku-navi.com/hoiku-balance
+2026-05-28 05:00:09 [INFO] [hataraku]   [?] 保育メトロ → https://hataraku-navi.com/hoiku-metro
+2026-05-28 05:00:09 [INFO] [hataraku]   [?] 20代の転職相談所 → https://hataraku-navi.com/20tensyoku
+2026-05-28 05:00:10 [INFO] [wp] 記事取得: 計59件 (draft=1 / publish=58)
+2026-05-28 05:00:10 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-28 05:00:12 [INFO] [fetch] サブKW紐付け: 4202件 → 168記事に統合
+2026-05-28 05:00:12 [INFO] [fetch] [キーワード] メインKW: 317件（親KW+生成待ち）  サブKW除外: 4202件（統合対象）  投稿済みスキップ: 83件  aim内訳: [aim:317]
+2026-05-28 05:00:12 [INFO] [dup_check] 優先候補: 317件 {'aim': 317} を先頭評価
+2026-05-28 05:00:12 [INFO] [dup_check] シート承認済みスキップ: 「既卒 銀行 就職」（親KW+生成待ちのため重複チェック免除）
+2026-05-28 05:00:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=317件, 要求=1件)
+2026-05-28 05:00:12 [INFO] [select] 1件選定 (要求=1件)
+2026-05-28 05:00:12 [INFO] [select]   1. 「既卒 銀行 就職」 vol=0 seo=N/A comp=N/A
+2026-05-28 05:00:12 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-28 05:00:12 [INFO] [hataraku] 候補: 317件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.2744 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.2744(¥41) / 1記事
+2026-05-28 05:00:12 [INFO] [api_guard] 本日の使用量: $0.2744 / ¥41 (3回呼び出し)
+2026-05-28 05:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-28 05:00:12 [INFO] [hataraku] [1/1] [LONGTAIL] 「既卒 銀行 就職」 vol=0 ★AIM
+2026-05-28 05:00:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-28 05:00:12 [INFO] [generate] 生成開始: 「既卒 銀行 就職」(vol:0) fact_check=True target_length=6,601字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「既卒 銀行 就職」(vol:0) [6,601字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.2744 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.2744(¥41) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=109 out=130 → $0.0006  (lsi:既卒 銀行 就職)
+[api_guard] 本日の使用量: $0.2750 / ¥41 (1119回呼び出し)
+[article_generator] 共起語: 既卒採用、銀行員になるには、第二新卒、銀行志望動機、新卒採用枠、既卒者向け求人、銀行の面接対策、既卒の就活、学歴フィルタ...
+[api_guard] ✅ 本日: $0.2750 / 1時間: $0.0006  (上限 日次$10.00 / 時間$5.00)  全体: $0.2750(¥41) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=176 out=558 → $0.0024  (kw_research:既卒 銀行 就職)
+[api_guard] 本日の使用量: $0.2774 / ¥41 (1120回呼び出し)
+[article_generator] サジェスト: 既卒 銀行 就職 難しい・既卒 銀行 就職 可能性・既卒 銀行 就職 面接...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[api_guard] ✅ 本日: $0.2774 / 1時間: $0.0030  (上限 日次$10.00 / 時間$5.00)  全体: $0.2774(¥42) / 1記事
+[api_guard] 記録: claude-sonnet-4-6 in=15538 out=16110 → $0.2883  (article:既卒 銀行 就職)
+[api_guard] 本日の使用量: $0.5657 / ¥84 (1121回呼び出し)
+[imagefx] 背景:B / ビジュアル:Minimal flat icons of laptop, coin stack, calendar
+[imagefx] タイトル(英): Career Change To Banking Possible
+[article_generator] 完了: 「既卒から銀行就職は可能？難しいと言われる理由と成功するための対策」 カテゴリ: 未設定(-) タグ: ['既卒就活', '銀行就職', '第二新卒', '転職エージェント', 'キャリア']
+2026-05-28 05:04:42 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-28 05:04:42 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「atGPジョブトレ IT・Web」(ID:569)
+2026-05-28 05:04:42 [INFO] [link_check] 死リンク除去: 1件 / チェック: 3件
+2026-05-28 05:04:42 [INFO] [generate] 完了: 「既卒から銀行就職は可能？難しいと言われる理由と成功するための対策」
+2026-05-28 05:04:43 [WARNING] [quality] 品質チェック: ❌2件NG / ⚠️0件警告 / 「既卒から銀行就職は可能？難しいと言われる理由と成功するための対策」
+2026-05-28 05:04:43 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [3] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-28 05:04:43 [WARNING] [quality]   ❌ □ 外部ソースリンク: 外部リンクが1つもありません。信頼性の高いソース（公式サイト・官公庁・大手メディア等）へのリンクを1〜3件追加してください。
+2026-05-28 05:04:43 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 21件
+[category_selector] 「既卒 銀行 就職」→ 転職・就職(269) score=12
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: A flat design illustration showing a brick wall with climbing symbols, graduated...
+[image_generator] 完了 (145KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260528_050453_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 801)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: 既卒が銀行就職で直面する壁とは
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring banking symbols, graduation cap, upward arrow...
+[image_generator] 完了 (48KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260528_050507_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 802)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: 既卒から銀行就職を成功させる具体的な対策
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring banking icons like piggy banks, credit cards,...
+[image_generator] 完了 (73KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260528_050519_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 803)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: 既卒が使える銀行就職のサポートリソース
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Flat design illustration featuring question mark icons, bank building, career pa...
+[image_generator] 完了 (52KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260528_050536_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 804)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: kisotsu-ginko-shushoku-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Pastel flat design illustration of stacked documents, checkmark badges, and upwa...
+[image_generator] 完了 (65KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260528_050548_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 805)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: kisotsu-ginko-shushoku-summary.jpg
+[internal_linker] 公開済み記事取得: 58件
+[internal_linker] 同カテゴリー: 8件選定（同カテゴリー:8件 / 関連度60%+新しさ40%）
+[internal_linker] H3マッチ割り当て「銀行の採用構造と既卒者の立ち位置」→「IT転職は未経験30代でも現実的？成功するための完全ロードマップ」（2026-05-08）★同カテゴリー
+[internal_linker] H3マッチ割り当て「「なぜ既卒なのか」という質問の重さ」→「既卒から留学して就職できる？成功するための現実的な進め方」（2026-05-25）★同カテゴリー
+[internal_linker] H3マッチ割り当て「学歴フィルターと銀行の現実」→「既卒でも推薦就職できる？成功率を上げる方法とサービス選びのポイント」（2026-05-26）★同カテゴリー
+[internal_linker] H3マッチ割り当て「年齢制限はあるのか？既卒でも諦めない目安」→「簿記1級転職で有利になる理由と年収・求人・未経験からの可能性を徹底解説」（2026-05-08）★同カテゴリー
+[internal_linker] H3マッチ割り当て「既卒採用に積極的な銀行タイプを知る」→「薬剤師の転職相談はどこでできる？無料で使えるサービスと成功のコツ」（2026-05-18）★同カテゴリー
+[internal_linker] H3マッチ割り当て「既卒向け銀行求人の探し方・エージェントの」→「梅雨で仕事のやる気が出ない！原因と今日から使える対策7選」（2026-05-14）★同カテゴリー
+[internal_linker] H3マッチ割り当て「銀行の面接対策：既卒者が準備すべきこと」→「経理に転職！未経験から成功する5つのポイントと必要な資格・勉強法」（2026-04-20）★同カテゴリー
+[internal_linker] H3マッチ割り当て「志望動機のつくり方：既卒ならではの視点を」→「キーネットワーク転職失敗の理由と対策｜口コミ・評判から学ぶ7つの教訓」（2026-05-04）★同カテゴリー
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:8 / 末尾リスト:0)
+[internal_linker] 内部リンク 8件 挿入: ['既卒から留学して就職できる？成功するための現実的な進め方', 'IT転職は未経験30代でも現実的？成功するための完全ロードマ', '経理に転職！未経験から成功する5つのポイントと必要な資格・勉', '簿記1級転職で有利になる理由と年収・求人・未経験からの可能性', 'キーネットワーク転職失敗の理由と対策｜口コミ・評判から学ぶ7', '既卒でも推薦就職できる？成功率を上げる方法とサービス選びのポ', '梅雨で仕事のやる気が出ない！原因と今日から使える対策7選', '薬剤師の転職相談はどこでできる？無料で使えるサービスと成功の']
+[wordpress] タグ設定: ['既卒就活', '銀行就職', '第二新卒', '転職エージェント', 'キャリア']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 806) → https://hataraku-navi.com/wp-admin/post.php?post=806&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Minimal flat icons of laptop, coin stack, calendar, checkmark, lightbulb and upward chart, soft pastel pink, mint and cream tones, cute business style.
+Soft pastel gradient background: gentle blush pink, cream and ivory tones, warm neutral atmosphere, feminine and sophisticated, airy and bright.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Career Change To Banking Possible" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行72 「既卒 銀行 就職」→ 投稿済み (2026/05/28, ID:806) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「既卒から銀行就職は可能？難しいと言われる理由と成功するための」
+2026-05-28 05:05:59 [INFO] [post] WP投稿完了: ID=806 → https://hataraku-navi.com/wp-admin/post.php?post=806&action=edit
+2026-05-28 05:05:59 [INFO] [hataraku] [1/1] ✅ 完了: 「既卒から銀行就職は可能？難しいと言われる理由と成功するための対策」
+2026-05-28 05:05:59 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-28 05:05:59 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hataraku limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #806 既卒から銀行就職は可能？難しいと言われる理由と成功するための対策
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] はた楽ナビ向けキャリア型バナーで生成します
+[IMAGE] career template: cafe_calm
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1611KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260528_050701_codex_hataraku_career_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 807)
+[codex-eyecatch] featured image 設定完了: media_id=807
+[codex-eyecatch] 編集URL: https://hataraku-navi.com/wp-admin/post.php?post=806&action=edit
+2026-05-28 05:07:07 [INFO] 
+============================================================
+2026-05-28 05:07:07 [INFO] 【全体サマリー】
+2026-05-28 05:07:07 [INFO]   ブログ数  : 1件
+2026-05-28 05:07:07 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-28 05:07:07 [INFO]   所要時間  : 423.6秒
+2026-05-28 05:07:07 [INFO]   ✅ [hataraku] 既卒 銀行 就職 → 既卒から銀行就職は可能？難しいと言われる理由と成功するための対策
+2026-05-28 05:07:07 [INFO]        https://hataraku-navi.com/wp-admin/post.php?post=806&action=edit
+2026-05-28 05:07:07 [INFO] ============================================================
+===== [HATARAKU] 記事生成終了: 2026-05-28 05:07:07 / exit=0 =====

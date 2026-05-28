@@ -1,0 +1,158 @@
+===== [HIDA-NO-OMOIDE] 実行開始: 2026-05-28 05:30:01 =====
+2026-05-28 05:30:04 [INFO] ============================================================
+2026-05-28 05:30:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-28 05:30:04 [INFO] ============================================================
+2026-05-28 05:30:04 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-28 05:30:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-28 05:30:05 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-28 05:30:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-28 05:30:05 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-28 05:30:05 [INFO]   fact_check       : True
+2026-05-28 05:30:05 [INFO]   article_type_mix : True
+2026-05-28 05:30:05 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-28 05:30:05 [INFO]   article_count    : 1  dry_run: False
+2026-05-28 05:30:08 [INFO] [hida-no-omoide] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] 飛騨の思い出 / 「ASP案件マスター 」: 3件
+[asp_fetcher]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+[asp_fetcher]   [999] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+[asp_fetcher]   [999] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+2026-05-28 05:30:10 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-28 05:30:10 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-28 05:30:10 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-28 05:30:10 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-28 05:30:12 [INFO] [wp] 記事取得: 計49件 (draft=10 / publish=39)
+2026-05-28 05:30:12 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-28 05:30:13 [INFO] [fetch] サブKW紐付け: 87件 → 7記事に統合
+2026-05-28 05:30:13 [INFO] [fetch] [キーワード] メインKW: 34件（親KW+生成待ち）  サブKW除外: 87件（統合対象）  投稿済みスキップ: 81件  aim内訳: [aim:10, add:5, claude:19]
+2026-05-28 05:30:13 [INFO] [dup_check] 優先候補: 34件 {'aim': 10, 'add': 5, 'claude': 19} を先頭評価
+2026-05-28 05:30:13 [INFO] [dup_check] シート承認済みスキップ: 「さるぼぼ お土産 人気 理由」（親KW+生成待ちのため重複チェック免除）
+2026-05-28 05:30:13 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=34件, 要求=1件)
+2026-05-28 05:30:13 [INFO] [select] 1件選定 (要求=1件)
+2026-05-28 05:30:13 [INFO] [select]   1. 「さるぼぼ お土産 人気 理由」 vol=0 seo=N/A comp=N/A
+2026-05-28 05:30:13 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-28 05:30:13 [INFO] [hida-no-omoide] 候補: 34件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.5657 / 1時間: $0.2912  (上限 日次$10.00 / 時間$5.00)  全体: $0.5657(¥85) / 2記事
+2026-05-28 05:30:13 [INFO] [api_guard] 本日の使用量: $0.5657 / ¥85 (6回呼び出し)
+2026-05-28 05:30:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-28 05:30:13 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「さるぼぼ お土産 人気 理由」 vol=0 ★AIM
+2026-05-28 05:30:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-28 05:30:13 [INFO] [generate] 生成開始: 「さるぼぼ お土産 人気 理由」(vol:0) fact_check=True target_length=6,755字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「さるぼぼ お土産 人気 理由」(vol:0) [6,755字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.5657 / 1時間: $0.2912  (上限 日次$10.00 / 時間$5.00)  全体: $0.5657(¥85) / 2記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=115 out=85 → $0.0004  (lsi:さるぼぼ お土産 人気 理由)
+[api_guard] 本日の使用量: $0.5661 / ¥84 (1122回呼び出し)
+[article_generator] 共起語: さるぼぼ、飛騨高山、岐阜県、民芸品、赤い人形、幸運、招福、お守り、手作り、かわいい、日本文化、伝統工芸、観光地土産、ギフ...
+[api_guard] ✅ 本日: $0.5661 / 1時間: $0.2917  (上限 日次$10.00 / 時間$5.00)  全体: $0.5661(¥85) / 2記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=182 out=593 → $0.0025  (kw_research:さるぼぼ お土産 人気 理由)
+[api_guard] 本日の使用量: $0.5686 / ¥85 (1123回呼び出し)
+[article_generator] サジェスト: さるぼぼ お土産 どこで買う・さるぼぼ お土産 値段・さるぼぼ お土産 意味...
+[testimonial_fetcher] ⚠️ 読み込みエラー: id 1432910148 not found
+[article_generator] アドセンス記事判定: 「さるぼぼ お土産 人気 理由」→ アフィリリンク抑制モード
+[api_guard] ✅ 本日: $0.5686 / 1時間: $0.2942  (上限 日次$10.00 / 時間$5.00)  全体: $0.5686(¥85) / 2記事
+[api_guard] 記録: claude-sonnet-4-6 in=15421 out=15124 → $0.2731  (article:さるぼぼ お土産 人気 理由)
+[api_guard] 本日の使用量: $0.8417 / ¥126 (1124回呼び出し)
+[imagefx] 背景:B / ビジュアル:Minimal flat design with cute sarubob doll icon, g
+[imagefx] タイトル(英): Sarubobo Souvenirs Popular Reasons Explained
+[article_generator] 完了: 「さるぼぼがお土産に人気な理由とは？意味・種類・値段まで地元目線で解説」 カテゴリ: 未設定(-) タグ: ['さるぼぼ', '飛騨高山お土産', '飛騨民芸品', '岐阜観光', '伝統工芸']
+2026-05-28 05:34:34 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-28 05:34:34 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「楽天トラベル」(ID:168)
+[api_guard] ✅ 本日: $0.8417 / 1時間: $0.5673  (上限 日次$10.00 / 時間$5.00)  全体: $0.8417(¥126) / 3記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=379 out=19 → $0.0004  (maps:さるぼぼ お土産 人気 理由)
+[api_guard] 本日の使用量: $0.8421 / ¥126 (1125回呼び出し)
+2026-05-28 05:34:36 [INFO] [generate] 完了: 「さるぼぼがお土産に人気な理由とは？意味・種類・値段まで地元目線で解説」
+2026-05-28 05:34:36 [WARNING] [quality] 品質チェック: ❌2件NG / ⚠️2件警告 / 「さるぼぼがお土産に人気な理由とは？意味・種類・値段まで地元目線で解説」
+2026-05-28 05:34:36 [WARNING] [quality]   ❌ □ 一人称体験談: 一人称体験談が0箇所しかありません（2〜3箇所必要）。「実際に使ってみたところ〜」「試してみて感じたのは〜」など自然な体験文を2〜3箇所追加してください。
+2026-05-28 05:34:36 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（かもしれません。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-28 05:34:36 [WARNING] [quality]   ⚠️  □ 外部ソースリンク: 外部リンクはありますが、Google公式・官公庁など信頼性の高いソースへの言及があるとE-E-A-Tが向上します。
+2026-05-28 05:34:36 [WARNING] [quality]   ⚠️  □ CV導線: CTA（ボタン・登録誘導・比較表への誘導）が見当たりません。読者を次のアクションに導くCTAを1〜2箇所追加するとCV率が向上します。
+2026-05-28 05:34:36 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 23件
+[category_selector] 「さるぼぼ お土産 人気 理由」→ 飛騨グルメ・お土産(227) score=9
+[wordpress] H2画像処理: 3枚
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Cute red monkey doll surrounded by gift boxes, hearts, and stars in soft pastels...
+[image_generator] 完了 (62KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260528_053447_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 610)
+[wordpress] H2画像[1] FLUX生成（ライブラリ該当なし）: さるぼぼがお土産に選ばれ続ける3つの理由
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful Sarubobos arranged in a circle displaying different color variations an...
+[image_generator] 完了 (93KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260528_053500_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 611)
+[wordpress] H2画像[2] FLUX生成（ライブラリ該当なし）: さるぼぼの色・種類の違いと選び方のポイント
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Takayama souvenir shops featuring sarubobo dolls on shelves with location marker...
+[image_generator] 完了 (146KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260528_053511_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 612)
+[wordpress] H2画像[3] FLUX生成（ライブラリ該当なし）: さるぼぼをどこで買うか──高山市内の購入スポット案内
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Cute Japanese doll figurine surrounded by gift boxes, shopping bags, and questio...
+[image_generator] 完了 (69KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260528_053523_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 613)
+[wordpress] H3画像[よくある質問] FLUX生成・アップロード完了: sarubobo-omiyage-popular-reason-faq.jpg
+[IMAGE] h2 model: black-forest-labs/FLUX.1-schnell
+[IMAGE] h2 prompt: Colorful Sarubobo dolls arranged in a circle with gift boxes and hearts, soft pa...
+[image_generator] 完了 (152KB, 1216x832, model=black-forest-labs/FLUX.1-schnell)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260528_053534_h2_FLUX-1-schnell.jpg
+[wordpress] メディアアップロード完了 (ID: 614)
+[wordpress] H3画像[まとめ] FLUX生成・アップロード完了: sarubobo-omiyage-popular-reason-summary.jpg
+[internal_linker] 公開済み記事取得: 39件
+[internal_linker] 同カテゴリー: 1件選定（同カテゴリー:1件 / 関連度60%+新しさ40%）
+[internal_linker] キーワードトークンマッチ: 5件選定（同カテゴリー:0件 / 関連度60%+新しさ40%）
+[internal_linker] 内部リンク選定完了: 計6件 (成約:0 / 案件関連:0 / 同親KW+補完:6)
+[internal_linker] 低関連性 5件をフッターへ: ['五平餅はお土産にできる？日持ち・通販・買える場所を', '飛騨高山朝市の楽しみ方完全ガイド｜時間・グルメ・お', '朴葉味噌のお土産は日持ちする？賞味期限・保存方法を', '春慶塗のお土産人気商品おすすめ7選｜高山・岐阜で選', '高山のお土産をネットで購入する方法・おすすめ通販サ']
+[internal_linker] H3マッチ割り当て「「縁起がいい」と伝えやすい──ご利益の意」→「赤かぶ漬けお土産の日持ちは？保存方法・選び方・通販まで解説」（2026-05-20）★同カテゴリー
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 5件追加
+[internal_linker] 内部リンク挿入完了: 計6件 (本文H3:1 / 末尾リスト:5)
+[internal_linker] 内部リンク 6件 挿入: ['赤かぶ漬けお土産の日持ちは？保存方法・選び方・通販まで解説', '五平餅はお土産にできる？日持ち・通販・買える場所を徹底解説', '飛騨高山朝市の楽しみ方完全ガイド｜時間・グルメ・お土産まで徹', '朴葉味噌のお土産は日持ちする？賞味期限・保存方法を徹底解説', '春慶塗のお土産人気商品おすすめ7選｜高山・岐阜で選ぶ伝統漆工', '高山のお土産をネットで購入する方法・おすすめ通販サイト完全ガ']
+[wordpress] タグ設定: ['さるぼぼ', '飛騨高山お土産', '飛騨民芸品', '岐阜観光', '伝統工芸']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 615) → https://hida-no-omoide.com/wp-admin/post.php?post=615&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Minimal flat design with cute sarubob doll icon, gift box, stars, coins, heart checkmarks, and lightbulbs in soft pink, mint, and cream pastels.
+Soft pastel gradient background: gentle blush pink, cream and ivory tones, warm neutral atmosphere, feminine and sophisticated, airy and bright.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "Sarubobo Souvenirs Popular Reasons Explained" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] 書き込み完了: 行142 「さるぼぼ お土産 人気 理由」→ 投稿済み (2026/05/28, ID:615) [背景色適用]
+[sheets_updater] 投稿記事一覧に追記: 「さるぼぼがお土産に人気な理由とは？意味・種類・値段まで地元目」
+2026-05-28 05:35:43 [INFO] [post] WP投稿完了: ID=615 → https://hida-no-omoide.com/wp-admin/post.php?post=615&action=edit
+2026-05-28 05:35:43 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「さるぼぼがお土産に人気な理由とは？意味・種類・値段まで地元目線で解説」
+2026-05-28 05:35:43 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-28 05:35:43 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=hida-no-omoide limit=1
+[codex-eyecatch] 対象: 1件
+
+[codex-eyecatch] #615 さるぼぼがお土産に人気な理由とは？意味・種類・値段まで地元目線で解説
+[IMAGE] lifestyle eyecatch model: gpt-image-2
+[IMAGE] 飛騨の思い出向け・旅メディア型バナーで生成します
+[IMAGE] hida template: market_walk
+[image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+[image_generator] OpenAI gpt-image-2 完了 (1847KB)
+[IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260528_053640_codex_hida_travel_eyecatch_gpt-image-2.jpg
+[wordpress] メディアアップロード完了 (ID: 616)
+[codex-eyecatch] featured image 設定完了: media_id=616
+[codex-eyecatch] 編集URL: https://hida-no-omoide.com/wp-admin/post.php?post=615&action=edit
+2026-05-28 05:36:44 [INFO] 
+============================================================
+2026-05-28 05:36:44 [INFO] 【全体サマリー】
+2026-05-28 05:36:44 [INFO]   ブログ数  : 1件
+2026-05-28 05:36:44 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-28 05:36:44 [INFO]   所要時間  : 399.8秒
+2026-05-28 05:36:44 [INFO]   ✅ [hida-no-omoide] さるぼぼ お土産 人気 理由 → さるぼぼがお土産に人気な理由とは？意味・種類・値段まで地元目線で解説
+2026-05-28 05:36:44 [INFO]        https://hida-no-omoide.com/wp-admin/post.php?post=615&action=edit
+2026-05-28 05:36:44 [INFO] ============================================================
+===== [HIDA-NO-OMOIDE] 記事生成終了: 2026-05-28 05:36:44 / exit=0 =====
