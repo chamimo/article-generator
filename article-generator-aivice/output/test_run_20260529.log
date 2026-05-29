@@ -1,0 +1,197 @@
+2026-05-29 11:41:46 [INFO] ============================================================
+2026-05-29 11:41:46 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-29 11:41:46 [INFO] ============================================================
+2026-05-29 11:41:46 [INFO] 対象ブログ: ['workup-ai']
+2026-05-29 11:41:48 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-29 11:41:48 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-05-29 11:41:48 [INFO] ════════════════════════════════════════════════════════════
+2026-05-29 11:41:48 [INFO]   genre            : AI・副業・転職・キャリア
+2026-05-29 11:41:48 [INFO]   fact_check       : True
+2026-05-29 11:41:48 [INFO]   article_type_mix : True
+2026-05-29 11:41:48 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-05-29 11:41:48 [INFO]   article_count    : 1  dry_run: False
+2026-05-29 11:41:51 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'AIVice'}（WorkUp AI のSSを確認してください）
+[asp_fetcher] WorkUp AI / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-29 11:41:54 [INFO] [wp] 記事取得: 計427件 (draft=3 / publish=424)
+2026-05-29 11:41:54 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-29 11:41:55 [INFO] [fetch] [KW｜AIVice] メインKW: 16件（vol≥30 or N/A）  サブKW: 0件（vol<30）  テーマ外除外: 2件
+2026-05-29 11:41:55 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=16件, 要求=1件)
+2026-05-29 11:41:55 [INFO] [select] 1件選定 (要求=1件)
+2026-05-29 11:41:55 [INFO] [select]   1. 「Notta PLAUD 比較 初心者」 vol=0 seo=N/A comp=N/A
+2026-05-29 11:41:55 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-29 11:41:55 [INFO] [workup-ai] 候補: 16件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$2.00 / 時間$1.00)  全体: $0.0000(¥0) / 0記事
+2026-05-29 11:41:55 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-29 11:41:55 [INFO] ────────────────────────────────────────────────────────────
+2026-05-29 11:41:55 [INFO] [workup-ai] [1/1] [LONGTAIL] 「Notta PLAUD 比較 初心者」 vol=0
+2026-05-29 11:41:55 [INFO] ────────────────────────────────────────────────────────────
+2026-05-29 11:41:55 [INFO] [generate] 生成開始: 「Notta PLAUD 比較 初心者」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  人格設定:あり
+[article_generator] 記事構成生成中: 「Notta PLAUD 比較 初心者」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[article_generator] 事実確認中: 「Notta PLAUD 比較 初心者」
+[article_generator] 事実確認完了: 確認済み11件 / 不確か4件 / 注意5件
+  ⚠️  Notta は国産（日本）、PLAUD はアメリカ企業という記載の際は、PLAUD の製造拠点（中国・深圳）についても触れた方が透明性が高い
+  ⚠️  価格情報は時期によって変動しやすい：記事作成時は最新の公式サイトを参照すること（プロモーション・値下げの可能性）
+  ⚠️  Notta と PLAUD の比較において、『初心者向け』という表現は曖昧：目的（対面会議 vs オンライン会議）によって適性が大きく異なる
+  ⚠️  セキュリティ面での懸念：PLAUD に関しては中国の記事で「中国人 CEO・CTO」「中国での製造」「データサーバーの位置」について否定的な指摘があり、記事で記載する場合は出典と共に慎重に扱うこと
+  ⚠️  Notta Memo はまだ2025年6月に発売されたばかりで、十分なユーザーレビューや長期使用データが限定的な可能性
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$2.00 / 時間$1.00)  全体: $0.0000(¥0) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=112 out=104 → $0.0005  (lsi:Notta PLAUD 比較 初心者)
+[api_guard] 本日の使用量: $0.0005 / ¥0 (294回呼び出し)
+[article_generator] 共起語: 音声録音アプリ、文字起こし精度、リアルタイム翻訳、使いやすさ、価格比較、無料版、有料プラン、AIテクノロジー、会議記録、...
+[api_guard] ✅ 本日: $0.0005 / 1時間: $0.0005  (上限 日次$2.00 / 時間$1.00)  全体: $0.0005(¥0) / 0記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=179 out=518 → $0.0022  (kw_research:Notta PLAUD 比較 初心者)
+[api_guard] 本日の使用量: $0.0027 / ¥0 (295回呼び出し)
+[article_generator] サジェスト: Notta PLAUD 比較・Notta PLAUD 違い・Notta PLAUD どちらがいい...
+[api_guard] ✅ 本日: $0.0027 / 1時間: $0.0027  (上限 日次$2.00 / 時間$1.00)  全体: $0.0027(¥0) / 0記事
+[api_guard] 記録: claude-sonnet-4-6 in=12131 out=11811 → $0.2136  (article:Notta PLAUD 比較 初心者)
+[api_guard] 本日の使用量: $0.2163 / ¥32 (296回呼び出し)
+2026-05-29 11:45:41 [ERROR] [workup-ai] [1/1] ❌ エラー（続行）: Claude APIからのJSON解析エラー: Expecting ',' delimiter: line 8 column 8401 (char 9050)
+---
+{
+  "title": "NottaとPLAUD比較！初心者が迷わず選べる文字起こしツール徹底ガイド",
+  "seo_title": "Notta PLAUD 比較｜初心者向け文字起こしツール徹底ガイド",
+  "meta_description": "NottaとPLAUDの違いを初心者向けにわかりやすく比較。文字起こし精度・料金・使いやすさ・向いている用途まで徹底解説。どちらを選べばいいか迷っている人はぜひ読んでみてください。",
+  "slug": "notta-plaud-comparison-beginners",
+  "image_prompt": "A clean and minimalist flat-lay illustration of two AI voice recorder devices side by side, one smartphone app interface and one card-shaped hardware device, soft lavender and mint green color palette, white backg
+2026-05-29 11:45:41 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-29 11:45:41 [INFO] 
+============================================================
+2026-05-29 11:45:41 [INFO] 【全体サマリー】
+2026-05-29 11:45:41 [INFO]   ブログ数  : 1件
+2026-05-29 11:45:41 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-29 11:45:41 [INFO]   所要時間  : 234.8秒
+2026-05-29 11:45:41 [INFO]   ❌ [workup-ai] Notta PLAUD 比較 初心者 → (生成失敗)
+2026-05-29 11:45:41 [INFO] ============================================================
+2026-05-29 11:49:18 [INFO] ============================================================
+2026-05-29 11:49:18 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-29 11:49:18 [INFO] ============================================================
+2026-05-29 11:49:18 [INFO] 対象ブログ: ['workup-ai']
+2026-05-29 11:49:21 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-29 11:49:21 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-05-29 11:49:21 [INFO] ════════════════════════════════════════════════════════════
+2026-05-29 11:49:21 [INFO]   genre            : AI・副業・転職・キャリア
+2026-05-29 11:49:21 [INFO]   fact_check       : True
+2026-05-29 11:49:21 [INFO]   article_type_mix : True
+2026-05-29 11:49:21 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-05-29 11:49:21 [INFO]   article_count    : 1  dry_run: False
+2026-05-29 11:49:24 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] ⚠️  混入検知: 「ASP案件マスター」に別ブログの案件が含まれています → {'AIVice'}（WorkUp AI のSSを確認してください）
+[asp_fetcher] WorkUp AI / 「ASP案件マスター」: 18件
+[asp_fetcher]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] PLAUD NOTE → https://workup-ai.com/plaud / AI文字起こし・議事録
+[asp_fetcher]   [S] Notta → https://workup-ai.com/notta / 音声認識・会議効率化
+[asp_fetcher]   [S] NordVPN → https://workup-ai.com/nordvpn / VPN・セキュリティ・海外アクセス・AI活用
+[asp_fetcher]   [S] Neuro Dive → https://workup-ai.com/neurodive / AI×就労支援・スキル習得
+[asp_fetcher]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+[asp_fetcher]   [S] PowerDVD → https://workup-ai.com/powerdvd
+[asp_fetcher]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-29 11:49:28 [INFO] [wp] 記事取得: 計427件 (draft=3 / publish=424)
+2026-05-29 11:49:28 [INFO] [workup-ai] キーワード直接指定: 「AIツール 増やしすぎ 整理術」
+2026-05-29 11:49:28 [INFO] [workup-ai] 候補: 1件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.2163 / 1時間: $0.2163  (上限 日次$2.00 / 時間$1.00)  全体: $0.2163(¥32) / 1記事
+2026-05-29 11:49:28 [INFO] [api_guard] 本日の使用量: $0.2163 / ¥32 (3回呼び出し)
+2026-05-29 11:49:28 [INFO] ────────────────────────────────────────────────────────────
+2026-05-29 11:49:28 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AIツール 増やしすぎ 整理術」 vol=0
+2026-05-29 11:49:28 [INFO] ────────────────────────────────────────────────────────────
+2026-05-29 11:49:28 [INFO] [generate] 生成開始: 「AIツール 増やしすぎ 整理術」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  人格設定:あり
+[article_generator] 記事構成生成中: 「AIツール 増やしすぎ 整理術」(vol:0) [6,000字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.2163 / 1時間: $0.2163  (上限 日次$2.00 / 時間$1.00)  全体: $0.2163(¥32) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=114 out=98 → $0.0005  (lsi:AIツール 増やしすぎ 整理術)
+[api_guard] 本日の使用量: $0.2168 / ¥32 (297回呼び出し)
+[article_generator] 共起語: AIツール整理、ツール管理、デジタル断捨離、ツール選別、効率化、生産性向上、ツール比較、導入基準、コスト削減、ワークフロ...
+[api_guard] ✅ 本日: $0.2168 / 1時間: $0.2168  (上限 日次$2.00 / 時間$1.00)  全体: $0.2168(¥33) / 1記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=181 out=498 → $0.0021  (kw_research:AIツール 増やしすぎ 整理術)
+[api_guard] 本日の使用量: $0.2189 / ¥32 (298回呼び出し)
+[article_generator] サジェスト: AIツール 増やしすぎ・AIツール 整理 方法・AIツール 管理 おすすめ...
+[api_guard] ✅ 本日: $0.2189 / 1時間: $0.2189  (上限 日次$2.00 / 時間$1.00)  全体: $0.2189(¥33) / 1記事
+[api_guard] 記録: claude-sonnet-4-6 in=10798 out=11424 → $0.2038  (article:AIツール 増やしすぎ 整理術)
+[api_guard] 本日の使用量: $0.4227 / ¥63 (299回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of overflowing laptop, stacked too
+[imagefx] タイトル(英): AI Tools Digital Decluttering
+[article_generator] 完了: 「AIツール増やしすぎ問題を解決！デジタル断捨離で効率化する整理術」 カテゴリ: 未設定(-) タグ: ['AIツール整理', 'デジタル断捨離', 'ツール管理', '生産性向上', 'AI活用']
+2026-05-29 11:52:50 [INFO] [generate] 完了: 「AIツール増やしすぎ問題を解決！デジタル断捨離で効率化する整理術」
+2026-05-29 11:52:50 [INFO] [post] 投稿方式: draft
+2026-05-29 11:52:51 [INFO] [post] パターンCTA挿入（H3末尾）: 2件
+2026-05-29 11:52:51 [INFO] [post] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+[category_selector] カテゴリ取得: 32件
+[category_selector] 「AIツール 増やしすぎ 整理術」→ マッチなし、設定フォールバック: 生成AI・チャット・仕事術(1397)
+[wordpress] H2画像処理: 3枚
+[wordpress] H2画像[1] ライブラリ選択 (#AIツール): Generated-Image-September-16-2025-6_25PM.jpg
+[wordpress] H2画像[1] ライブラリALT更新: AIツールを増やしすぎるとどうなる？よくある失敗パターンのイメージ画像
+[wordpress] H2画像[2] ライブラリ選択 (#AIツール): momo3333_Photoreal_laptop_external_SSD_and_a_notepad_with_co_8d5624c9-4233-4ef1-b607-196238fe4437_2.jpg
+[wordpress] H2画像[2] ライブラリALT更新: AIツール整理術の基準と選別ステップを徹底解説のイメージ画像
+[wordpress] H2画像[3] ライブラリ選択 (#AIツール): momo3333_laptop_screen_displaying_a_subscription_plan_compar_c715fd12-c20c-4e05-8baf-72de9757c256_2.jpg
+[wordpress] H2画像[3] ライブラリALT更新: AIツールの使い分けとワークフロー最適化で生産性を上げる方法のイメージ画像
+[wordpress] H2画像 3枚 をコンテンツに挿入しました
+[internal_linker] 公開済み記事取得: 424件
+[internal_linker] タイトル重複除去: 2件の旧記事を除外
+[internal_linker] 「Notta」関連記事: 2件追加
+[internal_linker] 同カテゴリー: 6件選定（ルールベース）
+[internal_linker] 製品名マッチ「Notta」→ セクション10に割り当て
+[internal_linker] 末尾リスト「✅ 次に読むならこちら」: 1件追加
+[internal_linker] 内部リンク挿入完了: 計8件 (本文H3:7 / 末尾リスト:1)
+[internal_linker] 内部リンク 8件 挿入: ['Notta使い方完全ガイド！無料登録から文字起こし・議事録作', 'PLAUD NOTEとNottaの比較｜スペックで選ぶと失敗', 'AIツールを増やしすぎてやめた話｜絞り方と使い分けの考え方', 'AIツールが多すぎて選べない人へ！初心者でも失敗しない選び方', 'AIツール使いこなせない人が今日から変わる！初心者向け解決策', 'AIツール使いこなせないのはなぜ？原因と3つの切り替え方｜A', 'ラフを線画にするAIおすすめ5選｜無料で使えるツールで作業効', 'AIツールは無料だけで使える？できる範囲と限界を徹底解説']
+[wordpress] タグ設定: ['AIツール整理', 'デジタル断捨離', 'ツール管理', '生産性向上', 'AI活用']
+[wordpress] 投稿方式: draft
+[wordpress] 投稿完了 (ID: 10657) → https://workup-ai.com/wp-admin/post.php?post=10657&action=edit
+
+────────────────────────────────────────────────────────────
+【ImageFX プロンプト（保存確認）】
+────────────────────────────────────────────────────────────
+Cute flat icons of overflowing laptop, stacked tools, checkmarks, lightbulbs with soft pink, mint, and lavender pastels, minimal and organized.
+Elegant lifestyle background: soft morning light with warm neutrals, gentle depth-of-field effect, clean and airy ambiance, muted earth tones.
+
+no people, no human, no woman, no man, no face, no silhouette, no body parts, no shadows of people, no reflections of people, purely abstract background only
+modern minimal style, elegant design, soft pastel tones, warm neutral colors, clean and sophisticated, no text, no watermark, high quality
+
+Place one large "AIVice" watermark in the empty area, opacity 8–12%.
+
+Add the text "AI Tools Digital Decluttering" in white or soft white, blending naturally with the background.
+────────────────────────────────────────────────────────────
+
+[sheets_updater] シート列数を拡張 → 17列
+[sheets_updater] ヘッダー追加: 列14 = 「投稿ステータス」
+[sheets_updater] ヘッダー追加: 列15 = 「投稿日」
+[sheets_updater] ヘッダー追加: 列16 = 「使用サブKW」
+[sheets_updater] ヘッダー追加: 列17 = 「メモ」
+[sheets_updater] 書き込み完了: 行4 「AIツール 増やしすぎ 整理術」→ 投稿済み (2026/05/29, ID:10657) [背景色適用]
+[sheets_updater] シート「投稿記事一覧」を新規作成
+[sheets_updater] 「投稿記事一覧」ヘッダーを設定
+[sheets_updater] 投稿記事一覧に追記: 「AIツール増やしすぎ問題を解決！デジタル断捨離で効率化する整」
+2026-05-29 11:53:06 [INFO] [post] WP投稿完了: ID=10657 → https://workup-ai.com/wp-admin/post.php?post=10657&action=edit
+2026-05-29 11:53:06 [INFO] [workup-ai] [1/1] ✅ 完了: 「AIツール増やしすぎ問題を解決！デジタル断捨離で効率化する整理術」
+2026-05-29 11:53:06 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-29 11:53:06 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [codex-eyecatch] 対象: 1件
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] 
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [codex-eyecatch] #10657 AIツール増やしすぎ問題を解決！デジタル断捨離で効率化する整理術
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [IMAGE] lifestyle eyecatch model: gpt-image-2
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [IMAGE] AIVice専用スタイルで生成します
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [IMAGE] aivice style=feminine_soft  palette=lavender_cream  template=aivice_pastel_person
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [image_generator] OpenAI gpt-image-2 完了 (1633KB)
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260529_115352_codex_aivice_feminine_soft_eyecatch_gpt-image-2.jpg
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [wordpress] メディアアップロード完了 (ID: 10658)
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [codex-eyecatch] featured image 設定完了: media_id=10658
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [codex-eyecatch] 編集URL: https://workup-ai.com/wp-admin/post.php?post=10657&action=edit
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] 正常終了 returncode=0
+2026-05-29 11:53:54 [INFO] 
+============================================================
+2026-05-29 11:53:54 [INFO] 【全体サマリー】
+2026-05-29 11:53:54 [INFO]   ブログ数  : 1件
+2026-05-29 11:53:54 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-29 11:53:54 [INFO]   所要時間  : 276.6秒
+2026-05-29 11:53:54 [INFO]   ✅ [workup-ai] AIツール 増やしすぎ 整理術 → AIツール増やしすぎ問題を解決！デジタル断捨離で効率化する整理術
+2026-05-29 11:53:54 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10657&action=edit
+2026-05-29 11:53:54 [INFO] ============================================================

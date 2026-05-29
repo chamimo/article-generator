@@ -1,0 +1,117 @@
+2026-05-29 04:00:03 [INFO] ============================================================
+2026-05-29 04:00:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-29 04:00:03 [INFO] ============================================================
+2026-05-29 04:00:03 [INFO] 対象ブログ: ['workup-ai']
+2026-05-29 04:00:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-29 04:00:05 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-05-29 04:00:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-29 04:00:05 [INFO]   genre            : AI・副業・転職・キャリア
+2026-05-29 04:00:05 [INFO]   fact_check       : True
+2026-05-29 04:00:05 [INFO]   article_type_mix : True
+2026-05-29 04:00:05 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-05-29 04:00:05 [INFO]   article_count    : 1  dry_run: False
+2026-05-29 04:00:08 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-29 04:00:14 [INFO] [wp] 記事取得: 計427件 (draft=3 / publish=424)
+2026-05-29 04:00:14 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-29 04:00:15 [DEBUG] [fetch] シート「絞り込みKW」: 42行 / ヘッダー: ['KW', '追加元', '実行', 'ステータス', '判定', '親KW', 'YouTube', '統合先KW', '訴求案件', '参考WEB必要', '参考WEB①', '参考WEB②', '参考WEB③', '検索意図メモ', 'メモ', '月間検索数', 'SEO難易度', 'GSC順位', 'GSC変動', 'リライト候補', 'カニバリ判定', '投稿日', 'URL', '投稿ID', 'parent_kw', 'cluster', 'カニバリ確認日', 'YouTube URL', '動画タイトル', 'チャンネル名', '公開日', '字幕有無', '動画テーマ', '元YouTube URL', '抽出KW', '検索意図', '想定読者', '勝てる理由', '競合の強さ', 'AIVice向き度', 'ExperienceDB相性', '感情訴求タイプ', '初心者向き', '比較記事向き', '実体験向き', '一過性トレンド', '深掘り価値', 'ASP相性', 'レビュー記事向き', '収益化しやすさ', '商標記事リンク相性', 'APIコスト見積', '保護判定', '保護対象KW', '内部リンク推奨先', '比較軸']
+2026-05-29 04:00:15 [INFO] [fetch] [キーワード] メインKW: 0件（vol≥30 or N/A）  サブKW: 0件（vol<30）
+2026-05-29 11:41:46 [INFO] ============================================================
+2026-05-29 11:41:46 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-29 11:41:46 [INFO] ============================================================
+2026-05-29 11:41:46 [INFO] 対象ブログ: ['workup-ai']
+2026-05-29 11:41:48 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-29 11:41:48 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-05-29 11:41:48 [INFO] ════════════════════════════════════════════════════════════
+2026-05-29 11:41:48 [INFO]   genre            : AI・副業・転職・キャリア
+2026-05-29 11:41:48 [INFO]   fact_check       : True
+2026-05-29 11:41:48 [INFO]   article_type_mix : True
+2026-05-29 11:41:48 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-05-29 11:41:48 [INFO]   article_count    : 1  dry_run: False
+2026-05-29 11:41:51 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-29 11:41:54 [INFO] [wp] 記事取得: 計427件 (draft=3 / publish=424)
+2026-05-29 11:41:54 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-29 11:41:55 [DEBUG] [fetch] シート「絞り込みKW」: 18行 / ヘッダー: ['keyword', 'parent_kw', '判定', 'ステータス', 'AIM', '検索意図', '想定読者', '記事URL', '投稿ID', 'YouTube URL', '動画タイトル', '内部リンク先', 'memo']
+2026-05-29 11:41:55 [INFO] [fetch] [KW｜AIVice] メインKW: 16件（vol≥30 or N/A）  サブKW: 0件（vol<30）  テーマ外除外: 2件
+2026-05-29 11:41:55 [DEBUG] [group_pool] グループ数: 16件 → pool: 16件
+2026-05-29 11:41:55 [DEBUG] [dup_check] OK: 「Notta PLAUD 比較 初心者」
+2026-05-29 11:41:55 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=16件, 要求=1件)
+2026-05-29 11:41:55 [INFO] [select] 1件選定 (要求=1件)
+2026-05-29 11:41:55 [INFO] [select]   1. 「Notta PLAUD 比較 初心者」 vol=0 seo=N/A comp=N/A
+2026-05-29 11:41:55 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-05-29 11:41:55 [INFO] [workup-ai] 候補: 16件 / 選定: 1件 / 生成予定: 1件
+2026-05-29 11:41:55 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-05-29 11:41:55 [INFO] ────────────────────────────────────────────────────────────
+2026-05-29 11:41:55 [INFO] [workup-ai] [1/1] [LONGTAIL] 「Notta PLAUD 比較 初心者」 vol=0
+2026-05-29 11:41:55 [INFO] ────────────────────────────────────────────────────────────
+2026-05-29 11:41:55 [INFO] [generate] 生成開始: 「Notta PLAUD 比較 初心者」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  人格設定:あり
+2026-05-29 11:45:41 [ERROR] [workup-ai] [1/1] ❌ エラー（続行）: Claude APIからのJSON解析エラー: Expecting ',' delimiter: line 8 column 8401 (char 9050)
+---
+{
+  "title": "NottaとPLAUD比較！初心者が迷わず選べる文字起こしツール徹底ガイド",
+  "seo_title": "Notta PLAUD 比較｜初心者向け文字起こしツール徹底ガイド",
+  "meta_description": "NottaとPLAUDの違いを初心者向けにわかりやすく比較。文字起こし精度・料金・使いやすさ・向いている用途まで徹底解説。どちらを選べばいいか迷っている人はぜひ読んでみてください。",
+  "slug": "notta-plaud-comparison-beginners",
+  "image_prompt": "A clean and minimalist flat-lay illustration of two AI voice recorder devices side by side, one smartphone app interface and one card-shaped hardware device, soft lavender and mint green color palette, white backg
+2026-05-29 11:45:41 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-29 11:45:41 [INFO] 
+============================================================
+2026-05-29 11:45:41 [INFO] 【全体サマリー】
+2026-05-29 11:45:41 [INFO]   ブログ数  : 1件
+2026-05-29 11:45:41 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-29 11:45:41 [INFO]   所要時間  : 234.8秒
+2026-05-29 11:45:41 [INFO]   ❌ [workup-ai] Notta PLAUD 比較 初心者 → (生成失敗)
+2026-05-29 11:45:41 [INFO] ============================================================
+2026-05-29 11:49:18 [INFO] ============================================================
+2026-05-29 11:49:18 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-29 11:49:18 [INFO] ============================================================
+2026-05-29 11:49:18 [INFO] 対象ブログ: ['workup-ai']
+2026-05-29 11:49:21 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-29 11:49:21 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-05-29 11:49:21 [INFO] ════════════════════════════════════════════════════════════
+2026-05-29 11:49:21 [INFO]   genre            : AI・副業・転職・キャリア
+2026-05-29 11:49:21 [INFO]   fact_check       : True
+2026-05-29 11:49:21 [INFO]   article_type_mix : True
+2026-05-29 11:49:21 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-05-29 11:49:21 [INFO]   article_count    : 1  dry_run: False
+2026-05-29 11:49:24 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-29 11:49:28 [INFO] [wp] 記事取得: 計427件 (draft=3 / publish=424)
+2026-05-29 11:49:28 [INFO] [workup-ai] キーワード直接指定: 「AIツール 増やしすぎ 整理術」
+2026-05-29 11:49:28 [INFO] [workup-ai] 候補: 1件 / 選定: 1件 / 生成予定: 1件
+2026-05-29 11:49:28 [INFO] [api_guard] 本日の使用量: $0.2163 / ¥32 (3回呼び出し)
+2026-05-29 11:49:28 [INFO] ────────────────────────────────────────────────────────────
+2026-05-29 11:49:28 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AIツール 増やしすぎ 整理術」 vol=0
+2026-05-29 11:49:28 [INFO] ────────────────────────────────────────────────────────────
+2026-05-29 11:49:28 [INFO] [generate] 生成開始: 「AIツール 増やしすぎ 整理術」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  人格設定:あり
+2026-05-29 11:52:50 [INFO] [generate] 完了: 「AIツール増やしすぎ問題を解決！デジタル断捨離で効率化する整理術」
+2026-05-29 11:52:50 [INFO] [post] 投稿方式: draft
+2026-05-29 11:52:51 [INFO] [post] パターンCTA挿入（H3末尾）: 2件
+2026-05-29 11:52:51 [INFO] [post] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-29 11:53:06 [INFO] [post] WP投稿完了: ID=10657 → https://workup-ai.com/wp-admin/post.php?post=10657&action=edit
+2026-05-29 11:53:06 [INFO] [workup-ai] [1/1] ✅ 完了: 「AIツール増やしすぎ問題を解決！デジタル断捨離で効率化する整理術」
+2026-05-29 11:53:06 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-29 11:53:06 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=workup-ai limit=1
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [codex-eyecatch] 対象: 1件
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] 
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [codex-eyecatch] #10657 AIツール増やしすぎ問題を解決！デジタル断捨離で効率化する整理術
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [IMAGE] lifestyle eyecatch model: gpt-image-2
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [IMAGE] AIVice専用スタイルで生成します
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [IMAGE] aivice style=feminine_soft  palette=lavender_cream  template=aivice_pastel_person
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [image_generator] OpenAI gpt-image-2 生成開始 (size=1536x864, quality=medium)
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [image_generator] OpenAI gpt-image-2 完了 (1633KB)
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [IMAGE] 保存: /Users/yama/article-generator-hataraku/output/images/20260529_115352_codex_aivice_feminine_soft_eyecatch_gpt-image-2.jpg
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [wordpress] メディアアップロード完了 (ID: 10658)
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [codex-eyecatch] featured image 設定完了: media_id=10658
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] [codex-eyecatch] 編集URL: https://workup-ai.com/wp-admin/post.php?post=10657&action=edit
+2026-05-29 11:53:54 [INFO] [codex-eyecatch] 正常終了 returncode=0
+2026-05-29 11:53:54 [INFO] 
+============================================================
+2026-05-29 11:53:54 [INFO] 【全体サマリー】
+2026-05-29 11:53:54 [INFO]   ブログ数  : 1件
+2026-05-29 11:53:54 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-05-29 11:53:54 [INFO]   所要時間  : 276.6秒
+2026-05-29 11:53:54 [INFO]   ✅ [workup-ai] AIツール 増やしすぎ 整理術 → AIツール増やしすぎ問題を解決！デジタル断捨離で効率化する整理術
+2026-05-29 11:53:54 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10657&action=edit
+2026-05-29 11:53:54 [INFO] ============================================================
