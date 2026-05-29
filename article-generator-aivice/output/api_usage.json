@@ -2929,6 +2929,66 @@
       "output_tokens": 11477,
       "cost_usd": 0.20496,
       "label": "article:スピーク プレミアムプラス 違い"
+    },
+    {
+      "timestamp": "2026-05-29T02:42:24.765141+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 104,
+      "cost_usd": 0.000506,
+      "label": "lsi:Notta PLAUD 比較 初心者"
+    },
+    {
+      "timestamp": "2026-05-29T02:42:28.635975+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 518,
+      "cost_usd": 0.002215,
+      "label": "kw_research:Notta PLAUD 比較 初心者"
+    },
+    {
+      "timestamp": "2026-05-29T02:45:41.721386+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12131,
+      "output_tokens": 11811,
+      "cost_usd": 0.213558,
+      "label": "article:Notta PLAUD 比較 初心者"
+    },
+    {
+      "timestamp": "2026-05-29T02:49:29.988054+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 98,
+      "cost_usd": 0.000483,
+      "label": "lsi:AIツール 増やしすぎ 整理術"
+    },
+    {
+      "timestamp": "2026-05-29T02:49:33.967141+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 498,
+      "cost_usd": 0.002137,
+      "label": "kw_research:AIツール 増やしすぎ 整理術"
+    },
+    {
+      "timestamp": "2026-05-29T02:52:47.470019+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10798,
+      "output_tokens": 11424,
+      "cost_usd": 0.203754,
+      "label": "article:AIツール 増やしすぎ 整理術"
     }
   ],
   "events": [

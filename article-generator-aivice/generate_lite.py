@@ -384,11 +384,23 @@ def run_codex_eyecatch_after_generation(blog_name: str, limit: int) -> None:
         return
     try:
         log.info(f"[codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog={blog_name} limit={limit}")
-        subprocess.run(
+        result = subprocess.run(
             [str(CODEX_EYECATCH_SCRIPT), "--blog", blog_name, "--limit", str(limit)],
             cwd=str(CODEX_EYECATCH_SCRIPT.parent),
             check=False,
+            capture_output=True,
+            text=True,
         )
+        if result.stdout:
+            for line in result.stdout.splitlines():
+                log.info(f"[codex-eyecatch] {line}")
+        if result.stderr:
+            for line in result.stderr.splitlines():
+                log.warning(f"[codex-eyecatch][stderr] {line}")
+        if result.returncode != 0:
+            log.error(f"[codex-eyecatch] 異常終了 returncode={result.returncode}")
+        else:
+            log.info(f"[codex-eyecatch] 正常終了 returncode={result.returncode}")
     except Exception as e:
         log.warning(f"[codex-eyecatch] 起動失敗（記事生成は続行）: {e}")
 
@@ -448,7 +460,7 @@ def fetch_candidates(
                 return header.index(name)
         return -1
 
-    kw_idx     = col(["キーワード", "Keyword"])
+    kw_idx     = col(["キーワード", "Keyword", "keyword", "KW"])
     vol_idx    = col(["月間検索数", "検索ボリューム", "volume"])
     seo_idx    = col(["SEO難易度", "seo_difficulty"])
     comp_idx   = col(["競合性", "competition"])
@@ -1300,7 +1312,7 @@ def run_blog(
             load_media_persona_sheet,
             build_persona_prompt,
         )
-        _persona_ss_id = blog_cfg.candidate_ss_id or blog_cfg.asp_ss_id
+        _persona_ss_id = blog_cfg.asp_ss_id or blog_cfg.candidate_ss_id
         if _persona_ss_id:
             _blog_config_data  = load_blog_config_sheet(_persona_ss_id, GOOGLE_CREDENTIALS_PATH)
             _media_persona_data = load_media_persona_sheet(_persona_ss_id, GOOGLE_CREDENTIALS_PATH)
