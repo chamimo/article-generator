@@ -26,8 +26,8 @@
     ]
   },
   "fact_check": true,
-  "candidate_ss_id": "13f8HorKWHGKYpFF5svHF4Cxj5drZ2OKK39FamaVY9n4",
-  "candidate_sheet": "キーワード",
+  "candidate_ss_id": "1scnsnVeQGG3dv7xIXNvHFYNZsIkDR1_zqRd9UNNGCiA",
+  "candidate_sheet": "KW｜AIVice",
   "article_count": 3,
   "min_volume": 0,
   "article_type_weights": {
@@ -83,6 +83,7 @@
   ],
   "asp_links": {},
   "affili_ss_id": "",
+  "asp_ss_id": "13f8HorKWHGKYpFF5svHF4Cxj5drZ2OKK39FamaVY9n4",
   "guide_links": {
     "pv_url": "",
     "comparison_url": "",
@@ -103,11 +104,13 @@
   "wp_url": "https://workup-ai.com",
   "eyecatch_model": "gpt-image-2",
   "article_image_model": "black-forest-labs/FLUX.1-schnell",
+  "min_new_h2_images": 3,
+  "experience_ss_id": "1scnsnVeQGG3dv7xIXNvHFYNZsIkDR1_zqRd9UNNGCiA",
   "image_style": {
     "eyecatch_templates": {
       "a": "Warm and inviting illustration for a Japanese AI blog thumbnail, wide 16:9 landscape format. Background: creamy warm white at center fading to soft sky-blue (#DDEEFF) at top-right corner and a very subtle warm peach (#FFF0E8) glow at bottom-left — gentle, not stark. Central composition: one bold, clearly recognizable illustration representing {topic} placed slightly left of center, large enough to be immediately understood. Style: soft flat design with gentle gradients on shapes, rounded edges, warm colors — sky blue (#5BA8E5), soft coral (#FF8A70), warm yellow (#FFD166), light mint (#6DCFB8). Depth: two semi-transparent overlapping rounded shapes behind the main illustration create a sense of warmth and depth. Supporting elements: 2 small accent icons on the right side that reinforce the topic. Decorative accents: a few soft dots or small curved lines scattered lightly for visual rhythm. Soft glow or radiance behind the central illustration. No text, no letters, no numbers, no faces. Mood: friendly, warm, trustworthy, informative — like a knowledgeable and approachable guide. Japanese lifestyle blog meets modern AI. Engaging enough to stop scrolling.",
       "b": "Warm and story-like Japanese AI blog thumbnail, wide 16:9 landscape format. Scene: a close-up of a person's hands lightly resting on a laptop keyboard, viewed from slightly above — only hands and keyboard visible, no face, no head, no full body. The laptop screen glows softly and prominently, showing a clean abstract representation of {topic}: soft glowing chat bubbles, pastel UI cards, or gentle floating text lines. Warm bokeh background suggests a cozy home desk or cafe corner — a steaming coffee mug or small succulent plant softly blurred in the far corner. Style: soft cinematic illustration with gentle warm grain texture — lived-in and human, not sterile or corporate. Color palette: warm cream (#FFF8F0), sky blue (#5BA8E5), warm amber (#FFD166), soft coral (#FF8A70). Composition: hands occupy left half of frame, glowing screen fills right side, creating a natural left-to-right visual flow. No face, no head, no full human silhouette, no text overlay, no watermark. Mood: warm, curious, approachable — the feeling of discovering something useful on a cozy afternoon. Editorial lifestyle tone, like a personal tech blog cover. Makes the viewer lean in and want to start reading.",
-      "c": "Cinematic warm lifestyle blog thumbnail background for text overlay, wide 16:9 landscape format. COMPOSITION: a young person (back view or side silhouette, no face) seated at a glowing laptop, positioned in the RIGHT 55% of the frame — warm amber backlight creating a halo effect around their silhouette, soft bokeh background of a cozy home desk or cafe. The laptop screen emits a soft sky-blue glow evoking {topic}. LEFT 45% OF FRAME: intentionally dark and clear — a smooth gradient from deep warm shadow on the far left edge blending naturally into the scene. This entire left side must remain EMPTY with no objects, no decorations, no people. Perfect for text overlay. Color palette: deep warm shadow (#1a1510) on left, warm amber (#FFD166) mid, sky-blue screen glow (#5BA8E5) on right. Cinematic lighting contrast between dark left and warm-lit right. NO text, NO numbers, NO UI labels anywhere in the image. Style: soft painterly cinematic illustration. Mood: focused, warm, personal, inviting — like the cover of a lifestyle tech magazine."
+      "c": "Cinematic warm lifestyle blog thumbnail, wide 16:9 landscape format. BALANCED SPLIT COMPOSITION — equal visual weight on both sides. LEFT 45% OF FRAME: a clean floating UI card or checklist panel with soft drop shadow — 3 or 4 simple checkmark rows, a before/after comparison panel, or a small organized task list. The card has rounded corners, pale mint or sky-blue (#5BA8E5) accent color, soft ivory (#FFF8F0) background, and feels light and modern. Small decorative accent icons (lightbulb, checkmark, or gear) float near the card. Left background: soft warm gradient from pale ivory to light cream. RIGHT 55% OF FRAME: a young person (back view only, no face) seated at a glowing laptop with warm amber backlight halo, soft bokeh home desk or cafe background. The laptop screen emits a soft sky-blue glow evoking {topic}. Color palette: ivory (#FFF8F0) on left, warm amber (#FFD166) mid, sky-blue (#5BA8E5) on right. NO text, NO numbers, NO readable labels anywhere. Style: soft painterly cinematic illustration with warm grain texture. Mood: focused, organized, practical — left side feels actionable, right side feels human and relatable."
     }
   },
   "main_ss_id": "1_pgNf2-JNlT2uwJFGzlVPGpuVpj2mf5eSsa_YLwMwGc",

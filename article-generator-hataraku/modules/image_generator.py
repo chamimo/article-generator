@@ -655,6 +655,45 @@ _RAND_LAYOUTS = [
 ]
 # ─────────────────────────────────────────────────────────────────────────────
 
+# ── AIVice 専用スタイル定数 ──────────────────────────────────────────────────
+
+# スタイル名 → 背景プロンプト用パレット候補
+_AIVICE_STYLE_PALETTES: dict[str, list[str]] = {
+    "ai_future":          ["deep_navy_cyan", "midnight_teal", "dark_slate_indigo"],
+    "pc_desk":            ["ivory_navy", "warm_cream_sage", "linen_charcoal"],
+    "saas_dashboard":     ["clean_white_blue", "slate_mint", "light_gray_coral"],
+    "feminine_soft":      ["blush_ivory", "lavender_cream", "peach_sage"],
+    "comparison_ranking": ["navy_white", "teal_ivory", "slate_gold"],
+}
+
+# スタイル名 → _overlay_aivice_template_banner に渡す _template 候補
+_AIVICE_STYLE_TO_TEMPLATE: dict[str, list[str]] = {
+    "ai_future":          ["aivice_tool_desk", "aivice_wave_panel"],
+    "pc_desk":            ["aivice_pastel_person", "aivice_soft_flatlay", "aivice_tool_desk"],
+    "saas_dashboard":     ["aivice_soft_flatlay", "aivice_tool_desk"],
+    "feminine_soft":      ["aivice_pastel_person", "aivice_wave_panel"],
+    "comparison_ranking": ["aivice_soft_flatlay", "aivice_wave_panel"],
+}
+
+# パレット名 → 背景プロンプト用カラー説明
+_AIVICE_PALETTE_DESCRIPTIONS: dict[str, str] = {
+    "deep_navy_cyan":      "deep navy #0d1b2a background with electric cyan #00d4ff glow accents",
+    "midnight_teal":       "near-black midnight teal background, bright mint #00ffcc and aqua glow",
+    "dark_slate_indigo":   "dark charcoal slate background, soft indigo #7b5ea7 and violet accent glow",
+    "ivory_navy":          "warm ivory #faf7f2 and cream tones, deep navy #1e2d5a accents",
+    "warm_cream_sage":     "warm cream #fff8f0, natural wood brown, muted sage green accents",
+    "linen_charcoal":      "soft linen #f5efe6, warm off-white, charcoal #2d2d2d and slate accents",
+    "clean_white_blue":    "clean bright white #ffffff, light sky blue #e8f4fd, cool gray accents",
+    "slate_mint":          "medium slate gray #4a5568, soft mint #b2f5ea accent, clean white panels",
+    "light_gray_coral":    "very light gray #f7fafc background, soft coral #fc8181 accent touches",
+    "blush_ivory":         "soft blush pink #ffe4e6, warm ivory #fffdf9, cream and pale rose tones",
+    "lavender_cream":      "gentle lavender #ede9fe, warm cream #fffbf5, pale lilac soft gradient",
+    "peach_sage":          "warm peach #fff1e6, muted sage green #a8c5a0, ivory and botanicals",
+    "navy_white":          "deep navy #1a2b5e and crisp white #ffffff, bold clean contrast",
+    "teal_ivory":          "teal #2c7873 and warm ivory #faf7f2, fresh and trustworthy",
+    "slate_gold":          "slate blue-gray #485585, warm gold #d4a843 accent, clean cream panels",
+}
+
 def _generate_ad_concept(keyword: str, article_theme: str = "") -> dict:
     """
     Haiku が記事テーマからライフスタイル誌アートディレクションを生成する。
@@ -1709,6 +1748,344 @@ def _is_aivice_site_theme(article_theme: str = "") -> bool:
         str(meta.get("target", "")),
     ]).lower()
     return any(k in haystack for k in ("workup-ai", "aivice", "aiツール", "ai tool", "生成ai"))
+
+
+# ── AIVice 専用スタイル選択・履歴管理 ────────────────────────────────────────
+
+def _load_aivice_history() -> list[dict]:
+    """AIVice アイキャッチ生成履歴を読み込む（直近20件）。"""
+    history_path = _OUTPUT_DIR.parent / "eyecatch_template_history.json"
+    try:
+        if history_path.exists():
+            data = json.loads(history_path.read_text(encoding="utf-8"))
+            return [x for x in data.get("aivice", []) if isinstance(x, dict)]
+    except Exception:
+        pass
+    return []
+
+
+def _save_aivice_eyecatch_history(
+    keyword: str,
+    style: str,
+    palette: str,
+    template: str,
+    post_id: int | None = None,
+) -> None:
+    """AIVice アイキャッチ生成結果を履歴JSONに保存する（直近20件保持）。"""
+    history_path = _OUTPUT_DIR.parent / "eyecatch_template_history.json"
+    try:
+        data: dict = {}
+        if history_path.exists():
+            data = json.loads(history_path.read_text(encoding="utf-8"))
+        entry = {
+            "ts":       datetime.now().strftime("%Y-%m-%dT%H:%M:%S"),
+            "keyword":  keyword[:80],
+            "style":    style,
+            "palette":  palette,
+            "template": template,
+        }
+        if post_id is not None:
+            entry["post_id"] = post_id
+        seq = [x for x in data.get("aivice", []) if isinstance(x, dict)]
+        seq.append(entry)
+        data["aivice"] = seq[-20:]
+        history_path.parent.mkdir(parents=True, exist_ok=True)
+        history_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    except Exception:
+        pass
+
+
+def _select_aivice_style(title: str) -> str:
+    """
+    記事タイトルからAIVice専用スタイルを選ぶ（優先順に判定）。
+    過去5件で同スタイルが連続していれば次候補にずらす。
+    """
+    text = title.lower()
+
+    # 優先1: AI系ツール・モデル名 → ai_future
+    if any(k in title for k in (
+        "ChatGPT", "Claude", "Gemini", "GPT", "LLM", "AI", "エージェント",
+        "プロンプト", "生成AI", "Copilot", "Perplexity", "Grok",
+    )):
+        primary = "ai_future"
+    # 優先2: 副業・在宅ワーク系 → pc_desk
+    elif any(k in title for k in (
+        "副業", "在宅", "フリーランス", "ブログ", "SEO", "収益", "稼ぐ",
+        "月収", "アフィリエイト", "自動化", "仕事術",
+    )):
+        primary = "pc_desk"
+    # 優先3: SaaS比較・料金系 → saas_dashboard
+    elif any(k in title for k in (
+        "比較", "料金", "プラン", "値段", "コスト", "サービス", "SaaS",
+        "ツール", "アプリ", "ソフト", "サブスク",
+    )):
+        primary = "saas_dashboard"
+    # 優先4: 女性・ライフスタイル系 → feminine_soft
+    elif any(k in title for k in (
+        "主婦", "ワーママ", "育児", "パート", "働き方", "ライフスタイル",
+        "暮らし", "家事", "子育て",
+    )):
+        primary = "feminine_soft"
+    # 優先5: おすすめ・ランキング系 → comparison_ranking
+    elif any(k in title for k in (
+        "おすすめ", "ランキング", "選び方", "人気", "厳選", "まとめ",
+    )):
+        primary = "comparison_ranking"
+    else:
+        primary = "ai_future"
+
+    # 過去5件で同スタイルが3回以上連続していればローテーション
+    history = _load_aivice_history()
+    recent_styles = [h.get("style", "") for h in history[-5:]]
+    if recent_styles.count(primary) >= 3:
+        all_styles = list(_AIVICE_STYLE_PALETTES.keys())
+        candidates = [s for s in all_styles if s != primary]
+        return random.choice(candidates)
+    return primary
+
+
+def _pick_aivice_palette(style: str) -> str:
+    """
+    過去5件の履歴を参照し、同スタイルで同パレットが連続しないパレットを返す。
+    """
+    history = _load_aivice_history()
+    recent_combos = {
+        f"{h.get('style','')};{h.get('palette','')}"
+        for h in history[-5:]
+    }
+    pool = _AIVICE_STYLE_PALETTES.get(style, ["ivory_navy"])
+    available = [p for p in pool if f"{style};{p}" not in recent_combos]
+    return random.choice(available or pool)
+
+
+def _pick_aivice_template(style: str, history: list[dict] | None = None) -> str:
+    """
+    スタイルに対応するオーバーレイテンプレートを選ぶ。
+    直近2件で使ったテンプレートは後回しにする。
+    """
+    if history is None:
+        history = _load_aivice_history()
+    recent_templates = [h.get("template", "") for h in history[-3:]]
+    pool = _AIVICE_STYLE_TO_TEMPLATE.get(style, ["aivice_tool_desk"])
+    available = [t for t in pool if t not in recent_templates[-2:]]
+    return random.choice(available or pool)
+
+
+def _build_aivice_ai_future_prompt(title: str, palette: str) -> str:
+    """AI未来感スタイル: デジタル発光・テック空間。AI/ChatGPT/Claude系記事向け。"""
+    palette_desc = _AIVICE_PALETTE_DESCRIPTIONS.get(palette, "deep navy with cyan glow")
+    scenes = [
+        (
+            "Abstract digital workspace: glowing chat interface cards floating in dim space, "
+            "soft data flow lines, subtle circuit patterns, holographic depth. "
+            f"Color: {palette_desc}. "
+            "LEFT 52% is spacious and low-contrast for text overlay. "
+            "RIGHT 48% has the glowing elements and depth."
+        ),
+        (
+            "Futuristic close-up of a laptop keyboard with soft screen glow, "
+            "abstract AI node network floating above the screen, gentle light streams. "
+            f"Color: {palette_desc}. "
+            "LEFT 50% remains clean and dark for text overlay. "
+            "RIGHT 50% has the keyboard and glowing network."
+        ),
+        (
+            "Minimal dark desk with a glowing monitor showing abstract AI conversation UI "
+            "(blank chat bubbles, no readable text), coffee mug, soft ambient light. "
+            f"Color: {palette_desc}. "
+            "LEFT 54% is calm dark space for text. "
+            "RIGHT 46% has the monitor glow and desk objects."
+        ),
+    ]
+    base = random.choice(scenes)
+    return (
+        f"16:9 horizontal Japanese tech blog thumbnail background. {base} "
+        f"Topic feeling: {title}. "
+        "Style: cinematic tech editorial, high quality, professional. "
+        "ABSOLUTELY NO text, no letters, no numbers, no logos, no UI labels with readable characters. "
+        "Background image only. PIL text overlay will be added later."
+    )
+
+
+def _build_aivice_pc_desk_prompt(title: str, palette: str) -> str:
+    """実写PCデスクスタイル: 副業・ブログ・SEO・在宅ワーク系記事向け。"""
+    palette_desc = _AIVICE_PALETTE_DESCRIPTIONS.get(palette, "ivory and warm cream")
+    scenes = [
+        (
+            "Bright home workspace: open laptop with blank screen, coffee mug, "
+            "small plant, notebook and pen on a warm wooden desk. "
+            "Soft natural window light, airy and calm. "
+            f"Color: {palette_desc}. "
+            "LEFT 52% is bright open desk area for text overlay. "
+            "RIGHT 48% has the laptop and lifestyle objects."
+        ),
+        (
+            "Top-down flatlay of a tidy freelance work desk: laptop corner, open planner, "
+            "pen, ceramic mug, small succulent. Clean and organized. "
+            f"Color: {palette_desc}. "
+            "LEFT 55% is empty bright surface for text overlay. "
+            "RIGHT 45% has the workspace objects."
+        ),
+        (
+            "Cozy home office: person's hands on laptop keyboard (hands only, no face), "
+            "coffee beside the laptop, soft blurred bookshelf background. "
+            "Warm afternoon natural light. "
+            f"Color: {palette_desc}. "
+            "LEFT 50% is calm open space for text overlay. "
+            "RIGHT 50% has the hands, laptop and warm background."
+        ),
+    ]
+    base = random.choice(scenes)
+    return (
+        f"16:9 horizontal Japanese lifestyle blog thumbnail background. {base} "
+        f"Topic feeling: {title}. "
+        "Style: warm editorial lifestyle photography, Pinterest-worthy, friendly blog aesthetic. "
+        "ABSOLUTELY NO text, no letters, no numbers, no logos. "
+        "Background image only. PIL text overlay will be added later."
+    )
+
+
+def _build_aivice_saas_dashboard_prompt(title: str, palette: str) -> str:
+    """SaaSダッシュボードスタイル: 比較・料金・ツールおすすめ記事向け。"""
+    palette_desc = _AIVICE_PALETTE_DESCRIPTIONS.get(palette, "clean white and sky blue")
+    scenes = [
+        (
+            "Clean minimal workspace with laptop showing abstract blank UI comparison cards "
+            "(empty rectangles only, zero readable text), tablet beside it, tidy desk. "
+            f"Color: {palette_desc}. "
+            "LEFT 52% is calm bright open space for text overlay. "
+            "RIGHT 48% has the laptop and abstract blank comparison panels."
+        ),
+        (
+            "Abstract floating blank SaaS-style cards arranged in a clean grid, "
+            "soft shadows, airy pastel background. No text on any card. "
+            "Small blank checkbox shapes and simple arrow icons as decorative elements only. "
+            f"Color: {palette_desc}. "
+            "LEFT 55% is open clear space. RIGHT 45% has the floating card arrangement."
+        ),
+        (
+            "Modern minimal desk flatlay: tablet with blank screen, small abstract "
+            "comparison chart shapes (no numbers), notebook, clean coffee mug. "
+            f"Color: {palette_desc}. "
+            "LEFT 52% is open light surface. RIGHT 48% has the objects."
+        ),
+    ]
+    base = random.choice(scenes)
+    return (
+        f"16:9 horizontal Japanese tech comparison blog thumbnail background. {base} "
+        f"Topic feeling: {title}. "
+        "Style: clean professional editorial, Canva-like, trustworthy and organized. "
+        "ABSOLUTELY NO text, no readable characters, no numbers, no logos anywhere. "
+        "Background image only. PIL text overlay will be added later."
+    )
+
+
+def _build_aivice_feminine_soft_prompt(title: str, palette: str) -> str:
+    """女性向けやさしいスタイル: 主婦・働き方・AI活用系記事向け。"""
+    palette_desc = _AIVICE_PALETTE_DESCRIPTIONS.get(palette, "blush pink and warm ivory")
+    scenes = [
+        (
+            "Bright airy home corner: small bouquet of soft flowers, open notebook, "
+            "pastel ceramic mug, laptop corner softly blurred in background. "
+            "Gentle morning light, feminine and calm. "
+            f"Color: {palette_desc}. "
+            "LEFT 54% is bright calm open space for text overlay. "
+            "RIGHT 46% has the flowers and lifestyle objects."
+        ),
+        (
+            "Woman's hands (hands only, no face) resting beside a pastel notebook "
+            "and coffee on a bright white table, small plant and soft blurred background. "
+            f"Color: {palette_desc}. "
+            "LEFT 50% is open bright surface for text. "
+            "RIGHT 50% has the hands and table objects."
+        ),
+        (
+            "Top-down flatlay of a soft feminine work desk: open planner, "
+            "pen, small flowers, pastel sticky notes (blank), cozy ceramic mug. "
+            f"Color: {palette_desc}. "
+            "LEFT 55% is clean bright surface. "
+            "RIGHT 45% has the arranged objects."
+        ),
+    ]
+    base = random.choice(scenes)
+    return (
+        f"16:9 horizontal Japanese lifestyle blog thumbnail background. {base} "
+        f"Topic feeling: {title}. "
+        "Style: soft feminine editorial, warm and welcoming, Pinterest-style. "
+        "ABSOLUTELY NO text, no letters, no numbers, no logos. "
+        "Background image only. PIL text overlay will be added later."
+    )
+
+
+def _build_aivice_comparison_ranking_prompt(title: str, palette: str) -> str:
+    """比較表・ランキングスタイル: ○○おすすめ・比較記事向け。"""
+    palette_desc = _AIVICE_PALETTE_DESCRIPTIONS.get(palette, "deep navy and crisp white")
+    scenes = [
+        (
+            "Clean minimal desk with laptop showing blank comparison table "
+            "(empty rows and columns only, absolutely zero numbers or text), "
+            "notebook beside it, simple tidy workspace. "
+            f"Color: {palette_desc}. "
+            "LEFT 52% is calm open space for text overlay. "
+            "RIGHT 48% has the laptop with abstract blank table and desk objects."
+        ),
+        (
+            "Abstract podium-like arrangement of three blank rounded rectangles "
+            "in different heights suggesting ranking, clean minimal background. "
+            "No numbers, no text, no stars, no trophy images. "
+            f"Color: {palette_desc}. "
+            "LEFT 55% is open clear space. RIGHT 45% has the abstract podium shapes."
+        ),
+        (
+            "Modern workspace flatlay: tablet, blank checklist shapes, "
+            "simple upward arrow decorative element, coffee, clean desk. "
+            f"Color: {palette_desc}. "
+            "LEFT 52% is bright open surface. RIGHT 48% has the objects."
+        ),
+    ]
+    base = random.choice(scenes)
+    return (
+        f"16:9 horizontal Japanese blog thumbnail background for comparison/ranking article. {base} "
+        f"Topic feeling: {title}. "
+        "Style: bold clean editorial, trustworthy, organized and professional. "
+        "ABSOLUTELY NO text, no readable characters, no numbers, no logos. "
+        "Background image only. PIL text overlay will be added later."
+    )
+
+
+def _build_aivice_background_prompt(title: str, style: str, palette: str) -> str:
+    """スタイル名に応じてAIVice専用背景プロンプトを返すディスパッチャー。"""
+    builders = {
+        "ai_future":          _build_aivice_ai_future_prompt,
+        "pc_desk":            _build_aivice_pc_desk_prompt,
+        "saas_dashboard":     _build_aivice_saas_dashboard_prompt,
+        "feminine_soft":      _build_aivice_feminine_soft_prompt,
+        "comparison_ranking": _build_aivice_comparison_ranking_prompt,
+    }
+    builder = builders.get(style, _build_aivice_ai_future_prompt)
+    return builder(title, palette)
+
+
+def _aivice_style_overlay_texts(title: str, style: str, template: str) -> dict:
+    """
+    AIVice専用スタイル向けのオーバーレイテキスト辞書を生成する。
+    _generate_overlay_texts() (Haiku) で生成後、スタイルに応じた
+    _template / _aivice_style フラグを付与して返す。
+    """
+    texts = _generate_overlay_texts(title)
+
+    # スタイル別 strip_label 上書き
+    style_labels = {
+        "ai_future":          random.choice(["AI解説", "最新AI", "AI活用", "生成AI"]),
+        "pc_desk":            random.choice(["副業ガイド", "在宅術", "実践ガイド", "初心者向け"]),
+        "saas_dashboard":     random.choice(["徹底比較", "料金解説", "ツール比較", "厳選紹介"]),
+        "feminine_soft":      random.choice(["やさしく解説", "初心者OK", "無理なく始める", "ていねい解説"]),
+        "comparison_ranking": random.choice(["おすすめ厳選", "ランキング", "比較まとめ", "保存版"]),
+    }
+    texts["strip_label"] = style_labels.get(style, texts.get("strip_label", "AI解説"))
+    texts["_template"]     = template
+    texts["_aivice_style"] = True
+    return _sanitize_overlay_texts(texts)
 
 
 def _select_beginner_guide_template(title: str) -> str:
@@ -3725,6 +4102,23 @@ def generate_lifestyle_eyecatch_image(
         texts = _curiosity_overlay_texts(title, _generate_overlay_texts(title), curiosity_template)
         final_bytes = _overlay_beginner_guide_banner(bg_bytes, texts)
         _save_debug_image(final_bytes, "codex_hapipo8_curiosity_eyecatch", model)
+        return final_bytes
+
+    if _is_aivice_site_theme(article_theme):
+        print("[IMAGE] AIVice専用スタイルで生成します")
+        history       = _load_aivice_history()
+        style         = _select_aivice_style(title)
+        palette       = _pick_aivice_palette(style)
+        template      = _pick_aivice_template(style, history)
+        print(f"[IMAGE] aivice style={style}  palette={palette}  template={template}")
+        bg_prompt     = _build_aivice_background_prompt(title, style, palette)
+        bg_bytes      = _call_model(model, bg_prompt, W_EYECATCH, H_EYECATCH)
+        texts         = _aivice_style_overlay_texts(title, style, template)
+        final_bytes   = _overlay_beginner_guide_banner(bg_bytes, texts)
+        _save_debug_image(final_bytes, f"codex_aivice_{style}_eyecatch", model)
+        _save_aivice_eyecatch_history(
+            keyword=title, style=style, palette=palette, template=template,
+        )
         return final_bytes
 
     if _is_beginner_guide_title(title):

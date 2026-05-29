@@ -14,7 +14,6 @@
     "right_person"
   ],
   "hida": [
-    "letter_story",
     "nostalgic_desk",
     "market_walk",
     "travel_flatlay",
@@ -25,7 +24,8 @@
     "market_walk",
     "town_morning",
     "travel_flatlay",
-    "market_walk"
+    "market_walk",
+    "ryokan_room"
   ],
   "curiosity": [
     "notebook_closeup",
@@ -40,5 +40,56 @@
     "soft_illustration",
     "home_lifestyle",
     "notebook_closeup"
+  ],
+  "aivice": [
+    {
+      "ts": "2026-05-29T10:57:41",
+      "keyword": "AI副業のリアルな体験談｜失敗と成功から見えてきたこと",
+      "style": "ai_future",
+      "palette": "deep_navy_cyan",
+      "template": "aivice_wave_panel"
+    },
+    {
+      "ts": "2026-05-29T10:58:55",
+      "keyword": "AI副業のリアルな体験談｜失敗と成功から見えてきたこと",
+      "style": "ai_future",
+      "palette": "midnight_teal",
+      "template": "aivice_tool_desk"
+    },
+    {
+      "ts": "2026-05-29T10:59:46",
+      "keyword": "AI副業のリアルな体験談｜失敗と成功から見えてきたこと",
+      "style": "ai_future",
+      "palette": "dark_slate_indigo",
+      "template": "aivice_wave_panel"
+    },
+    {
+      "ts": "2026-05-29T11:00:38",
+      "keyword": "AI副業のリアルな体験談｜失敗と成功から見えてきたこと",
+      "style": "comparison_ranking",
+      "palette": "navy_white",
+      "template": "aivice_soft_flatlay"
+    },
+    {
+      "ts": "2026-05-29T11:53:52",
+      "keyword": "AIツール増やしすぎ問題を解決！デジタル断捨離で効率化する整理術",
+      "style": "feminine_soft",
+      "palette": "lavender_cream",
+      "template": "aivice_pastel_person"
+    },
+    {
+      "ts": "2026-05-29T23:16:19",
+      "keyword": "AIツール増やしすぎ問題を解決！今日から始めるデジタル断捨離の整理術",
+      "style": "comparison_ranking",
+      "palette": "teal_ivory",
+      "template": "aivice_wave_panel"
+    },
+    {
+      "ts": "2026-05-30T02:16:22",
+      "keyword": "Claude AIの使い方を初心者向けに解説｜無料登録から活用法まで",
+      "style": "ai_future",
+      "palette": "deep_navy_cyan",
+      "template": "aivice_tool_desk"
+    }
   ]
 }
