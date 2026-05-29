@@ -190,14 +190,16 @@ __AFFILIATE_LINES__
 <!-- /wp:paragraph -->
 
 ## 2. この記事のポイント
-<!-- wp:loos/cap-block {{"className":"is-style-onborder_ttl2"}} -->
-<div class="swell-block-capbox cap_box is-style-onborder_ttl2"><div class="cap_box_ttl"><span>この記事のポイント</span></div><div class="cap_box_content">
+<!-- wp:loos/cap-block -->
+<div class="swell-block-capbox cap_box"><div class="cap_box_ttl"><span>この記事のポイント</span></div><div class="cap_box_content">
+<!-- wp:list {{"className":"is-style-check_list"}} -->
 <ul class="wp-block-list is-style-check_list">
 <li>{{ポイント1}}</li>
 <li>{{ポイント2}}</li>
 <li>{{ポイント3}}</li>
 <li>{{キーフレーズを含むポイント4}}</li>
 </ul>
+<!-- /wp:list -->
 </div></div>
 <!-- /wp:loos/cap-block -->
 
@@ -348,14 +350,12 @@ FAQには以下の内容を必ず含める:
 <h3 class="wp-block-heading">よくある質問</h3>
 <!-- /wp:heading -->
 
-<!-- wp:loos/faq {{"iconRadius":"rounded","qIconStyle":"fill-custom","aIconStyle":"fill-custom","outputJsonLd":true,"titleTag":"h4","className":"is-style-faq-stripe"}} -->
-<div class="swell-block-faq -icon-rounded is-style-faq-stripe" data-q="fill-custom" data-a="fill-custom">
-<div class="swell-block-faq__item">
-<h4 class="faq_q">{{質問文}}</h4>
-<div class="faq_a">
+<!-- wp:loos/faq {{"iconRadius":"rounded","qIconStyle":"col-custom","aIconStyle":"col-custom","outputJsonLd":true,"titleTag":"h4"}} -->
+<div class="swell-block-faq -icon-rounded" data-q="col-custom" data-a="col-custom"><!-- wp:loos/faq-item {{"titleTag":"h4"}} -->
+<div class="swell-block-faq__item"><h4 class="faq_q">{{質問文}}</h4><div class="faq_a"><!-- wp:paragraph -->
 <p>{{回答文（200字以上。不安解消・具体的な情報を含める）}}</p>
-</div>
-</div>
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:loos/faq-item -->
 {{8〜10問繰り返し}}
 </div>
 <!-- /wp:loos/faq -->
@@ -801,13 +801,16 @@ def _build_tone_section(keyword: str) -> str:
 
 
 def _build_testimonial_section(keyword: str) -> str:
-    """スプレッドシートから関連体験談を取得してプロンプトセクションを返す。"""
+    """EXPERIENCE｜体験談シートから関連体験談を取得してプロンプトセクションを返す。"""
     try:
         from modules import wp_context
         from modules.testimonial_fetcher import build_prompt_section
         from config import GOOGLE_CREDENTIALS_PATH
-        ss_id = wp_context.get_candidate_ss_id()
-        section = build_prompt_section(keyword, ss_id, GOOGLE_CREDENTIALS_PATH)
+        ss_id = wp_context.get_experience_ss_id()
+        if not ss_id:
+            return ""
+        blog_name = wp_context.get_blog_name()
+        section = build_prompt_section(keyword, blog_name, ss_id, GOOGLE_CREDENTIALS_PATH)
         if section:
             print(f"[article_generator] 体験談: 関連体験談をプロンプトに組み込みました")
         return section

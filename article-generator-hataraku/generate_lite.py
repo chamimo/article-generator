@@ -1724,7 +1724,8 @@ def generate(
 # ═══════════════════════════════════════════════════════════════
 def post(article: dict, dry_run: bool = False,
          blog_cfg: BlogConfig | None = None,
-         asp_list: list[dict] | None = None) -> dict:
+         asp_list: list[dict] | None = None,
+         update_post_id: int | None = None) -> dict:
     """
     WordPress に下書きとして投稿する。
     blog_cfg が指定された場合は一時的に WP 認証情報を切り替えて投稿する。
@@ -1749,6 +1750,9 @@ def post(article: dict, dry_run: bool = False,
             asp_ss_id=blog_cfg.asp_ss_id,
             eyecatch_model=blog_cfg.eyecatch_model,
             article_image_model=blog_cfg.article_image_model,
+            min_new_h2_images=blog_cfg.extra.get("min_new_h2_images", 0),
+            blog_name=blog_cfg.name,
+            experience_ss_id=blog_cfg.extra.get("experience_ss_id", ""),
             default_fallback_category=blog_cfg.extra.get("default_fallback_category", ""),
             category_keywords=blog_cfg.extra.get("category_keywords", {}),
             trusted_external_links=blog_cfg.extra.get("trusted_external_links", []),
@@ -1780,9 +1784,11 @@ def post(article: dict, dry_run: bool = False,
             stop_words = blog_cfg.stop_words if blog_cfg else []
             result = post_article_with_image(article, image_bytes=None,
                                              asp_links=asp_links, stop_words=stop_words,
-                                             enable_eyecatch=False)
+                                             enable_eyecatch=False,
+                                             update_post_id=update_post_id)
         else:
-            result = create_post(article, featured_media_id=None)
+            result = create_post(article, featured_media_id=None,
+                                 update_post_id=update_post_id)
     finally:
         wp_context.clear_context()
 
@@ -1793,6 +1799,72 @@ def post(article: dict, dry_run: bool = False,
         raise NotImplementedError("シート更新はPhase 2で実装予定")
 
     return {**result, "status": "success"}
+
+
+def _suggest_and_output_testimonials(
+    keyword: str,
+    blog_cfg: "BlogConfig",
+    article: dict,
+) -> None:
+    """
+    体験談が不足しているキーワードに対して Haiku で候補を生成し
+    ReviewQueue シートに追記する。
+    失敗してもサイレントスキップ（記事生成・投稿には影響なし）。
+    ※ post() の finally: clear_context() 後に呼ばれるため blog_cfg から直接取得する。
+    """
+    try:
+        from modules.testimonial_fetcher import suggest_candidates, write_to_review_queue
+        from config import GOOGLE_CREDENTIALS_PATH
+
+        # wp_context.clear_context() 済みなので blog_cfg から直接取得
+        ss_id = blog_cfg.extra.get("experience_ss_id", "")
+        if not ss_id:
+            return
+
+        category = article.get("category_name", "")
+        result = suggest_candidates(
+            keyword=keyword,
+            blog_name=blog_cfg.name,
+            category=category,
+            ss_id=ss_id,
+            credentials_path=GOOGLE_CREDENTIALS_PATH,
+            threshold=2,
+        )
+        if result is None:
+            return
+
+        existing_count = result["existing_count"]
+        suggestions    = result["suggestions"]
+        type_labels    = {"review": "使用感", "caution": "注意点", "failure": "失敗談", "tips": "コツ"}
+
+        # コンソールプレビュー
+        lines = [
+            "",
+            "━" * 48,
+            f"[testimonial] 体験談候補 [{blog_cfg.display_name}] {keyword}",
+            f"   現在の登録数: {existing_count}件 / 推奨: 2件以上",
+            "━" * 48,
+        ]
+        for type_key in ("review", "caution", "failure", "tips"):
+            c = suggestions[type_key]
+            lines.append(f"  [{type_key} / {type_labels[type_key]}]  {c['author']}")
+            lines.append(f"  {c['comment']}")
+        log.info("\n".join(lines))
+
+        # ReviewQueue シートに追記
+        written = write_to_review_queue(
+            blog_name=blog_cfg.name,
+            keyword=keyword,
+            category=category,
+            suggestions=suggestions,
+            ss_id=ss_id,
+            credentials_path=GOOGLE_CREDENTIALS_PATH,
+        )
+        if written:
+            log.info(f"[testimonial] ReviewQueue に{written}件追記 → 確認後 --sync-experience で昇格")
+
+    except Exception as e:
+        log.warning(f"[testimonial] 候補提案スキップ（続行）: {e}")
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -1806,6 +1878,7 @@ def run_blog(
     volume: int = 0,
     count: int | None = None,
     forced_title: str | None = None,
+    update_post_id: int | None = None,
 ) -> list[dict]:
     """
     1ブログ分の記事生成フローを実行して結果リストを返す。
@@ -1819,7 +1892,7 @@ def run_blog(
     """
     import time
 
-    n_articles = count if count is not None else blog_cfg.article_count
+    n_articles = 1 if update_post_id else (count if count is not None else blog_cfg.article_count)
     stop_words = blog_cfg.stop_words  # コアKW正規化用（空リストのとき無効）
 
     log.info(f"  genre            : {blog_cfg.genre}")
@@ -1836,7 +1909,7 @@ def run_blog(
             load_media_persona_sheet,
             build_persona_prompt,
         )
-        _persona_ss_id = blog_cfg.candidate_ss_id or blog_cfg.asp_ss_id
+        _persona_ss_id = blog_cfg.asp_ss_id or blog_cfg.candidate_ss_id
         if _persona_ss_id:
             _blog_config_data   = load_blog_config_sheet(_persona_ss_id, GOOGLE_CREDENTIALS_PATH)
             _media_persona_data = load_media_persona_sheet(_persona_ss_id, GOOGLE_CREDENTIALS_PATH)
@@ -2026,8 +2099,8 @@ def run_blog(
             article["_kw_status"]    = chosen.get("_aim", "")
 
             # ── 生成後タイトル重複チェック ──────────────────────────
-            # タイトル強制指定時はスキップ（ユーザーが明示的に指定したため）
-            if wp_posts and not forced_title:
+            # タイトル強制指定時・上書き更新時はスキップ
+            if wp_posts and not forced_title and not update_post_id:
                 is_dup_post, dup_title = _check_title_after_generation(
                     article["title"], wp_posts
                 )
@@ -2045,7 +2118,8 @@ def run_blog(
                 log.warning(f"[quality] チェックエラー（続行）: {_qe}")
                 _quality_issues = []
 
-            post_result = post(article, dry_run=dry_run, blog_cfg=blog_cfg, asp_list=asp_list)
+            post_result = post(article, dry_run=dry_run, blog_cfg=blog_cfg, asp_list=asp_list,
+                               update_post_id=update_post_id)
 
             # 投稿成功後にメモリ内 wp_posts を更新（同セッション内の重複防止）
             if wp_posts is not None:
@@ -2077,6 +2151,9 @@ def run_blog(
                     )
                 except Exception as _me:
                     log.warning(f"[quality] メール通知エラー（続行）: {_me}")
+
+            # ── 体験談候補提案（不足時のみ・サイレントスキップ） ──
+            _suggest_and_output_testimonials(chosen["keyword"], blog_cfg, article)
 
             n_success += 1
             log.info(f"[{blog_cfg.name}] [{i}/{len(targets)}] ✅ 完了: 「{article['title']}」")
@@ -2940,12 +3017,16 @@ def main() -> None:
     parser.add_argument("--volume",   type=int, default=0, help="--keyword 指定時の月間検索数")
     parser.add_argument("--dry-run",  action="store_true", help="WP投稿をスキップ")
     parser.add_argument("--yes", "-y", action="store_true", help="実行前確認をスキップ")
+    parser.add_argument("--update-post-id", type=int, default=None,
+                        help="既存 WP 記事 ID を上書き更新（PATCH）。--keyword と併用")
     parser.add_argument("--test",     action="store_true",
                         help="テスト生成モード: 1記事のみ生成・下書き保存（--count 1 と同等）")
     parser.add_argument("--kanikabari", action="store_true",
                         help="かにばりチェックを実行してシートに判定を書き込む（記事生成はしない）")
     parser.add_argument("--force-kanikabari", action="store_true",
                         help="既判定キーワードも含めて全件再チェック（--kanikabari と組み合わせて使用）")
+    parser.add_argument("--sync-experience", action="store_true",
+                        help="ReviewQueue の approved 行を EXPERIENCE｜体験談 に昇格させる（記事生成はしない）")
     args = parser.parse_args()
 
     # --test フラグ: count=1 を強制（--count と同時指定時は --count を優先）
@@ -2957,6 +3038,35 @@ def main() -> None:
     log.info("=" * 60)
     log.info(f"generate_lite.py 開始  dry_run={args.dry_run}")
     log.info("=" * 60)
+
+    # ── --sync-experience: 記事生成なし・昇格のみ実行して終了 ─────────
+    if getattr(args, "sync_experience", False):
+        try:
+            from modules.testimonial_fetcher import promote_approved
+            from config import GOOGLE_CREDENTIALS_PATH
+
+            # experience_ss_id は全ブログ共通なのでいずれかのブログ設定から取得
+            ss_id = ""
+            for _bn in list_blogs():
+                try:
+                    _cfg = load_blog_config(_bn)
+                    ss_id = _cfg.extra.get("experience_ss_id", "")
+                    if ss_id:
+                        break
+                except Exception:
+                    pass
+
+            if not ss_id:
+                log.error("[sync-experience] experience_ss_id が設定されたブログが見つかりません")
+                sys.exit(1)
+
+            log.info(f"[sync-experience] ReviewQueue → EXPERIENCE｜体験談 昇格処理を開始")
+            promoted, skipped = promote_approved(ss_id, GOOGLE_CREDENTIALS_PATH)
+            log.info(f"[sync-experience] 完了: {promoted}件昇格 / {skipped}件スキップ（重複）")
+        except Exception as _se:
+            log.error(f"[sync-experience] エラー: {_se}")
+            sys.exit(1)
+        return
 
     # ── ブログ一覧の決定 ──────────────────────────────────
     registry_map: dict[str, dict] = {}  # name -> registry entry（guide_links 等）
@@ -3031,6 +3141,7 @@ def main() -> None:
                 volume=args.volume,
                 count=args.count,
                 forced_title=args.title,
+                update_post_id=getattr(args, "update_post_id", None),
             )
             all_results.extend(results)
             generated_count = sum(1 for r in results if r.get("status") == "success")

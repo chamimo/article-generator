@@ -259,6 +259,80 @@ def _ensure_external_link(content: str, keyword: str) -> str:
 
 
 # ─────────────────────────────────────────────
+# EXPERIENCE｜体験談 balloon 挿入
+# ─────────────────────────────────────────────
+
+def _inject_testimonial_balloons(content: str, keyword: str) -> str:
+    """
+    EXPERIENCE｜体験談シートから取得した体験談を SWELL balloon ブロックとして挿入する。
+    挿入位置優先順: 最初のH2直後 > 比較表(table)直後 > 「まとめ」H2/H3直前
+    データがない場合はサイレントスキップ。
+    """
+    try:
+        from modules import wp_context
+        from modules.testimonial_fetcher import get_relevant, build_balloon_blocks
+        from config import GOOGLE_CREDENTIALS_PATH
+
+        ss_id = wp_context.get_experience_ss_id()
+        if not ss_id:
+            return content
+
+        blog_name = wp_context.get_blog_name()
+        entries = get_relevant(keyword, blog_name, ss_id, GOOGLE_CREDENTIALS_PATH, max_count=3)
+        if not entries:
+            print(f"[wordpress] 体験談: 該当なし ({keyword})")
+            return content
+
+        print(f"[wordpress] 体験談: {len(entries)}件挿入開始")
+
+        # 挿入候補位置を収集（後ろから挿入してオフセットズレを防ぐ）
+        insertion_points: list[tuple[int, bool]] = []  # (pos, insert_before)
+
+        # 優先1: 最初のH2ブロック終端直後
+        h2_end = re.search(r'<!-- /wp:heading -->', content)
+        if h2_end:
+            insertion_points.append((h2_end.end(), False))
+
+        # 優先2: 比較表（wp:table）直後
+        table_end = re.search(r'<!-- /wp:table -->', content)
+        if table_end:
+            insertion_points.append((table_end.end(), False))
+
+        # 優先3: 「まとめ」H2/H3直前
+        matome_m = re.search(
+            r'(<!-- wp:heading[^>]*-->\s*<h[23][^>]*>[^<]*まとめ)',
+            content
+        )
+        if matome_m:
+            insertion_points.append((matome_m.start(), True))
+
+        if not insertion_points:
+            print(f"[wordpress] 体験談: 挿入位置が見つからずスキップ ({keyword})")
+            return content
+
+        # 重複除去・後ろから順に挿入
+        seen: set[int] = set()
+        unique_points: list[tuple[int, bool]] = []
+        for pos, before in sorted(insertion_points, key=lambda x: x[0], reverse=True):
+            if pos not in seen:
+                seen.add(pos)
+                unique_points.append((pos, before))
+
+        for i, ((pos, insert_before), entry) in enumerate(zip(unique_points, entries)):
+            balloon = "\n\n" + build_balloon_blocks([entry]) + "\n\n"
+            if insert_before:
+                content = content[:pos] + balloon + content[pos:]
+            else:
+                content = content[:pos] + balloon + content[pos:]
+            print(f"[wordpress] 体験談[{i+1}] 挿入完了: type={entry['type']}, priority={entry['priority']}")
+
+        return content
+    except Exception as e:
+        print(f"[wordpress] 体験談挿入スキップ: {e}")
+        return content
+
+
+# ─────────────────────────────────────────────
 # H2記事内画像ヘルパー
 # ─────────────────────────────────────────────
 
@@ -429,7 +503,8 @@ def get_or_create_tags(tag_names: list[str]) -> list[int]:
 # 投稿作成
 # ─────────────────────────────────────────────
 
-def create_post(article: dict, featured_media_id: int | None = None) -> dict:
+def create_post(article: dict, featured_media_id: int | None = None,
+                update_post_id: int | None = None) -> dict:
     """
     WordPress REST APIで投稿を作成する。
 
@@ -452,47 +527,74 @@ def create_post(article: dict, featured_media_id: int | None = None) -> dict:
     post_status = wp_context.get_post_status()
     print(f"[wordpress] 投稿方式: {post_status}")
 
-    payload: dict = {
-        "title": article["title"],
-        "content": content,
-        "status": post_status,
-        "slug": article.get("slug", ""),
-        "categories": [category_id],
-        "meta": {
-            # SEO SIMPLE PACK（全ブログ共通・要 functions.php スニペット）
-            "ssp_meta_title":        article.get("seo_title") or article.get("title", ""),
-            "ssp_meta_description":  article.get("meta_description", ""),
-            # Yoast SEO（インストール済みの場合は自動で有効）
-            "_yoast_wpseo_title":    article.get("seo_title") or article.get("title", ""),
-            "_yoast_wpseo_metadesc": article.get("meta_description", ""),
-            # Rank Math（インストール済みの場合は自動で有効）
-            "rank_math_title":       article.get("seo_title") or article.get("title", ""),
-            "rank_math_description": article.get("meta_description", ""),
-            # OGP / その他
-            "ssp_meta_ogimage_url":      article.get("eyecatch_url", ""),
-            "imagefx_prompt":            article.get("imagefx_prompt", ""),
-            # SWELL アイキャッチ注釈（要 Code Snippets スニペット）
-            "swell_meta_thumb_caption":      article.get("title", ""),   # SWELL〜2.15
-            "_swell_post_eye_catch_caption": article.get("title", ""),   # SWELL 2.16+
-        },
+    meta_payload = {
+        # SEO SIMPLE PACK（全ブログ共通・要 functions.php スニペット）
+        "ssp_meta_title":        article.get("seo_title") or article.get("title", ""),
+        "ssp_meta_description":  article.get("meta_description", ""),
+        # Yoast SEO（インストール済みの場合は自動で有効）
+        "_yoast_wpseo_title":    article.get("seo_title") or article.get("title", ""),
+        "_yoast_wpseo_metadesc": article.get("meta_description", ""),
+        # Rank Math（インストール済みの場合は自動で有効）
+        "rank_math_title":       article.get("seo_title") or article.get("title", ""),
+        "rank_math_description": article.get("meta_description", ""),
+        # OGP / その他
+        "ssp_meta_ogimage_url":      article.get("eyecatch_url", ""),
+        "imagefx_prompt":            article.get("imagefx_prompt", ""),
+        # SWELL アイキャッチ注釈（要 Code Snippets スニペット）
+        "swell_meta_thumb_caption":      article.get("title", ""),   # SWELL〜2.15
+        "_swell_post_eye_catch_caption": article.get("title", ""),   # SWELL 2.16+
     }
-    if tag_ids:
-        payload["tags"] = tag_ids
-    if featured_media_id:
-        payload["featured_media"] = featured_media_id
 
-    resp = requests.post(
-        f"{wp_context.get_wp_url()}/wp-json/wp/v2/posts",
-        auth=_auth(),
-        json=payload,
-        timeout=30,
-    )
-    resp.raise_for_status()
+    if update_post_id:
+        # 既存記事を PATCH で上書き（slug/status は変更しない）
+        patch_payload: dict = {
+            "title":      article["title"],
+            "content":    content,
+            "status":     "draft",
+            "categories": [category_id],
+            "meta":       meta_payload,
+        }
+        if tag_ids:
+            patch_payload["tags"] = tag_ids
+        if featured_media_id:
+            patch_payload["featured_media"] = featured_media_id
 
-    post = resp.json()
-    post_id = post["id"]
-    edit_url = f"{wp_context.get_wp_url()}/wp-admin/post.php?post={post_id}&action=edit"
-    print(f"[wordpress] 投稿完了 (ID: {post_id}) → {edit_url}")
+        resp = requests.post(
+            f"{wp_context.get_wp_url()}/wp-json/wp/v2/posts/{update_post_id}",
+            auth=_auth(),
+            json=patch_payload,
+            timeout=30,
+        )
+        resp.raise_for_status()
+        post = resp.json()
+        post_id = post["id"]
+        edit_url = f"{wp_context.get_wp_url()}/wp-admin/post.php?post={post_id}&action=edit"
+        print(f"[wordpress] 記事更新完了 (ID: {post_id}) → {edit_url}")
+    else:
+        payload: dict = {
+            "title":      article["title"],
+            "content":    content,
+            "status":     post_status,
+            "slug":       article.get("slug", ""),
+            "categories": [category_id],
+            "meta":       meta_payload,
+        }
+        if tag_ids:
+            payload["tags"] = tag_ids
+        if featured_media_id:
+            payload["featured_media"] = featured_media_id
+
+        resp = requests.post(
+            f"{wp_context.get_wp_url()}/wp-json/wp/v2/posts",
+            auth=_auth(),
+            json=payload,
+            timeout=30,
+        )
+        resp.raise_for_status()
+        post = resp.json()
+        post_id = post["id"]
+        edit_url = f"{wp_context.get_wp_url()}/wp-admin/post.php?post={post_id}&action=edit"
+        print(f"[wordpress] 投稿完了 (ID: {post_id}) → {edit_url}")
 
     # imagefx_prompt の保存確認（REST API で取得して表示）
     try:
@@ -527,6 +629,7 @@ def post_article_with_image(
     asp_links: dict | None = None,
     stop_words: list[str] | None = None,
     enable_eyecatch: bool = True,
+    update_post_id: int | None = None,
 ) -> dict:
     """
     ① カテゴリ自動選択
@@ -583,14 +686,15 @@ def post_article_with_image(
         if not featured_media_id:
             print("[wordpress] アイキャッチ: ライブラリ該当なし・スキップ")
 
-    # ③ H2記事内画像（全枚: ライブラリ優先 → FLUXフォールバック）
+    # ③ H2記事内画像
+    # min_new_h2_images > 0 のブログは先頭N枚をFLUX新規生成優先、残りはライブラリ優先
     h2_matches = _extract_h2_blocks(article.get("content", ""))
     if h2_matches:
-        print(f"[wordpress] H2画像処理: {len(h2_matches)}枚")
+        min_new = wp_context.get_min_new_h2_images()
+        print(f"[wordpress] H2画像処理: {len(h2_matches)}枚 (新規生成優先: {min_new}枚)")
         h2_image_data: list[tuple[str, str]] = []
-
-        # アイキャッチ・使用済みH2画像の重複除外セット
         used_media_ids: set[int] = {featured_media_id} if featured_media_id else set()
+        new_generated = 0
 
         for i, match in enumerate(h2_matches, 1):
             h2_title = _extract_h2_title(match.group(0))
@@ -599,22 +703,53 @@ def post_article_with_image(
             src_url = ""
             chosen_id = None
 
-            # ライブラリから検索（アイキャッチ・使用済みH2画像を除外）
-            for term in search_terms:
-                candidates = [
-                    c for c in _fetch_media_by_tag(term)
-                    if int(c.get("id", 0)) not in used_media_ids
-                ]
-                if candidates:
-                    chosen = random.choice(candidates)
-                    src_url = chosen.get("source_url", "")
-                    if src_url:
-                        chosen_id = chosen.get("id")
-                        used_media_ids.add(int(chosen_id))
-                        print(f"[wordpress] H2画像[{i}] ライブラリ選択 (#{term}): {src_url.split('/')[-1]}")
-                        break
+            if new_generated < min_new:
+                # FLUX新規生成を優先（min_new枚まで）
+                try:
+                    img_bytes = generate_h2_image(h2_title, keyword)
+                    _, src_url = upload_media(img_bytes, filename, alt_text=img_alt, title=img_alt)
+                    print(f"[wordpress] H2画像[{i}] 新規生成 (FLUX): {h2_title[:30]}")
+                    new_generated += 1
+                except Exception as e:
+                    print(f"[wordpress] H2画像[{i}] ❌ 新規生成失敗（ライブラリにフォールバック）: {e}")
+                    for term in search_terms:
+                        candidates = [
+                            c for c in _fetch_media_by_tag(term)
+                            if int(c.get("id", 0)) not in used_media_ids
+                        ]
+                        if candidates:
+                            chosen = random.choice(candidates)
+                            src_url = chosen.get("source_url", "")
+                            if src_url:
+                                chosen_id = chosen.get("id")
+                                used_media_ids.add(int(chosen_id))
+                                print(f"[wordpress] H2画像[{i}] FB: ライブラリ (#{term}): {src_url.split('/')[-1]}")
+                                break
+            else:
+                # ライブラリ優先 → FLUXフォールバック（既存動作）
+                for term in search_terms:
+                    candidates = [
+                        c for c in _fetch_media_by_tag(term)
+                        if int(c.get("id", 0)) not in used_media_ids
+                    ]
+                    if candidates:
+                        chosen = random.choice(candidates)
+                        src_url = chosen.get("source_url", "")
+                        if src_url:
+                            chosen_id = chosen.get("id")
+                            used_media_ids.add(int(chosen_id))
+                            print(f"[wordpress] H2画像[{i}] ライブラリ選択 (#{term}): {src_url.split('/')[-1]}")
+                            break
 
-            # ライブラリ画像のALTを使用するたびに上書き（同一画像が複数記事で使われるため）
+                if not src_url:
+                    try:
+                        img_bytes = generate_h2_image(h2_title, keyword)
+                        _, src_url = upload_media(img_bytes, filename, alt_text=img_alt, title=img_alt)
+                        print(f"[wordpress] H2画像[{i}] FLUX生成（ライブラリ該当なし）: {h2_title[:30]}")
+                    except Exception as e:
+                        print(f"[wordpress] H2画像[{i}] ❌ FLUX生成失敗（スキップ）: {e}")
+
+            # ライブラリ画像のALTを上書き
             if chosen_id:
                 try:
                     requests.post(
@@ -626,15 +761,6 @@ def post_article_with_image(
                     print(f"[wordpress] H2画像[{i}] ライブラリALT更新: {img_alt}")
                 except Exception as alt_err:
                     print(f"[wordpress] H2画像[{i}] ALT更新失敗（続行）: {alt_err}")
-
-            # ライブラリになければFLUXフォールバック
-            if not src_url:
-                try:
-                    img_bytes = generate_h2_image(h2_title, keyword)
-                    _, src_url = upload_media(img_bytes, filename, alt_text=img_alt, title=img_alt)
-                    print(f"[wordpress] H2画像[{i}] FLUX生成（ライブラリ該当なし）: {h2_title[:30]}")
-                except Exception as e:
-                    print(f"[wordpress] H2画像[{i}] スキップ（続行）: {e}")
 
             if src_url:
                 h2_image_data.append((img_alt, src_url))
@@ -684,7 +810,10 @@ def post_article_with_image(
     # ⑤ CTA挿入（まとめH3直前）
     article["content"] = _inject_cta(article["content"], keyword)
 
-    # ⑤' 外部リンク確認・補完（最低1個必須）
+    # ⑤' 体験談 balloon ブロック挿入
+    article["content"] = _inject_testimonial_balloons(article["content"], keyword)
+
+    # ⑤'' 外部リンク確認・補完（最低1個必須）
     article["content"] = _ensure_external_link(article["content"], keyword)
 
     # ⑤'' ブログ設定で related_articles_at_end=true の場合、文末に他記事リンクを追加
@@ -698,10 +827,11 @@ def post_article_with_image(
             print(f"[wordpress] 文末関連記事リンク {len(related_posts)}件 追加")
 
     # ⑥ 投稿
-    result = create_post(article, featured_media_id=featured_media_id)
+    result = create_post(article, featured_media_id=featured_media_id,
+                         update_post_id=update_post_id)
 
-    # ⑦ スプレッドシート書き込み
-    if keyword:
+    # ⑦ スプレッドシート書き込み（上書き更新時はスキップ）
+    if keyword and not update_post_id:
         sub_kws = _extract_h3_titles(article.get("content", ""))
         char_count = _estimate_char_count(article.get("content", ""))
         mark_posted(

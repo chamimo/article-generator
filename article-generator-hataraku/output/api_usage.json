@@ -11249,6 +11249,426 @@
       "output_tokens": 19,
       "cost_usd": 0.000379,
       "label": "maps:さるぼぼ お土産 人気 理由"
+    },
+    {
+      "timestamp": "2026-05-28T19:20:15.764425+00:00",
+      "date": "2026-05-28",
+      "hour": "2026-05-28T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 108,
+      "output_tokens": 103,
+      "cost_usd": 0.000498,
+      "label": "lsi:光回線 工事したくない"
+    },
+    {
+      "timestamp": "2026-05-28T19:20:19.425126+00:00",
+      "date": "2026-05-28",
+      "hour": "2026-05-28T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 175,
+      "output_tokens": 509,
+      "cost_usd": 0.002176,
+      "label": "kw_research:光回線 工事したくない"
+    },
+    {
+      "timestamp": "2026-05-28T19:23:53.809933+00:00",
+      "date": "2026-05-28",
+      "hour": "2026-05-28T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16945,
+      "output_tokens": 14127,
+      "cost_usd": 0.26274,
+      "label": "article:光回線 工事したくない"
+    },
+    {
+      "timestamp": "2026-05-28T20:00:27.599417+00:00",
+      "date": "2026-05-28",
+      "hour": "2026-05-28T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 144,
+      "cost_usd": 0.000664,
+      "label": "lsi:既卒 メーカー 就職"
+    },
+    {
+      "timestamp": "2026-05-28T20:00:31.946966+00:00",
+      "date": "2026-05-28",
+      "hour": "2026-05-28T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 649,
+      "cost_usd": 0.002738,
+      "label": "kw_research:既卒 メーカー 就職"
+    },
+    {
+      "timestamp": "2026-05-28T20:04:31.191314+00:00",
+      "date": "2026-05-28",
+      "hour": "2026-05-28T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16712,
+      "output_tokens": 15321,
+      "cost_usd": 0.279951,
+      "label": "article:既卒 メーカー 就職"
+    },
+    {
+      "timestamp": "2026-05-28T20:30:15.830802+00:00",
+      "date": "2026-05-28",
+      "hour": "2026-05-28T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 110,
+      "output_tokens": 120,
+      "cost_usd": 0.000568,
+      "label": "lsi:みずのいろ どこで買える"
+    },
+    {
+      "timestamp": "2026-05-28T20:30:19.581984+00:00",
+      "date": "2026-05-28",
+      "hour": "2026-05-28T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 177,
+      "output_tokens": 491,
+      "cost_usd": 0.002106,
+      "label": "kw_research:みずのいろ どこで買える"
+    },
+    {
+      "timestamp": "2026-05-28T20:34:19.627403+00:00",
+      "date": "2026-05-28",
+      "hour": "2026-05-28T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15570,
+      "output_tokens": 14875,
+      "cost_usd": 0.269835,
+      "label": "article:みずのいろ どこで買える"
+    },
+    {
+      "timestamp": "2026-05-28T20:34:25.773186+00:00",
+      "date": "2026-05-28",
+      "hour": "2026-05-28T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 366,
+      "output_tokens": 19,
+      "cost_usd": 0.000369,
+      "label": "maps:みずのいろ どこで買える"
+    },
+    {
+      "timestamp": "2026-05-29T10:11:23.911725+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 108,
+      "cost_usd": 0.000523,
+      "label": "lsi:AIツール 増やしすぎ 整理術"
+    },
+    {
+      "timestamp": "2026-05-29T10:11:28.144091+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 490,
+      "cost_usd": 0.002105,
+      "label": "kw_research:AIツール 増やしすぎ 整理術"
+    },
+    {
+      "timestamp": "2026-05-29T10:15:39.349962+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T10",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11694,
+      "output_tokens": 15313,
+      "cost_usd": 0.264777,
+      "label": "article:AIツール 増やしすぎ 整理術"
+    },
+    {
+      "timestamp": "2026-05-29T10:19:49.722193+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 111,
+      "cost_usd": 0.000535,
+      "label": "lsi:AIツール 増やしすぎ 整理術"
+    },
+    {
+      "timestamp": "2026-05-29T10:19:53.440089+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 482,
+      "cost_usd": 0.002073,
+      "label": "kw_research:AIツール 増やしすぎ 整理術"
+    },
+    {
+      "timestamp": "2026-05-29T10:23:58.433924+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T10",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11727,
+      "output_tokens": 15209,
+      "cost_usd": 0.263316,
+      "label": "article:AIツール 増やしすぎ 整理術"
+    },
+    {
+      "timestamp": "2026-05-29T12:21:04.176922+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 106,
+      "cost_usd": 0.000515,
+      "label": "lsi:AIツール 増やしすぎ 整理術"
+    },
+    {
+      "timestamp": "2026-05-29T12:21:08.201105+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 465,
+      "cost_usd": 0.002005,
+      "label": "kw_research:AIツール 増やしすぎ 整理術"
+    },
+    {
+      "timestamp": "2026-05-29T12:24:47.468739+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T12",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11719,
+      "output_tokens": 13884,
+      "cost_usd": 0.243417,
+      "label": "article:AIツール 増やしすぎ 整理術"
+    },
+    {
+      "timestamp": "2026-05-29T14:10:03.694694+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 111,
+      "cost_usd": 0.000535,
+      "label": "lsi:AIツール 増やしすぎ 整理術"
+    },
+    {
+      "timestamp": "2026-05-29T14:10:07.745319+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T14",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 480,
+      "cost_usd": 0.002065,
+      "label": "kw_research:AIツール 増やしすぎ 整理術"
+    },
+    {
+      "timestamp": "2026-05-29T14:14:14.457550+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T14",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15720,
+      "output_tokens": 15669,
+      "cost_usd": 0.282195,
+      "label": "article:AIツール 増やしすぎ 整理術"
+    },
+    {
+      "timestamp": "2026-05-29T16:58:27.158365+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T16",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 421,
+      "output_tokens": 428,
+      "cost_usd": 0.002049,
+      "label": ""
+    },
+    {
+      "timestamp": "2026-05-29T16:58:45.348259+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T16",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 421,
+      "output_tokens": 403,
+      "cost_usd": 0.001949,
+      "label": ""
+    },
+    {
+      "timestamp": "2026-05-29T17:09:41.484259+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 105,
+      "output_tokens": 81,
+      "cost_usd": 0.000408,
+      "label": "lsi:Claude AI 使い方"
+    },
+    {
+      "timestamp": "2026-05-29T17:09:44.907639+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 172,
+      "output_tokens": 438,
+      "cost_usd": 0.00189,
+      "label": "kw_research:Claude AI 使い方"
+    },
+    {
+      "timestamp": "2026-05-29T17:14:09.184485+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T17",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16662,
+      "output_tokens": 17114,
+      "cost_usd": 0.306696,
+      "label": "article:Claude AI 使い方"
+    },
+    {
+      "timestamp": "2026-05-29T17:36:14.022056+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 105,
+      "output_tokens": 123,
+      "cost_usd": 0.000576,
+      "label": "lsi:Claude AI 使い方"
+    },
+    {
+      "timestamp": "2026-05-29T17:36:17.487835+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 172,
+      "output_tokens": 425,
+      "cost_usd": 0.001838,
+      "label": "kw_research:Claude AI 使い方"
+    },
+    {
+      "timestamp": "2026-05-29T17:40:24.670571+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T17",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16691,
+      "output_tokens": 16085,
+      "cost_usd": 0.291348,
+      "label": "article:Claude AI 使い方"
+    },
+    {
+      "timestamp": "2026-05-29T17:40:58.715781+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 105,
+      "output_tokens": 84,
+      "cost_usd": 0.00042,
+      "label": "lsi:Claude AI 使い方"
+    },
+    {
+      "timestamp": "2026-05-29T17:41:01.886150+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 172,
+      "output_tokens": 380,
+      "cost_usd": 0.001658,
+      "label": "kw_research:Claude AI 使い方"
+    },
+    {
+      "timestamp": "2026-05-29T17:44:23.991270+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T17",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16607,
+      "output_tokens": 13309,
+      "cost_usd": 0.249456,
+      "label": "article:Claude AI 使い方"
+    },
+    {
+      "timestamp": "2026-05-29T17:45:41.930416+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 420,
+      "output_tokens": 404,
+      "cost_usd": 0.001952,
+      "label": ""
+    },
+    {
+      "timestamp": "2026-05-29T17:57:35.720137+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 105,
+      "output_tokens": 119,
+      "cost_usd": 0.00056,
+      "label": "lsi:Claude AI 使い方"
+    },
+    {
+      "timestamp": "2026-05-29T17:57:39.209406+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T17",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 172,
+      "output_tokens": 379,
+      "cost_usd": 0.001654,
+      "label": "kw_research:Claude AI 使い方"
+    },
+    {
+      "timestamp": "2026-05-29T18:01:35.072365+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T18",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16641,
+      "output_tokens": 15104,
+      "cost_usd": 0.276483,
+      "label": "article:Claude AI 使い方"
+    },
+    {
+      "timestamp": "2026-05-29T18:02:46.801310+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T18",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 420,
+      "output_tokens": 419,
+      "cost_usd": 0.002012,
+      "label": ""
+    },
+    {
+      "timestamp": "2026-05-29T18:14:16.436887+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T18",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 105,
+      "output_tokens": 72,
+      "cost_usd": 0.000372,
+      "label": "lsi:Claude AI 使い方"
+    },
+    {
+      "timestamp": "2026-05-29T18:14:19.686124+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T18",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 172,
+      "output_tokens": 430,
+      "cost_usd": 0.001858,
+      "label": "kw_research:Claude AI 使い方"
+    },
+    {
+      "timestamp": "2026-05-29T18:18:52.815782+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T18",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16648,
+      "output_tokens": 17189,
+      "cost_usd": 0.307779,
+      "label": "article:Claude AI 使い方"
+    },
+    {
+      "timestamp": "2026-05-29T18:22:56.024159+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T18",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16648,
+      "output_tokens": 16192,
+      "cost_usd": 0.292824,
+      "label": "article_retry:Claude AI 使い方"
     }
   ],
   "events": [
