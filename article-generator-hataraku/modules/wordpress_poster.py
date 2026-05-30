@@ -209,7 +209,26 @@ def _get_eyecatch_caption_tags(keyword: str) -> str:
 
 
 def _get_category_search_terms(keyword: str) -> list[str]:
-    """キーワードからメディアライブラリ検索用キャプションタグを返す。"""
+    """キーワードからメディアライブラリ検索用キャプションタグを返す。
+    image_category_pool が設定されていればカテゴリ別プールを優先する。
+    """
+    pool = wp_context.get_image_category_pool()
+    if pool:
+        kw_lower = keyword.lower()
+        for cat_key, cat_cfg in pool.items():
+            if cat_key == "_default":
+                continue
+            for trigger in cat_cfg.get("keywords", []):
+                if trigger.lower() in kw_lower:
+                    tags = cat_cfg.get("tags", [])
+                    if tags:
+                        return tags
+        if "_default" in pool:
+            default_tags = pool["_default"].get("tags", [])
+            if default_tags:
+                return default_tags
+
+    # レガシー処理（pool未設定ブログ用）
     kw = keyword.lower()
     terms: list[str] = []
     if any(k in kw for k in _PLAUD_KEYWORDS):
@@ -262,11 +281,14 @@ def _ensure_external_link(content: str, keyword: str) -> str:
 # EXPERIENCE｜体験談 balloon 挿入
 # ─────────────────────────────────────────────
 
-def _inject_testimonial_balloons(content: str, keyword: str) -> str:
+def _inject_testimonial_balloons(content: str, keyword: str) -> tuple[str, dict]:
     """
     EXPERIENCE｜体験談シートから取得した体験談を SWELL balloon ブロックとして挿入する。
     挿入位置優先順: 最初のH2直後 > 比較表(table)直後 > 「まとめ」H2/H3直前
     データがない場合はサイレントスキップ。
+
+    Returns: (modified_content, meta)
+      meta = {"inserted_count": N, "inserted_types": [...]} or {} on no-op
     """
     try:
         from modules import wp_context
@@ -275,13 +297,13 @@ def _inject_testimonial_balloons(content: str, keyword: str) -> str:
 
         ss_id = wp_context.get_experience_ss_id()
         if not ss_id:
-            return content
+            return content, {}
 
         blog_name = wp_context.get_blog_name()
         entries = get_relevant(keyword, blog_name, ss_id, GOOGLE_CREDENTIALS_PATH, max_count=3)
         if not entries:
             print(f"[wordpress] 体験談: 該当なし ({keyword})")
-            return content
+            return content, {}
 
         print(f"[wordpress] 体験談: {len(entries)}件挿入開始")
 
@@ -308,7 +330,7 @@ def _inject_testimonial_balloons(content: str, keyword: str) -> str:
 
         if not insertion_points:
             print(f"[wordpress] 体験談: 挿入位置が見つからずスキップ ({keyword})")
-            return content
+            return content, {}
 
         # 重複除去・後ろから順に挿入
         seen: set[int] = set()
@@ -318,18 +340,21 @@ def _inject_testimonial_balloons(content: str, keyword: str) -> str:
                 seen.add(pos)
                 unique_points.append((pos, before))
 
+        inserted_types: list[str] = []
         for i, ((pos, insert_before), entry) in enumerate(zip(unique_points, entries)):
             balloon = "\n\n" + build_balloon_blocks([entry]) + "\n\n"
             if insert_before:
                 content = content[:pos] + balloon + content[pos:]
             else:
                 content = content[:pos] + balloon + content[pos:]
+            inserted_types.append(entry["type"])
             print(f"[wordpress] 体験談[{i+1}] 挿入完了: type={entry['type']}, priority={entry['priority']}")
 
-        return content
+        meta = {"inserted_count": len(inserted_types), "inserted_types": inserted_types}
+        return content, meta
     except Exception as e:
         print(f"[wordpress] 体験談挿入スキップ: {e}")
-        return content
+        return content, {}
 
 
 # ─────────────────────────────────────────────
@@ -423,7 +448,13 @@ def _find_h3_block_end(content: str, section_keywords: list[str]) -> int | None:
 
 
 def _inject_h3_section_images(content: str, slug: str, keyword: str) -> str:
-    """「よくある質問」「まとめ」H3見出し直下に FLUX 生成画像を挿入する。"""
+    """「よくある質問」「まとめ」H3見出し直下に FLUX 生成画像を挿入する。
+    image_generate=False の場合はスキップ（ライブラリ再利用モード）。
+    """
+    if not wp_context.get_image_generate():
+        print("[wordpress] H3画像: image_generate=False のためスキップ")
+        return content
+
     from modules.image_generator import generate_h2_image
 
     targets = [
@@ -687,11 +718,13 @@ def post_article_with_image(
             print("[wordpress] アイキャッチ: ライブラリ該当なし・スキップ")
 
     # ③ H2記事内画像
-    # min_new_h2_images > 0 のブログは先頭N枚をFLUX新規生成優先、残りはライブラリ優先
+    # image_generate=False: ライブラリ再利用のみ（新規生成なし）
+    # min_new_h2_images > 0 かつ image_generate=True のとき先頭N枚をFLUX新規生成優先
     h2_matches = _extract_h2_blocks(article.get("content", ""))
     if h2_matches:
-        min_new = wp_context.get_min_new_h2_images()
-        print(f"[wordpress] H2画像処理: {len(h2_matches)}枚 (新規生成優先: {min_new}枚)")
+        min_new = wp_context.get_min_new_h2_images() if wp_context.get_image_generate() else 0
+        mode_label = "ライブラリ再利用のみ" if not wp_context.get_image_generate() else f"新規生成優先: {min_new}枚"
+        print(f"[wordpress] H2画像処理: {len(h2_matches)}枚 ({mode_label})")
         h2_image_data: list[tuple[str, str]] = []
         used_media_ids: set[int] = {featured_media_id} if featured_media_id else set()
         new_generated = 0
@@ -703,7 +736,7 @@ def post_article_with_image(
             src_url = ""
             chosen_id = None
 
-            if new_generated < min_new:
+            if wp_context.get_image_generate() and new_generated < min_new:
                 # FLUX新規生成を優先（min_new枚まで）
                 try:
                     img_bytes = generate_h2_image(h2_title, keyword)
@@ -726,7 +759,8 @@ def post_article_with_image(
                                 print(f"[wordpress] H2画像[{i}] FB: ライブラリ (#{term}): {src_url.split('/')[-1]}")
                                 break
             else:
-                # ライブラリ優先 → FLUXフォールバック（既存動作）
+                # ライブラリ優先（image_generate=False または min_new 上限超過）
+                # image_generate=False 時はFLUXフォールバックなし
                 for term in search_terms:
                     candidates = [
                         c for c in _fetch_media_by_tag(term)
@@ -741,13 +775,16 @@ def post_article_with_image(
                             print(f"[wordpress] H2画像[{i}] ライブラリ選択 (#{term}): {src_url.split('/')[-1]}")
                             break
 
-                if not src_url:
+                if not src_url and wp_context.get_image_generate():
+                    # image_generate=True かつライブラリ該当なし → FLUXフォールバック
                     try:
                         img_bytes = generate_h2_image(h2_title, keyword)
                         _, src_url = upload_media(img_bytes, filename, alt_text=img_alt, title=img_alt)
                         print(f"[wordpress] H2画像[{i}] FLUX生成（ライブラリ該当なし）: {h2_title[:30]}")
                     except Exception as e:
                         print(f"[wordpress] H2画像[{i}] ❌ FLUX生成失敗（スキップ）: {e}")
+                elif not src_url:
+                    print(f"[wordpress] H2画像[{i}] ライブラリ該当なし・スキップ（image_generate=False）")
 
             # ライブラリ画像のALTを上書き
             if chosen_id:
@@ -811,7 +848,7 @@ def post_article_with_image(
     article["content"] = _inject_cta(article["content"], keyword)
 
     # ⑤' 体験談 balloon ブロック挿入
-    article["content"] = _inject_testimonial_balloons(article["content"], keyword)
+    article["content"], _balloon_meta = _inject_testimonial_balloons(article["content"], keyword)
 
     # ⑤'' 外部リンク確認・補完（最低1個必須）
     article["content"] = _ensure_external_link(article["content"], keyword)
@@ -829,6 +866,27 @@ def post_article_with_image(
     # ⑥ 投稿
     result = create_post(article, featured_media_id=featured_media_id,
                          update_post_id=update_post_id)
+
+    # ⑥' 体験談 EffectLog 記録
+    if _balloon_meta.get("inserted_count", 0) > 0:
+        try:
+            from modules.experience_effect_logger import log_insertion
+            from modules import wp_context
+            from config import GOOGLE_CREDENTIALS_PATH
+            _effect_ss_id = wp_context.get_experience_ss_id()
+            if _effect_ss_id:
+                log_insertion(
+                    ss_id=_effect_ss_id,
+                    credentials_path=GOOGLE_CREDENTIALS_PATH,
+                    blog_name=wp_context.get_blog_name(),
+                    post_id=result["id"],
+                    article_url=result.get("url", ""),
+                    keyword=keyword or "",
+                    inserted_count=_balloon_meta["inserted_count"],
+                    inserted_types=_balloon_meta["inserted_types"],
+                )
+        except Exception as _eff_e:
+            print(f"[wordpress] EffectLog 記録スキップ（続行）: {_eff_e}")
 
     # ⑦ スプレッドシート書き込み（上書き更新時はスキップ）
     if keyword and not update_post_id:

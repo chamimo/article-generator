@@ -448,3 +448,747 @@
 2026-05-30 03:24:20 [INFO]   ✅ [workup-ai] Claude AI 使い方 → Claude AI の使い方を初心者向けに解説！登録から活用例まで
 2026-05-30 03:24:20 [INFO]        https://workup-ai.com/wp-admin/post.php?post=10686&action=edit
 2026-05-30 03:24:20 [INFO] ============================================================
+2026-05-30 04:20:03 [INFO] ============================================================
+2026-05-30 04:20:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-30 04:20:03 [INFO] ============================================================
+2026-05-30 04:20:03 [INFO] 対象ブログ: ['hapipo8']
+2026-05-30 04:20:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-30 04:20:04 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-30 04:20:04 [INFO] ════════════════════════════════════════════════════════════
+2026-05-30 04:20:04 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-05-30 04:20:04 [INFO]   fact_check       : True
+2026-05-30 04:20:04 [INFO]   article_type_mix : True
+2026-05-30 04:20:04 [INFO]   stop_words       : ['2026']
+2026-05-30 04:20:04 [INFO]   article_count    : 1  dry_run: False
+2026-05-30 04:20:08 [INFO] [hapipo8] ブログ設定・メディア人格を読み込みました
+2026-05-30 04:20:09 [INFO] [hapipo8] アフィリ案件: 50件（スプレッドシート）
+2026-05-30 04:20:09 [INFO] [hapipo8]   [S] 福ちゃん → https://hapipo8.com/fukuchan
+2026-05-30 04:20:09 [INFO] [hapipo8]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori
+2026-05-30 04:20:09 [INFO] [hapipo8]   [S] フクウロ → https://hapipo8.com/fukuuro
+2026-05-30 04:20:09 [INFO] [hapipo8]   [S] メディカルフードサービス → https://hapipo8.com/medical_food
+2026-05-30 04:20:09 [INFO] [hapipo8]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-05-30 04:20:09 [INFO] [hapipo8]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman
+2026-05-30 04:20:09 [INFO] [hapipo8]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] トラベル・スタンダード・ジャパン → https://px.a8.net/svt/ejp?a8mat=4B1THV+17H122+5LKE+5ZU29
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] ORBIS AMBER(オルビス アンバー) → https://px.a8.net/svt/ejp?a8mat=4B1THX+DDO2AI+1USQ+4ASX02
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] トリア → https://hapipo8.com/tria
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] nosh - ナッシュ → https://hapipo8.com/nosh
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] 快眠タイムズストア → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DRYGT6+4UHE+TRVYQ
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] NELL マットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6M5RVE+4KD8+5ZMCI
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] 咲夜レアルマットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6LKC9M+4MRW+61Z81
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] オーケンウォーター → https://px.a8.net/svt/ejp?a8mat=4B1THX+CRN0WQ+1LOO+6NMJL
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] every frecious（エブリィフレシャス） → https://px.a8.net/svt/ejp?a8mat=4B1THX+CS8GII+2B8Y+15OK2A
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] リゾバ → https://hapipo8.com/rizoba
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] ダイブ → https://hapipo8.com/dive
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] 工場求人ワールド → https://px.a8.net/svt/ejp?a8mat=4B1O1T+EGYV5U+5S9S+5YJRM
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] ソフトバンク光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KARLU+3HKU+25FF81
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] BIGLOBE WiMAX +5G → https://px.a8.net/svt/ejp?a8mat=4B1THS+2TTMYY+B4+2BDBUB
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] フレッツ光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KW4WA+348K+1TJE9U
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] AI英会話アプリ【スピーク】 → https://hapipo8.com/speak
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] もぐワン ペットフード → https://hapipo8.com/moguwan
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] DMM 生成AI CAMP → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] ポニークリーニング → https://px.a8.net/svt/ejp?a8mat=4B1THV+5QLST6+4N08+5Z6WY
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] 体験型カタログギフト【EXETIME】 → https://hapipo8.com/exetime
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] GMOとくとくBB → https://px.a8.net/svt/ejp?a8mat=4B1THS+2UF2KQ+50+3H48S2
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] Amazon Prime Video → https://amzn.to/4tbKPVa
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] Pollet → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] カレントボディ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DFGD3U+54TM+5YJRM
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] アプリ接客キャスト → https://px.a8.net/svt/ejp?a8mat=4B1O1T+FKUWOY+3P1G+NTRMQ
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] ヴィーナスウォーカー → https://px.a8.net/svt/ejp?a8mat=4B1THV+6632JE+58KC+5YRHE
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] WEBCOACH → https://px.a8.net/svt/ejp?a8mat=4B1V1W+DW4O7U+5EVK+5YZ75
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] ポケットリサーチ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DUXMU2+58KC+BWVTE
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] ラボル カード払い → https://px.a8.net/svt/ejp?a8mat=4B1THS+3TJN9M+40JM+1NJZN5
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] クロスワンルーム → https://px.a8.net/svt/ejp?a8mat=4B1THX+DPKQE2+4EZ2+BYLJL
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] Mr.シリーズ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CLOOUY+1USQ+2Z8T76
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] IBJ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CF4X7E+FOG+4MPSTE
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] ユアマイスター → https://px.a8.net/svt/ejp?a8mat=4B1THX+BZNNH6+4HQS+5YJRM
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] TOSSY → https://px.a8.net/svt/ejp?a8mat=4B1THS+2V0I6I+1WP2+1HLNLE
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] ABLENET VPS → https://px.a8.net/svt/ejp?a8mat=4B1THS+2VLXSA+4NIK+5Z6WX
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-30 04:20:09 [INFO] [hapipo8]   [A] BIGLOBE光 → https://px.a8.net/svt/ejp?a8mat=4B3LMR+4JQL96+3SPO+7LW1F7
+2026-05-30 04:20:09 [INFO] [hapipo8]   [B] 食楽膳 → https://hapipo8.com/shokurakuzen
+2026-05-30 04:20:09 [INFO] [hapipo8]   [?] 楽器買取 福ちゃん → https://hapipo8.com/gakki-fukucyan
+2026-05-30 04:20:09 [INFO] [hapipo8]   [?] ニーゴ・リユース → https://hapipo8.com/25reuse
+2026-05-30 04:20:12 [INFO] [wp] 記事取得: 計178件 (publish=178)
+2026-05-30 04:20:12 [INFO] [hapipo8] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.4, 'monetize': 0.1})
+2026-05-30 04:20:13 [DEBUG] [fetch] シート「絞り込みKW」: 604行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③']
+2026-05-30 04:20:13 [INFO] [fetch] サブKW紐付け: 165件 → 46記事に統合
+2026-05-30 04:20:13 [INFO] [fetch] [キーワード] メインKW: 296件（親KW+生成待ち）  サブKW除外: 165件（統合対象）  投稿済みスキップ: 143件  aim内訳: [aim:52, add:219, claude:25]
+2026-05-30 04:20:13 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-30 04:20:13 [INFO] [dup_check] 優先候補: 296件 {'aim': 52, 'add': 219, 'claude': 25} を先頭評価
+2026-05-30 04:20:13 [INFO] [dup_check] シート承認済みスキップ: 「ノートパソコン WiFi つなぎ方」（親KW+生成待ちのため重複チェック免除）
+2026-05-30 04:20:13 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=296件, 要求=1件)
+2026-05-30 04:20:13 [INFO] [select] 1件選定 (要求=1件)
+2026-05-30 04:20:13 [INFO] [select]   1. 「ノートパソコン WiFi つなぎ方」 vol=0 seo=N/A comp=N/A
+2026-05-30 04:20:13 [INFO] [hapipo8] LONGTAIL選定: 1件
+2026-05-30 04:20:13 [INFO] [hapipo8] 候補: 296件 / 選定: 1件 / 生成予定: 1件
+2026-05-30 04:20:14 [INFO] [api_guard] 本日の使用量: $2.8078 / ¥421 (32回呼び出し)
+2026-05-30 04:20:14 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 04:20:14 [INFO] [hapipo8] [1/1] [LONGTAIL] 「ノートパソコン WiFi つなぎ方」 vol=0 ★AIM
+2026-05-30 04:20:14 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 04:20:14 [INFO] [generate] 訴求案件指定: ['BIGLOBE WiMAX']
+2026-05-30 04:20:14 [INFO] [generate] 生成開始: 「ノートパソコン WiFi つなぎ方」(vol:0) fact_check=True target_length=5,759字  誘導リンク:0件
+2026-05-30 04:21:21 [INFO] ============================================================
+2026-05-30 04:21:21 [INFO] generate_lite.py 開始  dry_run=True
+2026-05-30 04:21:21 [INFO] ============================================================
+2026-05-30 04:21:22 [INFO] [update-effect-log] EffectLog GSC 更新を開始 (DRY RUN)
+2026-05-30 04:21:23 [INFO] [update-effect-log] 完了: 0件更新 / 1件スキップ
+2026-05-30 04:24:22 [INFO] [generate] 完了: 「ノートパソコンのWiFiつなぎ方【初心者でも迷わない手順を解説】」
+2026-05-30 04:24:22 [WARNING] [quality] 品質チェック: ❌2件NG / ⚠️1件警告 / 「ノートパソコンのWiFiつなぎ方【初心者でも迷わない手順を解説】」
+2026-05-30 04:24:22 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [1] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-30 04:24:22 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（かもしれません。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-30 04:24:22 [WARNING] [quality]   ⚠️  □ 外部ソースリンク: 外部リンクはありますが、Google公式・官公庁など信頼性の高いソースへの言及があるとE-E-A-Tが向上します。
+2026-05-30 04:24:22 [INFO] [post] 投稿方式: publish
+2026-05-30 04:24:22 [ERROR] [hapipo8] [1/1] ❌ エラー（続行）: cannot access local variable 'wp_context' where it is not associated with a value
+2026-05-30 04:24:22 [INFO] [hapipo8] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-30 04:24:22 [INFO] 
+============================================================
+2026-05-30 04:24:22 [INFO] 【全体サマリー】
+2026-05-30 04:24:22 [INFO]   ブログ数  : 1件
+2026-05-30 04:24:22 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-30 04:24:22 [INFO]   所要時間  : 259.6秒
+2026-05-30 04:24:22 [INFO]   ❌ [hapipo8] ノートパソコン WiFi つなぎ方 → (生成失敗)
+2026-05-30 04:24:22 [INFO] ============================================================
+2026-05-30 05:00:04 [INFO] ============================================================
+2026-05-30 05:00:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-30 05:00:04 [INFO] ============================================================
+2026-05-30 05:00:04 [INFO] 対象ブログ: ['hataraku']
+2026-05-30 05:00:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-30 05:00:05 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-30 05:00:05 [INFO] ════════════════════════════════════════════════════════════
+2026-05-30 05:00:05 [INFO]   genre            : 転職・副業・キャリア
+2026-05-30 05:00:05 [INFO]   fact_check       : True
+2026-05-30 05:00:05 [INFO]   article_type_mix : True
+2026-05-30 05:00:05 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-30 05:00:05 [INFO]   article_count    : 1  dry_run: False
+2026-05-30 05:00:10 [INFO] [hataraku] ブログ設定・メディア人格を読み込みました
+2026-05-30 05:00:11 [INFO] [hataraku] アフィリ案件: 21件（スプレッドシート）
+2026-05-30 05:00:11 [INFO] [hataraku]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive
+2026-05-30 05:00:11 [INFO] [hataraku]   [S] ラボル → https://hataraku-navi.com/labol
+2026-05-30 05:00:11 [INFO] [hataraku]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it
+2026-05-30 05:00:11 [INFO] [hataraku]   [S] TechGo → https://hataraku-navi.com/techgo
+2026-05-30 05:00:11 [INFO] [hataraku]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi
+2026-05-30 05:00:11 [INFO] [hataraku]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy
+2026-05-30 05:00:11 [INFO] [hataraku]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen
+2026-05-30 05:00:11 [INFO] [hataraku]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo
+2026-05-30 05:00:11 [INFO] [hataraku]   [S] 保育専門求人サイト ほいく畑 → https://hataraku-navi.com/hoikubatake
+2026-05-30 05:00:11 [INFO] [hataraku]   [A] FREENANCE → https://hataraku-navi.com/freenance
+2026-05-30 05:00:11 [INFO] [hataraku]   [A] Midworks → https://hataraku-navi.com/midworks
+2026-05-30 05:00:11 [INFO] [hataraku]   [A] マスメディアン → https://hataraku-navi.com/massmedia
+2026-05-30 05:00:11 [INFO] [hataraku]   [A] atGP → https://hataraku-navi.com/atgp
+2026-05-30 05:00:11 [INFO] [hataraku]   [A] atGPジョブトレ IT・Web → https://hataraku-navi.com/atgp_job
+2026-05-30 05:00:11 [INFO] [hataraku]   [A] リゾートバイトダイブ → https://hataraku-navi.com/dive
+2026-05-30 05:00:11 [INFO] [hataraku]   [A] 日本マンパワー → https://hataraku-navi.com/manpower
+2026-05-30 05:00:11 [INFO] [hataraku]   [A] クラウドワークス → https://hataraku-navi.com/crowdworks
+2026-05-30 05:00:11 [INFO] [hataraku]   [?] 保育エイド → https://hataraku-navi.com/hoiku-aid
+2026-05-30 05:00:11 [INFO] [hataraku]   [?] 保育バランス → https://hataraku-navi.com/hoiku-balance
+2026-05-30 05:00:11 [INFO] [hataraku]   [?] 保育メトロ → https://hataraku-navi.com/hoiku-metro
+2026-05-30 05:00:11 [INFO] [hataraku]   [?] 20代の転職相談所 → https://hataraku-navi.com/20tensyoku
+2026-05-30 05:00:12 [INFO] [wp] 記事取得: 計61件 (draft=3 / publish=58)
+2026-05-30 05:00:12 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-30 05:00:13 [DEBUG] [fetch] シート「絞り込みKW」: 4608行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-30 05:00:13 [INFO] [fetch] サブKW紐付け: 4202件 → 168記事に統合
+2026-05-30 05:00:13 [INFO] [fetch] [キーワード] メインKW: 315件（親KW+生成待ち）  サブKW除外: 4202件（統合対象）  投稿済みスキップ: 85件  aim内訳: [aim:315]
+2026-05-30 05:00:13 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-30 05:00:13 [INFO] [dup_check] 優先候補: 315件 {'aim': 315} を先頭評価
+2026-05-30 05:00:13 [INFO] [dup_check] シート承認済みスキップ: 「学童 保育 の バイト ペルソナ」（親KW+生成待ちのため重複チェック免除）
+2026-05-30 05:00:13 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=315件, 要求=1件)
+2026-05-30 05:00:13 [INFO] [select] 1件選定 (要求=1件)
+2026-05-30 05:00:13 [INFO] [select]   1. 「学童 保育 の バイト ペルソナ」 vol=0 seo=N/A comp=N/A
+2026-05-30 05:00:13 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-05-30 05:00:13 [INFO] [hataraku] 候補: 315件 / 選定: 1件 / 生成予定: 1件
+2026-05-30 05:00:13 [INFO] [api_guard] 本日の使用量: $3.1041 / ¥466 (35回呼び出し)
+2026-05-30 05:00:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 05:00:13 [INFO] [hataraku] [1/1] [LONGTAIL] 「学童 保育 の バイト ペルソナ」 vol=0 ★AIM
+2026-05-30 05:00:13 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 05:00:13 [INFO] [generate] 生成開始: 「学童 保育 の バイト ペルソナ」(vol:0) fact_check=True target_length=5,926字  誘導リンク:0件
+2026-05-30 05:04:09 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-30 05:04:09 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「保育メトロ」(ID:583)
+2026-05-30 05:04:10 [INFO] [generate] 完了: 「学童保育バイトのリアルな実態｜時給・仕事内容・向いている人を解説」
+2026-05-30 05:04:10 [WARNING] [quality] 品質チェック: ❌3件NG / ⚠️0件警告 / 「学童保育バイトのリアルな実態｜時給・仕事内容・向いている人を解説」
+2026-05-30 05:04:10 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [2, 3, 4] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-30 05:04:10 [WARNING] [quality]   ❌ □ 一人称体験談: 一人称体験談が1箇所しかありません（2〜3箇所必要）。「実際に使ってみたところ〜」「試してみて感じたのは〜」など自然な体験文を2〜3箇所追加してください。
+2026-05-30 05:04:10 [WARNING] [quality]   ❌ □ 外部ソースリンク: 外部リンクが1つもありません。信頼性の高いソース（公式サイト・官公庁・大手メディア等）へのリンクを1〜3件追加してください。
+2026-05-30 05:04:10 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-30 05:04:10 [INFO] [post] 投稿方式: draft
+2026-05-30 05:04:10 [ERROR] [hataraku] [1/1] ❌ エラー（続行）: cannot access local variable 'wp_context' where it is not associated with a value
+2026-05-30 05:04:10 [INFO] [hataraku] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-30 05:04:10 [INFO] 
+============================================================
+2026-05-30 05:04:10 [INFO] 【全体サマリー】
+2026-05-30 05:04:10 [INFO]   ブログ数  : 1件
+2026-05-30 05:04:10 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-30 05:04:10 [INFO]   所要時間  : 246.1秒
+2026-05-30 05:04:10 [INFO]   ❌ [hataraku] 学童 保育 の バイト ペルソナ → (生成失敗)
+2026-05-30 05:04:10 [INFO] ============================================================
+2026-05-30 05:30:03 [INFO] ============================================================
+2026-05-30 05:30:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-30 05:30:03 [INFO] ============================================================
+2026-05-30 05:30:03 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-05-30 05:30:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-30 05:30:04 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-30 05:30:04 [INFO] ════════════════════════════════════════════════════════════
+2026-05-30 05:30:04 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-30 05:30:04 [INFO]   fact_check       : True
+2026-05-30 05:30:04 [INFO]   article_type_mix : True
+2026-05-30 05:30:04 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-30 05:30:04 [INFO]   article_count    : 1  dry_run: False
+2026-05-30 05:30:08 [INFO] [hida-no-omoide] ブログ設定・メディア人格を読み込みました
+2026-05-30 05:30:09 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-30 05:30:09 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-30 05:30:09 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-30 05:30:09 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-30 05:30:11 [INFO] [wp] 記事取得: 計51件 (draft=12 / publish=39)
+2026-05-30 05:30:11 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-05-30 05:30:12 [DEBUG] [fetch] シート「絞り込みKW」: 202行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-05-30 05:30:12 [INFO] [fetch] サブKW紐付け: 87件 → 7記事に統合
+2026-05-30 05:30:12 [INFO] [fetch] [キーワード] メインKW: 32件（親KW+生成待ち）  サブKW除外: 87件（統合対象）  投稿済みスキップ: 83件  aim内訳: [aim:8, add:5, claude:19]
+2026-05-30 05:30:12 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-05-30 05:30:12 [INFO] [dup_check] 優先候補: 32件 {'aim': 8, 'add': 5, 'claude': 19} を先頭評価
+2026-05-30 05:30:12 [INFO] [dup_check] シート承認済みスキップ: 「さるぼぼ 色 意味 選び方」（親KW+生成待ちのため重複チェック免除）
+2026-05-30 05:30:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=32件, 要求=1件)
+2026-05-30 05:30:12 [INFO] [select] 1件選定 (要求=1件)
+2026-05-30 05:30:12 [INFO] [select]   1. 「さるぼぼ 色 意味 選び方」 vol=0 seo=N/A comp=N/A
+2026-05-30 05:30:12 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-05-30 05:30:12 [INFO] [hida-no-omoide] 候補: 32件 / 選定: 1件 / 生成予定: 1件
+2026-05-30 05:30:12 [INFO] [api_guard] 本日の使用量: $3.3667 / ¥505 (38回呼び出し)
+2026-05-30 05:30:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 05:30:12 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「さるぼぼ 色 意味 選び方」 vol=0 ★AIM
+2026-05-30 05:30:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 05:30:12 [INFO] [generate] 生成開始: 「さるぼぼ 色 意味 選び方」(vol:0) fact_check=True target_length=7,403字  誘導リンク:0件
+2026-05-30 05:34:17 [INFO] [generate] 完了: 「さるぼぼの色の意味と選び方｜赤・ピンク・黄色など色別の運気を解説」
+2026-05-30 05:34:17 [WARNING] [quality] 品質チェック: ❌4件NG / ⚠️0件警告 / 「さるぼぼの色の意味と選び方｜赤・ピンク・黄色など色別の運気を解説」
+2026-05-30 05:34:17 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [1] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-05-30 05:34:17 [WARNING] [quality]   ❌ □ 一人称体験談: 一人称体験談が1箇所しかありません（2〜3箇所必要）。「実際に使ってみたところ〜」「試してみて感じたのは〜」など自然な体験文を2〜3箇所追加してください。
+2026-05-30 05:34:17 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が2箇所あります（かもしれません。, でしょうか。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-30 05:34:17 [WARNING] [quality]   ❌ □ 外部ソースリンク: 外部リンクが1つもありません。信頼性の高いソース（公式サイト・官公庁・大手メディア等）へのリンクを1〜3件追加してください。
+2026-05-30 05:34:17 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-30 05:34:17 [INFO] [post] 投稿方式: draft
+2026-05-30 05:34:19 [ERROR] [hida-no-omoide] [1/1] ❌ エラー（続行）: cannot access local variable 'wp_context' where it is not associated with a value
+2026-05-30 05:34:19 [INFO] [hida-no-omoide] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-05-30 05:34:19 [INFO] 
+============================================================
+2026-05-30 05:34:19 [INFO] 【全体サマリー】
+2026-05-30 05:34:19 [INFO]   ブログ数  : 1件
+2026-05-30 05:34:19 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-05-30 05:34:19 [INFO]   所要時間  : 256.0秒
+2026-05-30 05:34:19 [INFO]   ❌ [hida-no-omoide] さるぼぼ 色 意味 選び方 → (生成失敗)
+2026-05-30 05:34:19 [INFO] ============================================================
+2026-05-30 06:00:04 [INFO] ============================================================
+2026-05-30 06:00:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-05-30 06:00:04 [INFO] ============================================================
+2026-05-30 06:00:05 [INFO] 対象ブログ: ['web-study1']
+2026-05-30 06:00:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-30 06:00:06 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-05-30 06:00:06 [INFO] ════════════════════════════════════════════════════════════
+2026-05-30 06:00:06 [INFO]   genre            : オンライン学習・プログラミング・資格・スキルアップ
+2026-05-30 06:00:06 [INFO]   fact_check       : True
+2026-05-30 06:00:06 [INFO]   article_type_mix : True
+2026-05-30 06:00:06 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-30 06:00:06 [INFO]   article_count    : 1  dry_run: False
+2026-05-30 06:00:10 [INFO] [web-study1] ブログ設定・メディア人格を読み込みました
+2026-05-30 06:00:11 [INFO] [web-study1] アフィリ案件: 28件（スプレッドシート）
+2026-05-30 06:00:11 [INFO] [web-study1]   [S] 無学年式オンライン教材 のすらら → https://web-study1.com/surara
+2026-05-30 06:00:11 [INFO] [web-study1]   [S] ヒューマンアカデミー → https://web-study1.com/haa.athuman
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] こどもチャレンジ → https://web-study1.com/shimajiro
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] こどもチャレンジ baby → https://web-study1.com/shimajiro-baby
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] Filmora → https://web-study1.com/filmora
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] スマイルゼミ → https://web-study1.com/smile-zemi
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] 進研ゼミ　高校講座 → https://web-study1.com/sinkenzemi-koukou
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] 進研ゼミ　中学講座 → https://web-study1.com/sinkenzem-cyugaku
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] 進研ゼミ　小学講座 → https://web-study1.com/shinkenzemi-syougakukouza
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] スタディサプリ中学講座 → https://web-study1.com/studysapuri-chugaku
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] Z会 → https://web-study1.com/zkai
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] スタディサプリ高校・大学 受験講座 → https://web-study1.com/studysapur-koukou
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] DMM WEBCAMP  学習コース_大学生向け就活対策コース → https://web-study1.com/dmm_webcamp_shukatu
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] Tech Kids School → https://web-study1.com/tech-kids
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] 【RISU算数】(19-1031) → https://web-study1.com/risu
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] スタディサプリENGLISH（新日常英会話コース） → https://web-study1.com/eigosapuri
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] スタディサプリEnglish　ビジネス英語コース → https://web-study1.com/eigosapuri
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] DMM WEBCAMP プログラミングコース → https://web-study1.com/web-camp_programing
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] freenance → https://web-study1.com/freenance
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] Udemy → https://web-study1.com/udemy
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] DMM WEBCAMP WEBデザインコース → https://web-study1.com/dmm_webcamp
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] DMM WEBCAMP Pythonコース → https://web-study1.com/dmm_webcamp_python
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] AI英会話アプリ【スピーク】 → https://web-study1.com/speak
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] スタディサプリ小学講座 → https://web-study1.com/sutasapu-syougaku
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] スタディサプリENGLISH（TOEIC対策コース） → https://web-study1.com/human-english-toeic
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] アンズテック → https://web-study1.com/anzutech
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] DMM WEBCAMP 学習コース → https://web-study1.com/dmm-webcamp-gakusyu
+2026-05-30 06:00:11 [INFO] [web-study1]   [?] キズキ共育塾 → https://web-study1.com/kizuki
+2026-05-30 06:00:13 [INFO] [wp] 記事取得: 計43件 (draft=1 / publish=42)
+2026-05-30 06:00:13 [INFO] [web-study1] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.2, 'monetize': 0.3})
+2026-05-30 06:00:14 [DEBUG] [fetch] シート「絞り込みKW」: 261行 / ヘッダー: ['', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要', '体験談']
+2026-05-30 06:00:14 [INFO] [fetch] [キーワード] メインKW: 0件（親KW+生成待ち）  サブKW: 0件（vol<30）
+2026-05-30 06:08:55 [INFO] [post] image_generate: False (ライブラリ再利用モード)
+2026-05-30 06:08:55 [INFO] [post] image_generate: 例外許可 (article_type=MONETIZE)
+2026-05-30 06:08:55 [INFO] [post] image_generate: 例外許可 (article_type=NEWS)
+2026-05-30 06:08:55 [INFO] [post] image_generate: 例外許可 (比較記事: ChatGPT vs Gemini 比較)
+2026-05-30 06:08:55 [INFO] [post] image_generate: False (ライブラリ再利用モード)
+2026-05-30 06:08:55 [INFO] [post] image_generate: 例外許可 (比較記事: Claude Code どっち)
+2026-05-30 07:26:48 [INFO] [generate] 意図ベース文字数(HOWTO): 4,740字 → 5,699字
+2026-05-30 07:26:48 [INFO] [generate] 生成開始: 「Claude Code 使い方 初心者」(vol:500) fact_check=True target_length=5,699字  誘導リンク:0件
+2026-05-30 07:30:51 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-30 07:30:52 [INFO] [generate] 完了: 「Claude Code 初心者向け使い方ガイド｜インストールから最初のコード生成まで」
+2026-05-30 07:52:32 [INFO] [generate] 意図ベース文字数(HOWTO): 3,423字 → 5,492字
+2026-05-30 07:52:32 [INFO] [generate] 生成開始: 「Claude Code 使い方 初心者」(vol:500) fact_check=True target_length=5,492字  誘導リンク:0件
+2026-05-30 07:54:33 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-30 07:54:34 [INFO] [generate] 完了: 「Claude Code 使い方を初心者向けに解説｜インストールから実践まで」
+2026-05-30 09:18:31 [INFO] [generate] 意図ベース文字数(PROMPT): 4,096字 → 2,152字
+2026-05-30 09:18:31 [INFO] [generate] 生成開始: 「ChatGPT プロンプト テンプレ」(vol:300) fact_check=True target_length=2,152字  誘導リンク:0件
+2026-05-30 09:18:53 [INFO] [generate] 意図ベース文字数(PROMPT): 4,170字 → 1,912字
+2026-05-30 09:18:53 [INFO] [generate] 生成開始: 「ChatGPT プロンプト テンプレ」(vol:300) fact_check=True target_length=1,912字  誘導リンク:0件
+2026-05-30 09:22:47 [INFO] [generate] 意図ベース文字数(FAQ): 3,289字 → 2,185字
+2026-05-30 09:22:47 [INFO] [generate] 生成開始: 「Gemini 使いこなせない」(vol:300) fact_check=True target_length=2,185字  誘導リンク:0件
+2026-05-30 09:23:09 [INFO] [generate] 意図ベース文字数(FAQ): 3,274字 → 2,528字
+2026-05-30 09:23:09 [INFO] [generate] 生成開始: 「Gemini 使いこなせない」(vol:300) fact_check=True target_length=2,528字  誘導リンク:0件
+2026-05-30 09:26:34 [INFO] [link_check] 死リンク除去: 1件 / チェック: 3件
+2026-05-30 09:26:34 [DEBUG] [link_check]   削除: https://claude.ai
+2026-05-30 09:26:34 [INFO] [generate] 完了: 「Geminiが使いこなせない人へ｜原因と解決策を分かりやすく解説」
+2026-05-30 09:26:34 [INFO] [generate] 意図ベース文字数(LONGTAIL): 4,101字 → 4,140字
+2026-05-30 09:26:34 [INFO] [generate] 生成開始: 「AI Overview 対策 個人ブログ」(vol:300) fact_check=True target_length=4,140字  誘導リンク:0件
+2026-05-30 09:27:00 [INFO] [generate] 完了: 「Gemini使いこなせない人が知るべき原因と解決策まとめ」
+2026-05-30 09:27:00 [INFO] [generate] 意図ベース文字数(LONGTAIL): 4,857字 → 4,076字
+2026-05-30 09:27:00 [INFO] [generate] 生成開始: 「AI Overview 対策 個人ブログ」(vol:300) fact_check=True target_length=4,076字  誘導リンク:0件
+2026-05-30 09:30:57 [INFO] [generate] 意図ベース文字数(COMP): 4,968字 → 6,081字
+2026-05-30 09:30:57 [INFO] [generate] 生成開始: 「ChatGPT Claude Gemini 使い分け 初心者」(vol:300) fact_check=True target_length=6,081字  誘導リンク:0件
+2026-05-30 09:31:24 [INFO] [generate] 意図ベース文字数(COMP): 4,558字 → 6,101字
+2026-05-30 09:31:24 [INFO] [generate] 生成開始: 「ChatGPT Claude Gemini 使い分け 初心者」(vol:300) fact_check=True target_length=6,101字  誘導リンク:0件
+2026-05-30 09:35:12 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-30 09:35:12 [INFO] [link_check] 死リンク除去: 3件 / チェック: 3件
+2026-05-30 09:35:12 [DEBUG] [link_check]   削除: https://claude.ai
+2026-05-30 09:35:12 [INFO] [generate] 完了: 「ChatGPT・Claude・Gemini 使い分けガイド｜初心者でも迷わない選び方」
+2026-05-30 09:35:23 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-30 09:35:23 [INFO] [link_check] 死リンク除去: 2件 / チェック: 3件
+2026-05-30 09:35:23 [DEBUG] [link_check]   削除: https://claude.ai
+2026-05-30 09:35:23 [INFO] [generate] 完了: 「ChatGPT・Claude・Gemini 使い分けガイド｜初心者が迷わない選び方」
+2026-05-30 09:38:55 [INFO] [generate] 意図ベース文字数(PROMPT): 3,250字 → 1,685字
+2026-05-30 09:38:55 [INFO] [generate] 生成開始: 「ChatGPT プロンプト テンプレ」(vol:300) fact_check=True target_length=1,685字  誘導リンク:0件
+2026-05-30 09:42:44 [INFO] [generate] 意図ベース文字数(FAQ): 3,250字 → 3,241字
+2026-05-30 09:42:44 [INFO] [generate] 生成開始: 「Gemini 使いこなせない」(vol:300) fact_check=True target_length=3,241字  誘導リンク:0件
+2026-05-30 09:44:29 [INFO] [generate] 完了: 「Geminiが使いこなせない人へ｜初心者でも今日から変わる5つのコツ」
+2026-05-30 09:44:29 [INFO] [generate] 意図ベース文字数(LONGTAIL): 3,287字 → 3,924字
+2026-05-30 09:44:29 [INFO] [generate] 生成開始: 「AI Overview 対策 個人ブログ」(vol:300) fact_check=True target_length=3,924字  誘導リンク:0件
+2026-05-30 09:46:51 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-30 09:46:52 [INFO] [generate] 完了: 「AI Overview対策で個人ブログを守る方法｜アクセス減を防ぐSEO戦略」
+2026-05-30 09:46:52 [INFO] [generate] 意図ベース文字数(COMP): 4,877字 → 5,152字
+2026-05-30 09:46:52 [INFO] [generate] 生成開始: 「ChatGPT Claude Gemini 使い分け 初心者」(vol:300) fact_check=True target_length=5,152字  誘導リンク:0件
+2026-05-30 09:49:51 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Udemy AI」(ID:9800)
+2026-05-30 09:49:51 [INFO] [link_check] 死リンク除去: 2件 / チェック: 3件
+2026-05-30 09:49:51 [DEBUG] [link_check]   削除: https://claude.ai
+2026-05-30 09:49:51 [INFO] [generate] 完了: 「ChatGPT・Claude・Gemini 使い分け方を初心者向けに解説【2026年版】」
+2026-05-30 09:56:05 [INFO] [generate] 意図ベース文字数(PROMPT): 4,275字 → 1,709字
+2026-05-30 09:56:05 [INFO] [generate] 生成開始: 「ChatGPT プロンプト テンプレ」(vol:300) fact_check=True target_length=1,709字  誘導リンク:0件
+2026-05-30 09:59:33 [INFO] [generate] 意図ベース文字数(PROMPT): 3,783字 → 1,679字
+2026-05-30 09:59:33 [INFO] [generate] 生成開始: 「ChatGPT プロンプト テンプレ」(vol:300) fact_check=True target_length=1,679字  誘導リンク:0件
+2026-05-30 10:01:36 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「【テンプレート】下部ミニLP」(ID:7028)
+2026-05-30 10:01:37 [INFO] [generate] 完了: 「ChatGPTプロンプトテンプレ集｜仕事で使える例文と書き方のコツ」
+2026-05-30 10:03:30 [INFO] [generate] 意図ベース文字数(PROMPT): 3,459字 → 2,142字
+2026-05-30 10:03:30 [INFO] [generate] 生成開始: 「ChatGPT プロンプト テンプレ」(vol:300) fact_check=True target_length=2,142字  誘導リンク:0件
+2026-05-30 10:05:38 [INFO] [generate] 意図ベース文字数(PROMPT): 3,134字 → 1,520字
+2026-05-30 10:05:38 [INFO] [generate] 生成開始: 「ChatGPT プロンプト テンプレ」(vol:300) fact_check=True target_length=1,520字  誘導リンク:0件
+2026-05-30 10:07:36 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「【テンプレート】下部ミニLP」(ID:7028)
+2026-05-30 10:07:36 [INFO] [generate] 完了: 「ChatGPTプロンプトテンプレ10選！仕事・ブログ・営業で使える例文集」
+2026-05-30 10:52:10 [INFO] ============================================================
+2026-05-30 10:52:10 [INFO] generate_lite.py 開始  dry_run=True
+2026-05-30 10:52:10 [INFO] ============================================================
+2026-05-30 10:52:10 [WARNING] [registry] ブログ管理シート読み込みエラー → フォールバック: cannot access local variable 'GOOGLE_CREDENTIALS_PATH' where it is not associated with a value
+2026-05-30 10:52:10 [INFO] 対象ブログ: ['hapipo8', 'hataraku', 'hida-no-omoide', 'kaerudoko', 'web-study1', 'workup-ai', 'ys-trend']
+2026-05-30 10:52:12 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-30 10:52:12 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-05-30 10:52:12 [INFO] ════════════════════════════════════════════════════════════
+2026-05-30 10:52:12 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-05-30 10:52:12 [INFO]   fact_check       : True
+2026-05-30 10:52:12 [INFO]   article_type_mix : True
+2026-05-30 10:52:12 [INFO]   stop_words       : ['2026']
+2026-05-30 10:52:12 [INFO]   article_count    : 3  dry_run: True
+2026-05-30 10:52:15 [INFO] [hapipo8] ブログ設定・メディア人格を読み込みました
+2026-05-30 10:52:16 [INFO] [hapipo8] アフィリ案件: 50件（スプレッドシート）
+2026-05-30 10:52:16 [INFO] [hapipo8]   [S] 福ちゃん → https://hapipo8.com/fukuchan
+2026-05-30 10:52:16 [INFO] [hapipo8]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori
+2026-05-30 10:52:16 [INFO] [hapipo8]   [S] フクウロ → https://hapipo8.com/fukuuro
+2026-05-30 10:52:16 [INFO] [hapipo8]   [S] メディカルフードサービス → https://hapipo8.com/medical_food
+2026-05-30 10:52:16 [INFO] [hapipo8]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-05-30 10:52:16 [INFO] [hapipo8]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman
+2026-05-30 10:52:16 [INFO] [hapipo8]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] トラベル・スタンダード・ジャパン → https://px.a8.net/svt/ejp?a8mat=4B1THV+17H122+5LKE+5ZU29
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] ORBIS AMBER(オルビス アンバー) → https://px.a8.net/svt/ejp?a8mat=4B1THX+DDO2AI+1USQ+4ASX02
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] トリア → https://hapipo8.com/tria
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] nosh - ナッシュ → https://hapipo8.com/nosh
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] 快眠タイムズストア → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DRYGT6+4UHE+TRVYQ
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] NELL マットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6M5RVE+4KD8+5ZMCI
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] 咲夜レアルマットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6LKC9M+4MRW+61Z81
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] オーケンウォーター → https://px.a8.net/svt/ejp?a8mat=4B1THX+CRN0WQ+1LOO+6NMJL
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] every frecious（エブリィフレシャス） → https://px.a8.net/svt/ejp?a8mat=4B1THX+CS8GII+2B8Y+15OK2A
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] リゾバ → https://hapipo8.com/rizoba
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] ダイブ → https://hapipo8.com/dive
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] 工場求人ワールド → https://px.a8.net/svt/ejp?a8mat=4B1O1T+EGYV5U+5S9S+5YJRM
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] ソフトバンク光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KARLU+3HKU+25FF81
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] BIGLOBE WiMAX +5G → https://px.a8.net/svt/ejp?a8mat=4B1THS+2TTMYY+B4+2BDBUB
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] フレッツ光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KW4WA+348K+1TJE9U
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] AI英会話アプリ【スピーク】 → https://hapipo8.com/speak
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] もぐワン ペットフード → https://hapipo8.com/moguwan
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] DMM 生成AI CAMP → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] ポニークリーニング → https://px.a8.net/svt/ejp?a8mat=4B1THV+5QLST6+4N08+5Z6WY
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] 体験型カタログギフト【EXETIME】 → https://hapipo8.com/exetime
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] GMOとくとくBB → https://px.a8.net/svt/ejp?a8mat=4B1THS+2UF2KQ+50+3H48S2
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] Amazon Prime Video → https://amzn.to/4tbKPVa
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] Pollet → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] カレントボディ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DFGD3U+54TM+5YJRM
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] アプリ接客キャスト → https://px.a8.net/svt/ejp?a8mat=4B1O1T+FKUWOY+3P1G+NTRMQ
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] ヴィーナスウォーカー → https://px.a8.net/svt/ejp?a8mat=4B1THV+6632JE+58KC+5YRHE
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] WEBCOACH → https://px.a8.net/svt/ejp?a8mat=4B1V1W+DW4O7U+5EVK+5YZ75
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] ポケットリサーチ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DUXMU2+58KC+BWVTE
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] ラボル カード払い → https://px.a8.net/svt/ejp?a8mat=4B1THS+3TJN9M+40JM+1NJZN5
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] クロスワンルーム → https://px.a8.net/svt/ejp?a8mat=4B1THX+DPKQE2+4EZ2+BYLJL
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] Mr.シリーズ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CLOOUY+1USQ+2Z8T76
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] IBJ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CF4X7E+FOG+4MPSTE
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] ユアマイスター → https://px.a8.net/svt/ejp?a8mat=4B1THX+BZNNH6+4HQS+5YJRM
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] TOSSY → https://px.a8.net/svt/ejp?a8mat=4B1THS+2V0I6I+1WP2+1HLNLE
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] ABLENET VPS → https://px.a8.net/svt/ejp?a8mat=4B1THS+2VLXSA+4NIK+5Z6WX
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-05-30 10:52:16 [INFO] [hapipo8]   [A] BIGLOBE光 → https://px.a8.net/svt/ejp?a8mat=4B3LMR+4JQL96+3SPO+7LW1F7
+2026-05-30 10:52:16 [INFO] [hapipo8]   [B] 食楽膳 → https://hapipo8.com/shokurakuzen
+2026-05-30 10:52:16 [INFO] [hapipo8]   [?] 楽器買取 福ちゃん → https://hapipo8.com/gakki-fukucyan
+2026-05-30 10:52:16 [INFO] [hapipo8]   [?] ニーゴ・リユース → https://hapipo8.com/25reuse
+2026-05-30 10:52:18 [INFO] [wp] 記事取得: 計178件 (publish=178)
+2026-05-30 10:52:18 [INFO] [hapipo8] キーワード直接指定: 「ChatGPT プロンプト テンプレ」
+2026-05-30 10:52:18 [INFO] [hapipo8] 候補: 1件 / 選定: 1件 / 生成予定: 3件
+2026-05-30 10:52:18 [INFO] [api_guard] 本日の使用量: $3.4357 / ¥515 (46回呼び出し)
+2026-05-30 10:52:18 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 10:52:18 [INFO] [hapipo8] [1/1] [LONGTAIL] 「ChatGPT プロンプト テンプレ」 vol=300
+2026-05-30 10:52:18 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 10:52:18 [INFO] [generate] 意図ベース文字数(PROMPT): 5,765字 → 2,027字
+2026-05-30 10:52:18 [INFO] [generate] 生成開始: 「ChatGPT プロンプト テンプレ」(vol:300) fact_check=True target_length=2,027字  誘導リンク:0件
+2026-05-30 10:54:08 [INFO] [generate] 完了: 「ChatGPTプロンプトテンプレとは？使い方と効果的な書き方まとめ」
+2026-05-30 10:54:08 [WARNING] [quality] 品質チェック: ❌2件NG / ⚠️1件警告 / 「ChatGPTプロンプトテンプレとは？使い方と効果的な書き方まとめ」
+2026-05-30 10:54:08 [WARNING] [quality]   ❌ □ FAQセクション: FAQが3問しかありません（最低5問必要）。問数を増やしてください。
+2026-05-30 10:54:08 [WARNING] [quality]   ⚠️  □ 外部ソースリンク: 外部リンクはありますが、Google公式・官公庁など信頼性の高いソースへの言及があるとE-E-A-Tが向上します。
+2026-05-30 10:54:08 [WARNING] [quality]   ❌ □ メタディスクリプション: メタディスクリプションが短すぎます（73字）。80〜120字に拡充してください。
+2026-05-30 10:54:08 [INFO] [post] DRY-RUN スキップ: 「ChatGPTプロンプトテンプレとは？使い方と効果的な書き方まとめ」
+2026-05-30 10:54:08 [INFO] [hapipo8] [1/1] ✅ 完了: 「ChatGPTプロンプトテンプレとは？使い方と効果的な書き方まとめ」
+2026-05-30 10:54:08 [INFO] [hapipo8] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-30 10:54:08 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-30 10:54:08 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-05-30 10:54:08 [INFO] ════════════════════════════════════════════════════════════
+2026-05-30 10:54:08 [INFO]   genre            : 転職・副業・キャリア
+2026-05-30 10:54:08 [INFO]   fact_check       : True
+2026-05-30 10:54:08 [INFO]   article_type_mix : True
+2026-05-30 10:54:08 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-30 10:54:08 [INFO]   article_count    : 3  dry_run: True
+2026-05-30 10:54:11 [INFO] [hataraku] ブログ設定・メディア人格を読み込みました
+2026-05-30 10:54:12 [INFO] [hataraku] アフィリ案件: 21件（スプレッドシート）
+2026-05-30 10:54:12 [INFO] [hataraku]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive
+2026-05-30 10:54:12 [INFO] [hataraku]   [S] ラボル → https://hataraku-navi.com/labol
+2026-05-30 10:54:12 [INFO] [hataraku]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it
+2026-05-30 10:54:12 [INFO] [hataraku]   [S] TechGo → https://hataraku-navi.com/techgo
+2026-05-30 10:54:12 [INFO] [hataraku]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi
+2026-05-30 10:54:12 [INFO] [hataraku]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy
+2026-05-30 10:54:12 [INFO] [hataraku]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen
+2026-05-30 10:54:12 [INFO] [hataraku]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo
+2026-05-30 10:54:12 [INFO] [hataraku]   [S] 保育専門求人サイト ほいく畑 → https://hataraku-navi.com/hoikubatake
+2026-05-30 10:54:12 [INFO] [hataraku]   [A] FREENANCE → https://hataraku-navi.com/freenance
+2026-05-30 10:54:12 [INFO] [hataraku]   [A] Midworks → https://hataraku-navi.com/midworks
+2026-05-30 10:54:12 [INFO] [hataraku]   [A] マスメディアン → https://hataraku-navi.com/massmedia
+2026-05-30 10:54:12 [INFO] [hataraku]   [A] atGP → https://hataraku-navi.com/atgp
+2026-05-30 10:54:12 [INFO] [hataraku]   [A] atGPジョブトレ IT・Web → https://hataraku-navi.com/atgp_job
+2026-05-30 10:54:12 [INFO] [hataraku]   [A] リゾートバイトダイブ → https://hataraku-navi.com/dive
+2026-05-30 10:54:12 [INFO] [hataraku]   [A] 日本マンパワー → https://hataraku-navi.com/manpower
+2026-05-30 10:54:12 [INFO] [hataraku]   [A] クラウドワークス → https://hataraku-navi.com/crowdworks
+2026-05-30 10:54:12 [INFO] [hataraku]   [?] 保育エイド → https://hataraku-navi.com/hoiku-aid
+2026-05-30 10:54:12 [INFO] [hataraku]   [?] 保育バランス → https://hataraku-navi.com/hoiku-balance
+2026-05-30 10:54:12 [INFO] [hataraku]   [?] 保育メトロ → https://hataraku-navi.com/hoiku-metro
+2026-05-30 10:54:12 [INFO] [hataraku]   [?] 20代の転職相談所 → https://hataraku-navi.com/20tensyoku
+2026-05-30 10:54:12 [INFO] [wp] 記事取得: 計61件 (draft=3 / publish=58)
+2026-05-30 10:54:12 [INFO] [hataraku] キーワード直接指定: 「ChatGPT プロンプト テンプレ」
+2026-05-30 10:54:12 [INFO] [hataraku] 候補: 1件 / 選定: 1件 / 生成予定: 3件
+2026-05-30 10:54:12 [INFO] [api_guard] 本日の使用量: $3.5916 / ¥539 (49回呼び出し)
+2026-05-30 10:54:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 10:54:12 [INFO] [hataraku] [1/1] [LONGTAIL] 「ChatGPT プロンプト テンプレ」 vol=300
+2026-05-30 10:54:12 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 10:54:12 [INFO] [generate] 意図ベース文字数(PROMPT): 5,292字 → 2,122字
+2026-05-30 10:54:12 [INFO] [generate] 生成開始: 「ChatGPT プロンプト テンプレ」(vol:300) fact_check=True target_length=2,122字  誘導リンク:0件
+2026-05-30 10:56:24 [INFO] [generate] パターンCTA挿入（H3末尾）: 2件
+2026-05-30 10:56:24 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「atGPジョブトレ IT・Web」(ID:569)
+2026-05-30 10:56:24 [INFO] [generate] 完了: 「ChatGPTプロンプトテンプレ活用術｜初心者でも使える例文・作成方法まとめ」
+2026-05-30 10:56:24 [WARNING] [quality] 品質チェック: ❌1件NG / ⚠️1件警告 / 「ChatGPTプロンプトテンプレ活用術｜初心者でも使える例文・作成方法まとめ」
+2026-05-30 10:56:24 [WARNING] [quality]   ❌ □ FAQセクション: FAQが3問しかありません（最低5問必要）。問数を増やしてください。
+2026-05-30 10:56:24 [WARNING] [quality]   ⚠️  □ 外部ソースリンク: 外部リンクはありますが、Google公式・官公庁など信頼性の高いソースへの言及があるとE-E-A-Tが向上します。
+2026-05-30 10:56:24 [INFO] [post] DRY-RUN スキップ: 「ChatGPTプロンプトテンプレ活用術｜初心者でも使える例文・作成方法まとめ」
+2026-05-30 10:56:24 [INFO] [hataraku] [1/1] ✅ 完了: 「ChatGPTプロンプトテンプレ活用術｜初心者でも使える例文・作成方法まとめ」
+2026-05-30 10:56:24 [INFO] [hataraku] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-30 10:56:24 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-30 10:56:24 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-05-30 10:56:24 [INFO] ════════════════════════════════════════════════════════════
+2026-05-30 10:56:24 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-05-30 10:56:24 [INFO]   fact_check       : True
+2026-05-30 10:56:24 [INFO]   article_type_mix : True
+2026-05-30 10:56:24 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-30 10:56:24 [INFO]   article_count    : 3  dry_run: True
+2026-05-30 10:56:27 [INFO] [hida-no-omoide] ブログ設定・メディア人格を読み込みました
+2026-05-30 10:56:29 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-05-30 10:56:29 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-05-30 10:56:29 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-30 10:56:29 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-05-30 10:56:29 [INFO] [wp] 記事取得: 計51件 (draft=12 / publish=39)
+2026-05-30 10:56:29 [INFO] [hida-no-omoide] キーワード直接指定: 「ChatGPT プロンプト テンプレ」
+2026-05-30 10:56:29 [INFO] [hida-no-omoide] 候補: 1件 / 選定: 1件 / 生成予定: 3件
+2026-05-30 10:56:29 [INFO] [api_guard] 本日の使用量: $3.7648 / ¥565 (52回呼び出し)
+2026-05-30 10:56:29 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 10:56:29 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「ChatGPT プロンプト テンプレ」 vol=300
+2026-05-30 10:56:29 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 10:56:29 [INFO] [generate] 意図ベース文字数(PROMPT): 6,737字 → 2,067字
+2026-05-30 10:56:29 [INFO] [generate] 生成開始: 「ChatGPT プロンプト テンプレ」(vol:300) fact_check=True target_length=2,067字  誘導リンク:0件
+2026-05-30 10:58:09 [INFO] [generate] 完了: 「ChatGPTプロンプトテンプレの書き方と使い方｜すぐ使えるサンプル付き」
+2026-05-30 10:58:09 [WARNING] [quality] 品質チェック: ❌3件NG / ⚠️1件警告 / 「ChatGPTプロンプトテンプレの書き方と使い方｜すぐ使えるサンプル付き」
+2026-05-30 10:58:09 [WARNING] [quality]   ❌ □ FAQセクション: FAQが3問しかありません（最低5問必要）。問数を増やしてください。
+2026-05-30 10:58:09 [WARNING] [quality]   ❌ □ 一人称体験談: 一人称体験談が0箇所しかありません（2〜3箇所必要）。「実際に使ってみたところ〜」「試してみて感じたのは〜」など自然な体験文を2〜3箇所追加してください。
+2026-05-30 10:58:09 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（でしょうか。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-30 10:58:09 [WARNING] [quality]   ⚠️  □ 外部ソースリンク: 外部リンクはありますが、Google公式・官公庁など信頼性の高いソースへの言及があるとE-E-A-Tが向上します。
+2026-05-30 10:58:09 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-30 10:58:09 [INFO] [post] DRY-RUN スキップ: 「ChatGPTプロンプトテンプレの書き方と使い方｜すぐ使えるサンプル付き」
+2026-05-30 10:58:09 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-30 10:58:09 [INFO] [hida-no-omoide] [1/1] ✅ 完了: 「ChatGPTプロンプトテンプレの書き方と使い方｜すぐ使えるサンプル付き」
+2026-05-30 10:58:09 [INFO] [hida-no-omoide] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-30 10:58:09 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-30 10:58:09 [INFO] === どこで売ってるナビ (kaerudoko.com) 処理開始 ===
+2026-05-30 10:58:09 [INFO] ════════════════════════════════════════════════════════════
+2026-05-30 10:58:09 [INFO]   genre            : ショッピング・購入場所・買い物情報
+2026-05-30 10:58:09 [INFO]   fact_check       : True
+2026-05-30 10:58:09 [INFO]   article_type_mix : True
+2026-05-30 10:58:09 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-30 10:58:09 [INFO]   article_count    : 3  dry_run: True
+2026-05-30 10:58:12 [INFO] [kaerudoko] ブログ設定・メディア人格を読み込みました
+2026-05-30 10:58:14 [WARNING] [kaerudoko] ⚠️  アフィリ案件: 0件 — 登録がないため汎用記事を生成します
+2026-05-30 10:58:14 [INFO] [wp] 記事取得: 計66件 (publish=66)
+2026-05-30 10:58:14 [INFO] [kaerudoko] キーワード直接指定: 「ChatGPT プロンプト テンプレ」
+2026-05-30 10:58:14 [INFO] [kaerudoko] 候補: 1件 / 選定: 1件 / 生成予定: 3件
+2026-05-30 10:58:14 [INFO] [api_guard] 本日の使用量: $3.9065 / ¥586 (56回呼び出し)
+2026-05-30 10:58:14 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 10:58:14 [INFO] [kaerudoko] [1/1] [LONGTAIL] 「ChatGPT プロンプト テンプレ」 vol=300
+2026-05-30 10:58:14 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 10:58:14 [INFO] [generate] 意図ベース文字数(PROMPT): 5,006字 → 1,543字
+2026-05-30 10:58:14 [INFO] [generate] 生成開始: 「ChatGPT プロンプト テンプレ」(vol:300) fact_check=True target_length=1,543字  誘導リンク:0件
+2026-05-30 11:00:15 [INFO] [generate] 完了: 「ChatGPTプロンプトテンプレの書き方と使い方｜コピーして使える例文つき」
+2026-05-30 11:00:15 [WARNING] [quality] 品質チェック: ❌4件NG / ⚠️0件警告 / 「ChatGPTプロンプトテンプレの書き方と使い方｜コピーして使える例文つき」
+2026-05-30 11:00:15 [WARNING] [quality]   ❌ □ FAQセクション: FAQが3問しかありません（最低5問必要）。問数を増やしてください。
+2026-05-30 11:00:15 [WARNING] [quality]   ❌ □ 一人称体験談: 一人称体験談が0箇所しかありません（2〜3箇所必要）。「実際に使ってみたところ〜」「試してみて感じたのは〜」など自然な体験文を2〜3箇所追加してください。
+2026-05-30 11:00:15 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が1箇所あります（でしょうか。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-05-30 11:00:15 [WARNING] [quality]   ❌ □ メタディスクリプション: メタディスクリプションが短すぎます（73字）。80〜120字に拡充してください。
+2026-05-30 11:00:15 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-30 11:00:15 [INFO] [post] DRY-RUN スキップ: 「ChatGPTプロンプトテンプレの書き方と使い方｜コピーして使える例文つき」
+2026-05-30 11:00:15 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-05-30 11:00:15 [INFO] [kaerudoko] [1/1] ✅ 完了: 「ChatGPTプロンプトテンプレの書き方と使い方｜コピーして使える例文つき」
+2026-05-30 11:00:15 [INFO] [kaerudoko] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-30 11:00:15 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-30 11:00:15 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-05-30 11:00:15 [INFO] ════════════════════════════════════════════════════════════
+2026-05-30 11:00:15 [INFO]   genre            : オンライン学習・プログラミング・資格・スキルアップ
+2026-05-30 11:00:15 [INFO]   fact_check       : True
+2026-05-30 11:00:15 [INFO]   article_type_mix : True
+2026-05-30 11:00:15 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-05-30 11:00:15 [INFO]   article_count    : 3  dry_run: True
+2026-05-30 11:00:18 [INFO] [web-study1] ブログ設定・メディア人格を読み込みました
+2026-05-30 11:00:20 [INFO] [web-study1] アフィリ案件: 28件（スプレッドシート）
+2026-05-30 11:00:20 [INFO] [web-study1]   [S] 無学年式オンライン教材 のすらら → https://web-study1.com/surara
+2026-05-30 11:00:20 [INFO] [web-study1]   [S] ヒューマンアカデミー → https://web-study1.com/haa.athuman
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] こどもチャレンジ → https://web-study1.com/shimajiro
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] こどもチャレンジ baby → https://web-study1.com/shimajiro-baby
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] Filmora → https://web-study1.com/filmora
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] スマイルゼミ → https://web-study1.com/smile-zemi
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] 進研ゼミ　高校講座 → https://web-study1.com/sinkenzemi-koukou
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] 進研ゼミ　中学講座 → https://web-study1.com/sinkenzem-cyugaku
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] 進研ゼミ　小学講座 → https://web-study1.com/shinkenzemi-syougakukouza
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] スタディサプリ中学講座 → https://web-study1.com/studysapuri-chugaku
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] Z会 → https://web-study1.com/zkai
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] スタディサプリ高校・大学 受験講座 → https://web-study1.com/studysapur-koukou
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] DMM WEBCAMP  学習コース_大学生向け就活対策コース → https://web-study1.com/dmm_webcamp_shukatu
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] Tech Kids School → https://web-study1.com/tech-kids
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] 【RISU算数】(19-1031) → https://web-study1.com/risu
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] スタディサプリENGLISH（新日常英会話コース） → https://web-study1.com/eigosapuri
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] スタディサプリEnglish　ビジネス英語コース → https://web-study1.com/eigosapuri
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] DMM WEBCAMP プログラミングコース → https://web-study1.com/web-camp_programing
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] freenance → https://web-study1.com/freenance
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] Udemy → https://web-study1.com/udemy
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] DMM WEBCAMP WEBデザインコース → https://web-study1.com/dmm_webcamp
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] DMM WEBCAMP Pythonコース → https://web-study1.com/dmm_webcamp_python
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] AI英会話アプリ【スピーク】 → https://web-study1.com/speak
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] スタディサプリ小学講座 → https://web-study1.com/sutasapu-syougaku
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] スタディサプリENGLISH（TOEIC対策コース） → https://web-study1.com/human-english-toeic
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] アンズテック → https://web-study1.com/anzutech
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] DMM WEBCAMP 学習コース → https://web-study1.com/dmm-webcamp-gakusyu
+2026-05-30 11:00:20 [INFO] [web-study1]   [?] キズキ共育塾 → https://web-study1.com/kizuki
+2026-05-30 11:00:20 [INFO] [wp] 記事取得: 計43件 (draft=1 / publish=42)
+2026-05-30 11:00:20 [INFO] [web-study1] キーワード直接指定: 「ChatGPT プロンプト テンプレ」
+2026-05-30 11:00:20 [INFO] [web-study1] 候補: 1件 / 選定: 1件 / 生成予定: 3件
+2026-05-30 11:00:20 [INFO] [api_guard] 本日の使用量: $4.0678 / ¥610 (59回呼び出し)
+2026-05-30 11:00:20 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 11:00:20 [INFO] [web-study1] [1/1] [LONGTAIL] 「ChatGPT プロンプト テンプレ」 vol=300
+2026-05-30 11:00:20 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 11:00:20 [INFO] [generate] 意図ベース文字数(PROMPT): 5,545字 → 1,982字
+2026-05-30 11:00:20 [INFO] [generate] 生成開始: 「ChatGPT プロンプト テンプレ」(vol:300) fact_check=True target_length=1,982字  誘導リンク:0件
+2026-05-30 11:02:23 [INFO] [generate] 完了: 「ChatGPTプロンプトテンプレ厳選10例｜仕事・ブログ・営業ですぐ使える」
+2026-05-30 11:02:23 [WARNING] [quality] 品質チェック: ❌2件NG / ⚠️0件警告 / 「ChatGPTプロンプトテンプレ厳選10例｜仕事・ブログ・営業ですぐ使える」
+2026-05-30 11:02:23 [WARNING] [quality]   ❌ □ FAQセクション: FAQが3問しかありません（最低5問必要）。問数を増やしてください。
+2026-05-30 11:02:23 [WARNING] [quality]   ❌ □ メタディスクリプション: メタディスクリプションが短すぎます（78字）。80〜120字に拡充してください。
+2026-05-30 11:02:23 [INFO] [post] DRY-RUN スキップ: 「ChatGPTプロンプトテンプレ厳選10例｜仕事・ブログ・営業ですぐ使える」
+2026-05-30 11:02:23 [INFO] [web-study1] [1/1] ✅ 完了: 「ChatGPTプロンプトテンプレ厳選10例｜仕事・ブログ・営業ですぐ使える」
+2026-05-30 11:02:23 [INFO] [web-study1] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-30 11:02:23 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-30 11:02:23 [INFO] === AIVice (workup-ai.com) 処理開始 ===
+2026-05-30 11:02:23 [INFO] ════════════════════════════════════════════════════════════
+2026-05-30 11:02:23 [INFO]   genre            : AI・テクノロジー・副業ツール
+2026-05-30 11:02:23 [INFO]   fact_check       : True
+2026-05-30 11:02:23 [INFO]   article_type_mix : True
+2026-05-30 11:02:23 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-30 11:02:23 [INFO]   article_count    : 3  dry_run: True
+2026-05-30 11:02:26 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-05-30 11:02:28 [INFO] [workup-ai] アフィリ案件: 18件（スプレッドシート）
+2026-05-30 11:02:28 [INFO] [workup-ai]   [S] ヒューマンアカデミー → https://workup-ai.com/haa.athuman
+2026-05-30 11:02:28 [INFO] [workup-ai]   [S] PLAUD NOTE → https://workup-ai.com/plaud
+2026-05-30 11:02:28 [INFO] [workup-ai]   [S] Notta → https://workup-ai.com/notta
+2026-05-30 11:02:28 [INFO] [workup-ai]   [S] NordVPN → https://workup-ai.com/nordvpn
+2026-05-30 11:02:28 [INFO] [workup-ai]   [S] Neuro Dive → https://workup-ai.com/neurodive
+2026-05-30 11:02:28 [INFO] [workup-ai]   [S] サイバーリンク公式オンラインストア → https://workup-ai.com/cyberlink
+2026-05-30 11:02:28 [INFO] [workup-ai]   [S] PowerDVD → https://workup-ai.com/powerdvd
+2026-05-30 11:02:28 [INFO] [workup-ai]   [S] PowerDirecto → https://workup-ai.com/powerdirector
+2026-05-30 11:02:28 [INFO] [workup-ai]   [S] Director Suite 365 → https://workup-ai.com/director-suite365
+2026-05-30 11:02:28 [INFO] [workup-ai]   [S] PhotoDirector 365 → https://workup-ai.com/photodirector365
+2026-05-30 11:02:28 [INFO] [workup-ai]   [S] Power2Go → https://workup-ai.com/power2go
+2026-05-30 11:02:28 [INFO] [workup-ai]   [S] MyEdit → https://workup-ai.com/myedit
+2026-05-30 11:02:28 [INFO] [workup-ai]   [S] Notta Memo → https://workup-ai.com/notta-memo
+2026-05-30 11:02:28 [INFO] [workup-ai]   [A] Udemy → https://workup-ai.com/udemy-ai
+2026-05-30 11:02:28 [INFO] [workup-ai]   [A] freenance → https://workup-ai.com/freenance
+2026-05-30 11:02:28 [INFO] [workup-ai]   [A] Filmora → https://workup-ai.com/filmora
+2026-05-30 11:02:28 [INFO] [workup-ai]   [A] Promeo → https://workup-ai.com/promeo
+2026-05-30 11:02:28 [INFO] [workup-ai]   [A] DMM 生成AI CAMP → https://workup-ai.com/dmm_seiseiai_camp
+2026-05-30 11:02:29 [INFO] [wp] 記事取得: 計425件 (draft=1 / publish=424)
+2026-05-30 11:02:29 [INFO] [workup-ai] キーワード直接指定: 「ChatGPT プロンプト テンプレ」
+2026-05-30 11:02:29 [INFO] [workup-ai] 候補: 1件 / 選定: 1件 / 生成予定: 3件
+2026-05-30 11:02:29 [INFO] [api_guard] 本日の使用量: $4.2363 / ¥635 (62回呼び出し)
+2026-05-30 11:02:29 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 11:02:29 [INFO] [workup-ai] [1/1] [LONGTAIL] 「ChatGPT プロンプト テンプレ」 vol=300
+2026-05-30 11:02:29 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 11:02:29 [INFO] [generate] 意図ベース文字数(PROMPT): 3,713字 → 2,089字
+2026-05-30 11:02:29 [INFO] [generate] 生成開始: 「ChatGPT プロンプト テンプレ」(vol:300) fact_check=True target_length=2,089字  誘導リンク:0件
+2026-05-30 11:04:35 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-30 11:04:35 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「【テンプレート】下部ミニLP」(ID:7028)
+2026-05-30 11:04:35 [INFO] [generate] 完了: 「ChatGPTプロンプトテンプレ10選｜コピペで使える日本語例文まとめ」
+2026-05-30 11:04:35 [WARNING] [quality] 品質チェック: ❌1件NG / ⚠️1件警告 / 「ChatGPTプロンプトテンプレ10選｜コピペで使える日本語例文まとめ」
+2026-05-30 11:04:35 [WARNING] [quality]   ❌ □ FAQセクション: FAQが3問しかありません（最低5問必要）。問数を増やしてください。
+2026-05-30 11:04:35 [WARNING] [quality]   ⚠️  □ 外部ソースリンク: 外部リンクはありますが、Google公式・官公庁など信頼性の高いソースへの言及があるとE-E-A-Tが向上します。
+2026-05-30 11:04:35 [INFO] [post] DRY-RUN スキップ: 「ChatGPTプロンプトテンプレ10選｜コピペで使える日本語例文まとめ」
+2026-05-30 11:04:37 [INFO] [workup-ai] [1/1] ✅ 完了: 「ChatGPTプロンプトテンプレ10選｜コピペで使える日本語例文まとめ」
+2026-05-30 11:04:37 [INFO] [workup-ai] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-30 11:04:37 [INFO] 
+════════════════════════════════════════════════════════════
+2026-05-30 11:04:37 [INFO] === ワイズトレンド (ys-trend.com) 処理開始 ===
+2026-05-30 11:04:37 [INFO] ════════════════════════════════════════════════════════════
+2026-05-30 11:04:37 [INFO]   genre            : エンタメ・トレンド・ライフスタイル
+2026-05-30 11:04:37 [INFO]   fact_check       : True
+2026-05-30 11:04:37 [INFO]   article_type_mix : True
+2026-05-30 11:04:37 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-05-30 11:04:37 [INFO]   article_count    : 3  dry_run: True
+2026-05-30 11:04:40 [INFO] [ys-trend] ブログ設定・メディア人格を読み込みました
+2026-05-30 11:04:41 [INFO] [ys-trend] アフィリ案件: 53件（スプレッドシート）
+2026-05-30 11:04:41 [INFO] [ys-trend]   [S] 福ちゃん → https://ys-trend.com/fuku-chan
+2026-05-30 11:04:41 [INFO] [ys-trend]   [S] 楽器の買取屋さん → https://ys-trend.com/gakkikaitori
+2026-05-30 11:04:41 [INFO] [ys-trend]   [S] ワイモバイル → https://ys-trend.com/ymobile
+2026-05-30 11:04:41 [INFO] [ys-trend]   [S] フレッツ光（NEXT） → https://ys-trend.com/next-internet.
+2026-05-30 11:04:41 [INFO] [ys-trend]   [S] ヒューマンアカデミー → https://ys-trend.com/haa.athuman
+2026-05-30 11:04:41 [INFO] [ys-trend]   [S] だれでもモバイル → https://ys-trend.com/daredemo-mobile
+2026-05-30 11:04:41 [INFO] [ys-trend]   [S] シェフの無添つくりおき → https://ys-trend.com/tsukurioki
+2026-05-30 11:04:41 [INFO] [ys-trend]   [S] JUSTY → https://ys-trend.com/justy
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] リショップナビ → https://ys-trend.com/pronuri
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] マツキヨココカラ → https://ys-trend.com/matukiyokokokaraq
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] プロアクティブ → https://ys-trend.com/proactiv
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] ビッグローブ光 → https://ys-trend.com/bc-hikari
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] テアトルアカデミー → https://ys-trend.com/theatre_academy
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] エポスカード → https://ys-trend.com/eposcard
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] UQ WiMAX → https://ys-trend.com/uq_wimax
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] TSUTAYA DISCAS → https://ys-trend.com/tsutaya
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] ORBIS AMBER → https://ys-trend.com/orbis_amber
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] NordVPN → https://ys-trend.com/nord_vpn
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] DMM FX → https://ys-trend.com/dmm_fx
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] Cha Cha Cha → https://ys-trend.com/chachacha
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] ANCL → https://ys-trend.com/ancl
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] BIGLOBE WiMAX → https://ys-trend.com/biglobe_wimax
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] Pollet → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] 快眠タイムズストア → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DRYGT6+4UHE+TRVYQ
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] 工場求人ワールド → https://px.a8.net/svt/ejp?a8mat=4B1O1T+EGYV5U+5S9S+5YJRM
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] カレントボディ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DFGD3U+54TM+5YJRM
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] アプリ接客キャスト → https://px.a8.net/svt/ejp?a8mat=4B1O1T+FKUWOY+3P1G+NTRMQ
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] ソフトバンク光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KARLU+3HKU+25FF81
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] GMOとくとくBB → https://px.a8.net/svt/ejp?a8mat=4B1THS+2UF2KQ+50+3H48S2
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] ヴィーナスウォーカー → https://px.a8.net/svt/ejp?a8mat=4B1THV+6632JE+58KC+5YRHE
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] WEBCOACH → https://px.a8.net/svt/ejp?a8mat=4B1V1W+DW4O7U+5EVK+5YZ75
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] ポケットリサーチ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DUXMU2+58KC+BWVTE
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] DMM 生成AI CAMP → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] ラボル カード払い → https://px.a8.net/svt/ejp?a8mat=4B1THS+3TJN9M+40JM+1NJZN5
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] トラベル・スタンダード・ジャパン → https://px.a8.net/svt/ejp?a8mat=4B1THV+17H122+5LKE+5ZU29
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] ORBIS AMBER(オルビス アンバー) → https://px.a8.net/svt/ejp?a8mat=4B1THX+DDO2AI+1USQ+4ASX02
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] シェフの無添つくりおき → https://px.a8.net/svt/ejp?a8mat=4B1THX+DQ65ZU+57YO+5YRHE
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] クロスワンルーム → https://px.a8.net/svt/ejp?a8mat=4B1THX+DPKQE2+4EZ2+BYLJL
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] オーケンウォーター → https://px.a8.net/svt/ejp?a8mat=4B1THX+CRN0WQ+1LOO+6NMJL
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] every frecious（エブリィフレシャス） → https://px.a8.net/svt/ejp?a8mat=4B1THX+CS8GII+2B8Y+15OK2A
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] Mr.シリーズ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CLOOUY+1USQ+2Z8T76
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] IBJ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CF4X7E+FOG+4MPSTE
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] ユアマイスター → https://px.a8.net/svt/ejp?a8mat=4B1THX+BZNNH6+4HQS+5YJRM
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] NELL マットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6M5RVE+4KD8+5ZMCI
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] 咲夜レアルマットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6LKC9M+4MRW+61Z81
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] ポニークリーニング → https://px.a8.net/svt/ejp?a8mat=4B1THV+5QLST6+4N08+5Z6WY
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] TOSSY → https://px.a8.net/svt/ejp?a8mat=4B1THS+2V0I6I+1WP2+1HLNLE
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] ABLENET VPS → https://px.a8.net/svt/ejp?a8mat=4B1THS+2VLXSA+4NIK+5Z6WX
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] BIGLOBE WiMAX +5G → https://px.a8.net/svt/ejp?a8mat=4B1THS+2TTMYY+B4+2BDBUB
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] フレッツ光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KW4WA+348K+1TJE9U
+2026-05-30 11:04:41 [INFO] [ys-trend]   [A] Amazon Prime Video → https://amzn.to/4tbKPVa
+2026-05-30 11:04:41 [INFO] [ys-trend]   [B] トラベル・スタンダード・ジャパン → https://ys-trend.com/travel_standard
+2026-05-30 11:04:42 [INFO] [wp] 記事取得: 計94件 (publish=94)
+2026-05-30 11:04:42 [INFO] [ys-trend] キーワード直接指定: 「ChatGPT プロンプト テンプレ」
+2026-05-30 11:04:42 [INFO] [ys-trend] 候補: 1件 / 選定: 1件 / 生成予定: 3件
+2026-05-30 11:04:42 [INFO] [api_guard] 本日の使用量: $4.4034 / ¥661 (65回呼び出し)
+2026-05-30 11:04:42 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 11:04:42 [INFO] [ys-trend] [1/1] [LONGTAIL] 「ChatGPT プロンプト テンプレ」 vol=300
+2026-05-30 11:04:42 [INFO] ────────────────────────────────────────────────────────────
+2026-05-30 11:04:42 [INFO] [generate] 意図ベース文字数(PROMPT): 5,950字 → 1,551字
+2026-05-30 11:04:42 [INFO] [generate] 生成開始: 「ChatGPT プロンプト テンプレ」(vol:300) fact_check=True target_length=1,551字  誘導リンク:0件
+2026-05-30 11:07:03 [INFO] [generate] パターンCTA挿入（H3末尾）: 1件
+2026-05-30 11:07:03 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「Cha Cha Cha」(ID:11930)
+2026-05-30 11:07:03 [INFO] [generate] 完了: 「ChatGPTプロンプトテンプレの使い方｜コピーして使える例文8選」
+2026-05-30 11:07:03 [WARNING] [quality] 品質チェック: ❌1件NG / ⚠️1件警告 / 「ChatGPTプロンプトテンプレの使い方｜コピーして使える例文8選」
+2026-05-30 11:07:03 [WARNING] [quality]   ❌ □ FAQセクション: FAQが3問しかありません（最低5問必要）。問数を増やしてください。
+2026-05-30 11:07:03 [WARNING] [quality]   ⚠️  □ 外部ソースリンク: 外部リンクはありますが、Google公式・官公庁など信頼性の高いソースへの言及があるとE-E-A-Tが向上します。
+2026-05-30 11:07:03 [INFO] [post] DRY-RUN スキップ: 「ChatGPTプロンプトテンプレの使い方｜コピーして使える例文8選」
+2026-05-30 11:07:03 [INFO] [ys-trend] [1/1] ✅ 完了: 「ChatGPTプロンプトテンプレの使い方｜コピーして使える例文8選」
+2026-05-30 11:07:03 [INFO] [ys-trend] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-05-30 11:07:03 [INFO] 
+============================================================
+2026-05-30 11:07:03 [INFO] 【全体サマリー】
+2026-05-30 11:07:03 [INFO]   ブログ数  : 7件
+2026-05-30 11:07:03 [INFO]   生成件数  : 7件成功 / 0件失敗 / 計7件
+2026-05-30 11:07:03 [INFO]   所要時間  : 892.5秒
+2026-05-30 11:07:03 [INFO]   ✅ [hapipo8] ChatGPT プロンプト テンプレ → ChatGPTプロンプトテンプレとは？使い方と効果的な書き方まとめ
+2026-05-30 11:07:03 [INFO]   ✅ [hataraku] ChatGPT プロンプト テンプレ → ChatGPTプロンプトテンプレ活用術｜初心者でも使える例文・作成方法まとめ
+2026-05-30 11:07:03 [INFO]   ✅ [hida-no-omoide] ChatGPT プロンプト テンプレ → ChatGPTプロンプトテンプレの書き方と使い方｜すぐ使えるサンプル付き
+2026-05-30 11:07:03 [INFO]   ✅ [kaerudoko] ChatGPT プロンプト テンプレ → ChatGPTプロンプトテンプレの書き方と使い方｜コピーして使える例文つき
+2026-05-30 11:07:03 [INFO]   ✅ [web-study1] ChatGPT プロンプト テンプレ → ChatGPTプロンプトテンプレ厳選10例｜仕事・ブログ・営業ですぐ使える
+2026-05-30 11:07:03 [INFO]   ✅ [workup-ai] ChatGPT プロンプト テンプレ → ChatGPTプロンプトテンプレ10選｜コピペで使える日本語例文まとめ
+2026-05-30 11:07:03 [INFO]   ✅ [ys-trend] ChatGPT プロンプト テンプレ → ChatGPTプロンプトテンプレの使い方｜コピーして使える例文8選
+2026-05-30 11:07:03 [INFO] ============================================================

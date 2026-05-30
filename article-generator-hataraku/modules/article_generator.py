@@ -615,18 +615,111 @@ def _build_adsense_instruction(keyword: str) -> str:
     )
 
 
+_INTENT_H3_BODY: dict[str, tuple[str, str] | None] = {
+    "PROMPT":   ("150", "250"),
+    "NOW":      ("150", "250"),
+    "FAQ":      ("200", "300"),
+    "LONGTAIL": ("250", "400"),
+    "COMP":     ("350", "500"),
+    "HOWTO":    None,   # HOWTO は _build_howto_section() が担当
+}
+
+
+def _repair_json_unescaped_quotes(s: str) -> str:
+    """JSON文字列値内の未エスケープ二重引用符を状態機械で修復する。"""
+    result: list[str] = []
+    i = 0
+    n = len(s)
+    while i < n:
+        if s[i] != '"':
+            result.append(s[i])
+            i += 1
+            continue
+        result.append('"')
+        i += 1
+        while i < n:
+            ch = s[i]
+            if ch == '\\' and i + 1 < n:
+                result.append(ch)
+                result.append(s[i + 1])
+                i += 2
+            elif ch == '"':
+                j = i + 1
+                while j < n and s[j] in ' \t\n\r':
+                    j += 1
+                next_ch = s[j] if j < n else ''
+                if next_ch in (':',  ',', '}', ']', ''):
+                    result.append('"')
+                    i += 1
+                    break
+                else:
+                    result.append('\\"')
+                    i += 1
+            elif ch == '\n':
+                result.append('\\n')
+                i += 1
+            elif ch == '\r':
+                result.append('\\r')
+                i += 1
+            else:
+                result.append(ch)
+                i += 1
+    return ''.join(result)
+
+
+def _build_compact_constraint_section(intent: str, h3_max: int, faq_max: int) -> str:
+    """HOWTO以外の意図カテゴリ向け・文字数・構成の上限制約セクションを返す。"""
+    if not intent or intent == "HOWTO":
+        return ""
+    body = _INTENT_H3_BODY.get(intent)
+    if body is None:
+        return ""
+    code_limit = "1件" if intent in ("PROMPT", "NOW") else "2件"
+    prompt_quote_rule = (
+        "- テンプレート例文・セリフ・引用はすべて **「」（鍵括弧）** で囲むこと。`\"二重引用符\"` は絶対に使わない（JSON互換のため）\n"
+        if intent == "PROMPT" else ""
+    )
+    return (
+        "## 【重要】文字数・構成の上限制約（システムプロンプトより優先）\n"
+        f"- **H3は合計{h3_max}本以内**（システムプロンプトの本数より優先。絶対に超えないこと）\n"
+        f"- **FAQは{faq_max}問以内**（システムプロンプトの問数より優先）\n"
+        "- **記事全体は目標文字数の120%を絶対に超えないこと**\n"
+        f"- H3本文は1本あたり**{body[0]}〜{body[1]}字**に収める\n"
+        f"- コードサンプルは全体で最大{code_limit}まで\n"
+        "- 同じ内容の言い換え・繰り返しは禁止。冗長な前置きや補足は削る\n"
+        + prompt_quote_rule
+    )
+
+
 def _build_howto_section(keyword: str) -> str:
     """手順解説型キーワード向けの追加指示セクションを返す。"""
     if not _is_howto_keyword(keyword):
         return ""
     return (
-        "## 【重要】手順解説型記事の追加指示\n"
-        "このキーワードは「使い方・手順解説型」です。以下のルールを厳守してください:\n"
-        "- 手順・操作を説明するH3は1ステップずつ丁寧に展開し、H3本文は600〜800字を目標にする\n"
-        "- 各ステップの構成: ①何をするか（1文で明確に）→ ②具体的な操作（クリック先・入力値・設定名まで）→ ③期待できる結果と確認方法、注意点やつまずきやすいポイント\n"
-        "- **手順・ステップの列挙には必ずSWELL Stepブロック（<!-- wp:loos/step -->）を使うこと。**\n"
-        "- **Stepブロックのタイトル（`<strong>`内）には「【STEP1】」「【STEP2】」などの番号テキストを絶対に入れないこと。** SWELLブロックが数字バッジを自動表示するため、タイトルはステップの内容のみ（例:「アカウントを作成する」）。\n"
-        "- 手順以外で装飾なしの番号付きリストが必要な場合は、必ずSWELLボーダーグループで囲むこと:\n"
+        "## 【重要】手順解説型記事の追加指示（システムプロンプトより優先）\n"
+        "このキーワードは「使い方・手順解説型」です。以下のルールを**必ず守り**、簡潔で読みやすい記事を書いてください:\n"
+        "\n"
+        "### 構成数の上限（厳守）\n"
+        "- **H2は最大3つ**（これはシステムプロンプトと同じ）\n"
+        "- **H3は合計5〜10本以内**（システムプロンプトの本数より優先。絶対に超えないこと）\n"
+        "- **FAQは3〜5問以内**（システムプロンプトの問数より優先）\n"
+        "\n"
+        "### 文字数の上限（厳守）\n"
+        "- **記事全体は目標文字数の120%を絶対に超えないこと**（例: 目標5000字なら最大6000字）\n"
+        "- H3本文は1本あたり**200〜350字**に収める（長くなりすぎる原因になるため厳守）\n"
+        "- 「概要」「まとめ」「とは」系のH3は150〜200字で構わない\n"
+        "\n"
+        "### 内容の絞り込み（必須）\n"
+        "- **コードサンプルは全体で最大2件まで**。コードは要点のみ、長い実装例は禁止\n"
+        "- **同じ内容の言い換えや繰り返しは禁止**（「つまり〜」「換言すれば〜」「要するに〜」で同内容を繰り返さない）\n"
+        "- 冗長な前置き・補足・注意書きは削る。1H3で伝えることは1つに絞る\n"
+        "- 「初心者でも」「難しそうに見えますが実は」などの不要な前置きを繰り返さない\n"
+        "\n"
+        "### 手順ブロックのフォーマット\n"
+        "- 手順・ステップの列挙には必ずSWELL Stepブロック（<!-- wp:loos/step -->）を使うこと\n"
+        "- Stepブロックのタイトル（`<strong>`内）には「【STEP1】」などの番号テキストを絶対に入れないこと（SWELLが自動表示するため）\n"
+        "- 各ステップ本文は80〜120字に収める\n"
+        "- 手順以外で番号付きリストが必要な場合はSWELLボーダーグループで囲む:\n"
         "  <!-- wp:group {\"className\":\"has-border -border04\",\"layout\":{\"type\":\"constrained\"}} -->\n"
         "  <div class=\"wp-block-group has-border -border04\"><!-- wp:list {\"ordered\":true,\"className\":\"wp-block-list is-style-index\"} -->\n"
         "  <ol class=\"wp-block-list is-style-index\"><li>...</li></ol>\n"
@@ -638,15 +731,14 @@ def _build_howto_section(keyword: str) -> str:
         "  <div class=\"swell-block-step__item\"><div class=\"swell-block-step__number u-bg-main\"><span class=\"__label\">STEP</span></div>"
         "<div class=\"swell-block-step__title u-fz-l\"><strong>タイトル</strong></div>"
         "<div class=\"swell-block-step__body\"><!-- wp:paragraph -->\n"
-        "  <p>本文（120〜200字）</p>\n"
+        "  <p>本文（80〜120字）</p>\n"
         "  <!-- /wp:paragraph --></div></div>\n"
         "  <!-- /wp:loos/step-item -->\n"
         "  <!-- wp:loos/step-item {\"stepLabel\":\"STEP\"} -->\n"
         "  ... （ステップ数だけ繰り返す）\n"
         "  <!-- /wp:loos/step-item --></div>\n"
         "  <!-- /wp:loos/step -->\n"
-        "- 「概要」「まとめ」「とは」系のH3は400〜500字で構わない\n"
-        "- 読者がその場でそのまま実行できるレベルの具体性を保つこと\n"
+        "- 読者がその場でそのまま実行できるレベルの具体性を保つこと（ただし余分な説明は削ること）\n"
     )
 
 
@@ -863,7 +955,7 @@ USER_PROMPT_TEMPLATE = """\
 
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{asp_hint_section}{blog_context_section}{blog_persona_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{tone_section}{testimonial_section}{trusted_external_links_section}{ref_urls_section}{forced_title_section}{howto_section}{adsense_section}
+{asp_hint_section}{blog_context_section}{blog_persona_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{tone_section}{testimonial_section}{trusted_external_links_section}{ref_urls_section}{forced_title_section}{compact_constraint_section}{howto_section}{adsense_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
@@ -891,7 +983,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    forced_title: str | None = None,
                    asp_hint: list[str] | None = None,
                    ref_urls: dict | None = None,
-                   blog_persona_section: str = "") -> dict:
+                   blog_persona_section: str = "",
+                   structure_overrides: dict | None = None) -> dict:
     """
     記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
 
@@ -901,6 +994,12 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
       3000 (TREND):     H3×5〜7本   / FAQ×5〜7問  / max_tokens=16,000
     """
     h3_min, h3_max, faq_min, faq_max, max_tokens = _get_structure(target_length)
+    if structure_overrides:
+        h3_min     = structure_overrides.get("h3_min",     h3_min)
+        h3_max     = structure_overrides.get("h3_max",     h3_max)
+        faq_min    = structure_overrides.get("faq_min",    faq_min)
+        faq_max    = structure_overrides.get("faq_max",    faq_max)
+        max_tokens = structure_overrides.get("max_tokens", max_tokens)
     system_prompt = _build_system_prompt(h3_min, h3_max, faq_min, faq_max, asp_links=asp_links)
 
     use_plaud_notta = _needs_plaud_notta(keyword)
@@ -1065,6 +1164,14 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     if howto_section:
         print(f"[article_generator] 手順解説型モード: 「{keyword}」")
 
+    # 意図カテゴリ別・文字数上限制約セクション（HOWTO以外）
+    _intent      = (structure_overrides or {}).get("intent", "")
+    _h3_max_ov   = (structure_overrides or {}).get("h3_max", h3_max)
+    _faq_max_ov  = (structure_overrides or {}).get("faq_max", faq_max)
+    compact_constraint_section = _build_compact_constraint_section(_intent, _h3_max_ov, _faq_max_ov)
+    if compact_constraint_section:
+        print(f"[article_generator] コンパクト制約モード({_intent}): H3≤{_h3_max_ov} FAQ≤{_faq_max_ov}")
+
     # アドセンス（情報収集型）記事の判定
     adsense_section = _build_adsense_instruction(keyword)
 
@@ -1090,6 +1197,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
         trusted_external_links_section=trusted_external_links_section,
         ref_urls_section=ref_urls_section,
         forced_title_section=forced_title_section,
+        compact_constraint_section=compact_constraint_section,
         howto_section=howto_section,
         adsense_section=adsense_section,
     )
@@ -1125,27 +1233,33 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
         sanitized = _re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', raw)
         try:
             data = json.loads(sanitized)
-        except json.JSONDecodeError as e:
-            # ② それでも失敗した場合は同じプロンプトでAPIを1回リトライ
-            print(f"[article_generator] JSON解析失敗（{e}）→ 同一プロンプトでリトライ中...")
-            with client.messages.stream(
-                model="claude-sonnet-4-6",
-                max_tokens=max_tokens,
-                system=system_prompt,
-                messages=[{"role": "user", "content": user_prompt}],
-            ) as _retry_stream:
-                retry_msg = _retry_stream.get_final_message()
-            record_usage("claude-sonnet-4-6",
-                         retry_msg.usage.input_tokens, retry_msg.usage.output_tokens,
-                         f"article_retry:{keyword}")
-            raw2 = retry_msg.content[0].text.strip()
-            if raw2.startswith("```"):
-                lines2 = raw2.split("\n")
-                raw2 = "\n".join(lines2[1:-1] if lines2[-1].strip() == "```" else lines2[1:])
+        except json.JSONDecodeError:
+            # ② 未エスケープ二重引用符を状態機械で修復して再試行（PROMPT記事のテンプレ例文対策）
+            repaired = _repair_json_unescaped_quotes(sanitized)
             try:
-                data = json.loads(raw2)
-            except json.JSONDecodeError as e2:
-                raise ValueError(f"Claude APIからのJSON解析エラー: {e2}\n---\n{raw[:500]}") from e2
+                data = json.loads(repaired)
+                print(f"[article_generator] JSON修復成功（未エスケープquote修正）")
+            except json.JSONDecodeError as e:
+                # ③ それでも失敗した場合は同じプロンプトでAPIを1回リトライ
+                print(f"[article_generator] JSON解析失敗（{e}）→ 同一プロンプトでリトライ中...")
+                with client.messages.stream(
+                    model="claude-sonnet-4-6",
+                    max_tokens=max_tokens,
+                    system=system_prompt,
+                    messages=[{"role": "user", "content": user_prompt}],
+                ) as _retry_stream:
+                    retry_msg = _retry_stream.get_final_message()
+                record_usage("claude-sonnet-4-6",
+                             retry_msg.usage.input_tokens, retry_msg.usage.output_tokens,
+                             f"article_retry:{keyword}")
+                raw2 = retry_msg.content[0].text.strip()
+                if raw2.startswith("```"):
+                    lines2 = raw2.split("\n")
+                    raw2 = "\n".join(lines2[1:-1] if lines2[-1].strip() == "```" else lines2[1:])
+                try:
+                    data = json.loads(raw2)
+                except json.JSONDecodeError as e2:
+                    raise ValueError(f"Claude APIからのJSON解析エラー: {e2}\n---\n{raw[:500]}") from e2
 
     for key in ("title", "meta_description", "slug", "image_prompt", "content"):
         if key not in data:
@@ -1197,7 +1311,8 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                      forced_title: str | None = None,
                      asp_hint: list[str] | None = None,
                      ref_urls: dict | None = None,
-                     blog_persona_section: str = "") -> dict:
+                     blog_persona_section: str = "",
+                     structure_overrides: dict | None = None) -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
@@ -1222,7 +1337,8 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                           sub_keywords=sub_keywords, enable_fact_check=enable_fact_check,
                           target_length=target_length, asp_links=asp_links,
                           forced_title=forced_title, asp_hint=asp_hint,
-                          ref_urls=ref_urls, blog_persona_section=blog_persona_section)
+                          ref_urls=ref_urls, blog_persona_section=blog_persona_section,
+                          structure_overrides=structure_overrides)
 
 
 def generate_article_from_cluster(cluster: dict, sub_keywords: list[str] | None = None) -> dict:

@@ -5,12 +5,12 @@
   "genre": "AI・テクノロジー・副業ツール",
   "target_length": {
     "MONETIZE": [
-      8000,
-      12000
+      6000,
+      8000
     ],
     "LONGTAIL": [
-      5000,
-      8000
+      3000,
+      5000
     ],
     "FUTURE": [
       3000,
@@ -104,7 +104,30 @@
   "wp_url": "https://workup-ai.com",
   "eyecatch_model": "gpt-image-2",
   "article_image_model": "black-forest-labs/FLUX.1-schnell",
-  "min_new_h2_images": 3,
+  "min_new_h2_images": 0,
+  "image_generate": false,
+  "_image_policy": "アイキャッチ生成:停止 / H2記事内:ライブラリ流用のみ / H3(FAQ/まとめ):完全停止 / FLUXフォールバック:なし",
+  "image_category_pool": {
+    "ai_dev": {
+      "keywords": ["Claude Code", "Codex", "AI Agent", "エージェント", "MCP", "API連携", "コード生成", "プログラミング"],
+      "tags": ["AI開発", "コード", "プログラミング", "API"]
+    },
+    "ai_video": {
+      "keywords": ["Veo3", "Veo 3", "Runway", "動画生成", "動画編集", "ショート動画", "AI動画"],
+      "tags": ["動画", "AI動画", "動画編集"]
+    },
+    "ai_sns": {
+      "keywords": ["SNS", "Instagram", "TikTok", "Threads", "X投稿", "リール", "ショート"],
+      "tags": ["SNS", "Instagram", "TikTok"]
+    },
+    "seo_blog": {
+      "keywords": ["SEO", "検索順位", "ブログ", "ライティング", "記事", "コンテンツ", "上位表示"],
+      "tags": ["SEO", "ブログ", "ノートPC", "ライティング"]
+    },
+    "_default": {
+      "tags": ["AI", "ノートPC", "テクノロジー"]
+    }
+  },
   "experience_ss_id": "1scnsnVeQGG3dv7xIXNvHFYNZsIkDR1_zqRd9UNNGCiA",
   "image_style": {
     "eyecatch_templates": {
