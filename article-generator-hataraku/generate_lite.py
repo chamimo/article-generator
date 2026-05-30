@@ -1553,6 +1553,45 @@ def _resolve_target_length(target_length: int | dict, article_type: str) -> int:
     return max(_resolve_value(v) for v in normalized.values())
 
 
+# 検索意図カテゴリ → 目標文字数レンジ
+_LENGTH_INTENT_MAP: dict[str, tuple[int, int]] = {
+    "PROMPT":   (1500, 2500),   # プロンプト・テンプレ記事
+    "HOWTO":    (4000, 6500),   # 使い方・手順解説型
+    "NOW":      (1500, 3000),   # 時事・速報・最新情報
+    "FAQ":      (2000, 3500),   # 悩み・できない・効果ない系
+    "COMP":     (5000, 7000),   # 比較・違い・どっち系
+    "LONGTAIL": (3000, 5000),   # 情報収集・とは・解説系
+}
+
+_MARKERS_PROMPT   = frozenset(["プロンプト", "prompt", "テンプレ", "コピペ", "例文", "サンプル", "雛形"])
+_MARKERS_HOWTO    = frozenset(["使い方", "手順", "やり方", "始め方", "設定方法", "登録方法",
+                                "使用方法", "操作方法", "導入方法", "how to", "tutorial"])
+_MARKERS_NOW      = frozenset(["最新", "リリース", "アップデート", "速報", "新機能", "news", "update"])
+_MARKERS_FAQ      = frozenset(["できない", "ならない", "エラー", "続かない", "高くなった",
+                                "効果ない", "使いこなせない", "必要ない", "わからない", "困った", "失敗"])
+_MARKERS_COMP     = frozenset(["比較", "違い", "どっち", "どちら", "使い分け", "選び方",
+                                "ランキング", "差", "対決"])
+_MARKERS_LONGTAIL = frozenset(["とは", "意味", "特徴", "仕組み", "理由", "なぜ", "対策",
+                                "整理", "解説", "一覧", "まとめ", "変わること", "初心者", "入門"])
+
+
+def _detect_length_intent(keyword: str) -> str:
+    """
+    キーワードから文字数制御用の意図カテゴリを返す。
+    優先順: PROMPT > HOWTO > NOW > FAQ > COMP > LONGTAIL
+
+    Returns: カテゴリ名(str) または "" (検出不能)
+    """
+    kw_l = keyword.lower()
+    if any(m in kw_l for m in _MARKERS_PROMPT):   return "PROMPT"
+    if any(m in kw_l for m in _MARKERS_HOWTO):    return "HOWTO"
+    if any(m in kw_l for m in _MARKERS_NOW):      return "NOW"
+    if any(m in kw_l for m in _MARKERS_FAQ):      return "FAQ"
+    if any(m in kw_l for m in _MARKERS_COMP):     return "COMP"
+    if any(m in kw_l for m in _MARKERS_LONGTAIL): return "LONGTAIL"
+    return ""
+
+
 # 既存の generate_article() をそのまま利用
 # ═══════════════════════════════════════════════════════════════
 def _filter_asp_by_hint(asp_list: list[dict], hints: list[str]) -> list[dict]:
@@ -1589,12 +1628,35 @@ def generate(
     target_length = _resolve_target_length(raw_tl, article_type)
     guide_links   = blog_cfg.guide_links if blog_cfg is not None else {}
 
-    # 手順解説型キーワードは target_length を 1.3 倍にブースト（上限12,000字）
-    from modules.article_generator import _is_howto_keyword
-    if _is_howto_keyword(keyword):
-        boosted = min(int(target_length * 1.3), 12000)
-        log.info(f"[generate] 手順解説型ブースト: {target_length:,}字 → {boosted:,}字")
-        target_length = boosted
+    # 検索意図ベース文字数オーバーライド（article_type=MONETIZE は除く）
+    import random as _rng
+    _detected_intent = ""
+    if article_type.upper() != "MONETIZE":
+        _detected_intent = _detect_length_intent(keyword)
+        if _detected_intent:
+            lo, hi = _LENGTH_INTENT_MAP[_detected_intent]
+            new_len = _rng.randint(lo, hi)
+            log.info(f"[generate] 意図ベース文字数({_detected_intent}): {target_length:,}字 → {new_len:,}字")
+            target_length = new_len
+        else:
+            lo, hi = _LENGTH_INTENT_MAP["LONGTAIL"]
+            new_len = _rng.randint(lo, hi)
+            log.info(f"[generate] 意図フォールバック(LONGTAIL): {target_length:,}字 → {new_len:,}字")
+            target_length = new_len
+
+    # 意図カテゴリ別の構成制約（H3・FAQ上限・max_tokensを強制）
+    _INTENT_STRUCTURE: dict[str, dict] = {
+        "PROMPT":   {"h3_min": 2, "h3_max": 4,  "faq_min": 2, "faq_max": 3,  "max_tokens": 16000},
+        "NOW":      {"h3_min": 2, "h3_max": 4,  "faq_min": 2, "faq_max": 3,  "max_tokens":  8000},
+        "FAQ":      {"h3_min": 3, "h3_max": 6,  "faq_min": 3, "faq_max": 5,  "max_tokens": 12000},
+        "HOWTO":    {"h3_min": 5, "h3_max": 10, "faq_min": 3, "faq_max": 5,  "max_tokens": 24000},
+        "LONGTAIL": {"h3_min": 4, "h3_max": 7,  "faq_min": 3, "faq_max": 5,  "max_tokens": 16000},
+        "COMP":     {"h3_min": 8, "h3_max": 11, "faq_min": 4, "faq_max": 6,  "max_tokens": 28000},
+    }
+    _structure_overrides: dict | None = None
+    if _detected_intent in _INTENT_STRUCTURE:
+        _structure_overrides = dict(_INTENT_STRUCTURE[_detected_intent])
+        _structure_overrides["intent"] = _detected_intent
 
     # 競合文字数チェック（参考URLが指定されている場合）
     # 参考WEB①②③の上位記事文字数を計測し、競合最大値 × 1.2 が設定値を超えるなら採用
@@ -1642,7 +1704,8 @@ def generate(
                                forced_title=forced_title,
                                asp_hint=asp_hint or None,
                                ref_urls=ref_urls or None,
-                               blog_persona_section=blog_persona_section)
+                               blog_persona_section=blog_persona_section,
+                               structure_overrides=_structure_overrides)
 
     # ── マイパターン CTA 挿入（ブログにパターンがある場合のみ）──
     if blog_cfg:
@@ -1718,6 +1781,11 @@ def generate(
     return article
 
 
+def _resolve_image_generate(article: dict, blog_cfg: "BlogConfig") -> bool:
+    """blog_config の image_generate フラグをそのまま返す。"""
+    return bool(blog_cfg.extra.get("image_generate", True))
+
+
 # ═══════════════════════════════════════════════════════════════
 # STEP 4: WordPress投稿
 # Phase 2: 画像生成・CTA挿入・シートフラグ更新を追加予定
@@ -1756,6 +1824,8 @@ def post(article: dict, dry_run: bool = False,
             default_fallback_category=blog_cfg.extra.get("default_fallback_category", ""),
             category_keywords=blog_cfg.extra.get("category_keywords", {}),
             trusted_external_links=blog_cfg.extra.get("trusted_external_links", []),
+            image_generate=_resolve_image_generate(article, blog_cfg),
+            image_category_pool=blog_cfg.extra.get("image_category_pool", {}),
             blog_meta={
                 "display_name":  blog_cfg.display_name,
                 "wp_url":        blog_cfg.wp_url,
@@ -3027,6 +3097,8 @@ def main() -> None:
                         help="既判定キーワードも含めて全件再チェック（--kanikabari と組み合わせて使用）")
     parser.add_argument("--sync-experience", action="store_true",
                         help="ReviewQueue の approved 行を EXPERIENCE｜体験談 に昇格させる（記事生成はしない）")
+    parser.add_argument("--update-effect-log", action="store_true",
+                        help="EffectLog の全行に GSC 30 日データを更新する（記事生成はしない）")
     args = parser.parse_args()
 
     # --test フラグ: count=1 を強制（--count と同時指定時は --count を優先）
@@ -3065,6 +3137,36 @@ def main() -> None:
             log.info(f"[sync-experience] 完了: {promoted}件昇格 / {skipped}件スキップ（重複）")
         except Exception as _se:
             log.error(f"[sync-experience] エラー: {_se}")
+            sys.exit(1)
+        return
+
+    # ── --update-effect-log: GSC データ更新のみ実行して終了 ───────────
+    if getattr(args, "update_effect_log", False):
+        try:
+            from modules.experience_effect_logger import update_gsc_data
+            from config import GOOGLE_CREDENTIALS_PATH
+
+            ss_id = ""
+            for _bn in list_blogs():
+                try:
+                    _cfg = load_blog_config(_bn)
+                    ss_id = _cfg.extra.get("experience_ss_id", "")
+                    if ss_id:
+                        break
+                except Exception:
+                    pass
+
+            if not ss_id:
+                log.error("[update-effect-log] experience_ss_id が設定されたブログが見つかりません")
+                sys.exit(1)
+
+            dry_run = args.dry_run if hasattr(args, "dry_run") else False
+            mode = "DRY RUN" if dry_run else "本番"
+            log.info(f"[update-effect-log] EffectLog GSC 更新を開始 ({mode})")
+            updated, skipped = update_gsc_data(ss_id, GOOGLE_CREDENTIALS_PATH, dry_run=dry_run)
+            log.info(f"[update-effect-log] 完了: {updated}件更新 / {skipped}件スキップ")
+        except Exception as _ue:
+            log.error(f"[update-effect-log] エラー: {_ue}")
             sys.exit(1)
         return
 

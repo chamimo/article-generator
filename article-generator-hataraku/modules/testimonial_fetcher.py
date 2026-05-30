@@ -132,29 +132,19 @@ def get_relevant(keyword: str, blog_name: str, ss_id: str, credentials_path: str
 
 def build_balloon_blocks(entries: list[dict]) -> str:
     """
-    体験談エントリのリストを SWELL speech-balloon Gutenberg ブロック HTML に変換する。
-    左向き・アイコン画像なし・type別ラベル表示
+    体験談エントリのリストを SWELL loos/balloon Gutenberg ブロックに変換する。
     """
     if not entries:
         return ""
 
     blocks = []
     for e in entries:
-        # author が設定されていれば balloon 表示名に使う（なければ type ラベル）
-        icon_name = e.get("author") or _TYPE_NAMES.get(e["type"], "体験談")
         text = e["comment"].replace("<", "&lt;").replace(">", "&gt;")
         block = (
-            f'<!-- wp:loos/speech-balloon {{"icon_url":"","icon_name":"{icon_name}",'
-            f'"icon_pos":"l","balloon_shape":"talking"}} -->\n'
-            f'<div class="swell-block-speechBalloon">'
-            f'<div class="speech-person -l -talking">'
-            f'<p class="speech-name">{icon_name}</p>'
-            f'<div class="speech-icon"><img src="" alt="{icon_name}"/></div>'
-            f'</div>'
-            f'<div class="speech-balloon talking"><!-- wp:paragraph -->\n'
+            f'<!-- wp:loos/balloon {{"balloonID":"1"}} -->\n'
+            f'\n'
             f'<p>{text}</p>\n'
-            f'<!-- /wp:paragraph --></div></div>\n'
-            f'<!-- /wp:loos/speech-balloon -->'
+            f'<!-- /wp:loos/balloon -->'
         )
         blocks.append(block)
 

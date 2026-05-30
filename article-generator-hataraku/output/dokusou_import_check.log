@@ -1,0 +1,83 @@
+2026-05-31 00:27:37 [INFO] [dokusou_importer] 開始 (DRY RUN) 対象ブログ: ['workup-ai']
+2026-05-31 00:27:38 [INFO] [blog_meta] 7 件のブログメタデータを管理シートから読み込みました
+2026-05-31 00:27:38 [INFO] [blog_meta] workup-ai: 目的=あり  ターゲット=あり  テイスト=あり  意図=Know・Do中心、Buyはツール導入系で狙う
+2026-05-31 00:27:40 [INFO] [dokusou_importer] DOKUSOU｜Import: 308行 / KW｜AIVice: 17件
+2026-05-31 00:27:42 [INFO] [dokusou_importer] LOG書き込み: 111件 → LOG｜DokusouImport
+2026-05-31 00:27:42 [INFO] [dokusou_importer] 完了
+
+============================================================
+DOKUSOU｜Import チェック結果 [workup-ai] → KW｜AIVice
+モード: DRY_RUN  実行日時: 2026-05-31 00:27
+============================================================
+
+【アクション対象】 73件
+  import_to_kw       :  33件  ← KWシートへ追加予定
+  parent_strengthen  :   0件  ← 既存KWのsub-KWへ昇格
+  internal_link_only :   0件  ← 内部リンクのみ利用
+  human_review       :  40件  ← 人的確認が必要
+
+【スキップ】
+  core_overlap=high  :  38件  （カニバリ強）
+  revenue_guard=hit  :   0件  （収益NG）
+  imported=TRUE      :   0件  （インポート済み）
+  KWシート既存       :   0件  （既登録）
+
+【import_to_kw 候補 33件】
+  行  2: 'Veo3 リール構成テンプレ'
+  行  3: 'Runway AI動画 台本テンプレ'
+  行  4: 'n8n ブログ自動化 ワークフロー'
+  行  6: 'Codex ブログ自動化 ワークフロー'  (score=0.333)
+  行  7: 'AIリール 構成テンプレ'
+  行  8: 'AIワークフロー 保存版'
+  行 15: 'ChatGPT 検索流入 減った'  (score=0.333)
+  行 16: 'ChatGPT 引用される 方法'  (score=0.333)
+  行 17: 'ChatGPT 話題 どうする'  (score=0.333)
+  行 43: 'Codex 引用される 方法'  (score=0.333)
+  行 44: 'Codex 個人ブログ 勝ち方'  (score=0.333)
+  行 80: 'AI検索 引用される 方法'  (score=0.333)
+  行 81: 'AI検索 個人ブログ 勝ち方'  (score=0.333)
+  行 82: 'AI検索 収益化 できない'  (score=0.333)
+  行 83: 'AI検索 話題 どうする'  (score=0.333)
+  行 91: 'AI自動化 検索流入 減った'  (score=0.333)
+  行 92: 'AI自動化 引用される 方法'  (score=0.333)
+  行 93: 'AI自動化 収益化 できない'  (score=0.333)
+  行 94: 'AI自動化 話題 どうする'  (score=0.333)
+  行 97: 'AI自動化 代替 初心者'  (score=0.333)
+  行 98: 'AI動画 投稿テンプレ'
+  行 99: 'AI動画 コピペテンプレ'
+  行100: 'AI動画 自動化構成'
+  行101: 'AI動画 SNS投稿テンプレ'
+  行102: 'AI動画 投稿カレンダー'
+  行103: 'AI動画 ブログ自動化'
+  行104: 'AI動画 SEOワークフロー'
+  行106: 'AI動画 引用される 方法'  (score=0.333)
+  行107: 'AI動画 話題 どうする'
+  行109: 'AI動画 課金 きつい'  (score=0.333)
+  行110: 'AI動画 代替 初心者'  (score=0.333)
+  行112: 'AI×SNS 検索流入 減った'  (score=0.333)
+  行113: 'AI×SNS 話題 どうする'
+
+【human_review 候補 40件】
+  行  5: 'ChatGPT X投稿テンプレ'  score=0.5
+  行 12: 'ChatGPT 自動化フロー'  score=0.5
+  行 13: 'ChatGPT 投稿カレンダー'  score=0.5
+  行 31: 'Codex 使いこなせない'  score=0.5
+  行 32: 'Codex 何から始める'  score=0.5
+  行 34: 'Codex やめた'  score=0.5
+  行 35: 'Codex 怖い'  score=0.5
+  行 36: 'Codex 迷う'  score=0.5
+  行 37: 'Codex 本音'  score=0.5
+  行 38: 'Codex 実務テンプレ'  score=0.5
+  ... 他 30件
+
+【skip: core_overlap=high 38件 (先頭5件)】
+  行  9: 'AIツール 増やしすぎ 整理'  → core_overlap=high score=0.917 matched=AIツール 増やしすぎ やめた 絞り方
+  行 11: 'AI検索 引用される 記事'  → core_overlap=high score=0.917 matched=AI Overview 引用される 記事 書き方
+  行 14: 'ChatGPT クリック 減った'  → core_overlap=high score=0.917 matched=AI Overview クリック 減った 個人ブログ
+  行 18: 'Claude Code 高くなった'  → core_overlap=high score=1.0 matched=Claude Code 高くなった 代替 個人利用
+  行 19: 'Claude Code 自動化フロー'  → core_overlap=high score=0.917 matched=claude code 無料枠
+
+▶ dry-run: KWシートへの書き込みはしていません
+▶ LOG｜DokusouImport に実行ログを記録しました
+▶ apply モードへ切り替える場合: --apply フラグを追加してください
+============================================================

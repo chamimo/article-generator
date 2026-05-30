@@ -38,6 +38,8 @@ _article_image_model:   str  = ""           # 記事内画像モデル（空=FLU
 _min_new_h2_images:     int  = 0            # H2画像の最低新規生成枚数（0=ライブラリ優先）
 _blog_name:             str  = ""           # ブログ識別子 (例: workup-ai, hataraku)
 _experience_ss_id:      str  = ""           # EXPERIENCE｜体験談シートのSS ID
+_image_generate:        bool = True         # False=新規画像生成を停止しライブラリ再利用のみ
+_image_category_pool:   dict = {}           # カテゴリ別メディア検索タグプール
 
 
 def set_context(
@@ -58,13 +60,15 @@ def set_context(
     min_new_h2_images:    int = 0,
     blog_name:            str = "",
     experience_ss_id:     str = "",
+    image_generate:       bool = True,
+    image_category_pool:  dict | None = None,
 ) -> None:
     """
     ブログ別の WP 認証情報をセットする。
     None を渡すと config.py のデフォルト値にフォールバックする。
     ブログ切り替え時はキャッシュもクリアする。
     """
-    global _url, _username, _password, _post_status, _candidate_ss_id, _candidate_sheet, _image_style, _blog_meta, _asp_ss_id, _default_fallback_category, _category_keywords, _trusted_external_links, _eyecatch_model, _article_image_model, _min_new_h2_images, _blog_name, _experience_ss_id
+    global _url, _username, _password, _post_status, _candidate_ss_id, _candidate_sheet, _image_style, _blog_meta, _asp_ss_id, _default_fallback_category, _category_keywords, _trusted_external_links, _eyecatch_model, _article_image_model, _min_new_h2_images, _blog_name, _experience_ss_id, _image_generate, _image_category_pool
     _url              = wp_url
     _username         = wp_username
     _password         = wp_app_password
@@ -82,6 +86,8 @@ def set_context(
     _min_new_h2_images   = int(min_new_h2_images) if min_new_h2_images else 0
     _blog_name           = blog_name or ""
     _experience_ss_id    = experience_ss_id or ""
+    _image_generate      = bool(image_generate)
+    _image_category_pool = image_category_pool or {}
     _clear_caches()
 
 
@@ -173,6 +179,16 @@ def get_blog_name() -> str:
 def get_experience_ss_id() -> str:
     """EXPERIENCE｜体験談シートのSS IDを返す。未設定なら空文字。"""
     return _experience_ss_id or ""
+
+
+def get_image_generate() -> bool:
+    """記事内画像の新規生成が許可されているかを返す。False=ライブラリ再利用のみ。"""
+    return _image_generate
+
+
+def get_image_category_pool() -> dict:
+    """カテゴリ別メディア検索タグプールを返す。未設定なら空dict。"""
+    return _image_category_pool or {}
 
 
 def get_auth() -> HTTPBasicAuth:

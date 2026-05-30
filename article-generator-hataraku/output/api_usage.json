@@ -11669,6 +11669,846 @@
       "output_tokens": 16192,
       "cost_usd": 0.292824,
       "label": "article_retry:Claude AI 使い方"
+    },
+    {
+      "timestamp": "2026-05-29T19:20:17.548555+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 104,
+      "cost_usd": 0.000507,
+      "label": "lsi:ノートパソコン WiFi つなぎ方"
+    },
+    {
+      "timestamp": "2026-05-29T19:20:21.977663+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 660,
+      "cost_usd": 0.002785,
+      "label": "kw_research:ノートパソコン WiFi つなぎ方"
+    },
+    {
+      "timestamp": "2026-05-29T19:24:17.843731+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16986,
+      "output_tokens": 16135,
+      "cost_usd": 0.292983,
+      "label": "article:ノートパソコン WiFi つなぎ方"
+    },
+    {
+      "timestamp": "2026-05-29T20:00:15.446798+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 79,
+      "cost_usd": 0.000408,
+      "label": "lsi:学童 保育 の バイト ペルソナ"
+    },
+    {
+      "timestamp": "2026-05-29T20:00:19.547006+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 524,
+      "cost_usd": 0.002242,
+      "label": "kw_research:学童 保育 の バイト ペルソナ"
+    },
+    {
+      "timestamp": "2026-05-29T20:04:05.555874+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15472,
+      "output_tokens": 14237,
+      "cost_usd": 0.259971,
+      "label": "article:学童 保育 の バイト ペルソナ"
+    },
+    {
+      "timestamp": "2026-05-29T20:30:30.022586+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 80,
+      "cost_usd": 0.000412,
+      "label": "lsi:さるぼぼ 色 意味 選び方"
+    },
+    {
+      "timestamp": "2026-05-29T20:30:33.904088+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 561,
+      "cost_usd": 0.00239,
+      "label": "kw_research:さるぼぼ 色 意味 選び方"
+    },
+    {
+      "timestamp": "2026-05-29T20:34:14.546547+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16767,
+      "output_tokens": 14108,
+      "cost_usd": 0.261921,
+      "label": "article:さるぼぼ 色 意味 選び方"
+    },
+    {
+      "timestamp": "2026-05-29T20:34:17.826813+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 380,
+      "output_tokens": 19,
+      "cost_usd": 0.00038,
+      "label": "maps:さるぼぼ 色 意味 選び方"
+    },
+    {
+      "timestamp": "2026-05-29T22:26:50.436964+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T22",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 100,
+      "cost_usd": 0.000487,
+      "label": "lsi:Claude Code 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-29T22:26:53.833257+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T22",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 397,
+      "cost_usd": 0.001729,
+      "label": "kw_research:Claude Code 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-29T22:30:47.973408+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T22",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12639,
+      "output_tokens": 15648,
+      "cost_usd": 0.272637,
+      "label": "article:Claude Code 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-29T22:52:33.992710+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T22",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 128,
+      "cost_usd": 0.000599,
+      "label": "lsi:Claude Code 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-29T22:52:37.351172+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T22",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 383,
+      "cost_usd": 0.001673,
+      "label": "kw_research:Claude Code 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-29T22:54:30.394068+00:00",
+      "date": "2026-05-29",
+      "hour": "2026-05-29T22",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12936,
+      "output_tokens": 7873,
+      "cost_usd": 0.156903,
+      "label": "article:Claude Code 使い方 初心者"
+    },
+    {
+      "timestamp": "2026-05-30T00:18:33.290727+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 122,
+      "cost_usd": 0.000578,
+      "label": "lsi:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T00:18:37.492799+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 664,
+      "cost_usd": 0.0028,
+      "label": "kw_research:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T00:18:55.237114+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 127,
+      "cost_usd": 0.000598,
+      "label": "lsi:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T00:18:58.964424+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 633,
+      "cost_usd": 0.002676,
+      "label": "kw_research:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T00:22:47.226540+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11903,
+      "output_tokens": 16000,
+      "cost_usd": 0.275709,
+      "label": "article:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T00:22:49.748085+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 111,
+      "cost_usd": 0.000531,
+      "label": "lsi:Gemini 使いこなせない"
+    },
+    {
+      "timestamp": "2026-05-30T00:22:54.379243+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 489,
+      "cost_usd": 0.002097,
+      "label": "kw_research:Gemini 使いこなせない"
+    },
+    {
+      "timestamp": "2026-05-30T00:23:09.863400+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11880,
+      "output_tokens": 16000,
+      "cost_usd": 0.27564,
+      "label": "article:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T00:23:12.027440+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 138,
+      "cost_usd": 0.000639,
+      "label": "lsi:Gemini 使いこなせない"
+    },
+    {
+      "timestamp": "2026-05-30T00:23:15.774739+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 495,
+      "cost_usd": 0.002121,
+      "label": "kw_research:Gemini 使いこなせない"
+    },
+    {
+      "timestamp": "2026-05-30T00:26:30.924406+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11710,
+      "output_tokens": 13911,
+      "cost_usd": 0.243795,
+      "label": "article:Gemini 使いこなせない"
+    },
+    {
+      "timestamp": "2026-05-30T00:26:36.864644+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 131,
+      "cost_usd": 0.000613,
+      "label": "lsi:AI Overview 対策 個人ブログ"
+    },
+    {
+      "timestamp": "2026-05-30T00:26:40.524704+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 441,
+      "cost_usd": 0.001906,
+      "label": "kw_research:AI Overview 対策 個人ブログ"
+    },
+    {
+      "timestamp": "2026-05-30T00:26:56.882665+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11743,
+      "output_tokens": 14331,
+      "cost_usd": 0.250194,
+      "label": "article:Gemini 使いこなせない"
+    },
+    {
+      "timestamp": "2026-05-30T00:27:02.520289+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 133,
+      "cost_usd": 0.000621,
+      "label": "lsi:AI Overview 対策 個人ブログ"
+    },
+    {
+      "timestamp": "2026-05-30T00:27:06.271436+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 467,
+      "cost_usd": 0.00201,
+      "label": "kw_research:AI Overview 対策 個人ブログ"
+    },
+    {
+      "timestamp": "2026-05-30T00:30:57.582745+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11684,
+      "output_tokens": 16000,
+      "cost_usd": 0.275052,
+      "label": "article:AI Overview 対策 個人ブログ"
+    },
+    {
+      "timestamp": "2026-05-30T00:30:59.366365+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 91,
+      "cost_usd": 0.000457,
+      "label": "lsi:ChatGPT Claude Gemini 使い分け 初心者"
+    },
+    {
+      "timestamp": "2026-05-30T00:31:04.125311+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 550,
+      "cost_usd": 0.002346,
+      "label": "kw_research:ChatGPT Claude Gemini 使い分け 初心者"
+    },
+    {
+      "timestamp": "2026-05-30T00:31:24.283494+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11712,
+      "output_tokens": 16000,
+      "cost_usd": 0.275136,
+      "label": "article:AI Overview 対策 個人ブログ"
+    },
+    {
+      "timestamp": "2026-05-30T00:31:25.915415+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 83,
+      "cost_usd": 0.000425,
+      "label": "lsi:ChatGPT Claude Gemini 使い分け 初心者"
+    },
+    {
+      "timestamp": "2026-05-30T00:31:29.669902+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 532,
+      "cost_usd": 0.002274,
+      "label": "kw_research:ChatGPT Claude Gemini 使い分け 初心者"
+    },
+    {
+      "timestamp": "2026-05-30T00:35:09.300991+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11755,
+      "output_tokens": 16039,
+      "cost_usd": 0.27585,
+      "label": "article:ChatGPT Claude Gemini 使い分け 初心者"
+    },
+    {
+      "timestamp": "2026-05-30T00:35:20.759102+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11729,
+      "output_tokens": 15207,
+      "cost_usd": 0.263292,
+      "label": "article:ChatGPT Claude Gemini 使い分け 初心者"
+    },
+    {
+      "timestamp": "2026-05-30T00:38:57.463069+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 116,
+      "cost_usd": 0.000554,
+      "label": "lsi:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T00:39:01.442935+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 659,
+      "cost_usd": 0.00278,
+      "label": "kw_research:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T00:40:48.135689+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12090,
+      "output_tokens": 7216,
+      "cost_usd": 0.14451,
+      "label": "article:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T00:42:44.339665+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12090,
+      "output_tokens": 8000,
+      "cost_usd": 0.15627,
+      "label": "article_retry:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T00:42:46.105604+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 89,
+      "cost_usd": 0.000443,
+      "label": "lsi:Gemini 使いこなせない"
+    },
+    {
+      "timestamp": "2026-05-30T00:42:51.391524+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 497,
+      "cost_usd": 0.002129,
+      "label": "kw_research:Gemini 使いこなせない"
+    },
+    {
+      "timestamp": "2026-05-30T00:44:26.008451+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11894,
+      "output_tokens": 6576,
+      "cost_usd": 0.134322,
+      "label": "article:Gemini 使いこなせない"
+    },
+    {
+      "timestamp": "2026-05-30T00:44:31.273826+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 122,
+      "cost_usd": 0.000577,
+      "label": "lsi:AI Overview 対策 個人ブログ"
+    },
+    {
+      "timestamp": "2026-05-30T00:44:35.471737+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 509,
+      "cost_usd": 0.002178,
+      "label": "kw_research:AI Overview 対策 個人ブログ"
+    },
+    {
+      "timestamp": "2026-05-30T00:46:49.113905+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11938,
+      "output_tokens": 8596,
+      "cost_usd": 0.164754,
+      "label": "article:AI Overview 対策 個人ブログ"
+    },
+    {
+      "timestamp": "2026-05-30T00:46:53.913045+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 86,
+      "cost_usd": 0.000437,
+      "label": "lsi:ChatGPT Claude Gemini 使い分け 初心者"
+    },
+    {
+      "timestamp": "2026-05-30T00:46:58.322966+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 537,
+      "cost_usd": 0.002294,
+      "label": "kw_research:ChatGPT Claude Gemini 使い分け 初心者"
+    },
+    {
+      "timestamp": "2026-05-30T00:49:49.145572+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 11938,
+      "output_tokens": 11165,
+      "cost_usd": 0.203289,
+      "label": "article:ChatGPT Claude Gemini 使い分け 初心者"
+    },
+    {
+      "timestamp": "2026-05-30T00:59:35.595837+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 135,
+      "cost_usd": 0.00063,
+      "label": "lsi:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T00:59:39.510896+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T00",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 632,
+      "cost_usd": 0.002672,
+      "label": "kw_research:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:01:32.219150+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12088,
+      "output_tokens": 7686,
+      "cost_usd": 0.151554,
+      "label": "article:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:03:32.794760+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 127,
+      "cost_usd": 0.000598,
+      "label": "lsi:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:03:37.341143+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 717,
+      "cost_usd": 0.003012,
+      "label": "kw_research:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:05:38.883244+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12153,
+      "output_tokens": 8000,
+      "cost_usd": 0.156459,
+      "label": "article:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:05:40.769275+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 126,
+      "cost_usd": 0.000594,
+      "label": "lsi:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:05:44.877004+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 644,
+      "cost_usd": 0.00272,
+      "label": "kw_research:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:07:32.837633+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12088,
+      "output_tokens": 7289,
+      "cost_usd": 0.145599,
+      "label": "article:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:52:20.635981+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 119,
+      "cost_usd": 0.000566,
+      "label": "lsi:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:52:24.629780+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 665,
+      "cost_usd": 0.002804,
+      "label": "kw_research:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:54:03.964615+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 17139,
+      "output_tokens": 6736,
+      "cost_usd": 0.152457,
+      "label": "article:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:54:14.449421+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 126,
+      "cost_usd": 0.000594,
+      "label": "lsi:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:54:18.346601+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 658,
+      "cost_usd": 0.002776,
+      "label": "kw_research:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:56:20.534724+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15912,
+      "output_tokens": 8144,
+      "cost_usd": 0.169896,
+      "label": "article:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:56:31.710163+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 115,
+      "cost_usd": 0.00055,
+      "label": "lsi:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:56:36.376367+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 694,
+      "cost_usd": 0.00292,
+      "label": "kw_research:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:58:05.628559+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15512,
+      "output_tokens": 6089,
+      "cost_usd": 0.137871,
+      "label": "article:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:58:09.152787+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 377,
+      "output_tokens": 19,
+      "cost_usd": 0.000378,
+      "label": "maps:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:58:15.766831+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 76,
+      "cost_usd": 0.000394,
+      "label": "lsi:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T01:58:20.098278+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T01",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 701,
+      "cost_usd": 0.002948,
+      "label": "kw_research:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T02:00:10.456099+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15031,
+      "output_tokens": 7524,
+      "cost_usd": 0.157953,
+      "label": "article:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T02:00:22.616104+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 117,
+      "cost_usd": 0.000558,
+      "label": "lsi:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T02:00:26.323030+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 650,
+      "cost_usd": 0.002744,
+      "label": "kw_research:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T02:02:19.599041+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16092,
+      "output_tokens": 7790,
+      "cost_usd": 0.165126,
+      "label": "article:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T02:02:31.335137+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 83,
+      "cost_usd": 0.000422,
+      "label": "lsi:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T02:02:35.525083+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 718,
+      "cost_usd": 0.003016,
+      "label": "kw_research:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T02:04:31.583976+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16188,
+      "output_tokens": 7677,
+      "cost_usd": 0.163719,
+      "label": "article:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T02:04:44.502163+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 113,
+      "output_tokens": 138,
+      "cost_usd": 0.000642,
+      "label": "lsi:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T02:04:48.400795+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T02",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 180,
+      "output_tokens": 637,
+      "cost_usd": 0.002692,
+      "label": "kw_research:ChatGPT プロンプト テンプレ"
+    },
+    {
+      "timestamp": "2026-05-30T02:07:00.028372+00:00",
+      "date": "2026-05-30",
+      "hour": "2026-05-30T02",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 17115,
+      "output_tokens": 8895,
+      "cost_usd": 0.18477,
+      "label": "article:ChatGPT プロンプト テンプレ"
     }
   ],
   "events": [
