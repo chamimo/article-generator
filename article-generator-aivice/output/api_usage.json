@@ -2989,6 +2989,36 @@
       "output_tokens": 11424,
       "cost_usd": 0.203754,
       "label": "article:AIツール 増やしすぎ 整理術"
+    },
+    {
+      "timestamp": "2026-05-31T19:00:16.658204+00:00",
+      "date": "2026-05-31",
+      "hour": "2026-05-31T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 91,
+      "cost_usd": 0.000456,
+      "label": "lsi:AIサブスク 整理 おすすめしない人"
+    },
+    {
+      "timestamp": "2026-05-31T19:00:20.785658+00:00",
+      "date": "2026-05-31",
+      "hour": "2026-05-31T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 610,
+      "cost_usd": 0.002586,
+      "label": "kw_research:AIサブスク 整理 おすすめしない人"
+    },
+    {
+      "timestamp": "2026-05-31T19:03:47.533629+00:00",
+      "date": "2026-05-31",
+      "hour": "2026-05-31T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 10904,
+      "output_tokens": 12000,
+      "cost_usd": 0.212712,
+      "label": "article:AIサブスク 整理 おすすめしない人"
     }
   ],
   "events": [
