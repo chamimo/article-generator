@@ -1,0 +1,103 @@
+===== [HATARAKU] 実行開始: 2026-06-01 05:00:00 =====
+2026-06-01 05:00:03 [INFO] ============================================================
+2026-06-01 05:00:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-01 05:00:03 [INFO] ============================================================
+2026-06-01 05:00:03 [INFO] 対象ブログ: ['hataraku']
+2026-06-01 05:00:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-01 05:00:04 [INFO] === はた楽ナビ (hataraku-navi.com) 処理開始 ===
+2026-06-01 05:00:04 [INFO] ════════════════════════════════════════════════════════════
+2026-06-01 05:00:04 [INFO]   genre            : 転職・副業・キャリア
+2026-06-01 05:00:04 [INFO]   fact_check       : True
+2026-06-01 05:00:04 [INFO]   article_type_mix : True
+2026-06-01 05:00:04 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'ランキング']
+2026-06-01 05:00:04 [INFO]   article_count    : 1  dry_run: False
+2026-06-01 05:00:09 [INFO] [hataraku] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] はた楽ナビ / 「ASP案件マスター」: 21件
+[asp_fetcher]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive / 発達障害×IT就労支援・在宅・スキル習得
+[asp_fetcher]   [S] ラボル → https://hataraku-navi.com/labol / フリーランス資金繰り・即日入金・請求書買取
+[asp_fetcher]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it / 未経験IT転職・ブラック回避・手厚い支援
+[asp_fetcher]   [S] TechGo → https://hataraku-navi.com/techgo / IT転職・年収アップ・ハイクラス
+[asp_fetcher]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi / 転職不安・無料相談・高確定率
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen / 就活・既卒支援・高EPC
+[asp_fetcher]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo / 既卒・フリーター・高卒支援
+2026-06-01 05:00:11 [INFO] [hataraku] アフィリ案件: 21件（スプレッドシート）
+2026-06-01 05:00:11 [INFO] [hataraku]   [S] Neuro Dive → https://hataraku-navi.com/neuro_dive
+2026-06-01 05:00:11 [INFO] [hataraku]   [S] ラボル → https://hataraku-navi.com/labol
+2026-06-01 05:00:11 [INFO] [hataraku]   [S] ウズウズIT → https://hataraku-navi.com/uzuuzu_it
+2026-06-01 05:00:11 [INFO] [hataraku]   [S] TechGo → https://hataraku-navi.com/techgo
+2026-06-01 05:00:11 [INFO] [hataraku]   [S] 転職AGENT Navi → https://hataraku-navi.com/agent-navi
+2026-06-01 05:00:11 [INFO] [hataraku]   [S] ヒューマンアカデミー → https://hataraku-navi.com/human-academy
+2026-06-01 05:00:11 [INFO] [hataraku]   [S] キャリセン就活エージェント → https://hataraku-navi.com/carysen
+2026-06-01 05:00:11 [INFO] [hataraku]   [S] 第二新卒エージェントneo → https://hataraku-navi.com/neo
+2026-06-01 05:00:11 [INFO] [hataraku]   [S] 保育専門求人サイト ほいく畑 → https://hataraku-navi.com/hoikubatake
+2026-06-01 05:00:11 [INFO] [hataraku]   [A] FREENANCE → https://hataraku-navi.com/freenance
+2026-06-01 05:00:11 [INFO] [hataraku]   [A] Midworks → https://hataraku-navi.com/midworks
+2026-06-01 05:00:11 [INFO] [hataraku]   [A] マスメディアン → https://hataraku-navi.com/massmedia
+2026-06-01 05:00:11 [INFO] [hataraku]   [A] atGP → https://hataraku-navi.com/atgp
+2026-06-01 05:00:11 [INFO] [hataraku]   [A] atGPジョブトレ IT・Web → https://hataraku-navi.com/atgp_job
+2026-06-01 05:00:11 [INFO] [hataraku]   [A] リゾートバイトダイブ → https://hataraku-navi.com/dive
+2026-06-01 05:00:11 [INFO] [hataraku]   [A] 日本マンパワー → https://hataraku-navi.com/manpower
+2026-06-01 05:00:11 [INFO] [hataraku]   [A] クラウドワークス → https://hataraku-navi.com/crowdworks
+2026-06-01 05:00:11 [INFO] [hataraku]   [?] 保育エイド → https://hataraku-navi.com/hoiku-aid
+2026-06-01 05:00:11 [INFO] [hataraku]   [?] 保育バランス → https://hataraku-navi.com/hoiku-balance
+2026-06-01 05:00:11 [INFO] [hataraku]   [?] 保育メトロ → https://hataraku-navi.com/hoiku-metro
+2026-06-01 05:00:11 [INFO] [hataraku]   [?] 20代の転職相談所 → https://hataraku-navi.com/20tensyoku
+2026-06-01 05:00:13 [INFO] [wp] 記事取得: 計61件 (draft=3 / publish=58)
+2026-06-01 05:00:13 [INFO] [hataraku] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-06-01 05:00:14 [INFO] [fetch] サブKW紐付け: 4202件 → 168記事に統合
+2026-06-01 05:00:14 [INFO] [fetch] [キーワード] メインKW: 315件（親KW+生成待ち）  サブKW除外: 4202件（統合対象）  投稿済みスキップ: 85件  aim内訳: [aim:315]
+2026-06-01 05:00:14 [INFO] [dup_check] 優先候補: 315件 {'aim': 315} を先頭評価
+2026-06-01 05:00:14 [INFO] [dup_check] シート承認済みスキップ: 「学童 保育 の バイト ペルソナ」（親KW+生成待ちのため重複チェック免除）
+2026-06-01 05:00:14 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=315件, 要求=1件)
+2026-06-01 05:00:14 [INFO] [select] 1件選定 (要求=1件)
+2026-06-01 05:00:14 [INFO] [select]   1. 「学童 保育 の バイト ペルソナ」 vol=0 seo=N/A comp=N/A
+2026-06-01 05:00:14 [INFO] [hataraku] LONGTAIL選定: 1件
+2026-06-01 05:00:14 [INFO] [hataraku] 候補: 315件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.5153 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.7310(¥110) / 3記事
+2026-06-01 05:00:14 [INFO] [api_guard] 本日の使用量: $0.5153 / ¥77 (6回呼び出し)
+2026-06-01 05:00:14 [INFO] ────────────────────────────────────────────────────────────
+2026-06-01 05:00:14 [INFO] [hataraku] [1/1] [LONGTAIL] 「学童 保育 の バイト ペルソナ」 vol=0 ★AIM
+2026-06-01 05:00:14 [INFO] ────────────────────────────────────────────────────────────
+2026-06-01 05:00:14 [INFO] [generate] 意図フォールバック(LONGTAIL): 6,098字 → 4,583字
+2026-06-01 05:00:14 [INFO] [generate] 生成開始: 「学童 保育 の バイト ペルソナ」(vol:0) fact_check=True target_length=4,583字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「学童 保育 の バイト ペルソナ」(vol:0) [4,583字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.5153 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.7310(¥110) / 3記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=115 out=79 → $0.0004  (lsi:学童 保育 の バイト ペルソナ)
+[api_guard] 本日の使用量: $0.5157 / ¥77 (1268回呼び出し)
+[article_generator] 共起語: 学童保育、アルバイト、時給、求人、仕事内容、子ども対応、資格不要、未経験、シフト、面接、職場環境、やりがい、子どもとの関...
+[api_guard] ✅ 本日: $0.5157 / 1時間: $0.0004  (上限 日次$10.00 / 時間$5.00)  全体: $0.7314(¥110) / 3記事
+[api_guard] 記録: claude-haiku-4-5-20251001 in=182 out=531 → $0.0023  (kw_research:学童 保育 の バイト ペルソナ)
+[api_guard] 本日の使用量: $0.5179 / ¥77 (1269回呼び出し)
+[article_generator] サジェスト: 学童保育 バイト 時給・学童保育 バイト 資格・学童保育 バイト きつい...
+[api_guard] ✅ 本日: $0.5179 / 1時間: $0.0027  (上限 日次$10.00 / 時間$5.00)  全体: $0.7337(¥110) / 3記事
+[api_guard] 記録: claude-sonnet-4-6 in=15476 out=14657 → $0.2663  (article:学童 保育 の バイト ペルソナ)
+[api_guard] 本日の使用量: $0.7842 / ¥117 (1270回呼び出し)
+[imagefx] 背景:C / ビジュアル:Cute flat icons of calendar, coins, lightbulb, and
+[imagefx] タイトル(英): After School Care Job Guide
+[article_generator] 完了: 「学童保育バイトはどんな人に向いている？仕事内容・時給・未経験の不安を解消」 カテゴリ: 未設定(-) タグ: ['学童保育', 'バイト・アルバイト', '未経験OK', '子ども関連の仕事', '仕事探し']
+2026-06-01 05:04:20 [INFO] [generate] パターンCTA挿入（H3末尾）: 3件
+2026-06-01 05:04:20 [INFO] [generate] パターンCTA挿入（KWマッチ）: 「保育メトロ」(ID:583)
+2026-06-01 05:04:21 [INFO] [generate] 完了: 「学童保育バイトはどんな人に向いている？仕事内容・時給・未経験の不安を解消」
+2026-06-01 05:04:21 [WARNING] [quality] 品質チェック: ❌5件NG / ⚠️0件警告 / 「学童保育バイトはどんな人に向いている？仕事内容・時給・未経験の不安を解消」
+2026-06-01 05:04:21 [WARNING] [quality]   ❌ □ FAQセクション: FAQ [1, 5] 番の回答が200字未満です。各回答を200字以上に充実させてください。
+2026-06-01 05:04:21 [WARNING] [quality]   ❌ □ 一人称体験談: 一人称体験談が1箇所しかありません（2〜3箇所必要）。「実際に使ってみたところ〜」「試してみて感じたのは〜」など自然な体験文を2〜3箇所追加してください。
+2026-06-01 05:04:21 [WARNING] [quality]   ❌ □ 曖昧表現チェック: 曖昧表現が2箇所あります（かもしれません。, でしょうか。）。断言文（「〜です」「〜が必要です」）に書き換えてください。
+2026-06-01 05:04:21 [WARNING] [quality]   ❌ □ 外部ソースリンク: 外部リンクが1つもありません。信頼性の高いソース（公式サイト・官公庁・大手メディア等）へのリンクを1〜3件追加してください。
+2026-06-01 05:04:21 [WARNING] [quality]   ❌ □ メタディスクリプション: メタディスクリプションが短すぎます（79字）。80〜120字に拡充してください。
+2026-06-01 05:04:21 [WARNING] [quality] メール設定が未設定のため通知をスキップします（.envにMAIL_FROM等を設定してください）
+2026-06-01 05:04:21 [INFO] [post] 投稿方式: draft
+[category_selector] カテゴリ取得: 21件
+[category_selector] 「学童 保育 の バイト ペルソナ」→ 派遣・パート(273) score=9
+2026-06-01 05:04:22 [ERROR] [hataraku] [1/1] ❌ エラー（続行）: cannot access local variable 'wp_context' where it is not associated with a value
+2026-06-01 05:04:22 [INFO] [hataraku] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-06-01 05:04:22 [INFO] 
+============================================================
+2026-06-01 05:04:22 [INFO] 【全体サマリー】
+2026-06-01 05:04:22 [INFO]   ブログ数  : 1件
+2026-06-01 05:04:22 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-06-01 05:04:22 [INFO]   所要時間  : 259.0秒
+2026-06-01 05:04:22 [INFO]   ❌ [hataraku] 学童 保育 の バイト ペルソナ → (生成失敗)
+2026-06-01 05:04:22 [INFO] ============================================================
+===== [HATARAKU] 記事生成終了: 2026-06-01 05:04:22 / exit=0 =====
