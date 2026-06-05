@@ -1,0 +1,110 @@
+===== [HAPIPO8] 実行開始: 2026-06-05 04:20:00 =====
+2026-06-05 04:20:02 [INFO] ============================================================
+2026-06-05 04:20:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-05 04:20:02 [INFO] ============================================================
+2026-06-05 04:20:02 [INFO] 対象ブログ: ['hapipo8']
+2026-06-05 04:20:03 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-05 04:20:03 [INFO] === 気になることブログ (hapipo8.com) 処理開始 ===
+2026-06-05 04:20:03 [INFO] ════════════════════════════════════════════════════════════
+2026-06-05 04:20:03 [INFO]   genre            : 雑学・エンタメ・生活情報
+2026-06-05 04:20:03 [INFO]   fact_check       : True
+2026-06-05 04:20:03 [INFO]   article_type_mix : True
+2026-06-05 04:20:03 [INFO]   stop_words       : ['2026']
+2026-06-05 04:20:03 [INFO]   article_count    : 1  dry_run: False
+2026-06-05 04:20:07 [INFO] [hapipo8] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] 気になることブログ / 「ASP案件マスター」: 50件
+[asp_fetcher]   [S] 福ちゃん → https://hapipo8.com/fukuchan / 着物買取・女性
+[asp_fetcher]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori / 即現金化・出張査定
+[asp_fetcher]   [S] フクウロ → https://hapipo8.com/fukuuro / 洋服買取 / 断捨離 / ブランド買取
+[asp_fetcher]   [S] メディカルフードサービス → https://hapipo8.com/medical_food / 腎臓病 宅配食 / 健康管理
+[asp_fetcher]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki / 宅配食 おすすめ 忙しい / 料理 時間ない 共働き
+[asp_fetcher]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile / 審査なし・スマホ契約できない・ブラックOK
+[asp_fetcher]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+
+2026-06-05 04:20:08 [INFO] [hapipo8] アフィリ案件: 50件（スプレッドシート）
+2026-06-05 04:20:08 [INFO] [hapipo8]   [S] 福ちゃん → https://hapipo8.com/fukuchan
+2026-06-05 04:20:08 [INFO] [hapipo8]   [S] 楽器の買取屋さん → https://hapipo8.com/gakki-kaitori
+2026-06-05 04:20:08 [INFO] [hapipo8]   [S] フクウロ → https://hapipo8.com/fukuuro
+2026-06-05 04:20:08 [INFO] [hapipo8]   [S] メディカルフードサービス → https://hapipo8.com/medical_food
+2026-06-05 04:20:08 [INFO] [hapipo8]   [S] シェフの無添つくりおき → https://hapipo8.com/tukurioki
+2026-06-05 04:20:08 [INFO] [hapipo8]   [S] ヒューマンアカデミー → https://hapipo8.com/haa.athuman
+2026-06-05 04:20:08 [INFO] [hapipo8]   [S] だれでもモバイル → https://hapipo8.com/daredemo-mobile
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] エアトリ 夜行・高速バス → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] トラベル・スタンダード・ジャパン → https://px.a8.net/svt/ejp?a8mat=4B1THV+17H122+5LKE+5ZU29
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] ORBIS AMBER(オルビス アンバー) → https://px.a8.net/svt/ejp?a8mat=4B1THX+DDO2AI+1USQ+4ASX02
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] トリア → https://hapipo8.com/tria
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] nosh - ナッシュ → https://hapipo8.com/nosh
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] Dr.つるかめキッチン → https://hapipo8.com/tsurukame
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] 快眠タイムズストア → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DRYGT6+4UHE+TRVYQ
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] NELL マットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6M5RVE+4KD8+5ZMCI
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] 咲夜レアルマットレス → https://px.a8.net/svt/ejp?a8mat=4B1THV+6LKC9M+4MRW+61Z81
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] オーケンウォーター → https://px.a8.net/svt/ejp?a8mat=4B1THX+CRN0WQ+1LOO+6NMJL
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] every frecious（エブリィフレシャス） → https://px.a8.net/svt/ejp?a8mat=4B1THX+CS8GII+2B8Y+15OK2A
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] リゾバ → https://hapipo8.com/rizoba
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] ダイブ → https://hapipo8.com/dive
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] 工場求人ワールド → https://px.a8.net/svt/ejp?a8mat=4B1O1T+EGYV5U+5S9S+5YJRM
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] ソフトバンク光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KARLU+3HKU+25FF81
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] BIGLOBE WiMAX +5G → https://px.a8.net/svt/ejp?a8mat=4B1THS+2TTMYY+B4+2BDBUB
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] フレッツ光 → https://px.a8.net/svt/ejp?a8mat=4B1THS+2KW4WA+348K+1TJE9U
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] AI英会話アプリ【スピーク】 → https://hapipo8.com/speak
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] もぐワン ペットフード → https://hapipo8.com/moguwan
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] DMM 生成AI CAMP → https://px.a8.net/svt/ejp?a8mat=4B1PLO+AV6CII+5VEK+5Z6WX
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] ポニークリーニング → https://px.a8.net/svt/ejp?a8mat=4B1THV+5QLST6+4N08+5Z6WY
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] 体験型カタログギフト【EXETIME】 → https://hapipo8.com/exetime
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] GMOとくとくBB → https://px.a8.net/svt/ejp?a8mat=4B1THS+2UF2KQ+50+3H48S2
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] Amazon Prime Video → https://amzn.to/4tbKPVa
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] Pollet → https://px.a8.net/svt/ejp?a8mat=4B3GYF+DUC78A+AD2+3H3TCH
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] カレントボディ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DFGD3U+54TM+5YJRM
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] アプリ接客キャスト → https://px.a8.net/svt/ejp?a8mat=4B1O1T+FKUWOY+3P1G+NTRMQ
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] ヴィーナスウォーカー → https://px.a8.net/svt/ejp?a8mat=4B1THV+6632JE+58KC+5YRHE
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] WEBCOACH → https://px.a8.net/svt/ejp?a8mat=4B1V1W+DW4O7U+5EVK+5YZ75
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] ポケットリサーチ → https://px.a8.net/svt/ejp?a8mat=4B1THX+DUXMU2+58KC+BWVTE
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] ラボル カード払い → https://px.a8.net/svt/ejp?a8mat=4B1THS+3TJN9M+40JM+1NJZN5
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] クロスワンルーム → https://px.a8.net/svt/ejp?a8mat=4B1THX+DPKQE2+4EZ2+BYLJL
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] Mr.シリーズ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CLOOUY+1USQ+2Z8T76
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] IBJ → https://px.a8.net/svt/ejp?a8mat=4B1THX+CF4X7E+FOG+4MPSTE
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] ユアマイスター → https://px.a8.net/svt/ejp?a8mat=4B1THX+BZNNH6+4HQS+5YJRM
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] TOSSY → https://px.a8.net/svt/ejp?a8mat=4B1THS+2V0I6I+1WP2+1HLNLE
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] ABLENET VPS → https://px.a8.net/svt/ejp?a8mat=4B1THS+2VLXSA+4NIK+5Z6WX
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] DELIPICKS → https://hapipo8.com/delipicks
+2026-06-05 04:20:08 [INFO] [hapipo8]   [A] BIGLOBE光 → https://px.a8.net/svt/ejp?a8mat=4B3LMR+4JQL96+3SPO+7LW1F7
+2026-06-05 04:20:08 [INFO] [hapipo8]   [B] 食楽膳 → https://hapipo8.com/shokurakuzen
+2026-06-05 04:20:08 [INFO] [hapipo8]   [?] 楽器買取 福ちゃん → https://hapipo8.com/gakki-fukucyan
+2026-06-05 04:20:08 [INFO] [hapipo8]   [?] ニーゴ・リユース → https://hapipo8.com/25reuse
+2026-06-05 04:20:11 [INFO] [wp] 記事取得: 計178件 (publish=178)
+2026-06-05 04:20:11 [INFO] [hapipo8] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.4, 'monetize': 0.1})
+2026-06-05 04:20:12 [INFO] [fetch] サブKW紐付け: 165件 → 46記事に統合
+2026-06-05 04:20:12 [INFO] [fetch] [キーワード] メインKW: 296件（親KW+生成待ち）  サブKW除外: 165件（統合対象）  投稿済みスキップ: 143件  aim内訳: [aim:52, add:219, claude:25]
+2026-06-05 04:20:12 [INFO] [dup_check] 優先候補: 296件 {'aim': 52, 'add': 219, 'claude': 25} を先頭評価
+2026-06-05 04:20:12 [INFO] [dup_check] シート承認済みスキップ: 「ノートパソコン WiFi つなぎ方」（親KW+生成待ちのため重複チェック免除）
+2026-06-05 04:20:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=296件, 要求=1件)
+2026-06-05 04:20:12 [INFO] [select] 1件選定 (要求=1件)
+2026-06-05 04:20:12 [INFO] [select]   1. 「ノートパソコン WiFi つなぎ方」 vol=0 seo=N/A comp=N/A
+2026-06-05 04:20:12 [INFO] [hapipo8] LONGTAIL選定: 1件
+2026-06-05 04:20:12 [INFO] [hapipo8] 候補: 296件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+2026-06-05 04:20:12 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-06-05 04:20:12 [INFO] ────────────────────────────────────────────────────────────
+2026-06-05 04:20:12 [INFO] [hapipo8] [1/1] [LONGTAIL] 「ノートパソコン WiFi つなぎ方」 vol=0 ★AIM
+2026-06-05 04:20:12 [INFO] ────────────────────────────────────────────────────────────
+2026-06-05 04:20:12 [INFO] [generate] 訴求案件指定: ['BIGLOBE WiMAX']
+2026-06-05 04:20:12 [INFO] [generate] 意図フォールバック(LONGTAIL): 6,524字 → 4,636字
+2026-06-05 04:20:12 [INFO] [generate] 生成開始: 「ノートパソコン WiFi つなぎ方」(vol:0) fact_check=True target_length=4,636字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「ノートパソコン WiFi つなぎ方」(vol:0) [4,636字 / H3:8〜12本 / FAQ:5〜7問]
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+[article_generator] 訴求案件指定: ['BIGLOBE WiMAX']
+[api_guard] ✅ 本日: $0.0000 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.0000(¥0) / 0記事
+2026-06-05 04:20:13 [ERROR] [hapipo8] [1/1] ❌ エラー（続行）: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cbim6gq3NBPgUr6jKDnJp'}
+2026-06-05 04:20:13 [INFO] [hapipo8] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-06-05 04:20:13 [INFO] 
+============================================================
+2026-06-05 04:20:13 [INFO] 【全体サマリー】
+2026-06-05 04:20:13 [INFO]   ブログ数  : 1件
+2026-06-05 04:20:13 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-06-05 04:20:13 [INFO]   所要時間  : 11.5秒
+2026-06-05 04:20:13 [INFO]   ❌ [hapipo8] ノートパソコン WiFi つなぎ方 → (生成失敗)
+2026-06-05 04:20:13 [INFO] ============================================================
+===== [HAPIPO8] 記事生成終了: 2026-06-05 04:20:14 / exit=0 =====
