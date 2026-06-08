@@ -1,0 +1,118 @@
+===== [HIDA-NO-OMOIDE] 実行開始: 2026-06-08 05:30:28 =====
+2026-06-08 05:30:36 [INFO] ============================================================
+2026-06-08 05:30:36 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-08 05:30:36 [INFO] ============================================================
+2026-06-08 05:30:36 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-06-08 05:30:38 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-08 05:30:38 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-06-08 05:30:38 [INFO] ════════════════════════════════════════════════════════════
+2026-06-08 05:30:38 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-06-08 05:30:38 [INFO]   fact_check       : True
+2026-06-08 05:30:38 [INFO]   article_type_mix : True
+2026-06-08 05:30:38 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-06-08 05:30:38 [INFO]   article_count    : 1  dry_run: False
+2026-06-08 05:30:42 [INFO] [hida-no-omoide] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] 飛騨の思い出 / 「ASP案件マスター 」: 3件
+[asp_fetcher]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+[asp_fetcher]   [999] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+[asp_fetcher]   [999] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+2026-06-08 05:30:44 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-06-08 05:30:44 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-06-08 05:30:44 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-06-08 05:30:44 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-06-08 05:30:48 [INFO] [wp] 記事取得: 計51件 (draft=12 / publish=39)
+2026-06-08 05:30:48 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 1428, in getresponse
+    response.begin()
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.12/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/util/retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 1428, in getresponse
+    response.begin()
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.4/Frameworks/Python.framework/Versions/3.12/lib/python3.12/http/client.py", line 300, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 3275, in <module>
+    main()
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 3239, in main
+    results = run_blog(
+              ^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 2041, in run_blog
+    sheet_candidates, sub_keywords = fetch_candidates(ArticleType.LONGTAIL, blog_cfg=blog_cfg)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 702, in fetch_candidates
+    rows   = ws.get_all_values()
+             ^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/gspread/worksheet.py", line 486, in get_all_values
+    return self.get_values(
+           ^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/gspread/worksheet.py", line 463, in get_values
+    return self.get(
+           ^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/gspread/worksheet.py", line 958, in get
+    response = self.client.values_get(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/gspread/http_client.py", line 236, in values_get
+    r = self.request("get", url, params=params)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/gspread/http_client.py", line 114, in request
+    response = self.session.request(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/google/auth/transport/requests.py", line 543, in request
+    response = super(AuthorizedSession, self).request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/requests/adapters.py", line 660, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+===== [HIDA-NO-OMOIDE] 記事生成終了: 2026-06-08 05:46:03 / exit=1 =====
