@@ -7,6 +7,7 @@ from config import ANTHROPIC_API_KEY
 from modules.image_generator import generate_imagefx_prompt
 from modules.fact_checker import needs_fact_check, check_facts, detect_person_keyword, PERSON_ARTICLE_INSTRUCTION
 from modules.api_guard import check_stop, record_usage
+from modules.aio_layer import build_aio_prompt_section, run_aio_quality_check
 
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
@@ -457,7 +458,7 @@ USER_PROMPT_TEMPLATE = """\
 
 メインキーワード: {keyword}
 月間検索ボリューム: {volume}
-{blog_context_section}{blog_persona_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{asp_section}
+{blog_context_section}{blog_persona_section}{aio_section}{related_section}{theme_section}{lsi_section}{keyword_research_section}{sub_keywords_section}{differentiation_section}{fact_check_section}{person_section}{plaud_notta_section}{asp_section}
 このキーワードで検索するユーザーの検索意図を踏まえ、上記フォーマットに従って出力してください。
 
 ## 出力フォーマット（JSON）
@@ -483,7 +484,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    target_length: int = 9000,
                    asp_list: list[dict] | None = None,
                    guide_links: dict | None = None,
-                   blog_persona_section: str = "") -> dict:
+                   blog_persona_section: str = "",
+                   aio_profile: dict | None = None) -> dict:
     """
     記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
 
@@ -495,6 +497,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
     """
     h3_min, h3_max, faq_min, faq_max, max_tokens = _get_structure(target_length)
     system_prompt = _build_system_prompt(h3_min, h3_max, faq_min, faq_max)
+    aio_section = build_aio_prompt_section(keyword, article_type, target_length, aio_profile)
 
     use_plaud_notta = _needs_plaud_notta(keyword)
     print(f"[article_generator] 記事構成生成中: 「{keyword}」(vol:{volume})"
@@ -598,6 +601,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                 volume=volume,
                 blog_context_section=blog_context_section,
                 blog_persona_section=blog_persona_section,
+                aio_section=aio_section,
                 related_section=related_section,
                 theme_section=theme_section,
                 lsi_section=lsi_section,
@@ -653,6 +657,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
 
     data["keyword"] = keyword
     data["volume"] = volume
+    data["_aio_quality"] = run_aio_quality_check(data, aio_profile)
 
     # ImageFX プロンプトを生成してdictに追加
     try:
@@ -676,7 +681,8 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                      article_type: str = "longtail",
                      asp_list: list[dict] | None = None,
                      guide_links: dict | None = None,
-                     blog_persona_section: str = "") -> dict:
+                     blog_persona_section: str = "",
+                     aio_profile: dict | None = None) -> dict:
     """
     指定キーワードでSEO記事構成を生成し、辞書で返す。
 
@@ -691,6 +697,7 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
         asp_list: ASP案件リスト（プロンプト注入用）
         guide_links: 内部誘導リンク dict
         blog_persona_section: ブログ設定・メディア人格のプロンプト文字列
+        aio_profile: AIO共通レイヤーのサイト別設定
 
     Returns:
         {title, meta_description, slug, image_prompt, category_id, category_name,
@@ -701,7 +708,8 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
                           target_length=target_length,
                           asp_list=asp_list,
                           guide_links=guide_links,
-                          blog_persona_section=blog_persona_section)
+                          blog_persona_section=blog_persona_section,
+                          aio_profile=aio_profile)
 
 
 def generate_article_from_cluster(cluster: dict, sub_keywords: list[str] | None = None) -> dict:

@@ -52,6 +52,7 @@ from modules.image_generator import generate_image_for_article
 from modules.api_guard import check_stop, daily_summary
 from modules import wp_context
 from modules.wp_pattern_fetcher import fetch_patterns, match_pattern, insert_pattern_cta, insert_per_h3_cta
+from modules.aio_layer import load_aio_profile
 
 _wp_patterns_cache: dict[str, list] = {}
 
@@ -1150,6 +1151,7 @@ def generate(
     raw_tl        = blog_cfg.target_length if blog_cfg is not None else 9000
     target_length = _resolve_target_length(raw_tl, article_type)
     guide_links   = blog_cfg.guide_links if blog_cfg is not None else {}
+    aio_profile   = load_aio_profile(blog_cfg.name, blog_cfg.extra) if blog_cfg is not None else load_aio_profile(_pre_args.site)
 
     log.info(
         f"[generate] 生成開始: 「{keyword}」(vol:{volume:,})"
@@ -1157,6 +1159,7 @@ def generate(
         + (f"  サブKW:{len(sub_keywords)}件" if sub_keywords else "")
         + (f"  誘導リンク:{len([v for v in guide_links.values() if v])}件" if guide_links else "")
         + ("  人格設定:あり" if blog_persona_section else "")
+        + (f"  AIO:{aio_profile.get('mode', 'common')}" if aio_profile.get("enabled", True) else "  AIO:off")
     )
     article = generate_article(keyword, volume, sub_keywords=sub_keywords,
                                enable_fact_check=fact_check,
@@ -1164,9 +1167,29 @@ def generate(
                                article_type=article_type,
                                asp_list=asp_list,
                                guide_links=guide_links or None,
-                               blog_persona_section=blog_persona_section)
+                               blog_persona_section=blog_persona_section,
+                               aio_profile=aio_profile)
+    if article.get("_aio_quality"):
+        aq = article["_aio_quality"]
+        log.info(f"[generate] AIO品質チェック: {aq['score']}/{aq['max_score']} ({aq['mode']})")
     log.info(f"[generate] 完了: 「{article['title']}」")
     return article
+
+
+def save_dry_run_article(article: dict, blog_cfg: BlogConfig | None = None) -> Path:
+    """Save generated article files for dry-run review without touching WordPress."""
+    safe_blog = (blog_cfg.name if blog_cfg else "default").replace("/", "-")
+    slug = article.get("slug") or article.get("keyword") or "article"
+    safe_slug = "".join(ch if ch.isalnum() or ch in ("-", "_") else "-" for ch in str(slug))[:80].strip("-")
+    out_dir = OUTPUT_LOG_DIR / "dry_run" / safe_blog
+    out_dir.mkdir(parents=True, exist_ok=True)
+    stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    base = out_dir / f"{stamp}_{safe_slug or 'article'}"
+    html_path = base.with_suffix(".html")
+    json_path = base.with_suffix(".json")
+    html_path.write_text(article.get("content", ""), encoding="utf-8")
+    json_path.write_text(json.dumps(article, ensure_ascii=False, indent=2), encoding="utf-8")
+    return html_path
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -1185,6 +1208,8 @@ def post(article: dict, dry_run: bool = False,
     """
     if dry_run:
         log.info(f"[post] DRY-RUN スキップ: 「{article['title']}」")
+        out_path = save_dry_run_article(article, blog_cfg=blog_cfg)
+        log.info(f"[post] DRY-RUN 出力: {out_path}")
         return {"id": None, "url": "", "edit_url": "", "status": "dry-run"}
 
     # ブログ別 WP 認証情報・投稿方式をコンテキストにセット（全モジュール共有）
@@ -1304,38 +1329,50 @@ def run_blog(
     log.info(f"  stop_words       : {stop_words or '(なし)'}")
     log.info(f"  article_count    : {n_articles}  dry_run: {dry_run}")
 
+    claude_only_dry_run = dry_run and bool(keyword)
+    if claude_only_dry_run:
+        blog_cfg.fact_check = False
+
     # ── ブログ設定・メディア人格シートを読み込む ──────────────────
     blog_persona_section = ""
-    try:
-        from modules.blog_sheets import (
-            load_blog_config_sheet,
-            load_media_persona_sheet,
-            build_persona_prompt,
-        )
-        _persona_ss_id = blog_cfg.asp_ss_id or blog_cfg.candidate_ss_id
-        if _persona_ss_id:
-            _blog_config_data  = load_blog_config_sheet(_persona_ss_id, GOOGLE_CREDENTIALS_PATH)
-            _media_persona_data = load_media_persona_sheet(_persona_ss_id, GOOGLE_CREDENTIALS_PATH)
-            blog_persona_section = build_persona_prompt(_blog_config_data, _media_persona_data)
-            if blog_persona_section:
-                log.info(f"[{blog_cfg.name}] ブログ設定・メディア人格を読み込みました")
-    except Exception as _sheet_err:
-        log.warning(f"[{blog_cfg.name}] ブログ設定・人格読み込みスキップ（続行）: {_sheet_err}")
+    if claude_only_dry_run:
+        log.info(f"[{blog_cfg.name}] Claude-only dry-run: ブログ設定・人格シート読み込みをスキップ")
+    else:
+        try:
+            from modules.blog_sheets import (
+                load_blog_config_sheet,
+                load_media_persona_sheet,
+                build_persona_prompt,
+            )
+            _persona_ss_id = blog_cfg.asp_ss_id or blog_cfg.candidate_ss_id
+            if _persona_ss_id:
+                _blog_config_data  = load_blog_config_sheet(_persona_ss_id, GOOGLE_CREDENTIALS_PATH)
+                _media_persona_data = load_media_persona_sheet(_persona_ss_id, GOOGLE_CREDENTIALS_PATH)
+                blog_persona_section = build_persona_prompt(_blog_config_data, _media_persona_data)
+                if blog_persona_section:
+                    log.info(f"[{blog_cfg.name}] ブログ設定・メディア人格を読み込みました")
+        except Exception as _sheet_err:
+            log.warning(f"[{blog_cfg.name}] ブログ設定・人格読み込みスキップ（続行）: {_sheet_err}")
 
     # ── ASP案件リスト読み込み（ブログ別SS の ASP案件マスターシートから）──
     asp_list: list[dict] = []
-    try:
-        from modules.asp_fetcher import fetch_asp_links
-        asp_list = fetch_asp_links(blog_cfg.display_name)
-    except Exception as asp_err:
-        log.warning(f"[{blog_cfg.name}] ASP案件読み込みスキップ（続行）: {asp_err}")
+    if claude_only_dry_run:
+        log.info(f"[{blog_cfg.name}] Claude-only dry-run: ASP案件読み込みをスキップ")
+    else:
+        try:
+            from modules.asp_fetcher import fetch_asp_links
+            asp_list = fetch_asp_links(blog_cfg.display_name)
+        except Exception as asp_err:
+            log.warning(f"[{blog_cfg.name}] ASP案件読み込みスキップ（続行）: {asp_err}")
 
     # ── Step 1: キーワード選定 ──────────────────────────
     sub_keywords: list[str] = []  # vol<30のサブKW（記事本文に盛り込む）
 
     # WP記事取得（公開・下書き・非公開。全分岐共通で実行）
     wp_posts: list[dict] | None = None
-    if FEATURES["duplicate_check"]:
+    if claude_only_dry_run:
+        log.info(f"[{blog_cfg.name}] Claude-only dry-run: WP重複チェックをスキップ")
+    elif FEATURES["duplicate_check"]:
         try:
             wp_posts = fetch_wp_posts(blog_cfg=blog_cfg)
         except Exception as e:
