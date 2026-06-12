@@ -1,0 +1,94 @@
+2026-06-12 05:30:09 [INFO] ============================================================
+2026-06-12 05:30:09 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-12 05:30:09 [INFO] ============================================================
+2026-06-12 05:30:09 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-06-12 05:30:11 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-12 05:30:11 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-06-12 05:30:11 [INFO] ════════════════════════════════════════════════════════════
+2026-06-12 05:30:11 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-06-12 05:30:11 [INFO]   fact_check       : True
+2026-06-12 05:30:11 [INFO]   article_type_mix : True
+2026-06-12 05:30:11 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-06-12 05:30:11 [INFO]   article_count    : 1  dry_run: False
+2026-06-12 05:30:15 [INFO] [hida-no-omoide] ブログ設定・メディア人格を読み込みました
+2026-06-12 05:30:17 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-06-12 05:30:17 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-06-12 05:30:17 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-06-12 05:30:17 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-06-12 05:30:21 [INFO] [wp] 記事取得: 計51件 (draft=12 / publish=39)
+2026-06-12 05:30:21 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-06-12 05:30:23 [DEBUG] [fetch] シート「絞り込みKW」: 202行 / ヘッダー: ['キーワード', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要']
+2026-06-12 05:30:23 [INFO] [fetch] サブKW紐付け: 87件 → 7記事に統合
+2026-06-12 05:30:23 [INFO] [fetch] [キーワード] メインKW: 32件（親KW+生成待ち）  サブKW除外: 87件（統合対象）  投稿済みスキップ: 83件  aim内訳: [aim:8, add:5, claude:19]
+2026-06-12 05:30:23 [DEBUG] [group_pool] グループ数: 0件 → pool: 0件
+2026-06-12 05:30:23 [INFO] [dup_check] 優先候補: 32件 {'aim': 8, 'add': 5, 'claude': 19} を先頭評価
+2026-06-12 05:30:23 [INFO] [dup_check] シート承認済みスキップ: 「さるぼぼ 色 意味 選び方」（親KW+生成待ちのため重複チェック免除）
+2026-06-12 05:30:23 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=32件, 要求=1件)
+2026-06-12 05:30:23 [INFO] [select] 1件選定 (要求=1件)
+2026-06-12 05:30:23 [INFO] [select]   1. 「さるぼぼ 色 意味 選び方」 vol=0 seo=N/A comp=N/A
+2026-06-12 05:30:23 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-06-12 05:30:23 [INFO] [hida-no-omoide] 候補: 32件 / 選定: 1件 / 生成予定: 1件
+2026-06-12 05:30:23 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-06-12 05:30:23 [INFO] ────────────────────────────────────────────────────────────
+2026-06-12 05:30:23 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「さるぼぼ 色 意味 選び方」 vol=0 ★AIM
+2026-06-12 05:30:23 [INFO] ────────────────────────────────────────────────────────────
+2026-06-12 05:30:23 [INFO] [generate] 意図ベース文字数(COMP): 7,102字 → 6,058字
+2026-06-12 05:30:23 [INFO] [generate] 生成開始: 「さるぼぼ 色 意味 選び方」(vol:0) fact_check=True target_length=6,058字  誘導リンク:0件
+2026-06-12 05:30:25 [ERROR] [hida-no-omoide] [1/1] ❌ エラー（続行）: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cbx77YEmh7MeNimAERV92'}
+2026-06-12 05:30:25 [INFO] [hida-no-omoide] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-06-12 05:30:25 [INFO] 
+============================================================
+2026-06-12 05:30:25 [INFO] 【全体サマリー】
+2026-06-12 05:30:25 [INFO]   ブログ数  : 1件
+2026-06-12 05:30:25 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-06-12 05:30:25 [INFO]   所要時間  : 15.5秒
+2026-06-12 05:30:25 [INFO]   ❌ [hida-no-omoide] さるぼぼ 色 意味 選び方 → (生成失敗)
+2026-06-12 05:30:25 [INFO] ============================================================
+2026-06-12 06:00:05 [INFO] ============================================================
+2026-06-12 06:00:05 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-12 06:00:05 [INFO] ============================================================
+2026-06-12 06:00:05 [INFO] 対象ブログ: ['web-study1']
+2026-06-12 06:00:06 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-12 06:00:06 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-06-12 06:00:06 [INFO] ════════════════════════════════════════════════════════════
+2026-06-12 06:00:06 [INFO]   genre            : オンライン学習・プログラミング・資格・スキルアップ
+2026-06-12 06:00:06 [INFO]   fact_check       : True
+2026-06-12 06:00:06 [INFO]   article_type_mix : True
+2026-06-12 06:00:06 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-06-12 06:00:06 [INFO]   article_count    : 1  dry_run: False
+2026-06-12 06:00:10 [INFO] [web-study1] ブログ設定・メディア人格を読み込みました
+2026-06-12 06:00:11 [INFO] [web-study1] アフィリ案件: 28件（スプレッドシート）
+2026-06-12 06:00:11 [INFO] [web-study1]   [S] 無学年式オンライン教材 のすらら → https://web-study1.com/surara
+2026-06-12 06:00:11 [INFO] [web-study1]   [S] ヒューマンアカデミー → https://web-study1.com/haa.athuman
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] こどもチャレンジ → https://web-study1.com/shimajiro
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] こどもチャレンジ baby → https://web-study1.com/shimajiro-baby
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] Filmora → https://web-study1.com/filmora
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] スマイルゼミ → https://web-study1.com/smile-zemi
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] 進研ゼミ　高校講座 → https://web-study1.com/sinkenzemi-koukou
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] 進研ゼミ　中学講座 → https://web-study1.com/sinkenzem-cyugaku
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] 進研ゼミ　小学講座 → https://web-study1.com/shinkenzemi-syougakukouza
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] スタディサプリ中学講座 → https://web-study1.com/studysapuri-chugaku
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] Z会 → https://web-study1.com/zkai
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] スタディサプリ高校・大学 受験講座 → https://web-study1.com/studysapur-koukou
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] DMM WEBCAMP  学習コース_大学生向け就活対策コース → https://web-study1.com/dmm_webcamp_shukatu
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] Tech Kids School → https://web-study1.com/tech-kids
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] 【RISU算数】(19-1031) → https://web-study1.com/risu
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] スタディサプリENGLISH（新日常英会話コース） → https://web-study1.com/eigosapuri
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] スタディサプリEnglish　ビジネス英語コース → https://web-study1.com/eigosapuri
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] DMM WEBCAMP プログラミングコース → https://web-study1.com/web-camp_programing
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] freenance → https://web-study1.com/freenance
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] Udemy → https://web-study1.com/udemy
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] DMM WEBCAMP WEBデザインコース → https://web-study1.com/dmm_webcamp
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] DMM WEBCAMP Pythonコース → https://web-study1.com/dmm_webcamp_python
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] AI英会話アプリ【スピーク】 → https://web-study1.com/speak
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] スタディサプリ小学講座 → https://web-study1.com/sutasapu-syougaku
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] スタディサプリENGLISH（TOEIC対策コース） → https://web-study1.com/human-english-toeic
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] アンズテック → https://web-study1.com/anzutech
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] DMM WEBCAMP 学習コース → https://web-study1.com/dmm-webcamp-gakusyu
+2026-06-12 06:00:11 [INFO] [web-study1]   [?] キズキ共育塾 → https://web-study1.com/kizuki
+2026-06-12 06:00:15 [INFO] [wp] 記事取得: 計43件 (draft=1 / publish=42)
+2026-06-12 06:00:15 [INFO] [web-study1] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.2, 'monetize': 0.3})
+2026-06-12 06:00:17 [DEBUG] [fetch] シート「絞り込みKW」: 261行 / ヘッダー: ['', '月間検索数', 'SEO難易度', '親KW', '訴求案件', 'サブKW', '判定', '統合先KW', 'AIM', 'ステータス', 'メモ', '投稿日', 'URL', 'ID', '既存記事URL', '既存記事ID', '参考WEB①', '参考WEB②', '参考WEB③', '参考WEB必要', '体験談']
+2026-06-12 06:00:17 [INFO] [fetch] [キーワード] メインKW: 0件（親KW+生成待ち）  サブKW: 0件（vol<30）
