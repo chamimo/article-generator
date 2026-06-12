@@ -1,0 +1,76 @@
+{
+  "_comment": "グルーウィル法人フィルム特化ブログ設定。環境変数とシートIDは運用環境に合わせて設定してください。",
+  "name": "groowill-film",
+  "display_name": "グルーウィル法人フィルム",
+  "genre": "法人向け保護フィルム・特殊サイズ・業務用端末",
+  "target_length": {
+    "MONETIZE": 9000,
+    "LONGTAIL": 6000,
+    "FUTURE": 3000
+  },
+  "fact_check": true,
+  "candidate_ss_id_env": "GROOWILL_FILM_GOOGLE_SHEETS_ID",
+  "candidate_sheet": "KW｜グルーウィル法人フィルム",
+  "article_count": 1,
+  "min_volume": 0,
+  "article_type_weights": {
+    "longtail": 0.7,
+    "trend": 0.0,
+    "monetize": 0.3
+  },
+  "stop_words": [
+    "おすすめ",
+    "比較",
+    "法人",
+    "保護フィルム",
+    "フィルム"
+  ],
+  "aliases": [
+    "groowill",
+    "groowill-film",
+    "グルーウィル"
+  ],
+  "allowed_themes": [
+    "保護フィルム",
+    "液晶保護",
+    "学校",
+    "ICT",
+    "GIGA",
+    "医療",
+    "病院",
+    "クリニック",
+    "業務用端末",
+    "タブレット",
+    "ハンディ",
+    "POS",
+    "特殊サイズ",
+    "特注",
+    "反射防止",
+    "覗き見防止",
+    "ブルーライト",
+    "抗菌",
+    "衝撃吸収"
+  ],
+  "ng_keywords": [],
+  "affili_ss_id": "",
+  "asp_ss_id": "",
+  "guide_links": {
+    "pv_url": "",
+    "comparison_url": "",
+    "cv_url": ""
+  },
+  "asp_links": {},
+  "wp_url_env": "GROOWILL_FILM_WP_URL",
+  "wp_username_env": "GROOWILL_FILM_WP_USERNAME",
+  "wp_app_password_env": "GROOWILL_FILM_WP_APP_PASSWORD",
+  "wp_post_status": "draft",
+  "wp_url": "https://www.groowill.co.jp",
+  "default_fallback_category": "法人向け保護フィルム",
+  "aio_enabled": true,
+  "aio_mode": "groowill_film",
+  "aio_profile": {
+    "site_name": "グルーウィル法人フィルム",
+    "audience": "学校ICT・医療機関・業務用端末の法人担当者",
+    "conversion_goal": "端末名・型番・台数・希望機能を添えた問い合わせ"
+  }
+}
