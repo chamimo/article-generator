@@ -340,6 +340,119 @@ def _build_system_prompt(h3_min: int, h3_max: int, faq_min: int, faq_max: int) -
     return prompt
 
 
+def _replace_prompt_section(prompt: str, start: str, end: str, replacement: str) -> str:
+    """プロンプト内の例示セクションを、サイト専用の安全な例へ差し替える。"""
+    start_index = prompt.find(start)
+    if start_index == -1:
+        return prompt
+    end_index = prompt.find(end, start_index)
+    if end_index == -1:
+        return prompt
+    end_index += len(end)
+    return prompt[:start_index] + replacement + prompt[end_index:]
+
+
+def _sanitize_groowill_system_prompt(prompt: str, faq_min: int, faq_max: int) -> str:
+    """groowill-film専用のSWELLブロック例と段落ルールへ差し替える。"""
+    prompt = prompt.replace(
+        "- 段落内に複数の文がある場合は、各文末（「。」）の後に<br>を挿入して読みやすくすること（段落内の最後の文には不要）",
+        "- groowill-filmでは<br>による改行を多用せず、意味の切れ目ごとに個別のWordPress paragraphブロックへ分けること",
+    )
+    prompt = _replace_prompt_section(
+        prompt,
+        "## 2. この記事のポイント\n<!-- wp:loos/cap-block",
+        "<!-- /wp:loos/cap-block -->",
+        """## 2. この記事のポイント
+<!-- wp:loos/cap-block {{"className":"is-style-small_ttl"}} -->
+<div class="swell-block-capbox cap_box is-style-small_ttl"><div class="cap_box_ttl"><span>この記事のポイント</span></div><div class="cap_box_content">
+<!-- wp:list {{"className":"is-style-check_list"}} -->
+<ul class="wp-block-list is-style-check_list">
+<li>{{ポイント1}}</li>
+<li>{{ポイント2}}</li>
+<li>{{ポイント3}}</li>
+<li>{{キーフレーズを含むポイント4}}</li>
+</ul>
+<!-- /wp:list --></div></div>
+<!-- /wp:loos/cap-block -->""",
+    )
+    prompt = _replace_prompt_section(
+        prompt,
+        f"## 4. よくある質問（{faq_min}〜{faq_max}問、各回答200字以上）",
+        "<!-- /wp:loos/faq -->",
+        f"""## 4. よくある質問（{faq_min}〜{faq_max}問）
+<!-- wp:heading {{"level":3}} -->
+<h3 class="wp-block-heading">よくある質問</h3>
+<!-- /wp:heading -->
+
+<!-- wp:loos/faq {{"iconRadius":"rounded","qIconStyle":"fill-custom","aIconStyle":"fill-custom","outputJsonLd":true,"titleTag":"h4"}} -->
+<div class="swell-block-faq -icon-rounded" data-q="fill-custom" data-a="fill-custom">
+{{{faq_min}〜{faq_max}問繰り返し。各FAQは以下の形式で出力}}
+<!-- wp:loos/faq-item {{"titleTag":"h4"}} -->
+<div class="swell-block-faq__item"><h4 class="faq_q">{{質問文}}</h4><div class="faq_a">
+<!-- wp:paragraph -->
+<p>{{回答文。必要に応じて次のparagraphブロックへ分ける}}</p>
+<!-- /wp:paragraph --></div></div>
+<!-- /wp:loos/faq-item -->
+</div>
+<!-- /wp:loos/faq -->""",
+    )
+    return prompt
+
+
+GROOWILL_FILM_SYSTEM_APPENDIX = """
+
+## groowill-film専用の構成・圧縮ルール（共通ルールより優先）
+- H2は最大3個まで。H2には主要キーワードまたは検索意図を自然に含める
+- H3は合計12〜14個を目安にする。H2数を増やして調整せず、各H2配下にH3を分配する
+- H4は補足、手順、注意点の小見出しとして必要な場合のみ使う
+- 各H2直下に、法人担当者向けの結論要約を1段落で置く
+- 各H2直下に、そのH2配下のH3一覧を番号付きリストで置く
+- H3本文の長さは固定しない。短い補足系は80〜120字、通常説明系は130〜220字、重要な判断ポイントは220〜320字、手順や注意点は250〜400字でもよい
+- すべてのH3を長くせず、短いH3、標準的なH3、やや詳しいH3が混ざる自然なリズムにする
+- 本文では<br>による改行を多用しない。意味の切れ目ごとに個別のWordPress paragraphブロックへ分ける
+- 冒頭文は説明だけで終わらせず、読者の課題、読む理由、記事で得られることを入れ、2〜4個のparagraphブロックに分ける。1段落は1〜2文を基本にし、結論、背景、相談導線が自然に読める流れにする
+- H3本文は内容に応じて1〜3個のparagraphブロックに分ける。1つのparagraphに長文を詰め込まない
+- FAQは5〜6問を目安にする。回答の長さは固定せず、即答できるFAQは50〜90字、補足が必要なFAQは100〜160字、注意点が必要なFAQは160〜220字を目安にする
+- 比較表または確認項目表は1つまで。相談前チェックリストも1つまで
+- 長文のミニLP本文は生成しない。CTAは投稿前整形でWordPressマイパターン ref:247 が挿入される前提にする
+- 本文内CTAは短い案内に留め、同じ訴求を何度も繰り返さない
+- 「相談窓口メモ」「確認ポイント」「補足アドバイス」として、吹き出し風メモを1〜2個まで入れてよい
+- 吹き出し風メモは、架空の利用者の声、導入実績、提携先企業担当者の発言に見える内容にしない
+- 吹き出し風メモはWordPress標準のgroupブロックまたはSWELLで崩れにくい枠付きブロックにし、独自CSSやstyleは使わない
+- 「この記事のポイント」はwp:loos/cap-block {"className":"is-style-small_ttl"} 形式で出力し、ポイント4つを維持する
+- FAQはwp:loos/faq と wp:loos/faq-item 形式で出力し、FAQ全体と各FAQ itemの開始タグ・終了タグを必ず対応させる
+- FAQの質問はH4、回答はparagraphブロックで出力し、質問と回答の構造を明確にする
+- 共通テンプレート内に<br>の例があっても、groowill-filmでは段落分割ルールを優先して使わない
+- 記事ボリュームはKW難易度で変える。LIGHTは4,000〜5,500字、STANDARDは6,000〜8,000字、DEEPは9,000〜12,000字を目安にする
+- groowill-filmのdry-runではSTANDARDを基本にしつつ、JSONが途切れないよう実出力は5,000〜7,000字程度を優先する
+- 各H3の長さ、文末、接続詞を均一にしない。「〜することができます」を多用しない
+- 箇条書きだけで説明を終わらせず、短い説明、具体例、注意点を自然に混ぜる
+- 「完全」は使わない。未確認の数値、実績、効果を作らない
+- Protect Guard Filmは、法人向け特注保護フィルムの紹介・相談窓口として説明する
+- お問い合わせ内容は当サイト運営者および提携先企業に共有される文脈にする
+- 具体的な仕様・お見積り・納期の案内は、提携先企業より直接ご連絡する場合があると説明する
+- 共有・直接連絡の説明は、相談窓口メモ、CTA付近、記事末尾、必要なFAQに絞る
+- 本文中では「詳しい仕様・お見積り・納期は、個別の内容を確認したうえでのご案内となります」のように短く表現し、同じ長文を何度も繰り返さない
+- 当サイトが製造元・販売元・公式窓口であるような表現や、当サイトがすべての仕様回答・見積り回答を行うように見える表現は避ける
+- 禁止表現: 公式サイト、メーカー公式、弊社、当社製品、自社製造、当社工場、必ず製作できます、製作可否
+- 優先表現: 当サイト、法人向け相談窓口、取扱製品、提携先企業、当サイト運営者および提携先企業、仕様・推奨フィルム・お見積り・納期を確認、提携先企業より直接ご連絡・ご案内する場合があります
+"""
+
+
+def _apply_site_structure_override(
+    h3_min: int,
+    h3_max: int,
+    faq_min: int,
+    faq_max: int,
+    max_tokens: int,
+    aio_profile: dict | None,
+) -> tuple[int, int, int, int, int, str]:
+    """サイト専用の構成ルールを必要最小限で上書きする。"""
+    if (aio_profile or {}).get("mode") != "groowill_film":
+        return h3_min, h3_max, faq_min, faq_max, max_tokens, ""
+    return 12, 14, 5, 6, max_tokens, GROOWILL_FILM_SYSTEM_APPENDIX
+
+
 def _get_keyword_research(keyword: str) -> dict:
     """
     Claude Haiku でキーワードリサーチを一括生成する。
@@ -482,6 +595,7 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    sub_keywords: list[str] | None = None,
                    enable_fact_check: bool = True,
                    target_length: int = 9000,
+                   article_type: str = "longtail",
                    asp_list: list[dict] | None = None,
                    guide_links: dict | None = None,
                    blog_persona_section: str = "",
@@ -496,7 +610,13 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
       3000 (FUTURE):    H3×5〜7本   / FAQ×3〜4問  / max_tokens=4,500
     """
     h3_min, h3_max, faq_min, faq_max, max_tokens = _get_structure(target_length)
+    h3_min, h3_max, faq_min, faq_max, max_tokens, site_appendix = _apply_site_structure_override(
+        h3_min, h3_max, faq_min, faq_max, max_tokens, aio_profile
+    )
     system_prompt = _build_system_prompt(h3_min, h3_max, faq_min, faq_max)
+    if (aio_profile or {}).get("mode") == "groowill_film":
+        system_prompt = _sanitize_groowill_system_prompt(system_prompt, faq_min, faq_max)
+    system_prompt += site_appendix
     aio_section = build_aio_prompt_section(keyword, article_type, target_length, aio_profile)
 
     use_plaud_notta = _needs_plaud_notta(keyword)
@@ -706,6 +826,7 @@ def generate_article(keyword: str, volume: int, differentiation_note: str = "",
     return _build_article(keyword, volume, differentiation_note,
                           sub_keywords=sub_keywords, enable_fact_check=enable_fact_check,
                           target_length=target_length,
+                          article_type=article_type,
                           asp_list=asp_list,
                           guide_links=guide_links,
                           blog_persona_section=blog_persona_section,

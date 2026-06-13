@@ -15,9 +15,9 @@ load_dotenv(os.path.join(_SITE_DIR, ".env"), override=True)
 
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
 
-WP_URL = os.getenv("GROOWILL_FILM_WP_URL", os.getenv("WP_URL", "https://www.groowill.co.jp")).rstrip("/")
-WP_USERNAME = os.getenv("GROOWILL_FILM_WP_USERNAME", os.getenv("WP_USERNAME", ""))
-WP_APP_PASSWORD = os.getenv("GROOWILL_FILM_WP_APP_PASSWORD", os.getenv("WP_APP_PASSWORD", ""))
+WP_URL = os.getenv("GROOWILL_FILM_WP_URL", "https://protectguardfilm.com").rstrip("/")
+WP_USERNAME = os.getenv("GROOWILL_FILM_WP_USERNAME", "")
+WP_APP_PASSWORD = os.getenv("GROOWILL_FILM_WP_APP_PASSWORD", "")
 
 GOOGLE_SHEETS_ID = os.getenv("GROOWILL_FILM_GOOGLE_SHEETS_ID", os.getenv("GOOGLE_SHEETS_ID", ""))
 GOOGLE_CREDENTIALS_PATH = os.getenv(
@@ -31,8 +31,8 @@ GSC_SITE_URL = os.getenv("GROOWILL_FILM_GSC_SITE_URL", f"{WP_URL}/")
 SITE_NAME = "グルーウィル法人フィルム"
 SITE_THEME = "法人向け保護フィルム・特殊サイズ・業務用端末フィルム"
 
-WP_CATEGORY_ID = int(os.getenv("GROOWILL_FILM_WP_CATEGORY_ID", os.getenv("WP_CATEGORY_ID", "1")))
-WP_STATUS = os.getenv("GROOWILL_FILM_WP_STATUS", os.getenv("WP_STATUS", "draft"))
+WP_CATEGORY_ID = int(os.getenv("GROOWILL_FILM_WP_CATEGORY_ID", "1"))
+WP_STATUS = os.getenv("GROOWILL_FILM_WP_STATUS", "draft")
 
 MIN_SEARCH_VOLUME = int(os.getenv("GROOWILL_FILM_MIN_SEARCH_VOLUME", "0"))
 

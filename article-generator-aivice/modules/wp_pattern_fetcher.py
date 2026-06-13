@@ -312,12 +312,84 @@ def _adjust_past_containers(article_html: str, insert_pos: int, limit_pos: int) 
     return adjusted
 
 
+def make_pattern_cta_block(pattern_id: int) -> str:
+    """Reusable block ID から CTA ブロック HTML 文字列を生成する。"""
+    return f'\n<!-- wp:block {{"ref":{int(pattern_id)}}} /-->\n'
+
+
 def _make_cta_block(pattern: PatternItem) -> str:
     """パターンの CTA ブロック HTML 文字列を生成する。
     ref形式を常に使用することで、rawブロックHTMLの直接埋め込みによる
     Gutenbergブロック検証エラーを防ぐ。
     """
-    return f'\n<!-- wp:block {{"ref":{pattern.id}}} /-->\n'
+    return make_pattern_cta_block(pattern.id)
+
+
+def insert_configured_pattern_cta(
+    article_html: str,
+    pattern_id: int,
+    positions: list[str] | tuple[str, ...] | None = None,
+) -> str:
+    """
+    blog_config.json で指定された reusable block ID を CTA として挿入する。
+
+    positions:
+        - after_points: 「この記事のポイント」ブロック直後
+        - middle: 記事中盤付近のブロック直後
+        - bottom: 記事末尾
+    """
+    if not pattern_id:
+        return article_html
+
+    ref_exists = re.search(
+        rf'<!--\s+wp:block\s+\{{\s*"ref"\s*:\s*{int(pattern_id)}\s*\}}\s+/-->',
+        article_html,
+    )
+    if ref_exists:
+        log.debug(f"[wp_pattern_fetcher] 設定CTAは既に存在するためスキップ: ID:{pattern_id}")
+        return article_html
+
+    allowed = {"after_points", "middle", "bottom"}
+    requested = [p for p in (positions or ("after_points", "bottom")) if p in allowed]
+    if not requested:
+        return article_html
+
+    cta_block = make_pattern_cta_block(pattern_id)
+    original_len = len(article_html)
+    insertions: list[tuple[int, str]] = []
+
+    if "bottom" in requested:
+        insertions.append((original_len, "bottom"))
+
+    if "middle" in requested:
+        midpoint = original_len // 2
+        middle_pos = None
+        for m in _SECTION_BLOCK_END.finditer(article_html, midpoint):
+            middle_pos = m.end()
+            break
+        if middle_pos is None:
+            middle_pos = midpoint
+        next_heading = next(
+            (m.start() for m in _ANY_HEADING.finditer(article_html, middle_pos)),
+            original_len,
+        )
+        middle_pos = _adjust_past_containers(article_html, middle_pos, next_heading)
+        insertions.append((middle_pos, "middle"))
+
+    if "after_points" in requested:
+        points_pos = _find_points_block_end(article_html)
+        if points_pos is not None:
+            insertions.append((points_pos, "after_points"))
+
+    used_positions: set[int] = set()
+    for pos, label in sorted(insertions, key=lambda x: x[0], reverse=True):
+        if any(abs(pos - used) < 50 for used in used_positions):
+            continue
+        article_html = article_html[:pos] + cta_block + article_html[pos:]
+        used_positions.add(pos)
+        log.debug(f"[wp_pattern_fetcher] 設定CTA挿入: ID:{pattern_id}, position={label}")
+
+    return article_html
 
 
 def insert_per_h3_cta(

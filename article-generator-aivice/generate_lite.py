@@ -51,7 +51,13 @@ from modules.wordpress_poster import create_post, post_article_with_image
 from modules.image_generator import generate_image_for_article
 from modules.api_guard import check_stop, daily_summary
 from modules import wp_context
-from modules.wp_pattern_fetcher import fetch_patterns, match_pattern, insert_pattern_cta, insert_per_h3_cta
+from modules.wp_pattern_fetcher import (
+    fetch_patterns,
+    match_pattern,
+    insert_pattern_cta,
+    insert_per_h3_cta,
+    insert_configured_pattern_cta,
+)
 from modules.aio_layer import load_aio_profile
 
 _wp_patterns_cache: dict[str, list] = {}
@@ -1196,6 +1202,24 @@ def save_dry_run_article(article: dict, blog_cfg: BlogConfig | None = None) -> P
 # STEP 4: WordPress投稿
 # Phase 2: 画像生成・CTA挿入・シートフラグ更新を追加予定
 # ═══════════════════════════════════════════════════════════════
+def _apply_groowill_configured_cta(article: dict, blog_cfg: BlogConfig | None) -> bool:
+    """groowill-film 専用CTAマイパターンを記事本文に反映する。"""
+    if not blog_cfg or blog_cfg.name != "groowill-film":
+        return False
+
+    wp_pattern_cta = blog_cfg.extra.get("wp_pattern_cta", {})
+    default_pattern_id = int(wp_pattern_cta.get("default_pattern_id") or 0)
+    if not bool(wp_pattern_cta.get("enabled")) or default_pattern_id <= 0:
+        return False
+
+    article["content"] = insert_configured_pattern_cta(
+        article.get("content", ""),
+        default_pattern_id,
+        positions=wp_pattern_cta.get("positions", []),
+    )
+    return True
+
+
 def post(article: dict, dry_run: bool = False,
          blog_cfg: BlogConfig | None = None,
          asp_list: list[dict] | None = None) -> dict:
@@ -1206,6 +1230,10 @@ def post(article: dict, dry_run: bool = False,
     Phase 2: FEATURES["image_generation"] = True で画像生成を追加。
     Phase 2: FEATURES["sheets_update"] = True でシートフラグ書き込みを追加。
     """
+    cta_applied = _apply_groowill_configured_cta(article, blog_cfg)
+    if cta_applied:
+        log.info("[post] groowill-film CTAマイパターン整形を適用")
+
     if dry_run:
         log.info(f"[post] DRY-RUN スキップ: 「{article['title']}」")
         out_path = save_dry_run_article(article, blog_cfg=blog_cfg)
@@ -1247,13 +1275,23 @@ def post(article: dict, dry_run: bool = False,
             # ── マイパターン CTA 挿入（WordPress の「マイパターン」を使用）──
             if blog_cfg:
                 blog_name = blog_cfg.name
-                if blog_name not in _wp_patterns_cache:
+                wp_pattern_cta = blog_cfg.extra.get("wp_pattern_cta", {})
+                default_pattern_id = int(wp_pattern_cta.get("default_pattern_id") or 0)
+                use_configured_cta = (
+                    blog_name == "groowill-film"
+                    and bool(wp_pattern_cta.get("enabled"))
+                    and default_pattern_id > 0
+                )
+
+                if use_configured_cta:
+                    log.debug(f"[post] groowill-film CTAマイパターンは保存前に適用済み: ID:{default_pattern_id}")
+                elif blog_name not in _wp_patterns_cache:
                     try:
                         _wp_patterns_cache[blog_name] = fetch_patterns(blog_cfg)
                     except Exception as _pe:
                         log.warning(f"[post] マイパターン取得失敗（スキップ）: {_pe}")
                         _wp_patterns_cache[blog_name] = []
-                patterns = _wp_patterns_cache[blog_name]
+                patterns = [] if use_configured_cta else _wp_patterns_cache.get(blog_name, [])
                 if patterns:
                     keyword = article.get("keyword", "")
                     # ① 各案件H3末尾へのCTA挿入

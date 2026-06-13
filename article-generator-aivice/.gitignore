@@ -21,6 +21,7 @@ library_images/done/
 # ログ・サンプル出力
 output/log_*.txt
 output/sample_*.png
+output/state/
 
 # エディタ
 .vscode/
