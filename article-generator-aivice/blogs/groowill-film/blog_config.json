@@ -64,8 +64,24 @@
   "wp_username_env": "GROOWILL_FILM_WP_USERNAME",
   "wp_app_password_env": "GROOWILL_FILM_WP_APP_PASSWORD",
   "wp_post_status": "draft",
-  "wp_url": "https://www.groowill.co.jp",
+  "wp_url": "https://protectguardfilm.com",
   "default_fallback_category": "法人向け保護フィルム",
+  "wp_pattern_cta": {
+    "enabled": true,
+    "default_pattern_id": 247,
+    "positions": [
+      "after_points",
+      "bottom"
+    ],
+    "keywords": [
+      "保護フィルム",
+      "特注",
+      "学校ICT",
+      "医療",
+      "業務用端末",
+      "特殊サイズ"
+    ]
+  },
   "aio_enabled": true,
   "aio_mode": "groowill_film",
   "aio_profile": {

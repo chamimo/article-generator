@@ -9,7 +9,7 @@ API安全装置 - 使用量上限・異常検知・緊急停止
   5. 全デプロイ合計: 当日記事数 >= GLOBAL_DAILY_ARTICLE_LIMIT → 停止
 
 使用量は output/api_usage.json に累積記録（UTC日付・時刻ごと）。
-全体集計は ~/.article-generator-daily.json に共有記録。
+全体集計は output/state/article-generator-daily.json に共有記録。
 """
 from __future__ import annotations
 
@@ -38,10 +38,12 @@ PRICE = {
 DEFAULT_PRICE = {"input": 3.00, "output": 15.00}
 
 # ファイルパス
-_BASE_DIR   = Path(__file__).parent.parent
-STOP_FILE   = _BASE_DIR / "STOP"
-USAGE_FILE  = _BASE_DIR / "output" / "api_usage.json"
-GLOBAL_FILE = Path.home() / ".article-generator-daily.json"  # 全デプロイ共有
+_BASE_DIR          = Path(__file__).parent.parent
+STOP_FILE          = _BASE_DIR / "STOP"
+USAGE_FILE         = _BASE_DIR / "output" / "api_usage.json"
+STATE_DIR          = _BASE_DIR / "output" / "state"
+GLOBAL_FILE        = STATE_DIR / "article-generator-daily.json"  # 全デプロイ共有
+LEGACY_GLOBAL_FILE = Path.home() / ".article-generator-daily.json"
 
 
 # ============================================================
@@ -61,8 +63,12 @@ def _load_usage() -> dict:
 
 
 def _save_usage(data: dict) -> None:
-    USAGE_FILE.parent.mkdir(parents=True, exist_ok=True)
-    USAGE_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    try:
+        USAGE_FILE.parent.mkdir(parents=True, exist_ok=True)
+        USAGE_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    except Exception as exc:
+        _warn(f"[api_guard] 使用量ファイルの保存に失敗: {USAGE_FILE} ({exc})")
+        _warn("[api_guard] 使用量の保存をスキップしました（記事生成は継続）")
 
 
 def _calc_cost(model: str, input_tokens: int, output_tokens: int) -> float:
@@ -74,16 +80,31 @@ def _calc_cost(model: str, input_tokens: int, output_tokens: int) -> float:
 # 全デプロイ共有ユーティリティ
 # ============================================================
 def _load_global() -> dict:
-    if GLOBAL_FILE.exists():
+    for path in (GLOBAL_FILE, LEGACY_GLOBAL_FILE):
+        if not path.exists():
+            continue
         try:
-            return json.loads(GLOBAL_FILE.read_text(encoding="utf-8"))
-        except Exception:
+            return json.loads(path.read_text(encoding="utf-8"))
+        except Exception as exc:
+            _warn(f"[api_guard] 共有使用量ファイルの読み込みをスキップ: {path} ({exc})")
             pass
     return {}
 
 
 def _save_global(data: dict) -> None:
-    GLOBAL_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+    payload = json.dumps(data, ensure_ascii=False, indent=2)
+    for path in (GLOBAL_FILE, LEGACY_GLOBAL_FILE):
+        try:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(payload, encoding="utf-8")
+            return
+        except Exception as exc:
+            _warn(f"[api_guard] 共有使用量ファイルの保存に失敗: {path} ({exc})")
+    _warn("[api_guard] 共有使用量の保存をスキップしました（記事生成は継続）")
+
+
+def _warn(message: str) -> None:
+    print(message)
 
 
 def _global_today_stats() -> tuple[float, int]:
