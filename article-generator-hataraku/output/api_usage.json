@@ -12729,6 +12729,106 @@
       "output_tokens": 10731,
       "cost_usd": 0.212262,
       "label": "article:さるぼぼ 色 意味 選び方"
+    },
+    {
+      "timestamp": "2026-06-13T19:20:16.355484+00:00",
+      "date": "2026-06-13",
+      "hour": "2026-06-13T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 107,
+      "cost_usd": 0.000519,
+      "label": "lsi:ノートパソコン WiFi つなぎ方"
+    },
+    {
+      "timestamp": "2026-06-13T19:20:20.382005+00:00",
+      "date": "2026-06-13",
+      "hour": "2026-06-13T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 642,
+      "cost_usd": 0.002713,
+      "label": "kw_research:ノートパソコン WiFi つなぎ方"
+    },
+    {
+      "timestamp": "2026-06-13T19:24:14.665015+00:00",
+      "date": "2026-06-13",
+      "hour": "2026-06-13T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16971,
+      "output_tokens": 15829,
+      "cost_usd": 0.288348,
+      "label": "article:ノートパソコン WiFi つなぎ方"
+    },
+    {
+      "timestamp": "2026-06-13T20:00:15.418512+00:00",
+      "date": "2026-06-13",
+      "hour": "2026-06-13T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 89,
+      "cost_usd": 0.000448,
+      "label": "lsi:学童 保育 の バイト ペルソナ"
+    },
+    {
+      "timestamp": "2026-06-13T20:00:18.859774+00:00",
+      "date": "2026-06-13",
+      "hour": "2026-06-13T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 533,
+      "cost_usd": 0.002278,
+      "label": "kw_research:学童 保育 の バイト ペルソナ"
+    },
+    {
+      "timestamp": "2026-06-13T20:04:08.686840+00:00",
+      "date": "2026-06-13",
+      "hour": "2026-06-13T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 15485,
+      "output_tokens": 14978,
+      "cost_usd": 0.271125,
+      "label": "article:学童 保育 の バイト ペルソナ"
+    },
+    {
+      "timestamp": "2026-06-13T20:30:30.552172+00:00",
+      "date": "2026-06-13",
+      "hour": "2026-06-13T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 115,
+      "output_tokens": 70,
+      "cost_usd": 0.000372,
+      "label": "lsi:さるぼぼ 色 意味 選び方"
+    },
+    {
+      "timestamp": "2026-06-13T20:30:35.049263+00:00",
+      "date": "2026-06-13",
+      "hour": "2026-06-13T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 182,
+      "output_tokens": 635,
+      "cost_usd": 0.002686,
+      "label": "kw_research:さるぼぼ 色 意味 選び方"
+    },
+    {
+      "timestamp": "2026-06-13T20:33:11.607093+00:00",
+      "date": "2026-06-13",
+      "hour": "2026-06-13T20",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 17066,
+      "output_tokens": 10169,
+      "cost_usd": 0.203733,
+      "label": "article:さるぼぼ 色 意味 選び方"
+    },
+    {
+      "timestamp": "2026-06-13T20:33:17.352255+00:00",
+      "date": "2026-06-13",
+      "hour": "2026-06-13T20",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 379,
+      "output_tokens": 19,
+      "cost_usd": 0.000379,
+      "label": "maps:さるぼぼ 色 意味 選び方"
     }
   ],
   "events": [
