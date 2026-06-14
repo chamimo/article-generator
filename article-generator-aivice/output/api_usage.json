@@ -3139,6 +3139,36 @@
       "output_tokens": 11847,
       "cost_usd": 0.222858,
       "label": "article:学校ICT タブレット 保護フィルム 特注"
+    },
+    {
+      "timestamp": "2026-06-13T19:00:20.735752+00:00",
+      "date": "2026-06-13",
+      "hour": "2026-06-13T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 105,
+      "cost_usd": 0.000511,
+      "label": "lsi:AI Overview クリック 減った 個人ブログ"
+    },
+    {
+      "timestamp": "2026-06-13T19:00:25.274038+00:00",
+      "date": "2026-06-13",
+      "hour": "2026-06-13T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 500,
+      "cost_usd": 0.002145,
+      "label": "kw_research:AI Overview クリック 減った 個人ブログ"
+    },
+    {
+      "timestamp": "2026-06-13T19:05:00.963856+00:00",
+      "date": "2026-06-13",
+      "hour": "2026-06-13T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12193,
+      "output_tokens": 12000,
+      "cost_usd": 0.216579,
+      "label": "article:AI Overview クリック 減った 個人ブログ"
     }
   ],
   "events": [
