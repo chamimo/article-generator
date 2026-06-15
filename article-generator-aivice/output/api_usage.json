@@ -3169,6 +3169,36 @@
       "output_tokens": 12000,
       "cost_usd": 0.216579,
       "label": "article:AI Overview クリック 減った 個人ブログ"
+    },
+    {
+      "timestamp": "2026-06-14T19:00:18.970823+00:00",
+      "date": "2026-06-14",
+      "hour": "2026-06-14T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 113,
+      "cost_usd": 0.000541,
+      "label": "lsi:AI Overview 表示される記事 特徴"
+    },
+    {
+      "timestamp": "2026-06-14T19:00:23.083297+00:00",
+      "date": "2026-06-14",
+      "hour": "2026-06-14T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 503,
+      "cost_usd": 0.002154,
+      "label": "kw_research:AI Overview 表示される記事 特徴"
+    },
+    {
+      "timestamp": "2026-06-14T19:03:47.092329+00:00",
+      "date": "2026-06-14",
+      "hour": "2026-06-14T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12201,
+      "output_tokens": 12000,
+      "cost_usd": 0.216603,
+      "label": "article:AI Overview 表示される記事 特徴"
     }
   ],
   "events": [
