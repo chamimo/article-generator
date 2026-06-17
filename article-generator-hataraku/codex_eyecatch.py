@@ -18,7 +18,7 @@ from pathlib import Path
 import requests
 from requests.auth import HTTPBasicAuth
 
-_LIBRARY_EYECATCH_BLOGS = {"hapipo8", "kaerudoko", "ys-trend"}
+_LIBRARY_EYECATCH_BLOGS = {"hapipo8", "kaerudoko", "ys-trend", "groowill-film"}
 
 
 def _plain_title(raw: str) -> str:
@@ -180,37 +180,91 @@ def _select_library_media(
     return None
 
 
+def _resolve_generator_root(blog_name: str) -> Path:
+    """
+    blog_config.json が存在する generator ルートを解決する。
+
+    優先順位:
+      1. BLOG_CONFIG_PATH 環境変数 (blog_config.json への直接パス)
+      2. ARTICLE_GENERATOR_ROOT 環境変数 (generator ルートディレクトリ)
+      3. カレントディレクトリ配下 blogs/{blog}/blog_config.json
+      4. スクリプト自身のディレクトリ (既存の動作)
+      5. 兄弟ディレクトリのフォールバック検索
+    """
+    # 1. BLOG_CONFIG_PATH
+    explicit = os.environ.get("BLOG_CONFIG_PATH")
+    if explicit:
+        p = Path(explicit)
+        if p.exists():
+            # blogs/<blog>/blog_config.json → root は3階層上
+            return p.parent.parent.parent
+
+    # 2. ARTICLE_GENERATOR_ROOT
+    root_env = os.environ.get("ARTICLE_GENERATOR_ROOT")
+    if root_env:
+        root = Path(root_env)
+        if (root / "blogs" / blog_name / "blog_config.json").exists():
+            return root
+
+    # 3. カレントディレクトリ
+    if (Path.cwd() / "blogs" / blog_name / "blog_config.json").exists():
+        return Path.cwd()
+
+    # 4. スクリプト自身のディレクトリ (従来の動作)
+    script_dir = Path(__file__).resolve().parent
+    if (script_dir / "blogs" / blog_name / "blog_config.json").exists():
+        return script_dir
+
+    # 5. 兄弟ディレクトリを検索
+    for sibling in script_dir.parent.iterdir():
+        if sibling.is_dir() and (sibling / "blogs" / blog_name / "blog_config.json").exists():
+            return sibling
+
+    # 見つからない場合はスクリプトディレクトリに戻す (FileNotFoundError は load_blog_config が出す)
+    return script_dir
+
+
 def main() -> int:
     args = _parse_args()
 
     os.environ["ARTICLE_SITE"] = args.blog
-    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    generator_root = _resolve_generator_root(args.blog)
+    sys.path.insert(0, str(generator_root))
+    if generator_root != Path(__file__).resolve().parent:
+        print(f"[codex-eyecatch] generator root: {generator_root}")
 
+    import inspect
     from generate_lite import load_blog_config
     from modules import wp_context
     from modules.wordpress_poster import upload_media
-    from modules.image_generator import generate_lifestyle_eyecatch_image
 
     cfg = load_blog_config(args.blog)
-    wp_context.set_context(
-        cfg.wp_url,
-        cfg.wp_username,
-        cfg.wp_app_password,
+
+    # image_generate=false のブログはアイキャッチ自動設定をスキップ
+    if not getattr(cfg, "extra", {}).get("image_generate", True):
+        print(f"[codex-eyecatch] {args.blog} は画像生成・アイキャッチ自動設定を無効化しているためスキップしました")
+        return 0
+
+    _ctx_params = inspect.signature(wp_context.set_context).parameters
+    _ctx_kwargs: dict = dict(
         wp_post_status=cfg.wp_post_status,
         candidate_ss_id=cfg.candidate_ss_id,
         candidate_sheet=cfg.candidate_sheet,
-        image_style=cfg.image_style,
+        image_style=getattr(cfg, "image_style", {}),
         blog_meta={
-            "site_purpose": cfg.site_purpose,
-            "target": cfg.target,
-            "writing_taste": cfg.writing_taste,
-            "genre_detail": cfg.genre_detail or cfg.genre,
-            "search_intent": cfg.search_intent,
+            "site_purpose": getattr(cfg, "site_purpose", ""),
+            "target": getattr(cfg, "target", ""),
+            "writing_taste": getattr(cfg, "writing_taste", ""),
+            "genre_detail": getattr(cfg, "genre_detail", "") or getattr(cfg, "genre", ""),
+            "search_intent": getattr(cfg, "search_intent", ""),
         },
-        asp_ss_id=cfg.asp_ss_id,
-        eyecatch_model=cfg.eyecatch_model or "gpt-image-2",
-        article_image_model=cfg.article_image_model,
+        asp_ss_id=getattr(cfg, "asp_ss_id", ""),
     )
+    if "eyecatch_model" in _ctx_params:
+        _ctx_kwargs["eyecatch_model"] = getattr(cfg, "eyecatch_model", "") or "gpt-image-2"
+    if "article_image_model" in _ctx_params:
+        _ctx_kwargs["article_image_model"] = getattr(cfg, "article_image_model", "")
+    wp_context.set_context(cfg.wp_url, cfg.wp_username, cfg.wp_app_password, **_ctx_kwargs)
 
     auth = HTTPBasicAuth(cfg.wp_username, cfg.wp_app_password)
     posts = _fetch_target_posts(
@@ -250,6 +304,7 @@ def main() -> int:
             print(f"[codex-eyecatch] 編集URL: {edit_url}")
             continue
 
+        from modules.image_generator import generate_lifestyle_eyecatch_image
         image_bytes = generate_lifestyle_eyecatch_image(
             title=title,
             keyword=title,
