@@ -5,6 +5,10 @@
   カテゴリ名を語単位に分割し、keyword + article_title に含まれる語の長さを合算。
   日本語(漢字・かな)は2文字以上、英数字混じりは3文字以上をマッチ対象とする。
   最高スコアのカテゴリを選択する。
+
+サイト別ボーナス（groowill-film）:
+  学校/教育/GIGA文脈ワードが含まれる場合、カテゴリID 190（学校ICT）に加点。
+  主要語+副次語の複合一致時はさらに大きく加点し、接戦時は 190 を優先する。
 """
 import re
 import requests
@@ -15,6 +19,49 @@ EXCLUDE_IDS = {1, 1405, 1408}
 
 # 日本語文字（漢字・ひらがな・カタカナ）のみで構成される文字列を判定
 _JA_ONLY_RE = re.compile(r'^[぀-鿿]+$')
+
+# ── groowill-film 学校ICT カテゴリ (ID:190) 強化ルール ──────────────────
+_SCHOOL_ICT_CAT_ID = 190
+
+# 主要語: 1語だけで学校ICT文脈を強く示す
+_SCHOOL_ICT_PRIMARY = {
+    "学校タブレット", "学校ICT", "GIGAスクール", "GIGA端末", "GIGA",
+    "ICT端末", "教育機関", "学校法人", "教育委員会", "ICT支援員",
+    "端末管理担当者", "教員用端末", "予備機", "貸出機", "貸与タブレット",
+    "新年度準備", "学校", "教育", "GIGAスクール構想",
+}
+# 大文字・小文字を正規化した主要語セット（英語系）
+_SCHOOL_ICT_PRIMARY_LOWER = {
+    "gigaschool", "giga", "ict", "chromebook", "ipad",
+}
+
+# 副次語: 主要語と組み合わさると学校ICT確度が上がる
+_SCHOOL_ICT_SECONDARY = {
+    "タブレット", "端末", "保護フィルム", "フィルム", "導入", "配布",
+    "Windows端末", "iPad", "Chromebook",
+}
+_SCHOOL_ICT_SECONDARY_LOWER = {"tablet", "ipad", "chromebook", "windows"}
+
+# 単独ボーナス（主要語1語マッチ）と複合ボーナス（主要語+副次語）
+_SCHOOL_ICT_SINGLE_BONUS  = 8
+_SCHOOL_ICT_COMPOSITE_BONUS = 20
+
+# 接戦判定：他カテゴリとのスコア差がこれ以下なら 190 を優先
+_SCHOOL_ICT_TIEBREAK_MARGIN = 8
+
+
+def _school_ict_bonus(text_lower: str) -> int:
+    """
+    学校ICT文脈の強さを返す。0 = 文脈なし。
+    主要語のみ: +8、主要語+副次語の複合一致: +20。
+    """
+    has_primary = any(w.lower() in text_lower for w in _SCHOOL_ICT_PRIMARY) or \
+                  any(w in text_lower for w in _SCHOOL_ICT_PRIMARY_LOWER)
+    if not has_primary:
+        return 0
+    has_secondary = any(w.lower() in text_lower for w in _SCHOOL_ICT_SECONDARY) or \
+                    any(w in text_lower for w in _SCHOOL_ICT_SECONDARY_LOWER)
+    return _SCHOOL_ICT_COMPOSITE_BONUS if has_secondary else _SCHOOL_ICT_SINGLE_BONUS
 
 
 def fetch_categories() -> list[dict]:
@@ -67,6 +114,9 @@ def select_category(keyword: str, article_title: str = "") -> int:
     """
     キーワードと記事タイトルから最適なカテゴリIDを返す。
 
+    groowill-film 向けに学校ICT文脈ボーナスを適用し、
+    接戦時は学校ICT(190)を優先する。
+
     Returns:
         WordPress カテゴリID（int）
     """
@@ -77,14 +127,18 @@ def select_category(keyword: str, article_title: str = "") -> int:
     if not candidates:
         candidates = categories if categories else [{"id": 1, "name": "未分類", "count": 0}]
 
-    scored = sorted(
-        candidates,
-        key=lambda c: _score(keyword, article_title, c["name"]),
-        reverse=True,
-    )
+    text_lower = f"{keyword} {article_title}".lower()
+    school_bonus = _school_ict_bonus(text_lower)
+
+    def total_score(c: dict) -> int:
+        base = _score(keyword, article_title, c["name"])
+        bonus = school_bonus if c["id"] == _SCHOOL_ICT_CAT_ID else 0
+        return base + bonus
+
+    scored = sorted(candidates, key=total_score, reverse=True)
 
     best = scored[0]
-    best_score = _score(keyword, article_title, best["name"])
+    best_score = total_score(best)
 
     if best_score == 0:
         # スコアゼロ（完全不一致）→ blog_config の default_fallback_category を優先
@@ -99,5 +153,20 @@ def select_category(keyword: str, article_title: str = "") -> int:
         print(f"[category_selector] 「{keyword}」→ マッチなし、フォールバック: {fallback['name']}({fallback['id']})")
         return fallback["id"]
 
-    print(f"[category_selector] 「{keyword}」→ {best['name']}({best['id']}) score={best_score}")
+    # ── 接戦時 学校ICT(190) 優先 ──────────────────────────────────────
+    if school_bonus > 0 and best["id"] != _SCHOOL_ICT_CAT_ID:
+        school_cat = next((c for c in candidates if c["id"] == _SCHOOL_ICT_CAT_ID), None)
+        if school_cat:
+            school_score = total_score(school_cat)
+            gap = best_score - school_score
+            if gap <= _SCHOOL_ICT_TIEBREAK_MARGIN:
+                print(
+                    f"[category_selector] 「{keyword}」→ 学校ICT文脈検出、接戦（差{gap}）につき190を優先: "
+                    f"{school_cat['name']}({school_cat['id']}) score={school_score} "
+                    f"(元: {best['name']}({best['id']}) score={best_score})"
+                )
+                return school_cat["id"]
+
+    print(f"[category_selector] 「{keyword}」→ {best['name']}({best['id']}) score={best_score}"
+          + (f" (+school_bonus:{school_bonus})" if school_bonus else ""))
     return best["id"]

@@ -1,0 +1,556 @@
+2026-06-17 04:00:03 [INFO] ============================================================
+2026-06-17 04:00:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-17 04:00:03 [INFO] ============================================================
+2026-06-17 04:00:03 [INFO] 対象ブログ: ['workup-ai']
+2026-06-17 04:00:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-17 04:00:04 [INFO] === WorkUp AI (workup-ai.com) 処理開始 ===
+2026-06-17 04:00:04 [INFO] ════════════════════════════════════════════════════════════
+2026-06-17 04:00:04 [INFO]   genre            : AI・副業・転職・キャリア
+2026-06-17 04:00:04 [INFO]   fact_check       : True
+2026-06-17 04:00:04 [INFO]   article_type_mix : True
+2026-06-17 04:00:04 [INFO]   stop_words       : ['おすすめ', '比較', '2026', 'iphone', 'アプリ']
+2026-06-17 04:00:04 [INFO]   article_count    : 1  dry_run: False
+2026-06-17 04:00:08 [INFO] [workup-ai] ブログ設定・メディア人格を読み込みました
+2026-06-17 04:00:15 [INFO] [wp] 記事取得: 計372件 (draft=1 / publish=371)
+2026-06-17 04:00:15 [INFO] [workup-ai] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-06-17 04:00:19 [DEBUG] [fetch] シート「絞り込みKW」: 17行 / ヘッダー: ['keyword', 'parent_kw', '判定', 'ステータス', 'AIM', '検索意図', '想定読者', '記事URL', '投稿ID', 'YouTube URL', '動画タイトル', '内部リンク先', 'memo', '投稿ステータス', '投稿日', '使用サブKW', 'メモ']
+2026-06-17 04:00:19 [INFO] [fetch] [KW｜AIVice] メインKW: 14件（vol≥30 or N/A）  サブKW: 0件（vol<30）  投稿済みスキップ: 1件  テーマ外除外: 2件
+2026-06-17 04:00:19 [DEBUG] [group_pool] グループ数: 14件 → pool: 14件
+2026-06-17 04:00:19 [DEBUG] [dup_check] OK: 「AI Overview 表示される記事 特徴」
+2026-06-17 04:00:19 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=14件, 要求=1件)
+2026-06-17 04:00:19 [INFO] [select] 1件選定 (要求=1件)
+2026-06-17 04:00:19 [INFO] [select]   1. 「AI Overview 表示される記事 特徴」 vol=0 seo=N/A comp=N/A
+2026-06-17 04:00:19 [INFO] [workup-ai] LONGTAIL選定: 1件
+2026-06-17 04:00:19 [INFO] [workup-ai] 候補: 14件 / 選定: 1件 / 生成予定: 1件
+2026-06-17 04:00:19 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-06-17 04:00:19 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 04:00:19 [INFO] [workup-ai] [1/1] [LONGTAIL] 「AI Overview 表示される記事 特徴」 vol=0
+2026-06-17 04:00:19 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 04:00:19 [INFO] [generate] 生成開始: 「AI Overview 表示される記事 特徴」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  人格設定:あり  AIO:common
+2026-06-17 04:03:54 [ERROR] [workup-ai] [1/1] ❌ エラー（続行）: max_tokens上限（12000）に到達しました。JSONが途切れています。 出力トークン: 12000
+2026-06-17 04:03:54 [INFO] [workup-ai] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-06-17 04:03:54 [INFO] 
+============================================================
+2026-06-17 04:03:54 [INFO] 【全体サマリー】
+2026-06-17 04:03:54 [INFO]   ブログ数  : 1件
+2026-06-17 04:03:54 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-06-17 04:03:54 [INFO]   所要時間  : 231.4秒
+2026-06-17 04:03:54 [INFO]   ❌ [workup-ai] AI Overview 表示される記事 特徴 → (生成失敗)
+2026-06-17 04:03:54 [INFO] ============================================================
+2026-06-17 17:26:19 [INFO] ============================================================
+2026-06-17 17:26:19 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-17 17:26:19 [INFO] ============================================================
+2026-06-17 17:26:19 [INFO] 対象ブログ: ['groowill-film']
+2026-06-17 17:26:20 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-17 17:26:20 [INFO] === グルーウィル法人フィルム (protectguardfilm.com) 処理開始 ===
+2026-06-17 17:26:20 [INFO] ════════════════════════════════════════════════════════════
+2026-06-17 17:26:20 [INFO]   genre            : 法人向け保護フィルム・特殊サイズ・業務用端末
+2026-06-17 17:26:20 [INFO]   fact_check       : True
+2026-06-17 17:26:20 [INFO]   article_type_mix : True
+2026-06-17 17:26:20 [INFO]   stop_words       : ['おすすめ', '比較', '法人', '保護フィルム', 'フィルム']
+2026-06-17 17:26:20 [INFO]   article_count    : 1  dry_run: False
+2026-06-17 17:26:26 [INFO] [wp] 記事取得: 計3件 (draft=3)
+2026-06-17 17:26:26 [INFO] [groowill-film] キーワード直接指定: 「学校タブレット 保護フィルム 選び方」
+2026-06-17 17:26:26 [INFO] [groowill-film] 候補: 1件 / 選定: 1件 / 生成予定: 1件
+2026-06-17 17:26:26 [INFO] [api_guard] 本日の使用量: $0.0000 / ¥0 (0回呼び出し)
+2026-06-17 17:26:26 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 17:26:26 [INFO] [groowill-film] [1/1] [LONGTAIL] 「学校タブレット 保護フィルム 選び方」 vol=0
+2026-06-17 17:26:26 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 17:26:26 [INFO] [generate] 生成開始: 「学校タブレット 保護フィルム 選び方」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  AIO:groowill_film
+2026-06-17 17:30:06 [ERROR] [groowill-film] [1/1] ❌ エラー（続行）: max_tokens上限（12000）に到達しました。JSONが途切れています。 出力トークン: 12000
+2026-06-17 17:30:06 [INFO] [groowill-film] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-06-17 17:30:06 [INFO] 
+============================================================
+2026-06-17 17:30:06 [INFO] 【全体サマリー】
+2026-06-17 17:30:06 [INFO]   ブログ数  : 1件
+2026-06-17 17:30:06 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-06-17 17:30:06 [INFO]   所要時間  : 226.2秒
+2026-06-17 17:30:06 [INFO]   ❌ [groowill-film] 学校タブレット 保護フィルム 選び方 → (生成失敗)
+2026-06-17 17:30:06 [INFO] ============================================================
+2026-06-17 17:47:25 [INFO] ============================================================
+2026-06-17 17:47:25 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-17 17:47:25 [INFO] ============================================================
+2026-06-17 17:47:25 [INFO] 対象ブログ: ['groowill-film']
+2026-06-17 17:47:26 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-17 17:47:26 [INFO] === グルーウィル法人フィルム (protectguardfilm.com) 処理開始 ===
+2026-06-17 17:47:26 [INFO] ════════════════════════════════════════════════════════════
+2026-06-17 17:47:26 [INFO]   genre            : 法人向け保護フィルム・特殊サイズ・業務用端末
+2026-06-17 17:47:26 [INFO]   fact_check       : True
+2026-06-17 17:47:26 [INFO]   article_type_mix : True
+2026-06-17 17:47:26 [INFO]   stop_words       : ['おすすめ', '比較', '法人', '保護フィルム', 'フィルム']
+2026-06-17 17:47:26 [INFO]   article_count    : 1  dry_run: False
+2026-06-17 17:47:31 [INFO] [wp] 記事取得: 計3件 (draft=3)
+2026-06-17 17:47:31 [INFO] [groowill-film] キーワード直接指定: 「学校タブレット 保護フィルム 選び方」
+2026-06-17 17:47:31 [INFO] [groowill-film] 候補: 1件 / 選定: 1件 / 生成予定: 1件
+2026-06-17 17:47:31 [INFO] [api_guard] 本日の使用量: $0.2467 / ¥37 (3回呼び出し)
+2026-06-17 17:47:31 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 17:47:31 [INFO] [groowill-film] [1/1] [LONGTAIL] 「学校タブレット 保護フィルム 選び方」 vol=0
+2026-06-17 17:47:31 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 17:47:31 [INFO] [generate] 生成開始: 「学校タブレット 保護フィルム 選び方」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  AIO:groowill_film
+2026-06-17 17:51:31 [INFO] [generate] AIO品質チェック: 6/7 (groowill_film)
+2026-06-17 17:51:31 [INFO] [generate] 完了: 「学校タブレット保護フィルムの選び方｜GIGA端末・iPad対応を法人担当者向けに解説」
+2026-06-17 17:51:31 [INFO] [post] groowill-film CTAマイパターン整形を適用
+2026-06-17 17:51:31 [INFO] [post] 投稿方式: draft
+2026-06-17 17:51:31 [DEBUG] [post] groowill-film CTAマイパターンは保存前に適用済み: ID:247
+2026-06-17 17:52:03 [INFO] [post] WP投稿完了: ID=481 → https://protectguardfilm.com/wp-admin/post.php?post=481&action=edit
+2026-06-17 17:52:03 [INFO] [groowill-film] [1/1] ✅ 完了: 「学校タブレット保護フィルムの選び方｜GIGA端末・iPad対応を法人担当者向けに解説」
+2026-06-17 17:52:03 [INFO] [groowill-film] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-06-17 17:52:03 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=groowill-film limit=1
+2026-06-17 17:52:04 [WARNING] [codex-eyecatch][stderr] Traceback (most recent call last):
+2026-06-17 17:52:04 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/codex_eyecatch.py", line 277, in <module>
+2026-06-17 17:52:04 [WARNING] [codex-eyecatch][stderr]     raise SystemExit(main())
+2026-06-17 17:52:04 [WARNING] [codex-eyecatch][stderr]                      ^^^^^^
+2026-06-17 17:52:04 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/codex_eyecatch.py", line 194, in main
+2026-06-17 17:52:04 [WARNING] [codex-eyecatch][stderr]     cfg = load_blog_config(args.blog)
+2026-06-17 17:52:04 [WARNING] [codex-eyecatch][stderr]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-06-17 17:52:04 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/generate_lite.py", line 447, in load_blog_config
+2026-06-17 17:52:04 [WARNING] [codex-eyecatch][stderr]     raise FileNotFoundError(f"blog_config.json が見つかりません: {config_path}")
+2026-06-17 17:52:04 [WARNING] [codex-eyecatch][stderr] FileNotFoundError: blog_config.json が見つかりません: /Users/yama/article-generator-hataraku/blogs/groowill-film/blog_config.json
+2026-06-17 17:52:04 [ERROR] [codex-eyecatch] 異常終了 returncode=1
+2026-06-17 17:52:04 [INFO] 
+============================================================
+2026-06-17 17:52:04 [INFO] 【全体サマリー】
+2026-06-17 17:52:04 [INFO]   ブログ数  : 1件
+2026-06-17 17:52:04 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-06-17 17:52:04 [INFO]   所要時間  : 279.4秒
+2026-06-17 17:52:04 [INFO]   ✅ [groowill-film] 学校タブレット 保護フィルム 選び方 → 学校タブレット保護フィルムの選び方｜GIGA端末・iPad対応を法人担当者向けに解説
+2026-06-17 17:52:04 [INFO]        https://protectguardfilm.com/wp-admin/post.php?post=481&action=edit
+2026-06-17 17:52:04 [INFO] ============================================================
+2026-06-17 17:52:16 [INFO] ============================================================
+2026-06-17 17:52:16 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-17 17:52:16 [INFO] ============================================================
+2026-06-17 17:52:16 [INFO] 対象ブログ: ['groowill-film']
+2026-06-17 17:52:18 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-17 17:52:18 [INFO] === グルーウィル法人フィルム (protectguardfilm.com) 処理開始 ===
+2026-06-17 17:52:18 [INFO] ════════════════════════════════════════════════════════════
+2026-06-17 17:52:18 [INFO]   genre            : 法人向け保護フィルム・特殊サイズ・業務用端末
+2026-06-17 17:52:18 [INFO]   fact_check       : True
+2026-06-17 17:52:18 [INFO]   article_type_mix : True
+2026-06-17 17:52:18 [INFO]   stop_words       : ['おすすめ', '比較', '法人', '保護フィルム', 'フィルム']
+2026-06-17 17:52:18 [INFO]   article_count    : 1  dry_run: False
+2026-06-17 17:52:21 [INFO] [wp] 記事取得: 計4件 (draft=4)
+2026-06-17 17:52:21 [INFO] [groowill-film] キーワード直接指定: 「GIGAスクール端末 保護フィルム 必要」
+2026-06-17 17:52:21 [INFO] [groowill-film] 候補: 1件 / 選定: 1件 / 生成予定: 1件
+2026-06-17 17:52:21 [INFO] [api_guard] 本日の使用量: $0.5098 / ¥76 (6回呼び出し)
+2026-06-17 17:52:21 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 17:52:21 [INFO] [groowill-film] [1/1] [LONGTAIL] 「GIGAスクール端末 保護フィルム 必要」 vol=0
+2026-06-17 17:52:21 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 17:52:21 [INFO] [generate] 生成開始: 「GIGAスクール端末 保護フィルム 必要」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  AIO:groowill_film
+2026-06-17 17:55:54 [INFO] [generate] AIO品質チェック: 5/7 (groowill_film)
+2026-06-17 17:55:54 [INFO] [generate] 完了: 「GIGAスクール端末に保護フィルムは必要？学校ICT担当者が導入前に確認したいポイント」
+2026-06-17 17:55:54 [INFO] [post] groowill-film CTAマイパターン整形を適用
+2026-06-17 17:55:54 [INFO] [post] 投稿方式: draft
+2026-06-17 17:55:54 [DEBUG] [post] groowill-film CTAマイパターンは保存前に適用済み: ID:247
+2026-06-17 17:56:25 [INFO] [post] WP投稿完了: ID=485 → https://protectguardfilm.com/wp-admin/post.php?post=485&action=edit
+2026-06-17 17:56:25 [INFO] [groowill-film] [1/1] ✅ 完了: 「GIGAスクール端末に保護フィルムは必要？学校ICT担当者が導入前に確認したいポイント」
+2026-06-17 17:56:25 [INFO] [groowill-film] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-06-17 17:56:25 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=groowill-film limit=1
+2026-06-17 17:56:26 [WARNING] [codex-eyecatch][stderr] Traceback (most recent call last):
+2026-06-17 17:56:26 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/codex_eyecatch.py", line 277, in <module>
+2026-06-17 17:56:26 [WARNING] [codex-eyecatch][stderr]     raise SystemExit(main())
+2026-06-17 17:56:26 [WARNING] [codex-eyecatch][stderr]                      ^^^^^^
+2026-06-17 17:56:26 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/codex_eyecatch.py", line 194, in main
+2026-06-17 17:56:26 [WARNING] [codex-eyecatch][stderr]     cfg = load_blog_config(args.blog)
+2026-06-17 17:56:26 [WARNING] [codex-eyecatch][stderr]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-06-17 17:56:26 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/generate_lite.py", line 447, in load_blog_config
+2026-06-17 17:56:26 [WARNING] [codex-eyecatch][stderr]     raise FileNotFoundError(f"blog_config.json が見つかりません: {config_path}")
+2026-06-17 17:56:26 [WARNING] [codex-eyecatch][stderr] FileNotFoundError: blog_config.json が見つかりません: /Users/yama/article-generator-hataraku/blogs/groowill-film/blog_config.json
+2026-06-17 17:56:26 [ERROR] [codex-eyecatch] 異常終了 returncode=1
+2026-06-17 17:56:26 [INFO] 
+============================================================
+2026-06-17 17:56:26 [INFO] 【全体サマリー】
+2026-06-17 17:56:26 [INFO]   ブログ数  : 1件
+2026-06-17 17:56:26 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-06-17 17:56:26 [INFO]   所要時間  : 249.6秒
+2026-06-17 17:56:26 [INFO]   ✅ [groowill-film] GIGAスクール端末 保護フィルム 必要 → GIGAスクール端末に保護フィルムは必要？学校ICT担当者が導入前に確認したいポイント
+2026-06-17 17:56:26 [INFO]        https://protectguardfilm.com/wp-admin/post.php?post=485&action=edit
+2026-06-17 17:56:26 [INFO] ============================================================
+2026-06-17 17:56:31 [INFO] ============================================================
+2026-06-17 17:56:31 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-17 17:56:31 [INFO] ============================================================
+2026-06-17 17:56:31 [INFO] 対象ブログ: ['groowill-film']
+2026-06-17 17:56:32 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-17 17:56:32 [INFO] === グルーウィル法人フィルム (protectguardfilm.com) 処理開始 ===
+2026-06-17 17:56:32 [INFO] ════════════════════════════════════════════════════════════
+2026-06-17 17:56:32 [INFO]   genre            : 法人向け保護フィルム・特殊サイズ・業務用端末
+2026-06-17 17:56:32 [INFO]   fact_check       : True
+2026-06-17 17:56:32 [INFO]   article_type_mix : True
+2026-06-17 17:56:32 [INFO]   stop_words       : ['おすすめ', '比較', '法人', '保護フィルム', 'フィルム']
+2026-06-17 17:56:32 [INFO]   article_count    : 1  dry_run: False
+2026-06-17 17:56:36 [INFO] [wp] 記事取得: 計5件 (draft=5)
+2026-06-17 17:56:36 [INFO] [groowill-film] キーワード直接指定: 「学校タブレット 反射防止 保護フィルム」
+2026-06-17 17:56:36 [INFO] [groowill-film] 候補: 1件 / 選定: 1件 / 生成予定: 1件
+2026-06-17 17:56:36 [INFO] [api_guard] 本日の使用量: $0.7654 / ¥115 (9回呼び出し)
+2026-06-17 17:56:36 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 17:56:36 [INFO] [groowill-film] [1/1] [LONGTAIL] 「学校タブレット 反射防止 保護フィルム」 vol=0
+2026-06-17 17:56:36 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 17:56:36 [INFO] [generate] 生成開始: 「学校タブレット 反射防止 保護フィルム」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  AIO:groowill_film
+2026-06-17 17:59:54 [INFO] [generate] AIO品質チェック: 6/7 (groowill_film)
+2026-06-17 17:59:54 [INFO] [generate] 完了: 「学校タブレット向け反射防止保護フィルムの選び方｜GIGA端末・一括導入の確認ポイント」
+2026-06-17 17:59:54 [WARNING] [groowill-film] [1/1] ⏭️ 重複スキップ: タイトル重複のため投稿スキップ: 「学校タブレット向け反射防止保護フィルムの選び方｜GIGA端末・一括導入」≈「学校タブレット保護フィルムの選び方｜GIGA端末・iPad対応を法人担」
+2026-06-17 17:59:54 [WARNING] [groowill-film] シートへのスキップ記録失敗（続行）: cannot import name 'mark_duplicate_skip' from 'modules.sheets_updater' (/Users/yama/article-generator-aivice/modules/sheets_updater.py)
+2026-06-17 17:59:54 [INFO] [groowill-film] 完了: 成功=0件 / 重複スキップ=1件 / 失敗=0件 / 合計=1件
+2026-06-17 17:59:54 [INFO] 
+============================================================
+2026-06-17 17:59:54 [INFO] 【全体サマリー】
+2026-06-17 17:59:54 [INFO]   ブログ数  : 1件
+2026-06-17 17:59:54 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計1件
+2026-06-17 17:59:54 [INFO]   所要時間  : 202.5秒
+2026-06-17 17:59:54 [INFO]   ❌ [groowill-film] 学校タブレット 反射防止 保護フィルム → (生成失敗)
+2026-06-17 17:59:54 [INFO] ============================================================
+2026-06-17 18:22:04 [INFO] ============================================================
+2026-06-17 18:22:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-17 18:22:04 [INFO] ============================================================
+2026-06-17 18:22:04 [INFO] 対象ブログ: ['groowill-film']
+2026-06-17 18:22:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-17 18:22:05 [INFO] === グルーウィル法人フィルム (protectguardfilm.com) 処理開始 ===
+2026-06-17 18:22:05 [INFO] ════════════════════════════════════════════════════════════
+2026-06-17 18:22:05 [INFO]   genre            : 法人向け保護フィルム・特殊サイズ・業務用端末
+2026-06-17 18:22:05 [INFO]   fact_check       : True
+2026-06-17 18:22:05 [INFO]   article_type_mix : True
+2026-06-17 18:22:05 [INFO]   stop_words       : ['おすすめ', '比較', '法人', '保護フィルム', 'フィルム']
+2026-06-17 18:22:05 [INFO]   article_count    : 1  dry_run: False
+2026-06-17 18:22:10 [INFO] [wp] 記事取得: 計5件 (draft=5)
+2026-06-17 18:22:10 [INFO] [groowill-film] キーワード直接指定: 「学校タブレット 反射防止 保護フィルム」
+2026-06-17 18:22:10 [INFO] [groowill-film] 候補: 1件 / 選定: 1件 / 生成予定: 1件
+2026-06-17 18:22:10 [INFO] [api_guard] 本日の使用量: $1.0098 / ¥151 (12回呼び出し)
+2026-06-17 18:22:10 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 18:22:10 [INFO] [groowill-film] [1/1] [LONGTAIL] 「学校タブレット 反射防止 保護フィルム」 vol=0
+2026-06-17 18:22:10 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 18:22:10 [INFO] [generate] 生成開始: 「学校タブレット 反射防止 保護フィルム」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  AIO:groowill_film
+2026-06-17 18:25:22 [INFO] [generate] AIO品質チェック: 6/7 (groowill_film)
+2026-06-17 18:25:22 [INFO] [generate] 完了: 「学校タブレット用 反射防止保護フィルムの選び方｜法人一括導入のポイントを解説」
+2026-06-17 18:25:22 [INFO] [post] groowill-film CTAマイパターン整形を適用
+2026-06-17 18:25:22 [INFO] [post] 投稿方式: draft
+2026-06-17 18:25:22 [DEBUG] [post] groowill-film CTAマイパターンは保存前に適用済み: ID:247
+2026-06-17 18:25:52 [INFO] [post] WP投稿完了: ID=489 → https://protectguardfilm.com/wp-admin/post.php?post=489&action=edit
+2026-06-17 18:25:52 [INFO] [groowill-film] [1/1] ✅ 完了: 「学校タブレット用 反射防止保護フィルムの選び方｜法人一括導入のポイントを解説」
+2026-06-17 18:25:52 [INFO] [groowill-film] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-06-17 18:25:52 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=groowill-film limit=1
+2026-06-17 18:25:53 [WARNING] [codex-eyecatch][stderr] Traceback (most recent call last):
+2026-06-17 18:25:53 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/codex_eyecatch.py", line 277, in <module>
+2026-06-17 18:25:53 [WARNING] [codex-eyecatch][stderr]     raise SystemExit(main())
+2026-06-17 18:25:53 [WARNING] [codex-eyecatch][stderr]                      ^^^^^^
+2026-06-17 18:25:53 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/codex_eyecatch.py", line 194, in main
+2026-06-17 18:25:53 [WARNING] [codex-eyecatch][stderr]     cfg = load_blog_config(args.blog)
+2026-06-17 18:25:53 [WARNING] [codex-eyecatch][stderr]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-06-17 18:25:53 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/generate_lite.py", line 447, in load_blog_config
+2026-06-17 18:25:53 [WARNING] [codex-eyecatch][stderr]     raise FileNotFoundError(f"blog_config.json が見つかりません: {config_path}")
+2026-06-17 18:25:53 [WARNING] [codex-eyecatch][stderr] FileNotFoundError: blog_config.json が見つかりません: /Users/yama/article-generator-hataraku/blogs/groowill-film/blog_config.json
+2026-06-17 18:25:53 [ERROR] [codex-eyecatch] 異常終了 returncode=1
+2026-06-17 18:25:53 [INFO] 
+============================================================
+2026-06-17 18:25:53 [INFO] 【全体サマリー】
+2026-06-17 18:25:53 [INFO]   ブログ数  : 1件
+2026-06-17 18:25:53 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-06-17 18:25:53 [INFO]   所要時間  : 228.8秒
+2026-06-17 18:25:53 [INFO]   ✅ [groowill-film] 学校タブレット 反射防止 保護フィルム → 学校タブレット用 反射防止保護フィルムの選び方｜法人一括導入のポイントを解説
+2026-06-17 18:25:53 [INFO]        https://protectguardfilm.com/wp-admin/post.php?post=489&action=edit
+2026-06-17 18:25:53 [INFO] ============================================================
+2026-06-17 19:02:02 [INFO] ============================================================
+2026-06-17 19:02:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-17 19:02:02 [INFO] ============================================================
+2026-06-17 19:02:02 [INFO] 対象ブログ: ['groowill-film']
+2026-06-17 19:02:03 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-17 19:02:03 [INFO] === グルーウィル法人フィルム (protectguardfilm.com) 処理開始 ===
+2026-06-17 19:02:03 [INFO] ════════════════════════════════════════════════════════════
+2026-06-17 19:02:03 [INFO]   genre            : 法人向け保護フィルム・特殊サイズ・業務用端末
+2026-06-17 19:02:03 [INFO]   fact_check       : True
+2026-06-17 19:02:03 [INFO]   article_type_mix : True
+2026-06-17 19:02:03 [INFO]   stop_words       : ['おすすめ', '比較', '法人', '保護フィルム', 'フィルム']
+2026-06-17 19:02:03 [INFO]   article_count    : 1  dry_run: False
+2026-06-17 19:02:08 [INFO] [wp] 記事取得: 計6件 (draft=6)
+2026-06-17 19:02:08 [INFO] [groowill-film] キーワード直接指定: 「Chromebook 学校 保護フィルム」
+2026-06-17 19:02:08 [INFO] [groowill-film] 候補: 1件 / 選定: 1件 / 生成予定: 1件
+2026-06-17 19:02:08 [INFO] [api_guard] 本日の使用量: $1.2453 / ¥187 (15回呼び出し)
+2026-06-17 19:02:08 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 19:02:08 [INFO] [groowill-film] [1/1] [LONGTAIL] 「Chromebook 学校 保護フィルム」 vol=0
+2026-06-17 19:02:08 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 19:02:08 [INFO] [generate] 生成開始: 「Chromebook 学校 保護フィルム」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  AIO:groowill_film
+2026-06-17 19:05:30 [INFO] [generate] AIO品質チェック: 6/7 (groowill_film)
+2026-06-17 19:05:30 [INFO] [generate] 完了: 「Chromebook学校用保護フィルムの選び方｜GIGA端末・一括導入前に確認したいこと」
+2026-06-17 19:05:30 [INFO] [post] groowill-film CTAマイパターン整形を適用
+2026-06-17 19:05:30 [INFO] [post] 投稿方式: draft
+2026-06-17 19:05:30 [DEBUG] [post] groowill-film CTAマイパターンは保存前に適用済み: ID:247
+2026-06-17 19:06:17 [INFO] [post] WP投稿完了: ID=495 → https://protectguardfilm.com/wp-admin/post.php?post=495&action=edit
+2026-06-17 19:06:17 [INFO] [groowill-film] [1/1] ✅ 完了: 「Chromebook学校用保護フィルムの選び方｜GIGA端末・一括導入前に確認したいこと」
+2026-06-17 19:06:17 [INFO] [groowill-film] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-06-17 19:06:17 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=groowill-film limit=1
+2026-06-17 19:06:18 [WARNING] [codex-eyecatch][stderr] Traceback (most recent call last):
+2026-06-17 19:06:18 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/codex_eyecatch.py", line 277, in <module>
+2026-06-17 19:06:18 [WARNING] [codex-eyecatch][stderr]     raise SystemExit(main())
+2026-06-17 19:06:18 [WARNING] [codex-eyecatch][stderr]                      ^^^^^^
+2026-06-17 19:06:18 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/codex_eyecatch.py", line 194, in main
+2026-06-17 19:06:18 [WARNING] [codex-eyecatch][stderr]     cfg = load_blog_config(args.blog)
+2026-06-17 19:06:18 [WARNING] [codex-eyecatch][stderr]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-06-17 19:06:18 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/generate_lite.py", line 447, in load_blog_config
+2026-06-17 19:06:18 [WARNING] [codex-eyecatch][stderr]     raise FileNotFoundError(f"blog_config.json が見つかりません: {config_path}")
+2026-06-17 19:06:18 [WARNING] [codex-eyecatch][stderr] FileNotFoundError: blog_config.json が見つかりません: /Users/yama/article-generator-hataraku/blogs/groowill-film/blog_config.json
+2026-06-17 19:06:18 [ERROR] [codex-eyecatch] 異常終了 returncode=1
+2026-06-17 19:06:18 [INFO] 
+============================================================
+2026-06-17 19:06:18 [INFO] 【全体サマリー】
+2026-06-17 19:06:18 [INFO]   ブログ数  : 1件
+2026-06-17 19:06:18 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-06-17 19:06:18 [INFO]   所要時間  : 256.3秒
+2026-06-17 19:06:18 [INFO]   ✅ [groowill-film] Chromebook 学校 保護フィルム → Chromebook学校用保護フィルムの選び方｜GIGA端末・一括導入前に確認したいこと
+2026-06-17 19:06:18 [INFO]        https://protectguardfilm.com/wp-admin/post.php?post=495&action=edit
+2026-06-17 19:06:18 [INFO] ============================================================
+2026-06-17 19:06:23 [INFO] ============================================================
+2026-06-17 19:06:23 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-17 19:06:23 [INFO] ============================================================
+2026-06-17 19:06:23 [INFO] 対象ブログ: ['groowill-film']
+2026-06-17 19:06:24 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-17 19:06:24 [INFO] === グルーウィル法人フィルム (protectguardfilm.com) 処理開始 ===
+2026-06-17 19:06:24 [INFO] ════════════════════════════════════════════════════════════
+2026-06-17 19:06:24 [INFO]   genre            : 法人向け保護フィルム・特殊サイズ・業務用端末
+2026-06-17 19:06:24 [INFO]   fact_check       : True
+2026-06-17 19:06:24 [INFO]   article_type_mix : True
+2026-06-17 19:06:24 [INFO]   stop_words       : ['おすすめ', '比較', '法人', '保護フィルム', 'フィルム']
+2026-06-17 19:06:24 [INFO]   article_count    : 1  dry_run: False
+2026-06-17 19:06:28 [INFO] [wp] 記事取得: 計7件 (draft=7)
+2026-06-17 19:06:28 [INFO] [groowill-film] キーワード直接指定: 「学校 iPad 保護フィルム 複数台」
+2026-06-17 19:06:28 [INFO] [groowill-film] 候補: 1件 / 選定: 1件 / 生成予定: 1件
+2026-06-17 19:06:28 [INFO] [api_guard] 本日の使用量: $1.4932 / ¥224 (18回呼び出し)
+2026-06-17 19:06:28 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 19:06:28 [INFO] [groowill-film] [1/1] [LONGTAIL] 「学校 iPad 保護フィルム 複数台」 vol=0
+2026-06-17 19:06:28 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 19:06:28 [INFO] [generate] 生成開始: 「学校 iPad 保護フィルム 複数台」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  AIO:groowill_film
+2026-06-17 19:09:41 [ERROR] [groowill-film] [1/1] ❌ エラー（続行）: Claude APIからのJSON解析エラー: Expecting ',' delimiter: line 8 column 5421 (char 5968)
+---
+{
+  "title": "学校iPad保護フィルム複数台まとめ導入ガイド｜選び方・貼り方・見積もりのポイント",
+  "seo_title": "学校iPad保護フィルム複数台｜選び方・まとめ買い・導入ガイド",
+  "meta_description": "学校のiPadに保護フィルムを複数台まとめて導入したい担当者向けに、機種確認・機能選び・貼付作業・予備在庫・見積もり準備まで丁寧に解説します。",
+  "slug": "school-ipad-protective-film-multiple-units",
+  "image_prompt": "A professional flat-lay image of multiple iPads arranged on a school desk with protective film packaging nearby, clean educational setting, soft natural lighting, no text, high quality blog header",
+  "tags": ["学校ICT", "
+2026-06-17 19:09:41 [INFO] [groowill-film] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-06-17 19:09:41 [INFO] 
+============================================================
+2026-06-17 19:09:41 [INFO] 【全体サマリー】
+2026-06-17 19:09:41 [INFO]   ブログ数  : 1件
+2026-06-17 19:09:41 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-06-17 19:09:41 [INFO]   所要時間  : 197.5秒
+2026-06-17 19:09:41 [INFO]   ❌ [groowill-film] 学校 iPad 保護フィルム 複数台 → (生成失敗)
+2026-06-17 19:09:41 [INFO] ============================================================
+2026-06-17 19:10:04 [INFO] ============================================================
+2026-06-17 19:10:04 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-17 19:10:04 [INFO] ============================================================
+2026-06-17 19:10:04 [INFO] 対象ブログ: ['groowill-film']
+2026-06-17 19:10:05 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-17 19:10:05 [INFO] === グルーウィル法人フィルム (protectguardfilm.com) 処理開始 ===
+2026-06-17 19:10:05 [INFO] ════════════════════════════════════════════════════════════
+2026-06-17 19:10:05 [INFO]   genre            : 法人向け保護フィルム・特殊サイズ・業務用端末
+2026-06-17 19:10:05 [INFO]   fact_check       : True
+2026-06-17 19:10:05 [INFO]   article_type_mix : True
+2026-06-17 19:10:05 [INFO]   stop_words       : ['おすすめ', '比較', '法人', '保護フィルム', 'フィルム']
+2026-06-17 19:10:05 [INFO]   article_count    : 1  dry_run: False
+2026-06-17 19:10:10 [INFO] [wp] 記事取得: 計7件 (draft=7)
+2026-06-17 19:10:10 [INFO] [groowill-film] キーワード直接指定: 「学校 iPad 保護フィルム 複数台」
+2026-06-17 19:10:10 [INFO] [groowill-film] 候補: 1件 / 選定: 1件 / 生成予定: 1件
+2026-06-17 19:10:10 [INFO] [api_guard] 本日の使用量: $1.7377 / ¥261 (21回呼び出し)
+2026-06-17 19:10:10 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 19:10:10 [INFO] [groowill-film] [1/1] [LONGTAIL] 「学校 iPad 保護フィルム 複数台」 vol=0
+2026-06-17 19:10:10 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 19:10:10 [INFO] [generate] 生成開始: 「学校 iPad 保護フィルム 複数台」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  AIO:groowill_film
+2026-06-17 19:10:11 [ERROR] [groowill-film] [1/1] ❌ エラー（続行）: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cc8efpUNZ7xBrWL8ieGhG'}
+2026-06-17 19:10:11 [INFO] [groowill-film] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-06-17 19:10:11 [INFO] 
+============================================================
+2026-06-17 19:10:11 [INFO] 【全体サマリー】
+2026-06-17 19:10:11 [INFO]   ブログ数  : 1件
+2026-06-17 19:10:11 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-06-17 19:10:11 [INFO]   所要時間  : 6.6秒
+2026-06-17 19:10:11 [INFO]   ❌ [groowill-film] 学校 iPad 保護フィルム 複数台 → (生成失敗)
+2026-06-17 19:10:11 [INFO] ============================================================
+2026-06-17 20:15:51 [INFO] ============================================================
+2026-06-17 20:15:51 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-17 20:15:51 [INFO] ============================================================
+2026-06-17 20:15:51 [INFO] 対象ブログ: ['groowill-film']
+2026-06-17 20:15:53 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-17 20:15:53 [INFO] === グルーウィル法人フィルム (protectguardfilm.com) 処理開始 ===
+2026-06-17 20:15:53 [INFO] ════════════════════════════════════════════════════════════
+2026-06-17 20:15:53 [INFO]   genre            : 法人向け保護フィルム・特殊サイズ・業務用端末
+2026-06-17 20:15:53 [INFO]   fact_check       : True
+2026-06-17 20:15:53 [INFO]   article_type_mix : True
+2026-06-17 20:15:53 [INFO]   stop_words       : ['おすすめ', '比較', '法人', '保護フィルム', 'フィルム']
+2026-06-17 20:15:53 [INFO]   article_count    : 1  dry_run: False
+2026-06-17 20:15:58 [INFO] [wp] 記事取得: 計7件 (draft=7)
+2026-06-17 20:15:58 [INFO] [groowill-film] キーワード直接指定: 「学校 iPad 保護フィルム 複数台」
+2026-06-17 20:15:58 [INFO] [groowill-film] 候補: 1件 / 選定: 1件 / 生成予定: 1件
+2026-06-17 20:15:58 [INFO] [api_guard] 本日の使用量: $1.7377 / ¥261 (21回呼び出し)
+2026-06-17 20:15:58 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 20:15:58 [INFO] [groowill-film] [1/1] [LONGTAIL] 「学校 iPad 保護フィルム 複数台」 vol=0
+2026-06-17 20:15:58 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 20:15:58 [INFO] [generate] 生成開始: 「学校 iPad 保護フィルム 複数台」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  AIO:groowill_film
+2026-06-17 20:15:59 [ERROR] [groowill-film] [1/1] ❌ エラー（続行）: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cc8jgtu8ZLjS6nD8k9nEz'}
+2026-06-17 20:15:59 [INFO] [groowill-film] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-06-17 20:15:59 [INFO] 
+============================================================
+2026-06-17 20:15:59 [INFO] 【全体サマリー】
+2026-06-17 20:15:59 [INFO]   ブログ数  : 1件
+2026-06-17 20:15:59 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-06-17 20:15:59 [INFO]   所要時間  : 7.9秒
+2026-06-17 20:15:59 [INFO]   ❌ [groowill-film] 学校 iPad 保護フィルム 複数台 → (生成失敗)
+2026-06-17 20:15:59 [INFO] ============================================================
+2026-06-17 20:35:14 [INFO] ============================================================
+2026-06-17 20:35:14 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-17 20:35:14 [INFO] ============================================================
+2026-06-17 20:35:14 [INFO] 対象ブログ: ['groowill-film']
+2026-06-17 20:35:15 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-17 20:35:15 [INFO] === グルーウィル法人フィルム (protectguardfilm.com) 処理開始 ===
+2026-06-17 20:35:15 [INFO] ════════════════════════════════════════════════════════════
+2026-06-17 20:35:15 [INFO]   genre            : 法人向け保護フィルム・特殊サイズ・業務用端末
+2026-06-17 20:35:15 [INFO]   fact_check       : True
+2026-06-17 20:35:15 [INFO]   article_type_mix : True
+2026-06-17 20:35:15 [INFO]   stop_words       : ['おすすめ', '比較', '法人', '保護フィルム', 'フィルム']
+2026-06-17 20:35:15 [INFO]   article_count    : 1  dry_run: False
+2026-06-17 20:35:20 [INFO] [wp] 記事取得: 計7件 (draft=7)
+2026-06-17 20:35:20 [INFO] [groowill-film] キーワード直接指定: 「学校 iPad 保護フィルム 複数台」
+2026-06-17 20:35:20 [INFO] [groowill-film] 候補: 1件 / 選定: 1件 / 生成予定: 1件
+2026-06-17 20:35:20 [INFO] [api_guard] 本日の使用量: $1.7377 / ¥261 (21回呼び出し)
+2026-06-17 20:35:20 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 20:35:20 [INFO] [groowill-film] [1/1] [LONGTAIL] 「学校 iPad 保護フィルム 複数台」 vol=0
+2026-06-17 20:35:20 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 20:35:20 [INFO] [generate] 生成開始: 「学校 iPad 保護フィルム 複数台」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  AIO:groowill_film
+2026-06-17 20:38:40 [INFO] [generate] AIO品質チェック: 6/7 (groowill_film)
+2026-06-17 20:38:40 [INFO] [generate] 完了: 「学校iPad保護フィルム複数台導入ガイド｜選び方・費用・一括相談まで」
+2026-06-17 20:38:40 [INFO] [post] groowill-film CTAマイパターン整形を適用
+2026-06-17 20:38:40 [INFO] [post] 投稿方式: draft
+2026-06-17 20:38:40 [DEBUG] [post] groowill-film CTAマイパターンは保存前に適用済み: ID:247
+2026-06-17 20:39:12 [INFO] [post] WP投稿完了: ID=510 → https://protectguardfilm.com/wp-admin/post.php?post=510&action=edit
+2026-06-17 20:39:12 [INFO] [groowill-film] [1/1] ✅ 完了: 「学校iPad保護フィルム複数台導入ガイド｜選び方・費用・一括相談まで」
+2026-06-17 20:39:12 [INFO] [groowill-film] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-06-17 20:39:12 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=groowill-film limit=1
+2026-06-17 20:39:13 [WARNING] [codex-eyecatch][stderr] Traceback (most recent call last):
+2026-06-17 20:39:13 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/codex_eyecatch.py", line 277, in <module>
+2026-06-17 20:39:13 [WARNING] [codex-eyecatch][stderr]     raise SystemExit(main())
+2026-06-17 20:39:13 [WARNING] [codex-eyecatch][stderr]                      ^^^^^^
+2026-06-17 20:39:13 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/codex_eyecatch.py", line 194, in main
+2026-06-17 20:39:13 [WARNING] [codex-eyecatch][stderr]     cfg = load_blog_config(args.blog)
+2026-06-17 20:39:13 [WARNING] [codex-eyecatch][stderr]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-06-17 20:39:13 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/generate_lite.py", line 447, in load_blog_config
+2026-06-17 20:39:13 [WARNING] [codex-eyecatch][stderr]     raise FileNotFoundError(f"blog_config.json が見つかりません: {config_path}")
+2026-06-17 20:39:13 [WARNING] [codex-eyecatch][stderr] FileNotFoundError: blog_config.json が見つかりません: /Users/yama/article-generator-hataraku/blogs/groowill-film/blog_config.json
+2026-06-17 20:39:13 [ERROR] [codex-eyecatch] 異常終了 returncode=1
+2026-06-17 20:39:13 [INFO] 
+============================================================
+2026-06-17 20:39:13 [INFO] 【全体サマリー】
+2026-06-17 20:39:13 [INFO]   ブログ数  : 1件
+2026-06-17 20:39:13 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-06-17 20:39:13 [INFO]   所要時間  : 238.6秒
+2026-06-17 20:39:13 [INFO]   ✅ [groowill-film] 学校 iPad 保護フィルム 複数台 → 学校iPad保護フィルム複数台導入ガイド｜選び方・費用・一括相談まで
+2026-06-17 20:39:13 [INFO]        https://protectguardfilm.com/wp-admin/post.php?post=510&action=edit
+2026-06-17 20:39:13 [INFO] ============================================================
+2026-06-17 21:38:30 [INFO] ============================================================
+2026-06-17 21:38:30 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-17 21:38:30 [INFO] ============================================================
+2026-06-17 21:38:30 [INFO] 対象ブログ: ['groowill-film']
+2026-06-17 21:38:32 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-17 21:38:32 [INFO] === グルーウィル法人フィルム (protectguardfilm.com) 処理開始 ===
+2026-06-17 21:38:32 [INFO] ════════════════════════════════════════════════════════════
+2026-06-17 21:38:32 [INFO]   genre            : 法人向け保護フィルム・特殊サイズ・業務用端末
+2026-06-17 21:38:32 [INFO]   fact_check       : True
+2026-06-17 21:38:32 [INFO]   article_type_mix : True
+2026-06-17 21:38:32 [INFO]   stop_words       : ['おすすめ', '比較', '法人', '保護フィルム', 'フィルム']
+2026-06-17 21:38:32 [INFO]   article_count    : 1  dry_run: False
+2026-06-17 21:38:37 [INFO] [wp] 記事取得: 計8件 (draft=8)
+2026-06-17 21:38:37 [INFO] [groowill-film] キーワード直接指定: 「学校タブレット ブルーライトカット 保護フィルム」
+2026-06-17 21:38:37 [INFO] [groowill-film] 候補: 1件 / 選定: 1件 / 生成予定: 1件
+2026-06-17 21:38:37 [INFO] [api_guard] 本日の使用量: $1.9870 / ¥298 (24回呼び出し)
+2026-06-17 21:38:37 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 21:38:37 [INFO] [groowill-film] [1/1] [LONGTAIL] 「学校タブレット ブルーライトカット 保護フィルム」 vol=0
+2026-06-17 21:38:37 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 21:38:37 [INFO] [generate] 生成開始: 「学校タブレット ブルーライトカット 保護フィルム」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  AIO:groowill_film
+2026-06-17 21:41:35 [INFO] [generate] AIO品質チェック: 5/7 (groowill_film)
+2026-06-17 21:41:35 [INFO] [generate] 完了: 「学校タブレットのブルーライトカット保護フィルム｜選び方と法人一括導入の確認ポイント」
+2026-06-17 21:41:35 [WARNING] [groowill-film] [1/1] ⏭️ 重複スキップ: タイトル重複のため投稿スキップ: 「学校タブレットのブルーライトカット保護フィルム｜選び方と法人一括導入の」≈「学校タブレット用 反射防止保護フィルムの選び方｜法人一括導入のポイント」
+2026-06-17 21:41:35 [WARNING] [groowill-film] シートへのスキップ記録失敗（続行）: cannot import name 'mark_duplicate_skip' from 'modules.sheets_updater' (/Users/yama/article-generator-aivice/modules/sheets_updater.py)
+2026-06-17 21:41:35 [INFO] [groowill-film] 完了: 成功=0件 / 重複スキップ=1件 / 失敗=0件 / 合計=1件
+2026-06-17 21:41:35 [INFO] 
+============================================================
+2026-06-17 21:41:35 [INFO] 【全体サマリー】
+2026-06-17 21:41:35 [INFO]   ブログ数  : 1件
+2026-06-17 21:41:35 [INFO]   生成件数  : 0件成功 / 0件失敗 / 計1件
+2026-06-17 21:41:35 [INFO]   所要時間  : 184.3秒
+2026-06-17 21:41:35 [INFO]   ❌ [groowill-film] 学校タブレット ブルーライトカット 保護フィルム → (生成失敗)
+2026-06-17 21:41:35 [INFO] ============================================================
+2026-06-17 21:41:44 [INFO] ============================================================
+2026-06-17 21:41:44 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-17 21:41:44 [INFO] ============================================================
+2026-06-17 21:41:44 [INFO] 対象ブログ: ['groowill-film']
+2026-06-17 21:41:45 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-17 21:41:45 [INFO] === グルーウィル法人フィルム (protectguardfilm.com) 処理開始 ===
+2026-06-17 21:41:45 [INFO] ════════════════════════════════════════════════════════════
+2026-06-17 21:41:45 [INFO]   genre            : 法人向け保護フィルム・特殊サイズ・業務用端末
+2026-06-17 21:41:45 [INFO]   fact_check       : True
+2026-06-17 21:41:45 [INFO]   article_type_mix : True
+2026-06-17 21:41:45 [INFO]   stop_words       : ['おすすめ', '比較', '法人', '保護フィルム', 'フィルム']
+2026-06-17 21:41:45 [INFO]   article_count    : 1  dry_run: False
+2026-06-17 21:41:49 [INFO] [wp] 記事取得: 計8件 (draft=8)
+2026-06-17 21:41:49 [INFO] [groowill-film] キーワード直接指定: 「学校タブレット ブルーライトカット 保護フィルム」
+2026-06-17 21:41:49 [INFO] [groowill-film] 候補: 1件 / 選定: 1件 / 生成予定: 1件
+2026-06-17 21:42:37 [INFO] ============================================================
+2026-06-17 21:42:37 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-17 21:42:37 [INFO] ============================================================
+2026-06-17 21:42:37 [INFO] 対象ブログ: ['groowill-film']
+2026-06-17 21:42:38 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-17 21:42:38 [INFO] === グルーウィル法人フィルム (protectguardfilm.com) 処理開始 ===
+2026-06-17 21:42:38 [INFO] ════════════════════════════════════════════════════════════
+2026-06-17 21:42:38 [INFO]   genre            : 法人向け保護フィルム・特殊サイズ・業務用端末
+2026-06-17 21:42:38 [INFO]   fact_check       : True
+2026-06-17 21:42:38 [INFO]   article_type_mix : True
+2026-06-17 21:42:38 [INFO]   stop_words       : ['おすすめ', '比較', '法人', '保護フィルム', 'フィルム']
+2026-06-17 21:42:38 [INFO]   article_count    : 1  dry_run: False
+2026-06-17 21:42:42 [INFO] [wp] 記事取得: 計8件 (draft=8)
+2026-06-17 21:42:42 [INFO] [groowill-film] キーワード直接指定: 「学校タブレット ブルーライトカット 保護フィルム」
+2026-06-17 21:42:42 [INFO] [groowill-film] 候補: 1件 / 選定: 1件 / 生成予定: 1件
+2026-06-17 21:42:42 [INFO] [api_guard] 本日の使用量: $2.2189 / ¥333 (27回呼び出し)
+2026-06-17 21:42:42 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 21:42:42 [INFO] [groowill-film] [1/1] [LONGTAIL] 「学校タブレット ブルーライトカット 保護フィルム」 vol=0
+2026-06-17 21:42:42 [INFO] ────────────────────────────────────────────────────────────
+2026-06-17 21:42:42 [INFO] [generate] 生成開始: 「学校タブレット ブルーライトカット 保護フィルム」(vol:0) fact_check=True target_length=6,000字  誘導リンク:0件  AIO:groowill_film
+2026-06-17 21:45:59 [INFO] [generate] AIO品質チェック: 6/7 (groowill_film)
+2026-06-17 21:45:59 [INFO] [generate] 完了: 「学校タブレットのブルーライトカット保護フィルム｜選び方と法人一括導入の確認ポイント」
+2026-06-17 21:45:59 [INFO] [post] groowill-film CTAマイパターン整形を適用
+2026-06-17 21:45:59 [INFO] [post] 投稿方式: draft
+2026-06-17 21:45:59 [DEBUG] [post] groowill-film CTAマイパターンは保存前に適用済み: ID:247
+2026-06-17 21:46:31 [INFO] [post] WP投稿完了: ID=515 → https://protectguardfilm.com/wp-admin/post.php?post=515&action=edit
+2026-06-17 21:46:31 [INFO] [groowill-film] [1/1] ✅ 完了: 「学校タブレットのブルーライトカット保護フィルム｜選び方と法人一括導入の確認ポイント」
+2026-06-17 21:46:31 [INFO] [groowill-film] 完了: 成功=1件 / 重複スキップ=0件 / 失敗=0件 / 合計=1件
+2026-06-17 21:46:31 [INFO] [codex-eyecatch] 記事生成後のアイキャッチ処理を起動: blog=groowill-film limit=1
+2026-06-17 21:46:32 [WARNING] [codex-eyecatch][stderr] Traceback (most recent call last):
+2026-06-17 21:46:32 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/codex_eyecatch.py", line 277, in <module>
+2026-06-17 21:46:32 [WARNING] [codex-eyecatch][stderr]     raise SystemExit(main())
+2026-06-17 21:46:32 [WARNING] [codex-eyecatch][stderr]                      ^^^^^^
+2026-06-17 21:46:32 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/codex_eyecatch.py", line 194, in main
+2026-06-17 21:46:32 [WARNING] [codex-eyecatch][stderr]     cfg = load_blog_config(args.blog)
+2026-06-17 21:46:32 [WARNING] [codex-eyecatch][stderr]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-06-17 21:46:32 [WARNING] [codex-eyecatch][stderr]   File "/Users/yama/article-generator-hataraku/generate_lite.py", line 447, in load_blog_config
+2026-06-17 21:46:32 [WARNING] [codex-eyecatch][stderr]     raise FileNotFoundError(f"blog_config.json が見つかりません: {config_path}")
+2026-06-17 21:46:32 [WARNING] [codex-eyecatch][stderr] FileNotFoundError: blog_config.json が見つかりません: /Users/yama/article-generator-hataraku/blogs/groowill-film/blog_config.json
+2026-06-17 21:46:32 [ERROR] [codex-eyecatch] 異常終了 returncode=1
+2026-06-17 21:46:32 [INFO] 
+============================================================
+2026-06-17 21:46:32 [INFO] 【全体サマリー】
+2026-06-17 21:46:32 [INFO]   ブログ数  : 1件
+2026-06-17 21:46:32 [INFO]   生成件数  : 1件成功 / 0件失敗 / 計1件
+2026-06-17 21:46:32 [INFO]   所要時間  : 234.8秒
+2026-06-17 21:46:32 [INFO]   ✅ [groowill-film] 学校タブレット ブルーライトカット 保護フィルム → 学校タブレットのブルーライトカット保護フィルム｜選び方と法人一括導入の確認ポイント
+2026-06-17 21:46:32 [INFO]        https://protectguardfilm.com/wp-admin/post.php?post=515&action=edit
+2026-06-17 21:46:32 [INFO] ============================================================

@@ -1,5 +1,7 @@
 {
   "_comment": "グルーウィル法人フィルム特化ブログ設定。環境変数とシートIDは運用環境に合わせて設定してください。",
+  "image_generate": false,
+  "eyecatch_generate": false,
   "name": "groowill-film",
   "display_name": "グルーウィル法人フィルム",
   "genre": "法人向け保護フィルム・特殊サイズ・業務用端末",

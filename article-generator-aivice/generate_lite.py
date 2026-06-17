@@ -1318,9 +1318,11 @@ def post(article: dict, dry_run: bool = False,
                         )
                         log.info(f"[post] パターンCTA挿入（KWマッチ）: 「{matched.title}」(ID:{matched.id})")
 
+            _img_generate = blog_cfg.extra.get("image_generate", True) if blog_cfg else True
             result = post_article_with_image(article, image_bytes=None,
                                              asp_links=asp_links, stop_words=stop_words,
-                                             enable_eyecatch=False)
+                                             enable_eyecatch=False,
+                                             enable_h2_images=bool(_img_generate))
         else:
             result = create_post(article, featured_media_id=None)
     finally:
@@ -1345,6 +1347,7 @@ def run_blog(
     keyword: str | None = None,
     volume: int = 0,
     count: int | None = None,
+    force: bool = False,
 ) -> list[dict]:
     """
     1ブログ分の記事生成フローを実行して結果リストを返す。
@@ -1355,6 +1358,7 @@ def run_blog(
         keyword  : 直接指定するキーワード（None のときはシートから選定）
         volume   : keyword 指定時の月間検索数
         count    : 生成記事数（None のとき blog_cfg.article_count を使用）
+        force    : True のとき生成後タイトル重複チェックをスキップ
     """
     import time
 
@@ -1552,7 +1556,7 @@ def run_blog(
 
             # ── 生成後タイトル重複チェック ──────────────────────────
             # キーワード段階より精度が高い（タイトル同士の比較）
-            if wp_posts:
+            if wp_posts and not force:
                 is_dup_post, dup_title = _check_title_after_generation(
                     article["title"], wp_posts
                 )
@@ -1634,6 +1638,8 @@ def main() -> None:
     parser.add_argument("--yes", "-y", action="store_true", help="実行前確認をスキップ")
     parser.add_argument("--test",     action="store_true",
                         help="テスト生成モード: 1記事のみ生成・下書き保存（--count 1 と同等）")
+    parser.add_argument("--force",    action="store_true",
+                        help="生成後タイトル重複チェックをスキップして強制投稿する")
     args = parser.parse_args()
 
     # --test フラグ: count=1 を強制（--count と同時指定時は --count を優先）
@@ -1715,11 +1721,15 @@ def main() -> None:
             keyword=args.keyword,
             volume=args.volume,
             count=args.count,
+            force=args.force,
         )
         all_results.extend(results)
         generated_count = sum(1 for r in results if r.get("status") == "success")
         if generated_count and not args.dry_run:
-            run_codex_eyecatch_after_generation(blog_cfg.name, generated_count)
+            if blog_cfg.extra.get("image_generate", True):
+                run_codex_eyecatch_after_generation(blog_cfg.name, generated_count)
+            else:
+                log.info(f"[{blog_cfg.name}] image_generate=false: codex_eyecatch スキップ")
 
     # ── 全体サマリー ──────────────────────────────────────
     elapsed   = (datetime.now() - started_at).total_seconds()
