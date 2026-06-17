@@ -3199,6 +3199,366 @@
       "output_tokens": 12000,
       "cost_usd": 0.216603,
       "label": "article:AI Overview 表示される記事 特徴"
+    },
+    {
+      "timestamp": "2026-06-16T19:00:21.450274+00:00",
+      "date": "2026-06-16",
+      "hour": "2026-06-16T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 111,
+      "output_tokens": 132,
+      "cost_usd": 0.000617,
+      "label": "lsi:AI Overview 表示される記事 特徴"
+    },
+    {
+      "timestamp": "2026-06-16T19:00:25.917125+00:00",
+      "date": "2026-06-16",
+      "hour": "2026-06-16T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 178,
+      "output_tokens": 449,
+      "cost_usd": 0.001938,
+      "label": "kw_research:AI Overview 表示される記事 特徴"
+    },
+    {
+      "timestamp": "2026-06-16T19:03:54.748306+00:00",
+      "date": "2026-06-16",
+      "hour": "2026-06-16T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12171,
+      "output_tokens": 12000,
+      "cost_usd": 0.216513,
+      "label": "article:AI Overview 表示される記事 特徴"
+    },
+    {
+      "timestamp": "2026-06-17T08:26:49.163475+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 101,
+      "cost_usd": 0.000497,
+      "label": "lsi:学校タブレット 保護フィルム 選び方"
+    },
+    {
+      "timestamp": "2026-06-17T08:26:58.039310+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 671,
+      "cost_usd": 0.00283,
+      "label": "kw_research:学校タブレット 保護フィルム 選び方"
+    },
+    {
+      "timestamp": "2026-06-17T08:30:06.030753+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 21131,
+      "output_tokens": 12000,
+      "cost_usd": 0.243393,
+      "label": "article:学校タブレット 保護フィルム 選び方"
+    },
+    {
+      "timestamp": "2026-06-17T08:47:58.929878+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 116,
+      "output_tokens": 162,
+      "cost_usd": 0.000741,
+      "label": "lsi:学校タブレット 保護フィルム 選び方"
+    },
+    {
+      "timestamp": "2026-06-17T08:48:03.221918+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 183,
+      "output_tokens": 622,
+      "cost_usd": 0.002634,
+      "label": "kw_research:学校タブレット 保護フィルム 選び方"
+    },
+    {
+      "timestamp": "2026-06-17T08:51:29.031608+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 21528,
+      "output_tokens": 13011,
+      "cost_usd": 0.259749,
+      "label": "article:学校タブレット 保護フィルム 選び方"
+    },
+    {
+      "timestamp": "2026-06-17T08:52:23.916982+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 118,
+      "output_tokens": 136,
+      "cost_usd": 0.000638,
+      "label": "lsi:GIGAスクール端末 保護フィルム 必要"
+    },
+    {
+      "timestamp": "2026-06-17T08:52:28.691398+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 185,
+      "output_tokens": 764,
+      "cost_usd": 0.003204,
+      "label": "kw_research:GIGAスクール端末 保護フィルム 必要"
+    },
+    {
+      "timestamp": "2026-06-17T08:55:50.714139+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 20121,
+      "output_tokens": 12755,
+      "cost_usd": 0.251688,
+      "label": "article:GIGAスクール端末 保護フィルム 必要"
+    },
+    {
+      "timestamp": "2026-06-17T08:56:38.079094+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 117,
+      "output_tokens": 99,
+      "cost_usd": 0.00049,
+      "label": "lsi:学校タブレット 反射防止 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T08:56:42.208187+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T08",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 184,
+      "output_tokens": 708,
+      "cost_usd": 0.002979,
+      "label": "kw_research:学校タブレット 反射防止 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T08:59:51.080998+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T08",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 20034,
+      "output_tokens": 12060,
+      "cost_usd": 0.241002,
+      "label": "article:学校タブレット 反射防止 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T09:22:12.735284+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 117,
+      "output_tokens": 94,
+      "cost_usd": 0.00047,
+      "label": "lsi:学校タブレット 反射防止 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T09:22:17.849786+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T09",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 184,
+      "output_tokens": 661,
+      "cost_usd": 0.002791,
+      "label": "kw_research:学校タブレット 反射防止 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T09:25:20.189407+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T09",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 19979,
+      "output_tokens": 11481,
+      "cost_usd": 0.232152,
+      "label": "article:学校タブレット 反射防止 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T10:02:10.760788+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 112,
+      "output_tokens": 105,
+      "cost_usd": 0.00051,
+      "label": "lsi:Chromebook 学校 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T10:02:15.138311+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 179,
+      "output_tokens": 617,
+      "cost_usd": 0.002611,
+      "label": "kw_research:Chromebook 学校 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T10:05:27.897063+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T10",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 19949,
+      "output_tokens": 12329,
+      "cost_usd": 0.244782,
+      "label": "article:Chromebook 学校 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T10:06:30.943250+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 89,
+      "cost_usd": 0.000447,
+      "label": "lsi:学校 iPad 保護フィルム 複数台"
+    },
+    {
+      "timestamp": "2026-06-17T10:06:35.171755+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T10",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 643,
+      "cost_usd": 0.002717,
+      "label": "kw_research:学校 iPad 保護フィルム 複数台"
+    },
+    {
+      "timestamp": "2026-06-17T10:09:41.316594+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T10",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 19962,
+      "output_tokens": 12102,
+      "cost_usd": 0.241416,
+      "label": "article:学校 iPad 保護フィルム 複数台"
+    },
+    {
+      "timestamp": "2026-06-17T11:35:22.593111+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 102,
+      "cost_usd": 0.000499,
+      "label": "lsi:学校 iPad 保護フィルム 複数台"
+    },
+    {
+      "timestamp": "2026-06-17T11:35:26.765384+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T11",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 674,
+      "cost_usd": 0.002841,
+      "label": "kw_research:学校 iPad 保護フィルム 複数台"
+    },
+    {
+      "timestamp": "2026-06-17T11:38:37.671004+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T11",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 20003,
+      "output_tokens": 12392,
+      "cost_usd": 0.245889,
+      "label": "article:学校 iPad 保護フィルム 複数台"
+    },
+    {
+      "timestamp": "2026-06-17T12:38:39.561024+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 120,
+      "output_tokens": 109,
+      "cost_usd": 0.000532,
+      "label": "lsi:学校タブレット ブルーライトカット 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T12:38:44.797628+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 187,
+      "output_tokens": 694,
+      "cost_usd": 0.002926,
+      "label": "kw_research:学校タブレット ブルーライトカット 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T12:41:32.407501+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T12",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 20824,
+      "output_tokens": 11064,
+      "cost_usd": 0.228432,
+      "label": "article:学校タブレット ブルーライトカット 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T12:42:44.952906+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 120,
+      "output_tokens": 107,
+      "cost_usd": 0.000524,
+      "label": "lsi:学校タブレット ブルーライトカット 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T12:42:49.426120+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T12",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 187,
+      "output_tokens": 707,
+      "cost_usd": 0.002978,
+      "label": "kw_research:学校タブレット ブルーライトカット 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T12:45:56.556834+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T12",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 20832,
+      "output_tokens": 12200,
+      "cost_usd": 0.245496,
+      "label": "article:学校タブレット ブルーライトカット 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T15:04:10.846216+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 119,
+      "output_tokens": 99,
+      "cost_usd": 0.000491,
+      "label": "lsi:学校タブレット 覗き見防止 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T15:04:15.537600+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T15",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 186,
+      "output_tokens": 652,
+      "cost_usd": 0.002757,
+      "label": "kw_research:学校タブレット 覗き見防止 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-17T15:07:30.580377+00:00",
+      "date": "2026-06-17",
+      "hour": "2026-06-17T15",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 21150,
+      "output_tokens": 12550,
+      "cost_usd": 0.2517,
+      "label": "article:学校タブレット 覗き見防止 保護フィルム"
     }
   ],
   "events": [
@@ -3261,6 +3621,11 @@
       "timestamp": "2026-05-30T19:00:15.573673+00:00",
       "type": "global_daily_limit",
       "message": "[api_guard] 🛑 全体日次コスト上限: 本日合計 $4.5915 (¥689) >= $2.00 (¥300)\n  翌日（UTC）にリセットされます。"
+    },
+    {
+      "timestamp": "2026-06-17T12:41:49.221159+00:00",
+      "type": "daily_limit",
+      "message": "[api_guard] 🛑 デプロイ日次上限超過: 本日のコスト $2.2189 >= $2.00\n  翌日（UTC）まで待つか、DAILY_LIMIT_USD を引き上げてください。"
     }
   ]
 }

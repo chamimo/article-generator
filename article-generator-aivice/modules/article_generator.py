@@ -306,6 +306,79 @@ _ARTICLE_STRUCTURE: dict[int, tuple[int, int, int, int, int]] = {
     3000: ( 5,  7, 3,  4, 12000),  # FUTURE / TREND: 短め情報記事
 }
 
+
+# ──────────────────────────────────────────────────────────────────
+# JSON安全化ユーティリティ
+# Claude APIが生成する長文HTMLの中に紛れ込む制御文字・未エスケープ
+# 文字を除去・修正し、json.loads() の失敗率を下げる。
+# ──────────────────────────────────────────────────────────────────
+import re as _re_json
+
+# JSON文字列値の中身を抽出する簡易パターン（content/title等の長い値を対象）
+_JSON_STRING_RE = _re_json.compile(
+    r'"(content|title|meta_description|image_prompt|seo_title|slug)"\s*:\s*"',
+    _re_json.DOTALL,
+)
+# 除去対象の制御文字（タブ・垂直タブ・バックスペース・フォームフィード以外の制御文字）
+_CTRL_CHAR_RE = _re_json.compile(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]')
+
+
+def _sanitize_json_raw(raw: str) -> str:
+    """
+    Claude APIレスポンス全体から JSON 解析を壊す可能性のある制御文字を除去する。
+    JSON文字列値の外にある改行・タブは保持する。
+    """
+    # 制御文字（改行・タブ以外）を除去
+    return _CTRL_CHAR_RE.sub("", raw)
+
+
+def _repair_json(raw: str) -> str:
+    """
+    _sanitize_json_raw 後もパースできない場合の最終修復。
+    content フィールドの文字列値内にある未エスケープの生改行を \\n に置換する。
+    完全な修復を保証するものではなく、よくある1パターンに対処する。
+    """
+    # "content": "..." の値部分の生改行を \\n に変換
+    # 正規表現で "content" キーの値を特定し、値内の生改行だけ置換
+    def _escape_newlines_in_value(m: "_re_json.Match") -> str:
+        key = m.group(1)       # content / title 等
+        val_start = m.end()    # 値の開始位置（ダブルクォートの直後）
+        # 対象は raw[val_start:] の最初の閉じクォートまで
+        # 閉じクォート探索: \ でエスケープされていない " を探す
+        i = val_start
+        result = [m.group(0)]
+        while i < len(raw):
+            ch = raw[i]
+            if ch == "\\":
+                result.append(raw[i:i+2])
+                i += 2
+            elif ch == '"':
+                break
+            elif ch == "\n":
+                result.append("\\n")
+                i += 1
+            elif ch == "\r":
+                result.append("\\r")
+                i += 1
+            elif ch == "\t":
+                result.append("\\t")
+                i += 1
+            else:
+                result.append(ch)
+                i += 1
+        return "".join(result)
+
+    # content フィールドのみ対象（タイトル等は短く問題になりにくい）
+    repaired = _re_json.sub(
+        r'"(content)"\s*:\s*"',
+        _escape_newlines_in_value,
+        raw,
+        count=1,
+        flags=_re_json.DOTALL,
+    )
+    return repaired
+
+
 def _get_structure(target_length: int) -> tuple[int, int, int, int, int]:
     """target_lengthに最も近い構造設定を返す。"""
     if target_length in _ARTICLE_STRUCTURE:
@@ -362,11 +435,11 @@ def _sanitize_groowill_system_prompt(prompt: str, faq_min: int, faq_max: int) ->
         prompt,
         "## 2. この記事のポイント\n<!-- wp:loos/cap-block",
         "<!-- /wp:loos/cap-block -->",
-        """## 2. この記事のポイント
-<!-- wp:loos/cap-block {{"className":"is-style-small_ttl"}} -->
-<div class="swell-block-capbox cap_box is-style-small_ttl"><div class="cap_box_ttl"><span>この記事のポイント</span></div><div class="cap_box_content">
-<!-- wp:list {{"className":"is-style-check_list"}} -->
-<ul class="wp-block-list is-style-check_list">
+        """## 2. この記事のポイント（H3ではなくキャプションボックスで出力すること）
+<!-- wp:loos/cap-block {{"className":"is-style-onborder_ttl2"}} -->
+<div class="swell-block-capbox cap_box is-style-onborder_ttl2"><div class="cap_box_ttl"><span>この記事のポイント</span></div><div class="cap_box_content">
+<!-- wp:list -->
+<ul class="wp-block-list">
 <li>{{ポイント1}}</li>
 <li>{{ポイント2}}</li>
 <li>{{ポイント3}}</li>
@@ -380,8 +453,8 @@ def _sanitize_groowill_system_prompt(prompt: str, faq_min: int, faq_max: int) ->
         f"## 4. よくある質問（{faq_min}〜{faq_max}問、各回答200字以上）",
         "<!-- /wp:loos/faq -->",
         f"""## 4. よくある質問（{faq_min}〜{faq_max}問）
-<!-- wp:heading {{"level":3}} -->
-<h3 class="wp-block-heading">よくある質問</h3>
+<!-- wp:heading {{"level":2}} -->
+<h2 class="wp-block-heading">よくある質問</h2>
 <!-- /wp:heading -->
 
 <!-- wp:loos/faq {{"iconRadius":"rounded","qIconStyle":"fill-custom","aIconStyle":"fill-custom","outputJsonLd":true,"titleTag":"h4"}} -->
@@ -396,21 +469,45 @@ def _sanitize_groowill_system_prompt(prompt: str, faq_min: int, faq_max: int) ->
 </div>
 <!-- /wp:loos/faq -->""",
     )
+    # まとめ見出しをH3→H2に変更（f-string処理後の実テキストを対象とする）
+    prompt = prompt.replace(
+        '<!-- wp:heading {"level":3} -->\n<h3 class="wp-block-heading">'
+        'まとめ｜{まとめタイトル}</h3>\n<!-- /wp:heading -->',
+        '<!-- wp:heading {"level":2} -->\n<h2 class="wp-block-heading">'
+        'まとめ｜{まとめタイトル}</h2>\n<!-- /wp:heading -->',
+    )
     return prompt
 
 
 GROOWILL_FILM_SYSTEM_APPENDIX = """
 
 ## groowill-film専用の構成・圧縮ルール（共通ルールより優先）
-- H2は最大3個まで。H2には主要キーワードまたは検索意図を自然に含める
-- H3は合計12〜14個を目安にする。H2数を増やして調整せず、各H2配下にH3を分配する
+
+### 見出し構造ルール
+- H2は3〜5個を基本にする（必要な場合は最大6個まで可）。H2には主要キーワードまたは検索意図を自然に含める
+- 「よくある質問」は原則H2にする。H3として置かない
+- 「まとめ」は原則H2にする。H3として置かない
+- H3は記事内容に応じて自然に決める。無理に増やさない。H2を細分化する小見出しとしてのみ使う
+- 記事タイプ別H3目安:
+    選び方・導入ガイド系: H2=4〜5個、H3=8〜14個
+    短め悩み解決系:       H2=3〜4個、H3=6〜10個
+    網羅型・AIO強化系:    H2=4〜6個、H3=10〜16個
 - H4は補足、手順、注意点の小見出しとして必要な場合のみ使う
 - H2/H3/H4は本文構造や検索意図に関係する見出しだけに使い、SEO見出しと装飾見出しを混同しない
-- 「こんな方へ」「この記事のポイント」「相談前チェックリスト」「確認ポイント」「注意点」などの補足要素は、原則としてH2/H3見出しではなくSWELLキャプションボックスやリストボックスで表現する
-- H2がない状態で、補足ボックス用のH3をいきなり出さない。記事冒頭から最初のH2前に置く補足要素はキャプションボックスを優先する
-- H3数のカウントに、補足ボックスのタイトルを含めない
+- H3は必ず直前に関連するH2がある場合のみ使用する。H2がない状態でH3を出さない（必須）
+- H3数のカウントに補足ボックスのタイトルを含めない
+- 「この記事のポイント」「こんな方へ」「こんな状況に当てはまる担当者の方へ」「相談前チェックリスト」「相談前に確認したいこと」「導入前のチェックポイント」「確認ポイント」「注意点」「よくあるお悩み」「まとめて確認したいこと」などの補足要素は、H2/H3/H4ではなくSWELLキャプションボックス（is-style-onborder_ttl2）で表現する
+- H2がない状態で補足ボックス用のH3をいきなり出さない。記事冒頭から最初のH2前の補足要素はキャプションボックスを優先する
+- FAQ項目はwp:loos/faq-itemで表現する。無理にH3化しない
+- まとめ内のチェックリストはcap-blockまたは通常の wp:list で表現する
+- 補足ボックスに使うキャプションボックスの形式（is-style-onborder_ttl2を使うこと）：
+  <!-- wp:loos/cap-block {"className":"is-style-onborder_ttl2"} -->
+  <div class="swell-block-capbox cap_box is-style-onborder_ttl2"><div class="cap_box_ttl"><span>タイトル</span></div><div class="cap_box_content">
+  <!-- wp:list --><ul class="wp-block-list"><li>項目</li></ul><!-- /wp:list -->
+  </div></div>
+  <!-- /wp:loos/cap-block -->
 - 各H2直下に、法人担当者向けの結論要約を1段落で置く
-- 各H2直下に、そのH2配下のH3一覧を番号付きリストで置く
+- 各H2直下に、そのH2配下のH3一覧を番号付きリストで置く（よくある質問・まとめのH2には不要）
 - H3本文の長さは固定しない。短い補足系は80〜120字、通常説明系は130〜220字、重要な判断ポイントは220〜320字、手順や注意点は250〜400字でもよい
 - すべてのH3を長くせず、短いH3、標準的なH3、やや詳しいH3が混ざる自然なリズムにする
 - 本文では<br>による改行を多用しない。意味の切れ目ごとに個別のWordPress paragraphブロックへ分ける
@@ -424,7 +521,7 @@ GROOWILL_FILM_SYSTEM_APPENDIX = """
 - 「相談窓口メモ」「確認ポイント」「補足アドバイス」として、吹き出し風メモを1〜2個まで入れてよい
 - 吹き出し風メモは、架空の利用者の声、導入実績、提携先企業担当者の発言に見える内容にしない
 - 吹き出し風メモはWordPress標準のgroupブロックまたはSWELLで崩れにくい枠付きブロックにし、独自CSSやstyleは使わない
-- 「この記事のポイント」はwp:loos/cap-block {"className":"is-style-small_ttl"} 形式で出力し、ポイント4つを維持する
+- 「この記事のポイント」はH3ではなくwp:loos/cap-block {"className":"is-style-onborder_ttl2"} 形式で出力し、ポイント4つを維持する
 - 「この記事のポイント」には、読者が記事から得られる情報、判断材料、導入前に整理できるメリットを書く
 - 「この記事のポイント」に、提携先企業への共有・直接連絡など運用上の注意書きや、本文を読めば当然わかる説明を入れない
 - 冒頭文とこの記事のポイントは、読者が続きを読みたくなる内容を優先する
@@ -450,6 +547,7 @@ GROOWILL_FILM_SYSTEM_APPENDIX = """
 - 当サイトが製造元・販売元・公式窓口であるような表現や、当サイトがすべての仕様回答・見積り回答を行うように見える表現は避ける
 - 禁止表現: 公式サイト、メーカー公式、弊社、当社製品、自社製造、当社工場、必ず製作できます、製作可否
 - 優先表現: 当サイト、法人向け相談窓口、取扱製品、提携先企業、当サイト運営者および提携先企業、仕様・推奨フィルム・お見積り・納期を確認、提携先企業より直接ご連絡・ご案内する場合があります
+- 学校ICT・GIGAスクール関連の記事では、記事本文の適切な箇所（H2直下の説明段落またはまとめ付近）から親LP（https://protectguardfilm.com/gigaschool/）への内部リンクを1〜2箇所入れること。アンカーテキストは「GIGAスクール端末の保護フィルム相談はこちら」「学校ICT端末向け保護フィルム相談はこちら」など、文脈に合う自然な表現にすること。リンクは <a href="https://protectguardfilm.com/gigaschool/">アンカーテキスト</a> 形式でparagraphブロック内に入れること
 """
 
 
@@ -464,7 +562,8 @@ def _apply_site_structure_override(
     """サイト専用の構成ルールを必要最小限で上書きする。"""
     if (aio_profile or {}).get("mode") != "groowill_film":
         return h3_min, h3_max, faq_min, faq_max, max_tokens, ""
-    return 12, 14, 5, 6, max_tokens, GROOWILL_FILM_SYSTEM_APPENDIX
+    # H3 は記事タイプ別に 6〜16 本の範囲。APPENDIX が詳細を制御する
+    return 6, 16, 5, 6, max(max_tokens, 16000), GROOWILL_FILM_SYSTEM_APPENDIX
 
 
 def _get_keyword_research(keyword: str) -> dict:
@@ -615,7 +714,8 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
                    blog_persona_section: str = "",
                    aio_profile: dict | None = None) -> dict:
     """
-    記事生成の共通処理。Claude APIを呼び出してJSON記事データを返す。
+    記事生成の共通処理。JSON解析エラー時は1回だけリトライする。
+    max_tokens 到達エラーはリトライしない（JSONが途切れているため無駄になるだけ）。
 
     target_length に応じてH3本数・FAQ問数・max_tokensを動的に切り替える。
       9000 (MONETIZE): H3×14〜18本 / FAQ×8〜10問 / max_tokens=12,000
@@ -623,6 +723,52 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
       3000 (TREND):     H3×5〜7本   / FAQ×3〜4問  / max_tokens= 6,000
       3000 (FUTURE):    H3×5〜7本   / FAQ×3〜4問  / max_tokens=4,500
     """
+    _MAX_JSON_RETRIES = 1  # JSON解析エラー時のみリトライ上限
+
+    last_err: Exception | None = None
+    for _attempt in range(1 + _MAX_JSON_RETRIES):
+        try:
+            return _build_article_once(
+                keyword, volume, differentiation_note,
+                related_keywords=related_keywords,
+                article_theme=article_theme,
+                sub_keywords=sub_keywords,
+                enable_fact_check=enable_fact_check,
+                target_length=target_length,
+                article_type=article_type,
+                asp_list=asp_list,
+                guide_links=guide_links,
+                blog_persona_section=blog_persona_section,
+                aio_profile=aio_profile,
+            )
+        except ValueError as e:
+            msg = str(e)
+            # max_tokens 到達はリトライしても無意味なので即再送出
+            if "max_tokens上限" in msg:
+                raise
+            # JSON解析エラーのみリトライ
+            if "JSON解析エラー" in msg:
+                last_err = e
+                if _attempt < _MAX_JSON_RETRIES:
+                    print(f"[article_generator] JSON解析エラー、リトライ ({_attempt+1}/{_MAX_JSON_RETRIES}): {msg[:80]}")
+                    continue
+            raise
+
+    raise last_err  # type: ignore[misc]
+
+
+def _build_article_once(keyword: str, volume: int, differentiation_note: str = "",
+                        related_keywords: list[str] | None = None,
+                        article_theme: str = "",
+                        sub_keywords: list[str] | None = None,
+                        enable_fact_check: bool = True,
+                        target_length: int = 9000,
+                        article_type: str = "longtail",
+                        asp_list: list[dict] | None = None,
+                        guide_links: dict | None = None,
+                        blog_persona_section: str = "",
+                        aio_profile: dict | None = None) -> dict:
+    """API呼び出し〜JSON解析までの1回分の処理（_build_article から呼ばれる）。"""
     h3_min, h3_max, faq_min, faq_max, max_tokens = _get_structure(target_length)
     h3_min, h3_max, faq_min, faq_max, max_tokens, site_appendix = _apply_site_structure_override(
         h3_min, h3_max, faq_min, faq_max, max_tokens, aio_profile
@@ -766,10 +912,21 @@ def _build_article(keyword: str, volume: int, differentiation_note: str = "",
         lines = raw.split("\n")
         raw = "\n".join(lines[1:-1] if lines[-1].strip() == "```" else lines[1:])
 
+    # ── JSON制御文字の除去（content フィールド内の生タブ・垂直タブ等）──
+    raw = _sanitize_json_raw(raw)
+
     try:
         data = json.loads(raw)
     except json.JSONDecodeError as e:
-        raise ValueError(f"Claude APIからのJSON解析エラー: {e}\n---\n{raw[:500]}") from e
+        # 1回だけ JSON 修復を試みる
+        repaired = _repair_json(raw)
+        try:
+            data = json.loads(repaired)
+            print(f"[article_generator] JSON修復成功（元エラー: {e}）")
+        except json.JSONDecodeError as e2:
+            raise ValueError(
+                f"Claude APIからのJSON解析エラー（修復失敗）: {e2}\n---\n{raw[:500]}"
+            ) from e2
 
     for key in ("title", "meta_description", "slug", "image_prompt", "content"):
         if key not in data:

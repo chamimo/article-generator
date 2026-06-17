@@ -446,6 +446,7 @@ def post_article_with_image(
     asp_links: dict | None = None,
     stop_words: list[str] | None = None,
     enable_eyecatch: bool = True,
+    enable_h2_images: bool = True,
 ) -> dict:
     """
     ① カテゴリ自動選択
@@ -503,7 +504,10 @@ def post_article_with_image(
             print("[wordpress] アイキャッチ: ライブラリ該当なし・スキップ")
 
     # ③ H2記事内画像（全枚: ライブラリ優先 → FLUXフォールバック）
-    h2_matches = _extract_h2_blocks(article.get("content", ""))
+    if not enable_h2_images:
+        h2_matches = []
+    else:
+        h2_matches = _extract_h2_blocks(article.get("content", ""))
     if h2_matches:
         print(f"[wordpress] H2画像処理: {len(h2_matches)}枚")
         h2_image_data: list[tuple[str, str]] = []
