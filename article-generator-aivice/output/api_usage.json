@@ -3626,6 +3626,11 @@
       "timestamp": "2026-06-17T12:41:49.221159+00:00",
       "type": "daily_limit",
       "message": "[api_guard] 🛑 デプロイ日次上限超過: 本日のコスト $2.2189 >= $2.00\n  翌日（UTC）まで待つか、DAILY_LIMIT_USD を引き上げてください。"
+    },
+    {
+      "timestamp": "2026-06-17T19:00:18.998273+00:00",
+      "type": "daily_limit",
+      "message": "[api_guard] 🛑 デプロイ日次上限超過: 本日のコスト $2.7228 >= $2.00\n  翌日（UTC）まで待つか、DAILY_LIMIT_USD を引き上げてください。"
     }
   ]
 }
