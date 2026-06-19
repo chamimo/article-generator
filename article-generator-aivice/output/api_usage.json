@@ -3559,6 +3559,36 @@
       "output_tokens": 12550,
       "cost_usd": 0.2517,
       "label": "article:学校タブレット 覗き見防止 保護フィルム"
+    },
+    {
+      "timestamp": "2026-06-18T19:00:19.172494+00:00",
+      "date": "2026-06-18",
+      "hour": "2026-06-18T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 109,
+      "output_tokens": 116,
+      "cost_usd": 0.000551,
+      "label": "lsi:AI検索 SEO 変わること"
+    },
+    {
+      "timestamp": "2026-06-18T19:00:22.912679+00:00",
+      "date": "2026-06-18",
+      "hour": "2026-06-18T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 176,
+      "output_tokens": 520,
+      "cost_usd": 0.002221,
+      "label": "kw_research:AI検索 SEO 変わること"
+    },
+    {
+      "timestamp": "2026-06-18T19:03:49.984501+00:00",
+      "date": "2026-06-18",
+      "hour": "2026-06-18T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12219,
+      "output_tokens": 12000,
+      "cost_usd": 0.216657,
+      "label": "article:AI検索 SEO 変わること"
     }
   ],
   "events": [
