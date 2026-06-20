@@ -3589,6 +3589,36 @@
       "output_tokens": 12000,
       "cost_usd": 0.216657,
       "label": "article:AI検索 SEO 変わること"
+    },
+    {
+      "timestamp": "2026-06-19T19:00:19.748265+00:00",
+      "date": "2026-06-19",
+      "hour": "2026-06-19T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 100,
+      "cost_usd": 0.000491,
+      "label": "lsi:AI Overview クリック 減った 個人ブログ"
+    },
+    {
+      "timestamp": "2026-06-19T19:00:23.405265+00:00",
+      "date": "2026-06-19",
+      "hour": "2026-06-19T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 449,
+      "cost_usd": 0.001941,
+      "label": "kw_research:AI Overview クリック 減った 個人ブログ"
+    },
+    {
+      "timestamp": "2026-06-19T19:03:41.670257+00:00",
+      "date": "2026-06-19",
+      "hour": "2026-06-19T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12140,
+      "output_tokens": 12000,
+      "cost_usd": 0.21642,
+      "label": "article:AI Overview クリック 減った 個人ブログ"
     }
   ],
   "events": [
