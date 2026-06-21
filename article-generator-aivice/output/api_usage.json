@@ -3619,6 +3619,36 @@
       "output_tokens": 12000,
       "cost_usd": 0.21642,
       "label": "article:AI Overview クリック 減った 個人ブログ"
+    },
+    {
+      "timestamp": "2026-06-20T19:00:19.748567+00:00",
+      "date": "2026-06-20",
+      "hour": "2026-06-20T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 96,
+      "cost_usd": 0.000475,
+      "label": "lsi:Speak AI英会話 効果ない 続かない"
+    },
+    {
+      "timestamp": "2026-06-20T19:00:23.074604+00:00",
+      "date": "2026-06-20",
+      "hour": "2026-06-20T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 510,
+      "cost_usd": 0.002185,
+      "label": "kw_research:Speak AI英会話 効果ない 続かない"
+    },
+    {
+      "timestamp": "2026-06-20T19:03:28.328230+00:00",
+      "date": "2026-06-20",
+      "hour": "2026-06-20T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12194,
+      "output_tokens": 11165,
+      "cost_usd": 0.204057,
+      "label": "article:Speak AI英会話 効果ない 続かない"
     }
   ],
   "events": [
