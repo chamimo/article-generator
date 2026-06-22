@@ -1,0 +1,62 @@
+===== [HIDA-NO-OMOIDE] 実行開始: 2026-06-22 05:30:00 =====
+2026-06-22 05:30:03 [INFO] ============================================================
+2026-06-22 05:30:03 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-22 05:30:03 [INFO] ============================================================
+2026-06-22 05:30:03 [INFO] 対象ブログ: ['hida-no-omoide']
+2026-06-22 05:30:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-22 05:30:04 [INFO] === 飛騨の思い出 (hida-no-omoide.com) 処理開始 ===
+2026-06-22 05:30:04 [INFO] ════════════════════════════════════════════════════════════
+2026-06-22 05:30:04 [INFO]   genre            : 旅行・観光・飛騨・地域情報
+2026-06-22 05:30:04 [INFO]   fact_check       : True
+2026-06-22 05:30:04 [INFO]   article_type_mix : True
+2026-06-22 05:30:04 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-06-22 05:30:04 [INFO]   article_count    : 1  dry_run: False
+2026-06-22 05:30:08 [INFO] [hida-no-omoide] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] 飛騨の思い出 / 「ASP案件マスター 」: 3件
+[asp_fetcher]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+[asp_fetcher]   [999] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+[asp_fetcher]   [999] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=
+2026-06-22 05:30:10 [INFO] [hida-no-omoide] アフィリ案件: 3件（スプレッドシート）
+2026-06-22 05:30:10 [INFO] [hida-no-omoide]   [S] 楽天トラベル → https://a.r10.to/h8Bph4
+2026-06-22 05:30:10 [INFO] [hida-no-omoide]   [?] じゃらん → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-06-22 05:30:10 [INFO] [hida-no-omoide]   [?] じゃらんパック → //ck.jp.ap.valuecommerce.com/servlet/referral?sid=3663345&pi
+2026-06-22 05:30:10 [INFO] [wp] 記事取得: 計51件 (draft=12 / publish=39)
+2026-06-22 05:30:10 [INFO] [hida-no-omoide] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.3, 'monetize': 0.2})
+2026-06-22 05:30:12 [INFO] [fetch] サブKW紐付け: 87件 → 7記事に統合
+2026-06-22 05:30:12 [INFO] [fetch] [キーワード] メインKW: 32件（親KW+生成待ち）  サブKW除外: 87件（統合対象）  投稿済みスキップ: 83件  aim内訳: [aim:8, add:5, claude:19]
+2026-06-22 05:30:12 [INFO] [dup_check] 優先候補: 32件 {'aim': 8, 'add': 5, 'claude': 19} を先頭評価
+2026-06-22 05:30:12 [INFO] [dup_check] シート承認済みスキップ: 「さるぼぼ 色 意味 選び方」（親KW+生成待ちのため重複チェック免除）
+2026-06-22 05:30:12 [INFO] [dup_check] 完了: 選定=1件 / 除外=0件 (pool=32件, 要求=1件)
+2026-06-22 05:30:12 [INFO] [select] 1件選定 (要求=1件)
+2026-06-22 05:30:12 [INFO] [select]   1. 「さるぼぼ 色 意味 選び方」 vol=0 seo=N/A comp=N/A
+2026-06-22 05:30:12 [INFO] [hida-no-omoide] LONGTAIL選定: 1件
+2026-06-22 05:30:12 [INFO] [hida-no-omoide] 候補: 32件 / 選定: 1件 / 生成予定: 1件
+[api_guard] ✅ 本日: $0.2938 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.2938(¥44) / 1記事
+2026-06-22 05:30:12 [INFO] [api_guard] 本日の使用量: $0.2938 / ¥44 (3回呼び出し)
+2026-06-22 05:30:12 [INFO] ────────────────────────────────────────────────────────────
+2026-06-22 05:30:12 [INFO] [hida-no-omoide] [1/1] [LONGTAIL] 「さるぼぼ 色 意味 選び方」 vol=0 ★AIM
+2026-06-22 05:30:12 [INFO] ────────────────────────────────────────────────────────────
+2026-06-22 05:30:12 [INFO] [generate] 意図ベース文字数(COMP): 7,525字 → 6,643字
+2026-06-22 05:30:12 [INFO] [generate] 生成開始: 「さるぼぼ 色 意味 選び方」(vol:0) fact_check=True target_length=6,643字  誘導リンク:0件
+[article_generator] 記事構成生成中: 「さるぼぼ 色 意味 選び方」(vol:0) [6,643字 / H3:8〜11本 / FAQ:4〜6問]
+[article_generator] 事実確認中: 「さるぼぼ 色 意味 選び方」
+[fact_checker] 事実確認エラー: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CcH3BnYxM1VS1T9kQT2K3'}
+[article_generator] 事実確認: 確認情報なし（スキップ）
+[api_guard] ✅ 本日: $0.2938 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.2938(¥44) / 1記事
+[api_guard] ✅ 本日: $0.2938 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.2938(¥44) / 1記事
+[article_generator] 検索意図: 比較系 → トーン調整
+[article_generator] コンパクト制約モード(COMP): H3≤11 FAQ≤6
+[article_generator] アドセンス記事判定: 「さるぼぼ 色 意味 選び方」→ アフィリリンク抑制モード
+[api_guard] ✅ 本日: $0.2938 / 1時間: $0.0000  (上限 日次$10.00 / 時間$5.00)  全体: $0.2938(¥44) / 1記事
+2026-06-22 05:30:13 [ERROR] [hida-no-omoide] [1/1] ❌ エラー（続行）: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CcH3BrBjaMWuoZTbMa1fW'}
+2026-06-22 05:30:13 [INFO] [hida-no-omoide] 完了: 成功=0件 / 重複スキップ=0件 / 失敗=1件 / 合計=1件
+2026-06-22 05:30:13 [INFO] 
+============================================================
+2026-06-22 05:30:13 [INFO] 【全体サマリー】
+2026-06-22 05:30:13 [INFO]   ブログ数  : 1件
+2026-06-22 05:30:13 [INFO]   生成件数  : 0件成功 / 1件失敗 / 計1件
+2026-06-22 05:30:13 [INFO]   所要時間  : 10.3秒
+2026-06-22 05:30:13 [INFO]   ❌ [hida-no-omoide] さるぼぼ 色 意味 選び方 → (生成失敗)
+2026-06-22 05:30:13 [INFO] ============================================================
+===== [HIDA-NO-OMOIDE] 記事生成終了: 2026-06-22 05:30:13 / exit=0 =====
