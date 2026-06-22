@@ -3649,6 +3649,36 @@
       "output_tokens": 11165,
       "cost_usd": 0.204057,
       "label": "article:Speak AI英会話 効果ない 続かない"
+    },
+    {
+      "timestamp": "2026-06-21T19:00:19.792341+00:00",
+      "date": "2026-06-21",
+      "hour": "2026-06-21T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 116,
+      "cost_usd": 0.000555,
+      "label": "lsi:AIボイスレコーダー 必要ない人"
+    },
+    {
+      "timestamp": "2026-06-21T19:00:24.104893+00:00",
+      "date": "2026-06-21",
+      "hour": "2026-06-21T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 608,
+      "cost_usd": 0.002577,
+      "label": "kw_research:AIボイスレコーダー 必要ない人"
+    },
+    {
+      "timestamp": "2026-06-21T19:03:36.543763+00:00",
+      "date": "2026-06-21",
+      "hour": "2026-06-21T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 12724,
+      "output_tokens": 12000,
+      "cost_usd": 0.218172,
+      "label": "article:AIボイスレコーダー 必要ない人"
     }
   ],
   "events": [
