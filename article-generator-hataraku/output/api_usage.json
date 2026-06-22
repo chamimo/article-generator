@@ -13459,6 +13459,36 @@
       "output_tokens": 19,
       "cost_usd": 0.000384,
       "label": "maps:さるぼぼ 色 意味 選び方"
+    },
+    {
+      "timestamp": "2026-06-21T19:20:16.691477+00:00",
+      "date": "2026-06-21",
+      "hour": "2026-06-21T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 114,
+      "output_tokens": 120,
+      "cost_usd": 0.000571,
+      "label": "lsi:ノートパソコン WiFi つなぎ方"
+    },
+    {
+      "timestamp": "2026-06-21T19:20:20.565935+00:00",
+      "date": "2026-06-21",
+      "hour": "2026-06-21T19",
+      "model": "claude-haiku-4-5-20251001",
+      "input_tokens": 181,
+      "output_tokens": 578,
+      "cost_usd": 0.002457,
+      "label": "kw_research:ノートパソコン WiFi つなぎ方"
+    },
+    {
+      "timestamp": "2026-06-21T19:24:23.576384+00:00",
+      "date": "2026-06-21",
+      "hour": "2026-06-21T19",
+      "model": "claude-sonnet-4-6",
+      "input_tokens": 16926,
+      "output_tokens": 16000,
+      "cost_usd": 0.290778,
+      "label": "article:ノートパソコン WiFi つなぎ方"
     }
   ],
   "events": [
