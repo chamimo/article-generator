@@ -1,0 +1,69 @@
+===== [WEB-STUDY1] 実行開始: 2026-06-23 06:00:00 =====
+2026-06-23 06:00:02 [INFO] ============================================================
+2026-06-23 06:00:02 [INFO] generate_lite.py 開始  dry_run=False
+2026-06-23 06:00:02 [INFO] ============================================================
+2026-06-23 06:00:02 [INFO] 対象ブログ: ['web-study1']
+2026-06-23 06:00:04 [INFO] 
+════════════════════════════════════════════════════════════
+2026-06-23 06:00:04 [INFO] === オンライン学習ナビ (web-study1.com) 処理開始 ===
+2026-06-23 06:00:04 [INFO] ════════════════════════════════════════════════════════════
+2026-06-23 06:00:04 [INFO]   genre            : オンライン学習・プログラミング・資格・スキルアップ
+2026-06-23 06:00:04 [INFO]   fact_check       : True
+2026-06-23 06:00:04 [INFO]   article_type_mix : True
+2026-06-23 06:00:04 [INFO]   stop_words       : ['2026', 'ランキング']
+2026-06-23 06:00:04 [INFO]   article_count    : 1  dry_run: False
+2026-06-23 06:00:07 [INFO] [web-study1] ブログ設定・メディア人格を読み込みました
+[asp_fetcher] オンライン学習ナビ / 「ASP案件マスター」: 28件
+[asp_fetcher]   [S] 無学年式オンライン教材 のすらら → https://web-study1.com/surara
+[asp_fetcher]   [S] ヒューマンアカデミー → https://web-study1.com/haa.athuman / AI時代の学び直し・資格・副業スキル
+[asp_fetcher]   [999] こどもチャレンジ → https://web-study1.com/shimajiro
+[asp_fetcher]   [999] こどもチャレンジ baby → https://web-study1.com/shimajiro-baby
+[asp_fetcher]   [999] Filmora → https://web-study1.com/filmora
+[asp_fetcher]   [999] スマイルゼミ → https://web-study1.com/smile-zemi
+[asp_fetcher]   [999] 進研ゼミ　高校講座 → https://web-study1.com/sinkenzemi-koukou
+[asp_fetcher]   [999] 進研ゼミ　中学講座 → https://web-study1.com/sinkenzem-cyugaku
+2026-06-23 06:00:08 [INFO] [web-study1] アフィリ案件: 28件（スプレッドシート）
+2026-06-23 06:00:08 [INFO] [web-study1]   [S] 無学年式オンライン教材 のすらら → https://web-study1.com/surara
+2026-06-23 06:00:08 [INFO] [web-study1]   [S] ヒューマンアカデミー → https://web-study1.com/haa.athuman
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] こどもチャレンジ → https://web-study1.com/shimajiro
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] こどもチャレンジ baby → https://web-study1.com/shimajiro-baby
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] Filmora → https://web-study1.com/filmora
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] スマイルゼミ → https://web-study1.com/smile-zemi
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] 進研ゼミ　高校講座 → https://web-study1.com/sinkenzemi-koukou
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] 進研ゼミ　中学講座 → https://web-study1.com/sinkenzem-cyugaku
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] 進研ゼミ　小学講座 → https://web-study1.com/shinkenzemi-syougakukouza
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] スタディサプリ中学講座 → https://web-study1.com/studysapuri-chugaku
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] Z会 → https://web-study1.com/zkai
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] スタディサプリ高校・大学 受験講座 → https://web-study1.com/studysapur-koukou
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP  学習コース_大学生向け就活対策コース → https://web-study1.com/dmm_webcamp_shukatu
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] Tech Kids School → https://web-study1.com/tech-kids
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] 【RISU算数】(19-1031) → https://web-study1.com/risu
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] スタディサプリENGLISH（新日常英会話コース） → https://web-study1.com/eigosapuri
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] スタディサプリEnglish　ビジネス英語コース → https://web-study1.com/eigosapuri
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP プログラミングコース → https://web-study1.com/web-camp_programing
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] freenance → https://web-study1.com/freenance
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] Udemy → https://web-study1.com/udemy
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP WEBデザインコース → https://web-study1.com/dmm_webcamp
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP Pythonコース → https://web-study1.com/dmm_webcamp_python
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] AI英会話アプリ【スピーク】 → https://web-study1.com/speak
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] スタディサプリ小学講座 → https://web-study1.com/sutasapu-syougaku
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] スタディサプリENGLISH（TOEIC対策コース） → https://web-study1.com/human-english-toeic
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] アンズテック → https://web-study1.com/anzutech
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] DMM WEBCAMP 学習コース → https://web-study1.com/dmm-webcamp-gakusyu
+2026-06-23 06:00:08 [INFO] [web-study1]   [?] キズキ共育塾 → https://web-study1.com/kizuki
+2026-06-23 06:00:09 [INFO] [wp] 記事取得: 計43件 (draft=1 / publish=42)
+2026-06-23 06:00:09 [INFO] [web-study1] 記事タイプ配分: {'longtail': 1, 'trend': 0, 'monetize': 0}  (weights={'longtail': 0.5, 'trend': 0.2, 'monetize': 0.3})
+2026-06-23 06:00:10 [INFO] [fetch] [キーワード] メインKW: 0件（親KW+生成待ち）  サブKW: 0件（vol<30）
+Traceback (most recent call last):
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 3275, in <module>
+    main()
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 3239, in main
+    results = run_blog(
+              ^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 2049, in run_blog
+    lt_sel  = select_keywords(lt_pool, n=dist["longtail"],
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yama/article-generator-hataraku/generate_lite.py", line 1422, in select_keywords
+    raise ValueError("候補キーワードが0件です")
+ValueError: 候補キーワードが0件です
+===== [WEB-STUDY1] 記事生成終了: 2026-06-23 06:00:11 / exit=1 =====
