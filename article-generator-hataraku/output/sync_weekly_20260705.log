@@ -1,0 +1,128 @@
+===== 週次順位同期開始: 2026-07-05 07:00:00 =====
+
+----- [sync/hataraku] 開始: 07:00:00 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-07-02 (7/2)
+[sync_ranks] GSC データ: 16ページ / 48クエリ
+[sync_ranks] ⚠ 「記事URL」列が見つかりません。
+----- [sync/hataraku] 終了: 07:00:07 / exit=0 -----
+
+----- [sync/workup-ai] 開始: 07:00:12 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-07-02 (7/2)
+[sync_ranks] GSC データ: 337ページ / 886クエリ
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.12/site-packages/gspread/spreadsheet.py", line 327, in worksheet
+    item = finditem(
+           ^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/gspread/utils.py", line 224, in finditem
+    return next(item for item in seq if func(item))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yama/article-generator-hataraku/sync_ranks.py", line 533, in <module>
+    sync_ranks(target_date=target, dry_run=args.dry_run, rebuild=args.rebuild)
+  File "/Users/yama/article-generator-hataraku/sync_ranks.py", line 263, in sync_ranks
+    source_ws  = ss.worksheet(_SOURCE_SHEET_NAME)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/gspread/spreadsheet.py", line 333, in worksheet
+    raise WorksheetNotFound(title)
+gspread.exceptions.WorksheetNotFound: キーワード
+----- [sync/workup-ai] 終了: 07:00:18 / exit=1 -----
+
+----- [sync/ys-trend] 開始: 07:00:23 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-07-02 (7/2)
+[sync_ranks] GSC データ: 6ページ / 10クエリ
+[sync_ranks] ⚠ 「記事URL」列が見つかりません。
+----- [sync/ys-trend] 終了: 07:00:32 / exit=0 -----
+
+----- [sync/kaerudoko] 開始: 07:00:37 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-07-02 (7/2)
+[sync_ranks] GSC データ: 6ページ / 18クエリ
+[sync_ranks] ⚠ 「記事URL」列が見つかりません。
+----- [sync/kaerudoko] 終了: 07:00:43 / exit=0 -----
+
+----- [sync/hapipo8] 開始: 07:00:48 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] 取得日: 2026-07-02 (7/2)
+[sync_ranks] GSC データ: 16ページ / 21クエリ
+[sync_ranks] ⚠ 「記事URL」列が見つかりません。
+----- [sync/hapipo8] 終了: 07:00:54 / exit=0 -----
+
+----- [sync/hida-no-omoide] 開始: 07:00:59 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] ⚠ Search Console にデータがありません。
+----- [sync/hida-no-omoide] 終了: 07:01:02 / exit=1 -----
+
+----- [sync/web-study1] 開始: 07:01:07 -----
+[sync_ranks] データが存在する最新日付を検索中...
+[sync_ranks] ⚠ Search Console にデータがありません。
+----- [sync/web-study1] 終了: 07:01:11 / exit=1 -----
+
+===== 順位同期完了 / フラグチェック開始: 2026-07-05 07:01:16 =====
+
+----- [flag/hataraku] 開始: 07:01:16 -----
+[check_rank_drop] サイト: hataraku
+[check_rank_drop] 比較: 4/13順位 → 4/14順位
+[check_rank_drop] 「優先度スコア」列: AM列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/hataraku] 終了: 07:01:18 / exit=0 -----
+
+----- [flag/workup-ai] 開始: 07:01:21 -----
+[check_rank_drop] サイト: workup-ai
+[check_rank_drop] ⚠ 「順位トラッキング」シートが見つかりません
+----- [flag/workup-ai] 終了: 07:01:23 / exit=0 -----
+
+----- [flag/ys-trend] 開始: 07:01:26 -----
+[check_rank_drop] サイト: ys-trend
+[check_rank_drop] 比較: 4/30順位 → 5/7順位
+[check_rank_drop] 「優先度スコア」列: G列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/ys-trend] 終了: 07:01:28 / exit=0 -----
+
+----- [flag/kaerudoko] 開始: 07:01:31 -----
+[check_rank_drop] サイト: kaerudoko
+[check_rank_drop] 比較: 4/30順位 → 5/7順位
+[check_rank_drop] 「優先度スコア」列: G列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/kaerudoko] 終了: 07:01:33 / exit=0 -----
+
+----- [flag/hapipo8] 開始: 07:01:36 -----
+[check_rank_drop] サイト: hapipo8
+[check_rank_drop] 比較: 4/30順位 → 5/7順位
+[check_rank_drop] 「優先度スコア」列: G列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/hapipo8] 終了: 07:01:38 / exit=0 -----
+
+----- [flag/hida-no-omoide] 開始: 07:01:41 -----
+[check_rank_drop] サイト: hida-no-omoide
+[check_rank_drop] 比較: 4/14順位 → 5/7順位
+[check_rank_drop] 「優先度スコア」列: AN列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/hida-no-omoide] 終了: 07:01:45 / exit=0 -----
+
+----- [flag/web-study1] 開始: 07:01:48 -----
+[check_rank_drop] サイト: web-study1
+[check_rank_drop] 比較: 4/13順位 → 4/14順位
+[check_rank_drop] 「優先度スコア」列: AM列
+
+[check_rank_drop] 要リライト: 0 件
+[check_rank_drop] 更新なし
+----- [flag/web-study1] 終了: 07:01:52 / exit=0 -----
+
+===== 週次処理完了: 2026-07-05 07:01:56 =====
